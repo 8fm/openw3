@@ -26,6 +26,11 @@
 // Types
 #include "wccTypeRegistry.h"
 
+#ifndef RED_PLATFORM_CONSOLE
+#ifndef WCC_LITE
+	#define WCC_LITE
+#endif
+#endif
 #define LOG_WCC( format, ... ) RED_LOG( WCC, format, ##__VA_ARGS__ )
 #define ERR_WCC( format, ... ) RED_LOG_ERROR( WCC, format, ##__VA_ARGS__ )
 #define WARN_WCC( format, ... ) RED_LOG_WARNING( WCC, format, ##__VA_ARGS__ );

@@ -122,7 +122,9 @@
     <ClCompile Include="cookerDependencyAnalyzer.cpp" />
     <ClCompile Include="materialCookerCommandlet.cpp" />
     <ClCompile Include="materialCookerGeneric.cpp" />
-    <ClCompile Include="shaderCompilerOrbis.cpp" />
+    <ClCompile Include="shaderCompilerOrbis.cpp">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Orbis'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="materialCookerStatic.cpp" />
     <ClCompile Include="meshCooker.cpp" />
     <ClCompile Include="occlusionCommandlet.cpp" />
@@ -223,7 +225,9 @@
     <ClInclude Include="sectorBuilderCommandlet.h" />
     <ClInclude Include="resourceGrid.h" />
     <ClInclude Include="shaderCompilerDurango.h" />
-    <ClInclude Include="shaderCompilerOrbis.h" />
+    <ClInclude Include="shaderCompilerOrbis.h">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Orbis'">true</ExcludedFromBuild>
+    </ClInclude>
     <ClInclude Include="shaderCompiler.h" />
     <ClInclude Include="shaderCompilerPC.h" />
     <ClInclude Include="soundBankHelper.h" />
