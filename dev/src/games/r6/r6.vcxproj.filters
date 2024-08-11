@@ -1,0 +1,1194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="build.cpp" />
+    <ClCompile Include="r6game.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="r6Player.cpp">
+      <Filter>entities\player</Filter>
+    </ClCompile>
+    <ClCompile Include="aimHelpTargetGatherer.cpp">
+      <Filter>components\aiming</Filter>
+    </ClCompile>
+    <ClCompile Include="r6damageData.cpp">
+      <Filter>systems\health</Filter>
+    </ClCompile>
+    <ClCompile Include="switch.cpp">
+      <Filter>entities\switches</Filter>
+    </ClCompile>
+    <ClCompile Include="playerInventoryPanel.cpp">
+      <Filter>entities\player\inventory</Filter>
+    </ClCompile>
+    <ClCompile Include="itemPartDefinitionComponent.cpp">
+      <Filter>systems\assembly</Filter>
+    </ClCompile>
+    <ClCompile Include="itemPartSlotDefinition.cpp">
+      <Filter>systems\assembly</Filter>
+    </ClCompile>
+    <ClCompile Include="baseUpgradeEventHendler.cpp">
+      <Filter>systems\assembly\event handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="statsContainerComponent.cpp">
+      <Filter>systems\statistics</Filter>
+    </ClCompile>
+    <ClCompile Include="baseUpgradeStatsModyfier.cpp">
+      <Filter>systems\assembly\stats modyfiers</Filter>
+    </ClCompile>
+    <ClCompile Include="editableUpgradeStatsModyfier.cpp">
+      <Filter>systems\assembly\stats modyfiers</Filter>
+    </ClCompile>
+    <ClCompile Include="upgradeEventBrodecastEvent.cpp">
+      <Filter>systems\assembly\event handlers\general</Filter>
+    </ClCompile>
+    <ClCompile Include="upgradeEventFrameShootEventHandler.cpp">
+      <Filter>systems\assembly\event handlers\firearm</Filter>
+    </ClCompile>
+    <ClCompile Include="upgradeEventFrameReloadEventHandler.cpp">
+      <Filter>systems\assembly\event handlers\firearm</Filter>
+    </ClCompile>
+    <ClCompile Include="baseUpgradeEventHandlerParam.cpp">
+      <Filter>systems\assembly\event handlers\params</Filter>
+    </ClCompile>
+    <ClCompile Include="singleNameUpgradeEventHandlerParam.cpp">
+      <Filter>systems\assembly\event handlers\params</Filter>
+    </ClCompile>
+    <ClCompile Include="upgradeEventHandlerForwardEvent.cpp">
+      <Filter>systems\assembly\event handlers\general</Filter>
+    </ClCompile>
+    <ClCompile Include="forwardUpgradeHandlerParam.cpp">
+      <Filter>systems\assembly\event handlers\params</Filter>
+    </ClCompile>
+    <ClCompile Include="upgradeEventPlayAnimation.cpp">
+      <Filter>systems\assembly\event handlers\general</Filter>
+    </ClCompile>
+    <ClCompile Include="playAnimationUpgradeEventHandlerParam.cpp">
+      <Filter>systems\assembly\event handlers\params</Filter>
+    </ClCompile>
+    <ClCompile Include="shootUpgradeEventHandlerParam.cpp">
+      <Filter>systems\assembly\event handlers\params</Filter>
+    </ClCompile>
+    <ClCompile Include="upgradeEventBarrelShootEventHandler.cpp">
+      <Filter>systems\assembly\event handlers\firearm</Filter>
+    </ClCompile>
+    <ClCompile Include="firearmFrameDefinitionComponent.cpp">
+      <Filter>systems\assembly\extensions</Filter>
+    </ClCompile>
+    <ClCompile Include="upgradesSpawnerItemEntity.cpp">
+      <Filter>systems\assembly</Filter>
+    </ClCompile>
+    <ClCompile Include="r6Component.cpp">
+      <Filter>components</Filter>
+    </ClCompile>
+    <ClCompile Include="eventRouterComponent.cpp">
+      <Filter>components</Filter>
+    </ClCompile>
+    <ClCompile Include="upgradeEventFrameStartAutoFire.cpp">
+      <Filter>systems\assembly\event handlers\firearm</Filter>
+    </ClCompile>
+    <ClCompile Include="upgradeEventFrameStopAutoFire.cpp">
+      <Filter>systems\assembly\event handlers\firearm</Filter>
+    </ClCompile>
+    <ClCompile Include="upgradesCustomisationComponent.cpp">
+      <Filter>systems\assembly\customisation</Filter>
+    </ClCompile>
+    <ClCompile Include="firearmBarrelDefinitionComponent.cpp">
+      <Filter>systems\assembly\extensions</Filter>
+    </ClCompile>
+    <ClCompile Include="coverPoint.cpp">
+      <Filter>systems\combat\cover system</Filter>
+    </ClCompile>
+    <ClCompile Include="coversManager.cpp">
+      <Filter>systems\combat\cover system</Filter>
+    </ClCompile>
+    <ClCompile Include="r6GuiManager.cpp">
+      <Filter>gui\manager</Filter>
+    </ClCompile>
+    <ClCompile Include="r6Hud.cpp">
+      <Filter>gui\hud</Filter>
+    </ClCompile>
+    <ClCompile Include="r6Menu.cpp">
+      <Filter>gui\menu</Filter>
+    </ClCompile>
+    <ClCompile Include="team.cpp">
+      <Filter>systems\combat\teams</Filter>
+    </ClCompile>
+    <ClCompile Include="teamMemberComponent.cpp">
+      <Filter>systems\combat\teams</Filter>
+    </ClCompile>
+    <ClCompile Include="r6HudModule.cpp">
+      <Filter>gui\hud</Filter>
+    </ClCompile>
+    <ClCompile Include="explorationCameraComponent.cpp">
+      <Filter>systems\camera</Filter>
+    </ClCompile>
+    <ClCompile Include="enemyAwareComponent.cpp">
+      <Filter>entities\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="idGraph.cpp">
+      <Filter>systems\interactiveDialog\graph</Filter>
+    </ClCompile>
+    <ClCompile Include="interactionCameraComponent.cpp">
+      <Filter>systems\camera</Filter>
+    </ClCompile>
+    <ClCompile Include="slotCameraComponent.cpp">
+      <Filter>systems\camera</Filter>
+    </ClCompile>
+    <ClCompile Include="idHud.cpp">
+      <Filter>systems\interactiveDialog\hud</Filter>
+    </ClCompile>
+    <ClCompile Include="r6InteractionComponent.cpp">
+      <Filter>systems\interaction</Filter>
+    </ClCompile>
+    <ClCompile Include="r6InventoryItemComponent.cpp">
+      <Filter>systems\inventory</Filter>
+    </ClCompile>
+    <ClCompile Include="r6InventoryComponent.cpp">
+      <Filter>systems\inventory</Filter>
+    </ClCompile>
+    <ClCompile Include="npcMovementControllerComponent.cpp">
+      <Filter>entities\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="safestPathRater.cpp">
+      <Filter>entities\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="combatUtils.cpp">
+      <Filter>systems\combat</Filter>
+    </ClCompile>
+    <ClCompile Include="idCondition.cpp">
+      <Filter>systems\interactiveDialog\system\conditions</Filter>
+    </ClCompile>
+    <ClCompile Include="idThreadActivator.cpp">
+      <Filter>systems\interactiveDialog\system\conditions</Filter>
+    </ClCompile>
+    <ClCompile Include="idBasicBlocks.cpp">
+      <Filter>systems\interactiveDialog\graph\blocks</Filter>
+    </ClCompile>
+    <ClCompile Include="idGraphBlockBranch.cpp">
+      <Filter>systems\interactiveDialog\graph\blocks</Filter>
+    </ClCompile>
+    <ClCompile Include="idGraphBlockChoice.cpp">
+      <Filter>systems\interactiveDialog\graph\blocks</Filter>
+    </ClCompile>
+    <ClCompile Include="idGraphBlockText.cpp">
+      <Filter>systems\interactiveDialog\graph\blocks</Filter>
+    </ClCompile>
+    <ClCompile Include="r6DialogDisplayManager.cpp">
+      <Filter>systems\interactiveDialog\r6</Filter>
+    </ClCompile>
+    <ClCompile Include="teamManager.cpp">
+      <Filter>systems\combat\teams</Filter>
+    </ClCompile>
+    <ClCompile Include="idGraphBlockCondition.cpp">
+      <Filter>systems\interactiveDialog\graph\blocks</Filter>
+    </ClCompile>
+    <ClCompile Include="idInterlocutor.cpp">
+      <Filter>systems\interactiveDialog\system\interlocutors</Filter>
+    </ClCompile>
+    <ClCompile Include="idThread.cpp">
+      <Filter>systems\interactiveDialog\system\dialog\topic\thread</Filter>
+    </ClCompile>
+    <ClCompile Include="idLine.cpp">
+      <Filter>systems\interactiveDialog\system\lines</Filter>
+    </ClCompile>
+    <ClCompile Include="r6Classes.cpp" />
+    <ClCompile Include="idEventSender.cpp">
+      <Filter>systems\interactiveDialog\system\eventSender</Filter>
+    </ClCompile>
+    <ClCompile Include="idEventSenderDataStructs.cpp">
+      <Filter>systems\interactiveDialog\system\eventSender</Filter>
+    </ClCompile>
+    <ClCompile Include="craftingBench.cpp">
+      <Filter>systems\crafting</Filter>
+    </ClCompile>
+    <ClCompile Include="idGraphBlockFact.cpp">
+      <Filter>systems\interactiveDialog\graph\blocks</Filter>
+    </ClCompile>
+    <ClCompile Include="scirptedStatsModyfier.cpp">
+      <Filter>systems\assembly\stats modyfiers</Filter>
+    </ClCompile>
+    <ClCompile Include="questGraphBlockInteractiveDialog.cpp">
+      <Filter>systems\quest</Filter>
+    </ClCompile>
+    <ClCompile Include="idGraphBlockComunicatorSwitch.cpp">
+      <Filter>systems\interactiveDialog\graph\blocks</Filter>
+    </ClCompile>
+    <ClCompile Include="idGraphBlockEvents.cpp">
+      <Filter>systems\interactiveDialog\graph\blocks</Filter>
+    </ClCompile>
+    <ClCompile Include="idAreaCondition.cpp">
+      <Filter>systems\interactiveDialog\system\conditions</Filter>
+    </ClCompile>
+    <ClCompile Include="bulletProjectile.cpp">
+      <Filter>items\projectiles</Filter>
+    </ClCompile>
+    <ClCompile Include="idGraphBlockOutputTerminate.cpp">
+      <Filter>systems\interactiveDialog\graph\blocks</Filter>
+    </ClCompile>
+    <ClCompile Include="idGraphBlockRequestFocus.cpp">
+      <Filter>systems\interactiveDialog\graph\blocks</Filter>
+    </ClCompile>
+    <ClCompile Include="idConnector.cpp">
+      <Filter>systems\interactiveDialog\system\connectors</Filter>
+    </ClCompile>
+    <ClCompile Include="avoidEnemiesSteeringTask.cpp">
+      <Filter>entities\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="idGraphBlockInteraction.cpp">
+      <Filter>systems\interactiveDialog\graph\blocks</Filter>
+    </ClCompile>
+    <ClCompile Include="idGraphBlockFlow.cpp">
+      <Filter>systems\interactiveDialog\graph\blocks</Filter>
+    </ClCompile>
+    <ClCompile Include="upgradeEventCallScriptFunction.cpp">
+      <Filter>systems\assembly\event handlers\general</Filter>
+    </ClCompile>
+    <ClCompile Include="idGraphBlockConnector.cpp">
+      <Filter>systems\interactiveDialog\graph\blocks</Filter>
+    </ClCompile>
+    <ClCompile Include="idEvent.cpp">
+      <Filter>systems\interactiveDialog\system\eventSender\events</Filter>
+    </ClCompile>
+    <ClCompile Include="idEventGeneral.cpp">
+      <Filter>systems\interactiveDialog\system\eventSender\events</Filter>
+    </ClCompile>
+    <ClCompile Include="idEventAnimation.cpp">
+      <Filter>systems\interactiveDialog\system\eventSender\events</Filter>
+    </ClCompile>
+    <ClCompile Include="idEventAI.cpp">
+      <Filter>systems\interactiveDialog\system\eventSender\events</Filter>
+    </ClCompile>
+    <ClCompile Include="idEventInterlocutor.cpp">
+      <Filter>systems\interactiveDialog\system\eventSender\events</Filter>
+    </ClCompile>
+    <ClCompile Include="idEventEncounter.cpp">
+      <Filter>systems\interactiveDialog\system\eventSender\events</Filter>
+    </ClCompile>
+    <ClCompile Include="idEventQuest.cpp">
+      <Filter>systems\interactiveDialog\system\eventSender\events</Filter>
+    </ClCompile>
+    <ClCompile Include="idEventFact.cpp">
+      <Filter>systems\interactiveDialog\system\eventSender\events</Filter>
+    </ClCompile>
+    <ClCompile Include="idGraphBlockCheckpoint.cpp">
+      <Filter>systems\interactiveDialog\graph\blocks</Filter>
+    </ClCompile>
+    <ClCompile Include="teamSharedKnowledge.cpp">
+      <Filter>systems\combat\teams</Filter>
+    </ClCompile>
+    <ClCompile Include="r6QuestSystem.cpp">
+      <Filter>systems\quest</Filter>
+    </ClCompile>
+    <ClCompile Include="r6npc.cpp">
+      <Filter>entities\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="r6GameResource.cpp" />
+    <ClCompile Include="scriptedCameraComponent.cpp">
+      <Filter>systems\camera</Filter>
+    </ClCompile>
+    <ClCompile Include="idEventAbortInteraction.cpp">
+      <Filter>systems\interactiveDialog\system\eventSender\events</Filter>
+    </ClCompile>
+    <ClCompile Include="idEventSound.cpp">
+      <Filter>systems\interactiveDialog\system\eventSender\events</Filter>
+    </ClCompile>
+    <ClCompile Include="aimTarget.cpp">
+      <Filter>components\aiming</Filter>
+    </ClCompile>
+    <ClCompile Include="r6AdvancedVehicleComponent.cpp">
+      <Filter>entities\vehicles</Filter>
+    </ClCompile>
+    <ClCompile Include="directMovementLocomotionSegment.cpp">
+      <Filter>entities\player</Filter>
+    </ClCompile>
+    <ClCompile Include="r6TelemetryScriptProxy.cpp">
+      <Filter>telemetry</Filter>
+    </ClCompile>
+    <ClCompile Include="crowdSpaceNaive.cpp">
+      <Filter>systems\crowd\space</Filter>
+    </ClCompile>
+    <ClCompile Include="simpleCrowdSteering.cpp">
+      <Filter>systems\crowd\steering</Filter>
+    </ClCompile>
+    <ClCompile Include="positionComputer.cpp">
+      <Filter>systems\crowd\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="crowdArea.cpp">
+      <Filter>systems\crowd\entities</Filter>
+    </ClCompile>
+    <ClCompile Include="crowdEntryPoint.cpp">
+      <Filter>systems\crowd\entities</Filter>
+    </ClCompile>
+    <ClCompile Include="crowdAgent.cpp">
+      <Filter>systems\crowd\agent</Filter>
+    </ClCompile>
+    <ClCompile Include="crowdManager.cpp">
+      <Filter>systems\crowd\system</Filter>
+    </ClCompile>
+    <ClCompile Include="debugPageInteractiveDialogs.cpp">
+      <Filter>systems\interactiveDialog\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="crowdSpaceGrid.cpp">
+      <Filter>systems\crowd\space</Filter>
+    </ClCompile>
+    <ClCompile Include="orvoSolver.cpp">
+      <Filter>systems\crowd\steering</Filter>
+    </ClCompile>
+    <ClCompile Include="followerPOIComponent.cpp">
+      <Filter>systems\followers</Filter>
+    </ClCompile>
+    <ClCompile Include="crowdObstacle.cpp">
+      <Filter>systems\crowd\agent</Filter>
+    </ClCompile>
+    <ClCompile Include="questObjectiveComponent.cpp">
+      <Filter>systems\quest</Filter>
+    </ClCompile>
+    <ClCompile Include="crowdAreaComponent.cpp">
+      <Filter>systems\crowd\entities</Filter>
+    </ClCompile>
+    <ClCompile Include="r6Names.cpp" />
+    <ClCompile Include="traitData.cpp">
+      <Filter>systems\traits</Filter>
+    </ClCompile>
+    <ClCompile Include="traitComponent.cpp">
+      <Filter>systems\traits</Filter>
+    </ClCompile>
+    <ClCompile Include="idSystem.cpp">
+      <Filter>systems\interactiveDialog\system</Filter>
+    </ClCompile>
+    <ClCompile Include="idTopic.cpp">
+      <Filter>systems\interactiveDialog\system\dialog\topic</Filter>
+    </ClCompile>
+    <ClCompile Include="idResource.cpp">
+      <Filter>systems\interactiveDialog\system\dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="idInstance.cpp">
+      <Filter>systems\interactiveDialog\system\dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="aiTreeComponent.cpp">
+      <Filter>systems\ai\components</Filter>
+    </ClCompile>
+    <ClCompile Include="r6behTreeInstance.cpp">
+      <Filter>systems\ai\behTree\instance</Filter>
+    </ClCompile>
+    <ClCompile Include="r6aiSystem.cpp">
+      <Filter>systems\ai\system</Filter>
+    </ClCompile>
+    <ClCompile Include="avComponentTest.cpp">
+      <Filter>entities\vehicles</Filter>
+    </ClCompile>
+    <ClCompile Include="avCameraTest.cpp">
+      <Filter>systems\camera</Filter>
+    </ClCompile>
+    <ClCompile Include="r6CameraAttachment.cpp">
+      <Filter>systems\camera</Filter>
+    </ClCompile>
+    <ClCompile Include="r6CameraDirector.cpp">
+      <Filter>systems\camera</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeDebugLog.cpp">
+      <Filter>systems\ai\behTree\nodes\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="r6behTreeRtti.cpp">
+      <Filter>systems\ai\behTree</Filter>
+    </ClCompile>
+    <ClCompile Include="aiActionPerformerAttachment.cpp">
+      <Filter>systems\ai\components\attachments</Filter>
+    </ClCompile>
+    <ClCompile Include="aiActionPlayAnimation.cpp">
+      <Filter>systems\ai\actions</Filter>
+    </ClCompile>
+    <ClCompile Include="aiAction.cpp">
+      <Filter>systems\ai\actions</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeAIAction.cpp">
+      <Filter>systems\ai\behTree\nodes\action</Filter>
+    </ClCompile>
+    <ClCompile Include="r6behTreeVars.cpp">
+      <Filter>systems\ai\behTree\vars</Filter>
+    </ClCompile>
+    <ClCompile Include="r6CameraComponent.cpp">
+      <Filter>systems\camera</Filter>
+    </ClCompile>
+    <ClCompile Include="aiActionMoveTo.cpp">
+      <Filter>systems\ai\actions</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeSelectTargetByTagR6.cpp">
+      <Filter>systems\ai\behTree\nodes\decorator</Filter>
+    </ClCompile>
+    <ClCompile Include="aiActionScripted.cpp">
+      <Filter>systems\ai\actions</Filter>
+    </ClCompile>
+    <ClCompile Include="companionComponent.cpp">
+      <Filter>components</Filter>
+    </ClCompile>
+    <ClCompile Include="aiActionRotateTo.cpp">
+      <Filter>systems\ai\actions</Filter>
+    </ClCompile>
+    <ClCompile Include="questGraphR6QuestBlock.cpp">
+      <Filter>systems\quest</Filter>
+    </ClCompile>
+    <ClCompile Include="questGraphR6QuestConditionBlock.cpp">
+      <Filter>systems\quest</Filter>
+    </ClCompile>
+    <ClCompile Include="questGraphR6QuestPauseBlock.cpp">
+      <Filter>systems\quest</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeSequenceR6.cpp">
+      <Filter>systems\ai\behTree\nodes\composite</Filter>
+    </ClCompile>
+    <ClCompile Include="aiActionInteraction.cpp">
+      <Filter>systems\ai\actions</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeNodePlayerStateSelector.cpp">
+      <Filter>systems\ai\behTree\nodes\composite</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeConditionIsPlayer.cpp">
+      <Filter>systems\ai\behTree\nodes\condition</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeNodePlayerStateIdle.cpp">
+      <Filter>systems\ai\behTree\nodes\player</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeNodePlayerState.cpp">
+      <Filter>systems\ai\behTree\nodes\player</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeNodePlayerStateWalk.cpp">
+      <Filter>systems\ai\behTree\nodes\player</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeNodePlayerStateJump.cpp">
+      <Filter>systems\ai\behTree\nodes\player</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeInputDecorator.cpp">
+      <Filter>systems\ai\behTree\nodes\decorator</Filter>
+    </ClCompile>
+    <ClCompile Include="r6AimingComponent.cpp">
+      <Filter>components\aiming</Filter>
+    </ClCompile>
+    <ClCompile Include="playerLocomotionController.cpp">
+      <Filter>systems\ai\behTree\nodes\player</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeNodePlayerChooseInteraction.cpp">
+      <Filter>systems\ai\behTree\nodes\player</Filter>
+    </ClCompile>
+    <ClCompile Include="r6InteractionTurnOnOff.cpp">
+      <Filter>systems\interaction</Filter>
+    </ClCompile>
+    <ClCompile Include="r6BehaviorSlotComponent.cpp">
+      <Filter>components</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="build.h" />
+    <ClInclude Include="r6.h" />
+    <ClInclude Include="r6TypeRegistry.h" />
+    <ClInclude Include="r6game.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="r6Player.h">
+      <Filter>entities\player</Filter>
+    </ClInclude>
+    <ClInclude Include="r6NamesRegistry.h" />
+    <ClInclude Include="aimHelpTargetGatherer.h">
+      <Filter>components\aiming</Filter>
+    </ClInclude>
+    <ClInclude Include="r6damageData.h">
+      <Filter>systems\health</Filter>
+    </ClInclude>
+    <ClInclude Include="switch.h">
+      <Filter>entities\switches</Filter>
+    </ClInclude>
+    <ClInclude Include="playerInventoryPanel.h">
+      <Filter>entities\player\inventory</Filter>
+    </ClInclude>
+    <ClInclude Include="itemPartDefinitionComponent.h">
+      <Filter>systems\assembly</Filter>
+    </ClInclude>
+    <ClInclude Include="itemPartSlotDefinition.h">
+      <Filter>systems\assembly</Filter>
+    </ClInclude>
+    <ClInclude Include="baseUpgradeEventHendler.h">
+      <Filter>systems\assembly\event handlers</Filter>
+    </ClInclude>
+    <ClInclude Include="statsContainerComponent.h">
+      <Filter>systems\statistics</Filter>
+    </ClInclude>
+    <ClInclude Include="baseUpgradeStatsModyfier.h">
+      <Filter>systems\assembly\stats modyfiers</Filter>
+    </ClInclude>
+    <ClInclude Include="editableUpgradeStatsModyfier.h">
+      <Filter>systems\assembly\stats modyfiers</Filter>
+    </ClInclude>
+    <ClInclude Include="upgradeEventBrodecastEvent.h">
+      <Filter>systems\assembly\event handlers\general</Filter>
+    </ClInclude>
+    <ClInclude Include="upgradeEventFrameShootEventHandler.h">
+      <Filter>systems\assembly\event handlers\firearm</Filter>
+    </ClInclude>
+    <ClInclude Include="upgradeEventFrameReloadEventHandler.h">
+      <Filter>systems\assembly\event handlers\firearm</Filter>
+    </ClInclude>
+    <ClInclude Include="baseUpgradeEventHandlerParam.h">
+      <Filter>systems\assembly\event handlers\params</Filter>
+    </ClInclude>
+    <ClInclude Include="singleNameUpgradeEventHandlerParam.h">
+      <Filter>systems\assembly\event handlers\params</Filter>
+    </ClInclude>
+    <ClInclude Include="upgradeEventHandlerForwardEvent.h">
+      <Filter>systems\assembly\event handlers\general</Filter>
+    </ClInclude>
+    <ClInclude Include="forwardUpgradeHandlerParam.h">
+      <Filter>systems\assembly\event handlers\params</Filter>
+    </ClInclude>
+    <ClInclude Include="upgradeEventPlayAnimation.h">
+      <Filter>systems\assembly\event handlers\general</Filter>
+    </ClInclude>
+    <ClInclude Include="playAnimationUpgradeEventHandlerParam.h">
+      <Filter>systems\assembly\event handlers\params</Filter>
+    </ClInclude>
+    <ClInclude Include="shootUpgradeEventHandlerParam.h">
+      <Filter>systems\assembly\event handlers\params</Filter>
+    </ClInclude>
+    <ClInclude Include="upgradeEventBarrelShootEventHandler.h">
+      <Filter>systems\assembly\event handlers\firearm</Filter>
+    </ClInclude>
+    <ClInclude Include="firearmFrameDefinitionComponent.h">
+      <Filter>systems\assembly\extensions</Filter>
+    </ClInclude>
+    <ClInclude Include="upgradesSpawnerItemEntity.h">
+      <Filter>systems\assembly</Filter>
+    </ClInclude>
+    <ClInclude Include="r6Component.h">
+      <Filter>components</Filter>
+    </ClInclude>
+    <ClInclude Include="eventRouterComponent.h">
+      <Filter>components</Filter>
+    </ClInclude>
+    <ClInclude Include="upgradeEventFrameStartAutoFire.h">
+      <Filter>systems\assembly\event handlers\firearm</Filter>
+    </ClInclude>
+    <ClInclude Include="upgradeEventFrameStopAutoFire.h">
+      <Filter>systems\assembly\event handlers\firearm</Filter>
+    </ClInclude>
+    <ClInclude Include="upgradesCustomisationComponent.h">
+      <Filter>systems\assembly\customisation</Filter>
+    </ClInclude>
+    <ClInclude Include="firearmBarrelDefinitionComponent.h">
+      <Filter>systems\assembly\extensions</Filter>
+    </ClInclude>
+    <ClInclude Include="coverPoint.h">
+      <Filter>systems\combat\cover system</Filter>
+    </ClInclude>
+    <ClInclude Include="coversManager.h">
+      <Filter>systems\combat\cover system</Filter>
+    </ClInclude>
+    <ClInclude Include="r6GuiManager.h">
+      <Filter>gui\manager</Filter>
+    </ClInclude>
+    <ClInclude Include="r6Hud.h">
+      <Filter>gui\hud</Filter>
+    </ClInclude>
+    <ClInclude Include="r6Menu.h">
+      <Filter>gui\menu</Filter>
+    </ClInclude>
+    <ClInclude Include="r6SystemOrder.h">
+      <Filter>systems</Filter>
+    </ClInclude>
+    <ClInclude Include="team.h">
+      <Filter>systems\combat\teams</Filter>
+    </ClInclude>
+    <ClInclude Include="teamMemberComponent.h">
+      <Filter>systems\combat\teams</Filter>
+    </ClInclude>
+    <ClInclude Include="r6HudModule.h">
+      <Filter>gui\hud</Filter>
+    </ClInclude>
+    <ClInclude Include="explorationCameraComponent.h">
+      <Filter>systems\camera</Filter>
+    </ClInclude>
+    <ClInclude Include="enemyAwareComponent.h">
+      <Filter>entities\npc</Filter>
+    </ClInclude>
+    <ClInclude Include="idGraph.h">
+      <Filter>systems\interactiveDialog\graph</Filter>
+    </ClInclude>
+    <ClInclude Include="interactionCameraComponent.h">
+      <Filter>systems\camera</Filter>
+    </ClInclude>
+    <ClInclude Include="slotCameraComponent.h">
+      <Filter>systems\camera</Filter>
+    </ClInclude>
+    <ClInclude Include="idHud.h">
+      <Filter>systems\interactiveDialog\hud</Filter>
+    </ClInclude>
+    <ClInclude Include="r6InteractionComponent.h">
+      <Filter>systems\interaction</Filter>
+    </ClInclude>
+    <ClInclude Include="r6InventoryItemComponent.h">
+      <Filter>systems\inventory</Filter>
+    </ClInclude>
+    <ClInclude Include="r6InventoryComponent.h">
+      <Filter>systems\inventory</Filter>
+    </ClInclude>
+    <ClInclude Include="npcMovementControllerComponent.h">
+      <Filter>entities\npc</Filter>
+    </ClInclude>
+    <ClInclude Include="safestPathRater.h">
+      <Filter>entities\npc</Filter>
+    </ClInclude>
+    <ClInclude Include="combatUtils.h">
+      <Filter>systems\combat</Filter>
+    </ClInclude>
+    <ClInclude Include="idCondition.h">
+      <Filter>systems\interactiveDialog\system\conditions</Filter>
+    </ClInclude>
+    <ClInclude Include="idThreadActivator.h">
+      <Filter>systems\interactiveDialog\system\conditions</Filter>
+    </ClInclude>
+    <ClInclude Include="idBasicBlocks.h">
+      <Filter>systems\interactiveDialog\graph\blocks</Filter>
+    </ClInclude>
+    <ClInclude Include="idGraphBlockText.h">
+      <Filter>systems\interactiveDialog\graph\blocks</Filter>
+    </ClInclude>
+    <ClInclude Include="idGraphBlockBranch.h">
+      <Filter>systems\interactiveDialog\graph\blocks</Filter>
+    </ClInclude>
+    <ClInclude Include="idGraphBlockChoice.h">
+      <Filter>systems\interactiveDialog\graph\blocks</Filter>
+    </ClInclude>
+    <ClInclude Include="r6DialogDisplayManager.h">
+      <Filter>systems\interactiveDialog\r6</Filter>
+    </ClInclude>
+    <ClInclude Include="teamManager.h">
+      <Filter>systems\combat\teams</Filter>
+    </ClInclude>
+    <ClInclude Include="idGraphBlockCondition.h">
+      <Filter>systems\interactiveDialog\graph\blocks</Filter>
+    </ClInclude>
+    <ClInclude Include="idInterlocutor.h">
+      <Filter>systems\interactiveDialog\system\interlocutors</Filter>
+    </ClInclude>
+    <ClInclude Include="idThread.h">
+      <Filter>systems\interactiveDialog\system\dialog\topic\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="idLine.h">
+      <Filter>systems\interactiveDialog\system\lines</Filter>
+    </ClInclude>
+    <ClInclude Include="idEventSender.h">
+      <Filter>systems\interactiveDialog\system\eventSender</Filter>
+    </ClInclude>
+    <ClInclude Include="idEventSenderDataStructs.h">
+      <Filter>systems\interactiveDialog\system\eventSender</Filter>
+    </ClInclude>
+    <ClInclude Include="craftingBench.h">
+      <Filter>systems\crafting</Filter>
+    </ClInclude>
+    <ClInclude Include="idGraphBlockFact.h">
+      <Filter>systems\interactiveDialog\graph\blocks</Filter>
+    </ClInclude>
+    <ClInclude Include="scriptedStatsModyfier.h">
+      <Filter>systems\assembly\stats modyfiers</Filter>
+    </ClInclude>
+    <ClInclude Include="questGraphBlockInteractiveDialog.h">
+      <Filter>systems\quest</Filter>
+    </ClInclude>
+    <ClInclude Include="idGraphBlockComunicatorSwitch.h">
+      <Filter>systems\interactiveDialog\graph\blocks</Filter>
+    </ClInclude>
+    <ClInclude Include="idGraphBlockEvents.h">
+      <Filter>systems\interactiveDialog\graph\blocks</Filter>
+    </ClInclude>
+    <ClInclude Include="idAreaCondition.h">
+      <Filter>systems\interactiveDialog\system\conditions</Filter>
+    </ClInclude>
+    <ClInclude Include="bulletProjectile.h">
+      <Filter>items\projectiles</Filter>
+    </ClInclude>
+    <ClInclude Include="idGraphBlockOutputTerminate.h">
+      <Filter>systems\interactiveDialog\graph\blocks</Filter>
+    </ClInclude>
+    <ClInclude Include="idGraphBlockRequestFocus.h">
+      <Filter>systems\interactiveDialog\graph\blocks</Filter>
+    </ClInclude>
+    <ClInclude Include="avoidEnemiesSteeringTask.h">
+      <Filter>entities\npc</Filter>
+    </ClInclude>
+    <ClInclude Include="idConnector.h">
+      <Filter>systems\interactiveDialog\system\connectors</Filter>
+    </ClInclude>
+    <ClInclude Include="idGraphBlockInteraction.h">
+      <Filter>systems\interactiveDialog\graph\blocks</Filter>
+    </ClInclude>
+    <ClInclude Include="idGraphBlockFlow.h">
+      <Filter>systems\interactiveDialog\graph\blocks</Filter>
+    </ClInclude>
+    <ClInclude Include="upgradeEventCallScriptFunction.h">
+      <Filter>systems\assembly\event handlers\general</Filter>
+    </ClInclude>
+    <ClInclude Include="idGraphBlockConnector.h">
+      <Filter>systems\interactiveDialog\graph\blocks</Filter>
+    </ClInclude>
+    <ClInclude Include="idEvent.h">
+      <Filter>systems\interactiveDialog\system\eventSender\events</Filter>
+    </ClInclude>
+    <ClInclude Include="idEventGeneral.h">
+      <Filter>systems\interactiveDialog\system\eventSender\events</Filter>
+    </ClInclude>
+    <ClInclude Include="idEventAnimation.h">
+      <Filter>systems\interactiveDialog\system\eventSender\events</Filter>
+    </ClInclude>
+    <ClInclude Include="idEventAI.h">
+      <Filter>systems\interactiveDialog\system\eventSender\events</Filter>
+    </ClInclude>
+    <ClInclude Include="idEventInterlocutor.h">
+      <Filter>systems\interactiveDialog\system\eventSender\events</Filter>
+    </ClInclude>
+    <ClInclude Include="idEventEncounter.h">
+      <Filter>systems\interactiveDialog\system\eventSender\events</Filter>
+    </ClInclude>
+    <ClInclude Include="idEventQuest.h">
+      <Filter>systems\interactiveDialog\system\eventSender\events</Filter>
+    </ClInclude>
+    <ClInclude Include="idEventFact.h">
+      <Filter>systems\interactiveDialog\system\eventSender\events</Filter>
+    </ClInclude>
+    <ClInclude Include="idGraphBlockCheckpoint.h">
+      <Filter>systems\interactiveDialog\graph\blocks</Filter>
+    </ClInclude>
+    <ClInclude Include="teamSharedKnowledge.h">
+      <Filter>systems\combat\teams</Filter>
+    </ClInclude>
+    <ClInclude Include="r6QuestSystem.h">
+      <Filter>systems\quest</Filter>
+    </ClInclude>
+    <ClInclude Include="r6npc.h">
+      <Filter>entities\npc</Filter>
+    </ClInclude>
+    <ClInclude Include="r6GameResource.h" />
+    <ClInclude Include="scriptedCameraComponent.h">
+      <Filter>systems\camera</Filter>
+    </ClInclude>
+    <ClInclude Include="idEventAbortInteraction.h">
+      <Filter>systems\interactiveDialog\system\eventSender\events</Filter>
+    </ClInclude>
+    <ClInclude Include="idEventSound.h">
+      <Filter>systems\interactiveDialog\system\eventSender\events</Filter>
+    </ClInclude>
+    <ClInclude Include="aimTarget.h">
+      <Filter>components\aiming</Filter>
+    </ClInclude>
+    <ClInclude Include="r6AdvancedVehicleComponent.h">
+      <Filter>entities\vehicles</Filter>
+    </ClInclude>
+    <ClInclude Include="directMovementLocomotionSegment.h">
+      <Filter>entities\player</Filter>
+    </ClInclude>
+    <ClInclude Include="r6TelemetryScriptProxy.h">
+      <Filter>telemetry</Filter>
+    </ClInclude>
+    <ClInclude Include="crowdSpaceNaive.h">
+      <Filter>systems\crowd\space</Filter>
+    </ClInclude>
+    <ClInclude Include="simpleCrowdSteering.h">
+      <Filter>systems\crowd\steering</Filter>
+    </ClInclude>
+    <ClInclude Include="crowdSpaceImplementation.h">
+      <Filter>systems\crowd\space</Filter>
+    </ClInclude>
+    <ClInclude Include="crowdArea.h">
+      <Filter>systems\crowd\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="crowdEntryPoint.h">
+      <Filter>systems\crowd\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="crowdAgent.h">
+      <Filter>systems\crowd\agent</Filter>
+    </ClInclude>
+    <ClInclude Include="crowdManager.h">
+      <Filter>systems\crowd\system</Filter>
+    </ClInclude>
+    <ClInclude Include="crowdSpaceGrid.h">
+      <Filter>systems\crowd\space</Filter>
+    </ClInclude>
+    <ClInclude Include="crowd.h">
+      <Filter>systems\crowd\system</Filter>
+    </ClInclude>
+    <ClInclude Include="orvoSolver.h">
+      <Filter>systems\crowd\steering</Filter>
+    </ClInclude>
+    <ClInclude Include="followerPOIComponent.h">
+      <Filter>systems\followers</Filter>
+    </ClInclude>
+    <ClInclude Include="questObjectiveComponent.h">
+      <Filter>systems\quest</Filter>
+    </ClInclude>
+    <ClInclude Include="crowdObstacle.h">
+      <Filter>systems\crowd\agent</Filter>
+    </ClInclude>
+    <ClInclude Include="crowdAreaComponent.h">
+      <Filter>systems\crowd\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="traitData.h">
+      <Filter>systems\traits</Filter>
+    </ClInclude>
+    <ClInclude Include="traitComponent.h">
+      <Filter>systems\traits</Filter>
+    </ClInclude>
+    <ClInclude Include="idSystem.h">
+      <Filter>systems\interactiveDialog\system</Filter>
+    </ClInclude>
+    <ClInclude Include="idTopic.h">
+      <Filter>systems\interactiveDialog\system\dialog\topic</Filter>
+    </ClInclude>
+    <ClInclude Include="idResource.h">
+      <Filter>systems\interactiveDialog\system\dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="idInstance.h">
+      <Filter>systems\interactiveDialog\system\dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="aiTreeComponent.h">
+      <Filter>systems\ai\components</Filter>
+    </ClInclude>
+    <ClInclude Include="r6behTreeInstance.h">
+      <Filter>systems\ai\behTree\instance</Filter>
+    </ClInclude>
+    <ClInclude Include="r6aiSystem.h">
+      <Filter>systems\ai\system</Filter>
+    </ClInclude>
+    <ClInclude Include="avComponentTest.h">
+      <Filter>entities\vehicles</Filter>
+    </ClInclude>
+    <ClInclude Include="avCameraTest.h">
+      <Filter>systems\camera</Filter>
+    </ClInclude>
+    <ClInclude Include="r6CameraAttachment.h">
+      <Filter>systems\camera</Filter>
+    </ClInclude>
+    <ClInclude Include="r6CameraDirector.h">
+      <Filter>systems\camera</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeDebugLog.h">
+      <Filter>systems\ai\behTree\nodes\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="aiActionPerformerAttachment.h">
+      <Filter>systems\ai\components\attachments</Filter>
+    </ClInclude>
+    <ClInclude Include="aiAction.h">
+      <Filter>systems\ai\actions</Filter>
+    </ClInclude>
+    <ClInclude Include="aiActionPlayAnimation.h">
+      <Filter>systems\ai\actions</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeAIAction.h">
+      <Filter>systems\ai\behTree\nodes\action</Filter>
+    </ClInclude>
+    <ClInclude Include="r6behTreeVars.h">
+      <Filter>systems\ai\behTree\vars</Filter>
+    </ClInclude>
+    <ClInclude Include="r6CameraComponent.h">
+      <Filter>systems\camera</Filter>
+    </ClInclude>
+    <ClInclude Include="aiActionMoveTo.h">
+      <Filter>systems\ai\actions</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeSelectTargetByTagR6.h">
+      <Filter>systems\ai\behTree\nodes\decorator</Filter>
+    </ClInclude>
+    <ClInclude Include="aiActionScripted.h">
+      <Filter>systems\ai\actions</Filter>
+    </ClInclude>
+    <ClInclude Include="companionComponent.h">
+      <Filter>components</Filter>
+    </ClInclude>
+    <ClInclude Include="questGraphR6QuestBlock.h">
+      <Filter>systems\quest</Filter>
+    </ClInclude>
+    <ClInclude Include="aiActionRotateTo.h">
+      <Filter>systems\ai\actions</Filter>
+    </ClInclude>
+    <ClInclude Include="questGraphR6QuestConditionBlock.h">
+      <Filter>systems\quest</Filter>
+    </ClInclude>
+    <ClInclude Include="questGraphR6QuestPauseBlock.h">
+      <Filter>systems\quest</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeSequenceR6.h">
+      <Filter>systems\ai\behTree\nodes\composite</Filter>
+    </ClInclude>
+    <ClInclude Include="aiActionInteraction.h">
+      <Filter>systems\ai\actions</Filter>
+    </ClInclude>
+    <ClInclude Include="r6error.h" />
+    <ClInclude Include="behTreeNodePlayerStateSelector.h">
+      <Filter>systems\ai\behTree\nodes\composite</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeConditionIsPlayer.h">
+      <Filter>systems\ai\behTree\nodes\condition</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeNodePlayerStateIdle.h">
+      <Filter>systems\ai\behTree\nodes\player</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeNodePlayerState.h">
+      <Filter>systems\ai\behTree\nodes\player</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeNodePlayerStateWalk.h">
+      <Filter>systems\ai\behTree\nodes\player</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeNodePlayerStateJump.h">
+      <Filter>systems\ai\behTree\nodes\player</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeInputDecorator.h">
+      <Filter>systems\ai\behTree\nodes\decorator</Filter>
+    </ClInclude>
+    <ClInclude Include="r6AimingComponent.h">
+      <Filter>components\aiming</Filter>
+    </ClInclude>
+    <ClInclude Include="playerLocomotionController.h">
+      <Filter>systems\ai\behTree\nodes\player</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeNodePlayerChooseInteraction.h">
+      <Filter>systems\ai\behTree\nodes\player</Filter>
+    </ClInclude>
+    <ClInclude Include="r6InteractionTurnOnOff.h">
+      <Filter>systems\interaction</Filter>
+    </ClInclude>
+    <ClInclude Include="r6BehaviorSlotComponent.h">
+      <Filter>components</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="systems">
+      <UniqueIdentifier>{c6de9a7a-0120-4231-b38f-afd179456cde}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game">
+      <UniqueIdentifier>{52a897c6-eb34-40ca-87a8-0ea70b194ce3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gui">
+      <UniqueIdentifier>{581291d1-167f-4fe6-90ba-a577604af273}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="components">
+      <UniqueIdentifier>{d47ac9fd-474d-466c-bd42-47e2fb75a752}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gui\manager">
+      <UniqueIdentifier>{d2970666-b905-432e-b23f-019bb8635746}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gui\hud">
+      <UniqueIdentifier>{82987e0d-97ea-4f93-8227-f003077951d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gui\menu">
+      <UniqueIdentifier>{d08402c3-f6e2-49bb-91d5-1a95a60e627d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\interactiveDialog">
+      <UniqueIdentifier>{6e41852f-146d-4daf-8c5d-3e46a894ca02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\interactiveDialog\graph">
+      <UniqueIdentifier>{acdb5785-95b8-4c04-8e68-961b9b84158b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\interactiveDialog\graph\blocks">
+      <UniqueIdentifier>{c33f9072-fb29-43cd-8701-93d0f50b3fd9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\interactiveDialog\system">
+      <UniqueIdentifier>{34913131-a1bd-42fe-8a5d-4668f0a633c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\interactiveDialog\system\conditions">
+      <UniqueIdentifier>{394be783-2ac2-4642-aaf4-1a99480be35b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\interactiveDialog\system\interlocutors">
+      <UniqueIdentifier>{0285c673-cf62-40db-8e31-9d9ca0e3425b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\interactiveDialog\system\dialog">
+      <UniqueIdentifier>{d4b2cee6-c661-4e01-9ee4-dff72a18e013}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\interactiveDialog\system\dialog\topic">
+      <UniqueIdentifier>{aafb97b1-6299-4430-aeac-7c245aa9c6fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\interactiveDialog\system\dialog\topic\thread">
+      <UniqueIdentifier>{1bbca511-8ab5-4f74-9d9e-ea193163e66e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\interactiveDialog\system\lines">
+      <UniqueIdentifier>{1de61249-8fe1-425a-a716-0cf0d6c927eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\interactiveDialog\system\eventSender">
+      <UniqueIdentifier>{bc425357-7cee-4c19-93f6-91a2dc7c9e8e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\interactiveDialog\hud">
+      <UniqueIdentifier>{5778803f-e8f6-46d2-b78c-d091aeadc363}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\interactiveDialog\r6">
+      <UniqueIdentifier>{ea52eaac-ccdf-47b3-8e0b-c6369d0a8497}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\quest">
+      <UniqueIdentifier>{da0af02c-09d6-44d8-8286-ece6b156e63a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\interactiveDialog\system\connectors">
+      <UniqueIdentifier>{2e6d01c6-1cec-457f-b971-9587e3d13c5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\interactiveDialog\system\eventSender\events">
+      <UniqueIdentifier>{7f7f1cc7-d845-4ecc-a079-8c309c08b698}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\camera">
+      <UniqueIdentifier>{a5f01abd-f44a-4918-8fa8-958b2f479e88}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\combat">
+      <UniqueIdentifier>{3a88d0c8-87a5-45ed-b627-54d0b330fe29}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\combat\cover system">
+      <UniqueIdentifier>{e22d2cfe-60b6-4e0b-baac-58c59e423c56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\combat\teams">
+      <UniqueIdentifier>{f9321a8c-b80f-4119-80bb-c1eb5713b6b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\crafting">
+      <UniqueIdentifier>{ac0fc63f-6517-4cc5-99d8-546c64c1ea48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\interaction">
+      <UniqueIdentifier>{30eff3a6-586b-49cb-b1c7-19716473a84b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\health">
+      <UniqueIdentifier>{1d87578d-c3de-4737-b0e1-e19270a36ced}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\inventory">
+      <UniqueIdentifier>{444e95db-1980-4acb-946c-387682c7f25c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="items">
+      <UniqueIdentifier>{bed928a8-d166-4f65-bfc2-69cf09ab7240}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="items\projectiles">
+      <UniqueIdentifier>{5eb6d227-0113-4e1a-add6-a7b2219e5d44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="entities">
+      <UniqueIdentifier>{aa4dbdc6-bb12-4500-a1e4-ebb5ff39c4e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="entities\switches">
+      <UniqueIdentifier>{270d2277-dea2-4345-8ea2-ccaa7ed4defa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="entities\player">
+      <UniqueIdentifier>{24aed81b-0e9a-427e-bf39-7a822358e2ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="entities\player\inventory">
+      <UniqueIdentifier>{e0d9cd52-c6dd-4be3-9b27-967477c1c700}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="entities\npc">
+      <UniqueIdentifier>{db9b7cfa-12a7-4c4c-b8de-4778d315caf7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\statistics">
+      <UniqueIdentifier>{87d36d37-bed5-43ff-8e4a-e3b34be12d86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="entities\vehicles">
+      <UniqueIdentifier>{265731f1-568a-4b03-8c0e-60e0e2cc1fe6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="telemetry">
+      <UniqueIdentifier>{420920d9-23dc-4f16-b98e-162ea8b8e276}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\crowd">
+      <UniqueIdentifier>{bbd67f02-af2c-411b-be07-921b747a7a2b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\crowd\utils">
+      <UniqueIdentifier>{cefe963e-2d3b-47db-b40c-0fe43c3205de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\crowd\agent">
+      <UniqueIdentifier>{e5e680c4-64a4-4222-b88a-a1141b56d39f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\crowd\entities">
+      <UniqueIdentifier>{26ec37e7-374b-4250-b57a-d1d76843a05b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\crowd\system">
+      <UniqueIdentifier>{9e679b95-6347-492b-9753-30ced1f8f16a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\crowd\space">
+      <UniqueIdentifier>{549b993a-fcd3-42e3-8aac-3acdf0a3888c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\crowd\steering">
+      <UniqueIdentifier>{e149d6a5-8ee3-4985-bfb9-673edefb8005}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\interactiveDialog\debug">
+      <UniqueIdentifier>{a157c1a9-7aeb-4c19-b3b8-7a83d86854cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\followers">
+      <UniqueIdentifier>{2dc72597-555b-49db-b68a-df23a9713f20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\traits">
+      <UniqueIdentifier>{68f81f43-a014-4866-b912-2054892e9ce9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\ai">
+      <UniqueIdentifier>{f073e0bd-d2fc-430c-b78f-5cba4795d396}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\ai\components">
+      <UniqueIdentifier>{2d8515c7-5c31-4bc6-8766-dac09b85fed8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\ai\components\attachments">
+      <UniqueIdentifier>{184a3930-848e-4b3f-8b1a-bcf258568676}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\ai\behTree">
+      <UniqueIdentifier>{e5c4f76a-ec6a-407b-8566-8a1a37a5d283}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\ai\behTree\instance">
+      <UniqueIdentifier>{f3f73af8-d5b0-4c5d-9f7e-7e60c1fcad80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\ai\system">
+      <UniqueIdentifier>{608d1a4f-42d3-4c7a-bc43-0be0e77c54bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\ai\behTree\nodes">
+      <UniqueIdentifier>{ae88808c-e84a-4814-a454-0cbe6060b2dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\ai\behTree\nodes\debug">
+      <UniqueIdentifier>{73d61f70-5dd6-41a3-b478-dc968636a460}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\ai\behTree\nodes\action">
+      <UniqueIdentifier>{d3de6b1f-939e-48f9-a0de-ed20c71e1c5e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\assembly">
+      <UniqueIdentifier>{744f57df-e478-4454-899c-88a95a57b94b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\assembly\event handlers">
+      <UniqueIdentifier>{f5206c3f-25cc-4cc5-a45c-3aded3334977}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\assembly\event handlers\firearm">
+      <UniqueIdentifier>{cccbd896-1552-4b6e-add0-6e7daee3fc7b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\assembly\event handlers\general">
+      <UniqueIdentifier>{50759845-47f2-4fd0-930e-18196165b451}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\assembly\event handlers\params">
+      <UniqueIdentifier>{fc08ea26-43e6-4c80-a17d-f03fd675f69d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\assembly\stats modyfiers">
+      <UniqueIdentifier>{91f370cb-ee84-48ea-a3e3-2929155c8fba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\assembly\extensions">
+      <UniqueIdentifier>{2aed2906-a3ed-46c1-acb5-7bf7d9612613}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\assembly\customisation">
+      <UniqueIdentifier>{30956697-980f-4dcc-90f9-76d77d92a017}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\ai\behTree\vars">
+      <UniqueIdentifier>{ef2a10d3-b0bb-4422-82cb-e7154430b44b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\ai\behTree\nodes\decorator">
+      <UniqueIdentifier>{907e1b8c-f659-437f-8983-6b8995766609}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\ai\actions">
+      <UniqueIdentifier>{73ff97a2-60b7-4628-9f50-a4fdf2f49ee4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\ai\behTree\nodes\composite">
+      <UniqueIdentifier>{db90ee05-c2df-4003-9082-5d8fe7f7af48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\ai\behTree\nodes\condition">
+      <UniqueIdentifier>{d455fb9f-4e4f-41b8-816b-147106c128b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\ai\behTree\nodes\player">
+      <UniqueIdentifier>{d4aa9dfb-a0a3-4325-940b-16f0130eed37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="components\aiming">
+      <UniqueIdentifier>{0df85ec5-f677-44b1-b3ca-0b313a432299}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="idInterlocutor.inl">
+      <Filter>systems\interactiveDialog\system\interlocutors</Filter>
+    </None>
+    <None Include="gridCrawler.inl">
+      <Filter>systems\crowd\space</Filter>
+    </None>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="build.cpp" />
+    <ClCompile Include="areaBSPTests.cpp" />
+    <ClCompile Include="externDefinition.cpp" />
+    <ClCompile Include="..\unitTestsFramework\testRunnerDurango.cpp">
+      <Filter>durango</Filter>
+    </ClCompile>
+    <ClCompile Include="foliageBrokerTests.cpp" />
+    <ClCompile Include="foliageCellTests.cpp" />
+    <ClCompile Include="foliageGridTests.cpp" />
+    <ClCompile Include="foliageResourceLoaderTests.cpp" />
+    <ClCompile Include="foliageResourceHandlerTests.cpp" />
+    <ClCompile Include="foliageSceneTests.cpp" />
+    <ClCompile Include="foliageResourceTests.cpp" />
+    <ClCompile Include="foliageMocks.cpp" />
+    <ClCompile Include="operatorNewDelete_orbis.cpp" />
+    <ClCompile Include="..\unitTestsFramework\testRunner.cpp" />
+    <ClCompile Include="poseProviderRepositoryTests.cpp" />
+    <ClCompile Include="poseProviderTests.cpp" />
+    <ClCompile Include="poseBlockTests.cpp" />
+    <ClCompile Include="posePoolTests.cpp" />
+    <ClCompile Include="poseTests.cpp" />
+    <ClCompile Include="engineMetalinkFactories.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="build.h" />
+    <ClInclude Include="foliageMocks.h" />
+    <ClInclude Include="rendererMocks.h" />
+    <ClInclude Include="poseMocks.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="durango">
+      <UniqueIdentifier>{252ac91e-2751-454f-8153-2cc14febdadc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="unitTestsEngine.appxmanifest">
+      <Filter>durango</Filter>
+    </AppxManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\unitTestsFramework\Logo.png">
+      <Filter>durango</Filter>
+    </Image>
+    <Image Include="..\unitTestsFramework\SmallLogo.png">
+      <Filter>durango</Filter>
+    </Image>
+    <Image Include="..\unitTestsFramework\SplashScreen.png">
+      <Filter>durango</Filter>
+    </Image>
+    <Image Include="..\unitTestsFramework\StoreLogo.png">
+      <Filter>durango</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

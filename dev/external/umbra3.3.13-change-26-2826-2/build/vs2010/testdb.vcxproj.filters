@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="utils">
+      <UniqueIdentifier>{8EA4E849-718C-5646-95E0-1362F38F64E3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils\testdb">
+      <UniqueIdentifier>{23D145E6-482F-E24F-B862-0869EC5D62A5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\utils\testdb\umbraTestingDatabase.hpp">
+      <Filter>utils\testdb</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\utils\testdb\umbraTestingDatabase.cpp">
+      <Filter>utils\testdb</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

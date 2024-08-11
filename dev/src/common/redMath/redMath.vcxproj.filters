@@ -1,0 +1,339 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="fpu">
+      <UniqueIdentifier>{3cfe48dd-8925-48b5-ae88-93af33d59e29}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Random">
+      <UniqueIdentifier>{a53c638c-8c79-46f3-a469-9474d0f16bc7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vector">
+      <UniqueIdentifier>{e18cb9fe-eeb6-4588-9fb9-d1e232c09a0e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vector\SIMD">
+      <UniqueIdentifier>{7bb3b22a-cec0-4a10-8094-1d1a12d8f3d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vector\FLOAT">
+      <UniqueIdentifier>{acc57193-7c04-4ab7-89b4-9452a0a329f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Matrix">
+      <UniqueIdentifier>{bab7903e-8698-4a55-a81c-f80244385942}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Matrix\FLOAT">
+      <UniqueIdentifier>{48af321f-16a2-4d35-a411-84604f130d8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Matrix\SIMD">
+      <UniqueIdentifier>{37bf1686-0657-4ead-a7ac-78bb81e43079}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{98146360-eca4-4ee9-8039-fc781fbbe5df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Quaternion">
+      <UniqueIdentifier>{9f07b57e-9429-4d9b-b427-3691a21fca31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Quaternion\SIMD">
+      <UniqueIdentifier>{1f551728-976c-4daa-993d-1ab71f5b38bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AABB">
+      <UniqueIdentifier>{54ab9912-dbee-4ebf-86f0-ccc4e7307b6e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EulerAngles">
+      <UniqueIdentifier>{f1fcc0cc-9c0a-4dc6-97d8-f72343003dad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AABB\SIMD">
+      <UniqueIdentifier>{3f956b7d-ab6e-4588-ab43-be3af05758ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EulerAngles\SIMD">
+      <UniqueIdentifier>{8609c756-8f71-4093-aa3f-2717b4d91adc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="numericalutils.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="redmatrix_fpu.h">
+      <Filter>fpu</Filter>
+    </ClInclude>
+    <ClInclude Include="redquaternion_fpu.h">
+      <Filter>fpu</Filter>
+    </ClInclude>
+    <ClInclude Include="redqstransform_fpu.h">
+      <Filter>fpu</Filter>
+    </ClInclude>
+    <ClInclude Include="redtransform_fpu.h">
+      <Filter>fpu</Filter>
+    </ClInclude>
+    <ClInclude Include="redeulerangles_fpu.h">
+      <Filter>fpu</Filter>
+    </ClInclude>
+    <ClInclude Include="redmathbase.h" />
+    <ClInclude Include="redaabb_fpu.h">
+      <Filter>fpu</Filter>
+    </ClInclude>
+    <ClInclude Include="random\random.h">
+      <Filter>Random</Filter>
+    </ClInclude>
+    <ClInclude Include="random\standardRand.h">
+      <Filter>Random</Filter>
+    </ClInclude>
+    <ClInclude Include="random\noise.h">
+      <Filter>Random</Filter>
+    </ClInclude>
+    <ClInclude Include="random\mersenneTwister.h">
+      <Filter>Random</Filter>
+    </ClInclude>
+    <ClInclude Include="float16compressor.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="random\xorshift.h">
+      <Filter>Random</Filter>
+    </ClInclude>
+    <ClInclude Include="random\fastRand.h">
+      <Filter>Random</Filter>
+    </ClInclude>
+    <ClInclude Include="redmath.h" />
+    <ClInclude Include="redvector_fpu.h">
+      <Filter>fpu</Filter>
+    </ClInclude>
+    <ClInclude Include="mathTypes.h" />
+    <ClInclude Include="redScalar_simd.h">
+      <Filter>Vector\SIMD</Filter>
+    </ClInclude>
+    <ClInclude Include="redScalar_float.h">
+      <Filter>Vector\FLOAT</Filter>
+    </ClInclude>
+    <ClInclude Include="redVector2_float.h">
+      <Filter>Vector\FLOAT</Filter>
+    </ClInclude>
+    <ClInclude Include="redVector4_float.h">
+      <Filter>Vector\FLOAT</Filter>
+    </ClInclude>
+    <ClInclude Include="vectorFunctions_float.h">
+      <Filter>Vector\FLOAT</Filter>
+    </ClInclude>
+    <ClInclude Include="redVector2_simd.h">
+      <Filter>Vector\SIMD</Filter>
+    </ClInclude>
+    <ClInclude Include="redVector3_float.h">
+      <Filter>Vector\FLOAT</Filter>
+    </ClInclude>
+    <ClInclude Include="redVector3_simd.h">
+      <Filter>Vector\SIMD</Filter>
+    </ClInclude>
+    <ClInclude Include="redVector4_simd.h">
+      <Filter>Vector\SIMD</Filter>
+    </ClInclude>
+    <ClInclude Include="vectorFunctions_simd.h">
+      <Filter>Vector\SIMD</Filter>
+    </ClInclude>
+    <ClInclude Include="vectorArithmetic_simd.h">
+      <Filter>Vector\SIMD</Filter>
+    </ClInclude>
+    <ClInclude Include="vectorArithmetic_float.h">
+      <Filter>Vector\FLOAT</Filter>
+    </ClInclude>
+    <ClInclude Include="matrixArithmetic_float.h">
+      <Filter>Matrix\FLOAT</Filter>
+    </ClInclude>
+    <ClInclude Include="redMatrix4x4_float.h">
+      <Filter>Matrix\FLOAT</Filter>
+    </ClInclude>
+    <ClInclude Include="matrixFunctions_float.h">
+      <Filter>Matrix\FLOAT</Filter>
+    </ClInclude>
+    <ClInclude Include="redMatrix3x3_float.h">
+      <Filter>Matrix\FLOAT</Filter>
+    </ClInclude>
+    <ClInclude Include="redMatrix4x4_simd.h">
+      <Filter>Matrix\SIMD</Filter>
+    </ClInclude>
+    <ClInclude Include="redQuaternion_simd.h">
+      <Filter>Quaternion\SIMD</Filter>
+    </ClInclude>
+    <ClInclude Include="redqstransform_simd.h">
+      <Filter>Quaternion\SIMD</Filter>
+    </ClInclude>
+    <ClInclude Include="redtransform_simd.h">
+      <Filter>Quaternion\SIMD</Filter>
+    </ClInclude>
+    <ClInclude Include="redMatrix3x3_simd.h">
+      <Filter>Matrix\SIMD</Filter>
+    </ClInclude>
+    <ClInclude Include="redaabb_simd.h">
+      <Filter>AABB\SIMD</Filter>
+    </ClInclude>
+    <ClInclude Include="redeulerangles_simd.h">
+      <Filter>EulerAngles\SIMD</Filter>
+    </ClInclude>
+    <ClInclude Include="matrixArithmetic_simd.h">
+      <Filter>Matrix\SIMD</Filter>
+    </ClInclude>
+    <ClInclude Include="matrixFunctions_simd.h">
+      <Filter>Matrix\SIMD</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="mathfunctions_fpu.h">
+      <Filter>fpu</Filter>
+    </None>
+    <None Include="redmatrix_fpu.inl">
+      <Filter>fpu</Filter>
+    </None>
+    <None Include="redquaternion_fpu.inl">
+      <Filter>fpu</Filter>
+    </None>
+    <None Include="redqstransform_fpu.inl">
+      <Filter>fpu</Filter>
+    </None>
+    <None Include="redtransform_fpu.inl">
+      <Filter>fpu</Filter>
+    </None>
+    <None Include="redeulerangles_fpu.inl">
+      <Filter>fpu</Filter>
+    </None>
+    <None Include="redaabb_fpu.inl">
+      <Filter>fpu</Filter>
+    </None>
+    <None Include="redvector_fpu.inl">
+      <Filter>fpu</Filter>
+    </None>
+    <None Include="redScalar_simd.inl">
+      <Filter>Vector\SIMD</Filter>
+    </None>
+    <None Include="redScalar_float.inl">
+      <Filter>Vector\FLOAT</Filter>
+    </None>
+    <None Include="redVector2_float.inl">
+      <Filter>Vector\FLOAT</Filter>
+    </None>
+    <None Include="redVector4_float.inl">
+      <Filter>Vector\FLOAT</Filter>
+    </None>
+    <None Include="redVector2_simd.inl">
+      <Filter>Vector\SIMD</Filter>
+    </None>
+    <None Include="redVector3_float.inl">
+      <Filter>Vector\FLOAT</Filter>
+    </None>
+    <None Include="redVector3_simd.inl">
+      <Filter>Vector\SIMD</Filter>
+    </None>
+    <None Include="redVector4_simd.inl">
+      <Filter>Vector\SIMD</Filter>
+    </None>
+    <None Include="redMatrix4x4_float.inl">
+      <Filter>Matrix\FLOAT</Filter>
+    </None>
+    <None Include="redMatrix3x3_float.inl">
+      <Filter>Matrix\FLOAT</Filter>
+    </None>
+    <None Include="redMatrix4x4_simd.inl">
+      <Filter>Matrix\SIMD</Filter>
+    </None>
+    <None Include="vectorArithmetic_float.inl">
+      <Filter>Vector\FLOAT</Filter>
+    </None>
+    <None Include="vectorFunctions_float.inl">
+      <Filter>Vector\FLOAT</Filter>
+    </None>
+    <None Include="vectorArithmetic_simd.inl">
+      <Filter>Vector\SIMD</Filter>
+    </None>
+    <None Include="vectorFunctions_simd.inl">
+      <Filter>Vector\SIMD</Filter>
+    </None>
+    <None Include="redQuaternion_simd.inl">
+      <Filter>Quaternion\SIMD</Filter>
+    </None>
+    <None Include="redqstransform_simd.inl">
+      <Filter>Quaternion\SIMD</Filter>
+    </None>
+    <None Include="redtransform_simd.inl">
+      <Filter>Quaternion\SIMD</Filter>
+    </None>
+    <None Include="redMatrix3x3_simd.inl">
+      <Filter>Matrix\SIMD</Filter>
+    </None>
+    <None Include="redaabb_simd.inl">
+      <Filter>AABB\SIMD</Filter>
+    </None>
+    <None Include="redeulerangles_simd.inl">
+      <Filter>EulerAngles\SIMD</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="constants_fpu.cpp">
+      <Filter>fpu</Filter>
+    </ClCompile>
+    <ClCompile Include="random\standardRand.cpp">
+      <Filter>Random</Filter>
+    </ClCompile>
+    <ClCompile Include="random\standardRand16.cpp">
+      <Filter>Random</Filter>
+    </ClCompile>
+    <ClCompile Include="random\standardRand32.cpp">
+      <Filter>Random</Filter>
+    </ClCompile>
+    <ClCompile Include="random\random.cpp">
+      <Filter>Random</Filter>
+    </ClCompile>
+    <ClCompile Include="random\noise.cpp">
+      <Filter>Random</Filter>
+    </ClCompile>
+    <ClCompile Include="random\mersenneTwister.cpp">
+      <Filter>Random</Filter>
+    </ClCompile>
+    <ClCompile Include="random\xorshift.cpp">
+      <Filter>Random</Filter>
+    </ClCompile>
+    <ClCompile Include="random\fastRand.cpp">
+      <Filter>Random</Filter>
+    </ClCompile>
+    <ClCompile Include="redVector2_float.cpp">
+      <Filter>Vector\FLOAT</Filter>
+    </ClCompile>
+    <ClCompile Include="redVector2_simd.cpp">
+      <Filter>Vector\SIMD</Filter>
+    </ClCompile>
+    <ClCompile Include="mathTypes.cpp" />
+    <ClCompile Include="redVector3_float.cpp">
+      <Filter>Vector\FLOAT</Filter>
+    </ClCompile>
+    <ClCompile Include="redVector4_float.cpp">
+      <Filter>Vector\FLOAT</Filter>
+    </ClCompile>
+    <ClCompile Include="redVector3_simd.cpp">
+      <Filter>Vector\SIMD</Filter>
+    </ClCompile>
+    <ClCompile Include="redVector4_simd.cpp">
+      <Filter>Vector\SIMD</Filter>
+    </ClCompile>
+    <ClCompile Include="matrixArithmetic_float.cpp">
+      <Filter>Matrix\FLOAT</Filter>
+    </ClCompile>
+    <ClCompile Include="redMatrix4x4_float.cpp">
+      <Filter>Matrix\FLOAT</Filter>
+    </ClCompile>
+    <ClCompile Include="matrixFunctions_float.cpp">
+      <Filter>Matrix\FLOAT</Filter>
+    </ClCompile>
+    <ClCompile Include="redMatrix3x3_float.cpp">
+      <Filter>Matrix\FLOAT</Filter>
+    </ClCompile>
+    <ClCompile Include="redMatrix4x4_simd.cpp">
+      <Filter>Matrix\SIMD</Filter>
+    </ClCompile>
+    <ClCompile Include="redMatrix3x3_simd.cpp">
+      <Filter>Matrix\SIMD</Filter>
+    </ClCompile>
+    <ClCompile Include="matrixArithmetic_simd.cpp">
+      <Filter>Matrix\SIMD</Filter>
+    </ClCompile>
+    <ClCompile Include="matrixFunctions_simd.cpp">
+      <Filter>Matrix\SIMD</Filter>
+    </ClCompile>
+    <ClCompile Include="redquaternion_simd.cpp">
+      <Filter>Quaternion\SIMD</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

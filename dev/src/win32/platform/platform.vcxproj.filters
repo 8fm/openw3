@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="build.cpp" />
+    <ClCompile Include="os.cpp" />
+    <ClCompile Include="clipboardWin32.cpp" />
+    <ClCompile Include="inputDeviceGamepadXInput.cpp">
+      <Filter>Input\Devices</Filter>
+    </ClCompile>
+    <ClCompile Include="inputDeviceKeyboardDInput.cpp">
+      <Filter>Input\Devices</Filter>
+    </ClCompile>
+    <ClCompile Include="inputDeviceMouseDInput.cpp">
+      <Filter>Input\Devices</Filter>
+    </ClCompile>
+    <ClCompile Include="inputDeviceTabletWintab.cpp">
+      <Filter>Input\Devices</Filter>
+    </ClCompile>
+    <ClCompile Include="inputDeviceManagerWin32.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="inputLibWintab.cpp">
+      <Filter>Input\DLLs</Filter>
+    </ClCompile>
+    <ClCompile Include="userProfileManagerWindows.cpp">
+      <Filter>User Profiles</Filter>
+    </ClCompile>
+    <ClCompile Include="userProfileManagerWindowsSaving.cpp">
+      <Filter>User Profiles</Filter>
+    </ClCompile>
+    <ClCompile Include="inputDeviceGamepadPS4ForPC.cpp">
+	  <Filter>Input\Devices</Filter>
+    </ClCompile>
+    <ClCompile Include="inputDeviceKeyboardRawInput.cpp">
+      <Filter>Input\Devices</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="build.h" />
+    <ClInclude Include="internal.h" />
+    <ClInclude Include="os.h" />
+    <ClInclude Include="win32.h" />
+    <ClInclude Include="assertResource.h">
+      <Filter>res</Filter>
+    </ClInclude>
+    <ClInclude Include="clipboardWin32.h" />
+    <ClInclude Include="inputDeviceGamepadXInput.h">
+      <Filter>Input\Devices</Filter>
+    </ClInclude>
+    <ClInclude Include="inputDeviceKeyboardDInput.h">
+      <Filter>Input\Devices</Filter>
+    </ClInclude>
+    <ClInclude Include="inputDeviceMouseDInput.h">
+      <Filter>Input\Devices</Filter>
+    </ClInclude>
+    <ClInclude Include="inputDeviceTabletWintab.h">
+      <Filter>Input\Devices</Filter>
+    </ClInclude>
+    <ClInclude Include="inputDeviceManagerWin32.h">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="inputDInputInterface.h">
+      <Filter>Input\Devices</Filter>
+    </ClInclude>
+    <ClInclude Include="inputLibWintab.h">
+      <Filter>Input\DLLs</Filter>
+    </ClInclude>
+    <ClInclude Include="userProfileManagerWindows.h">
+      <Filter>User Profiles</Filter>
+    </ClInclude>
+    <ClInclude Include="userProfileManagerWindowsSaving.h">
+      <Filter>User Profiles</Filter>
+    </ClInclude>
+    <ClInclude Include="inputDeviceGamepadPS4ForPC.h">
+	  <Filter>Input\Devices</Filter>
+    </ClInclude>
+    <ClInclude Include="inputDeviceKeyboardRawInput.h">
+      <Filter>Input\Devices</Filter>
+    </ClInclude>
+    <ClInclude Include="inputRawInputInterface.h">
+      <Filter>Input\Devices</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="res">
+      <UniqueIdentifier>{d9dcef56-969f-430c-bfdf-67ae3bf26ac8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Input">
+      <UniqueIdentifier>{cc0a698f-de11-4190-bbea-b20a8799050d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Input\Devices">
+      <UniqueIdentifier>{3f8a614c-5a4c-43d1-8b21-ed6532f318a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Input\DLLs">
+      <UniqueIdentifier>{fcdbf3a7-0d35-47b5-961b-88925cf7f881}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="User Profiles">
+      <UniqueIdentifier>{2b50fd54-d7bd-40e2-8a70-6ab98f3dd2eb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assert.customrc">
+      <Filter>res</Filter>
+    </None>
+  </ItemGroup>
+</Project>

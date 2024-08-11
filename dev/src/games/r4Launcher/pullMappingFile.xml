@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mappings>
+  <!-- The root package path is created with -->
+  <!-- the path passed into to the           -->
+  <!-- xbdeploy.exe pull command.           -->
+
+  <path source="e:\depot\r4data\" target="\r4data" />
+  <path source="e:\depot\bin\shaders\" target="\bin\shaders" />
+  <path source="e:\depot\bin\xdkconfig\" target="\bin\xdkconfig" />
+  <path source="e:\depot\bin\config\" target="\bin\config" />
+  <path source="e:\depot\bin\initialData\" target="\bin\initialData" />
+  <path source="e:\depot\bin\dll\" target="\" />
+ </mappings>

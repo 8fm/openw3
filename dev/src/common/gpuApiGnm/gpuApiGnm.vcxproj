@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" TreatAsLocalProperty="OutDir;TargetName;IntDir;PlatformToolset">
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedConfigurationSetup.props))\SharedConfigurationSetup.props" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{AC6894FF-D535-4FC4-B428-8EBECE284267}</ProjectGuid>
+    <RootNamespace>gpuApiGnm</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UsePrecompiledHeaders>false</UsePrecompiledHeaders>
+  </PropertyGroup>
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.props))\Shared.props" />
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedItemGroups.props))\SharedItemGroups.props" />
+  <PropertyGroup Condition="'$(Platform)'=='ORBIS'">
+    <ExtensionsToDeleteOnClean>*.pssl.h;*.sb;$(ExtensionsToDeleteOnClean)</ExtensionsToDeleteOnClean>
+  </PropertyGroup>
+  
+  <!-- ================================================================================ -->
+  <!-- Import Custom Build Rules -->
+  <!-- ================================================================================ -->
+  <ItemGroup>
+    <PropertyPageSchema Include="$(ProjectDir)psslToHeader.xml" />
+    <AvailableItemName Include="Compile_PSSL_To_Header">
+      <Targets>_Compile_PSSL_To_Header</Targets>
+    </AvailableItemName>
+  </ItemGroup>
+  
+  <!-- 	=============================================== -->
+  <!-- Compile PSSL Shader To C Style Header Build Rule -->
+  <!-- 	=============================================== -->
+  <PropertyGroup>
+    <GnmPSSC>$(SolutionDir)\..\..\bin\tools\PSSLC\orbis-wave-psslc.exe</GnmPSSC>
+	<GnmBin2H>$(SCE_ORBIS_SDK_DIR)\host_tools\bin\orbis-bin2h.exe</GnmBin2H>
+  </PropertyGroup>
+  
+  <UsingTask TaskName="Compile_PSSL_To_Header" TaskFactory="XamlTaskFactory" AssemblyName="Microsoft.Build.Tasks.v4.0">
+    <Task>$(MSBuildThisFileDirectory)psslToHeader.xml</Task>
+  </UsingTask>
+  <Target Name="_Compile_PSSL_To_Header" BeforeTargets="Midl" AfterTargets="CustomBuild" Condition="'@(Compile_PSSL_To_Header)' != ''"
+    Outputs="%(Compile_PSSL_To_Header.Outputs)" Inputs="%(Compile_PSSL_To_Header.Identity);%(Compile_PSSL_To_Header.AdditionalDependencies);$(MSBuildProjectFile)">
+    <ItemGroup Condition="'@(SelectedFiles)' != ''">
+      <Compile_PSSL_To_Header Remove="@(Compile_PSSL_To_Header)" Condition="'%(Identity)' != '@(SelectedFiles)'" />
+    </ItemGroup>
+    <Message Importance="High" Text="%(Compile_PSSL_To_Header.ExecutionDescription)" />
+    <Compile_PSSL_To_Header
+      Condition="'@(Compile_PSSL_To_Header)' != '' and '%(Compile_PSSL_To_Header.ExcludedFromBuild)' != 'true'"
+      CommandLineTemplate="%(Compile_PSSL_To_Header.CommandLineTemplate)"
+      AdditionalOptions="%(Compile_PSSL_To_Header.AdditionalOptions)"
+      StandardOutputImportance="Low"
+      StandardErrorImportance="High"
+      Inputs="%(Compile_PSSL_To_Header.Identity)" />
+  </Target>
+  <!-- 	=============================================== -->
+  
+  <ItemGroup>
+    <ClInclude Include="..\..\..\external\redgnmx\redgnmx.h" />
+    <ClInclude Include="..\..\..\external\redgnmx\redgnmx\basegfxcontext.h" />
+    <ClInclude Include="..\..\..\external\redgnmx\redgnmx\common.h" />
+    <ClInclude Include="..\..\..\external\redgnmx\redgnmx\computecontext.h" />
+    <ClInclude Include="..\..\..\external\redgnmx\redgnmx\computecontext_methods.h" />
+    <ClInclude Include="..\..\..\external\redgnmx\redgnmx\computequeue.h" />
+    <ClInclude Include="..\..\..\external\redgnmx\redgnmx\config.h" />
+    <ClInclude Include="..\..\..\external\redgnmx\redgnmx\constantupdateengine.h" />
+    <ClInclude Include="..\..\..\external\redgnmx\redgnmx\cue-helper.h" />
+    <ClInclude Include="..\..\..\external\redgnmx\redgnmx\cue.h" />
+    <ClInclude Include="..\..\..\external\redgnmx\redgnmx\dispatchdraw.h" />
+    <ClInclude Include="..\..\..\external\redgnmx\redgnmx\error_gen.h" />
+    <ClInclude Include="..\..\..\external\redgnmx\redgnmx\fetchshaderhelper.h" />
+    <ClInclude Include="..\..\..\external\redgnmx\redgnmx\gfxcontext.h" />
+    <ClInclude Include="..\..\..\external\redgnmx\redgnmx\gfxcontext_methods.h" />
+    <ClInclude Include="..\..\..\external\redgnmx\redgnmx\helpers.h" />
+    <ClInclude Include="..\..\..\external\redgnmx\redgnmx\lwcue_base.h" />
+    <ClInclude Include="..\..\..\external\redgnmx\redgnmx\lwcue_compute.h" />
+    <ClInclude Include="..\..\..\external\redgnmx\redgnmx\lwcue_deprecated.h" />
+    <ClInclude Include="..\..\..\external\redgnmx\redgnmx\lwcue_graphics.h" />
+    <ClInclude Include="..\..\..\external\redgnmx\redgnmx\lwcue_validation.h" />
+    <ClInclude Include="..\..\..\external\redgnmx\redgnmx\lwgfxcontext.h" />
+    <ClInclude Include="..\..\..\external\redgnmx\redgnmx\lwgfxcontext_cuetolcue.h" />
+    <ClInclude Include="..\..\..\external\redgnmx\redgnmx\lwgfxcontext_methods.h" />
+    <ClInclude Include="..\..\..\external\redgnmx\redgnmx\shaderbinary.h" />
+    <ClInclude Include="..\..\..\external\redgnmx\redgnmx\shader_parser.h" />
+    <ClInclude Include="gpuApi.h" />
+    <ClInclude Include="gpuApiBase.h" />
+    <ClInclude Include="gpuApiDDSLoader.h" />
+    <ClInclude Include="gpuApiGamma.h" />
+    <ClInclude Include="gpuApiMapping.h" />
+    <ClInclude Include="gpuApiRenderState.h" />
+    <ClInclude Include="gpuApi.inl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\external\redgnmx\src\basegfxcontext.cpp" />
+    <ClCompile Include="..\..\..\external\redgnmx\src\computecontext.cpp" />
+    <ClCompile Include="..\..\..\external\redgnmx\src\computequeue.cpp" />
+    <ClCompile Include="..\..\..\external\redgnmx\src\constantupdateengine.cpp" />
+    <ClCompile Include="..\..\..\external\redgnmx\src\cue-deprecated.cpp" />
+    <ClCompile Include="..\..\..\external\redgnmx\src\cue-dispatchdraw.cpp" />
+    <ClCompile Include="..\..\..\external\redgnmx\src\cue-resource.cpp" />
+    <ClCompile Include="..\..\..\external\redgnmx\src\cue-shader.cpp" />
+    <ClCompile Include="..\..\..\external\redgnmx\src\cue-static.cpp" />
+    <ClCompile Include="..\..\..\external\redgnmx\src\cue.cpp" />
+    <ClCompile Include="..\..\..\external\redgnmx\src\dispatchdraw.cpp" />
+    <ClCompile Include="..\..\..\external\redgnmx\src\fetchshaderhelper.cpp" />
+    <ClCompile Include="..\..\..\external\redgnmx\src\gfxcontext.cpp" />
+    <ClCompile Include="..\..\..\external\redgnmx\src\helpers.cpp" />
+    <ClCompile Include="..\..\..\external\redgnmx\src\lwcue_base.cpp" />
+    <ClCompile Include="..\..\..\external\redgnmx\src\lwcue_compute.cpp" />
+    <ClCompile Include="..\..\..\external\redgnmx\src\lwcue_graphics.cpp" />
+    <ClCompile Include="..\..\..\external\redgnmx\src\lwcue_validation.cpp" />
+    <ClCompile Include="..\..\..\external\redgnmx\src\lwgfxcontext.cpp" />
+    <ClCompile Include="..\..\..\external\redgnmx\src\shader_parser.cpp" />
+    <ClCompile Include="gpuApi.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="gpuApiBuffer.cpp" />
+    <ClCompile Include="gpuApiDDSLoader.cpp" />
+    <ClCompile Include="gpuApiDevice.cpp" />
+    <ClCompile Include="gpuApiDeviceState.cpp" />
+    <ClCompile Include="gpuApiDrawContext.cpp" />
+    <ClCompile Include="gpuApiGamma.cpp" />
+    <ClCompile Include="gpuApiQuery.cpp" />
+    <ClCompile Include="gpuApiRender.cpp" />
+    <ClCompile Include="gpuApiRenderState.cpp" />
+    <ClCompile Include="gpuApiRenderTarget.cpp" />
+    <ClCompile Include="gpuApiSamplerStates.cpp" />
+    <ClCompile Include="gpuApiShader.cpp" />
+    <ClCompile Include="gpuApiTexture.cpp" />
+    <ClCompile Include="gpuApiVertexLayouts.cpp" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Compile_PSSL_To_Header Include="util_shaders\cs_copyrawtexture1d_c.pssl" />
+    <Compile_PSSL_To_Header Include="util_shaders\cs_copyrawtexture2d_c.pssl" />
+    <Compile_PSSL_To_Header Include="util_shaders\cs_copyrawtexture3d_c.pssl" />
+    <Compile_PSSL_To_Header Include="util_shaders\cs_copytexture1d_c.pssl" />
+    <Compile_PSSL_To_Header Include="util_shaders\cs_copytexture2d_c.pssl" />
+    <Compile_PSSL_To_Header Include="util_shaders\cs_copytexture3d_c.pssl" />
+	<Compile_PSSL_To_Header Include="util_shaders\vex_clear_vv.pssl" />
+	<Compile_PSSL_To_Header Include="util_shaders\cs_set_uint_c.pssl" />
+	<Compile_PSSL_To_Header Include="util_shaders\cs_set_uint_fast_c.pssl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.targets))\Shared.targets" />
+  </ImportGroup>
+</Project>

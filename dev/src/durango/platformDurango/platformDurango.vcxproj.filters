@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="build.h" />
+    <ClInclude Include="userProfileDurango.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="inputDeviceManagerDurango.h">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="inputDeviceGamepadDurango.h">
+      <Filter>Input\Devices</Filter>
+    </ClInclude>
+    <ClInclude Include="inputDeviceKeyboardDurangoDebug.h">
+      <Filter>Input\Devices</Filter>
+    </ClInclude>
+    <ClInclude Include="inputDeviceMouseDurangoDebug.h">
+      <Filter>Input\Devices</Filter>
+    </ClInclude>
+    <ClInclude Include="secondScreenDeviceDurango.h">
+      <Filter>secondscreen</Filter>
+    </ClInclude>
+    <ClInclude Include="secondScreenDeviceWatcherDurango.h">
+      <Filter>secondscreen</Filter>
+    </ClInclude>
+    <ClInclude Include="kinectSpeechRecognizer.h">
+      <Filter>kinect</Filter>
+    </ClInclude>
+    <ClInclude Include="readerRandomAccessStream.h">
+      <Filter>kinect</Filter>
+    </ClInclude>
+    <ClInclude Include="streamingInstallerDurango.h">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="dlcInstallerDurango.h">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="dlcInstallerDurango_p.h">
+      <Filter>Content</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="build.cpp" />
+    <ClCompile Include="userProfileDurango.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="inputDeviceManagerDurango.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="inputDeviceGamepadDurango.cpp">
+      <Filter>Input\Devices</Filter>
+    </ClCompile>
+    <ClCompile Include="inputDeviceKeyboardDurangoDebug.cpp">
+      <Filter>Input\Devices</Filter>
+    </ClCompile>
+    <ClCompile Include="inputDeviceMouseDurangoDebug.cpp">
+      <Filter>Input\Devices</Filter>
+    </ClCompile>
+    <ClCompile Include="secondScreenDeviceDurango.cpp">
+      <Filter>secondscreen</Filter>
+    </ClCompile>
+    <ClCompile Include="secondScreenDeviceWatcherDurango.cpp">
+      <Filter>secondscreen</Filter>
+    </ClCompile>
+    <ClCompile Include="kinectSpeechRecognizer.cpp">
+      <Filter>kinect</Filter>
+    </ClCompile>
+    <ClCompile Include="readerRandomAccessStream.cpp">
+      <Filter>kinect</Filter>
+    </ClCompile>
+    <ClCompile Include="userProfileDurangoSaves.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="streamingInstallerDurango.cpp">
+      <Filter>Content</Filter>
+    </ClCompile>
+    <ClCompile Include="dlcInstallerDurango.cpp">
+      <Filter>Content</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Input">
+      <UniqueIdentifier>{73044563-33d2-4a3b-ac0d-06173f610168}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{dc1bab11-f06a-4d33-aa13-e366fe1b8c13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Input\Devices">
+      <UniqueIdentifier>{a871a715-f917-4c0d-98d1-9f8f17eadd87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="secondscreen">
+      <UniqueIdentifier>{a51a4b60-77a5-4c80-ac4a-5c9229cbc70f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="kinect">
+      <UniqueIdentifier>{3816a745-67d6-4d9e-aebc-ed98965db275}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Content">
+      <UniqueIdentifier>{4f887c92-7785-4b02-ae64-d15076a1bd1d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

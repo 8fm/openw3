@@ -1,0 +1,2349 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" TreatAsLocalProperty="OutDir;TargetName;IntDir;PlatformToolset">
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedConfigurationSetup.props))\SharedConfigurationSetup.props" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B1E9721B-F7A2-4497-9409-67487BA3B419}</ProjectGuid>
+    <RootNamespace>game</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <ProjectClDirs>$(SolutionDir)../external/gfx4/Src;$(SolutionDir)../external/gfx4/Include;$(SolutionDir)../external/PhysX3/Include;$(SolutionDir)../external/PhysX3/Include/physxvisualdebuggersdk;$(SolutionDir)../external/PhysX3/Include/pxtask;$(SolutionDir)../external/PhysX3/Include/extensions;$(SolutionDir)../external/PhysX3/Include/characterkinematic;$(SolutionDir)../external/PhysX3/Include/common;$(SolutionDir)../external/PhysX3/Include/foundation;</ProjectClDirs>
+  </PropertyGroup>
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.props))\Shared.props" />
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedItemGroups.props))\SharedItemGroups.props" />
+  <ItemGroup>
+    <ClInclude Include="2daProperties.h" />
+    <ClInclude Include="abilities.h" />
+    <ClInclude Include="actionAreaComponent.h" />
+    <ClInclude Include="actionAreaVertex.h" />
+    <ClInclude Include="actionBroadecastEvent.h" />
+    <ClInclude Include="actionPointReservationReleaseHandler.h" />
+    <ClInclude Include="actorActionMoveOutsideNavdata.h" />
+    <ClInclude Include="actorAnimationEventFilter.h" />
+    <ClInclude Include="actorSpeechQueue.h" />
+    <ClInclude Include="aiScriptableStorage.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="behTreeDecoratorAfraidDefinition.h" />
+    <ClInclude Include="behTreeConditionRespondToMusicDefinition.h" />
+    <ClInclude Include="behTreeNodeAtomicPlayAnimationManualMotionExtraction.h" />
+    <ClInclude Include="dlcLanguagePack.h" />
+    <ClInclude Include="gameWallaInterface.h" />
+    <ClInclude Include="questColorblindModeCondition.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="questEncounterFullRespawnBlock.h" />
+    <ClInclude Include="questJournalStatusCondition.h" />
+    <ClInclude Include="questPhaseIOBlock.h" />
+    <ClInclude Include="saveFileDLCMounter.h" />
+    <ClInclude Include="storySceneEventLodOverride.h" />
+    <ClInclude Include="storySceneEventVideoOverlay.h" />
+    <ClInclude Include="templateLoadBalancer.h" />
+    <ClInclude Include="aiParametersSpawnList.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="aiPositionPrediction.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="aiQueryWalkableSpotInArea.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="aiReachabilityQuery.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="asyncCheckResult.h" />
+    <ClInclude Include="Behavior\BehaviorNodes\Measurements\behaviorGraphFootStepDetectorNode.h" />
+    <ClInclude Include="Behavior\BehaviorNodes\Measurements\build.h" />
+    <ClInclude Include="Behavior\PostActions\behaviorGraphPostActions.h" />
+    <ClInclude Include="Behavior\PostActions\build.h" />
+    <ClInclude Include="behTreeAreaSelection.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="behTreeDecoratorAsyncQuery.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="behTreeDecoratorSemaphore.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="behTreeDecoratorSemaphorePriority.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="behTreeDecoratorSteeringTargeter.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="behTreeDecoratorWalkablePositionQuery.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="behTreeMetanodeGuardSetup.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="behTreeMetaNodeNpcTypeCondition.h" />
+    <ClInclude Include="behTreeNodeCasualMovementDecorator.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeConditionChance.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeConditionExternalToggle.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeConditionHasTarget.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeConditionIsAtWork.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeConditionIsInCameraView.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeConditionIsInGuardArea.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeConditionLineofSight.h" />
+    <ClInclude Include="behTreeNodeConditionNoticedObject.h" />
+    <ClInclude Include="behTreeNodeConditionTrue.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeLookat.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="behTreeNodePartyWorkSynchronizer.h" />
+    <ClInclude Include="behTreeNodeSelectRandomPositionInAreaDecorator.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeSelectTargetByTagInArea.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeSnapToNavigation.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeUseExplorationAction.h" />
+    <ClInclude Include="behTreeWalkableQueryData.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="boatBuoyancySystem.h" />
+    <ClInclude Include="boatConfig.h" />
+    <ClInclude Include="boatHedgehog.h" />
+    <ClInclude Include="boatInputSystem.h" />
+    <ClInclude Include="boatPathfindingSystem.h" />
+    <ClInclude Include="communityAgentStubTagManager.h" />
+    <ClInclude Include="container.h" />
+    <ClInclude Include="createEntityHelper.h" />
+    <ClInclude Include="createEntityManager.h" />
+    <ClInclude Include="definitionsManagerListener.h" />
+    <ClInclude Include="dlcDefinition.h" />
+    <ClInclude Include="dlcManager.h" />
+    <ClInclude Include="dlcMounter.h" />
+    <ClInclude Include="edWizardSavedAnswers.h" />
+    <ClInclude Include="behTreeStateSerializer.h" />
+    <ClInclude Include="encounterSpawnGroupCounter.h" />
+    <ClInclude Include="actorsManagerFunctors.h" />
+    <ClInclude Include="aiActionParameters.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="aiDespawnParameters.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="aiExplorationParameters.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="aiParamInjectHandler.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="aiPositioning.h" />
+    <ClInclude Include="aiRedefinitionParameters.h" />
+    <ClInclude Include="behTreeDecoratorCompleteInProximity.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="behTreeDecoratorLeadFormation.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="behTreeDecoratorPoke.h" />
+    <ClInclude Include="behTreeDynamicNodeBase.h" />
+    <ClInclude Include="behTreeGuardAreaData.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeAtomicMoveToWanderpoint.h" />
+    <ClInclude Include="behTreeNodeAttachToCurve.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeComment.h" />
+    <ClInclude Include="behTreeNodeConditionPartyMembersCount.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeConditionSpeedEngineVal.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeExplorationQueue.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeFleeReaction.h" />
+    <ClInclude Include="behTreeNodePassMetaobstacles.h" />
+    <ClInclude Include="behTreeNodeSelectFormationLeader.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeSetupCustomMoveData.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeWorkDecorator.h" />
+    <ClInclude Include="behTreeVarsUtils.h" />
+    <ClInclude Include="channelStorage.h" />
+    <ClInclude Include="encounterSpawnPoints.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="entityPool.h" />
+    <ClInclude Include="entityPoolSpawnJobFactory.h" />
+    <ClInclude Include="entityWatcher.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="expCooked.h" />
+    <ClInclude Include="expCooking.h" />
+    <ClInclude Include="expMountBoatExecutor.h" />
+    <ClInclude Include="extAnimMaterialBasedFxEvent.h" />
+    <ClInclude Include="factsDebuggerCommands.h" />
+    <ClInclude Include="factsDebuggerPlugin.h" />
+    <ClInclude Include="findGameplayEntities.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="gameDebuggerCommands.h" />
+    <ClInclude Include="gameDebuggerPlugin.h" />
+    <ClInclude Include="gameFastForwardSystem.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="gameMetalinkFactories.inl" />
+    <ClInclude Include="gameMetalinkTypes.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="gameplayStorageAcceptors.h" />
+    <ClInclude Include="gameSpeedConfigManager.h" />
+    <ClInclude Include="generalTreeOperations.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="guiScenePlayer.h" />
+    <ClInclude Include="guiScenePlayerListener.h" />
+    <ClInclude Include="inGameConfigDLC.h" />
+    <ClInclude Include="inGameConfigWrapper.h" />
+    <ClInclude Include="interpolationBasics.h" />
+    <ClInclude Include="interpolationDriver.h" />
+    <ClInclude Include="interpolationEventClassGenerator.h" />
+    <ClInclude Include="isConsciousAtWork.h" />
+    <ClInclude Include="itemIterator.h" />
+    <ClInclude Include="moveAnimationLocomotionSegment.h" />
+    <ClInclude Include="moveSteeringMaintainTargetSpeed.h" />
+    <ClInclude Include="moveSteeringSpatialQueriesConditions.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="moveSteeringSpeedMultOnPath.h" />
+    <ClInclude Include="navigationCollectCollision.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="navigationMultiReachabilityQueryInterface.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="newNpcSensesManager.h" />
+    <ClInclude Include="popup.h" />
+    <ClInclude Include="popupResource.h" />
+    <ClInclude Include="propertyConverter.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="questContentActivatorBlock.h" />
+    <ClInclude Include="questDebuggerCommands.h" />
+    <ClInclude Include="questDebuggerPlugin.h" />
+    <ClInclude Include="questDependencyInfo.h" />
+    <ClInclude Include="questFastForwardCommunitiesBlock.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="questLoadingScreenCondition.h" />
+    <ClInclude Include="questLogStateBlock.h" />
+    <ClInclude Include="questLookAtBlock.h" />
+    <ClInclude Include="questMemoryDumpBlock.h" />
+    <ClInclude Include="questPerformGCBlock.h" />
+    <ClInclude Include="questTestBlock.h" />
+    <ClInclude Include="questWaitForTickBlock.h" />
+    <ClInclude Include="rewardManager.h" />
+    <ClInclude Include="roadsManager.h" />
+    <ClInclude Include="scriptedRenderFrame.h" />
+    <ClInclude Include="gameplayInfoCache.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="spawnTreeDecoratorInitializersList.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="spawnTreeInitializationContext.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="spawnTreeInitializerMonitor.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="spawnTreeInitializerPersistent.h" />
+    <ClInclude Include="spawnTreeInitializerRainHandler.h" />
+    <ClInclude Include="spawnTreeInitializerSetupDetachedCollection.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="spawnTreeInitializersIterator.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="spawnTreeInitializerSpawnLimitMonitor.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="spawnTreeInitializerStartingBehavior.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="spawnTreeInitializerToggleBehavior.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="spawnTreeSpawnStrategy.h" />
+    <ClInclude Include="speedManagmentSteeringTasks.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="storySceneAddFactEvent.h" />
+    <ClInclude Include="storySceneEventAttachPropToBone.h" />
+    <ClInclude Include="storySceneEventCameraAnimation.h" />
+    <ClInclude Include="spawnTreeStateSerializer.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="storySceneEventCameraInterpolation.h" />
+    <ClInclude Include="boatDestructionComponent.h" />
+    <ClInclude Include="headManagerComponent.h" />
+    <ClInclude Include="character.h" />
+    <ClInclude Include="characterResource.h" />
+    <ClInclude Include="configParser.h" />
+    <ClInclude Include="debugWindowBoatSettings.h" />
+    <ClInclude Include="debugWindowGameWorld.h" />
+    <ClInclude Include="debugWindowNPCViewer.h" />
+    <ClInclude Include="debugWindowVehicleViewer.h" />
+    <ClInclude Include="distanceChecker.h" />
+    <ClInclude Include="doorAttachment.h" />
+    <ClInclude Include="edEntitySetup.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="edEntitySetupListParam.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="enableComponentsPerfomableAction.h" />
+    <ClInclude Include="entitiesDetector.h" />
+    <ClInclude Include="entityUpdaterComponent.h" />
+    <ClInclude Include="formationLogicSlot.h" />
+    <ClInclude Include="formationLogicSteering.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="formationMemberDataSlot.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="formationMemberDataSteering.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="formationPattern.h" />
+    <ClInclude Include="formationSlot.h" />
+    <ClInclude Include="formationSteeringSlotTasks.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="fxTrackItemPlayPropertyAnim.h" />
+    <ClInclude Include="generalTreeInterface.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="jobBreakerComponent.h" />
+    <ClInclude Include="jobSpawnFromPool.h" />
+    <ClInclude Include="lockableEntity.h" />
+    <ClInclude Include="doorComponent.h" />
+    <ClInclude Include="effectManagmentPerformableAction.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="boatDestructionVolume.h" />
+    <ClInclude Include="moveSteeringSideBySide.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="optional.h" />
+    <ClInclude Include="partySpawnPointComponent.h" />
+    <ClInclude Include="partySpawnPointOrganizer.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="playPropertyAnimationAction.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="actionPoint.h" />
+    <ClInclude Include="actionPointActivationSwitcher.h" />
+    <ClInclude Include="actionPointComponent.h" />
+    <ClInclude Include="actionPointDataDef.h" />
+    <ClInclude Include="actionPointManager.h" />
+    <ClInclude Include="actionPointManagerListener.h" />
+    <ClInclude Include="actionPointSelectors.h" />
+    <ClInclude Include="actor.h" />
+    <ClInclude Include="actorAction.h" />
+    <ClInclude Include="actorActionAnimation.h" />
+    <ClInclude Include="actorActionChangeEmotion.h" />
+    <ClInclude Include="actorActionCustomSteer.h" />
+    <ClInclude Include="actorActionExploration.h" />
+    <ClInclude Include="actorActionMatchTo.h" />
+    <ClInclude Include="actorActionMoveOnCurveTo.h" />
+    <ClInclude Include="actorActionMoveTo.h" />
+    <ClInclude Include="actorActionMoveToDynamicNode.h" />
+    <ClInclude Include="actorActionRiseEvent.h" />
+    <ClInclude Include="actorActionRotateTo.h" />
+    <ClInclude Include="actorActionSlideTo.h" />
+    <ClInclude Include="actorActionWork.h" />
+    <ClInclude Include="actorLatentAction.h" />
+    <ClInclude Include="actorsManager.h" />
+    <ClInclude Include="actorSpeech.h" />
+    <ClInclude Include="addFactPerformableAction.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="advancedVehicle.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="agent.h" />
+    <ClInclude Include="agentsWorld.h" />
+    <ClInclude Include="aiFormationData.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="aiPresetParam.h" />
+    <ClInclude Include="behTreeDecoratorSetupFormation.h" />
+    <ClInclude Include="behTreeNodeConditionRecentEvent.h" />
+    <ClInclude Include="behTreeNodeSelectPartyMember.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="enableDeniedAreaAction.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="enableEncounterPerformableAction.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="entityActionsRouter.h" />
+    <ClInclude Include="entityEventsNamesProvider.h" />
+    <ClInclude Include="entityTargetingAction.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="formation.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="aiSpawnTreeParameters.h" />
+    <ClInclude Include="aiStorage.h" />
+    <ClInclude Include="aiStorageExternalPtr.h" />
+    <ClInclude Include="animationManualSlotSync.h" />
+    <ClInclude Include="animationSlider.h" />
+    <ClInclude Include="animEffectEvent.h" />
+    <ClInclude Include="atomicBoidNode.h" />
+    <ClInclude Include="baseBoidNode.h" />
+    <ClInclude Include="behaviorConstraintApplyOffset.h" />
+    <ClInclude Include="behaviorConstraintNodeFloorIK.h" />
+    <ClInclude Include="behaviorConstraintRiderInSaddle.h" />
+    <ClInclude Include="behaviorConstraintUprightSpine.h" />
+    <ClInclude Include="behaviorConstraintPutLegsIntoStirrups.h" />
+    <ClInclude Include="behaviorConstraintPullStirrupsToLegs.h" />
+    <ClInclude Include="behaviorConstraintPullReinsToHands.h" />
+    <ClInclude Include="behaviorConstraintMoveHandsByOffset.h" />
+    <ClInclude Include="behaviorConstraintStirrups.h" />
+    <ClInclude Include="behaviorGraphAimingWithIKNode.h" />
+    <ClInclude Include="behaviorGraphMaintainVelocityNode.h" />
+    <ClInclude Include="behaviorGraphRagdollNode.h" />
+    <ClInclude Include="behaviorGraphAnimatedRagdollNode.h" />
+    <ClInclude Include="behaviorGraphDirectionalMovementNode.h" />
+    <ClInclude Include="behaviorGraphGameplayTransitions.h" />
+    <ClInclude Include="behaviorGraphChangeDirectionNode.h" />
+    <ClInclude Include="behaviorGraphFillMovementVariablesUsingSteeringNode.h" />
+    <ClInclude Include="behaviorGraphOnSlopeMovementNode.h" />
+    <ClInclude Include="behTreeAtomicConditions.h" />
+    <ClInclude Include="behTreeAtomicSteerWithTarget.h" />
+    <ClInclude Include="behTreeCounterData.h" />
+    <ClInclude Include="behTreeCustomMoveData.h" />
+    <ClInclude Include="behTreeDecoratorDuration.h" />
+    <ClInclude Include="behTreeDecoratorSelectFleeDestination.h" />
+    <ClInclude Include="behTreeDecoratorSteeringGraph.h" />
+    <ClInclude Include="behTreeDecoratorUninterruptable.h" />
+    <ClInclude Include="baseCrittersAI.h" />
+    <ClInclude Include="behTreeNodeConditionClearLineToTarget.h" />
+    <ClInclude Include="behTreeNodeDespawn.h" />
+    <ClInclude Include="behTreeDynamicNode.h" />
+    <ClInclude Include="behTreeDynamicNodeEvent.h" />
+    <ClInclude Include="behTreeMetanode.h" />
+    <ClInclude Include="behTreeMetanodeOnSpawn.h" />
+    <ClInclude Include="behTreeNodeAtomicGuardRetreat.h" />
+    <ClInclude Include="behTreeNodeAtomicTeleport.h" />
+    <ClInclude Include="behTreeNodeComplexCondition.h" />
+    <ClInclude Include="behTreeNodeConditionCounter.h" />
+    <ClInclude Include="behTreeNodeConditionReactionEvent.h" />
+    <ClInclude Include="behTreeNodeFollowFormation.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeIdleRoot.h" />
+    <ClInclude Include="behTreeNodeSelectWanderingTarget.h" />
+    <ClInclude Include="behTreeNodeSpecial.h" />
+    <ClInclude Include="behTreeNodeVoid.h" />
+    <ClInclude Include="behTreeReactionData.h" />
+    <ClInclude Include="behTreeReactionManager.h" />
+    <ClInclude Include="behTreeRttiImplementation.h" />
+    <ClInclude Include="behTreeSteeringGraphBase.h" />
+    <ClInclude Include="behTreeNodeWorkAtomic.h" />
+    <ClInclude Include="behTreeTask.h" />
+    <ClInclude Include="behTreeWorkData.h" />
+    <ClInclude Include="behTreeWorkInitializer.h" />
+    <ClInclude Include="boatComponent.h" />
+    <ClInclude Include="boidCone.h" />
+    <ClInclude Include="boidNodeData.h" />
+    <ClInclude Include="attackRange.h" />
+    <ClInclude Include="attitude.h" />
+    <ClInclude Include="attitudeManager.h" />
+    <ClInclude Include="baseDamage.h" />
+    <ClInclude Include="behaviorGraphEventHandler.h" />
+    <ClInclude Include="behaviorGraphGameplayAdditiveNode.h" />
+    <ClInclude Include="behaviorGraphGameplayNodes.h" />
+    <ClInclude Include="behaviorGraphScriptStateNode.h" />
+    <ClInclude Include="behaviorGraphStoreBone.h" />
+    <ClInclude Include="behaviorGraphStoreSyncInfo.h" />
+    <ClInclude Include="behaviorGraphRestoreSyncInfo.h" />
+    <ClInclude Include="behaviorPoseConstraintPoseLookAtModifier.h" />
+    <ClInclude Include="behaviorPoseConstraintPoseLookAtNode.h" />
+    <ClInclude Include="behaviorPoseConstraintPoseLookAtSegment.h" />
+    <ClInclude Include="behTreeNodeSelectPatrolingTarget.h" />
+    <ClInclude Include="bgCounter.h" />
+    <ClInclude Include="bgNpc.h" />
+    <ClInclude Include="bgNpcChatPlayer.h" />
+    <ClInclude Include="bgNpcInteraction.h" />
+    <ClInclude Include="bgNpcItem.h" />
+    <ClInclude Include="bgNpcJobPlayer.h" />
+    <ClInclude Include="bgNpcMesh.h" />
+    <ClInclude Include="bgNpcRoot.h" />
+    <ClInclude Include="bgNpcSpeech.h" />
+    <ClInclude Include="bgNpcTrigger.h" />
+    <ClInclude Include="boidActivationTriggerComponent.h" />
+    <ClInclude Include="boidAreaComponent.h" />
+    <ClInclude Include="boidManager.h" />
+    <ClInclude Include="definitionsHelpers.h" />
+    <ClInclude Include="encounterCreatureDefinition.h" />
+    <ClInclude Include="formationMemberData.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="formationLogic.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="formationSteeringConditions.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="formationSteeringInput.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="formationSteeringTasks.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="generalMoveSteeringTask.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="gameNamesRegistry.h" />
+    <ClInclude Include="journalBase.h" />
+    <ClInclude Include="journalBlock.h" />
+    <ClInclude Include="journalManager.h" />
+    <ClInclude Include="journalPath.h" />
+    <ClInclude Include="journalResource.h" />
+    <ClInclude Include="metalinkComponent.h" />
+    <ClInclude Include="movementCommandBuffer.h" />
+    <ClInclude Include="pilotComponent.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="questEncounterActivator.h" />
+    <ClInclude Include="questEncounterManagerBlock.h" />
+    <ClInclude Include="gameplayDestructionSystemComponent.h" />
+    <ClInclude Include="questGraphMinigameBlock.h" />
+    <ClInclude Include="questPokeActionBlock.h" />
+    <ClInclude Include="reactionScene.h" />
+    <ClInclude Include="reactionSceneActor.h" />
+    <ClInclude Include="reactionSceneAssignActorNode.h" />
+    <ClInclude Include="reactionSceneAssignments.h" />
+    <ClInclude Include="reactionSceneEndNode.h" />
+    <ClInclude Include="reactionSceneFlowController.h" />
+    <ClInclude Include="reactionSceneFlowSynchronizationDecorator.h" />
+    <ClInclude Include="sceneAnimEvents.h" />
+    <ClInclude Include="sceneDefinitionNode.h" />
+    <ClInclude Include="queueMetalinkInterface.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="seatComponent.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="selfUpdatingComponent.h" />
+    <ClInclude Include="spawnTreeBaseEntry.h" />
+    <ClInclude Include="spawnTreeBaseEntryGenerator.h" />
+    <ClInclude Include="spawnTreeEntryListElement.h" />
+    <ClInclude Include="spawnTreeInitializerAddTag.h" />
+    <ClInclude Include="spawnTreeInitializerAI.h" />
+    <ClInclude Include="spawnTreeInitializerAttitude.h" />
+    <ClInclude Include="spawnTreeInitializerSetAppearance.h" />
+    <ClInclude Include="spawnTreeInitializerForceCombat.h" />
+    <ClInclude Include="spawnTreeInitializerGuardArea.h" />
+    <ClInclude Include="spawnTreeInitializersIdleAI.h" />
+    <ClInclude Include="spawnTreeMultiEntry.h" />
+    <ClInclude Include="spawnTreeDespawnerHandler.h" />
+    <ClInclude Include="spawnTreeRandomNode.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="spawnTreeScriptedNode.h" />
+    <ClInclude Include="spawnTreeVoidNode.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="spawnTreeWanderAndWorkEntryGenerator.h" />
+    <ClInclude Include="storySceneActorsEyesTracker.h" />
+    <ClInclude Include="storySceneEventCamera.h" />
+    <ClInclude Include="StorySceneEventCameraLight.h" />
+    <ClInclude Include="storySceneEventCameraLightInterpolation.h" />
+    <ClInclude Include="storySceneEventChangeActorGameState.h" />
+    <ClInclude Include="storySceneEventCloth.h" />
+    <ClInclude Include="storySceneEventClothDisablingInterpolation.h" />
+    <ClInclude Include="storySceneEventControlRig.h" />
+    <ClInclude Include="storySceneEventCsCamera.h" />
+    <ClInclude Include="storySceneEventDangle.h" />
+    <ClInclude Include="storySceneEventDangleInterpolation.h" />
+    <ClInclude Include="storySceneEventDebugComment.h" />
+    <ClInclude Include="storySceneEventDialogLine.h" />
+    <ClInclude Include="storySceneControlPartsUtil.h" />
+    <ClInclude Include="storySceneDebug.h" />
+    <ClInclude Include="storySceneEffectEvent.h" />
+    <ClInclude Include="storySceneEventBlend.h" />
+    <ClInclude Include="storySceneEventCurveAnimation.h" />
+    <ClInclude Include="storySceneEventEnhancedCameraBlend.h" />
+    <ClInclude Include="storySceneEventGameplayCamera.h" />
+    <ClInclude Include="storySceneEventHideScabbard.h" />
+    <ClInclude Include="storySceneEventHitSound.h" />
+    <ClInclude Include="storySceneEventInterfaces.h" />
+    <ClInclude Include="storySceneEventLightPropertiesInterpolation.h" />
+    <ClInclude Include="storySceneEventModifyEnv.h" />
+    <ClInclude Include="storySceneEventMorphInterpolation.h" />
+    <ClInclude Include="storySceneEventOpenDoor.h" />
+    <ClInclude Include="storySceneEventPlacementInterpolation.h" />
+    <ClInclude Include="storySceneEventPoseKey.h" />
+    <ClInclude Include="storySceneEventInterpolation.h" />
+    <ClInclude Include="storySceneEventPropPlacementInterpolation.h" />
+    <ClInclude Include="storySceneEventReward.h" />
+    <ClInclude Include="storySceneEventScenePropPlacement.h" />
+    <ClInclude Include="storySceneEventsCollector.h" />
+    <ClInclude Include="lootDefinitions.h" />
+    <ClInclude Include="lootCache.h" />
+    <ClInclude Include="lootEntry.h" />
+    <ClInclude Include="questEncounterPhaseSetterBlock.h" />
+    <ClInclude Include="spawnTreeCompositeMember.h" />
+    <ClInclude Include="spawnCondition.h" />
+    <ClInclude Include="encounterCreaturePool.h" />
+    <ClInclude Include="spawnTreeConditionNode.h" />
+    <ClInclude Include="spawnTreeCustomSet.h" />
+    <ClInclude Include="spawnTreeDespawnConfiguration.h" />
+    <ClInclude Include="spawnTreeDespawnInitializer.h" />
+    <ClInclude Include="spawnTreeEntry.h" />
+    <ClInclude Include="spawnTreeIncludeNode.h" />
+    <ClInclude Include="spawnTreeInitializer.h" />
+    <ClInclude Include="spawnTreeInitializerSpawner.h" />
+    <ClInclude Include="spawnTreeNode.h" />
+    <ClInclude Include="encounterTypes.h" />
+    <ClInclude Include="flashBindingAdapter.h" />
+    <ClInclude Include="flashMovieAdapter.h" />
+    <ClInclude Include="flashProxyComponent.h" />
+    <ClInclude Include="flashSpriteAdapter.h" />
+    <ClInclude Include="flashStatusListener.h" />
+    <ClInclude Include="boatBodyComponent.h" />
+    <ClInclude Include="guiConfigResource.h" />
+    <ClInclude Include="guiManager.h" />
+    <ClInclude Include="hud.h" />
+    <ClInclude Include="flashHudAdapter.h" />
+    <ClInclude Include="hudResource.h" />
+    <ClInclude Include="hudModule.h" />
+    <ClInclude Include="menu.h" />
+    <ClInclude Include="menuResource.h" />
+    <ClInclude Include="ProjectileTrajectory.h" />
+    <ClInclude Include="ProjectileTargets.h" />
+    <ClInclude Include="movementAdjustor.h" />
+    <ClInclude Include="questEntityMotionBlock.h" />
+    <ClInclude Include="questScriptedActionsAIParameters.h" />
+    <ClInclude Include="reactionCondition.h" />
+    <ClInclude Include="storySceneDebugger.h" />
+    <ClInclude Include="storySceneDisplayInterface.h" />
+    <ClInclude Include="storySceneEventsCollector_events.h" />
+    <ClInclude Include="storySceneEventsExecutor.h" />
+    <ClInclude Include="storySceneEventStartBlendToGameplayCamera.h" />
+    <ClInclude Include="storySceneEventTimelapse.h" />
+    <ClInclude Include="StorySceneEventWorldEntityEffect.h" />
+    <ClInclude Include="storySceneEventWorldPropPlacement.h" />
+    <ClInclude Include="storySceneIncludes.h" />
+    <ClInclude Include="storySceneInstanceBuffer.h" />
+    <ClInclude Include="storySceneInterceptionHelper.h" />
+    <ClInclude Include="storySceneInterfaces.h" />
+    <ClInclude Include="storySceneItems.h" />
+    <ClInclude Include="storySceneLinkHub.h" />
+    <ClInclude Include="storySceneLookAtController.h" />
+    <ClInclude Include="storySceneMotionExtractionSampler.h" />
+    <ClInclude Include="storySceneNPCTeleport.h" />
+    <ClInclude Include="storyScenePlayerStats.h" />
+    <ClInclude Include="storySceneSectionVariant.h" />
+    <ClInclude Include="storySceneSystemTODO.h" />
+    <ClInclude Include="edSpawnTreeNode.h" />
+    <ClInclude Include="spawnTree.h" />
+    <ClInclude Include="spawnTreeSpawner.h" />
+    <ClInclude Include="storySceneAnimationList.h" />
+    <ClInclude Include="storySceneUtils.h" />
+    <ClInclude Include="storySceneVoiceTagsManager.h" />
+    <ClInclude Include="strayActorManager.h" />
+    <ClInclude Include="storySceneEventLightProperties.h" />
+    <ClInclude Include="swarmUtils.h" />
+    <ClInclude Include="cameraAreaComponent.h" />
+    <ClInclude Include="cameraEffectTrigger.h" />
+    <ClInclude Include="characterStats.h" />
+    <ClInclude Include="commonGameResource.h" />
+    <ClInclude Include="communityAgentState.h" />
+    <ClInclude Include="communityAgentStub.h" />
+    <ClInclude Include="communityArea.h" />
+    <ClInclude Include="communityConstants.h" />
+    <ClInclude Include="communityData.h" />
+    <ClInclude Include="communityDebugCounters.h" />
+    <ClInclude Include="communityErrorReport.h" />
+    <ClInclude Include="communityFindApResult.h" />
+    <ClInclude Include="communitySystem.h" />
+    <ClInclude Include="communityThreadSlicer.h" />
+    <ClInclude Include="communityUtility.h" />
+    <ClInclude Include="counterUtilityGraphBlock.h" />
+    <ClInclude Include="debugPageMemoryBudget.h" />
+    <ClInclude Include="debugPageMemoryBudgetCommands.h" />
+    <ClInclude Include="deniedAreaSaveable.h" />
+    <ClInclude Include="encounter.h" />
+    <ClInclude Include="entityParams.h" />
+    <ClInclude Include="expAnimationBlendPicker.h" />
+    <ClInclude Include="expBaseExecutor.h" />
+    <ClInclude Include="expBlendExecutor.h" />
+    <ClInclude Include="expBlendChainExecutor.h" />
+    <ClInclude Include="expChainExecutor.h" />
+    <ClInclude Include="expComponent.h" />
+    <ClInclude Include="expEdge.h" />
+    <ClInclude Include="expEvents.h" />
+    <ClInclude Include="expIntarface.h" />
+    <ClInclude Include="explorationFinder.h" />
+    <ClInclude Include="foundExplorationComponent.h" />
+    <ClInclude Include="explorationScriptSupport.h" />
+    <ClInclude Include="expManager.h" />
+    <ClInclude Include="expManualStatesExecutor.h" />
+    <ClInclude Include="expOracle.h" />
+    <ClInclude Include="expPlayer.h" />
+    <ClInclude Include="expSingleAnimExecutor.h" />
+    <ClInclude Include="expSlideExecutor.h" />
+    <ClInclude Include="expSlider.h" />
+    <ClInclude Include="expStatesExecutor.h" />
+    <ClInclude Include="expStepsExecutor.h" />
+    <ClInclude Include="expToPointSliderExecutor.h" />
+    <ClInclude Include="expTransitionExecutor.h" />
+    <ClInclude Include="expTraverser.h" />
+    <ClInclude Include="expTreeMediator.h" />
+    <ClInclude Include="extAnimCutsceneQuestEvent.h" />
+    <ClInclude Include="equipmentState.h" />
+    <ClInclude Include="extAnimFootstepEvent.h" />
+    <ClInclude Include="extAnimGameplayMimicEvent.h" />
+    <ClInclude Include="extAnimItemEvents.h" />
+    <ClInclude Include="extAnimSoundEvent.h" />
+    <ClInclude Include="extAnimOnSlopeEvent.h" />
+    <ClInclude Include="extAnimLocationAdjustmentEvent.h" />
+    <ClInclude Include="extAnimRotationAdjustmentEvent.h" />
+    <ClInclude Include="extAnimRotationAdjustmentLocationBasedEvent.h" />
+    <ClInclude Include="flashScriptFunctionCalling.h" />
+    <ClInclude Include="flashScriptSupport.h" />
+    <ClInclude Include="definitionsManager.h" />
+    <ClInclude Include="fxTrackItemPlayItemEffect.h" />
+    <ClInclude Include="gameplayStorage.h" />
+    <ClInclude Include="aiHistory.h" />
+    <ClInclude Include="aiLog.h" />
+    <ClInclude Include="aiParameters.h" />
+    <ClInclude Include="aiProfile.h" />
+    <ClInclude Include="behTreeArbitratorPriorities.h" />
+    <ClInclude Include="behTree.h" />
+    <ClInclude Include="behTreeDecorator.h" />
+    <ClInclude Include="behTreeDecoratorActivePriority.h" />
+    <ClInclude Include="behTreeDecoratorDelay.h" />
+    <ClInclude Include="behTreeEvent.h" />
+    <ClInclude Include="behTreeEventParams.h" />
+    <ClInclude Include="behTreeInstance.h" />
+    <ClInclude Include="behTreeLog.h" />
+    <ClInclude Include="behTreeMachine.h" />
+    <ClInclude Include="behTreeMachineListener.h" />
+    <ClInclude Include="behTreeNode.h" />
+    <ClInclude Include="behTreeNodeArbitrator.h" />
+    <ClInclude Include="behTreeNodeAtomicAction.h" />
+    <ClInclude Include="behTreeNodeAtomicDamageReaction.h" />
+    <ClInclude Include="behTreeNodeAtomicIdle.h" />
+    <ClInclude Include="behTreeNodeAtomicMove.h" />
+    <ClInclude Include="behTreeNodeAtomicPlayAnimation.h" />
+    <ClInclude Include="behTreeNodeAtomicPlayAnimationEvent.h" />
+    <ClInclude Include="behTreeNodeAtomicPursue.h" />
+    <ClInclude Include="behTreeNodeAtomicRotate.h" />
+    <ClInclude Include="behTreeNodeComposite.h" />
+    <ClInclude Include="behTreeNodeCondition.h" />
+    <ClInclude Include="behTreeNodeConditionCheckRotationToTarget.h" />
+    <ClInclude Include="behTreeNodeConditionDistanceToTarget.h" />
+    <ClInclude Include="behTreeNodeConditionIsInAttackRange.h" />
+    <ClInclude Include="behTreeNodeCustomSteering.h" />
+    <ClInclude Include="behTreeNodeFinishAnimations.h" />
+    <ClInclude Include="behTreeNodeForced.h" />
+    <ClInclude Include="behTreeNodeKeepDistance.h" />
+    <ClInclude Include="behTreeNodeLoop.h" />
+    <ClInclude Include="behTreeNodeParallel.h" />
+    <ClInclude Include="behTreeNodePerformWork.h" />
+    <ClInclude Include="behTreeNodePlayScene.h" />
+    <ClInclude Include="behTreeNodePredefinedPath.h" />
+    <ClInclude Include="behTreeNodeQuestActions.h" />
+    <ClInclude Include="behTreeNodeRandom.h" />
+    <ClInclude Include="behTreeNodeSelectActionPoint.h" />
+    <ClInclude Include="behTreeNodeSelector.h" />
+    <ClInclude Include="behTreeNodeSelectTargetByTag.h" />
+    <ClInclude Include="behTreeNodeSequence.h" />
+    <ClInclude Include="behTreeNodeTemplate.h" />
+    <ClInclude Include="behTreeRtti.h" />
+    <ClInclude Include="behTreeScriptedNode.h" />
+    <ClInclude Include="behTreeVars.h" />
+    <ClInclude Include="behTreeVarsEnums.h" />
+    <ClInclude Include="binaryStorage.h" />
+    <ClInclude Include="boidInstance.h" />
+    <ClInclude Include="boidPointOfInterestComponent.h" />
+    <ClInclude Include="boidLairEntity.h" />
+    <ClInclude Include="swarmSound.h" />
+    <ClInclude Include="build.h" />
+    <ClInclude Include="commonGame.h" />
+    <ClInclude Include="extAnimProjectileEvent.h" />
+    <ClInclude Include="factsDB.h" />
+    <ClInclude Include="factsDBEditorQuery.h" />
+    <ClInclude Include="game.h" />
+    <ClInclude Include="gameplayEntity.h" />
+    <ClInclude Include="gameplayEvent.h" />
+    <ClInclude Include="gameplayWindComponent.h" />
+    <ClInclude Include="gameSaver.h" />
+    <ClInclude Include="gameSystem.h" />
+    <ClInclude Include="gameSystemOrder.h" />
+    <ClInclude Include="gameTypeRegistry.h" />
+    <ClInclude Include="gameWorld.h" />
+    <ClInclude Include="guiObject.h" />
+    <ClInclude Include="guiResource.h" />
+    <ClInclude Include="interactionArea.h" />
+    <ClInclude Include="interactionComponent.h" />
+    <ClInclude Include="interactionsManager.h" />
+    <ClInclude Include="interactionToComponentComponent.h" />
+    <ClInclude Include="interactionTooltipComponent.h" />
+    <ClInclude Include="interestPointComponent.h" />
+    <ClInclude Include="inventoryComponent.h" />
+    <ClInclude Include="inventoryDefinition.h" />
+    <ClInclude Include="inventoryEditor.h" />
+    <ClInclude Include="inventoryItem.h" />
+    <ClInclude Include="itemEntity.h" />
+    <ClInclude Include="itemUniqueId.h" />
+    <ClInclude Include="itemVisibilityController.h" />
+    <ClInclude Include="jobTree.h" />
+    <ClInclude Include="jobTreeLeaf.h" />
+    <ClInclude Include="jobTreeNode.h" />
+    <ClInclude Include="lookAtController.h" />
+    <ClInclude Include="lookAtParam.h" />
+    <ClInclude Include="lookAtTypes.h" />
+    <ClInclude Include="loopBoidNode.h" />
+    <ClInclude Include="minigame.h" />
+    <ClInclude Include="movableRepresentation.h" />
+    <ClInclude Include="movableRepresentationEntity.h" />
+    <ClInclude Include="movableRepresentationPathAgent.h" />
+    <ClInclude Include="movableRepresentationPhysicalCharacter.h" />
+    <ClInclude Include="movableRepresentationsStack.h" />
+    <ClInclude Include="moveCurveLocomotionSegment.h" />
+    <ClInclude Include="moveGlobalPathPlanner.h" />
+    <ClInclude Include="moveLocomotion.h" />
+    <ClInclude Include="moveLocomotionSegment.h" />
+    <ClInclude Include="moveMatchToSegment.h" />
+    <ClInclude Include="movementGoal.h" />
+    <ClInclude Include="movementObject.h" />
+    <ClInclude Include="movementTargeter.h" />
+    <ClInclude Include="moveNavigationPath.h" />
+    <ClInclude Include="movePathIterator.h" />
+    <ClInclude Include="movePathPlannerQuery.h" />
+    <ClInclude Include="moveSlideLocomotionSegment.h" />
+    <ClInclude Include="moveStateModifier.h" />
+    <ClInclude Include="moveSteeringBehavior.h" />
+    <ClInclude Include="moveSteeringCondition.h" />
+    <ClInclude Include="moveSteeringLocomotionSegment.h" />
+    <ClInclude Include="moveSteeringNode.h" />
+    <ClInclude Include="moveSteeringTask.h" />
+    <ClInclude Include="movingAgentComponent.h" />
+    <ClInclude Include="movingPhysicalAgentComponent.h" />
+    <ClInclude Include="newNpc.h" />
+    <ClInclude Include="newNpcNoticedObject.h" />
+    <ClInclude Include="newNpcSchedule.h" />
+    <ClInclude Include="newNpcSense.h" />
+    <ClInclude Include="newNpcSenseVision.h" />
+    <ClInclude Include="newNpcState.h" />
+    <ClInclude Include="newNpcStateIdle.h" />
+    <ClInclude Include="nodeStorage.h" />
+    <ClInclude Include="objectsSnapshot.h" />
+    <ClInclude Include="patrolPointComponent.h" />
+    <ClInclude Include="animBoidNode.h" />
+    <ClInclude Include="player.h" />
+    <ClInclude Include="oldCommunitySpawnStrategy.h" />
+    <ClInclude Include="playerStateBase.h" />
+    <ClInclude Include="playerStateMovable.h" />
+    <ClInclude Include="poiJobData.h" />
+    <ClInclude Include="pointOfInterestSpeciesConfig.h" />
+    <ClInclude Include="pointOfInterestParams.h" />
+    <ClInclude Include="potentialField.h" />
+    <ClInclude Include="quest.h" />
+    <ClInclude Include="questActorCondition.h" />
+    <ClInclude Include="questAndBlock.h" />
+    <ClInclude Include="questBlockWithScene.h" />
+    <ClInclude Include="questCamera.h" />
+    <ClInclude Include="questCameraFocusCondition.h" />
+    <ClInclude Include="questCharacterCustomizerBlock.h" />
+    <ClInclude Include="questCheckpointBlock.h" />
+    <ClInclude Include="questCondition.h" />
+    <ClInclude Include="questConditionBlock.h" />
+    <ClInclude Include="questContextDialogBlock.h" />
+    <ClInclude Include="questCutControlBlock.h" />
+    <ClInclude Include="questCutsceneCondition.h" />
+    <ClInclude Include="questDeletionMarkerBlock.h" />
+    <ClInclude Include="questEndBlock.h" />
+    <ClInclude Include="questExternalScenePlayer.h" />
+    <ClInclude Include="questFactsDBChangingBlock.h" />
+    <ClInclude Include="questFactsDBCondition.h" />
+    <ClInclude Include="questFightCondition.h" />
+    <ClInclude Include="questGameplayEntCondition.h" />
+    <ClInclude Include="questGraph.h" />
+    <ClInclude Include="questGraphBlock.h" />
+    <ClInclude Include="questGraphInstance.h" />
+    <ClInclude Include="questGraphSocket.h" />
+    <ClInclude Include="questInteractionCondition.h" />
+    <ClInclude Include="questInteractionDialogBlock.h" />
+    <ClInclude Include="questInterestPointBlock.h" />
+    <ClInclude Include="questLayersHiderBlock.h" />
+    <ClInclude Include="questLockNPC.h" />
+    <ClInclude Include="questPauseConditionBlock.h" />
+    <ClInclude Include="questPhase.h" />
+    <ClInclude Include="questPhaseBlock.h" />
+    <ClInclude Include="questPhaseInputBlock.h" />
+    <ClInclude Include="questPhaseOutputBlock.h" />
+    <ClInclude Include="questRandomBlock.h" />
+    <ClInclude Include="questReactionCondition.h" />
+    <ClInclude Include="questRewardBlock.h" />
+    <ClInclude Include="questsAnalyzer.h" />
+    <ClInclude Include="questSceneBlock.h" />
+    <ClInclude Include="questSceneBlocksValidator.h" />
+    <ClInclude Include="questScenePlayer.h" />
+    <ClInclude Include="questScenePrepare.h" />
+    <ClInclude Include="questScopeBlock.h" />
+    <ClInclude Include="questScriptBlock.h" />
+    <ClInclude Include="questScriptedActionsBlock.h" />
+    <ClInclude Include="questScriptedDialogBlock.h" />
+    <ClInclude Include="questsSystem.h" />
+    <ClInclude Include="questStartBlock.h" />
+    <ClInclude Include="questStateChangeRequestResetBlock.h" />
+    <ClInclude Include="questStaticCameraRun.h" />
+    <ClInclude Include="questStaticCameraSequence.h" />
+    <ClInclude Include="questStaticCameraStop.h" />
+    <ClInclude Include="questStaticCameraSwitch.h" />
+    <ClInclude Include="questStoryPhaseProperty.h" />
+    <ClInclude Include="questStoryPhaseSetterBlock.h" />
+    <ClInclude Include="questTagsPresenceCondition.h" />
+    <ClInclude Include="questTeleportBlock.h" />
+    <ClInclude Include="questThread.h" />
+    <ClInclude Include="questTimeCondition.h" />
+    <ClInclude Include="questTimeMgmtBlock.h" />
+    <ClInclude Include="questTriggerCondition.h" />
+    <ClInclude Include="questUnlockNPC.h" />
+    <ClInclude Include="questUserInputCondition.h" />
+    <ClInclude Include="questVariedInputsBlock.h" />
+    <ClInclude Include="questXorBlock.h" />
+    <ClInclude Include="randBoidNode.h" />
+    <ClInclude Include="reactionAction.h" />
+    <ClInclude Include="reactionsManager.h" />
+    <ClInclude Include="rewards.h" />
+    <ClInclude Include="sceneActorInterface.h" />
+    <ClInclude Include="sceneAreaComponent.h" />
+    <ClInclude Include="sceneLog.h" />
+    <ClInclude Include="scenesEntriesManager.h" />
+    <ClInclude Include="sceneStopReasons.h" />
+    <ClInclude Include="scriptedComponent.h" />
+    <ClInclude Include="scriptGameAnimationNatives.h" />
+    <ClInclude Include="boidPointOfInterestComponentScript.h" />
+    <ClInclude Include="scriptRegistrationManager.h" />
+    <ClInclude Include="sequenceBoidNode.h" />
+    <ClInclude Include="spawnPointComponent.h" />
+    <ClInclude Include="spawnPointManager.h" />
+    <ClInclude Include="spawnStrategy.h" />
+    <ClInclude Include="standPhysicalMaterialAreaComponent.h" />
+    <ClInclude Include="storyPhaseListener.h" />
+    <ClInclude Include="storyPhaseLocation.h" />
+    <ClInclude Include="storyScene.h" />
+    <ClInclude Include="storySceneAbstractLine.h" />
+    <ClInclude Include="storySceneActions.h" />
+    <ClInclude Include="storySceneActorMap.h" />
+    <ClInclude Include="storySceneAnimationCache.h" />
+    <ClInclude Include="storySceneAnimationParams.h" />
+    <ClInclude Include="storySceneBlockingElement.h" />
+    <ClInclude Include="storySceneCameraDefinition.h" />
+    <ClInclude Include="storySceneCameraSetting.h" />
+    <ClInclude Include="storySceneChoice.h" />
+    <ClInclude Include="storySceneChoiceLine.h" />
+    <ClInclude Include="storySceneChoiceLineAction.h" />
+    <ClInclude Include="storySceneComment.h" />
+    <ClInclude Include="storySceneComponent.h" />
+    <ClInclude Include="storySceneControlPart.h" />
+    <ClInclude Include="storySceneCutscene.h" />
+    <ClInclude Include="storySceneCutsceneBlock.h" />
+    <ClInclude Include="storySceneCutsceneSection.h" />
+    <ClInclude Include="storySceneDialogset.h" />
+    <ClInclude Include="storySceneDialogsetCameraDescriptions.h" />
+    <ClInclude Include="storySceneDirector.h" />
+    <ClInclude Include="storySceneDirectorPlacementHelper.h" />
+    <ClInclude Include="storySceneElement.h" />
+    <ClInclude Include="storySceneEvent.h" />
+    <ClInclude Include="storySceneEventAnimation.h" />
+    <ClInclude Include="storySceneEventAnimClip.h" />
+    <ClInclude Include="storySceneEventCameraBlend.h" />
+    <ClInclude Include="storySceneEventChangePose.h" />
+    <ClInclude Include="storySceneEventCustomCamera.h" />
+    <ClInclude Include="storySceneEventCustomCameraInstance.h" />
+    <ClInclude Include="storySceneEventDespawn.h" />
+    <ClInclude Include="storySceneEventDuration.h" />
+    <ClInclude Include="storySceneEventEnterActor.h" />
+    <ClInclude Include="storySceneEventEquipItem.h" />
+    <ClInclude Include="storySceneEventExitActor.h" />
+    <ClInclude Include="storySceneEventFade.h" />
+    <ClInclude Include="storySceneEventGroup.h" />
+    <ClInclude Include="storySceneEventLookAt.h" />
+    <ClInclude Include="storySceneEventMimicFilter.h" />
+    <ClInclude Include="storySceneEventMimicPose.h" />
+    <ClInclude Include="storySceneEventMimics.h" />
+    <ClInclude Include="storySceneEventMimicsAnim.h" />
+    <ClInclude Include="storySceneEventOverridePlacement.h" />
+    <ClInclude Include="storySceneEventRotate.h" />
+    <ClInclude Include="storySceneEventSound.h" />
+    <ClInclude Include="storySceneExtractedLineData.h" />
+    <ClInclude Include="storySceneFlowCondition.h" />
+    <ClInclude Include="storySceneFlowConditionBlock.h" />
+    <ClInclude Include="storySceneFlowSwitch.h" />
+    <ClInclude Include="storySceneFlowSwitchBlock.h" />
+    <ClInclude Include="storySceneForcingMode.h" />
+    <ClInclude Include="storySceneGraph.h" />
+    <ClInclude Include="storySceneGraphBlock.h" />
+    <ClInclude Include="storySceneGraphSocket.h" />
+    <ClInclude Include="storySceneInput.h" />
+    <ClInclude Include="storySceneInputBlock.h" />
+    <ClInclude Include="storySceneInputStructureListener.h" />
+    <ClInclude Include="storySceneLine.h" />
+    <ClInclude Include="storySceneLinkElement.h" />
+    <ClInclude Include="storySceneOutput.h" />
+    <ClInclude Include="storySceneOutputBlock.h" />
+    <ClInclude Include="storySceneParam.h" />
+    <ClInclude Include="storyScenePauseElement.h" />
+    <ClInclude Include="storyScenePlaybackListener.h" />
+    <ClInclude Include="storyScenePlayer.h" />
+    <ClInclude Include="storyScenePlayerInterface.h" />
+    <ClInclude Include="storySceneRandomBlock.h" />
+    <ClInclude Include="storySceneRandomizer.h" />
+    <ClInclude Include="storySceneScriptingBlock.h" />
+    <ClInclude Include="storySceneScriptLine.h" />
+    <ClInclude Include="storySceneSection.h" />
+    <ClInclude Include="storySceneSectionBlock.h" />
+    <ClInclude Include="storySceneSectionOverrideCondition.h" />
+    <ClInclude Include="storySceneSectionPlayingPlan.h" />
+    <ClInclude Include="storySceneSectionPreload.h" />
+    <ClInclude Include="storySceneSpawner.h" />
+    <ClInclude Include="storySceneSystem.h" />
+    <ClInclude Include="storySceneVideo.h" />
+    <ClInclude Include="storySceneVoicetagMapping.h" />
+    <ClInclude Include="storySceneWaypointComponent.h" />
+    <ClInclude Include="swarmAlgorithmData.h" />
+    <ClInclude Include="swarmLairEntity.h" />
+    <ClInclude Include="swarmsDensityMap.h" />
+    <ClInclude Include="boidSpecies.h" />
+    <ClInclude Include="swarmUpdateJob.h" />
+    <ClInclude Include="targetingUtils.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="targetSteeringTask.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="teleporter.h" />
+    <ClInclude Include="teleportHelper.h" />
+    <ClInclude Include="vehicle.h" />
+    <ClInclude Include="visualDebug_MovementTrajectory.h" />
+    <ClInclude Include="voicesetPlayer.h" />
+    <ClInclude Include="voiceWeightCurve.h" />
+    <ClInclude Include="wanderPointComponent.h" />
+    <ClInclude Include="waterDebug.h" />
+    <ClInclude Include="wayPointComponent.h" />
+    <ClInclude Include="wayPointCookingContext.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="wayPointsCollection.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="wayPointsCollectionsSet.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="wizardDefinition.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="2daProperties.cpp" />
+    <ClCompile Include="abilities.cpp" />
+    <ClCompile Include="actionAreaComponent.cpp" />
+    <ClCompile Include="actionAreaComponentEditorData.cpp" />
+    <ClCompile Include="actionAreaVertex.cpp" />
+    <ClCompile Include="actionBroadecastEvent.cpp" />
+    <ClCompile Include="actionPoint.cpp" />
+    <ClCompile Include="actionPointActivationSwitcher.cpp" />
+    <ClCompile Include="actionPointComponent.cpp" />
+    <ClCompile Include="actionPointDataDef.cpp" />
+    <ClCompile Include="actionPointManager.cpp" />
+    <ClCompile Include="actionPointReservationReleaseHandler.cpp" />
+    <ClCompile Include="actionPointSelectors.cpp" />
+    <ClCompile Include="actor.cpp" />
+    <ClCompile Include="actorAction.cpp" />
+    <ClCompile Include="actorActionAnimation.cpp" />
+    <ClCompile Include="actorActionChangeEmotion.cpp" />
+    <ClCompile Include="actorActionCustomSteer.cpp" />
+    <ClCompile Include="actorActionExploration.cpp" />
+    <ClCompile Include="actorActionMatchTo.cpp" />
+    <ClCompile Include="actorActionMoveOnCurveTo.cpp" />
+    <ClCompile Include="actorActionMoveOutsideNavdata.cpp" />
+    <ClCompile Include="actorActionMoveTo.cpp" />
+    <ClCompile Include="actorActionMoveToDynamicNode.cpp" />
+    <ClCompile Include="actorActionRiseEvent.cpp" />
+    <ClCompile Include="actorActionRotateTo.cpp" />
+    <ClCompile Include="actorActionSlideTo.cpp" />
+    <ClCompile Include="actorActionWork.cpp" />
+    <ClCompile Include="actorAnimationEventFilter.cpp" />
+    <ClCompile Include="actorLatentAction.cpp" />
+    <ClCompile Include="actorSpeechQueue.cpp" />
+    <ClCompile Include="aiScriptableStorage.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeDecoratorAfraidDefinition.cpp" />
+    <ClCompile Include="behTreeConditionRespondToMusicDefinition.cpp" />
+    <ClCompile Include="behTreeNodeAtomicPlayAnimationManualMotionExtraction.cpp" />
+    <ClCompile Include="debugPageScenes.cpp" />
+    <ClCompile Include="dlcLanguagePack.cpp" />
+    <ClCompile Include="gameWallaInterface.cpp" />
+    <ClCompile Include="questColorblindModeCondition.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="questEncounterFullRespawnBlock.cpp" />
+    <ClCompile Include="questJournalStatusCondition.cpp" />
+    <ClCompile Include="questPhaseIOBlock.cpp" />
+    <ClCompile Include="saveFileDLCMounter.cpp" />
+    <ClCompile Include="storySceneEventLodOverride.cpp" />
+    <ClCompile Include="storySceneEventVideoOverlay.cpp" />
+    <ClCompile Include="templateLoadBalancer.cpp" />
+    <ClCompile Include="actor_scenes.cpp" />
+    <ClCompile Include="actor_scripts.cpp" />
+    <ClCompile Include="aiParametersSpawnList.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="aiPositionPrediction.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="aiQueryWalkableSpotInArea.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="aiReachabilityQuery.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="asyncCheckResult.cpp" />
+    <ClCompile Include="behaviorPoseConstraintPoseLookAtModifier.cpp" />
+    <ClCompile Include="Behavior\BehaviorNodes\Measurements\behaviorGraphFootStepDetectorNode.cpp" />
+    <ClCompile Include="Behavior\PostActions\behaviorGraphPostActions.cpp" />
+    <ClCompile Include="behTreeAreaSelection.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeDecoratorAsyncQuery.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeDecoratorSemaphore.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeDecoratorSemaphorePriority.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeDecoratorSteeringTargeter.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeDecoratorWalkablePositionQuery.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeMetanodeGuardSetup.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeAtomicAction.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeCasualMovementDecorator.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeConditionChance.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeConditionExternalToggle.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeConditionHasTarget.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeConditionIsAtWork.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeConditionIsInCameraView.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeConditionIsInGuardArea.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeConditionLineofSight.cpp" />
+    <ClCompile Include="behTreeNodeConditionNoticedObject.cpp" />
+    <ClCompile Include="behTreeNodeConditionTrue.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeMetaNodeNpcTypeCondition.cpp" />
+    <ClCompile Include="behTreeNodeLookat.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeNodePartyWorkSynchronizer.cpp" />
+    <ClCompile Include="behTreeNodeSelectRandomPositionInAreaDecorator.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeSelectTargetByTagInArea.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeSnapToNavigation.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeUseExplorationAction.cpp" />
+    <ClCompile Include="behTreeWalkableQueryData.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="boatBuoyancySystem.cpp" />
+    <ClCompile Include="boatConfig.cpp" />
+    <ClCompile Include="boatHedgehog.cpp" />
+    <ClCompile Include="boatInputSystem.cpp" />
+    <ClCompile Include="boatPathfindingSystem.cpp" />
+    <ClCompile Include="communityAgentStubTagManager.cpp" />
+    <ClCompile Include="container.cpp" />
+    <ClCompile Include="createEntityHelper.cpp" />
+    <ClCompile Include="createEntityManager.cpp" />
+    <ClCompile Include="debugPageCamera.cpp" />
+    <ClCompile Include="debugPageGameShortcuts.cpp" />
+    <ClCompile Include="debugPageLayerStorage.cpp" />
+    <ClCompile Include="dlcDefinition.cpp" />
+    <ClCompile Include="dlcManager.cpp" />
+    <ClCompile Include="dlcMounter.cpp" />
+    <ClCompile Include="edWizardSavedAnswers.cpp" />
+    <ClCompile Include="behTreeStateSerializer.cpp" />
+    <ClCompile Include="encounterSpawnGroupCounter.cpp" />
+    <ClCompile Include="actorsManager.cpp" />
+    <ClCompile Include="actorSpeech.cpp" />
+    <ClCompile Include="addFactPerformableAction.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="advancedVehicle.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="agent.cpp" />
+    <ClCompile Include="agentsWorld.cpp" />
+    <ClCompile Include="aiActionParameters.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="aiDespawnParameters.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="aiFormationData.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="aiExplorationParameters.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="aiParamInjectHandler.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="aiPositioning.cpp" />
+    <ClCompile Include="aiPresetParam.cpp" />
+    <ClCompile Include="aiRedefinitionParameters.cpp" />
+    <ClCompile Include="behTreeDecoratorCompleteInProximity.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeDecoratorLeadFormation.cpp" />
+    <ClCompile Include="behTreeDecoratorPoke.cpp" />
+    <ClCompile Include="behTreeDecoratorSetupFormation.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeDynamicNodeBase.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeGuardAreaData.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeAtomicMoveToWanderpoint.cpp" />
+    <ClCompile Include="behTreeNodeAttachToCurve.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeComment.cpp" />
+    <ClCompile Include="behTreeNodeConditionPartyMembersCount.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeConditionRecentEvent.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeConditionSpeedEngineVal.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeExplorationQueue.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeFleeReaction.cpp" />
+    <ClCompile Include="behTreeNodePassMetaobstacles.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeSelectFormationLeader.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeSelectPartyMember.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeSetupCustomMoveData.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeWorkDecorator.cpp" />
+    <ClCompile Include="behTreeVarsUtils.cpp" />
+    <ClCompile Include="encounterSpawnPoints.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="entityPool.cpp" />
+    <ClCompile Include="entityPoolSpawnJobFactory.cpp" />
+    <ClCompile Include="expCooked.cpp" />
+    <ClCompile Include="expCooking.cpp" />
+    <ClCompile Include="expMountBoatExecutor.cpp" />
+    <ClCompile Include="extAnimMaterialBasedFxEvent.cpp" />
+    <ClCompile Include="factsDebuggerCommands.cpp" />
+    <ClCompile Include="factsDebuggerPlugin.cpp" />
+    <ClCompile Include="findGameplayEntities.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="gameDebuggerCommands.cpp" />
+    <ClCompile Include="gameDebuggerPlugin.cpp" />
+    <ClCompile Include="gameFastForwardSystem.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="gameMetalinkFactories.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="gameplayInfoCache.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="gameplayStorageAcceptors.cpp" />
+    <ClCompile Include="gameSpeedConfigManager.cpp" />
+    <ClCompile Include="guiScenePlayer.cpp" />
+    <ClCompile Include="inGameConfigDLC.cpp" />
+    <ClCompile Include="inGameConfigWrapper.cpp" />
+    <ClCompile Include="interpolationBasics.cpp" />
+    <ClCompile Include="isConsciousAtWork.cpp" />
+    <ClCompile Include="moveAnimationLocomotionSegment.cpp" />
+    <ClCompile Include="moveSteeringMaintainTargetSpeed.cpp" />
+    <ClCompile Include="moveSteeringSpatialQueriesConditions.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="moveSteeringSpeedMultOnPath.cpp" />
+    <ClCompile Include="navigationCollectCollision.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="navigationMultiReachabilityQueryInterface.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="newNpcSensesManager.cpp" />
+    <ClCompile Include="popup.cpp" />
+    <ClCompile Include="popupResource.cpp" />
+    <ClCompile Include="propertyConverter.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="questContentActivatorBlock.cpp" />
+    <ClCompile Include="questDebuggerCommands.cpp" />
+    <ClCompile Include="questDebuggerPlugin.cpp" />
+    <ClCompile Include="questDependencyInfo.cpp" />
+    <ClCompile Include="questFastForwardCommunitiesBlock.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="questLoadingScreenCondition.cpp" />
+    <ClCompile Include="questLogStateBlock.cpp" />
+    <ClCompile Include="questLookAtBlock.cpp" />
+    <ClCompile Include="questMemoryDumpBlock.cpp" />
+    <ClCompile Include="questPerformGCBlock.cpp" />
+    <ClCompile Include="questTestBlock.cpp" />
+    <ClCompile Include="questWaitForTickBlock.cpp" />
+    <ClCompile Include="rewardManager.cpp" />
+    <ClCompile Include="roadsManager.cpp" />
+    <ClCompile Include="sceneStopReasons.cpp" />
+    <ClCompile Include="scriptedRenderFrame.cpp" />
+    <ClCompile Include="spawnTreeDecoratorInitializersList.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="spawnTreeInitializationContext.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="spawnTreeInitializerMonitor.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="spawnTreeInitializerPersistent.cpp" />
+    <ClCompile Include="spawnTreeInitializerRainHandler.cpp" />
+    <ClCompile Include="spawnTreeInitializerSetupDetachedCollection.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="spawnTreeInitializerSpawnLimitMonitor.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="spawnTreeInitializerStartingBehavior.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="spawnTreeInitializerToggleBehavior.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="spawnTreeSpawnStrategy.cpp" />
+    <ClCompile Include="speedManagmentSteeringTasks.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="storySceneAddFactEvent.cpp" />
+    <ClCompile Include="storySceneEventAttachPropToBone.cpp" />
+    <ClCompile Include="storySceneEventCameraAnimation.cpp" />
+    <ClCompile Include="StorySceneEventCameraLight.cpp" />
+    <ClCompile Include="storySceneEventCameraLightInterpolation.cpp" />
+    <ClCompile Include="storySceneEventCloth.cpp" />
+    <ClCompile Include="storySceneEventClothDisablingInterpolation.cpp" />
+    <ClCompile Include="storySceneEventCsCamera.cpp" />
+    <ClCompile Include="storySceneEventDangle.cpp" />
+    <ClCompile Include="storySceneEventDangleInterpolation.cpp" />
+    <ClCompile Include="spawnTreeStateSerializer.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="storySceneEventDebugComment.cpp" />
+    <ClCompile Include="storySceneEventGameplayCamera.cpp" />
+    <ClCompile Include="storySceneEventHideScabbard.cpp" />
+    <ClCompile Include="storySceneEventHitSound.cpp" />
+    <ClCompile Include="storySceneEventInterpolation.cpp" />
+    <ClCompile Include="storySceneEventCameraInterpolation.cpp" />
+    <ClCompile Include="boatDestructionComponent.cpp" />
+    <ClCompile Include="headManagerComponent.cpp" />
+    <ClCompile Include="character.cpp" />
+    <ClCompile Include="characterResource.cpp" />
+    <ClCompile Include="configParser.cpp" />
+    <ClCompile Include="debugWindowBoatSettings.cpp" />
+    <ClCompile Include="debugWindowGameWorld.cpp" />
+    <ClCompile Include="debugWindowNPCViewer.cpp" />
+    <ClCompile Include="debugWindow.cpp" />
+    <ClCompile Include="debugWindowVehicleViewer.cpp" />
+    <ClCompile Include="distanceChecker.cpp" />
+    <ClCompile Include="doorAttachment.cpp" />
+    <ClCompile Include="edEntitySetup.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="edEntitySetupListParam.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="enableComponentsPerfomableAction.cpp" />
+    <ClCompile Include="entitiesDetector.cpp" />
+    <ClCompile Include="entityUpdaterComponent.cpp" />
+    <ClCompile Include="formationLogicSlot.cpp" />
+    <ClCompile Include="formationLogicSteering.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="formationMemberDataSlot.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="formationMemberDataSteering.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="formationPattern.cpp" />
+    <ClCompile Include="formationSlot.cpp" />
+    <ClCompile Include="formationSteeringSlotTasks.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="fxTrackItemPlayPropertyAnim.cpp" />
+    <ClCompile Include="jobBreakerComponent.cpp" />
+    <ClCompile Include="jobSpawnFromPool.cpp" />
+    <ClCompile Include="lockableEntity.cpp" />
+    <ClCompile Include="doorComponent.cpp" />
+    <ClCompile Include="effectManagmentPerformableAction.cpp" />
+    <ClCompile Include="enableDeniedAreaAction.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="enableEncounterPerformableAction.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="entityActionsRouter.cpp" />
+    <ClCompile Include="entityEventsNamesProvider.cpp" />
+    <ClCompile Include="entityTargetingAction.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="formation.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="aiSpawnTreeParameters.cpp" />
+    <ClCompile Include="aiStorage.cpp" />
+    <ClCompile Include="aiStorageExternalPtr.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="animationManualSlotSync.cpp" />
+    <ClCompile Include="animationSlider.cpp" />
+    <ClCompile Include="animEffectEvent.cpp" />
+    <ClCompile Include="atomicBoidNode.cpp" />
+    <ClCompile Include="baseBoidNode.cpp" />
+    <ClCompile Include="behaviorConstraintApplyOffset.cpp" />
+    <ClCompile Include="behaviorConstraintNodeFloorIK.cpp" />
+    <ClCompile Include="behaviorConstraintRiderInSaddle.cpp" />
+    <ClCompile Include="behaviorConstraintUprightSpine.cpp" />
+    <ClCompile Include="behaviorConstraintPutLegsIntoStirrups.cpp" />
+    <ClCompile Include="behaviorConstraintPullStirrupsToLegs.cpp" />
+    <ClCompile Include="behaviorConstraintPullReinsToHands.cpp" />
+    <ClCompile Include="behaviorConstraintMoveHandsByOffset.cpp" />
+    <ClCompile Include="behaviorConstraintStirrups.cpp" />
+    <ClCompile Include="behaviorGraphAimingWithIKNode.cpp" />
+    <ClCompile Include="behaviorGraphMaintainVelocityNode.cpp" />
+    <ClCompile Include="behaviorGraphRagdollNode.cpp" />
+    <ClCompile Include="behaviorGraphAnimatedRagdollNode.cpp" />
+    <ClCompile Include="behaviorGraphDirectionalMovementNode.cpp" />
+    <ClCompile Include="behaviorGraphGameplayTransitions.cpp" />
+    <ClCompile Include="behaviorGraphChangeDirectionNode.cpp" />
+    <ClCompile Include="behaviorGraphFillMovementVariablesUsingSteeringNode.cpp" />
+    <ClCompile Include="behaviorGraphOnSlopeMovementNode.cpp" />
+    <ClCompile Include="behTreeAtomicConditions.cpp" />
+    <ClCompile Include="behTreeAtomicSteerWithTarget.cpp" />
+    <ClCompile Include="behTreeCounterData.cpp" />
+    <ClCompile Include="behTreeCustomMoveData.cpp" />
+    <ClCompile Include="behTreeDecoratorDuration.cpp" />
+    <ClCompile Include="baseCrittersAI.cpp" />
+    <ClCompile Include="behTreeDecoratorSelectFleeDestination.cpp" />
+    <ClCompile Include="behTreeDecoratorSteeringGraph.cpp" />
+    <ClCompile Include="behTreeNodeConditionClearLineToTarget.cpp" />
+    <ClCompile Include="behTreeNodeDespawn.cpp" />
+    <ClCompile Include="behTreeDynamicNode.cpp" />
+    <ClCompile Include="behTreeMetanode.cpp" />
+    <ClCompile Include="behTreeMetanodeOnSpawn.cpp" />
+    <ClCompile Include="behTreeNodeAtomicGuardRetreat.cpp" />
+    <ClCompile Include="behTreeDecoratorUninterruptable.cpp" />
+    <ClCompile Include="behTreeNodeAtomicTeleport.cpp" />
+    <ClCompile Include="behTreeNodeComplexCondition.cpp" />
+    <ClCompile Include="behTreeNodeConditionCounter.cpp" />
+    <ClCompile Include="behTreeNodeConditionReactionEvent.cpp" />
+    <ClCompile Include="behTreeNodeFollowFormation.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeIdleRoot.cpp" />
+    <ClCompile Include="behTreeNodeSelectWanderingTarget.cpp" />
+    <ClCompile Include="behTreeNodeSpecial.cpp" />
+    <ClCompile Include="behTreeNodeVoid.cpp" />
+    <ClCompile Include="behTreeReactionData.cpp" />
+    <ClCompile Include="behTreeReactionManager.cpp" />
+    <ClCompile Include="behTreeRttiAtomic.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeRttiCommunity.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeRttiComposites.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeRttiCustom.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeRttiDecorators.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeRttiMovement.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeRttiStructural.cpp" />
+    <ClCompile Include="behTreeSteeringGraphBase.cpp" />
+    <ClCompile Include="behTreeNodeWorkAtomic.cpp" />
+    <ClCompile Include="behTreeTask.cpp" />
+    <ClCompile Include="behTreeWorkData.cpp" />
+    <ClCompile Include="behTreeWorkInitializer.cpp" />
+    <ClCompile Include="boatComponent.cpp" />
+    <ClCompile Include="boidNodeData.cpp" />
+    <ClCompile Include="attackRange.cpp" />
+    <ClCompile Include="attitude.cpp" />
+    <ClCompile Include="attitudeManager.cpp" />
+    <ClCompile Include="baseDamage.cpp" />
+    <ClCompile Include="behaviorGraphEventHandler.cpp" />
+    <ClCompile Include="behaviorGraphGameplayAdditiveNode.cpp" />
+    <ClCompile Include="behaviorGraphGameplayNodes.cpp" />
+    <ClCompile Include="behaviorGraphScriptStateNode.cpp" />
+    <ClCompile Include="behaviorGraphStoreBone.cpp" />
+    <ClCompile Include="behaviorGraphStoreSyncInfo.cpp" />
+    <ClCompile Include="behaviorGraphRestoreSyncInfo.cpp" />
+    <ClCompile Include="behaviorPoseConstraintPoseLookAtNode.cpp" />
+    <ClCompile Include="behTreeNodeSelectPatrolingTarget.cpp" />
+    <ClCompile Include="bgNpc.cpp" />
+    <ClCompile Include="bgNpcChatPlayer.cpp" />
+    <ClCompile Include="bgNpcInteraction.cpp" />
+    <ClCompile Include="bgNpcItem.cpp" />
+    <ClCompile Include="bgNpcJobPlayer.cpp" />
+    <ClCompile Include="bgNpcMesh.cpp" />
+    <ClCompile Include="bgNpcRoot.cpp" />
+    <ClCompile Include="bgNpcSpeech.cpp" />
+    <ClCompile Include="bgNpcTrigger.cpp" />
+    <ClCompile Include="boidActivationTriggerComponent.cpp" />
+    <ClCompile Include="boidAreaComponent.cpp" />
+    <ClCompile Include="cameraAreaComponent.cpp" />
+    <ClCompile Include="cameraEffectTrigger.cpp" />
+    <ClCompile Include="boidManager.cpp" />
+    <ClCompile Include="characterStats.cpp" />
+    <ClCompile Include="commonGameResource.cpp" />
+    <ClCompile Include="communityAgentStub.cpp" />
+    <ClCompile Include="communityArea.cpp" />
+    <ClCompile Include="communityConstants.cpp" />
+    <ClCompile Include="communityData.cpp" />
+    <ClCompile Include="communityDebugCounters.cpp" />
+    <ClCompile Include="communityErrorReport.cpp" />
+    <ClCompile Include="communitySystem.cpp" />
+    <ClCompile Include="communityThreadSlicer.cpp" />
+    <ClCompile Include="communityUtility.cpp" />
+    <ClCompile Include="counterUtilityGraphBlock.cpp" />
+    <ClCompile Include="formationMemberData.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="formationLogic.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="formationSteeringConditions.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="formationSteeringInput.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="formationSteeringTasks.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="generalMoveSteeringTask.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="gameNames.cpp" />
+    <ClCompile Include="journalBase.cpp" />
+    <ClCompile Include="journalBlock.cpp" />
+    <ClCompile Include="journalManager.cpp" />
+    <ClCompile Include="journalPath.cpp" />
+    <ClCompile Include="journalResource.cpp" />
+    <ClCompile Include="boatDestructionVolume.cpp" />
+    <ClCompile Include="metalinkComponent.cpp" />
+    <ClCompile Include="movementCommandBuffer.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="moveSteeringSideBySide.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="partySpawnPointComponent.cpp" />
+    <ClCompile Include="partySpawnPointOrganizer.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="pilotComponent.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="playPropertyAnimationAction.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="questEncounterActivator.cpp" />
+    <ClCompile Include="questEncounterManagerBlock.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="gameplayDestructionSystemComponent.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="questGraphMinigameBlock.cpp" />
+    <ClCompile Include="questPokeActionBlock.cpp" />
+    <ClCompile Include="reactionScene.cpp" />
+    <ClCompile Include="reactionSceneActor.cpp" />
+    <ClCompile Include="reactionSceneAssignActorNode.cpp" />
+    <ClCompile Include="reactionSceneAssignments.cpp" />
+    <ClCompile Include="reactionSceneEndNode.cpp" />
+    <ClCompile Include="reactionSceneFlowController.cpp" />
+    <ClCompile Include="reactionSceneFlowSynchronizationDecorator.cpp" />
+    <ClCompile Include="sceneAnimEvents.cpp" />
+    <ClCompile Include="sceneDefinitionNode.cpp" />
+    <ClCompile Include="queueMetalinkInterface.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="seatComponent.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="selfUpdatingComponent.cpp" />
+    <ClCompile Include="spawnTreeBaseEntry.cpp" />
+    <ClCompile Include="spawnTreeBaseEntryGenerator.cpp" />
+    <ClCompile Include="spawnTreeEntryListElement.cpp" />
+    <ClCompile Include="spawnTreeInitializerAddTag.cpp" />
+    <ClCompile Include="spawnTreeInitializerAI.cpp" />
+    <ClCompile Include="spawnTreeInitializerAttitude.cpp" />
+    <ClCompile Include="spawnTreeInitializerSetAppearance.cpp" />
+    <ClCompile Include="spawnTreeInitializerForceCombat.cpp" />
+    <ClCompile Include="spawnTreeInitializerGuardArea.cpp" />
+    <ClCompile Include="spawnTreeInitializersIdleAI.cpp" />
+    <ClCompile Include="spawnTreeMultiEntry.cpp" />
+    <ClCompile Include="spawnTreeDespawnerHandler.cpp" />
+    <ClCompile Include="spawnTreeRandomNode.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="spawnTreeScriptedNode.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="spawnTreeVoidNode.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="spawnTreeWanderAndWorkEntryGenerator.cpp" />
+    <ClCompile Include="storySceneActorsEyesTracker.cpp" />
+    <ClCompile Include="storySceneEventCamera.cpp" />
+    <ClCompile Include="storySceneEventChangeActorGameState.cpp" />
+    <ClCompile Include="storySceneEventControlRig.cpp" />
+    <ClCompile Include="storySceneEventDialogLine.cpp" />
+    <ClCompile Include="storySceneControlPartsUtil.cpp" />
+    <ClCompile Include="storySceneEffectEvent.cpp" />
+    <ClCompile Include="storySceneEventBlend.cpp" />
+    <ClCompile Include="storySceneEventCurveAnimation.cpp" />
+    <ClCompile Include="storySceneEventEnhancedCameraBlend.cpp" />
+    <ClCompile Include="storySceneEventInterfaces.cpp" />
+    <ClCompile Include="storySceneEventLightProperties.cpp" />
+    <ClCompile Include="storySceneEventLightPropertiesInterpolation.cpp" />
+    <ClCompile Include="storySceneEventModifyEnv.cpp" />
+    <ClCompile Include="storySceneEventMorphInterpolation.cpp" />
+    <ClCompile Include="storySceneEventOpenDoor.cpp" />
+    <ClCompile Include="storySceneEventPlacementInterpolation.cpp" />
+    <ClCompile Include="storySceneEventPoseKey.cpp" />
+    <ClCompile Include="storySceneEventPropPlacementInterpolation.cpp" />
+    <ClCompile Include="storySceneEventReward.cpp" />
+    <ClCompile Include="storySceneEventScenePropPlacement.cpp" />
+    <ClCompile Include="storySceneEventsCollector.cpp" />
+    <ClCompile Include="encounter.cpp" />
+    <ClCompile Include="encounterCreatureDefinition.cpp" />
+    <ClCompile Include="lootCache.cpp" />
+    <ClCompile Include="lootDefinitions.cpp" />
+    <ClCompile Include="questEncounterPhaseSetterBlock.cpp" />
+    <ClCompile Include="spawnTreeCompositeMember.cpp" />
+    <ClCompile Include="spawnCondition.cpp" />
+    <ClCompile Include="encounterCreaturePool.cpp" />
+    <ClCompile Include="spawnTreeConditionNode.cpp" />
+    <ClCompile Include="spawnTreeCustomSet.cpp" />
+    <ClCompile Include="spawnTreeDespawnConfiguration.cpp" />
+    <ClCompile Include="spawnTreeDespawnInitializer.cpp" />
+    <ClCompile Include="spawnTreeEntry.cpp" />
+    <ClCompile Include="spawnTreeIncludeNode.cpp" />
+    <ClCompile Include="spawnTreeInitializer.cpp" />
+    <ClCompile Include="spawnTreeInitializerSpawner.cpp" />
+    <ClCompile Include="spawnTreeNode.cpp" />
+    <ClCompile Include="flashMovieAdapter.cpp" />
+    <ClCompile Include="flashProxyComponent.cpp" />
+    <ClCompile Include="flashScriptFunctionCalling.cpp" />
+    <ClCompile Include="flashScriptSupport.cpp" />
+    <ClCompile Include="flashBindingAdapter.cpp" />
+    <ClCompile Include="flashSpriteAdapter.cpp" />
+    <ClCompile Include="boatBodyComponent.cpp" />
+    <ClCompile Include="guiConfigResource.cpp" />
+    <ClCompile Include="guiManager.cpp" />
+    <ClCompile Include="guiObject.cpp" />
+    <ClCompile Include="guiResource.cpp" />
+    <ClCompile Include="hud.cpp" />
+    <ClCompile Include="flashHudAdapter.cpp" />
+    <ClCompile Include="hudResource.cpp" />
+    <ClCompile Include="hudModule.cpp" />
+    <ClCompile Include="loopBoidNode.cpp" />
+    <ClCompile Include="animBoidNode.cpp" />
+    <ClCompile Include="menu.cpp" />
+    <ClCompile Include="menuResource.cpp" />
+    <ClCompile Include="movementAdjustor.cpp" />
+    <ClCompile Include="moveMatchToSegment.cpp" />
+    <ClCompile Include="poiJobData.cpp" />
+    <ClCompile Include="pointOfInterestSpeciesConfig.cpp" />
+    <ClCompile Include="ProjectileTrajectory.cpp" />
+    <ClCompile Include="ProjectileTargets.cpp" />
+    <ClCompile Include="questEntityMotionBlock.cpp" />
+    <ClCompile Include="questScriptedActionsAIParameters.cpp" />
+    <ClCompile Include="randBoidNode.cpp" />
+    <ClCompile Include="boidPointOfInterestComponentScript.cpp" />
+    <ClCompile Include="reactionCondition.cpp" />
+    <ClCompile Include="scriptedComponent.cpp" />
+    <ClCompile Include="scriptRegistrationManager.cpp" />
+    <ClCompile Include="sequenceBoidNode.cpp" />
+    <ClCompile Include="edSpawnTreeNode.cpp" />
+    <ClCompile Include="spawnTree.cpp" />
+    <ClCompile Include="spawnTreeSpawner.cpp" />
+    <ClCompile Include="storySceneDebugger.cpp" />
+    <ClCompile Include="storySceneDisplayInterface.cpp" />
+    <ClCompile Include="storySceneEventsExecutor.cpp" />
+    <ClCompile Include="storySceneAnimationList.cpp" />
+    <ClCompile Include="storySceneEventsExecutor_animations.cpp" />
+    <ClCompile Include="storySceneEventsExecutor_lights.cpp" />
+    <ClCompile Include="storySceneEventsExecutor_lookats.cpp" />
+    <ClCompile Include="storySceneEventsExecutor_motions.cpp" />
+    <ClCompile Include="storySceneEventsExecutor_props.cpp" />
+    <ClCompile Include="storySceneEventStartBlendToGameplayCamera.cpp" />
+    <ClCompile Include="storySceneEventTimelapse.cpp" />
+    <ClCompile Include="StorySceneEventWorldEntityEffect.cpp" />
+    <ClCompile Include="storySceneEventWorldPropPlacement.cpp" />
+    <ClCompile Include="storySceneFlowSwitch.cpp" />
+    <ClCompile Include="storySceneFlowSwitchBlock.cpp" />
+    <ClCompile Include="storySceneIncludes.cpp" />
+    <ClCompile Include="storySceneInterceptionHelper.cpp" />
+    <ClCompile Include="storySceneItems.cpp" />
+    <ClCompile Include="storySceneLinkHub.cpp" />
+    <ClCompile Include="storySceneLookAtController.cpp" />
+    <ClCompile Include="storySceneMotionExtractionSampler.cpp" />
+    <ClCompile Include="storySceneNPCTeleport.cpp" />
+    <ClCompile Include="storyScenePlayerStats.cpp" />
+    <ClCompile Include="storyScenePlayer_tick.cpp" />
+    <ClCompile Include="storySceneSectionVariant.cpp" />
+    <ClCompile Include="storySceneUtils.cpp" />
+    <ClCompile Include="storySceneVoiceTagsManager.cpp" />
+    <ClCompile Include="strayActorManager.cpp" />
+    <ClCompile Include="swarmAlgorithmData.cpp" />
+    <ClCompile Include="swarmUpdateJob.cpp" />
+    <ClCompile Include="debugPageBehaviorTree.cpp" />
+    <ClCompile Include="debugPageCommunity.cpp" />
+    <ClCompile Include="debugPageFactsDB.cpp" />
+    <ClCompile Include="debugPageMemoryBudget.cpp" />
+    <ClCompile Include="debugPageMemoryBudgetCommands.cpp" />
+    <ClCompile Include="debugPageMenu.cpp" />
+    <ClCompile Include="debugPageNpcList.cpp" />
+    <ClCompile Include="debugPageQuestForcer.cpp" />
+    <ClCompile Include="debugPageQuests.cpp" />
+    <ClCompile Include="debugPageQuestsDebug.cpp" />
+    <ClCompile Include="debugPageWorld.cpp" />
+    <ClCompile Include="deniedAreaSaveable.cpp" />
+    <ClCompile Include="entityParams.cpp" />
+    <ClCompile Include="expAnimationBlendPicker.cpp" />
+    <ClCompile Include="expBaseExecutor.cpp" />
+    <ClCompile Include="expBlendExecutor.cpp" />
+    <ClCompile Include="expBlendChainExecutor.cpp" />
+    <ClCompile Include="expChainExecutor.cpp" />
+    <ClCompile Include="expComponent.cpp" />
+    <ClCompile Include="expEvents.cpp" />
+    <ClCompile Include="explorationFinder.cpp" />
+    <ClCompile Include="foundExplorationComponent.cpp" />
+    <ClCompile Include="explorationScriptSupport.cpp" />
+    <ClCompile Include="expManager.cpp" />
+    <ClCompile Include="expManualStatesExecutor.cpp" />
+    <ClCompile Include="expOracle.cpp" />
+    <ClCompile Include="expPlayer.cpp" />
+    <ClCompile Include="expSingleAnimExecutor.cpp" />
+    <ClCompile Include="expSlideExecutor.cpp" />
+    <ClCompile Include="expSlider.cpp" />
+    <ClCompile Include="expStatesExecutor.cpp" />
+    <ClCompile Include="expStepsExecutor.cpp" />
+    <ClCompile Include="expToPointSliderExecutor.cpp" />
+    <ClCompile Include="expTransitionExecutor.cpp" />
+    <ClCompile Include="expTraverser.cpp" />
+    <ClCompile Include="expTreeMediator.cpp" />
+    <ClCompile Include="extAnimCutsceneQuestEvent.cpp" />
+    <ClCompile Include="equipmentState.cpp" />
+    <ClCompile Include="extAnimFootstepEvent.cpp" />
+    <ClCompile Include="extAnimGameplayMimicEvent.cpp" />
+    <ClCompile Include="extAnimItemEvents.cpp" />
+    <ClCompile Include="extAnimSoundEvent.cpp" />
+    <ClCompile Include="extAnimOnSlopeEvent.cpp" />
+    <ClCompile Include="extAnimLocationAdjustmentEvent.cpp" />
+    <ClCompile Include="extAnimRotationAdjustmentEvent.cpp" />
+    <ClCompile Include="extAnimRotationAdjustmentLocationBasedEvent.cpp" />
+    <ClCompile Include="definitionsManager.cpp" />
+    <ClCompile Include="fxTrackItemPlayItemEffect.cpp" />
+    <ClCompile Include="gameplayStorage.cpp" />
+    <ClCompile Include="aiParameters.cpp" />
+    <ClCompile Include="aiProfile.cpp" />
+    <ClCompile Include="behTree.cpp" />
+    <ClCompile Include="behTreeDecorator.cpp" />
+    <ClCompile Include="behTreeDecoratorActivePriority.cpp" />
+    <ClCompile Include="behTreeDecoratorDelay.cpp" />
+    <ClCompile Include="behTreeEventParams.cpp" />
+    <ClCompile Include="behTreeInstance.cpp" />
+    <ClCompile Include="behTreeMachine.cpp" />
+    <ClCompile Include="behTreeNode.cpp" />
+    <ClCompile Include="behTreeNodeArbitrator.cpp" />
+    <ClCompile Include="behTreeNodeAtomicDamageReaction.cpp" />
+    <ClCompile Include="behTreeNodeAtomicIdle.cpp" />
+    <ClCompile Include="behTreeNodeAtomicMove.cpp" />
+    <ClCompile Include="behTreeNodeAtomicPlayAnimation.cpp" />
+    <ClCompile Include="behTreeNodeAtomicPlayAnimationEvent.cpp" />
+    <ClCompile Include="behTreeNodeAtomicPursue.cpp" />
+    <ClCompile Include="behTreeNodeAtomicRotate.cpp" />
+    <ClCompile Include="behTreeNodeComposite.cpp" />
+    <ClCompile Include="behTreeNodeCondition.cpp" />
+    <ClCompile Include="behTreeNodeConditionCheckRotationToTarget.cpp" />
+    <ClCompile Include="behTreeNodeConditionDistanceToTarget.cpp" />
+    <ClCompile Include="behTreeNodeConditionIsInAttackRange.cpp" />
+    <ClCompile Include="behTreeNodeCustomSteering.cpp" />
+    <ClCompile Include="behTreeNodeFinishAnimations.cpp" />
+    <ClCompile Include="behTreeNodeForced.cpp" />
+    <ClCompile Include="behTreeNodeKeepDistance.cpp" />
+    <ClCompile Include="behTreeNodeLoop.cpp" />
+    <ClCompile Include="behTreeNodeParallel.cpp" />
+    <ClCompile Include="behTreeNodePerformWork.cpp" />
+    <ClCompile Include="behTreeNodePlayScene.cpp" />
+    <ClCompile Include="behTreeNodePredefinedPath.cpp" />
+    <ClCompile Include="behTreeNodeQuestActions.cpp" />
+    <ClCompile Include="behTreeNodeRandom.cpp" />
+    <ClCompile Include="behTreeNodeSelectActionPoint.cpp" />
+    <ClCompile Include="behTreeNodeSelector.cpp" />
+    <ClCompile Include="behTreeNodeSelectTargetByTag.cpp" />
+    <ClCompile Include="behTreeNodeSequence.cpp" />
+    <ClCompile Include="behTreeNodeTemplate.cpp" />
+    <ClCompile Include="behTreeRtti.cpp" />
+    <ClCompile Include="behTreeScriptedNode.cpp" />
+    <ClCompile Include="behTreeVars.cpp" />
+    <ClCompile Include="behTreeVarsEnums.cpp" />
+    <ClCompile Include="boidInstance.cpp" />
+    <ClCompile Include="boidPointOfInterestComponent.cpp" />
+    <ClCompile Include="boidLairEntity.cpp" />
+    <ClCompile Include="swarmSound.cpp" />
+    <ClCompile Include="build.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="commonGame.cpp" />
+    <ClCompile Include="extAnimProjectileEvent.cpp" />
+    <ClCompile Include="gameClasses.cpp" />
+    <ClCompile Include="factsDB.cpp" />
+    <ClCompile Include="factsDBEditorQuery.cpp" />
+    <ClCompile Include="gameplayEntity.cpp" />
+    <ClCompile Include="gameplayWindComponent.cpp" />
+    <ClCompile Include="gameSaver.cpp" />
+    <ClCompile Include="gameSystem.cpp" />
+    <ClCompile Include="gameWorld.cpp" />
+    <ClCompile Include="interactionArea.cpp" />
+    <ClCompile Include="interactionComponent.cpp" />
+    <ClCompile Include="interactionsManager.cpp" />
+    <ClCompile Include="interactionToComponentComponent.cpp" />
+    <ClCompile Include="interactionTooltipComponent.cpp" />
+    <ClCompile Include="interestPointComponent.cpp" />
+    <ClCompile Include="inventoryComponent.cpp" />
+    <ClCompile Include="inventoryDefinition.cpp" />
+    <ClCompile Include="inventoryEditor.cpp" />
+    <ClCompile Include="inventoryItem.cpp" />
+    <ClCompile Include="itemEntity.cpp" />
+    <ClCompile Include="itemUniqueId.cpp" />
+    <ClCompile Include="itemVisibilityController.cpp" />
+    <ClCompile Include="jobTree.cpp" />
+    <ClCompile Include="jobTreeLeaf.cpp" />
+    <ClCompile Include="jobTreeNode.cpp" />
+    <ClCompile Include="lookAtController.cpp" />
+    <ClCompile Include="lookAtParam.cpp" />
+    <ClCompile Include="minigame.cpp" />
+    <ClCompile Include="movableRepresentation.cpp" />
+    <ClCompile Include="movableRepresentationEntity.cpp" />
+    <ClCompile Include="movableRepresentationPathAgent.cpp" />
+    <ClCompile Include="movableRepresentationPhysicalCharacter.cpp" />
+    <ClCompile Include="movableRepresentationsStack.cpp" />
+    <ClCompile Include="moveCurveLocomotionSegment.cpp" />
+    <ClCompile Include="moveGlobalPathPlanner.cpp" />
+    <ClCompile Include="moveLocomotion.cpp" />
+    <ClCompile Include="movementGoal.cpp" />
+    <ClCompile Include="movementObject.cpp" />
+    <ClCompile Include="movementTargeter.cpp" />
+    <ClCompile Include="moveNavigationPath.cpp" />
+    <ClCompile Include="movePathIterator.cpp" />
+    <ClCompile Include="moveSlideLocomotionSegment.cpp" />
+    <ClCompile Include="moveStateModifier.cpp" />
+    <ClCompile Include="moveSteeringBehavior.cpp" />
+    <ClCompile Include="moveSteeringCondition.cpp" />
+    <ClCompile Include="moveSteeringLocomotionSegment.cpp" />
+    <ClCompile Include="moveSteeringNode.cpp" />
+    <ClCompile Include="moveSteeringTask.cpp" />
+    <ClCompile Include="movingAgentComponent.cpp" />
+    <ClCompile Include="movingPhysicalAgentComponent.cpp" />
+    <ClCompile Include="newNpc.cpp" />
+    <ClCompile Include="newNpcNoticedObject.cpp" />
+    <ClCompile Include="newNpcSchedule.cpp" />
+    <ClCompile Include="newNpcSense.cpp" />
+    <ClCompile Include="newNpcSenses.cpp" />
+    <ClCompile Include="newNpcSenseVision.cpp" />
+    <ClCompile Include="newNpcState.cpp" />
+    <ClCompile Include="newNpcStateIdle.cpp" />
+    <ClCompile Include="newNpcStateMachine.cpp" />
+    <ClCompile Include="nodeStorage.cpp" />
+    <ClCompile Include="patrolPointComponent.cpp" />
+    <ClCompile Include="player.cpp" />
+    <ClCompile Include="oldCommunitySpawnStrategy.cpp" />
+    <ClCompile Include="playerStateBase.cpp" />
+    <ClCompile Include="playerStateMovable.cpp" />
+    <ClCompile Include="potentialField.cpp" />
+    <ClCompile Include="quest.cpp" />
+    <ClCompile Include="questActorCondition.cpp" />
+    <ClCompile Include="questAndBlock.cpp" />
+    <ClCompile Include="questBlockWithScene.cpp" />
+    <ClCompile Include="questCamera.cpp" />
+    <ClCompile Include="questCameraFocusCondition.cpp" />
+    <ClCompile Include="questCharacterCustomizerBlock.cpp" />
+    <ClCompile Include="questCheckpointBlock.cpp" />
+    <ClCompile Include="questCondition.cpp" />
+    <ClCompile Include="questConditionBlock.cpp" />
+    <ClCompile Include="questContextDialogBlock.cpp" />
+    <ClCompile Include="questCutControlBlock.cpp" />
+    <ClCompile Include="questCutsceneCondition.cpp" />
+    <ClCompile Include="questDeletionMarkerBlock.cpp" />
+    <ClCompile Include="questEndBlock.cpp" />
+    <ClCompile Include="questExternalScenePlayer.cpp" />
+    <ClCompile Include="questFactsDBChangingBlock.cpp" />
+    <ClCompile Include="questFactsDBCondition.cpp" />
+    <ClCompile Include="questFightCondition.cpp" />
+    <ClCompile Include="questGameplayEntCondition.cpp" />
+    <ClCompile Include="questGraph.cpp" />
+    <ClCompile Include="questGraphBlock.cpp" />
+    <ClCompile Include="questGraphInstance.cpp" />
+    <ClCompile Include="questGraphSocket.cpp" />
+    <ClCompile Include="questInteractionCondition.cpp" />
+    <ClCompile Include="questInteractionDialogBlock.cpp" />
+    <ClCompile Include="questInterestPointBlock.cpp" />
+    <ClCompile Include="questLayersHiderBlock.cpp" />
+    <ClCompile Include="questLockNPC.cpp" />
+    <ClCompile Include="questPauseConditionBlock.cpp" />
+    <ClCompile Include="questPhase.cpp" />
+    <ClCompile Include="questPhaseBlock.cpp" />
+    <ClCompile Include="questPhaseInputBlock.cpp" />
+    <ClCompile Include="questPhaseOutputBlock.cpp" />
+    <ClCompile Include="questRandomBlock.cpp" />
+    <ClCompile Include="questReactionCondition.cpp" />
+    <ClCompile Include="questRewardBlock.cpp" />
+    <ClCompile Include="questsAnalyzer.cpp" />
+    <ClCompile Include="questSceneBlock.cpp" />
+    <ClCompile Include="questSceneBlocksValidator.cpp" />
+    <ClCompile Include="questScenePlayer.cpp" />
+    <ClCompile Include="questScenePrepare.cpp" />
+    <ClCompile Include="questScopeBlock.cpp" />
+    <ClCompile Include="questScriptBlock.cpp" />
+    <ClCompile Include="questScriptedActionsBlock.cpp" />
+    <ClCompile Include="questScriptedDialogBlock.cpp" />
+    <ClCompile Include="questsSystem.cpp" />
+    <ClCompile Include="questStartBlock.cpp" />
+    <ClCompile Include="questStateChangeRequestResetBlock.cpp" />
+    <ClCompile Include="questStaticCameraRun.cpp" />
+    <ClCompile Include="questStaticCameraSequence.cpp" />
+    <ClCompile Include="questStaticCameraStop.cpp" />
+    <ClCompile Include="questStaticCameraSwitch.cpp" />
+    <ClCompile Include="questStoryPhaseProperty.cpp" />
+    <ClCompile Include="questStoryPhaseSetterBlock.cpp" />
+    <ClCompile Include="questTagsPresenceCondition.cpp" />
+    <ClCompile Include="questTeleportBlock.cpp" />
+    <ClCompile Include="questThread.cpp" />
+    <ClCompile Include="questTimeCondition.cpp" />
+    <ClCompile Include="questTimeMgmtBlock.cpp" />
+    <ClCompile Include="questTriggerCondition.cpp" />
+    <ClCompile Include="questUnlockNPC.cpp" />
+    <ClCompile Include="questUserInputCondition.cpp" />
+    <ClCompile Include="questVariedInputsBlock.cpp" />
+    <ClCompile Include="questXorBlock.cpp" />
+    <ClCompile Include="reactionAction.cpp" />
+    <ClCompile Include="reactionsManager.cpp" />
+    <ClCompile Include="rewards.cpp" />
+    <ClCompile Include="sceneAreaComponent.cpp" />
+    <ClCompile Include="scenesEntriesManager.cpp" />
+    <ClCompile Include="scriptGameAnimationNatives.cpp" />
+    <ClCompile Include="spawnPointComponent.cpp" />
+    <ClCompile Include="spawnPointManager.cpp" />
+    <ClCompile Include="spawnStrategy.cpp" />
+    <ClCompile Include="standPhysicalMaterialAreaComponent.cpp" />
+    <ClCompile Include="storyPhaseListener.cpp" />
+    <ClCompile Include="storyPhaseLocation.cpp" />
+    <ClCompile Include="storyScene.cpp" />
+    <ClCompile Include="storySceneAbstractLine.cpp" />
+    <ClCompile Include="storySceneActions.cpp" />
+    <ClCompile Include="storySceneActorMap.cpp" />
+    <ClCompile Include="storySceneAnimationCache.cpp" />
+    <ClCompile Include="storySceneAnimationParams.cpp" />
+    <ClCompile Include="storySceneBlockingElement.cpp" />
+    <ClCompile Include="storySceneCameraDefinition.cpp" />
+    <ClCompile Include="storySceneChoice.cpp" />
+    <ClCompile Include="storySceneChoiceLine.cpp" />
+    <ClCompile Include="storySceneChoiceLineAction.cpp" />
+    <ClCompile Include="storySceneComment.cpp" />
+    <ClCompile Include="storySceneComponent.cpp" />
+    <ClCompile Include="storySceneControlPart.cpp" />
+    <ClCompile Include="storySceneCutscene.cpp" />
+    <ClCompile Include="storySceneCutsceneBlock.cpp" />
+    <ClCompile Include="storySceneCutsceneSection.cpp" />
+    <ClCompile Include="storySceneDialogset.cpp" />
+    <ClCompile Include="storySceneDirector.cpp" />
+    <ClCompile Include="storySceneDirectorPlacementHelper.cpp" />
+    <ClCompile Include="storySceneElement.cpp" />
+    <ClCompile Include="storySceneEvent.cpp" />
+    <ClCompile Include="storySceneEventAnimation.cpp" />
+    <ClCompile Include="storySceneEventAnimClip.cpp" />
+    <ClCompile Include="storySceneEventCameraBlend.cpp" />
+    <ClCompile Include="storySceneEventChangePose.cpp" />
+    <ClCompile Include="storySceneEventCustomCamera.cpp" />
+    <ClCompile Include="storySceneEventCustomCameraInstance.cpp" />
+    <ClCompile Include="storySceneEventDespawn.cpp" />
+    <ClCompile Include="storySceneEventDuration.cpp" />
+    <ClCompile Include="storySceneEventEnterActor.cpp" />
+    <ClCompile Include="storySceneEventEquipItem.cpp" />
+    <ClCompile Include="storySceneEventExitActor.cpp" />
+    <ClCompile Include="storySceneEventFade.cpp" />
+    <ClCompile Include="storySceneEventGroup.cpp" />
+    <ClCompile Include="storySceneEventLookAt.cpp" />
+    <ClCompile Include="storySceneEventMimicFilter.cpp" />
+    <ClCompile Include="storySceneEventMimicPose.cpp" />
+    <ClCompile Include="storySceneEventMimics.cpp" />
+    <ClCompile Include="storySceneEventMimicsAnim.cpp" />
+    <ClCompile Include="storySceneEventOverridePlacement.cpp" />
+    <ClCompile Include="storySceneEventRotate.cpp" />
+    <ClCompile Include="storySceneEventSound.cpp" />
+    <ClCompile Include="storySceneFlowCondition.cpp" />
+    <ClCompile Include="storySceneFlowConditionBlock.cpp" />
+    <ClCompile Include="storySceneGraph.cpp" />
+    <ClCompile Include="storySceneGraphBlock.cpp" />
+    <ClCompile Include="storySceneGraphSocket.cpp" />
+    <ClCompile Include="storySceneInput.cpp" />
+    <ClCompile Include="storySceneInputBlock.cpp" />
+    <ClCompile Include="storySceneLine.cpp" />
+    <ClCompile Include="storySceneLinkElement.cpp" />
+    <ClCompile Include="storySceneOutput.cpp" />
+    <ClCompile Include="storySceneOutputBlock.cpp" />
+    <ClCompile Include="storySceneParam.cpp" />
+    <ClCompile Include="storyScenePauseElement.cpp" />
+    <ClCompile Include="storyScenePlayer.cpp" />
+    <ClCompile Include="storySceneRandomBlock.cpp" />
+    <ClCompile Include="storySceneRandomizer.cpp" />
+    <ClCompile Include="storySceneScriptingBlock.cpp" />
+    <ClCompile Include="storySceneScriptLine.cpp" />
+    <ClCompile Include="storySceneSection.cpp" />
+    <ClCompile Include="storySceneSectionBlock.cpp" />
+    <ClCompile Include="storySceneSectionOverrideCondition.cpp" />
+    <ClCompile Include="storySceneSectionPlayingPlan.cpp" />
+    <ClCompile Include="storySceneSectionPreload.cpp" />
+    <ClCompile Include="storySceneSpawner.cpp" />
+    <ClCompile Include="storySceneSystem.cpp" />
+    <ClCompile Include="storySceneVideo.cpp" />
+    <ClCompile Include="storySceneVoicetagMapping.cpp" />
+    <ClCompile Include="storySceneWaypointComponent.cpp" />
+    <ClCompile Include="swarmLairEntity.cpp" />
+    <ClCompile Include="boidSpecies.cpp" />
+    <ClCompile Include="targetingUtils.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="targetSteeringTask.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="teleporter.cpp" />
+    <ClCompile Include="teleportHelper.cpp" />
+    <ClCompile Include="vehicle.cpp" />
+    <ClCompile Include="visualDebug_MovementTrajectory.cpp" />
+    <ClCompile Include="voicesetPlayer.cpp" />
+    <ClCompile Include="voiceWeightCurve.cpp" />
+    <ClCompile Include="wanderPointComponent.cpp" />
+    <ClCompile Include="waterDebug.cpp" />
+    <ClCompile Include="wayPointComponent.cpp" />
+    <ClCompile Include="wayPointCookingContext.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="wayPointsCollection.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="wayPointsCollectionsSet.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="wizardDefinition.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="aiParameters.inl" />
+    <None Include="defaultSaveScreenshot.inl" />
+    <None Include="generalTreeOperations.inl" />
+    <None Include="propertyConverter.inl" />
+    <None Include="spawnTreeNodeListOperations.inl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.targets))\Shared.targets" />
+  </ImportGroup>
+</Project>

@@ -1,0 +1,15 @@
+/**
+* Copyright © 2007 CD Projekt Red. All Rights Reserved.
+*/
+
+#include "build.h"
+#include "profilerConfiguration.h"
+
+//////////////////////////////////////////////////////////////////////////////////////
+
+#ifdef USE_CONCURRENCY_VISUALIZER
+Concurrency::diagnostic::marker_series CVThreadMarkerSeries( TXT("RedEngine") );
+#endif
+
+//////////////////////////////////////////////////////////////////////////////////////
+

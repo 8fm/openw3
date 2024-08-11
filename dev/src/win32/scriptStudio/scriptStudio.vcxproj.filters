@@ -1,0 +1,535 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="res">
+      <UniqueIdentifier>{8892478c-019e-4a8d-b6aa-153a02cba539}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="app">
+      <UniqueIdentifier>{0ea7324f-6b89-4165-94bd-2174bd796504}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="widgets">
+      <UniqueIdentifier>{0201f415-9a37-4cfb-9157-0d19c718a8c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="widgets\solution">
+      <UniqueIdentifier>{903e1136-de21-4ff8-bf8f-793c426d4a84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="widgets\errorList">
+      <UniqueIdentifier>{32225ffa-9fe8-4259-905e-6a3c1d1f2511}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="widgets\search">
+      <UniqueIdentifier>{1661b368-32c5-4d7c-8359-959e7dce6337}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="widgets\goto">
+      <UniqueIdentifier>{8e9c022b-baa9-45a5-8cfe-f2c3f69fdf8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="widgets\openSolutionFile">
+      <UniqueIdentifier>{24200112-f2d0-4b7f-a427-389e13729481}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="widgets\closeAll">
+      <UniqueIdentifier>{80c9598b-e176-47ef-b52a-1942b23e167c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="widgets\findSymbol">
+      <UniqueIdentifier>{addf5879-e7a7-46d4-bf89-c8c8c2ae4267}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="parsing">
+      <UniqueIdentifier>{5778253e-092a-44cd-bf2e-fc9bd86dccd9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="widgets\Colour Selection Dialog">
+      <UniqueIdentifier>{0eebb4e6-c5f2-400c-b22d-ffec9a2a2120}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="widgets\Code Tooltip">
+      <UniqueIdentifier>{e3c98f2a-a715-401b-840a-5e3c045d6598}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="app\Network">
+      <UniqueIdentifier>{fbf8f8a7-e742-4bd1-b445-1466e45b97ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Events">
+      <UniqueIdentifier>{39ddf5a0-d77b-49bd-9bea-cc957a7997f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="widgets\Check in dialog">
+      <UniqueIdentifier>{3edc9e34-bf16-40c0-b70e-7764875ec435}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="widgets\wxCode">
+      <UniqueIdentifier>{82286367-5bc4-4d79-99d1-2aea236a2316}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="widgets\Credentials">
+      <UniqueIdentifier>{76fe4c5d-0991-4d2e-8591-e3470c7ad74a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="parsing\Lexer">
+      <UniqueIdentifier>{30aef1d5-0508-4111-a2eb-76af7d94fa5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="widgets\Markers">
+      <UniqueIdentifier>{0e567786-c969-4fa3-a2a0-ab4e99b30805}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="widgets\Markers\breakpoints">
+      <UniqueIdentifier>{c290da04-0696-49b8-b7ba-93814cf035c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="widgets\Markers\Bookmarks">
+      <UniqueIdentifier>{143d8609-d7bc-4a23-9ae8-95f797576db2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Events\Markers">
+      <UniqueIdentifier>{648c98ca-5c10-4007-98e6-33acfbe9d726}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="widgets\Navigation History">
+      <UniqueIdentifier>{78bff1ba-48b7-4262-9188-4625d64a2d87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="widgets\Debugger Tabs">
+      <UniqueIdentifier>{ad42c582-4acd-42bc-a0c5-9f7294560df4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="widgets\Debugger Tabs\Base">
+      <UniqueIdentifier>{813ff1f8-4b23-48c5-b68c-6d8f42a5807c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Solution">
+      <UniqueIdentifier>{2de16c8e-6f5a-4761-97bc-4a5abf92139d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Solution\xml project file">
+      <UniqueIdentifier>{15e2e12c-266c-427a-adc2-6eaf2d7804f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="File Utilities">
+      <UniqueIdentifier>{cfb04f92-fd7e-4338-9455-772727b92161}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Solution\Dialogs">
+      <UniqueIdentifier>{3402771a-c9fc-4f20-aab6-2fdbf90786be}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="res\resource.h">
+      <Filter>res</Filter>
+    </ClInclude>
+    <ClInclude Include="app.h">
+      <Filter>app</Filter>
+    </ClInclude>
+    <ClInclude Include="documentView.h">
+      <Filter>app</Filter>
+    </ClInclude>
+    <ClInclude Include="frame.h">
+      <Filter>app</Filter>
+    </ClInclude>
+    <ClInclude Include="profiler.h">
+      <Filter>app</Filter>
+    </ClInclude>
+    <ClInclude Include="solutionExplorer.h">
+      <Filter>widgets\solution</Filter>
+    </ClInclude>
+    <ClInclude Include="errorList.h">
+      <Filter>widgets\errorList</Filter>
+    </ClInclude>
+    <ClInclude Include="searchDlg.h">
+      <Filter>widgets\search</Filter>
+    </ClInclude>
+    <ClInclude Include="searchResults.h">
+      <Filter>widgets\search</Filter>
+    </ClInclude>
+    <ClInclude Include="gotoDlg.h">
+      <Filter>widgets\goto</Filter>
+    </ClInclude>
+    <ClInclude Include="openSolutionFileDlg.h">
+      <Filter>widgets\openSolutionFile</Filter>
+    </ClInclude>
+    <ClInclude Include="closeAllDialog.h">
+      <Filter>widgets\closeAll</Filter>
+    </ClInclude>
+    <ClInclude Include="breakpoints.h">
+      <Filter>widgets\Markers\breakpoints</Filter>
+    </ClInclude>
+    <ClInclude Include="findSymbolDlg.h">
+      <Filter>widgets\findSymbol</Filter>
+    </ClInclude>
+    <ClInclude Include="fileLexer.h">
+      <Filter>parsing</Filter>
+    </ClInclude>
+    <ClInclude Include="fileParser.h">
+      <Filter>parsing</Filter>
+    </ClInclude>
+    <ClInclude Include="fileParserType.h">
+      <Filter>parsing</Filter>
+    </ClInclude>
+    <ClInclude Include="fileStubs.h">
+      <Filter>parsing</Filter>
+    </ClInclude>
+    <ClInclude Include="build.h" />
+    <ClInclude Include="lexData.h">
+      <Filter>parsing</Filter>
+    </ClInclude>
+    <ClInclude Include="colourSelectionDialog.h">
+      <Filter>widgets\Colour Selection Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="styleManager.h">
+      <Filter>app</Filter>
+    </ClInclude>
+    <ClInclude Include="styledDocument.h">
+      <Filter>app</Filter>
+    </ClInclude>
+    <ClInclude Include="CodeTooltip.h">
+      <Filter>widgets\Code Tooltip</Filter>
+    </ClInclude>
+    <ClInclude Include="debuggerHelper.h">
+      <Filter>app\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="debuggerLocalsHelper.h">
+      <Filter>app\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="editorCompilationHelper.h">
+      <Filter>app\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="editorConnectionHelper.h">
+      <Filter>app\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="profilerHelper.h">
+      <Filter>app\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="packetUtils.h">
+      <Filter>app\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="events\eventGoto.h">
+      <Filter>Events</Filter>
+    </ClInclude>
+    <ClInclude Include="events\eventCallstackFrameSelected.h">
+      <Filter>Events</Filter>
+    </ClInclude>
+    <ClInclude Include="checkInDialog.h">
+      <Filter>widgets\Check in dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="wx\treelistctrl.h">
+      <Filter>widgets\wxCode</Filter>
+    </ClInclude>
+    <ClInclude Include="credentials.h">
+      <Filter>widgets\Credentials</Filter>
+    </ClInclude>
+    <ClInclude Include="lexer\context.h">
+      <Filter>parsing\Lexer</Filter>
+    </ClInclude>
+    <ClInclude Include="lexer\token.h">
+      <Filter>parsing\Lexer</Filter>
+    </ClInclude>
+    <ClInclude Include="lexer\tokenStream.h">
+      <Filter>parsing\Lexer</Filter>
+    </ClInclude>
+    <ClInclude Include="events\eventLineMove.h">
+      <Filter>Events</Filter>
+    </ClInclude>
+    <ClInclude Include="widgets\markers.h">
+      <Filter>widgets\Markers</Filter>
+    </ClInclude>
+    <ClInclude Include="bookmarks.h">
+      <Filter>widgets\Markers\Bookmarks</Filter>
+    </ClInclude>
+    <ClInclude Include="events\eventbreakpoints.h">
+      <Filter>Events\Markers</Filter>
+    </ClInclude>
+    <ClInclude Include="events\eventmarkers.h">
+      <Filter>Events\Markers</Filter>
+    </ClInclude>
+    <ClInclude Include="events\eventbookmarks.h">
+      <Filter>Events\Markers</Filter>
+    </ClInclude>
+    <ClInclude Include="events\eventNavigationHistory.h">
+      <Filter>Events</Filter>
+    </ClInclude>
+    <ClInclude Include="navigationHistory.h">
+      <Filter>widgets\Navigation History</Filter>
+    </ClInclude>
+    <ClInclude Include="events\eventNavigationGoto.h">
+      <Filter>Events</Filter>
+    </ClInclude>
+    <ClInclude Include="events\eventOpcodeListing.h">
+      <Filter>Events</Filter>
+    </ClInclude>
+    <ClInclude Include="pingHelper.h" />
+    <ClInclude Include="stubDeclarations.h">
+      <Filter>parsing</Filter>
+    </ClInclude>
+    <ClInclude Include="widgets\debuggerTabs\base.h">
+      <Filter>widgets\Debugger Tabs\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="widgets\debuggerTabs\watch.h">
+      <Filter>widgets\Debugger Tabs</Filter>
+    </ClInclude>
+    <ClInclude Include="widgets\debuggerTabs\variables.h">
+      <Filter>widgets\Debugger Tabs\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="widgets\debuggerTabs\locals.h">
+      <Filter>widgets\Debugger Tabs</Filter>
+    </ClInclude>
+    <ClInclude Include="changesDetectedDialog.h">
+      <Filter>app</Filter>
+    </ClInclude>
+    <ClInclude Include="widgets\checkedList.h">
+      <Filter>widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="solution\dir.h">
+      <Filter>Solution</Filter>
+    </ClInclude>
+    <ClInclude Include="solution\file.h">
+      <Filter>Solution</Filter>
+    </ClInclude>
+    <ClInclude Include="solution\slnMod.h">
+      <Filter>Solution</Filter>
+    </ClInclude>
+    <ClInclude Include="solution\slnDummy.h">
+      <Filter>Solution</Filter>
+    </ClInclude>
+    <ClInclude Include="solution\slnBase.h">
+      <Filter>Solution</Filter>
+    </ClInclude>
+    <ClInclude Include="solution\slnDeclarations.h">
+      <Filter>Solution</Filter>
+    </ClInclude>
+    <ClInclude Include="solution\slnStandard.h">
+      <Filter>Solution</Filter>
+    </ClInclude>
+    <ClInclude Include="solution\slnContainer.h">
+      <Filter>Solution</Filter>
+    </ClInclude>
+    <ClInclude Include="solution\rapidxml.hpp">
+      <Filter>Solution\xml project file</Filter>
+    </ClInclude>
+    <ClInclude Include="solution\slnDefinition.h">
+      <Filter>Solution\xml project file</Filter>
+    </ClInclude>
+    <ClInclude Include="solution\rapidxml_print.hpp">
+      <Filter>Solution\xml project file</Filter>
+    </ClInclude>
+    <ClInclude Include="widgets\debuggerTabs\callstack.h">
+      <Filter>widgets\Debugger Tabs</Filter>
+    </ClInclude>
+    <ClInclude Include="exporter.h">
+      <Filter>File Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="createModDialog.h">
+      <Filter>Solution\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="installModDialog.h">
+      <Filter>Solution\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="compileModDialog.h">
+      <Filter>Solution\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="commonBaseDialog.h">
+      <Filter>Solution\Dialogs</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\scriptStudio.fbp">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\scriptStudio.ico">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\wxrc.exe">
+      <Filter>res</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="res\scriptStudio.rc">
+      <Filter>res</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="app.cpp">
+      <Filter>app</Filter>
+    </ClCompile>
+    <ClCompile Include="documentView.cpp">
+      <Filter>app</Filter>
+    </ClCompile>
+    <ClCompile Include="frame.cpp">
+      <Filter>app</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>app</Filter>
+    </ClCompile>
+    <ClCompile Include="profiler.cpp">
+      <Filter>app</Filter>
+    </ClCompile>
+    <ClCompile Include="solutionExplorer.cpp">
+      <Filter>widgets\solution</Filter>
+    </ClCompile>
+    <ClCompile Include="errorList.cpp">
+      <Filter>widgets\errorList</Filter>
+    </ClCompile>
+    <ClCompile Include="searchDlg.cpp">
+      <Filter>widgets\search</Filter>
+    </ClCompile>
+    <ClCompile Include="searchResults.cpp">
+      <Filter>widgets\search</Filter>
+    </ClCompile>
+    <ClCompile Include="gotoDlg.cpp">
+      <Filter>widgets\goto</Filter>
+    </ClCompile>
+    <ClCompile Include="openSolutionFileDlg.cpp">
+      <Filter>widgets\openSolutionFile</Filter>
+    </ClCompile>
+    <ClCompile Include="closeAllDialog.cpp">
+      <Filter>widgets\closeAll</Filter>
+    </ClCompile>
+    <ClCompile Include="breakpoints.cpp">
+      <Filter>widgets\Markers\breakpoints</Filter>
+    </ClCompile>
+    <ClCompile Include="findSymbolDlg.cpp">
+      <Filter>widgets\findSymbol</Filter>
+    </ClCompile>
+    <ClCompile Include="fileLexer.cpp">
+      <Filter>parsing</Filter>
+    </ClCompile>
+    <ClCompile Include="fileStubs.cpp">
+      <Filter>parsing</Filter>
+    </ClCompile>
+    <ClCompile Include="build.cpp" />
+    <ClCompile Include="colourSelectionDialog.cpp">
+      <Filter>widgets\Colour Selection Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="styleManager.cpp">
+      <Filter>app</Filter>
+    </ClCompile>
+    <ClCompile Include="styledDocument.cpp">
+      <Filter>app</Filter>
+    </ClCompile>
+    <ClCompile Include="CodeTooltip.cpp">
+      <Filter>widgets\Code Tooltip</Filter>
+    </ClCompile>
+    <ClCompile Include="debuggerHelper.cpp">
+      <Filter>app\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="debuggerLocalsHelper.cpp">
+      <Filter>app\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="editorCompilationHelper.cpp">
+      <Filter>app\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="editorConnectionHelper.cpp">
+      <Filter>app\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="profilerHelper.cpp">
+      <Filter>app\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="packetUtils.cpp">
+      <Filter>app\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="events\eventGoto.cpp">
+      <Filter>Events</Filter>
+    </ClCompile>
+    <ClCompile Include="events\eventCallstackFrameSelected.cpp">
+      <Filter>Events</Filter>
+    </ClCompile>
+    <ClCompile Include="checkInDialog.cpp">
+      <Filter>widgets\Check in dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="wx\treelistctrl.cpp">
+      <Filter>widgets\wxCode</Filter>
+    </ClCompile>
+    <ClCompile Include="credentials.cpp">
+      <Filter>widgets\Credentials</Filter>
+    </ClCompile>
+    <ClCompile Include="lexer\token.cpp">
+      <Filter>parsing\Lexer</Filter>
+    </ClCompile>
+    <ClCompile Include="lexer\tokenStream.cpp">
+      <Filter>parsing\Lexer</Filter>
+    </ClCompile>
+    <ClCompile Include="lexer\context.cpp">
+      <Filter>parsing\Lexer</Filter>
+    </ClCompile>
+    <ClCompile Include="events\eventLineMove.cpp">
+      <Filter>Events</Filter>
+    </ClCompile>
+    <ClCompile Include="widgets\markers.cpp">
+      <Filter>widgets\Markers</Filter>
+    </ClCompile>
+    <ClCompile Include="bookmarks.cpp">
+      <Filter>widgets\Markers\Bookmarks</Filter>
+    </ClCompile>
+    <ClCompile Include="events\eventbreakpoints.cpp">
+      <Filter>Events\Markers</Filter>
+    </ClCompile>
+    <ClCompile Include="events\eventmarkers.cpp">
+      <Filter>Events\Markers</Filter>
+    </ClCompile>
+    <ClCompile Include="events\eventbookmarks.cpp">
+      <Filter>Events\Markers</Filter>
+    </ClCompile>
+    <ClCompile Include="events\eventNavigationHistory.cpp">
+      <Filter>Events</Filter>
+    </ClCompile>
+    <ClCompile Include="navigationHistory.cpp">
+      <Filter>widgets\Navigation History</Filter>
+    </ClCompile>
+    <ClCompile Include="events\eventNavigationGoto.cpp">
+      <Filter>Events</Filter>
+    </ClCompile>
+    <ClCompile Include="events\eventOpcodeListing.cpp">
+      <Filter>Events</Filter>
+    </ClCompile>
+    <ClCompile Include="pingHelper.cpp" />
+    <ClCompile Include="fileParser.cpp">
+      <Filter>parsing</Filter>
+    </ClCompile>
+    <ClCompile Include="widgets\debuggerTabs\base.cpp">
+      <Filter>widgets\Debugger Tabs\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="widgets\debuggerTabs\watch.cpp">
+      <Filter>widgets\Debugger Tabs</Filter>
+    </ClCompile>
+    <ClCompile Include="widgets\debuggerTabs\variables.cpp">
+      <Filter>widgets\Debugger Tabs\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="widgets\debuggerTabs\locals.cpp">
+      <Filter>widgets\Debugger Tabs</Filter>
+    </ClCompile>
+    <ClCompile Include="changesDetectedDialog.cpp">
+      <Filter>app</Filter>
+    </ClCompile>
+    <ClCompile Include="widgets\checkedList.cpp">
+      <Filter>widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="widgets\debuggerTabs\callstack.cpp">
+      <Filter>widgets\Debugger Tabs</Filter>
+    </ClCompile>
+    <ClCompile Include="solution\file.cpp">
+      <Filter>Solution</Filter>
+    </ClCompile>
+    <ClCompile Include="solution\dir.cpp">
+      <Filter>Solution</Filter>
+    </ClCompile>
+    <ClCompile Include="solution\slnMod.cpp">
+      <Filter>Solution</Filter>
+    </ClCompile>
+    <ClCompile Include="solution\slnDummy.cpp">
+      <Filter>Solution</Filter>
+    </ClCompile>
+    <ClCompile Include="solution\slnBase.cpp">
+      <Filter>Solution</Filter>
+    </ClCompile>
+    <ClCompile Include="solution\slnStandard.cpp">
+      <Filter>Solution</Filter>
+    </ClCompile>
+    <ClCompile Include="solution\slnContainer.cpp">
+      <Filter>Solution</Filter>
+    </ClCompile>
+    <ClCompile Include="solution\slnDefinition.cpp">
+      <Filter>Solution\xml project file</Filter>
+    </ClCompile>
+    <ClCompile Include="exporter.cpp">
+      <Filter>File Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="createModDialog.cpp">
+      <Filter>Solution\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="installModDialog.cpp">
+      <Filter>Solution\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="compileModDialog.cpp">
+      <Filter>Solution\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="commonBaseDialog.cpp">
+      <Filter>Solution\Dialogs</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="res\scriptStudio.xrc">
+      <Filter>res</Filter>
+    </CustomBuild>
+    <BisonScripts Include="fileParser.bison">
+      <Filter>parsing</Filter>
+    </BisonScripts>
+  </ItemGroup>
+</Project>

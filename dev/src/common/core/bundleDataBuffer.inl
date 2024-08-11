@@ -1,0 +1,51 @@
+//////////////////////////////////////////////////////////////////////////
+CBundleDataBuffer::CBundleDataBuffer( void* dataBuffer, Uint32 size, Uint32 flags, EBundleBufferType bufferType,  Uint32 initialRefCount /* = 0*/ ) 
+	: m_dataBuffer( dataBuffer )
+	, m_referenceCount( initialRefCount )
+	, m_size( size )
+	, m_flags( flags )
+	, m_bufferType( bufferType )
+{
+}
+
+//////////////////////////////////////////////////////////////////////////
+Uint32 CBundleDataBuffer::AddRef()
+{
+	return m_referenceCount.Increment();
+}
+
+//////////////////////////////////////////////////////////////////////////
+Uint32 CBundleDataBuffer::Release()
+{
+	return m_referenceCount.Decrement();
+}
+
+//////////////////////////////////////////////////////////////////////////
+void* CBundleDataBuffer::GetDataBuffer() const
+{
+	return m_dataBuffer.GetValue();
+}
+
+//////////////////////////////////////////////////////////////////////////
+const Uint32 CBundleDataBuffer::GetSize() const
+{
+	return m_size;
+}
+
+//////////////////////////////////////////////////////////////////////////
+const Uint32 CBundleDataBuffer::GetFlags() const
+{
+	return m_flags;
+}
+
+//////////////////////////////////////////////////////////////////////////
+const EBundleBufferType CBundleDataBuffer::GetBufferType() const
+{
+	return m_bufferType;
+}
+
+//////////////////////////////////////////////////////////////////////////
+void CBundleDataBuffer::InvalidateDataBuffer()
+{
+	m_dataBuffer.SetValue( nullptr );
+}

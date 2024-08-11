@@ -1,0 +1,70 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SpeedTreeRefApp_Durango", "SpeedTreeRefApp_Durango_VC11.vcxproj", "{5F116F55-778D-478A-B137-69B29756F422}"
+	ProjectSection(ProjectDependencies) = postProject
+		{37958689-C566-40A0-8D25-92D8FF89CCA3} = {37958689-C566-40A0-8D25-92D8FF89CCA3}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SpeedTreeRenderer_Durango", "..\..\Renderers\Durango\SpeedTreeRenderer_Durango_VC11.vcxproj", "{37958689-C566-40A0-8D25-92D8FF89CCA3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{EB1624DB-0722-4C86-9297-48C4E4184A3E} = {EB1624DB-0722-4C86-9297-48C4E4184A3E}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SpeedTreeRenderInterface_Durango", "..\..\Render Interface\Durango\SpeedTreeRenderInterface_Durango_VC11.vcxproj", "{EB1624DB-0722-4C86-9297-48C4E4184A3E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A2DD6C69-4938-498A-8B1D-5A770ACEF7F2} = {A2DD6C69-4938-498A-8B1D-5A770ACEF7F2}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SpeedTreeForest_Durango", "..\..\Forest\Durango\SpeedTreeForest_Durango_VC11.vcxproj", "{A2DD6C69-4938-498A-8B1D-5A770ACEF7F2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A39C1CA1-33B8-40C4-BA64-BAB4CDB0529E} = {A39C1CA1-33B8-40C4-BA64-BAB4CDB0529E}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SpeedTreeCore_Durango", "..\..\Core\Durango\SpeedTreeCore_Durango_VC11.vcxproj", "{A39C1CA1-33B8-40C4-BA64-BAB4CDB0529E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Durango = Debug|Durango
+		Profile|Durango = Profile|Durango
+		Release|Durango = Release|Durango
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{37958689-C566-40A0-8D25-92D8FF89CCA3}.Debug|Durango.ActiveCfg = Debug|Durango
+		{37958689-C566-40A0-8D25-92D8FF89CCA3}.Debug|Durango.Build.0 = Debug|Durango
+		{37958689-C566-40A0-8D25-92D8FF89CCA3}.Profile|Durango.ActiveCfg = Profile|Durango
+		{37958689-C566-40A0-8D25-92D8FF89CCA3}.Profile|Durango.Build.0 = Profile|Durango
+		{37958689-C566-40A0-8D25-92D8FF89CCA3}.Release|Durango.ActiveCfg = Release|Durango
+		{37958689-C566-40A0-8D25-92D8FF89CCA3}.Release|Durango.Build.0 = Release|Durango
+		{5F116F55-778D-478A-B137-69B29756F422}.Debug|Durango.ActiveCfg = Debug|Durango
+		{5F116F55-778D-478A-B137-69B29756F422}.Debug|Durango.Build.0 = Debug|Durango
+		{5F116F55-778D-478A-B137-69B29756F422}.Debug|Durango.Deploy.0 = Debug|Durango
+		{5F116F55-778D-478A-B137-69B29756F422}.Profile|Durango.ActiveCfg = Profile|Durango
+		{5F116F55-778D-478A-B137-69B29756F422}.Profile|Durango.Build.0 = Profile|Durango
+		{5F116F55-778D-478A-B137-69B29756F422}.Profile|Durango.Deploy.0 = Profile|Durango
+		{5F116F55-778D-478A-B137-69B29756F422}.Release|Durango.ActiveCfg = Release|Durango
+		{5F116F55-778D-478A-B137-69B29756F422}.Release|Durango.Build.0 = Release|Durango
+		{5F116F55-778D-478A-B137-69B29756F422}.Release|Durango.Deploy.0 = Release|Durango
+		{A2DD6C69-4938-498A-8B1D-5A770ACEF7F2}.Debug|Durango.ActiveCfg = Debug|Durango
+		{A2DD6C69-4938-498A-8B1D-5A770ACEF7F2}.Debug|Durango.Build.0 = Debug|Durango
+		{A2DD6C69-4938-498A-8B1D-5A770ACEF7F2}.Profile|Durango.ActiveCfg = Profile|Durango
+		{A2DD6C69-4938-498A-8B1D-5A770ACEF7F2}.Profile|Durango.Build.0 = Profile|Durango
+		{A2DD6C69-4938-498A-8B1D-5A770ACEF7F2}.Release|Durango.ActiveCfg = Release|Durango
+		{A2DD6C69-4938-498A-8B1D-5A770ACEF7F2}.Release|Durango.Build.0 = Release|Durango
+		{A39C1CA1-33B8-40C4-BA64-BAB4CDB0529E}.Debug|Durango.ActiveCfg = Debug|Durango
+		{A39C1CA1-33B8-40C4-BA64-BAB4CDB0529E}.Debug|Durango.Build.0 = Debug|Durango
+		{A39C1CA1-33B8-40C4-BA64-BAB4CDB0529E}.Profile|Durango.ActiveCfg = Profile|Durango
+		{A39C1CA1-33B8-40C4-BA64-BAB4CDB0529E}.Profile|Durango.Build.0 = Profile|Durango
+		{A39C1CA1-33B8-40C4-BA64-BAB4CDB0529E}.Release|Durango.ActiveCfg = Release|Durango
+		{A39C1CA1-33B8-40C4-BA64-BAB4CDB0529E}.Release|Durango.Build.0 = Release|Durango
+		{EB1624DB-0722-4C86-9297-48C4E4184A3E}.Debug|Durango.ActiveCfg = Debug|Durango
+		{EB1624DB-0722-4C86-9297-48C4E4184A3E}.Debug|Durango.Build.0 = Debug|Durango
+		{EB1624DB-0722-4C86-9297-48C4E4184A3E}.Profile|Durango.ActiveCfg = Profile|Durango
+		{EB1624DB-0722-4C86-9297-48C4E4184A3E}.Profile|Durango.Build.0 = Profile|Durango
+		{EB1624DB-0722-4C86-9297-48C4E4184A3E}.Release|Durango.ActiveCfg = Release|Durango
+		{EB1624DB-0722-4C86-9297-48C4E4184A3E}.Release|Durango.Build.0 = Release|Durango
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

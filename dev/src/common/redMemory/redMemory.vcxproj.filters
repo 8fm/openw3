@@ -1,0 +1,699 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="src\intrusiveList.h">
+      <Filter>src\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="src\systemAllocatorDurango.h">
+      <Filter>src\allocators\system\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="src\systemAllocatorOrbis.h">
+      <Filter>src\allocators\system\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="src\systemAllocatorWin.h">
+      <Filter>src\allocators\system\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="src\dynamicTlsfAllocator.h">
+      <Filter>src\allocators\TLSF</Filter>
+    </ClInclude>
+    <ClInclude Include="src\staticTlsfAllocator.h">
+      <Filter>src\allocators\TLSF</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tlsfAllocator.h">
+      <Filter>src\allocators\TLSF\private</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tlsfBlock.h">
+      <Filter>src\allocators\TLSF\private</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tlsfConstant.h">
+      <Filter>src\allocators\TLSF\private</Filter>
+    </ClInclude>
+    <ClInclude Include="src\slabAllocator.h">
+      <Filter>src\allocators\SLAB\private</Filter>
+    </ClInclude>
+    <ClInclude Include="src\slabConstant.h">
+      <Filter>src\allocators\SLAB\private</Filter>
+    </ClInclude>
+    <ClInclude Include="src\locklessSlabAllocator.h">
+      <Filter>src\allocators\SLAB</Filter>
+    </ClInclude>
+    <ClInclude Include="src\slabHeader.h">
+      <Filter>src\allocators\SLAB\private</Filter>
+    </ClInclude>
+    <ClInclude Include="src\slabChunk.h">
+      <Filter>src\allocators\SLAB\private</Filter>
+    </ClInclude>
+    <ClInclude Include="src\slabList.h">
+      <Filter>src\allocators\SLAB\private</Filter>
+    </ClInclude>
+    <ClInclude Include="src\slabChunkAllocatorInterface.h">
+      <Filter>src\allocators\SLAB\private</Filter>
+    </ClInclude>
+    <ClInclude Include="src\virtualRange.h">
+      <Filter>src\allocators\system</Filter>
+    </ClInclude>
+    <ClInclude Include="src\systemAllocator.h">
+      <Filter>src\allocators\system</Filter>
+    </ClInclude>
+    <ClInclude Include="src\systemBlock.h">
+      <Filter>src\allocators\system</Filter>
+    </ClInclude>
+    <ClInclude Include="src\defaultAllocator.h">
+      <Filter>src\allocators\default</Filter>
+    </ClInclude>
+    <ClInclude Include="src\block.h">
+      <Filter>src\allocators</Filter>
+    </ClInclude>
+    <ClInclude Include="src\metricsRegistry.h">
+      <Filter>src\metrics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\allocatorMetrics.h">
+      <Filter>src\metrics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\threadConstant.h">
+      <Filter>src\utility\threads</Filter>
+    </ClInclude>
+    <ClInclude Include="src\threadIdProvider.h">
+      <Filter>src\utility\threads</Filter>
+    </ClInclude>
+    <ClInclude Include="src\threadMonitor.h">
+      <Filter>src\utility\threads</Filter>
+    </ClInclude>
+    <ClInclude Include="src\hook.h">
+      <Filter>src\utility\hooks</Filter>
+    </ClInclude>
+    <ClInclude Include="src\hookHandler.h">
+      <Filter>src\utility\hooks</Filter>
+    </ClInclude>
+    <ClInclude Include="src\hookPool.h">
+      <Filter>src\utility\hooks</Filter>
+    </ClInclude>
+    <ClInclude Include="src\staticFixedSizeAllocator.h">
+      <Filter>src\allocators\fixedSize</Filter>
+    </ClInclude>
+    <ClInclude Include="src\hookHandler.hpp">
+      <Filter>src\utility\hooks</Filter>
+    </ClInclude>
+    <ClInclude Include="src\hookTypes.h">
+      <Filter>src\utility\hooks</Filter>
+    </ClInclude>
+    <ClInclude Include="src\slabMetrics.h">
+      <Filter>src\allocators\SLAB\private</Filter>
+    </ClInclude>
+    <ClInclude Include="src\metricsRegistry.hpp">
+      <Filter>src\metrics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pool.h">
+      <Filter>src\pool</Filter>
+    </ClInclude>
+    <ClInclude Include="src\poolRegistry.h">
+      <Filter>src\pool</Filter>
+    </ClInclude>
+    <ClInclude Include="src\poolConstant.h">
+      <Filter>src\pool</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pool.hpp">
+      <Filter>src\pool</Filter>
+    </ClInclude>
+    <ClInclude Include="src\poolRegistry.hpp">
+      <Filter>src\pool</Filter>
+    </ClInclude>
+    <ClInclude Include="src\vault.h">
+      <Filter>src\vault</Filter>
+    </ClInclude>
+    <ClInclude Include="src\metricsUtils.h">
+      <Filter>src\metrics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\metricsUtils.hpp">
+      <Filter>src\metrics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\fixedSizeAllocator.h">
+      <Filter>src\allocators\fixedSize\private</Filter>
+    </ClInclude>
+    <ClInclude Include="src\dynamicFixedSizeAllocator.h">
+      <Filter>src\allocators\fixedSize</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lockingDynamicTlsfAllocator.h">
+      <Filter>src\allocators\TLSF</Filter>
+    </ClInclude>
+    <ClInclude Include="src\flexibleSystemAllocator.h">
+      <Filter>src\allocators\system\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="src\log.h">
+      <Filter>src\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="src\oomHandler.h">
+      <Filter>src\utility\oom</Filter>
+    </ClInclude>
+    <ClInclude Include="src\oomHandlerBreak.h">
+      <Filter>src\utility\oom</Filter>
+    </ClInclude>
+    <ClInclude Include="src\oomHandlerIgnore.h">
+      <Filter>src\utility\oom</Filter>
+    </ClInclude>
+    <ClInclude Include="src\reporter.h">
+      <Filter>src\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="src\debugAllocator.h">
+      <Filter>src\allocators\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="src\poolMetrics.h">
+      <Filter>src\metrics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\block.hpp">
+      <Filter>src\allocators</Filter>
+    </ClInclude>
+    <ClInclude Include="src\locklessSlabAllocator.hpp">
+      <Filter>src\allocators\SLAB</Filter>
+    </ClInclude>
+    <ClInclude Include="src\virtualRange.hpp">
+      <Filter>src\allocators\system</Filter>
+    </ClInclude>
+    <ClInclude Include="src\threadIdProvider.hpp">
+      <Filter>src\utility\threads</Filter>
+    </ClInclude>
+    <ClInclude Include="src\intrusiveList.hpp">
+      <Filter>src\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tlsfBlock.hpp">
+      <Filter>src\allocators\TLSF\private</Filter>
+    </ClInclude>
+    <ClInclude Include="src\slabHeader.hpp">
+      <Filter>src\allocators\SLAB\private</Filter>
+    </ClInclude>
+    <ClInclude Include="src\debugAllocatorConstant.h">
+      <Filter>src\allocators\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="src\macroUtils.h">
+      <Filter>src\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="src\allocator.h">
+      <Filter>src\allocators</Filter>
+    </ClInclude>
+    <ClInclude Include="src\functions.h">
+      <Filter>src\operators</Filter>
+    </ClInclude>
+    <ClInclude Include="src\functions.hpp">
+      <Filter>src\operators</Filter>
+    </ClInclude>
+    <ClInclude Include="src\hookMarkBlock.h">
+      <Filter>src\utility\hooks</Filter>
+    </ClInclude>
+    <ClInclude Include="src\hookUtils.h">
+      <Filter>src\utility\hooks</Filter>
+    </ClInclude>
+    <ClInclude Include="src\hookUtils.hpp">
+      <Filter>src\utility\hooks</Filter>
+    </ClInclude>
+    <ClInclude Include="src\assert.h">
+      <Filter>src\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pageAllocator.h">
+      <Filter>src\allocators\system</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pageAllocatorWin.h">
+      <Filter>src\allocators\system\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pageAllocatorDurango.h">
+      <Filter>src\allocators\system\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pageAllocatorOrbis.h">
+      <Filter>src\allocators\system\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="src\systemAllocatorType.h">
+      <Filter>src\allocators\system</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pageAllocatorType.h">
+      <Filter>src\allocators\system</Filter>
+    </ClInclude>
+    <ClInclude Include="src\systemAllocatorOrbisHelper.h">
+      <Filter>src\allocators\system\platform\private</Filter>
+    </ClInclude>
+    <ClInclude Include="src\legacyGpuAllocator.h">
+      <Filter>src\allocators\gpu</Filter>
+    </ClInclude>
+    <ClInclude Include="src\poolUnitTest.h">
+      <Filter>src\utility\unitTest</Filter>
+    </ClInclude>
+    <ClInclude Include="src\poolDeclaration.h">
+      <Filter>src\pool</Filter>
+    </ClInclude>
+    <ClInclude Include="src\legacyGpuAllocatorRegion.h">
+      <Filter>src\allocators\gpu</Filter>
+    </ClInclude>
+    <ClInclude Include="src\operatorsInternal.h">
+      <Filter>src\operators\private</Filter>
+    </ClInclude>
+    <ClInclude Include="src\operatorsInternal.hpp">
+      <Filter>src\operators\private</Filter>
+    </ClInclude>
+    <ClInclude Include="src\nullAllocator.h">
+      <Filter>src\allocators\null</Filter>
+    </ClInclude>
+    <ClInclude Include="src\poolStorage.h">
+      <Filter>src\pool</Filter>
+    </ClInclude>
+    <ClInclude Include="src\poolStorage.hpp">
+      <Filter>src\pool</Filter>
+    </ClInclude>
+    <ClInclude Include="include\uniquePtrStorage.h">
+      <Filter>include\smartObjects\private</Filter>
+    </ClInclude>
+    <ClInclude Include="include\uniquePtrStorage.hpp">
+      <Filter>include\smartObjects\private</Filter>
+    </ClInclude>
+    <ClInclude Include="include\operatorsLegacy.h">
+      <Filter>src\operators</Filter>
+    </ClInclude>
+    <ClInclude Include="include\redMemoryApi.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\types.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\build.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="include\operators.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\redMemoryPublic.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\redMemoryInternal.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\poolTypes.h">
+      <Filter>include\pool</Filter>
+    </ClInclude>
+    <ClInclude Include="include\poolRoot.h">
+      <Filter>include\pool</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pool.h">
+      <Filter>include\pool</Filter>
+    </ClInclude>
+    <ClInclude Include="include\defaultAllocator.h">
+      <Filter>include\allocators</Filter>
+    </ClInclude>
+    <ClInclude Include="src\proxy.h">
+      <Filter>src\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gpuAllocator.h">
+      <Filter>include\allocators</Filter>
+    </ClInclude>
+    <ClInclude Include="include\flags.h">
+      <Filter>include\allocators</Filter>
+    </ClInclude>
+    <ClInclude Include="include\metricsUtils.h">
+      <Filter>include\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="include\reportUtils.h">
+      <Filter>include\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="include\utils.h">
+      <Filter>include\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="include\utils.hpp">
+      <Filter>include\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="include\poolUtils.h">
+      <Filter>include\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="include\poolUtils.hpp">
+      <Filter>include\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="include\atomicSharedPtr.h">
+      <Filter>include\smartObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\atomicWeakPtr.h">
+      <Filter>include\smartObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\intrusivePtr.h">
+      <Filter>include\smartObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\scopedPtr.h">
+      <Filter>include\smartObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\sharedPtr.h">
+      <Filter>include\smartObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\uniqueBuffer.h">
+      <Filter>include\smartObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\uniquePtr.h">
+      <Filter>include\smartObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\weakPtr.h">
+      <Filter>include\smartObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\atomicSharedPtr.hpp">
+      <Filter>include\smartObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\atomicWeakPtr.hpp">
+      <Filter>include\smartObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\intrusivePtr.hpp">
+      <Filter>include\smartObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\scopedPtr.hpp">
+      <Filter>include\smartObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\sharedPtr.hpp">
+      <Filter>include\smartObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\uniqueBuffer.hpp">
+      <Filter>include\smartObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\uniquePtr.hpp">
+      <Filter>include\smartObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\weakPtr.hpp">
+      <Filter>include\smartObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\fixedSizeAllocator.h">
+      <Filter>include\allocators</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tlsfAllocator.h">
+      <Filter>include\allocators</Filter>
+    </ClInclude>
+    <ClInclude Include="src\linearAllocator.h">
+      <Filter>src\allocators\linear</Filter>
+    </ClInclude>
+    <ClInclude Include="src\proxyTypeId.h">
+      <Filter>src\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="src\proxyTypeId.hpp">
+      <Filter>src\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="src\hookOverrunDetector.h">
+      <Filter>src\utility\hooks</Filter>
+    </ClInclude>
+    <ClInclude Include="include\settings.h">
+      <Filter>include\settings</Filter>
+    </ClInclude>
+    <ClInclude Include="include\hookSettings.h">
+      <Filter>include\settings</Filter>
+    </ClInclude>
+    <ClInclude Include="include\integrationStub.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\defaultAllocator.hpp">
+      <Filter>src\allocators\default</Filter>
+    </ClInclude>
+    <ClInclude Include="src\slabAllocator.hpp">
+      <Filter>src\allocators\SLAB\private</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{77953af0-ca95-4203-b4e4-a18c4e4b8579}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{bd62cd27-ba1b-4974-84d5-3dc45e2607c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\allocators">
+      <UniqueIdentifier>{361bc1f3-1cd4-4a84-9204-7d942f4f7621}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\allocators\TLSF">
+      <UniqueIdentifier>{c2dda6fc-bdb1-4189-95be-f9deb20789ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\allocators\TLSF\private">
+      <UniqueIdentifier>{81bf09f5-33c3-4dd0-a1ce-843cbd12aa5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\allocators\SLAB">
+      <UniqueIdentifier>{a89c1716-f392-46af-9838-0aa530310e0b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\allocators\SLAB\private">
+      <UniqueIdentifier>{ee4bcc65-f9c5-4f4e-9749-b96efee2fcb5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\allocators\system">
+      <UniqueIdentifier>{83f67750-a4bf-48c5-9d06-f082987a0e56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\allocators\system\platform">
+      <UniqueIdentifier>{8adfddf0-1369-4d34-8ab6-4f27c4894774}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\allocators\system\platform\private">
+      <UniqueIdentifier>{d69a5f0d-3f52-485a-b6c5-39486e58fbb5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\allocators\default">
+      <UniqueIdentifier>{cf90202a-a4db-4914-b898-e2fd4d9cac80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\allocators\fixedSize">
+      <UniqueIdentifier>{d377c945-c006-4669-80ef-1a464e5b4984}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\allocators\fixedSize\private">
+      <UniqueIdentifier>{68e19ad9-29e3-48ba-9f33-cd8d50b36024}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\allocators\debug">
+      <UniqueIdentifier>{d0dcef7c-3a60-4613-a6c3-609e65bfabde}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\allocators\gpu">
+      <UniqueIdentifier>{e4877911-5dea-4d42-9547-bf77b8ce2a15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\allocators\null">
+      <UniqueIdentifier>{9a3d7fff-0781-4d96-8382-34677b79a03d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\metrics">
+      <UniqueIdentifier>{658902c4-2069-47bb-8ac6-3da03df4524a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\operators">
+      <UniqueIdentifier>{43e89744-21fe-4215-beed-5c80933e2a0c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\operators\private">
+      <UniqueIdentifier>{68cb950a-ac82-4983-bdad-5b332d3bd0fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\pool">
+      <UniqueIdentifier>{d291ffdf-0a54-4557-bc0e-2d3e3a3c14d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\utility">
+      <UniqueIdentifier>{abe02314-593e-48d7-87d7-d43e1d217416}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\utility\threads">
+      <UniqueIdentifier>{18311c25-9493-421c-b11e-1909564cb7fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\utility\hooks">
+      <UniqueIdentifier>{08311110-5fe5-4b27-87a8-f48b6c18d104}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\utility\oom">
+      <UniqueIdentifier>{9cc6d7c5-86c6-4c7e-8352-83cddcfc267c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\utility\unitTest">
+      <UniqueIdentifier>{0d4158a0-513a-4ca9-b9ec-b7cfc1833dfe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\utility\rootHeap">
+      <UniqueIdentifier>{bb22638f-7677-424f-babe-24c1893b8ac5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\vault">
+      <UniqueIdentifier>{b527f111-1fcd-4396-8c75-f7ade1bd356c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\pool">
+      <UniqueIdentifier>{46d6fc7a-90ae-4662-bb0a-88ef1f22bc33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\smartObjects">
+      <UniqueIdentifier>{d56f7c05-f192-41f3-958a-00a5c204e126}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\smartObjects\private">
+      <UniqueIdentifier>{4c0b7b77-fc83-4e5a-8a4c-46b488710b4e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\allocators">
+      <UniqueIdentifier>{05165e04-1ce6-4c9c-bffc-2b2d6e9515c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\utility">
+      <UniqueIdentifier>{1e7fa244-93be-4e37-a42f-94ad0122e7ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\allocators\linear">
+      <UniqueIdentifier>{feeae2c5-5877-41d8-af03-4cd07612d323}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\settings">
+      <UniqueIdentifier>{48af8f1d-89c0-4ee0-b209-023701bb6cb0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\intrusiveList.cpp">
+      <Filter>src\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="src\systemAllocatorDurango.cpp">
+      <Filter>src\allocators\system\platform</Filter>
+    </ClCompile>
+    <ClCompile Include="src\systemAllocatorOrbis.cpp">
+      <Filter>src\allocators\system\platform</Filter>
+    </ClCompile>
+    <ClCompile Include="src\systemAllocatorWin.cpp">
+      <Filter>src\allocators\system\platform</Filter>
+    </ClCompile>
+    <ClCompile Include="src\dynamicTlsfAllocator.cpp">
+      <Filter>src\allocators\TLSF</Filter>
+    </ClCompile>
+    <ClCompile Include="src\staticTlsfAllocator.cpp">
+      <Filter>src\allocators\TLSF</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tlsfAllocator.cpp">
+      <Filter>src\allocators\TLSF\private</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tlsfBlock.cpp">
+      <Filter>src\allocators\TLSF\private</Filter>
+    </ClCompile>
+    <ClCompile Include="src\slabAllocator.cpp">
+      <Filter>src\allocators\SLAB\private</Filter>
+    </ClCompile>
+    <ClCompile Include="src\locklessSlabAllocator.cpp">
+      <Filter>src\allocators\SLAB</Filter>
+    </ClCompile>
+    <ClCompile Include="src\slabChunk.cpp">
+      <Filter>src\allocators\SLAB\private</Filter>
+    </ClCompile>
+    <ClCompile Include="src\systemAllocator.cpp">
+      <Filter>src\allocators\system</Filter>
+    </ClCompile>
+    <ClCompile Include="src\systemBlock.cpp">
+      <Filter>src\allocators\system</Filter>
+    </ClCompile>
+    <ClCompile Include="src\virtualRange.cpp">
+      <Filter>src\allocators\system</Filter>
+    </ClCompile>
+    <ClCompile Include="src\defaultAllocator.cpp">
+      <Filter>src\allocators\default</Filter>
+    </ClCompile>
+    <ClCompile Include="src\slabHeader.cpp">
+      <Filter>src\allocators\SLAB\private</Filter>
+    </ClCompile>
+    <ClCompile Include="src\block.cpp">
+      <Filter>src\allocators</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utils.cpp">
+      <Filter>src\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="src\metricsRegistry.cpp">
+      <Filter>src\metrics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\allocatorMetrics.cpp">
+      <Filter>src\metrics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\threadIdProvider.cpp">
+      <Filter>src\utility\threads</Filter>
+    </ClCompile>
+    <ClCompile Include="src\threadMonitor.cpp">
+      <Filter>src\utility\threads</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hook.cpp">
+      <Filter>src\utility\hooks</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hookHandler.cpp">
+      <Filter>src\utility\hooks</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hookPool.cpp">
+      <Filter>src\utility\hooks</Filter>
+    </ClCompile>
+    <ClCompile Include="src\staticFixedSizeAllocator.cpp">
+      <Filter>src\allocators\fixedSize</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hookTypes.cpp">
+      <Filter>src\utility\hooks</Filter>
+    </ClCompile>
+    <ClCompile Include="src\poolRegistry.cpp">
+      <Filter>src\pool</Filter>
+    </ClCompile>
+    <ClCompile Include="src\vault.cpp">
+      <Filter>src\vault</Filter>
+    </ClCompile>
+    <ClCompile Include="src\poolUtils.cpp">
+      <Filter>src\pool</Filter>
+    </ClCompile>
+    <ClCompile Include="src\metricsUtils.cpp">
+      <Filter>src\metrics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\pool.cpp">
+      <Filter>src\pool</Filter>
+    </ClCompile>
+    <ClCompile Include="src\fixedSizeAllocator.cpp">
+      <Filter>src\allocators\fixedSize\private</Filter>
+    </ClCompile>
+    <ClCompile Include="src\dynamicFixedSizeAllocator.cpp">
+      <Filter>src\allocators\fixedSize</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lockingDynamicTlsfAllocator.cpp">
+      <Filter>src\allocators\TLSF</Filter>
+    </ClCompile>
+    <ClCompile Include="src\flexibleSystemAllocator.cpp">
+      <Filter>src\allocators\system\platform</Filter>
+    </ClCompile>
+    <ClCompile Include="src\log.cpp">
+      <Filter>src\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="src\oomHandler.cpp">
+      <Filter>src\utility\oom</Filter>
+    </ClCompile>
+    <ClCompile Include="src\oomHandlerBreak.cpp">
+      <Filter>src\utility\oom</Filter>
+    </ClCompile>
+    <ClCompile Include="src\oomHandlerIgnore.cpp">
+      <Filter>src\utility\oom</Filter>
+    </ClCompile>
+    <ClCompile Include="src\reporter.cpp">
+      <Filter>src\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="src\debugAllocator.cpp">
+      <Filter>src\allocators\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="src\poolMetrics.cpp">
+      <Filter>src\metrics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\operatorsLegacy.cpp">
+      <Filter>src\operators</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hookMarkBlock.cpp">
+      <Filter>src\utility\hooks</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hookUtils.cpp">
+      <Filter>src\utility\hooks</Filter>
+    </ClCompile>
+    <ClCompile Include="src\pageAllocator.cpp">
+      <Filter>src\allocators\system</Filter>
+    </ClCompile>
+    <ClCompile Include="src\pageAllocatorWin.cpp">
+      <Filter>src\allocators\system\platform</Filter>
+    </ClCompile>
+    <ClCompile Include="src\pageAllocatorDurango.cpp">
+      <Filter>src\allocators\system\platform</Filter>
+    </ClCompile>
+    <ClCompile Include="src\pageAllocatorOrbis.cpp">
+      <Filter>src\allocators\system\platform</Filter>
+    </ClCompile>
+    <ClCompile Include="src\systemAllocatorType.cpp">
+      <Filter>src\allocators\system</Filter>
+    </ClCompile>
+    <ClCompile Include="src\systemAllocatorOrbisHelper.cpp">
+      <Filter>src\allocators\system\platform\private</Filter>
+    </ClCompile>
+    <ClCompile Include="src\legacyGpuAllocator.cpp">
+      <Filter>src\allocators\gpu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\poolUnitTest.cpp">
+      <Filter>src\utility\unitTest</Filter>
+    </ClCompile>
+    <ClCompile Include="src\nullAllocator.cpp">
+      <Filter>src\allocators\null</Filter>
+    </ClCompile>
+    <ClCompile Include="src\poolStorage.cpp">
+      <Filter>src\pool</Filter>
+    </ClCompile>
+    <ClCompile Include="src\build.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\documentation.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\redMemoryInit.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\reportUtils.cpp">
+      <Filter>src\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="src\linearAllocator.cpp">
+      <Filter>src\allocators\linear</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hookOverrunDetector.cpp">
+      <Filter>src\utility\hooks</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

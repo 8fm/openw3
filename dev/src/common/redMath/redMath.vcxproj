@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" TreatAsLocalProperty="OutDir;TargetName;IntDir;PlatformToolset">
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedConfigurationSetup.props))\SharedConfigurationSetup.props" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{14054554-1F10-4EB8-839B-D4BB8592515B}</ProjectGuid>
+    <RootNamespace>redMath</RootNamespace>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <UsePrecompiledHeaders>false</UsePrecompiledHeaders>
+  </PropertyGroup>
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.props))\Shared.props" />
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedItemGroups.props))\SharedItemGroups.props" />
+  <ItemGroup>
+    <ClInclude Include="float16compressor.h" />
+    <ClInclude Include="mathTypes.h" />
+    <ClInclude Include="matrixArithmetic_float.h" />
+    <ClInclude Include="matrixArithmetic_simd.h" />
+    <ClInclude Include="matrixFunctions_float.h" />
+    <ClInclude Include="matrixFunctions_simd.h" />
+    <ClInclude Include="redaabb_simd.h" />
+    <ClInclude Include="redeulerangles_simd.h" />
+    <ClInclude Include="redMatrix3x3_float.h" />
+    <ClInclude Include="redMatrix3x3_simd.h" />
+    <ClInclude Include="redMatrix4x4_float.h" />
+    <ClInclude Include="redMatrix4x4_simd.h" />
+    <ClInclude Include="redqstransform_simd.h" />
+    <ClInclude Include="redQuaternion_simd.h" />
+    <ClInclude Include="redScalar_simd.h" />
+    <ClInclude Include="numericalutils.h" />
+    <ClInclude Include="random\fastRand.h" />
+    <ClInclude Include="random\mersenneTwister.h" />
+    <ClInclude Include="random\noise.h" />
+    <ClInclude Include="random\random.h" />
+    <ClInclude Include="random\standardRand.h" />
+    <ClInclude Include="random\xorshift.h" />
+    <ClInclude Include="redaabb_fpu.h" />
+    <ClInclude Include="redmath.h" />
+    <ClInclude Include="redmathbase.h" />
+    <ClInclude Include="redeulerangles_fpu.h" />
+    <ClInclude Include="redmatrix_fpu.h" />
+    <ClInclude Include="redqstransform_fpu.h" />
+    <ClInclude Include="redquaternion_fpu.h" />
+    <ClInclude Include="redScalar_float.h" />
+    <ClInclude Include="redtransform_fpu.h" />
+    <ClInclude Include="redtransform_simd.h" />
+    <ClInclude Include="redVector2_float.h" />
+    <ClInclude Include="redVector2_simd.h" />
+    <ClInclude Include="redVector3_float.h" />
+    <ClInclude Include="redVector3_simd.h" />
+    <ClInclude Include="redVector4_float.h" />
+    <ClInclude Include="redVector4_simd.h" />
+    <ClInclude Include="redvector_fpu.h" />
+    <ClInclude Include="vectorArithmetic_float.h" />
+    <ClInclude Include="vectorArithmetic_simd.h" />
+    <ClInclude Include="vectorFunctions_float.h" />
+    <ClInclude Include="vectorFunctions_simd.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="mathfunctions_fpu.h" />
+    <None Include="redaabb_fpu.inl" />
+    <None Include="redaabb_simd.inl" />
+    <None Include="redeulerangles_fpu.inl" />
+    <None Include="redeulerangles_simd.inl" />
+    <None Include="redMatrix3x3_float.inl" />
+    <None Include="redMatrix3x3_simd.inl" />
+    <None Include="redMatrix4x4_float.inl" />
+    <None Include="redmatrix_fpu.inl" />
+    <None Include="redMatrix4x4_simd.inl" />
+    <None Include="redqstransform_fpu.inl" />
+    <None Include="redqstransform_simd.inl" />
+    <None Include="redquaternion_fpu.inl" />
+    <None Include="redQuaternion_simd.inl" />
+    <None Include="redScalar_simd.inl" />
+    <None Include="redScalar_float.inl" />
+    <None Include="redtransform_fpu.inl" />
+    <None Include="redtransform_simd.inl" />
+    <None Include="redVector2_float.inl" />
+    <None Include="redVector2_simd.inl" />
+    <None Include="redVector3_float.inl" />
+    <None Include="redVector3_simd.inl" />
+    <None Include="redVector4_float.inl" />
+    <None Include="redVector4_simd.inl" />
+    <None Include="redvector_fpu.inl" />
+    <None Include="vectorArithmetic_float.inl" />
+    <None Include="vectorArithmetic_simd.inl" />
+    <None Include="vectorFunctions_float.inl" />
+    <None Include="vectorFunctions_simd.inl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="constants_fpu.cpp" />
+    <ClCompile Include="mathTypes.cpp" />
+    <ClCompile Include="matrixArithmetic_float.cpp" />
+    <ClCompile Include="matrixArithmetic_simd.cpp" />
+    <ClCompile Include="matrixFunctions_float.cpp" />
+    <ClCompile Include="matrixFunctions_simd.cpp" />
+    <ClCompile Include="random\fastRand.cpp" />
+    <ClCompile Include="random\mersenneTwister.cpp" />
+    <ClCompile Include="random\noise.cpp" />
+    <ClCompile Include="random\random.cpp" />
+    <ClCompile Include="random\standardRand.cpp" />
+    <ClCompile Include="random\standardRand16.cpp" />
+    <ClCompile Include="random\standardRand32.cpp" />
+    <ClCompile Include="random\xorshift.cpp" />
+    <ClCompile Include="redMatrix3x3_float.cpp" />
+    <ClCompile Include="redMatrix3x3_simd.cpp" />
+    <ClCompile Include="redMatrix4x4_float.cpp" />
+    <ClCompile Include="redMatrix4x4_simd.cpp" />
+    <ClCompile Include="redquaternion_simd.cpp" />
+    <ClCompile Include="redVector2_float.cpp" />
+    <ClCompile Include="redVector2_simd.cpp" />
+    <ClCompile Include="redVector3_float.cpp" />
+    <ClCompile Include="redVector3_simd.cpp" />
+    <ClCompile Include="redVector4_float.cpp" />
+    <ClCompile Include="redVector4_simd.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\redSystem\redSystem.vcxproj">
+      <Project>{9c1f2dbf-9ea5-41b9-8430-d869c8ac2189}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.targets))\Shared.targets" />
+  </ImportGroup>
+</Project>

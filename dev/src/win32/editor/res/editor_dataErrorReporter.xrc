@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<resource xmlns="http://www.wxwindows.org/wxxrc" version="2.3.0.1">
+	<object class="wxDialog" name="NewDataErrorReporter">
+		<style>wxCAPTION|wxCLOSE_BOX|wxDEFAULT_DIALOG_STYLE|wxMAXIMIZE_BOX|wxMINIMIZE_BOX|wxRESIZE_BORDER|wxFULL_REPAINT_ON_RESIZE</style>
+		<title>Data error reporter</title>
+		<centered>1</centered>
+		<object class="wxBoxSizer">
+			<minsize>800,600</minsize>
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxALL|wxEXPAND</flag>
+				<border>0</border>
+				<object class="wxPanel" name="m_panel6">
+					<style>wxTAB_TRAVERSAL</style>
+					<object class="wxBoxSizer">
+						<orient>wxHORIZONTAL</orient>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxALL</flag>
+							<border>5</border>
+							<object class="wxStaticText" name="m_staticText4">
+								<font>
+									<family>default</family>
+									<style>normal</style>
+									<weight>bold</weight>
+									<underlined>0</underlined>
+								</font>
+								<label>Priority:</label>
+								<wrap>-1</wrap>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+							<border>0</border>
+							<object class="wxCheckBox" name="m_criticalFilter">
+								<tooltip>Priority P0 - asset probably won&apos;t work</tooltip>
+								<label>Critical</label>
+								<checked>1</checked>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+							<border>0</border>
+							<object class="wxCheckBox" name="m_errorFilter">
+								<tooltip>Priority P1</tooltip>
+								<label>Error</label>
+								<checked>1</checked>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+							<border>0</border>
+							<object class="wxCheckBox" name="m_warningFilter">
+								<tooltip>Priority P2</tooltip>
+								<label>Warning</label>
+								<checked>1</checked>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+							<border>0</border>
+							<object class="wxCheckBox" name="m_bugsFilter">
+								<tooltip>Priority P3</tooltip>
+								<label>Bug</label>
+								<checked>1</checked>
+							</object>
+						</object>
+						<object class="spacer">
+							<option>1</option>
+							<flag>wxEXPAND</flag>
+							<border>5</border>
+							<size>0,0</size>
+						</object>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxALL</flag>
+							<border>5</border>
+							<object class="wxCheckBox" name="m_additionalReporting">
+								<tooltip>If checked, catched errors are added to the list without removing previous errors</tooltip>
+								<label>Append new errors to list</label>
+								<checked>0</checked>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+							<border>0</border>
+							<object class="wxButton" name="m_clearContent">
+								<style>wxBU_EXACTFIT</style>
+								<pos>-1,-1</pos>
+								<size>-1,22</size>
+								<tooltip>Remove all errors</tooltip>
+								<label>Clear errors</label>
+								<default>0</default>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxEXPAND | wxALL</flag>
+							<border>5</border>
+							<object class="wxStaticLine" name="m_staticline2">
+								<style>wxLI_VERTICAL</style>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxALL</flag>
+							<border>5</border>
+							<object class="wxCheckBox" name="m_continuousReporting">
+								<tooltip>Catched errors are automatically displayed</tooltip>
+								<label>Auto refresh</label>
+								<checked>1</checked>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+							<border>0</border>
+							<object class="wxButton" name="m_refresh">
+								<style>wxBU_EXACTFIT</style>
+								<size>-1,22</size>
+								<enabled>0</enabled>
+								<tooltip>Flush new errors to the window</tooltip>
+								<label>Manual refresh</label>
+								<default>0</default>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxALL|wxEXPAND</flag>
+				<border>0</border>
+				<object class="wxSplitterWindow" name="m_splitterWindow">
+					<sashpos>200</sashpos>
+					<gravity>0</gravity>
+					<minsize>5</minsize>
+					<orientation>vertical</orientation>
+					<object class="wxPanel" name="m_panel5">
+						<style>wxTAB_TRAVERSAL</style>
+						<object class="wxBoxSizer">
+							<minsize>5,-1</minsize>
+							<orient>wxVERTICAL</orient>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxEXPAND</flag>
+								<border>5</border>
+								<object class="wxStaticBoxSizer">
+									<orient>wxVERTICAL</orient>
+									<label>Categories</label>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALL|wxEXPAND</flag>
+										<border>0</border>
+										<object class="wxCheckListBox" name="m_categoriesFilterList">
+											<style>wxLB_MULTIPLE</style>
+											<content />
+										</object>
+									</object>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>1</option>
+								<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_TOP|wxALL</flag>
+								<border>5</border>
+								<object class="wxStaticText" name="m_summaryLabel">
+									<style>wxALIGN_CENTRE</style>
+									<label>Displaying 0 from 0 errors</label>
+									<wrap>-1</wrap>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALIGN_CENTER_HORIZONTAL</flag>
+								<border>5</border>
+								<object class="wxBoxSizer">
+									<orient>wxVERTICAL</orient>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALIGN_BOTTOM|wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
+										<border>2</border>
+										<object class="wxButton" name="m_export">
+											<style>wxBU_EXACTFIT</style>
+											<size>-1,22</size>
+											<tooltip>Export errors from selected categories and priorities to CSV file</tooltip>
+											<label>Export</label>
+											<default>0</default>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALIGN_BOTTOM|wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
+										<border>2</border>
+										<object class="wxButton" name="m_exportAll">
+											<tooltip>Export all catched errors to CSV file</tooltip>
+											<label>Export all</label>
+											<default>0</default>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALIGN_BOTTOM|wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
+										<border>2</border>
+										<object class="wxButton" name="m_checkErrors">
+											<tooltip>Perform validation for all loaded layers</tooltip>
+											<label>Check data errors</label>
+											<default>0</default>
+										</object>
+									</object>
+								</object>
+							</object>
+						</object>
+					</object>
+					<object class="wxPanel" name="m_panel61">
+						<style>wxTAB_TRAVERSAL</style>
+						<object class="wxBoxSizer">
+							<orient>wxVERTICAL</orient>
+							<object class="sizeritem">
+								<option>1</option>
+								<flag>wxEXPAND | wxALL</flag>
+								<border>0</border>
+								<object class="wxScrolledWindow" name="m_panelWithBugs">
+									<style>wxDOUBLE_BORDER|wxHSCROLL|wxVSCROLL</style>
+									<scrollrate>5,5</scrollrate>
+									<object class="wxBoxSizer">
+										<orient>wxVERTICAL</orient>
+									</object>
+								</object>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxALL|wxEXPAND</flag>
+				<border>3</border>
+				<object class="wxPanel" name="m_panel2">
+					<style>wxTAB_TRAVERSAL</style>
+					<object class="wxBoxSizer">
+						<orient>wxHORIZONTAL</orient>
+						<object class="sizeritem">
+							<option>1</option>
+							<flag>wxALIGN_CENTER</flag>
+							<border>5</border>
+							<object class="wxTextCtrl" name="m_searchLine">
+								<style>wxTE_PROCESS_ENTER</style>
+								<value></value>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxALIGN_CENTER_VERTICAL</flag>
+							<border>5</border>
+							<object class="wxButton" name="m_searchButton">
+								<size>-1,22</size>
+								<tooltip>Search all instances of the text in all rows</tooltip>
+								<label>Search</label>
+								<default>0</default>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxALIGN_CENTER_VERTICAL</flag>
+							<border>5</border>
+							<object class="wxBitmapButton" name="m_leftResult">
+								<style>wxBU_AUTODRAW</style>
+								<enabled>0</enabled>
+								<tooltip>Go to the previous searched result</tooltip>
+								<bitmap>images/arrow_left_red.png</bitmap>
+								<default>0</default>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxALIGN_CENTER_VERTICAL</flag>
+							<border>5</border>
+							<object class="wxBitmapButton" name="m_rightResult">
+								<style>wxBU_AUTODRAW</style>
+								<enabled>0</enabled>
+								<tooltip>Go to the next searched result</tooltip>
+								<bitmap>images/arrow_right_red.png</bitmap>
+								<default>0</default>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxALIGN_CENTER_VERTICAL</flag>
+							<border>5</border>
+							<object class="wxStaticText" name="m_searchingResultLabel">
+								<label>0 / 0</label>
+								<wrap>-1</wrap>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+</resource>

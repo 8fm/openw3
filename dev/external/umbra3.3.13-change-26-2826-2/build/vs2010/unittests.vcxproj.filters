@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="tests">
+      <UniqueIdentifier>{D11CFE52-AB35-9745-B130-CC0B6AC03C13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tests\unittests">
+      <UniqueIdentifier>{BA1BE8BD-B1C9-184B-84FE-1255D92C3C94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tests\unittests\tests">
+      <UniqueIdentifier>{F69DAE88-C6D4-5B41-93CF-B8D9760E558C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tests\unittests\newtests">
+      <UniqueIdentifier>{F90CE93A-BAEB-0F4C-8CDF-C302A1663EE6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tests\unittests\modeldata">
+      <UniqueIdentifier>{8A9F9E87-5643-6D44-9E65-C85D31CFF761}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tests\unittests\unitfiles">
+      <UniqueIdentifier>{1385E4A3-95C0-C241-AC82-4F315D065362}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\tests\unittests\unitfiles\cameraonportal.unit">
+      <Filter>tests\unittests\unitfiles</Filter>
+    </None>
+    <None Include="..\..\tests\unittests\unitfiles\frustumculling.unit">
+      <Filter>tests\unittests\unitfiles</Filter>
+    </None>
+    <None Include="..\..\tests\unittests\unitfiles\nonoccluderobject.unit">
+      <Filter>tests\unittests\unitfiles</Filter>
+    </None>
+    <None Include="..\..\tests\unittests\unitfiles\occluderonly.unit">
+      <Filter>tests\unittests\unitfiles</Filter>
+    </None>
+    <None Include="..\..\tests\unittests\unitfiles\portalculltraversalorder.unit">
+      <Filter>tests\unittests\unitfiles</Filter>
+    </None>
+    <None Include="..\..\tests\unittests\unitfiles\portalculltraversalorder2.unit">
+      <Filter>tests\unittests\unitfiles</Filter>
+    </None>
+    <None Include="..\..\tests\unittests\unitfiles\portalsopenclose.unit">
+      <Filter>tests\unittests\unitfiles</Filter>
+    </None>
+    <None Include="..\..\tests\unittests\unitfiles\portalszerodistance.unit">
+      <Filter>tests\unittests\unitfiles</Filter>
+    </None>
+    <None Include="..\..\tests\unittests\unitfiles\staticvisibility.unit">
+      <Filter>tests\unittests\unitfiles</Filter>
+    </None>
+    <None Include="..\..\tests\unittests\unitfiles\unity_regression_001.unit">
+      <Filter>tests\unittests\unitfiles</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\tests\unittests\FileUtil.hpp">
+      <Filter>tests\unittests</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\tests\unittests\Model.hpp">
+      <Filter>tests\unittests</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\tests\unittests\printer.hpp">
+      <Filter>tests\unittests</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\tests\unittests\QueryHelper.hpp">
+      <Filter>tests\unittests</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\tests\unittests\SceneGenerator.hpp">
+      <Filter>tests\unittests</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\tests\unittests\Sketch.hpp">
+      <Filter>tests\unittests</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\tests\unittests\unittest.hpp">
+      <Filter>tests\unittests</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\tests\unittests\tests\basicbuilder.hpp">
+      <Filter>tests\unittests\tests</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\tests\unittests\tests\brokendata.hpp">
+      <Filter>tests\unittests\tests</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\tests\unittests\tests\builderoom.hpp">
+      <Filter>tests\unittests\tests</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\tests\unittests\tests\cliptests.hpp">
+      <Filter>tests\unittests\tests</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\tests\unittests\tests\dynamicvisibility.hpp">
+      <Filter>tests\unittests\tests</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\tests\unittests\tests\grouper.hpp">
+      <Filter>tests\unittests\tests</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\tests\unittests\tests\hierarchicalquery.hpp">
+      <Filter>tests\unittests\tests</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\tests\unittests\tests\linesegment.hpp">
+      <Filter>tests\unittests\tests</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\tests\unittests\tests\locallights.hpp">
+      <Filter>tests\unittests\tests</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\tests\unittests\tests\lodrefpoint.hpp">
+      <Filter>tests\unittests\tests</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\tests\unittests\tests\maxuserportals.hpp">
+      <Filter>tests\unittests\tests</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\tests\unittests\tests\oobtargets.hpp">
+      <Filter>tests\unittests\tests</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\tests\unittests\tests\outputsensitivity.hpp">
+      <Filter>tests\unittests\tests</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\tests\unittests\tests\pointtopointdistance.hpp">
+      <Filter>tests\unittests\tests</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\tests\unittests\tests\regionbench.hpp">
+      <Filter>tests\unittests\tests</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\tests\unittests\tests\shadows.hpp">
+      <Filter>tests\unittests\tests</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\tests\unittests\tests\startpos.hpp">
+      <Filter>tests\unittests\tests</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\tests\unittests\tests\streaming.hpp">
+      <Filter>tests\unittests\tests</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\tests\unittests\tests\streamingempty.hpp">
+      <Filter>tests\unittests\tests</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\tests\unittests\tests\tomeconversion.hpp">
+      <Filter>tests\unittests\tests</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\tests\unittests\tests\tomegroups.hpp">
+      <Filter>tests\unittests\tests</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\tests\unittests\tests\unitdumprunner.hpp">
+      <Filter>tests\unittests\tests</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\tests\unittests\tests\userportals.hpp">
+      <Filter>tests\unittests\tests</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\tests\unittests\tests\volumetrictarget.hpp">
+      <Filter>tests\unittests\tests</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\tests\unittests\tests\workmem.hpp">
+      <Filter>tests\unittests\tests</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\tests\unittests\modeldata\bunny_i.hpp">
+      <Filter>tests\unittests\modeldata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\tests\unittests\modeldata\bunny_v.hpp">
+      <Filter>tests\unittests\modeldata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\tests\unittests\modeldata\chair_i.hpp">
+      <Filter>tests\unittests\modeldata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\tests\unittests\modeldata\chair_v.hpp">
+      <Filter>tests\unittests\modeldata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\tests\unittests\modeldata\framedcube_i.hpp">
+      <Filter>tests\unittests\modeldata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\tests\unittests\modeldata\framedcube_v.hpp">
+      <Filter>tests\unittests\modeldata</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\tests\unittests\FileUtil.cpp">
+      <Filter>tests\unittests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\Model.cpp">
+      <Filter>tests\unittests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\QueryHelper.cpp">
+      <Filter>tests\unittests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\SceneGenerator.cpp">
+      <Filter>tests\unittests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\Sketch.cpp">
+      <Filter>tests\unittests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\unittest.cpp">
+      <Filter>tests\unittests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\unit_runtime.cpp">
+      <Filter>tests\unittests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\basicbuilder.cpp">
+      <Filter>tests\unittests\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\brokendata.cpp">
+      <Filter>tests\unittests\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\builderoom.cpp">
+      <Filter>tests\unittests\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\cliptests.cpp">
+      <Filter>tests\unittests\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\computationapi.cpp">
+      <Filter>tests\unittests\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\dynamicshadows.cpp">
+      <Filter>tests\unittests\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\dynamicvisibility.cpp">
+      <Filter>tests\unittests\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\grouper.cpp">
+      <Filter>tests\unittests\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\hierarchicalquery.cpp">
+      <Filter>tests\unittests\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\inputdepthbuffer.cpp">
+      <Filter>tests\unittests\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\linesegment.cpp">
+      <Filter>tests\unittests\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\locallights.cpp">
+      <Filter>tests\unittests\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\lodrefpoint.cpp">
+      <Filter>tests\unittests\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\lodscaling.cpp">
+      <Filter>tests\unittests\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\maxuserportals.cpp">
+      <Filter>tests\unittests\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\objectstripping.cpp">
+      <Filter>tests\unittests\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\oobtargets.cpp">
+      <Filter>tests\unittests\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\outputsensitivity.cpp">
+      <Filter>tests\unittests\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\pointtopointdistance.cpp">
+      <Filter>tests\unittests\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\process.cpp">
+      <Filter>tests\unittests\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\regionbench.cpp">
+      <Filter>tests\unittests\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\shadowjobs.cpp">
+      <Filter>tests\unittests\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\shadows.cpp">
+      <Filter>tests\unittests\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\startpos.cpp">
+      <Filter>tests\unittests\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\streaming.cpp">
+      <Filter>tests\unittests\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\streamingempty.cpp">
+      <Filter>tests\unittests\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\streamingoom.cpp">
+      <Filter>tests\unittests\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\tomeconversion.cpp">
+      <Filter>tests\unittests\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\tomeCRC.cpp">
+      <Filter>tests\unittests\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\tomegroups.cpp">
+      <Filter>tests\unittests\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\unitdumprunner.cpp">
+      <Filter>tests\unittests\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\userportals.cpp">
+      <Filter>tests\unittests\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\volumetrictarget.cpp">
+      <Filter>tests\unittests\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\workmem.cpp">
+      <Filter>tests\unittests\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\newtests\Atomic.cpp">
+      <Filter>tests\unittests\newtests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\newtests\ChecksumTest.cpp">
+      <Filter>tests\unittests\newtests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\newtests\ComputationParams.cpp">
+      <Filter>tests\unittests\newtests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\newtests\Contribution.cpp">
+      <Filter>tests\unittests\newtests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\newtests\ConvexHullTest.cpp">
+      <Filter>tests\unittests\newtests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\newtests\DebugCollector.cpp">
+      <Filter>tests\unittests\newtests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\newtests\DepthBufferDump.cpp">
+      <Filter>tests\unittests\newtests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\newtests\Extract16Signs.cpp">
+      <Filter>tests\unittests\newtests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\newtests\GraphicsContainer.cpp">
+      <Filter>tests\unittests\newtests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\newtests\Hash.cpp">
+      <Filter>tests\unittests\newtests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\newtests\HashValue.cpp">
+      <Filter>tests\unittests\newtests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\newtests\Http.cpp">
+      <Filter>tests\unittests\newtests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\newtests\Iterator.cpp">
+      <Filter>tests\unittests\newtests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\newtests\Misbehave.cpp">
+      <Filter>tests\unittests\newtests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\newtests\pool.cpp">
+      <Filter>tests\unittests\newtests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\newtests\RasterizePortal.cpp">
+      <Filter>tests\unittests\newtests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\newtests\RuntimeApiSanity.cpp">
+      <Filter>tests\unittests\newtests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\newtests\SliceWork.cpp">
+      <Filter>tests\unittests\newtests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\newtests\Standard.cpp">
+      <Filter>tests\unittests\newtests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\newtests\TestRectAny.cpp">
+      <Filter>tests\unittests\newtests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\newtests\TomeCache.cpp">
+      <Filter>tests\unittests\newtests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\newtests\TomeCollectionSerialization.cpp">
+      <Filter>tests\unittests\newtests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\newtests\TransformTests.cpp">
+      <Filter>tests\unittests\newtests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\newtests\UpdateDepthBuffer.cpp">
+      <Filter>tests\unittests\newtests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\newtests\VisibleObjectOutput.cpp">
+      <Filter>tests\unittests\newtests</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

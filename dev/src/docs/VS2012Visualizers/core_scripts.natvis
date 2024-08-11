@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
+	
+	<Type Name="CScriptFileContext">
+		<DisplayString>{m_file}({m_line})</DisplayString>
+	</Type>
+	
+	<Type Name="CScriptOperator">
+		<DisplayString>{m_operation}</DisplayString>
+	</Type>
+	
+	<Type Name="CScriptSyntaxNode">
+		<DisplayString Condition="m_parent">[{*m_parent}] Type: {m_type} Op: {m_operator}</DisplayString>
+		<DisplayString Condition="!this"></DisplayString>
+		<DisplayString>Type:{m_type} Op:{m_operator}</DisplayString>
+	</Type>
+	
+	<Type Name="ScriptSyntaxNodeValue">
+		<DisplayString Condition="m_string.m_buf">{m_string}</DisplayString>
+		<DisplayString Condition="m_function">{*m_function}</DisplayString>
+		<DisplayString Condition="m_property">{*m_property}</DisplayString>
+		<DisplayString Condition="m_structure">{*m_structure}</DisplayString>
+		<DisplayString Condition="m_node">{*m_node}</DisplayString>
+		<DisplayString>{m_dword} {m_integer} {m_float} {m_bool}</DisplayString>
+	</Type>
+	
+	<Type Name="CScriptCodeNode">
+		<DisplayString Condition="!this"></DisplayString>
+		<DisplayString>{m_opcode} {m_context}</DisplayString>
+	</Type>
+	
+	<Type Name="ScriptSyntaxNodeType">
+		<DisplayString Condition="m_type">{*m_type} LValue: {m_isAssignable}, null: {m_isNull}, IsFromProperty: {m_isFromProperty}</DisplayString>
+		<DisplayString>LValue: {m_isAssignable}, null: {m_isNull}, IsFromProperty: {m_isFromProperty}</DisplayString>
+	</Type>
+	
+	<Type Name="CScriptThread">
+		<DisplayString Condition="m_isKilled">{m_contextName} (Dead)</DisplayString>
+		<DisplayString Condition="m_isYielding">{m_contextName} (Yielding)</DisplayString>
+		<DisplayString>{m_contextName}</DisplayString>
+	</Type>
+	
+</AutoVisualizer>

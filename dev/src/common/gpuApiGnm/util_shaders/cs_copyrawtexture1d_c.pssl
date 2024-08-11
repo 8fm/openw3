@@ -1,0 +1,9 @@
+RW_Texture1D<int4> DestTex : register(u0);
+Texture1D<int4> SourceTex : register(t0);
+
+[NUM_THREADS(64,1,1)]
+void main( uint3 position : S_DISPATCH_THREAD_ID )
+{
+	DestTex[position] = SourceTex.Load(int2(position.x, 0));
+}
+

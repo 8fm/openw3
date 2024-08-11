@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|ORBIS">
+      <Configuration>Debug</Configuration>
+      <Platform>ORBIS</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ORBIS">
+      <Configuration>Release</Configuration>
+      <Platform>ORBIS</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\CommonSource\MyApplication.cpp" />
+    <ClCompile Include="..\CommonSource\MyCmdLineOptions.cpp" />
+    <ClCompile Include="..\CommonSource\MyConfigFile.cpp" />
+    <ClCompile Include="..\CommonSource\MyDebugRenderFunctions.cpp" />
+    <ClCompile Include="..\CommonSource\MyFullscreenQuad.cpp" />
+    <ClCompile Include="..\CommonSource\MyGrass.cpp" />
+    <ClCompile Include="..\CommonSource\MyMouseNavigation.cpp" />
+    <ClCompile Include="..\CommonSource\MyNavigationBase.cpp" />
+    <ClCompile Include="..\CommonSource\MyOverlays.cpp" />
+    <ClCompile Include="..\CommonSource\MyParamAdjuster.cpp" />
+    <ClCompile Include="..\CommonSource\MyPopulate.cpp" />
+    <ClCompile Include="..\CommonSource\MyRenderFunctions.cpp" />
+    <ClCompile Include="..\CommonSource\MyRenderTargets.cpp" />
+    <ClCompile Include="..\CommonSource\MyShadowSystem.cpp" />
+    <ClCompile Include="..\CommonSource\MySky.cpp" />
+    <ClCompile Include="..\CommonSource\MyStatsReporter.cpp" />
+    <ClCompile Include="..\CommonSource\MyTerrain.cpp" />
+    <ClCompile Include="..\CommonSource\MyTerrainData.cpp" />
+    <ClCompile Include="..\CommonSource\MyText.cpp" />
+    <ClCompile Include="..\CommonSource\MyTgaLoader.cpp" />
+    <ClCompile Include="..\CommonSource\Testing.cpp" />
+    <ClCompile Include="Source\MyMainOrbis.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\CommonSource\My2dInterpolator.h" />
+    <ClInclude Include="..\CommonSource\My2dInterpolator_inl.h" />
+    <ClInclude Include="..\CommonSource\MyApplication.h" />
+    <ClInclude Include="..\CommonSource\MyCmdLineOptions.h" />
+    <ClInclude Include="..\CommonSource\MyConfigFile.h" />
+    <ClInclude Include="..\CommonSource\MyCustomAllocator.h" />
+    <ClInclude Include="..\CommonSource\MyDebugRenderFunctions.h" />
+    <ClInclude Include="..\CommonSource\MyFileSystem.h" />
+    <ClInclude Include="..\CommonSource\MyFullscreenQuad.h" />
+    <ClInclude Include="..\CommonSource\MyGrass.h" />
+    <ClInclude Include="..\CommonSource\MyMouseNavigation.h" />
+    <ClInclude Include="..\CommonSource\MyNavigationBase.h" />
+    <ClInclude Include="..\CommonSource\MyOverlays.h" />
+    <ClInclude Include="..\CommonSource\MyParamAdjuster.h" />
+    <ClInclude Include="..\CommonSource\MyPopulate.h" />
+    <ClInclude Include="..\CommonSource\MyPopulate_inl.h" />
+    <ClInclude Include="..\CommonSource\MyRenderTargets.h" />
+    <ClInclude Include="..\CommonSource\MyShadowSystem.h" />
+    <ClInclude Include="..\CommonSource\MySky.h" />
+    <ClInclude Include="..\CommonSource\MySpeedTreeRenderer.h" />
+    <ClInclude Include="..\CommonSource\MyStatsReporter.h" />
+    <ClInclude Include="..\CommonSource\MyTerrain.h" />
+    <ClInclude Include="..\CommonSource\MyTerrainData.h" />
+    <ClInclude Include="..\CommonSource\MyTerrainData_inl.h" />
+    <ClInclude Include="..\CommonSource\MyTerrain_inl.h" />
+    <ClInclude Include="..\CommonSource\MyText.h" />
+    <ClInclude Include="..\CommonSource\MyTgaLoader.h" />
+    <ClInclude Include="..\CommonSource\Testing.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>SpeedTreeRefApp_Orbis_VC10</ProjectName>
+    <ProjectGuid>{1FD24EC0-8D9A-4C57-8B5C-422F1BCF62C0}</ProjectGuid>
+    <RootNamespace>dkdev</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <GnmProjectType>Sample</GnmProjectType>
+  </PropertyGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+    <Import Project="$(SolutionDir)\SceGnm.props" Condition="Exists('$(SolutionDir)\SceGnm.Development.props')" />
+    <Import Project="$(SCE_ORBIS_SDK_DIR)\host_tools\msbuild\SceGnm.props" Condition="!Exists('$(SolutionDir)\SceGnm.Development.props')" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ORBIS'" Label="Configuration" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ORBIS'" Label="Configuration" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|ORBIS'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ORBIS'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <GnmUseSampleCommon Condition="'$(Configuration)|$(Platform)'=='Debug|ORBIS'">false</GnmUseSampleCommon>
+    <GnmUseSampleCommon Condition="'$(Configuration)|$(Platform)'=='Release|ORBIS'">false</GnmUseSampleCommon>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|ORBIS'">..\..\..\bin\Orbis\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|ORBIS'">..\..\..\bin\Orbis\</OutDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|ORBIS'">$(ProjectName)_d</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ORBIS'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../../Include;../CommonSource;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>-lSpeedTreeCore_Orbis_v7.0_Static_d;-lSpeedTreeForest_Orbis_v7.0_Static_d;-lSpeedTreeRenderInterface_Orbis_v7.0_Static_d;-lSpeedTreeRenderer_Orbis_v7.0_Static_d;-lToolkit_d;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../../../Lib/Orbis;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ORBIS'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../../Include;../CommonSource;$(GnmAdditionalIncludeDirectories);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>-lSpeedTreeCore_Orbis_v7.0_Static;-lSpeedTreeForest_Orbis_v7.0_Static;-lSpeedTreeRenderInterface_Orbis_v7.0_Static;-lSpeedTreeRenderer_Orbis_v7.0_Static;-lToolkit;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../../../Lib/Orbis;$(GnmAdditionalLibraryDirectories);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(SolutionDir)\SceGnm.targets" Condition="Exists('$(SolutionDir)\SceGnm.Development.props')" />
+  <Import Project="$(SCE_ORBIS_SDK_DIR)\host_tools\msbuild\SceGnm.targets" Condition="!Exists('$(SolutionDir)\SceGnm.Development.props')" />
+</Project>

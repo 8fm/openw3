@@ -1,0 +1,705 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<resource xmlns="http://www.wxwindows.org/wxxrc" version="2.3.0.1">
+	<object class="wxFrame" name="ObjectInspector">
+		<style>wxCAPTION|wxCLOSE_BOX|wxFRAME_TOOL_WINDOW|wxRESIZE_BORDER|wxSTAY_ON_TOP|wxSYSTEM_MENU|wxTAB_TRAVERSAL</style>
+		<size>454,360</size>
+		<bg>#f0f0f0</bg>
+		<title>Object Inspector</title>
+		<centered>1</centered>
+		<aui_managed>0</aui_managed>
+		<object class="wxBoxSizer">
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxPanel" name="m_panel1">
+					<style>wxTAB_TRAVERSAL</style>
+					<object class="wxBoxSizer">
+						<orient>wxHORIZONTAL</orient>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxALIGN_CENTER_VERTICAL</flag>
+							<border>5</border>
+							<object class="wxBitmapButton" name="m_refresh">
+								<style>wxBU_AUTODRAW</style>
+								<size>21,21</size>
+								<tooltip>Refresh</tooltip>
+								<bitmap>images\pb_find.png</bitmap>
+								<default>0</default>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxEXPAND | wxALL</flag>
+							<border>5</border>
+							<object class="wxStaticLine" name="m_staticline3">
+								<style>wxLI_VERTICAL</style>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxALIGN_CENTER_VERTICAL|wxRIGHT</flag>
+							<border>2</border>
+							<object class="wxStaticText" name="m_staticText1">
+								<label>Class:</label>
+								<wrap>-1</wrap>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>1</option>
+							<flag>wxALIGN_CENTER_VERTICAL|wxTOP|wxBOTTOM|wxRIGHT</flag>
+							<border>2</border>
+							<object class="wxTextCtrl" name="m_className">
+								<style>wxTE_READONLY</style>
+								<value></value>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxALIGN_CENTER_VERTICAL|wxRIGHT|wxLEFT</flag>
+							<border>2</border>
+							<object class="wxStaticText" name="m_staticText2">
+								<label>Parent:</label>
+								<wrap>-1</wrap>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>1</option>
+							<flag>wxALIGN_CENTER_VERTICAL|wxTOP|wxBOTTOM|wxRIGHT</flag>
+							<border>2</border>
+							<object class="wxTextCtrl" name="m_parentInfo">
+								<style>wxTE_READONLY</style>
+								<value></value>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxALIGN_CENTER_VERTICAL</flag>
+							<border>5</border>
+							<object class="wxBitmapButton" name="m_inspectParent">
+								<style>wxBU_AUTODRAW</style>
+								<size>21,21</size>
+								<tooltip>Inspect parent</tooltip>
+								<bitmap>images\pb_browse.png</bitmap>
+								<default>0</default>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxEXPAND | wxALL</flag>
+							<border>5</border>
+							<object class="wxStaticLine" name="m_staticline1">
+								<style>wxLI_VERTICAL</style>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxALIGN_CENTER_VERTICAL</flag>
+							<border>5</border>
+							<object class="wxStaticText" name="m_indexLabel">
+								<label>Index #0</label>
+								<wrap>-1</wrap>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxEXPAND | wxALL</flag>
+							<border>5</border>
+							<object class="wxStaticLine" name="m_staticline2">
+								<style>wxLI_VERTICAL</style>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxALIGN_CENTER_VERTICAL</flag>
+							<border>5</border>
+							<object class="wxBitmapButton" name="m_newInspector">
+								<style>wxBU_AUTODRAW</style>
+								<size>21,21</size>
+								<tooltip>New inspector</tooltip>
+								<bitmap>images\pb_insert.png</bitmap>
+								<default>0</default>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxNotebook" name="m_notebook">
+					<style>wxNB_TOP</style>
+					<object class="notebookpage">
+						<label>Properties</label>
+						<selected>1</selected>
+						<object class="wxPanel" name="m_propertiesNotebookPanel">
+							<style>wxTAB_TRAVERSAL</style>
+							<object class="wxBoxSizer">
+								<orient>wxVERTICAL</orient>
+								<object class="sizeritem">
+									<option>1</option>
+									<flag>wxEXPAND|wxTOP</flag>
+									<border>2</border>
+									<object class="wxPanel" name="m_propertiesContainer">
+										<style>wxSUNKEN_BORDER|wxTAB_TRAVERSAL</style>
+										<object class="wxBoxSizer">
+											<orient>wxVERTICAL</orient>
+										</object>
+									</object>
+								</object>
+							</object>
+						</object>
+					</object>
+					<object class="notebookpage">
+						<label>Flags</label>
+						<selected>0</selected>
+						<object class="wxPanel" name="m_flagsNotebookPanel">
+							<style>wxTAB_TRAVERSAL</style>
+							<hidden>1</hidden>
+							<object class="wxBoxSizer">
+								<orient>wxHORIZONTAL</orient>
+								<object class="sizeritem">
+									<option>1</option>
+									<flag>wxEXPAND|wxALL</flag>
+									<border>2</border>
+									<object class="wxBoxSizer">
+										<orient>wxVERTICAL</orient>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag></flag>
+											<border>2</border>
+											<object class="wxStaticText" name="m_staticText4">
+												<font>
+													<family>default</family>
+													<style>normal</style>
+													<weight>bold</weight>
+													<underlined>0</underlined>
+												</font>
+												<label>Object Flags:</label>
+												<wrap>-1</wrap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxALL</flag>
+											<border>5</border>
+											<object class="wxCheckBox" name="m_finalizedFlag">
+												<label>Finalized</label>
+												<checked>0</checked>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxBOTTOM|wxRIGHT|wxLEFT</flag>
+											<border>5</border>
+											<object class="wxCheckBox" name="m_rootFlag">
+												<label>In the root set</label>
+												<checked>0</checked>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxBOTTOM|wxRIGHT|wxLEFT</flag>
+											<border>5</border>
+											<object class="wxCheckBox" name="m_inlinedFlag">
+												<label>Inlined</label>
+												<checked>0</checked>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxBOTTOM|wxRIGHT|wxLEFT</flag>
+											<border>5</border>
+											<object class="wxCheckBox" name="m_scriptedFlag">
+												<label>Scripted</label>
+												<checked>0</checked>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxBOTTOM|wxRIGHT|wxLEFT</flag>
+											<border>5</border>
+											<object class="wxCheckBox" name="m_discardedFlag">
+												<label>Discarded</label>
+												<checked>0</checked>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxBOTTOM|wxRIGHT|wxLEFT</flag>
+											<border>5</border>
+											<object class="wxCheckBox" name="m_transientFlag">
+												<label>Transient</label>
+												<checked>0</checked>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxBOTTOM|wxRIGHT|wxLEFT</flag>
+											<border>5</border>
+											<object class="wxCheckBox" name="m_referencedFlag">
+												<label>Referenced</label>
+												<checked>0</checked>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxBOTTOM|wxRIGHT|wxLEFT</flag>
+											<border>5</border>
+											<object class="wxCheckBox" name="m_highlightedFlag">
+												<label>Highlighted</label>
+												<checked>0</checked>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxBOTTOM|wxRIGHT|wxLEFT</flag>
+											<border>5</border>
+											<object class="wxCheckBox" name="m_defaultFlag">
+												<label>Default object</label>
+												<checked>0</checked>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxBOTTOM|wxRIGHT|wxLEFT</flag>
+											<border>5</border>
+											<object class="wxCheckBox" name="m_scriptCreatedFlag">
+												<label>Created by script</label>
+												<checked>0</checked>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxBOTTOM|wxRIGHT|wxLEFT</flag>
+											<border>5</border>
+											<object class="wxCheckBox" name="m_hasHandleFlag">
+												<label>Has THandle pointing to it</label>
+												<checked>0</checked>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxBOTTOM|wxRIGHT|wxLEFT</flag>
+											<border>5</border>
+											<object class="wxCheckBox" name="m_unusedFlag">
+												<label>(unused flag)</label>
+												<checked>0</checked>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxBOTTOM|wxRIGHT|wxLEFT</flag>
+											<border>5</border>
+											<object class="wxCheckBox" name="m_wasCookedFlag">
+												<label>Was cooked</label>
+												<checked>0</checked>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxBOTTOM|wxRIGHT|wxLEFT</flag>
+											<border>5</border>
+											<object class="wxCheckBox" name="m_userFlag">
+												<label>User flag</label>
+												<checked>0</checked>
+											</object>
+										</object>
+									</object>
+								</object>
+								<object class="sizeritem">
+									<option>1</option>
+									<flag>wxEXPAND|wxALL</flag>
+									<border>2</border>
+									<object class="wxBoxSizer">
+										<orient>wxVERTICAL</orient>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag></flag>
+											<border>5</border>
+											<object class="wxStaticText" name="m_staticText5">
+												<font>
+													<family>default</family>
+													<style>normal</style>
+													<weight>bold</weight>
+													<underlined>0</underlined>
+												</font>
+												<label>Node Flags:</label>
+												<wrap>-1</wrap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxALL</flag>
+											<border>5</border>
+											<object class="wxCheckBox" name="m_destroyedFlag">
+												<label>Destroyed</label>
+												<checked>0</checked>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxBOTTOM|wxRIGHT|wxLEFT</flag>
+											<border>5</border>
+											<object class="wxCheckBox" name="m_selectedFlag">
+												<label>Selected</label>
+												<checked>0</checked>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxBOTTOM|wxRIGHT|wxLEFT</flag>
+											<border>5</border>
+											<object class="wxCheckBox" name="m_attachedFlag">
+												<label>Attached to world</label>
+												<checked>0</checked>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxBOTTOM|wxRIGHT|wxLEFT</flag>
+											<border>5</border>
+											<object class="wxCheckBox" name="m_attachingFlag">
+												<label>Attaching to world</label>
+												<checked>0</checked>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxBOTTOM|wxRIGHT|wxLEFT</flag>
+											<border>5</border>
+											<object class="wxCheckBox" name="m_detatchingFlag">
+												<label>Detatching from world</label>
+												<checked>0</checked>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxBOTTOM|wxRIGHT|wxLEFT</flag>
+											<border>5</border>
+											<object class="wxCheckBox" name="m_scheduledUpdateTransformFlag">
+												<label>Scheduled to update transform</label>
+												<checked>0</checked>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxBOTTOM|wxRIGHT|wxLEFT</flag>
+											<border>5</border>
+											<object class="wxCheckBox" name="m_includedFromTemplateFlag">
+												<label>Included from template</label>
+												<checked>0</checked>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxBOTTOM|wxRIGHT|wxLEFT</flag>
+											<border>5</border>
+											<object class="wxCheckBox" name="m_postAttachSpawnCalledFlag">
+												<label>Post attach spawn called</label>
+												<checked>0</checked>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxBOTTOM|wxRIGHT|wxLEFT</flag>
+											<border>5</border>
+											<object class="wxCheckBox" name="m_hideInGameFlag">
+												<label>Hide in game</label>
+												<checked>0</checked>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxBOTTOM|wxRIGHT|wxLEFT</flag>
+											<border>5</border>
+											<object class="wxCheckBox" name="m_wasAttachedInGameFlag">
+												<label>Was attached in game</label>
+												<checked>0</checked>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxBOTTOM|wxRIGHT|wxLEFT</flag>
+											<border>5</border>
+											<object class="wxCheckBox" name="m_wasInstancedFromTemplateFlag">
+												<label>Was instanced from template</label>
+												<checked>0</checked>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxBOTTOM|wxRIGHT|wxLEFT</flag>
+											<border>5</border>
+											<object class="wxCheckBox" name="m_suspendRenderingFlag">
+												<label>Suspend rendering</label>
+												<checked>0</checked>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxBOTTOM|wxRIGHT|wxLEFT</flag>
+											<border>5</border>
+											<object class="wxCheckBox" name="m_shouldSaveFlag">
+												<label>Should save</label>
+												<checked>0</checked>
+											</object>
+										</object>
+									</object>
+								</object>
+							</object>
+						</object>
+					</object>
+					<object class="notebookpage">
+						<label>Children</label>
+						<selected>0</selected>
+						<object class="wxPanel" name="m_childrenNotebookPanel">
+							<style>wxTAB_TRAVERSAL</style>
+							<hidden>1</hidden>
+							<object class="wxBoxSizer">
+								<orient>wxVERTICAL</orient>
+								<object class="sizeritem">
+									<option>1</option>
+									<flag>wxEXPAND|wxTOP</flag>
+									<border>2</border>
+									<object class="wxListBox" name="m_childrenList">
+										<content />
+									</object>
+								</object>
+							</object>
+						</object>
+					</object>
+					<object class="notebookpage">
+						<label>Node</label>
+						<selected>0</selected>
+						<object class="wxPanel" name="m_nodeNotebookPanel">
+							<style>wxTAB_TRAVERSAL</style>
+							<hidden>1</hidden>
+							<object class="wxBoxSizer">
+								<orient>wxVERTICAL</orient>
+								<object class="sizeritem">
+									<option>0</option>
+									<flag>wxEXPAND|wxTOP|wxBOTTOM|wxLEFT</flag>
+									<border>2</border>
+									<object class="wxBoxSizer">
+										<orient>wxHORIZONTAL</orient>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxALIGN_CENTER_VERTICAL|wxRIGHT</flag>
+											<border>5</border>
+											<object class="wxStaticText" name="m_staticText6">
+												<label>Name:</label>
+												<wrap>-1</wrap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>1</option>
+											<flag>wxALIGN_CENTER_VERTICAL</flag>
+											<border>5</border>
+											<object class="wxTextCtrl" name="m_nodeName">
+												<style>wxTE_READONLY</style>
+												<value></value>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxALIGN_CENTER_VERTICAL|wxRIGHT|wxLEFT</flag>
+											<border>5</border>
+											<object class="wxStaticText" name="m_staticText7">
+												<label>GUID:</label>
+												<wrap>-1</wrap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>1</option>
+											<flag>wxALIGN_CENTER_VERTICAL</flag>
+											<border>5</border>
+											<object class="wxTextCtrl" name="m_nodeGUID">
+												<style>wxTE_READONLY</style>
+												<value></value>
+											</object>
+										</object>
+									</object>
+								</object>
+								<object class="sizeritem">
+									<option>0</option>
+									<flag></flag>
+									<border>5</border>
+									<object class="wxStaticText" name="m_staticText8">
+										<font>
+											<family>default</family>
+											<style>normal</style>
+											<weight>bold</weight>
+											<underlined>0</underlined>
+										</font>
+										<label>Parent attachments:</label>
+										<wrap>-1</wrap>
+									</object>
+								</object>
+								<object class="sizeritem">
+									<option>1</option>
+									<flag>wxEXPAND</flag>
+									<border>5</border>
+									<object class="wxListBox" name="m_parentAttachmentList">
+										<content />
+									</object>
+								</object>
+								<object class="sizeritem">
+									<option>0</option>
+									<flag></flag>
+									<border>5</border>
+									<object class="wxStaticText" name="m_staticText9">
+										<font>
+											<family>default</family>
+											<style>normal</style>
+											<weight>bold</weight>
+											<underlined>0</underlined>
+										</font>
+										<label>Child attachments:</label>
+										<wrap>-1</wrap>
+									</object>
+								</object>
+								<object class="sizeritem">
+									<option>1</option>
+									<flag>wxEXPAND</flag>
+									<border>5</border>
+									<object class="wxListBox" name="m_childAttachmentList">
+										<content />
+									</object>
+								</object>
+							</object>
+						</object>
+					</object>
+					<object class="notebookpage">
+						<label>Attachment</label>
+						<selected>0</selected>
+						<object class="wxPanel" name="m_attachmentNotebookPanel">
+							<style>wxTAB_TRAVERSAL</style>
+							<object class="wxFlexGridSizer">
+								<rows>3</rows>
+								<cols>3</cols>
+								<vgap>0</vgap>
+								<hgap>0</hgap>
+								<growablecols>1</growablecols>
+								<growablerows></growablerows>
+								<object class="sizeritem">
+									<option>0</option>
+									<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+									<border>5</border>
+									<object class="wxStaticText" name="m_staticText14">
+										<label>Parent node:</label>
+										<wrap>-1</wrap>
+									</object>
+								</object>
+								<object class="sizeritem">
+									<option>1</option>
+									<flag>wxEXPAND</flag>
+									<border>5</border>
+									<object class="wxBoxSizer">
+										<orient>wxHORIZONTAL</orient>
+										<object class="sizeritem">
+											<option>1</option>
+											<flag>wxALIGN_CENTER_VERTICAL|wxTOP|wxBOTTOM|wxRIGHT</flag>
+											<border>2</border>
+											<object class="wxTextCtrl" name="m_attachmentParentNode">
+												<style>wxTE_READONLY</style>
+												<value></value>
+											</object>
+										</object>
+									</object>
+								</object>
+								<object class="sizeritem">
+									<option>0</option>
+									<flag>wxALIGN_CENTER_VERTICAL</flag>
+									<border>5</border>
+									<object class="wxBitmapButton" name="m_inspectAttachmentParent">
+										<style>wxBU_AUTODRAW</style>
+										<size>21,21</size>
+										<bitmap>images\pb_browse.png</bitmap>
+										<default>0</default>
+									</object>
+								</object>
+								<object class="sizeritem">
+									<option>0</option>
+									<flag>wxALL</flag>
+									<border>5</border>
+									<object class="wxStaticText" name="m_staticText15">
+										<label>Child node:</label>
+										<wrap>-1</wrap>
+									</object>
+								</object>
+								<object class="sizeritem">
+									<option>1</option>
+									<flag>wxEXPAND</flag>
+									<border>5</border>
+									<object class="wxBoxSizer">
+										<orient>wxHORIZONTAL</orient>
+										<object class="sizeritem">
+											<option>1</option>
+											<flag>wxALIGN_CENTER_VERTICAL|wxTOP|wxBOTTOM|wxRIGHT</flag>
+											<border>2</border>
+											<object class="wxTextCtrl" name="m_attachmentChildNode">
+												<style>wxTE_READONLY</style>
+												<value></value>
+											</object>
+										</object>
+									</object>
+								</object>
+								<object class="sizeritem">
+									<option>0</option>
+									<flag>wxALIGN_CENTER_VERTICAL</flag>
+									<border>5</border>
+									<object class="wxBitmapButton" name="m_inspectAttachmentChild">
+										<style>wxBU_AUTODRAW</style>
+										<size>21,21</size>
+										<bitmap>images\pb_browse.png</bitmap>
+										<default>0</default>
+									</object>
+								</object>
+								<object class="spacer">
+									<option>1</option>
+									<flag>wxEXPAND</flag>
+									<border>5</border>
+									<size>0,0</size>
+								</object>
+								<object class="sizeritem">
+									<option>0</option>
+									<flag>wxTOP</flag>
+									<border>2</border>
+									<object class="wxCheckBox" name="m_brokenAttachment">
+										<label>Broken attachment</label>
+										<checked>0</checked>
+									</object>
+								</object>
+								<object class="spacer">
+									<option>1</option>
+									<flag>wxEXPAND</flag>
+									<border>5</border>
+									<size>0,0</size>
+								</object>
+							</object>
+						</object>
+					</object>
+					<object class="notebookpage">
+						<label>MeshComponent</label>
+						<selected>0</selected>
+						<object class="wxPanel" name="m_meshComponentPanel">
+							<style>wxTAB_TRAVERSAL</style>
+							<object class="wxBoxSizer">
+								<orient>wxVERTICAL</orient>
+								<object class="sizeritem">
+									<option>1</option>
+									<flag>wxALL</flag>
+									<border>5</border>
+									<object class="wxGrid" name="m_chunksGrid" />
+								</object>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+</resource>

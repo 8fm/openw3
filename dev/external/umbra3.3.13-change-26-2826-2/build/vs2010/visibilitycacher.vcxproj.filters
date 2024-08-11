@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="utils">
+      <UniqueIdentifier>{DA916624-41C6-9B4F-B35B-941528AB0015}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils\visibilitycacher">
+      <UniqueIdentifier>{50FE8B08-2022-5541-9FAF-6F5D2F077877}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\utils\visibilitycacher\umbraVisibilityCacher.hpp">
+      <Filter>utils\visibilitycacher</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\utils\visibilitycacher\main.cpp">
+      <Filter>utils\visibilitycacher</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\utils\visibilitycacher\umbraVisibilityCacher.cpp">
+      <Filter>utils\visibilitycacher</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

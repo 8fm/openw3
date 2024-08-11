@@ -1,0 +1,23 @@
+struct PSInput
+{
+	float4 pos : S_POSITION;
+	float4 col : COLOR;
+};
+
+struct PSOutput
+{
+	float4 color0 : S_TARGET_OUTPUT0;
+	float4 color1 : S_TARGET_OUTPUT1;
+	float4 color2 : S_TARGET_OUTPUT2;
+	float4 color3 : S_TARGET_OUTPUT3;
+};
+
+PSOutput main(PSInput i)
+{
+	PSOutput o;
+	o.color0 = i.col;
+	o.color1 = i.col;
+	o.color2 = i.col;
+	o.color3 = i.col;
+	return o;
+}

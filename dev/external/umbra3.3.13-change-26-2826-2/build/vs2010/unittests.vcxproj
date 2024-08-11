@@ -1,0 +1,1426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Xbox 360">
+      <Configuration>Debug</Configuration>
+      <Platform>Xbox 360</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|PS3">
+      <Configuration>Debug</Configuration>
+      <Platform>PS3</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ORBIS">
+      <Configuration>Debug</Configuration>
+      <Platform>ORBIS</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Durango">
+      <Configuration>Debug</Configuration>
+      <Platform>Durango</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Test|Win32">
+      <Configuration>Test</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Test|x64">
+      <Configuration>Test</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Test|Xbox 360">
+      <Configuration>Test</Configuration>
+      <Platform>Xbox 360</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Test|PS3">
+      <Configuration>Test</Configuration>
+      <Platform>PS3</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Test|ORBIS">
+      <Configuration>Test</Configuration>
+      <Platform>ORBIS</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Test|Durango">
+      <Configuration>Test</Configuration>
+      <Platform>Durango</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Xbox 360">
+      <Configuration>Release</Configuration>
+      <Platform>Xbox 360</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|PS3">
+      <Configuration>Release</Configuration>
+      <Platform>PS3</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ORBIS">
+      <Configuration>Release</Configuration>
+      <Platform>ORBIS</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Durango">
+      <Configuration>Release</Configuration>
+      <Platform>Durango</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B593FC3C-8ADA-C14E-9424-B42CDF509230}</ProjectGuid>
+    <RootNamespace>unittests</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|PS3'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>GCC</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ORBIS'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Durango'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Test|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Test|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Test|Xbox 360'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Test|PS3'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>GCC</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Test|ORBIS'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Test|Durango'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|PS3'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>GCC</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ORBIS'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Durango'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|PS3'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ORBIS'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Durango'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Test|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Test|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Test|Xbox 360'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Test|PS3'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Test|ORBIS'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Test|Durango'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|PS3'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|ORBIS'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Durango'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\..\bin\win32\</OutDir>
+    <IntDir>..\..\intermediates\unittests\x32\Debug\</IntDir>
+    <TargetName>umbraunittests32_d</TargetName>
+    <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    <LinkIncremental>false</LinkIncremental>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>..\..\bin\win64\</OutDir>
+    <IntDir>..\..\intermediates\unittests\x64\Debug\</IntDir>
+    <TargetName>umbraunittests64_d</TargetName>
+    <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    <LinkIncremental>false</LinkIncremental>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'">
+    <OutDir>..\..\bin\xbox360\</OutDir>
+    <IntDir>..\..\intermediates\unittests\Xbox360\Debug\</IntDir>
+    <TargetName>umbraunittests_d</TargetName>
+    <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    <ImageXexOutput>$(OutDir)$(TargetName).xex</ImageXexOutput>
+    <RemoteRoot>devkit:\umbra3\unittests</RemoteRoot>
+    <LinkIncremental>false</LinkIncremental>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|PS3'">
+    <OutDir>..\..\bin\ps3\</OutDir>
+    <IntDir>..\..\intermediates\unittests\PS3\Debug\</IntDir>
+    <TargetName>umbraunittests_d</TargetName>
+    <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    <LinkIncremental>false</LinkIncremental>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ORBIS'">
+    <OutDir>..\..\bin\orbis\</OutDir>
+    <IntDir>..\..\intermediates\unittests\ORBIS\Debug\</IntDir>
+    <TargetName>umbraunittests_d</TargetName>
+    <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    <LinkIncremental>false</LinkIncremental>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Durango'">
+    <OutDir>..\..\bin\durango\unittests_d\</OutDir>
+    <IntDir>..\..\intermediates\unittests\Durango\Debug\</IntDir>
+    <TargetName>umbraunittests_d</TargetName>
+    <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    <LinkIncremental>false</LinkIncremental>
+    <GenerateManifest>false</GenerateManifest>
+    <ReferencePath>$(Console_SdkLibPath);$(Console_SdkWindowsMetadataPath)</ReferencePath>
+    <LibraryPath>$(Console_SdkLibPath)</LibraryPath>
+    <LibraryWPath>$(Console_SdkLibPath);$(Console_SdkWindowsMetadataPath)</LibraryWPath>
+    <IncludePath>$(Console_SdkIncludeRoot)</IncludePath>
+    <ExecutablePath>$(Console_SdkRoot)\bin;$(WindowsSDK_ExecutablePath_x86);$(VSInstallDir)Common7\Tools\bin;$(VSInstallDir)Common7\tools;$(VSInstallDir)Common7\ide;$(ProgramFiles)\HTML Help Workshop;$(MSBuildToolsPath32);$(FxCopDir);$(PATH);</ExecutablePath>
+    <LayoutDir>..\..\bin\durango\layout\unittests_d</LayoutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Test|Win32'">
+    <OutDir>..\..\bin\win32\</OutDir>
+    <IntDir>..\..\intermediates\unittests\x32\Test\</IntDir>
+    <TargetName>umbraunittests32_t</TargetName>
+    <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    <LinkIncremental>false</LinkIncremental>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Test|x64'">
+    <OutDir>..\..\bin\win64\</OutDir>
+    <IntDir>..\..\intermediates\unittests\x64\Test\</IntDir>
+    <TargetName>umbraunittests64_t</TargetName>
+    <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    <LinkIncremental>false</LinkIncremental>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Test|Xbox 360'">
+    <OutDir>..\..\bin\xbox360\</OutDir>
+    <IntDir>..\..\intermediates\unittests\Xbox360\Test\</IntDir>
+    <TargetName>umbraunittests_t</TargetName>
+    <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    <ImageXexOutput>$(OutDir)$(TargetName).xex</ImageXexOutput>
+    <RemoteRoot>devkit:\umbra3\unittests</RemoteRoot>
+    <LinkIncremental>false</LinkIncremental>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Test|PS3'">
+    <OutDir>..\..\bin\ps3\</OutDir>
+    <IntDir>..\..\intermediates\unittests\PS3\Test\</IntDir>
+    <TargetName>umbraunittests_t</TargetName>
+    <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    <LinkIncremental>false</LinkIncremental>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Test|ORBIS'">
+    <OutDir>..\..\bin\orbis\</OutDir>
+    <IntDir>..\..\intermediates\unittests\ORBIS\Test\</IntDir>
+    <TargetName>umbraunittests_t</TargetName>
+    <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    <LinkIncremental>false</LinkIncremental>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Test|Durango'">
+    <OutDir>..\..\bin\durango\unittests_t\</OutDir>
+    <IntDir>..\..\intermediates\unittests\Durango\Test\</IntDir>
+    <TargetName>umbraunittests_t</TargetName>
+    <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    <LinkIncremental>false</LinkIncremental>
+    <GenerateManifest>false</GenerateManifest>
+    <ReferencePath>$(Console_SdkLibPath);$(Console_SdkWindowsMetadataPath)</ReferencePath>
+    <LibraryPath>$(Console_SdkLibPath)</LibraryPath>
+    <LibraryWPath>$(Console_SdkLibPath);$(Console_SdkWindowsMetadataPath)</LibraryWPath>
+    <IncludePath>$(Console_SdkIncludeRoot)</IncludePath>
+    <ExecutablePath>$(Console_SdkRoot)\bin;$(WindowsSDK_ExecutablePath_x86);$(VSInstallDir)Common7\Tools\bin;$(VSInstallDir)Common7\tools;$(VSInstallDir)Common7\ide;$(ProgramFiles)\HTML Help Workshop;$(MSBuildToolsPath32);$(FxCopDir);$(PATH);</ExecutablePath>
+    <LayoutDir>..\..\bin\durango\layout\unittests_t</LayoutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>..\..\bin\win32\</OutDir>
+    <IntDir>..\..\intermediates\unittests\x32\Release\</IntDir>
+    <TargetName>umbraunittests32</TargetName>
+    <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    <LinkIncremental>false</LinkIncremental>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>..\..\bin\win64\</OutDir>
+    <IntDir>..\..\intermediates\unittests\x64\Release\</IntDir>
+    <TargetName>umbraunittests64</TargetName>
+    <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    <LinkIncremental>false</LinkIncremental>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'">
+    <OutDir>..\..\bin\xbox360\</OutDir>
+    <IntDir>..\..\intermediates\unittests\Xbox360\Release\</IntDir>
+    <TargetName>umbraunittests</TargetName>
+    <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    <ImageXexOutput>$(OutDir)$(TargetName).xex</ImageXexOutput>
+    <RemoteRoot>devkit:\umbra3\unittests</RemoteRoot>
+    <LinkIncremental>false</LinkIncremental>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|PS3'">
+    <OutDir>..\..\bin\ps3\</OutDir>
+    <IntDir>..\..\intermediates\unittests\PS3\Release\</IntDir>
+    <TargetName>umbraunittests</TargetName>
+    <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    <LinkIncremental>false</LinkIncremental>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ORBIS'">
+    <OutDir>..\..\bin\orbis\</OutDir>
+    <IntDir>..\..\intermediates\unittests\ORBIS\Release\</IntDir>
+    <TargetName>umbraunittests</TargetName>
+    <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    <LinkIncremental>false</LinkIncremental>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Durango'">
+    <OutDir>..\..\bin\durango\unittests\</OutDir>
+    <IntDir>..\..\intermediates\unittests\Durango\Release\</IntDir>
+    <TargetName>umbraunittests</TargetName>
+    <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    <LinkIncremental>false</LinkIncremental>
+    <GenerateManifest>false</GenerateManifest>
+    <ReferencePath>$(Console_SdkLibPath);$(Console_SdkWindowsMetadataPath)</ReferencePath>
+    <LibraryPath>$(Console_SdkLibPath)</LibraryPath>
+    <LibraryWPath>$(Console_SdkLibPath);$(Console_SdkWindowsMetadataPath)</LibraryWPath>
+    <IncludePath>$(Console_SdkIncludeRoot)</IncludePath>
+    <ExecutablePath>$(Console_SdkRoot)\bin;$(WindowsSDK_ExecutablePath_x86);$(VSInstallDir)Common7\Tools\bin;$(VSInstallDir)Common7\tools;$(VSInstallDir)Common7\ide;$(ProgramFiles)\HTML Help Workshop;$(MSBuildToolsPath32);$(FxCopDir);$(PATH);</ExecutablePath>
+    <LayoutDir>..\..\bin\durango\layout\unittests</LayoutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;..\..\tests\unittests;..\..\tests\unittests\tests;..\..\tests\unittests\newtests;..\..\tests\unittests\modeldata;..\..\interface\runtime;..\..\source\common;..\..\utils\testdb;..\..\source\runtime;..\..\utils\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>DEBUG;_DEBUG;UMBRA_BUILD_ID=0;UMBRA_DEBUG;_CRT_SECURE_NO_WARNINGS;_WIN32_WINNT=0x0501;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <SmallerTypeCheck>true</SmallerTypeCheck>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>DEBUG;_DEBUG;UMBRA_BUILD_ID=0;UMBRA_DEBUG;_CRT_SECURE_NO_WARNINGS;_WIN32_WINNT=0x0501;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;..\..\tests\unittests;..\..\tests\unittests\tests;..\..\tests\unittests\newtests;..\..\tests\unittests\modeldata;..\..\interface\runtime;..\..\source\common;..\..\utils\testdb;..\..\source\runtime;..\..\utils\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>libcurl_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)umbraunittests32_d.exe</OutputFile>
+      <AdditionalLibraryDirectories>..\..\external\curl\win32\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>if not exist ..\..\work\unittests mkdir ..\..\work\unittests</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;..\..\tests\unittests;..\..\tests\unittests\tests;..\..\tests\unittests\newtests;..\..\tests\unittests\modeldata;..\..\interface\runtime;..\..\source\common;..\..\utils\testdb;..\..\source\runtime;..\..\utils\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>DEBUG;_DEBUG;UMBRA_BUILD_ID=0;UMBRA_DEBUG;_CRT_SECURE_NO_WARNINGS;_WIN32_WINNT=0x0501;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <SmallerTypeCheck>true</SmallerTypeCheck>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>DEBUG;_DEBUG;UMBRA_BUILD_ID=0;UMBRA_DEBUG;_CRT_SECURE_NO_WARNINGS;_WIN32_WINNT=0x0501;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;..\..\tests\unittests;..\..\tests\unittests\tests;..\..\tests\unittests\newtests;..\..\tests\unittests\modeldata;..\..\interface\runtime;..\..\source\common;..\..\utils\testdb;..\..\source\runtime;..\..\utils\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>libcurl_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)umbraunittests64_d.exe</OutputFile>
+      <AdditionalLibraryDirectories>..\..\external\curl\win64\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>if not exist ..\..\work\unittests mkdir ..\..\work\unittests</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;..\..\tests\unittests;..\..\tests\unittests\tests;..\..\tests\unittests\newtests;..\..\tests\unittests\modeldata;..\..\interface\runtime;..\..\source\common;..\..\utils\testdb;..\..\source\runtime;..\..\utils\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_XBOX;DEBUG;_DEBUG;UMBRA_BUILD_ID=0;UMBRA_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <SmallerTypeCheck>true</SmallerTypeCheck>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_XBOX;DEBUG;_DEBUG;UMBRA_BUILD_ID=0;UMBRA_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;..\..\tests\unittests;..\..\tests\unittests\tests;..\..\tests\unittests\newtests;..\..\tests\unittests\modeldata;..\..\interface\runtime;..\..\source\common;..\..\utils\testdb;..\..\source\runtime;..\..\utils\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OutputFile>$(OutDir)umbraunittests_d.exe</OutputFile>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
+    </Link>
+    <Deploy>
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+      <DeploymentType>CopyToHardDrive</DeploymentType>
+    </Deploy>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|PS3'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <OptimizationLevel>Level0</OptimizationLevel>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;..\..\tests\unittests;..\..\tests\unittests\tests;..\..\tests\unittests\newtests;..\..\tests\unittests\modeldata;..\..\interface\runtime;..\..\source\common;..\..\utils\testdb;..\..\source\runtime;..\..\utils\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>DEBUG;_DEBUG;UMBRA_BUILD_ID=0;UMBRA_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <SmallerTypeCheck>true</SmallerTypeCheck>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Warnings>MoreWarnings</Warnings>
+      <WarningsAsErrors>true</WarningsAsErrors>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>DEBUG;_DEBUG;UMBRA_BUILD_ID=0;UMBRA_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;..\..\tests\unittests;..\..\tests\unittests\tests;..\..\tests\unittests\newtests;..\..\tests\unittests\modeldata;..\..\interface\runtime;..\..\source\common;..\..\utils\testdb;..\..\source\runtime;..\..\utils\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(SCE_PS3_ROOT)\target\ppu\lib\libspurs_stub.a;$(SCE_PS3_ROOT)\target\ppu\lib\libspurs_jq_stub.a;$(SCE_PS3_ROOT)\target\ppu\lib\libsysmodule_stub.a;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)umbraunittests_d.self</OutputFile>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ORBIS'">
+    <ClCompile>
+      <AdditionalOptions>-Wno-unused-private-field %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <OptimizationLevel>Level0</OptimizationLevel>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;..\..\tests\unittests;..\..\tests\unittests\tests;..\..\tests\unittests\newtests;..\..\tests\unittests\modeldata;..\..\interface\runtime;..\..\source\common;..\..\utils\testdb;..\..\source\runtime;..\..\utils\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>DEBUG;_DEBUG;UMBRA_BUILD_ID=0;UMBRA_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <SmallerTypeCheck>true</SmallerTypeCheck>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Warnings>MoreWarnings</Warnings>
+      <WarningsAsErrors>true</WarningsAsErrors>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PosIndependentCode>true</PosIndependentCode>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>DEBUG;_DEBUG;UMBRA_BUILD_ID=0;UMBRA_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;..\..\tests\unittests;..\..\tests\unittests\tests;..\..\tests\unittests\newtests;..\..\tests\unittests\modeldata;..\..\interface\runtime;..\..\source\common;..\..\utils\testdb;..\..\source\runtime;..\..\utils\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OutputFile>$(OutDir)umbraunittests_d.elf</OutputFile>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Durango'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;..\..\tests\unittests;..\..\tests\unittests\tests;..\..\tests\unittests\newtests;..\..\tests\unittests\modeldata;..\..\interface\runtime;..\..\source\common;..\..\utils\testdb;..\..\source\runtime;..\..\utils\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>DEBUG;_DEBUG;UMBRA_BUILD_ID=0;UMBRA_DEBUG;_CRT_SECURE_NO_WARNINGS;__WRL_NO_DEFAULT_LIB__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <SmallerTypeCheck>true</SmallerTypeCheck>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalUsingDirectories>$(Console_SdkPackagesRoot);$(Console_SdkWindowsMetadataPath);%(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>DEBUG;_DEBUG;UMBRA_BUILD_ID=0;UMBRA_DEBUG;_CRT_SECURE_NO_WARNINGS;__WRL_NO_DEFAULT_LIB__;__WRL_NO_DEFAULT_LIB__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;..\..\tests\unittests;..\..\tests\unittests\tests;..\..\tests\unittests\newtests;..\..\tests\unittests\modeldata;..\..\interface\runtime;..\..\source\common;..\..\utils\testdb;..\..\source\runtime;..\..\utils\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>kernelx.lib;combase.lib</AdditionalDependencies>
+      <OutputFile>$(OutDir)umbraunittests_d.exe</OutputFile>
+      <EntryPointSymbol>
+      </EntryPointSymbol>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Test|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;..\..\tests\unittests;..\..\tests\unittests\tests;..\..\tests\unittests\newtests;..\..\tests\unittests\modeldata;..\..\interface\runtime;..\..\source\common;..\..\utils\testdb;..\..\source\runtime;..\..\utils\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>UMBRA_BUILD_ID=0;UMBRA_DEBUG;_CRT_SECURE_NO_WARNINGS;_WIN32_WINNT=0x0501;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>UMBRA_BUILD_ID=0;UMBRA_DEBUG;_CRT_SECURE_NO_WARNINGS;_WIN32_WINNT=0x0501;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;..\..\tests\unittests;..\..\tests\unittests\tests;..\..\tests\unittests\newtests;..\..\tests\unittests\modeldata;..\..\interface\runtime;..\..\source\common;..\..\utils\testdb;..\..\source\runtime;..\..\utils\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>libcurl.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)umbraunittests32_t.exe</OutputFile>
+      <AdditionalLibraryDirectories>..\..\external\curl\win32\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>if not exist ..\..\work\unittests mkdir ..\..\work\unittests</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Test|x64'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;..\..\tests\unittests;..\..\tests\unittests\tests;..\..\tests\unittests\newtests;..\..\tests\unittests\modeldata;..\..\interface\runtime;..\..\source\common;..\..\utils\testdb;..\..\source\runtime;..\..\utils\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>UMBRA_BUILD_ID=0;UMBRA_DEBUG;_CRT_SECURE_NO_WARNINGS;_WIN32_WINNT=0x0501;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>UMBRA_BUILD_ID=0;UMBRA_DEBUG;_CRT_SECURE_NO_WARNINGS;_WIN32_WINNT=0x0501;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;..\..\tests\unittests;..\..\tests\unittests\tests;..\..\tests\unittests\newtests;..\..\tests\unittests\modeldata;..\..\interface\runtime;..\..\source\common;..\..\utils\testdb;..\..\source\runtime;..\..\utils\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>libcurl.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)umbraunittests64_t.exe</OutputFile>
+      <AdditionalLibraryDirectories>..\..\external\curl\win64\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>if not exist ..\..\work\unittests mkdir ..\..\work\unittests</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Test|Xbox 360'">
+    <ClCompile>
+      <AdditionalOptions>/Ob1 /Oz %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;..\..\tests\unittests;..\..\tests\unittests\tests;..\..\tests\unittests\newtests;..\..\tests\unittests\modeldata;..\..\interface\runtime;..\..\source\common;..\..\utils\testdb;..\..\source\runtime;..\..\utils\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_XBOX;UMBRA_BUILD_ID=0;UMBRA_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_XBOX;UMBRA_BUILD_ID=0;UMBRA_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;..\..\tests\unittests;..\..\tests\unittests\tests;..\..\tests\unittests\newtests;..\..\tests\unittests\modeldata;..\..\interface\runtime;..\..\source\common;..\..\utils\testdb;..\..\source\runtime;..\..\utils\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>$(OutDir)umbraunittests_t.exe</OutputFile>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
+    </Link>
+    <Deploy>
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+      <DeploymentType>CopyToHardDrive</DeploymentType>
+    </Deploy>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Test|PS3'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <OptimizationLevel>Level2</OptimizationLevel>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;..\..\tests\unittests;..\..\tests\unittests\tests;..\..\tests\unittests\newtests;..\..\tests\unittests\modeldata;..\..\interface\runtime;..\..\source\common;..\..\utils\testdb;..\..\source\runtime;..\..\utils\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>UMBRA_BUILD_ID=0;UMBRA_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Warnings>MoreWarnings</Warnings>
+      <WarningsAsErrors>true</WarningsAsErrors>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>UMBRA_BUILD_ID=0;UMBRA_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;..\..\tests\unittests;..\..\tests\unittests\tests;..\..\tests\unittests\newtests;..\..\tests\unittests\modeldata;..\..\interface\runtime;..\..\source\common;..\..\utils\testdb;..\..\source\runtime;..\..\utils\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>$(SCE_PS3_ROOT)\target\ppu\lib\libspurs_stub.a;$(SCE_PS3_ROOT)\target\ppu\lib\libspurs_jq_stub.a;$(SCE_PS3_ROOT)\target\ppu\lib\libsysmodule_stub.a;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)umbraunittests_t.self</OutputFile>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Test|ORBIS'">
+    <ClCompile>
+      <AdditionalOptions>-Wno-unused-private-field %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <OptimizationLevel>Level2</OptimizationLevel>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;..\..\tests\unittests;..\..\tests\unittests\tests;..\..\tests\unittests\newtests;..\..\tests\unittests\modeldata;..\..\interface\runtime;..\..\source\common;..\..\utils\testdb;..\..\source\runtime;..\..\utils\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>UMBRA_BUILD_ID=0;UMBRA_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Warnings>MoreWarnings</Warnings>
+      <WarningsAsErrors>true</WarningsAsErrors>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PosIndependentCode>true</PosIndependentCode>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>UMBRA_BUILD_ID=0;UMBRA_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;..\..\tests\unittests;..\..\tests\unittests\tests;..\..\tests\unittests\newtests;..\..\tests\unittests\modeldata;..\..\interface\runtime;..\..\source\common;..\..\utils\testdb;..\..\source\runtime;..\..\utils\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>$(OutDir)umbraunittests_t.elf</OutputFile>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Test|Durango'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;..\..\tests\unittests;..\..\tests\unittests\tests;..\..\tests\unittests\newtests;..\..\tests\unittests\modeldata;..\..\interface\runtime;..\..\source\common;..\..\utils\testdb;..\..\source\runtime;..\..\utils\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>UMBRA_BUILD_ID=0;UMBRA_DEBUG;_CRT_SECURE_NO_WARNINGS;__WRL_NO_DEFAULT_LIB__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalUsingDirectories>$(Console_SdkPackagesRoot);$(Console_SdkWindowsMetadataPath);%(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>UMBRA_BUILD_ID=0;UMBRA_DEBUG;_CRT_SECURE_NO_WARNINGS;__WRL_NO_DEFAULT_LIB__;__WRL_NO_DEFAULT_LIB__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;..\..\tests\unittests;..\..\tests\unittests\tests;..\..\tests\unittests\newtests;..\..\tests\unittests\modeldata;..\..\interface\runtime;..\..\source\common;..\..\utils\testdb;..\..\source\runtime;..\..\utils\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>kernelx.lib;combase.lib</AdditionalDependencies>
+      <OutputFile>$(OutDir)umbraunittests_t.exe</OutputFile>
+      <EntryPointSymbol>
+      </EntryPointSymbol>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;..\..\tests\unittests;..\..\tests\unittests\tests;..\..\tests\unittests\newtests;..\..\tests\unittests\modeldata;..\..\interface\runtime;..\..\source\common;..\..\utils\testdb;..\..\source\runtime;..\..\utils\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;UMBRA_BUILD_ID=0;_CRT_SECURE_NO_WARNINGS;_WIN32_WINNT=0x0501;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;UMBRA_BUILD_ID=0;_CRT_SECURE_NO_WARNINGS;_WIN32_WINNT=0x0501;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;..\..\tests\unittests;..\..\tests\unittests\tests;..\..\tests\unittests\newtests;..\..\tests\unittests\modeldata;..\..\interface\runtime;..\..\source\common;..\..\utils\testdb;..\..\source\runtime;..\..\utils\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>libcurl.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)umbraunittests32.exe</OutputFile>
+      <AdditionalLibraryDirectories>..\..\external\curl\win32\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>if not exist ..\..\work\unittests mkdir ..\..\work\unittests</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;..\..\tests\unittests;..\..\tests\unittests\tests;..\..\tests\unittests\newtests;..\..\tests\unittests\modeldata;..\..\interface\runtime;..\..\source\common;..\..\utils\testdb;..\..\source\runtime;..\..\utils\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;UMBRA_BUILD_ID=0;_CRT_SECURE_NO_WARNINGS;_WIN32_WINNT=0x0501;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;UMBRA_BUILD_ID=0;_CRT_SECURE_NO_WARNINGS;_WIN32_WINNT=0x0501;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;..\..\tests\unittests;..\..\tests\unittests\tests;..\..\tests\unittests\newtests;..\..\tests\unittests\modeldata;..\..\interface\runtime;..\..\source\common;..\..\utils\testdb;..\..\source\runtime;..\..\utils\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>libcurl.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)umbraunittests64.exe</OutputFile>
+      <AdditionalLibraryDirectories>..\..\external\curl\win64\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>if not exist ..\..\work\unittests mkdir ..\..\work\unittests</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'">
+    <ClCompile>
+      <AdditionalOptions>/Ob1 /Oz %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;..\..\tests\unittests;..\..\tests\unittests\tests;..\..\tests\unittests\newtests;..\..\tests\unittests\modeldata;..\..\interface\runtime;..\..\source\common;..\..\utils\testdb;..\..\source\runtime;..\..\utils\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_XBOX;NDEBUG;UMBRA_BUILD_ID=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_XBOX;NDEBUG;UMBRA_BUILD_ID=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;..\..\tests\unittests;..\..\tests\unittests\tests;..\..\tests\unittests\newtests;..\..\tests\unittests\modeldata;..\..\interface\runtime;..\..\source\common;..\..\utils\testdb;..\..\source\runtime;..\..\utils\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>$(OutDir)umbraunittests.exe</OutputFile>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
+    </Link>
+    <Deploy>
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+      <DeploymentType>CopyToHardDrive</DeploymentType>
+    </Deploy>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|PS3'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <OptimizationLevel>Level2</OptimizationLevel>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;..\..\tests\unittests;..\..\tests\unittests\tests;..\..\tests\unittests\newtests;..\..\tests\unittests\modeldata;..\..\interface\runtime;..\..\source\common;..\..\utils\testdb;..\..\source\runtime;..\..\utils\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;UMBRA_BUILD_ID=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Warnings>MoreWarnings</Warnings>
+      <WarningsAsErrors>true</WarningsAsErrors>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;UMBRA_BUILD_ID=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;..\..\tests\unittests;..\..\tests\unittests\tests;..\..\tests\unittests\newtests;..\..\tests\unittests\modeldata;..\..\interface\runtime;..\..\source\common;..\..\utils\testdb;..\..\source\runtime;..\..\utils\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>$(SCE_PS3_ROOT)\target\ppu\lib\libspurs_stub.a;$(SCE_PS3_ROOT)\target\ppu\lib\libspurs_jq_stub.a;$(SCE_PS3_ROOT)\target\ppu\lib\libsysmodule_stub.a;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)umbraunittests.self</OutputFile>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ORBIS'">
+    <ClCompile>
+      <AdditionalOptions>-Wno-unused-private-field %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <OptimizationLevel>Level2</OptimizationLevel>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;..\..\tests\unittests;..\..\tests\unittests\tests;..\..\tests\unittests\newtests;..\..\tests\unittests\modeldata;..\..\interface\runtime;..\..\source\common;..\..\utils\testdb;..\..\source\runtime;..\..\utils\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;UMBRA_BUILD_ID=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Warnings>MoreWarnings</Warnings>
+      <WarningsAsErrors>true</WarningsAsErrors>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PosIndependentCode>true</PosIndependentCode>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;UMBRA_BUILD_ID=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;..\..\tests\unittests;..\..\tests\unittests\tests;..\..\tests\unittests\newtests;..\..\tests\unittests\modeldata;..\..\interface\runtime;..\..\source\common;..\..\utils\testdb;..\..\source\runtime;..\..\utils\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>$(OutDir)umbraunittests.elf</OutputFile>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Durango'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;..\..\tests\unittests;..\..\tests\unittests\tests;..\..\tests\unittests\newtests;..\..\tests\unittests\modeldata;..\..\interface\runtime;..\..\source\common;..\..\utils\testdb;..\..\source\runtime;..\..\utils\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;UMBRA_BUILD_ID=0;_CRT_SECURE_NO_WARNINGS;__WRL_NO_DEFAULT_LIB__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalUsingDirectories>$(Console_SdkPackagesRoot);$(Console_SdkWindowsMetadataPath);%(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;UMBRA_BUILD_ID=0;_CRT_SECURE_NO_WARNINGS;__WRL_NO_DEFAULT_LIB__;__WRL_NO_DEFAULT_LIB__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;..\..\tests\unittests;..\..\tests\unittests\tests;..\..\tests\unittests\newtests;..\..\tests\unittests\modeldata;..\..\interface\runtime;..\..\source\common;..\..\utils\testdb;..\..\source\runtime;..\..\utils\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>kernelx.lib;combase.lib</AdditionalDependencies>
+      <OutputFile>$(OutDir)umbraunittests.exe</OutputFile>
+      <EntryPointSymbol>
+      </EntryPointSymbol>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\tests\unittests\FileUtil.hpp" />
+    <ClInclude Include="..\..\tests\unittests\Model.hpp" />
+    <ClInclude Include="..\..\tests\unittests\printer.hpp" />
+    <ClInclude Include="..\..\tests\unittests\QueryHelper.hpp" />
+    <ClInclude Include="..\..\tests\unittests\SceneGenerator.hpp" />
+    <ClInclude Include="..\..\tests\unittests\Sketch.hpp" />
+    <ClInclude Include="..\..\tests\unittests\unittest.hpp" />
+    <ClInclude Include="..\..\tests\unittests\tests\basicbuilder.hpp" />
+    <ClInclude Include="..\..\tests\unittests\tests\brokendata.hpp" />
+    <ClInclude Include="..\..\tests\unittests\tests\builderoom.hpp" />
+    <ClInclude Include="..\..\tests\unittests\tests\cliptests.hpp" />
+    <ClInclude Include="..\..\tests\unittests\tests\dynamicvisibility.hpp" />
+    <ClInclude Include="..\..\tests\unittests\tests\grouper.hpp" />
+    <ClInclude Include="..\..\tests\unittests\tests\hierarchicalquery.hpp" />
+    <ClInclude Include="..\..\tests\unittests\tests\linesegment.hpp" />
+    <ClInclude Include="..\..\tests\unittests\tests\locallights.hpp" />
+    <ClInclude Include="..\..\tests\unittests\tests\lodrefpoint.hpp" />
+    <ClInclude Include="..\..\tests\unittests\tests\maxuserportals.hpp" />
+    <ClInclude Include="..\..\tests\unittests\tests\oobtargets.hpp" />
+    <ClInclude Include="..\..\tests\unittests\tests\outputsensitivity.hpp" />
+    <ClInclude Include="..\..\tests\unittests\tests\pointtopointdistance.hpp" />
+    <ClInclude Include="..\..\tests\unittests\tests\regionbench.hpp" />
+    <ClInclude Include="..\..\tests\unittests\tests\shadows.hpp" />
+    <ClInclude Include="..\..\tests\unittests\tests\startpos.hpp" />
+    <ClInclude Include="..\..\tests\unittests\tests\streaming.hpp" />
+    <ClInclude Include="..\..\tests\unittests\tests\streamingempty.hpp" />
+    <ClInclude Include="..\..\tests\unittests\tests\tomeconversion.hpp" />
+    <ClInclude Include="..\..\tests\unittests\tests\tomegroups.hpp" />
+    <ClInclude Include="..\..\tests\unittests\tests\unitdumprunner.hpp" />
+    <ClInclude Include="..\..\tests\unittests\tests\userportals.hpp" />
+    <ClInclude Include="..\..\tests\unittests\tests\volumetrictarget.hpp" />
+    <ClInclude Include="..\..\tests\unittests\tests\workmem.hpp" />
+    <ClInclude Include="..\..\tests\unittests\modeldata\bunny_i.hpp" />
+    <ClInclude Include="..\..\tests\unittests\modeldata\bunny_v.hpp" />
+    <ClInclude Include="..\..\tests\unittests\modeldata\chair_i.hpp" />
+    <ClInclude Include="..\..\tests\unittests\modeldata\chair_v.hpp" />
+    <ClInclude Include="..\..\tests\unittests\modeldata\framedcube_i.hpp" />
+    <ClInclude Include="..\..\tests\unittests\modeldata\framedcube_v.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\tests\unittests\FileUtil.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\Model.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\QueryHelper.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\SceneGenerator.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\Sketch.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\unittest.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\unit_runtime.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\basicbuilder.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\brokendata.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\builderoom.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\cliptests.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\computationapi.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\dynamicshadows.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\dynamicvisibility.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\grouper.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\hierarchicalquery.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\inputdepthbuffer.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\linesegment.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\locallights.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\lodrefpoint.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\lodscaling.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\maxuserportals.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\objectstripping.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\oobtargets.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\outputsensitivity.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\pointtopointdistance.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\process.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\regionbench.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\shadowjobs.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\shadows.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\startpos.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\streaming.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\streamingempty.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\streamingoom.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\tomeconversion.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\tomeCRC.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\tomegroups.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\unitdumprunner.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\userportals.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\volumetrictarget.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\tests\workmem.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\newtests\Atomic.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\newtests\ChecksumTest.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\newtests\ComputationParams.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\newtests\Contribution.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\newtests\ConvexHullTest.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\newtests\DebugCollector.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\newtests\DepthBufferDump.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\newtests\Extract16Signs.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\newtests\GraphicsContainer.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\newtests\Hash.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\newtests\HashValue.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\newtests\Http.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\newtests\Iterator.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\newtests\Misbehave.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\newtests\pool.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\newtests\RasterizePortal.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\newtests\RuntimeApiSanity.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\newtests\SliceWork.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\newtests\Standard.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\newtests\TestRectAny.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\newtests\TomeCache.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\newtests\TomeCollectionSerialization.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\newtests\TransformTests.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\newtests\UpdateDepthBuffer.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\tests\unittests\newtests\VisibleObjectOutput.cpp">
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\tests\unittests\unitfiles\cameraonportal.unit" />
+    <None Include="..\..\tests\unittests\unitfiles\frustumculling.unit" />
+    <None Include="..\..\tests\unittests\unitfiles\nonoccluderobject.unit" />
+    <None Include="..\..\tests\unittests\unitfiles\occluderonly.unit" />
+    <None Include="..\..\tests\unittests\unitfiles\portalculltraversalorder.unit" />
+    <None Include="..\..\tests\unittests\unitfiles\portalculltraversalorder2.unit" />
+    <None Include="..\..\tests\unittests\unitfiles\portalsopenclose.unit" />
+    <None Include="..\..\tests\unittests\unitfiles\portalszerodistance.unit" />
+    <None Include="..\..\tests\unittests\unitfiles\staticvisibility.unit" />
+    <None Include="..\..\tests\unittests\unitfiles\unity_regression_001.unit" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="common.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      <Project>{808CA157-1B9F-3A46-949A-59A425702F30}</Project>
+    </ProjectReference>
+    <ProjectReference Include="common.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      <Project>{808CA157-1B9F-3A46-949A-59A425702F30}</Project>
+    </ProjectReference>
+    <ProjectReference Include="common.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'">
+      <Project>{808CA157-1B9F-3A46-949A-59A425702F30}</Project>
+    </ProjectReference>
+    <ProjectReference Include="common.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Debug|PS3'">
+      <Project>{808CA157-1B9F-3A46-949A-59A425702F30}</Project>
+    </ProjectReference>
+    <ProjectReference Include="common.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Debug|ORBIS'">
+      <Project>{808CA157-1B9F-3A46-949A-59A425702F30}</Project>
+    </ProjectReference>
+    <ProjectReference Include="common.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Debug|Durango'">
+      <Project>{808CA157-1B9F-3A46-949A-59A425702F30}</Project>
+    </ProjectReference>
+    <ProjectReference Include="common.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Test|Win32'">
+      <Project>{808CA157-1B9F-3A46-949A-59A425702F30}</Project>
+    </ProjectReference>
+    <ProjectReference Include="common.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Test|x64'">
+      <Project>{808CA157-1B9F-3A46-949A-59A425702F30}</Project>
+    </ProjectReference>
+    <ProjectReference Include="common.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Test|Xbox 360'">
+      <Project>{808CA157-1B9F-3A46-949A-59A425702F30}</Project>
+    </ProjectReference>
+    <ProjectReference Include="common.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Test|PS3'">
+      <Project>{808CA157-1B9F-3A46-949A-59A425702F30}</Project>
+    </ProjectReference>
+    <ProjectReference Include="common.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Test|ORBIS'">
+      <Project>{808CA157-1B9F-3A46-949A-59A425702F30}</Project>
+    </ProjectReference>
+    <ProjectReference Include="common.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Test|Durango'">
+      <Project>{808CA157-1B9F-3A46-949A-59A425702F30}</Project>
+    </ProjectReference>
+    <ProjectReference Include="common.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      <Project>{808CA157-1B9F-3A46-949A-59A425702F30}</Project>
+    </ProjectReference>
+    <ProjectReference Include="common.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      <Project>{808CA157-1B9F-3A46-949A-59A425702F30}</Project>
+    </ProjectReference>
+    <ProjectReference Include="common.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'">
+      <Project>{808CA157-1B9F-3A46-949A-59A425702F30}</Project>
+    </ProjectReference>
+    <ProjectReference Include="common.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Release|PS3'">
+      <Project>{808CA157-1B9F-3A46-949A-59A425702F30}</Project>
+    </ProjectReference>
+    <ProjectReference Include="common.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Release|ORBIS'">
+      <Project>{808CA157-1B9F-3A46-949A-59A425702F30}</Project>
+    </ProjectReference>
+    <ProjectReference Include="common.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Release|Durango'">
+      <Project>{808CA157-1B9F-3A46-949A-59A425702F30}</Project>
+    </ProjectReference>
+    <ProjectReference Include="testdb.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      <Project>{2094800D-2DB1-4346-89FA-113E6714D657}</Project>
+    </ProjectReference>
+    <ProjectReference Include="testdb.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      <Project>{2094800D-2DB1-4346-89FA-113E6714D657}</Project>
+    </ProjectReference>
+    <ProjectReference Include="testdb.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'">
+      <Project>{2094800D-2DB1-4346-89FA-113E6714D657}</Project>
+    </ProjectReference>
+    <ProjectReference Include="testdb.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Debug|PS3'">
+      <Project>{2094800D-2DB1-4346-89FA-113E6714D657}</Project>
+    </ProjectReference>
+    <ProjectReference Include="testdb.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Debug|ORBIS'">
+      <Project>{2094800D-2DB1-4346-89FA-113E6714D657}</Project>
+    </ProjectReference>
+    <ProjectReference Include="testdb.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Debug|Durango'">
+      <Project>{2094800D-2DB1-4346-89FA-113E6714D657}</Project>
+    </ProjectReference>
+    <ProjectReference Include="testdb.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Test|Win32'">
+      <Project>{2094800D-2DB1-4346-89FA-113E6714D657}</Project>
+    </ProjectReference>
+    <ProjectReference Include="testdb.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Test|x64'">
+      <Project>{2094800D-2DB1-4346-89FA-113E6714D657}</Project>
+    </ProjectReference>
+    <ProjectReference Include="testdb.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Test|Xbox 360'">
+      <Project>{2094800D-2DB1-4346-89FA-113E6714D657}</Project>
+    </ProjectReference>
+    <ProjectReference Include="testdb.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Test|PS3'">
+      <Project>{2094800D-2DB1-4346-89FA-113E6714D657}</Project>
+    </ProjectReference>
+    <ProjectReference Include="testdb.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Test|ORBIS'">
+      <Project>{2094800D-2DB1-4346-89FA-113E6714D657}</Project>
+    </ProjectReference>
+    <ProjectReference Include="testdb.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Test|Durango'">
+      <Project>{2094800D-2DB1-4346-89FA-113E6714D657}</Project>
+    </ProjectReference>
+    <ProjectReference Include="testdb.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      <Project>{2094800D-2DB1-4346-89FA-113E6714D657}</Project>
+    </ProjectReference>
+    <ProjectReference Include="testdb.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      <Project>{2094800D-2DB1-4346-89FA-113E6714D657}</Project>
+    </ProjectReference>
+    <ProjectReference Include="testdb.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'">
+      <Project>{2094800D-2DB1-4346-89FA-113E6714D657}</Project>
+    </ProjectReference>
+    <ProjectReference Include="testdb.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Release|PS3'">
+      <Project>{2094800D-2DB1-4346-89FA-113E6714D657}</Project>
+    </ProjectReference>
+    <ProjectReference Include="testdb.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Release|ORBIS'">
+      <Project>{2094800D-2DB1-4346-89FA-113E6714D657}</Project>
+    </ProjectReference>
+    <ProjectReference Include="testdb.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Release|Durango'">
+      <Project>{2094800D-2DB1-4346-89FA-113E6714D657}</Project>
+    </ProjectReference>
+    <ProjectReference Include="runtime.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      <Project>{9CAADD79-215C-CC4D-8881-A03955EFBC2D}</Project>
+    </ProjectReference>
+    <ProjectReference Include="runtime.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      <Project>{9CAADD79-215C-CC4D-8881-A03955EFBC2D}</Project>
+    </ProjectReference>
+    <ProjectReference Include="runtime.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'">
+      <Project>{9CAADD79-215C-CC4D-8881-A03955EFBC2D}</Project>
+    </ProjectReference>
+    <ProjectReference Include="runtime.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Debug|PS3'">
+      <Project>{9CAADD79-215C-CC4D-8881-A03955EFBC2D}</Project>
+    </ProjectReference>
+    <ProjectReference Include="runtime.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Debug|ORBIS'">
+      <Project>{9CAADD79-215C-CC4D-8881-A03955EFBC2D}</Project>
+    </ProjectReference>
+    <ProjectReference Include="runtime.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Debug|Durango'">
+      <Project>{9CAADD79-215C-CC4D-8881-A03955EFBC2D}</Project>
+    </ProjectReference>
+    <ProjectReference Include="runtime.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Test|Win32'">
+      <Project>{9CAADD79-215C-CC4D-8881-A03955EFBC2D}</Project>
+    </ProjectReference>
+    <ProjectReference Include="runtime.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Test|x64'">
+      <Project>{9CAADD79-215C-CC4D-8881-A03955EFBC2D}</Project>
+    </ProjectReference>
+    <ProjectReference Include="runtime.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Test|Xbox 360'">
+      <Project>{9CAADD79-215C-CC4D-8881-A03955EFBC2D}</Project>
+    </ProjectReference>
+    <ProjectReference Include="runtime.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Test|PS3'">
+      <Project>{9CAADD79-215C-CC4D-8881-A03955EFBC2D}</Project>
+    </ProjectReference>
+    <ProjectReference Include="runtime.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Test|ORBIS'">
+      <Project>{9CAADD79-215C-CC4D-8881-A03955EFBC2D}</Project>
+    </ProjectReference>
+    <ProjectReference Include="runtime.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Test|Durango'">
+      <Project>{9CAADD79-215C-CC4D-8881-A03955EFBC2D}</Project>
+    </ProjectReference>
+    <ProjectReference Include="runtime.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      <Project>{9CAADD79-215C-CC4D-8881-A03955EFBC2D}</Project>
+    </ProjectReference>
+    <ProjectReference Include="runtime.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      <Project>{9CAADD79-215C-CC4D-8881-A03955EFBC2D}</Project>
+    </ProjectReference>
+    <ProjectReference Include="runtime.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'">
+      <Project>{9CAADD79-215C-CC4D-8881-A03955EFBC2D}</Project>
+    </ProjectReference>
+    <ProjectReference Include="runtime.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Release|PS3'">
+      <Project>{9CAADD79-215C-CC4D-8881-A03955EFBC2D}</Project>
+    </ProjectReference>
+    <ProjectReference Include="runtime.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Release|ORBIS'">
+      <Project>{9CAADD79-215C-CC4D-8881-A03955EFBC2D}</Project>
+    </ProjectReference>
+    <ProjectReference Include="runtime.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Release|Durango'">
+      <Project>{9CAADD79-215C-CC4D-8881-A03955EFBC2D}</Project>
+    </ProjectReference>
+    <ProjectReference Include="optimizer_static.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      <Project>{8A946C3A-0587-B849-8C81-5FBE6591A69E}</Project>
+    </ProjectReference>
+    <ProjectReference Include="optimizer_static.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      <Project>{8A946C3A-0587-B849-8C81-5FBE6591A69E}</Project>
+    </ProjectReference>
+    <ProjectReference Include="optimizer_static.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Test|Win32'">
+      <Project>{8A946C3A-0587-B849-8C81-5FBE6591A69E}</Project>
+    </ProjectReference>
+    <ProjectReference Include="optimizer_static.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Test|x64'">
+      <Project>{8A946C3A-0587-B849-8C81-5FBE6591A69E}</Project>
+    </ProjectReference>
+    <ProjectReference Include="optimizer_static.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      <Project>{8A946C3A-0587-B849-8C81-5FBE6591A69E}</Project>
+    </ProjectReference>
+    <ProjectReference Include="optimizer_static.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      <Project>{8A946C3A-0587-B849-8C81-5FBE6591A69E}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,261 @@
+object frmNewForm: TfrmNewForm
+  Left = 8
+  Top = 8
+  AutoScroll = False
+  BorderIcons = [biSystemMenu, biMinimize]
+  Caption = 'Shortcuts Editor'
+  ClientHeight = 456
+  ClientWidth = 545
+  Color = clBtnFace
+  OldCreateOrder = True
+  PopupMenu = MainForm.DesignerPopup
+  Visible = True
+  OnCloseQuery = FormCloseQuery
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnResize = FormResize
+  EVT_CLOSE = 'OnClose'
+  Wx_ICON.Data = {07544269746D617000000000}
+  Wx_Name = 'CEdShortcutsEditor'
+  Wx_IDName = 'ID_DIALOG1'
+  Wx_IDValue = 1000
+  Wx_Class = 'wxDialog'
+  Wx_Center = True
+  Wx_Hidden = False
+  Wx_SizeToContents = True
+  Wx_GeneralStyle = []
+  Wx_DialogStyle = [wxCAPTION, wxSYSTEM_MENU, wxDIALOG_NO_PARENT, wxCLOSE_BOX]
+  Wx_Border = 0
+  Wx_BorderAlignment = []
+  PixelsPerInch = 96
+  TextHeight = 13
+  object m_cStaticText1: TWxStaticText
+    Left = 8
+    Top = 5
+    Width = 305
+    Height = 17
+    Caption = 'Select menu item for which you would like to redefine shortcut:'
+    TabOrder = 0
+    Wx_BGColor = clBlack
+    Wx_Class = 'wxStaticText'
+    Wx_ControlOrientation = wxControlVertical
+    Wx_FGColor = clBlack
+    Wx_GeneralStyle = []
+    Wx_Hidden = False
+    Wx_IDName = 'ID_M_CSTATICTEXT1'
+    Wx_IDValue = 1002
+    Wx_LabelStyle = []
+    Wx_Alignment = [wxALIGN_TOP, wxALIGN_LEFT]
+  end
+  object m_cStaticText2: TWxStaticText
+    Left = 8
+    Top = 383
+    Width = 100
+    Height = 17
+    Caption = 'Press new shortcut:'
+    TabOrder = 1
+    Wx_BGColor = clBlack
+    Wx_Class = 'wxStaticText'
+    Wx_ControlOrientation = wxControlVertical
+    Wx_FGColor = clBlack
+    Wx_GeneralStyle = []
+    Wx_Hidden = False
+    Wx_IDName = 'ID_M_CSTATICTEXT2'
+    Wx_IDValue = 1003
+    Wx_LabelStyle = []
+  end
+  object m_cEditShortcut: TWxEdit
+    Left = 7
+    Top = 399
+    Width = 398
+    Height = 20
+    BevelInner = bvNone
+    BevelOuter = bvNone
+    Modified = False
+    AutoSize = False
+    TabOrder = 2
+    Wx_BGColor = clBlack
+    Wx_Class = 'wxTextCtrl'
+    Wx_ControlOrientation = wxControlVertical
+    Wx_EditStyle = []
+    Wx_Enabled = False
+    Wx_FGColor = clBlack
+    Wx_GeneralStyle = []
+    Wx_Hidden = False
+    Wx_IDName = 'ID_M_CEDITSHORTCUT'
+    Wx_IDValue = 1004
+    Wx_Alignment = [wxALIGN_LEFT, wxALIGN_RIGHT, wxALIGN_BOTTOM]
+    Wx_MaxLength = 0
+  end
+  object m_cListMenuEntries: TWxListCtrl
+    Left = 8
+    Top = 72
+    Width = 529
+    Height = 305
+    Columns = <
+      item
+        Caption = 'Family'
+        Width = 100
+      end
+      item
+        Caption = 'Menu entry'
+        Width = 300
+      end
+      item
+        Caption = 'Shortcut'
+        Width = 100
+      end>
+    TabOrder = 3
+    ViewStyle = vsReport
+    EVT_LIST_ITEM_FOCUSED = 'ListMenuEntriesItemFocused'
+    Wx_BGColor = clBlack
+    Wx_Class = 'wxListCtrl'
+    Wx_ControlOrientation = wxControlVertical
+    Wx_FGColor = clBlack
+    Wx_GeneralStyle = []
+    Wx_IDName = 'ID_M_CLISTMENUENTRIES'
+    Wx_IDValue = 1006
+    Wx_ListviewStyle = []
+    Wx_ListviewView = wxLC_REPORT
+    Wx_Alignment = [wxALIGN_TOP, wxALIGN_LEFT, wxALIGN_RIGHT, wxALIGN_BOTTOM]
+  end
+  object m_cBtnSet: TWxButton
+    Left = 410
+    Top = 398
+    Width = 62
+    Height = 21
+    Caption = 'Set'
+    TabOrder = 4
+    EVT_BUTTON = 'BtnSetClick'
+    Wx_BKColor = clBlack
+    Wx_ButtonStyle = []
+    Wx_Class = 'wxButton'
+    Wx_ControlOrientation = wxControlVertical
+    Wx_Default = False
+    Wx_Enabled = False
+    Wx_EventList.Strings = (
+      'EVT_BUTTON:OnClick'
+      'EVT_UPDATE_UI:OnUpdateUI')
+    Wx_FGColor = clBlack
+    Wx_GeneralStyle = []
+    Wx_Hidden = False
+    Wx_IDName = 'ID_M_CBTNSET'
+    Wx_IDValue = 1007
+    Wx_Height = 21
+    Wx_Width = 62
+    Wx_Alignment = [wxALIGN_RIGHT, wxALIGN_BOTTOM]
+  end
+  object m_cBtnClose: TWxButton
+    Left = 234
+    Top = 428
+    Width = 75
+    Height = 25
+    Caption = 'Close'
+    TabOrder = 5
+    EVT_BUTTON = 'BtnCloseClick'
+    Wx_BKColor = clBlack
+    Wx_ButtonStyle = []
+    Wx_Class = 'wxButton'
+    Wx_ControlOrientation = wxControlVertical
+    Wx_Default = False
+    Wx_EventList.Strings = (
+      'EVT_BUTTON:OnClick'
+      'EVT_UPDATE_UI:OnUpdateUI')
+    Wx_FGColor = clBlack
+    Wx_GeneralStyle = []
+    Wx_Hidden = False
+    Wx_IDName = 'ID_M_CBTNCLOSE'
+    Wx_IDValue = 1008
+    Wx_Height = 25
+    Wx_Width = 75
+    Wx_Alignment = [wxALIGN_BOTTOM, wxALIGN_CENTER]
+  end
+  object m_cBtnClear: TWxButton
+    Left = 476
+    Top = 398
+    Width = 62
+    Height = 21
+    Caption = 'Clear'
+    TabOrder = 6
+    EVT_BUTTON = 'BtnClearClick'
+    Wx_BKColor = clBlack
+    Wx_ButtonStyle = []
+    Wx_Class = 'wxButton'
+    Wx_ControlOrientation = wxControlVertical
+    Wx_Default = False
+    Wx_Enabled = False
+    Wx_EventList.Strings = (
+      'EVT_BUTTON:OnClick'
+      'EVT_UPDATE_UI:OnUpdateUI')
+    Wx_FGColor = clBlack
+    Wx_GeneralStyle = []
+    Wx_Hidden = False
+    Wx_IDName = 'ID_M_CBTNCLEAR'
+    Wx_IDValue = 1009
+    Wx_Height = 21
+    Wx_Width = 62
+  end
+  object m_cFilterFamily: TWxEdit
+    Left = 8
+    Top = 44
+    Width = 100
+    Height = 20
+    BevelInner = bvNone
+    BevelOuter = bvNone
+    Modified = False
+    AutoSize = False
+    TabOrder = 7
+    EVT_TEXT = 'FilterTextUpdated'
+    Wx_BGColor = clBlack
+    Wx_Class = 'wxTextCtrl'
+    Wx_ControlOrientation = wxControlVertical
+    Wx_EditStyle = []
+    Wx_FGColor = clBlack
+    Wx_GeneralStyle = []
+    Wx_Hidden = False
+    Wx_IDName = 'ID_M_CFILTERFAMILY'
+    Wx_IDValue = 1011
+    Wx_Alignment = [wxALIGN_LEFT, wxALIGN_RIGHT, wxALIGN_BOTTOM]
+    Wx_MaxLength = 0
+  end
+  object m_cStaticText3: TWxStaticText
+    Left = 8
+    Top = 25
+    Width = 68
+    Height = 17
+    Caption = 'Filter entries:'
+    TabOrder = 8
+    Wx_BGColor = clBlack
+    Wx_Class = 'wxStaticText'
+    Wx_ControlOrientation = wxControlVertical
+    Wx_FGColor = clBlack
+    Wx_GeneralStyle = []
+    Wx_Hidden = False
+    Wx_IDName = 'ID_M_CSTATICTEXT3'
+    Wx_IDValue = 1012
+    Wx_LabelStyle = []
+  end
+  object m_cFilterId: TWxEdit
+    Left = 112
+    Top = 44
+    Width = 297
+    Height = 20
+    BevelInner = bvNone
+    BevelOuter = bvNone
+    Modified = False
+    AutoSize = False
+    TabOrder = 9
+    EVT_TEXT = 'FilterTextUpdated'
+    Wx_BGColor = clBlack
+    Wx_Class = 'wxTextCtrl'
+    Wx_ControlOrientation = wxControlVertical
+    Wx_EditStyle = []
+    Wx_FGColor = clBlack
+    Wx_GeneralStyle = []
+    Wx_Hidden = False
+    Wx_IDName = 'ID_M_CFILTERID'
+    Wx_IDValue = 1013
+    Wx_Alignment = [wxALIGN_LEFT, wxALIGN_RIGHT, wxALIGN_BOTTOM]
+    Wx_MaxLength = 0
+  end
+end

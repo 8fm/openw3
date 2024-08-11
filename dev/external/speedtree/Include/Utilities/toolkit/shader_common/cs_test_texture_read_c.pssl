@@ -1,0 +1,15 @@
+/* SCE CONFIDENTIAL
+PlayStation(R)4 Programmer Tool Runtime Library Release 01.700.081
+* Copyright (C) 2013 Sony Computer Entertainment Inc.
+* All Rights Reserved.
+*/
+
+Texture2D<float4> Src : register(t0);
+RW_DataBuffer<float4> Dst : register(u0);
+
+[NUM_THREADS(1,1,1)]
+void main()
+{
+	Dst[0] = Src[uint2(0,0)];
+}
+

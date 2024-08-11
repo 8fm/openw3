@@ -1,0 +1,25 @@
+/**
+ * Copyright © 2011 CD Projekt Red. All Rights Reserved.
+ */
+#pragma once
+
+#include "actionPointDataDef.h"
+
+
+///////////////////////////////////////////////////////////////////////////////
+
+class CActionPointManager;
+
+///////////////////////////////////////////////////////////////////////////////
+
+class IAPMListener
+{
+public:
+	virtual ~IAPMListener() {}
+
+	virtual void UpdateAPOccupation( const TActionPointID& apID, Bool& outIsOccupied ) const = 0;
+	virtual void OnAPManagerDeletion() = 0;
+
+};
+
+///////////////////////////////////////////////////////////////////////////////

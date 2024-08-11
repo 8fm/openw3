@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedConfigurationSetup.props))\SharedConfigurationSetup.props" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F20F473F-2E45-411B-96A1-870FBA4A953F}</ProjectGuid>
+    <RootNamespace>unitTestsGpuApi</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>
+    </PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <SubSystem>Console</SubSystem>
+    <UsePrecompiledHeaders>false</UsePrecompiledHeaders>
+    <ProjectClDirs>../../../external/gmock;../../../external/gmock/include;../../../external/gtest/include;../../../external/gtest;</ProjectClDirs>
+  </PropertyGroup>
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.props))\Shared.props" />
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedItemGroups.props))\SharedItemGroups.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='No opts|x64'">
+    <TargetName>$(ProjectName).$(Configuration)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='No opts|Durango'">
+    <PullMappingFile>pullMappingFile.xml</PullMappingFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <TargetName>$(ProjectName).$(Configuration)</TargetName>
+  </PropertyGroup>
+  <ItemGroup>
+    <ClCompile Include="build.cpp">
+      <PrecompiledHeader Condition="'$(Platform)'=='x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="drawsTestUtils.cpp" />
+    <ClCompile Include="effectInterface.cpp" />
+    <ClCompile Include="fenceManagerTest.cpp" />
+    <ClCompile Include="gatTTYWriter.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="mainDurango.cpp" />
+    <ClCompile Include="operatorNewDelete_orbis.cpp" />
+    <ClCompile Include="meshGenerator.cpp" />
+    <ClCompile Include="testEngine.cpp" />
+    <ClCompile Include="utility.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\common\core\core.vcxproj">
+      <Project>{bec313e8-15bc-4693-930f-d5fe597adab0}</Project>
+    </ProjectReference>
+    <ProjectReference Condition="'$(Platform)'=='ORBIS'" Include="..\..\common\gpuApiGnm\gpuApiGnm.vcxproj">
+      <Project>{ac6894ff-d535-4fc4-b428-8ebece284267}</Project>
+    </ProjectReference>
+    <ProjectReference Condition="'$(Platform)'!='ORBIS'" Include="..\..\common\gpuApiDX10\gpuApiDX10.vcxproj">
+      <Project>{7E8999E0-7735-4EEB-A328-B2763DBE04BD}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\gpuApiUtils\gpuApiUtils.vcxproj">
+      <Project>{25a08abc-1a48-45e3-a6a1-8853070c2d72}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\redIO\redIO.vcxproj">
+      <Project>{cb12e47d-db64-4466-9c54-59c3da05e6bf}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\redMath\redMath.vcxproj">
+      <Project>{14054554-1f10-4eb8-839b-d4bb8592515b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\redMemoryFramework\redMemoryFramework.vcxproj">
+      <Project>{6bcfb601-80ce-4183-9ae2-ba3cf6c68715}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\redNetwork\RedNetwork.vcxproj">
+      <Project>{99596beb-157a-4c15-94b4-25e3a580de22}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\redSystem\redSystem.vcxproj">
+      <Project>{9c1f2dbf-9ea5-41b9-8430-d869c8ac2189}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\redThreads\redThreads.vcxproj">
+      <Project>{50404845-5499-4116-911c-55a575807ef6}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\scripts\scripts.vcxproj">
+      <Project>{2bb69d9f-79fc-4a10-b998-c0ba982efbc6}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="opticalIllusion_vv.pssl">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Platform)'=='ORBIS'">orbis-psslc.exe "$(ProjectDir)\opticalIllusion_vv.pssl" -o "$(ProjectDir)\opticalIllusion_vs.sb"</Command>
+      <Message Condition="'$(Platform)'=='ORBIS'">Compiling shaders</Message>
+      <Outputs Condition="'$(Platform)'=='ORBIS'">$(ProjectDir)\opticalIllusion_vs.sb</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="opticalIllusion_p.pssl">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Platform)'=='ORBIS'">orbis-psslc.exe "$(ProjectDir)\opticalIllusion_p.pssl" -o "$(ProjectDir)\opticalIllusion_ps.sb"</Command>
+      <Message Condition="'$(Platform)'=='ORBIS'">Compiling shaders</Message>
+      <Outputs Condition="'$(Platform)'=='ORBIS'">$(ProjectDir)\opticalIllusion_ps.sb</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="simplePhongGlobal_p.pssl">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Platform)'=='ORBIS'">orbis-psslc.exe "$(ProjectDir)\simplePhongGlobal_p.pssl" -o "$(ProjectDir)\simplePhongGlobal_ps.sb"</Command>
+      <Message Condition="'$(Platform)'=='ORBIS'">Compiling shaders</Message>
+      <Outputs Condition="'$(Platform)'=='ORBIS'">$(ProjectDir)\simplePhongGlobal_ps.sb</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="simplePhongRaw_p.pssl">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Platform)'=='ORBIS'">orbis-psslc.exe "$(ProjectDir)\simplePhongRaw_p.pssl" -o "$(ProjectDir)\simplePhongRaw_ps.sb"</Command>
+      <Message Condition="'$(Platform)'=='ORBIS'">Compiling shaders</Message>
+      <Outputs Condition="'$(Platform)'=='ORBIS'">$(ProjectDir)\simplePhongRaw_ps.sb</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="simplePhongGlobal_vv.pssl">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Platform)'=='ORBIS'">orbis-psslc.exe "$(ProjectDir)\simplePhongGlobal_vv.pssl" -o "$(ProjectDir)\simplePhongGlobal_vs.sb"</Command>
+      <Message Condition="'$(Platform)'=='ORBIS'">Compiling shaders</Message>
+      <Outputs Condition="'$(Platform)'=='ORBIS'">$(ProjectDir)\simplePhongGlobal_vs.sb</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="samplerTex_p.pssl">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Platform)'=='ORBIS'">orbis-psslc.exe "$(ProjectDir)\samplerTex_p.pssl" -o "$(ProjectDir)\samplerTex_ps.sb"</Command>
+      <Message Condition="'$(Platform)'=='ORBIS'">Compiling shaders</Message>
+      <Outputs Condition="'$(Platform)'=='ORBIS'">$(ProjectDir)\samplerTex_ps.sb</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="samplerTex_vv.pssl">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Platform)'=='ORBIS'">orbis-psslc.exe "$(ProjectDir)\samplerTex_vv.pssl" -o "$(ProjectDir)\samplerTex_vs.sb"</Command>
+      <Message Condition="'$(Platform)'=='ORBIS'">Compiling shaders</Message>
+      <Outputs Condition="'$(Platform)'=='ORBIS'">$(ProjectDir)\samplerTex_vs.sb</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="instanced_p.pssl">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Platform)'=='ORBIS'">orbis-psslc.exe "$(ProjectDir)\instanced_p.pssl" -o "$(ProjectDir)\instanced_ps.sb"</Command>
+      <Message Condition="'$(Platform)'=='ORBIS'">Compiling shaders</Message>
+      <Outputs Condition="'$(Platform)'=='ORBIS'">$(ProjectDir)\instanced_ps.sb</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="instanced_vv.pssl">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Platform)'=='ORBIS'">orbis-psslc.exe "$(ProjectDir)\instanced_vv.pssl" -o "$(ProjectDir)\instanced_vs.sb"</Command>
+      <Message Condition="'$(Platform)'=='ORBIS'">Compiling shaders</Message>
+      <Outputs Condition="'$(Platform)'=='ORBIS'">$(ProjectDir)\instanced_vs.sb</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="coloredTriangleGrid_p.pssl">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Platform)'=='ORBIS'">orbis-psslc.exe "$(ProjectDir)\coloredTriangleGrid_p.pssl" -o "$(ProjectDir)\coloredTriangleGrid_ps.sb"</Command>
+      <Message Condition="'$(Platform)'=='ORBIS'">Compiling shaders</Message>
+      <Outputs Condition="'$(Platform)'=='ORBIS'">$(ProjectDir)\coloredTriangleGrid_ps.sb</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="coloredTriangleGrid_vv.pssl">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Platform)'=='ORBIS'">orbis-psslc.exe "$(ProjectDir)\coloredTriangleGrid_vv.pssl" -o "$(ProjectDir)\coloredTriangleGrid_vs.sb"</Command>
+      <Message Condition="'$(Platform)'=='ORBIS'">Compiling shaders</Message>
+      <Outputs Condition="'$(Platform)'=='ORBIS'">$(ProjectDir)\coloredTriangleGrid_vs.sb</Outputs>
+    </CustomBuild>
+    <None Include="simplePhong_p.pssl">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Platform)'=='ORBIS'">orbis-psslc.exe "$(ProjectDir)\simplePhong_p.pssl" -o "$(ProjectDir)\simplePhong_ps.sb"</Command>
+      <Message Condition="'$(Platform)'=='ORBIS'">Compiling shaders</Message>
+      <Outputs Condition="'$(Platform)'=='ORBIS'">$(ProjectDir)\simplePhong_ps.sb</Outputs>
+    </None>
+    <None Include="simplePhong_vv.pssl">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Platform)'=='ORBIS'">orbis-psslc.exe "$(ProjectDir)\simplePhong_vv.pssl" -o "$(ProjectDir)\simplePhong_vs.sb"</Command>
+      <Message Condition="'$(Platform)'=='ORBIS'">Compiling shaders</Message>
+      <Outputs Condition="'$(Platform)'=='ORBIS'">$(ProjectDir)\simplePhong_vs.sb</Outputs>
+    </None>
+    <CustomBuild Include="simplePhongRaw_vv.pssl">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Platform)'=='ORBIS'">orbis-psslc.exe "$(ProjectDir)\simplePhongRaw_vv.pssl" -o "$(ProjectDir)\simplePhongRaw_vs.sb"</Command>
+      <Message Condition="'$(Platform)'=='ORBIS'">Compiling shaders</Message>
+      <Outputs Condition="'$(Platform)'=='ORBIS'">$(ProjectDir)\simplePhongRaw_vs.sb</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="simpleTriangle_p.pssl">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Platform)'=='ORBIS'">orbis-psslc.exe "$(ProjectDir)\simpleTriangle_p.pssl" -o "$(ProjectDir)\simpleTriangle_ps.sb"</Command>
+      <Message Condition="'$(Platform)'=='ORBIS'">Compiling shaders</Message>
+      <Outputs Condition="'$(Platform)'=='ORBIS'">$(ProjectDir)\simpleTriangle_ps.sb</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="simpleTriangle_vv.pssl">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Platform)'=='ORBIS'">orbis-psslc.exe "$(ProjectDir)\simpleTriangle_vv.pssl" -o "$(ProjectDir)\simpleTriangle_vs.sb"</Command>
+      <Message Condition="'$(Platform)'=='ORBIS'">Compiling shaders</Message>
+      <Outputs Condition="'$(Platform)'=='ORBIS'">$(ProjectDir)\simpleTriangle_vs.sb</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="simpleTriangleInstanced_p.pssl">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Platform)'=='ORBIS'">orbis-psslc.exe "$(ProjectDir)\simpleTriangleInstanced_p.pssl" -o "$(ProjectDir)\simpleTriangleInstanced_ps.sb"</Command>
+      <Message Condition="'$(Platform)'=='ORBIS'">Compiling shaders</Message>
+      <Outputs Condition="'$(Platform)'=='ORBIS'">$(ProjectDir)\simpleTriangleInstanced_ps.sb</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="simpleTriangleInstanced_vv.pssl">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Platform)'=='ORBIS'">orbis-psslc.exe "$(ProjectDir)\simpleTriangleInstanced_vv.pssl" -o "$(ProjectDir)\simpleTriangleInstanced_vs.sb"</Command>
+      <Message Condition="'$(Platform)'=='ORBIS'">Compiling shaders</Message>
+      <Outputs Condition="'$(Platform)'=='ORBIS'">$(ProjectDir)\simpleTriangleInstanced_vs.sb</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="simpleDraw_vv.pssl">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Platform)'=='ORBIS'">orbis-psslc.exe "$(ProjectDir)\simpleDraw_vv.pssl" -o "$(ProjectDir)\simpleDraw_vs.sb"</Command>
+      <Message Condition="'$(Platform)'=='ORBIS'">Compiling shaders</Message>
+      <Outputs Condition="'$(Platform)'=='ORBIS'">$(ProjectDir)\simpleDraw_vs.sb</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="simpleDraw_p.pssl">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Platform)'=='ORBIS'">orbis-psslc.exe "$(ProjectDir)\simpleDraw_p.pssl" -o "$(ProjectDir)\simpleDraw_ps.sb"</Command>
+      <Message Condition="'$(Platform)'=='ORBIS'">Compiling shaders</Message>
+      <Outputs Condition="'$(Platform)'=='ORBIS'">$(ProjectDir)\simpleDraw_ps.sb</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="coloredTriangleGrid.frag" />
+    <None Include="coloredTriangleGrid.vert" />
+    <None Include="instanced.frag" />
+    <None Include="instanced.vert" />
+    <None Include="opticalIllusion.frag" />
+    <None Include="opticalIllusion.vert" />
+    <None Include="samplerTex.frag" />
+    <None Include="samplerTex.vert" />
+    <None Include="simpleDraw.frag" />
+    <None Include="simpleDraw.vert" />
+    <None Include="simplePhongGlobal.frag" />
+    <None Include="simplePhongGlobal.vert" />
+    <None Include="simplePhongRaw.frag" />
+    <None Include="simplePhongRaw.vert" />
+    <None Include="simpleTriangle.frag" />
+    <None Include="simpleTriangle.vert" />
+    <None Include="simpleTriangleInstanced.frag" />
+    <None Include="simpleTriangleInstanced.vert" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="bufferUpdatesTest.h" />
+    <ClInclude Include="blendStateTest.h" />
+    <ClInclude Include="build.h" />
+    <ClInclude Include="computeEffect.h" />
+    <ClInclude Include="constantBuffersTest.h" />
+    <ClInclude Include="drawIndexedPrimitiveRawTest.h" />
+    <ClInclude Include="drawPrimitiveRawTest.h" />
+    <ClInclude Include="drawsInstancedNoBuffersTest.h" />
+    <ClInclude Include="drawsInstancedTest.h" />
+    <ClInclude Include="drawPrimitiveTest.h" />
+    <ClInclude Include="drawsTestUtils.h" />
+    <ClInclude Include="drawSystemPrimitiveTest.h" />
+    <ClInclude Include="effectInterface.h" />
+    <ClInclude Include="fenceManagerTest.h" />
+    <ClInclude Include="gatTTYWriter.h" />
+    <ClInclude Include="inputInitializationDurango.h" />
+    <ClInclude Include="inputInitializationOrbis.h" />
+    <ClInclude Include="memoryInitiaizationOrbis.h" />
+    <ClInclude Include="memoryInitializationDurango.h" />
+    <ClInclude Include="memoryInitializationWin.h" />
+    <ClInclude Include="meshGenerator.h" />
+    <ClInclude Include="rasterizerStateTest.h" />
+    <ClInclude Include="runtimeTest.h" />
+    <ClInclude Include="samplerTest.h" />
+    <ClInclude Include="drawIndexedPrimitiveTest.h" />
+    <ClInclude Include="simpleCullTest.h" />
+    <ClInclude Include="testEngine.h" />
+    <ClInclude Include="utility.h" />
+    <ClInclude Include="vertexPixelEffect.h" />
+    <ClInclude Include="viewportTest.h" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(Platform)'=='Durango'">
+    <None Include="instanced.hlsl">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="simplePhongGlobal.hlsl">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="simplePhongRaw.hlsl">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="simpleTriangle.hlsl">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="simpleTriangleInstanced.hlsl">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="samplerTex.hlsl">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="opticalIllusion.hlsl">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="simpleCull.hlsl">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="simpleDraw.hlsl">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="coloredTriangleGrid.hlsl">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup Condition="'$(Platform)'=='x64'">
+    <None Include="instanced.hlsl">
+      <DeploymentContent>false</DeploymentContent>
+    </None>
+    <None Include="simplePhongGlobal.hlsl">
+      <DeploymentContent>false</DeploymentContent>
+    </None>
+    <None Include="simplePhongRaw.hlsl">
+      <DeploymentContent>false</DeploymentContent>
+    </None>
+    <None Include="simpleTriangle.hlsl">
+      <DeploymentContent>false</DeploymentContent>
+    </None>
+    <None Include="simpleTriangleInstanced.hlsl">
+      <DeploymentContent>false</DeploymentContent>
+    </None>
+    <None Include="samplerTex.hlsl">
+      <DeploymentContent>false</DeploymentContent>
+    </None>
+    <None Include="opticalIllusion.hlsl">
+      <DeploymentContent>false</DeploymentContent>
+    </None>
+    <None Include="simpleCull.hlsl">
+      <DeploymentContent>false</DeploymentContent>
+    </None>
+    <None Include="simpleDraw.hlsl">
+      <DeploymentContent>false</DeploymentContent>
+    </None>
+    <None Include="coloredTriangleGrid.hlsl">
+      <DeploymentContent>false</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Usage.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="BLEND_STATE.dds" />
+    <Image Include="CONSTANT_BUFFERS.dds" />
+    <Image Include="DRAW_INDEXED_PRIMITIVE.dds" />
+    <Image Include="DRAW_INDEXED_PRIMITIVE_RAW.dds" />
+    <Image Include="DRAW_INSTANCED.dds" />
+    <Image Include="DRAW_INSTANCED_NO_BUFFER.dds" />
+    <Image Include="DRAW_PRIMITIVE.dds" />
+    <Image Include="DRAW_PRIMITIVE_RAW.dds" />
+    <Image Include="DRAW_SYSTEM_PRIMITIVE.dds" />
+    <Image Include="FLICKERING_ILLUSION.dds" />
+    <Image Include="Logo.png" />
+    <Image Include="PS4_FENCE_MANAGER.dds" />
+    <Image Include="RASTERIZER_STATE.dds" />
+    <Image Include="SAMPLER_TEXTURE.dds" />
+    <Image Include="SmallLogo.png" />
+    <Image Include="SplashScreen.png" />
+    <Image Include="StoreLogo.png" />
+    <Image Include="TILES.dds" />
+    <Image Include="VIEWPORTS.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.targets))\Shared.targets" />
+</Project>

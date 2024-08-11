@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="samples">
+      <UniqueIdentifier>{167B88AE-F51C-2543-BD39-873BE24A6961}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="samples\resources">
+      <UniqueIdentifier>{2027DEEF-5825-2A43-BF4D-AAEDD1DC3951}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils">
+      <UniqueIdentifier>{28300F9D-9EBE-A648-80E9-740FB0512EE1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils\debugger">
+      <UniqueIdentifier>{FA475EDA-174E-E646-8F86-F682013A26EB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils\debugger\qt">
+      <UniqueIdentifier>{565AA132-829F-FE40-8383-D498F9DEC641}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\samples\resources\testkey.pfx">
+      <Filter>samples\resources</Filter>
+    </None>
+    <None Include="..\..\utils\debugger\qt\umbra.ico">
+      <Filter>utils\debugger\qt</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\samples\resources\Logo.png">
+      <Filter>samples\resources</Filter>
+    </Image>
+    <Image Include="..\..\samples\resources\SmallLogo.png">
+      <Filter>samples\resources</Filter>
+    </Image>
+    <Image Include="..\..\samples\resources\SplashScreen.png">
+      <Filter>samples\resources</Filter>
+    </Image>
+    <Image Include="..\..\samples\resources\StoreLogo.png">
+      <Filter>samples\resources</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\utils\debugger\qt\QtApplicationState.hpp">
+      <Filter>utils\debugger\qt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\utils\debugger\qt\QtCameraInspectorWidget.hpp">
+      <Filter>utils\debugger\qt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\utils\debugger\qt\QtCameraManagerWidget.hpp">
+      <Filter>utils\debugger\qt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\utils\debugger\qt\QtCollapseList.hpp">
+      <Filter>utils\debugger\qt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\utils\debugger\qt\QtCommon.hpp">
+      <Filter>utils\debugger\qt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\utils\debugger\qt\QtComputationWidget.hpp">
+      <Filter>utils\debugger\qt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\utils\debugger\qt\QtContentWidget.hpp">
+      <Filter>utils\debugger\qt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\utils\debugger\qt\QtCullingWidget.hpp">
+      <Filter>utils\debugger\qt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\utils\debugger\qt\QtGlobalSignals.hpp">
+      <Filter>utils\debugger\qt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\utils\debugger\qt\QtInspector.hpp">
+      <Filter>utils\debugger\qt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\utils\debugger\qt\QtLoggerWidget.hpp">
+      <Filter>utils\debugger\qt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\utils\debugger\qt\QtMainWindow.hpp">
+      <Filter>utils\debugger\qt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\utils\debugger\qt\QtObjectInspectorWidget.hpp">
+      <Filter>utils\debugger\qt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\utils\debugger\qt\QtQueryStatsWidget.hpp">
+      <Filter>utils\debugger\qt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\utils\debugger\qt\QtSceneInspectorWidget.hpp">
+      <Filter>utils\debugger\qt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\utils\debugger\qt\QtSlider.hpp">
+      <Filter>utils\debugger\qt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\utils\debugger\qt\QtTestPositionsWidget.hpp">
+      <Filter>utils\debugger\qt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\utils\debugger\qt\QtThreading.hpp">
+      <Filter>utils\debugger\qt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\utils\debugger\qt\QtTomePropertiesWidget.hpp">
+      <Filter>utils\debugger\qt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\utils\debugger\qt\QtViewport.hpp">
+      <Filter>utils\debugger\qt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\utils\debugger\qt\QtVisualization.hpp">
+      <Filter>utils\debugger\qt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\utils\debugger\qt\QtVisualizationWidget.hpp">
+      <Filter>utils\debugger\qt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\utils\debugger\qt\QtWorldProperties.hpp">
+      <Filter>utils\debugger\qt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\utils\debugger\qt\WinResource.h">
+      <Filter>utils\debugger\qt</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\utils\debugger\qt\QtApplicationState.cpp">
+      <Filter>utils\debugger\qt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\qt\QtCameraInspectorWidget.cpp">
+      <Filter>utils\debugger\qt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\qt\QtCameraManagerWidget.cpp">
+      <Filter>utils\debugger\qt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\qt\QtCollapseList.cpp">
+      <Filter>utils\debugger\qt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\qt\QtComputationWidget.cpp">
+      <Filter>utils\debugger\qt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\qt\QtContentWidget.cpp">
+      <Filter>utils\debugger\qt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\qt\QtCullingWidget.cpp">
+      <Filter>utils\debugger\qt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\qt\QtGlobalSignals.cpp">
+      <Filter>utils\debugger\qt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\qt\QtInspector.cpp">
+      <Filter>utils\debugger\qt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\qt\QtLoggerWidget.cpp">
+      <Filter>utils\debugger\qt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\qt\QtMain.cpp">
+      <Filter>utils\debugger\qt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\qt\QtMainWindow.cpp">
+      <Filter>utils\debugger\qt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\qt\QtObjectInspectorWidget.cpp">
+      <Filter>utils\debugger\qt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\qt\QtQueryStatsWidget.cpp">
+      <Filter>utils\debugger\qt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\qt\QtSceneInspectorWidget.cpp">
+      <Filter>utils\debugger\qt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\qt\QtSlider.cpp">
+      <Filter>utils\debugger\qt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\qt\QtTestPositionsWidget.cpp">
+      <Filter>utils\debugger\qt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\qt\QtThreading.cpp">
+      <Filter>utils\debugger\qt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\qt\QtTomePropertiesWidget.cpp">
+      <Filter>utils\debugger\qt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\qt\QtViewport.cpp">
+      <Filter>utils\debugger\qt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\qt\QtVisualization.cpp">
+      <Filter>utils\debugger\qt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\qt\QtVisualizationWidget.cpp">
+      <Filter>utils\debugger\qt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\qt\QtWorldProperties.cpp">
+      <Filter>utils\debugger\qt</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\utils\debugger\qt\WinResource.rc">
+      <Filter>utils\debugger\qt</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

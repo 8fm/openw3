@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup Label="Configuration">
+    <ProjectPreprocessorDefines Condition="'$(ProjectPreprocessorDefines)'==''">$(SharedPreprocessorDefines)</ProjectPreprocessorDefines>
+    <ProjectClDirs Condition="'$(ProjectClDirs)'==''">$(SharedIncludePath);</ProjectClDirs>
+    <ProjectClDirs Condition="'$(Platform)'=='Orbis'">$(ProjectCLDirs);$(SharedIncludePath);$(SolutionDir)../external/redgnmx;$(SolutionDir)../external/redgnmxtoolkit</ProjectClDirs>
+    
+    <ProjectLiDirs Condition="'$(Platform)'=='x64'">$(SolutionDir)../internal/telemetry/Win64;$(ProjectLiDirs)</ProjectLiDirs>
+    <ProjectLiDirs Condition="'$(Platform)'=='Orbis'">$(SCE_ORBIS_SDK_DIR)\target\lib;$(ProjectLiDirs)</ProjectLiDirs>
+    <ProjectLiDirs Condition="'$(Platform)'=='Durango'">$(SolutionDir)../internal/telemetry/Durango;$(ProjectLiDirs)</ProjectLiDirs>
+
+    <ProjectLiDeps Condition="'$(Platform)'=='Orbis'">-lSceGnmDriver_stub_weak;-lSceGnf;-lSceShaderBinary;-lSceGpuAddress;-lSceGnm;-lScePosix_stub_weak;-lScePad_stub_weak;-lSceVideoOut_stub_weak;-lSceAudioOut_stub_weak;-lSceNetCtl_stub_weak;-lSceUserService_stub_weak;-lSceSysmodule_stub_weak;-lSceSystemService_stub_weak;-lScePlayGo_stub_weak;-lSceAppContent_stub_weak;-lSceFios2_stub_weak;-lSceAjm_stub_weak;$(ProjectLiDeps)</ProjectLiDeps>
+    <ProjectLiDeps Condition="'$(Platform)'=='Durango'">vccorlib.lib;ws2_32.lib;pixEvt.lib;d3d11_x.lib;combase.lib;kernelx.lib;uuid.lib;acphal.lib;$(ProjectLiDeps)</ProjectLiDeps>
+    <ProjectLiDeps Condition="'$(Platform)'=='x64'">User32.lib;Gdi32.lib;Ole32.lib;Advapi32.lib;Shell32.lib;$(ProjectLiDeps)</ProjectLiDeps>
+    <SubSystem Condition="'$(SubSystem)'=='' and '$(Platform)'=='Durango'">Windows</SubSystem>
+  </PropertyGroup>
+
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <PrecompiledHeader Condition="'$(UsePrecompiledHeaders)' != 'false'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>$(PrecompiledHeaderFile)</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(UsePrecompiledHeaders)' != 'false' and '$(PrecompiledHeaderFile)' == ''">build.h</PrecompiledHeaderFile>
+      <PreprocessorDefinitions>$(ProjectPreprocessorDefines)</PreprocessorDefinitions>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <AdditionalIncludeDirectories>$(ProjectClDirs);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <GenerateDebugInformation>$(GeneratePDB)</GenerateDebugInformation>
+      <MinimalRebuild>$(UseMinimalRebuild)</MinimalRebuild>
+      <ExceptionHandling Condition="'$(ProjectExceptionHandling)'==''">false</ExceptionHandling>
+      <ExceptionHandling Condition="'$(ProjectExceptionHandling)'=='' and '$(ConfigurationType)' == 'Application' and '$(Platform)'=='Durango'">Sync</ExceptionHandling>
+    </ClCompile>
+    <Link Condition="'$(ConfigurationType)' == 'Application'">
+      <GenerateDebugInformation>$(GeneratePDB)</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile  Condition="'$(GeneratePDB)' == 'false'" />
+      <SubSystem>$(SubSystem)</SubSystem>
+      <AdditionalLibraryDirectories>$(ProjectLiDirs)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>$(ProjectLiDeps)</AdditionalDependencies>
+    </Link>
+    <Lib Condition="'$(ConfigurationType)' == 'StaticLibrary'">
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+    </Lib>
+    <Manifest>
+      <AdditionalManifestFiles>$(ProjectDir)Compability.manifest</AdditionalManifestFiles>
+    </Manifest>
+  </ItemDefinitionGroup>
+
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalOptions>-Zm256 %(AdditionalOptions) $(ProjectClOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <DebugInformationFormat>$(DebugInformationFormat)</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>$(ProjectPreprocessorDefines)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);$(SolutionDir)../external/wxwidgets/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link Condition="'$(ConfigurationType)' == 'Application'">
+      <IgnoreSpecificDefaultLibraries>$(ProjectLiIgnore);msvcrtd;libcmt;</IgnoreSpecificDefaultLibraries>
+      <StackReserveSize>33554432</StackReserveSize>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64' or '$(Configuration)|$(Platform)'=='ReleaseGame|x64' or '$(Configuration)|$(Platform)'=='Final|x64' or '$(Configuration)|$(Platform)'=='Profiling|x64' or '$(Configuration)|$(Platform)'=='FinalWithLogging|x64'">
+    <PreBuildEvent Condition="'$(ConfigurationType)' == 'Application'">
+      <Command>
+        attrib -r "$(TargetPath)"
+        attrib -r "$(TargetDir)$(TargetName).pdb"
+      </Command>
+      <Message>[Perforce hack] Clearing read-only attribute of target</Message>
+    </PreBuildEvent>
+    <ClCompile>
+      <AdditionalOptions>-Zm256 /d2Zi+ /MP6 /openmp $(ProjectClOptions) %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <DebugInformationFormat>$(DebugInformationFormat)</DebugInformationFormat>
+      <OpenMPSupport>true</OpenMPSupport>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+	  <BufferSecurityCheck>false</BufferSecurityCheck>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>$(ProjectPreprocessorDefines)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);$(SolutionDir)../external/wxwidgets/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link Condition="'$(ConfigurationType)' == 'Application'">
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <IgnoreSpecificDefaultLibraries>$(ProjectLiIgnore);msvcrt</IgnoreSpecificDefaultLibraries>
+      <StackReserveSize>33554432</StackReserveSize>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='No opts|x64'">
+    <ClCompile>
+      <AdditionalOptions>-Zm256 /MP6 /openmp %(AdditionalOptions) $(ProjectClOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <DebugInformationFormat>$(DebugInformationFormat)</DebugInformationFormat>
+      <TreatWarningAsError>true</TreatWarningAsError>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>$(ProjectPreprocessorDefines)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);$(SolutionDir)../external/wxwidgets/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link Condition="'$(ConfigurationType)' == 'Application'">
+      <OptimizeReferences>false</OptimizeReferences>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
+      <IgnoreSpecificDefaultLibraries>$(ProjectLiIgnore);msvcrt</IgnoreSpecificDefaultLibraries>
+      <StackReserveSize>33554432</StackReserveSize>
+    </Link>
+  </ItemDefinitionGroup>
+
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ORBIS'">
+    <ClCompile>
+      <ExtendedDiagnostics>true</ExtendedDiagnostics>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+    </ClCompile>
+    <Link Condition="'$(ConfigurationType)' == 'Application'">
+      <GenerateMapFile>true</GenerateMapFile>
+      <DataStripping>StripFuncsAndData</DataStripping>
+      <DuplicateStripping>true</DuplicateStripping>
+      <AdditionalOptions>-Wl,--pad-debug-line=2 %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='No opts|ORBIS'">
+    <ClCompile>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+    </ClCompile>
+    <Link Condition="'$(ConfigurationType)' == 'Application'">
+      <DataStripping>StripFuncsAndData</DataStripping>
+      <DuplicateStripping>true</DuplicateStripping>
+      <AdditionalOptions>-Wl,--pad-debug-line=2 %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ORBIS' or '$(Configuration)|$(Platform)'=='ReleaseGame|ORBIS' or '$(Configuration)|$(Platform)'=='Final|ORBIS' or '$(Configuration)|$(Platform)'=='Profiling|ORBIS' or '$(Configuration)|$(Platform)'=='FinalWithLogging|ORBIS'">
+    <PreBuildEvent>
+      <Command Condition="'$(ConfigurationType)' == 'Application'">
+        attrib -r "$(TargetPath)"
+        attrib -r "$(TargetDir)$(TargetName).pdb"
+      </Command>
+      <Message>[Perforce hack] Clearing read-only attribute of target</Message>
+    </PreBuildEvent>
+    <ClCompile>
+      <OptimizationLevel>Level3</OptimizationLevel>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+	  <FastMath>true</FastMath>
+    </ClCompile>
+    <Link Condition="'$(ConfigurationType)' == 'Application'">
+      <DataStripping>StripFuncsAndData</DataStripping>
+      <DuplicateStripping>true</DuplicateStripping>
+      <AdditionalOptions>-Wl,--pad-debug-line=2 %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+
+  <ItemDefinitionGroup Condition="'$(Platform)'=='ORBIS'">
+   	<PostBuildEvent>
+      <Command Condition="'$(ConfigurationType)' == 'Application'">cd "$(SolutionDir)..\PublisherSpecific\R4\InternalDevelopment\PS4\"
+call witcherfacts.bat witcherfacts "$(SolutionDir)..\..\sce_sys\"
+	  </Command>
+      <Message>Thank you for subscribing to WitcherFacts</Message>
+	  <Outputs>"$(SolutionDir)..\sce_sys\pic1.png"</Outputs>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+
+  <ItemDefinitionGroup Condition="'$(Platform)'=='ORBIS'">
+    <Compile_PSSL_To_Header>
+	  <CommandLineTemplate>
+	   "$(GnmPSSC)" [AdditionalOptions] -cache -cachedir "$(IntDir)\." -o "$(IntDir)%(Filename).sb" "%(FullPath)"
+	   "$(GnmBin2H)" -q "$(IntDir)%(Filename).sb" -o "$(ProjectDir)util_shaders\%(Filename).h"
+	  </CommandLineTemplate>
+	  <Outputs>$(ProjectDir)util_shaders\%(Filename).h;$(IntDir)%(Filename).sb</Outputs>
+	  <ExecutionDescription>[PSSL->H] %(Filename)%(Extension)</ExecutionDescription>
+	  <AdditionalDependencies>$(GnmPSSC)</AdditionalDependencies>
+	  <AdditionalDependencies>$(GnmBin2H)</AdditionalDependencies>
+    </Compile_PSSL_To_Header>
+    <ClCompile>
+      <AdditionalOptions>-Werror -fstack-protector-strong %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+   	<PostBuildEvent>
+      <Command Condition="'$(ConfigurationType)' == 'Application'">cd "$(SolutionDir)..\PublisherSpecific\R4\InternalDevelopment\PS4\"
+call trophies.bat "$(SolutionDir)..\.." sce_sys 
+	  </Command>
+      <Message>Configurmerating Trophies!</Message>
+	  <Outputs>"$(SolutionDir)..\sce_sys\trophy\trophy00.trp"</Outputs>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+
+  <!-- Edit and continue on PS4 requires GenerateDebugInformation true. Don't think we need the map file -->
+  <ItemDefinitionGroup Condition="'$(Platform)'=='Orbis' and '$(Configuration)' != 'Final' and '$(Configuration)' != 'FinalWithLogging'">
+    <ClCompile Condition="'$(ConfigurationType)' == 'Application'">
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </ClCompile>
+    <Link Condition="'$(ConfigurationType)' == 'Application'">
+      <EditAndContinue>true</EditAndContinue>
+      <DataStripping>None</DataStripping>
+      <DuplicateStripping>false</DuplicateStripping>
+    </Link>
+  </ItemDefinitionGroup>
+  
+  <!-- Incremental linking requires linking optimizations being switched off -->
+  <ItemDefinitionGroup Condition="'$(Configuration)' != 'Final' and '$(Configuration)' != 'FinalWithLogging' and '$(Configuration)' != 'Profiling'">
+    <Link Condition="'$(ConfigurationType)' == 'Application' or '$(ConfigurationType)' == 'DynamicLibrary'">
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
+      <OptimizeReferences>false</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Durango'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebugDll</RuntimeLibrary>
+      <CompileAsWinRT Condition="'$(ProjectCompileAsWinRT)'=='true'">true</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(ProjectCompileAsWinRT)'=='false'">false</CompileAsWinRT>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+	<Link>
+      <StackReserveSize>2097152</StackReserveSize>
+    </Link>
+  </ItemDefinitionGroup>
+
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='No opts|Durango'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDll</RuntimeLibrary>
+      <CompileAsWinRT Condition="'$(ProjectCompileAsWinRT)'=='true'">true</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(ProjectCompileAsWinRT)'=='false'">false</CompileAsWinRT>
+      <Optimization>Disabled</Optimization>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+    </ClCompile>
+	<Link>
+      <StackReserveSize>2097152</StackReserveSize>
+    </Link>
+  </ItemDefinitionGroup>
+
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Durango' or '$(Configuration)|$(Platform)'=='ReleaseGame|Durango' or '$(Configuration)|$(Platform)'=='Final|Durango' or '$(Configuration)|$(Platform)'=='Profiling|Durango' or '$(Configuration)|$(Platform)'=='FinalWithLogging|Durango'">
+    <PreBuildEvent>
+      <Command Condition="'$(ConfigurationType)' == 'Application'">
+        attrib -r "$(TargetPath)"
+        attrib -r "$(TargetDir)$(TargetName).pdb"
+        attrib -r "$(TargetDir)$(TargetName).lib"
+        attrib -r "$(TargetDir)$(TargetName).exp"
+        attrib -r "$(TargetDir)$(ProjectName).winmd"
+        attrib -r "$(TargetDir)$(TargetName).ilk"
+        attrib -r "$(TargetDir)resources.pri"
+        attrib -r "$(TargetDir)AppxManifest.xml"
+        attrib -r "$(TargetDir)appdata.bin"
+        attrib -r "$(TargetDir)$(ProjectName).build.appxrecipe"
+      </Command>
+      <Message>[Perforce hack] Clearing read-only attribute of target</Message>
+    </PreBuildEvent>
+    <ClCompile>
+      <AdditionalOptions>/d2Zi+ %(AdditionalOptions)</AdditionalOptions>
+      <CompileAsWinRT Condition="'$(ProjectCompileAsWinRT)'=='true'">true</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(ProjectCompileAsWinRT)'=='false'">false</CompileAsWinRT>
+      <RuntimeLibrary>MultiThreadedDll</RuntimeLibrary>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+    </ClCompile>
+	<Link>
+      <StackReserveSize>2097152</StackReserveSize>
+    </Link>	
+  </ItemDefinitionGroup>
+
+</Project>

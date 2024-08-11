@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="source">
+      <UniqueIdentifier>{301B66D0-450A-434C-8FA7-868CC30105B3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\runtime">
+      <UniqueIdentifier>{62ABAE19-78CC-C442-A084-826CEECD1B5E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\runtime\ps3">
+      <UniqueIdentifier>{BBB6EC02-C46B-354E-BED0-53D570829482}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\source\runtime\umbraBSPTree.hpp">
+      <Filter>source\runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\runtime\umbraConnectivity.hpp">
+      <Filter>source\runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\runtime\umbraCubemap.hpp">
+      <Filter>source\runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\runtime\umbraDepthBuffer.hpp">
+      <Filter>source\runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\runtime\umbraMemoryAccess.hpp">
+      <Filter>source\runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\runtime\umbraPortalCull.hpp">
+      <Filter>source\runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\runtime\umbraPortalRaster.hpp">
+      <Filter>source\runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\runtime\umbraPortalRayTracer.hpp">
+      <Filter>source\runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\runtime\umbraPortalTraversal.hpp">
+      <Filter>source\runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\runtime\umbraQueryArgs.hpp">
+      <Filter>source\runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\runtime\umbraQueryContext.hpp">
+      <Filter>source\runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\runtime\umbraQueryWrapper.hpp">
+      <Filter>source\runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\runtime\umbraRasterDefs.hpp">
+      <Filter>source\runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\runtime\umbraRuntimeTomeGenerator.hpp">
+      <Filter>source\runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\runtime\umbraShadowDefs.hpp">
+      <Filter>source\runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\runtime\umbraShadows.hpp">
+      <Filter>source\runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\runtime\umbraSIMD.hpp">
+      <Filter>source\runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\runtime\umbraSIMD_SSE.hpp">
+      <Filter>source\runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\runtime\umbraStaticHeap.hpp">
+      <Filter>source\runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\runtime\umbraTileTraverse.hpp">
+      <Filter>source\runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\runtime\umbraTomeCollection.hpp">
+      <Filter>source\runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\runtime\umbraTomePrivate.hpp">
+      <Filter>source\runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\runtime\umbraTransformer.hpp">
+      <Filter>source\runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\runtime\ps3\umbraSIMD_PS3SPU.hpp">
+      <Filter>source\runtime\ps3</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\source\runtime\umbraBSPTree.cpp">
+      <Filter>source\runtime</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\runtime\umbraConnectivity.cpp">
+      <Filter>source\runtime</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\runtime\umbraCubemap.cpp">
+      <Filter>source\runtime</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\runtime\umbraDPVS.cpp">
+      <Filter>source\runtime</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\runtime\umbraPortalCull.cpp">
+      <Filter>source\runtime</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\runtime\umbraPortalRaster.cpp">
+      <Filter>source\runtime</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\runtime\umbraPortalRayTracer.cpp">
+      <Filter>source\runtime</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\runtime\umbraQueryApi.cpp">
+      <Filter>source\runtime</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\runtime\umbraQueryArgs.cpp">
+      <Filter>source\runtime</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\runtime\umbraQueryContext.cpp">
+      <Filter>source\runtime</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\runtime\umbraRuntimeInfoString.cpp">
+      <Filter>source\runtime</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\runtime\umbraRuntimeTomeGenerator.cpp">
+      <Filter>source\runtime</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\runtime\umbraShadows.cpp">
+      <Filter>source\runtime</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\runtime\umbraTome.cpp">
+      <Filter>source\runtime</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\runtime\umbraTomeApi.cpp">
+      <Filter>source\runtime</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\runtime\umbraTomeCollection.cpp">
+      <Filter>source\runtime</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\runtime\umbraTransformer.cpp">
+      <Filter>source\runtime</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest"
+         xmlns:mx="http://schemas.microsoft.com/appx/2013/xbox/manifest"
+         IgnorableNamespaces="mx">
+  
+  <Identity Name="eb3ffe48-9803-4e14-a29b-f4e0632f6afc"
+            Publisher="CN=Publisher"
+            Version="1.0.0.0" />
+  
+  <Properties>
+    <DisplayName>Unit Test Engine</DisplayName>
+    <PublisherDisplayName>CD Projekt Red</PublisherDisplayName>
+    <Logo>StoreLogo.png</Logo>
+    <Description>Unit Test Engine</Description>
+  </Properties>
+  
+  <Prerequisites>
+    <OSMinVersion>6.2</OSMinVersion>
+    <OSMaxVersionTested>6.2</OSMaxVersionTested>
+  </Prerequisites>
+  
+  <Resources>
+    <Resource Language="en-us"/>
+  </Resources>
+  
+  <Applications>
+    <Application Id="App" 
+        Executable="$targetnametoken$.exe" 
+        EntryPoint="unitTestEngine.App">
+        <VisualElements 
+            DisplayName="Unit Test Engine"
+            Logo="Logo.png"
+            SmallLogo="SmallLogo.png"
+            Description="Unit Test Engine"
+            ForegroundText="light"
+            BackgroundColor="#464646">
+            <SplashScreen Image="SplashScreen.png" />
+        </VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClientServer" />
+  </Capabilities>
+</Package>

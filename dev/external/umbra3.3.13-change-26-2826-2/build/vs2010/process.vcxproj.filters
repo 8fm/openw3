@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="source">
+      <UniqueIdentifier>{E900E979-2603-4448-89C8-6674A05E4265}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\process">
+      <UniqueIdentifier>{8170985F-5163-C043-ACAB-568931577BD0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\source\process\umbraProcess.cpp">
+      <Filter>source\process</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

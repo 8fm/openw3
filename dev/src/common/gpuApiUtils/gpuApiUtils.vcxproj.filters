@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="gpuApiUtils.h" />
+    <ClInclude Include="gpuApiVertexPacking.h" />
+    <ClInclude Include="gpuApiTypes.h" />
+    <ClInclude Include="gpuApiErrorHandling.h" />
+    <ClInclude Include="gpuApiVertexFormats.h" />
+    <ClInclude Include="gpuApiVertexDeclarations.h" />
+    <ClInclude Include="gpuApiMemory.h" />
+    <ClInclude Include="gpuApiMemoryClasses.h" />
+    <ClInclude Include="gpuApiMemoryPools.h" />
+    <ClInclude Include="gpuApiInterface.h" />
+    <ClInclude Include="gpuApiCommon.h" />
+    <ClInclude Include="gpuApiContainer.h" />
+    <ClInclude Include="gpuApiMappingCommon.h" />
+    <ClInclude Include="mojoshader\mojoshader.h">
+      <Filter>mojoshader</Filter>
+    </ClInclude>
+    <ClInclude Include="mojoshader\mojoshader_internal.h">
+      <Filter>mojoshader</Filter>
+    </ClInclude>
+    <ClInclude Include="mojoshader\mojoshader_parser_hlsl.h">
+      <Filter>mojoshader</Filter>
+    </ClInclude>
+    <ClInclude Include="mojoshader\mojoshader_version.h">
+      <Filter>mojoshader</Filter>
+    </ClInclude>
+    <ClInclude Include="gpuApiShaderParsing.h" />
+    <ClInclude Include="gpuApiRenderCommon.h" />
+    <ClInclude Include="gpuApiSamplerCommon.h" />
+    <ClInclude Include="gpuApiDDSLoader.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="gpuApiUtils.cpp" />
+    <ClCompile Include="gpuApiVertexPacking.cpp" />
+    <ClCompile Include="gpuApiVertexFormats.cpp" />
+    <ClCompile Include="gpuApiMemory.cpp" />
+    <ClCompile Include="gpuApiVertexLayoutsCommon.cpp" />
+    <ClCompile Include="mojoshader\mojoshader.c">
+      <Filter>mojoshader</Filter>
+    </ClCompile>
+    <ClCompile Include="mojoshader\mojoshader_assembler.c">
+      <Filter>mojoshader</Filter>
+    </ClCompile>
+    <ClCompile Include="mojoshader\mojoshader_common.c">
+      <Filter>mojoshader</Filter>
+    </ClCompile>
+    <ClCompile Include="mojoshader\mojoshader_compiler.c">
+      <Filter>mojoshader</Filter>
+    </ClCompile>
+    <ClCompile Include="mojoshader\mojoshader_effects.c">
+      <Filter>mojoshader</Filter>
+    </ClCompile>
+    <ClCompile Include="mojoshader\mojoshader_lexer.c">
+      <Filter>mojoshader</Filter>
+    </ClCompile>
+    <ClCompile Include="mojoshader\mojoshader_opengl.c">
+      <Filter>mojoshader</Filter>
+    </ClCompile>
+    <ClCompile Include="mojoshader\mojoshader_preprocessor.c">
+      <Filter>mojoshader</Filter>
+    </ClCompile>
+    <ClCompile Include="gpuApiShaderParsing.cpp" />
+    <ClCompile Include="gpuApiCommon.cpp" />
+    <ClCompile Include="gpuApiDDSLoader.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="mojoshader">
+      <UniqueIdentifier>{f7bd06a2-8c4b-45c9-ad8e-3c502e727837}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

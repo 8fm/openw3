@@ -1,0 +1,62 @@
+/**
+* Copyright © 2014 CD Projekt Red. All Rights Reserved.
+*/
+
+#pragma once
+
+#define SPEEDTREE_VERSION_NAME		"speedtree"
+#define SPEEDTREE_VERSION			"_v7.0_"
+
+#if defined( RED_PLATFORM_WINPC )
+# define SPEEDTREE_PLATFORM_NAME	"Windows"
+
+# ifdef _WIN64
+#  define SPEEDTREE_ARCHITECTURE	"VC11_MT64_"
+#  define SPEEDTREE_FOLDER          "VC11.x64\\"
+# else
+#  define SPEEDTREE_ARCHITECTURE	"VC11_MT_"
+#  define SPEEDTREE_FOLDER          "VC11\\"
+# endif
+
+# if _MSC_VER != 1700
+#  error Unsupported compiler
+# endif
+
+# define SPEEDTREE_EXTENSION		".lib"
+
+#elif defined( RED_PLATFORM_DURANGO )
+
+# define SPEEDTREE_PLATFORM_NAME	"Durango"
+# define SPEEDTREE_ARCHITECTURE		"MTDLL_"
+# define SPEEDTREE_EXTENSION		".lib"
+# define SPEEDTREE_FOLDER          
+
+#elif defined( RED_PLATFORM_ORBIS )
+
+# define SPEEDTREE_PLATFORM_NAME	"Orbis"
+# define SPEEDTREE_ARCHITECTURE
+# define SPEEDTREE_EXTENSION		".a"
+# define SPEEDTREE_FOLDER         
+
+#else
+# error platform not supported
+#endif
+
+# ifdef RED_PLATFORM_ORBIS
+#  define SPEEDTREE_LIBPREFIX "lib"
+# else
+#  define SPEEDTREE_LIBPREFIX
+# endif
+
+#if defined(_DEBUG)
+#define SPEEDTREE_CONFIGURATION "Static_d" 
+#else
+#define SPEEDTREE_CONFIGURATION "Static" 
+#endif
+
+#define SPEEDTREE_LIB_PATH	"..\\..\\..\\external\\" SPEEDTREE_VERSION_NAME "\\Lib\\" SPEEDTREE_PLATFORM_NAME "\\" SPEEDTREE_FOLDER SPEEDTREE_LIBPREFIX
+#define SPEEDTREE_CORE_LIB SPEEDTREE_LIB_PATH "SpeedTreeCore_" SPEEDTREE_PLATFORM_NAME SPEEDTREE_VERSION SPEEDTREE_ARCHITECTURE SPEEDTREE_CONFIGURATION SPEEDTREE_EXTENSION
+#define SPEEDTREE_FOREST_LIB SPEEDTREE_LIB_PATH "SpeedTreeForest_" SPEEDTREE_PLATFORM_NAME SPEEDTREE_VERSION SPEEDTREE_ARCHITECTURE SPEEDTREE_CONFIGURATION SPEEDTREE_EXTENSION
+
+#pragma comment(lib, SPEEDTREE_CORE_LIB )
+#pragma comment(lib, SPEEDTREE_FOREST_LIB )

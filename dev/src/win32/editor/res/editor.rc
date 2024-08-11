@@ -1,0 +1,59 @@
+/////////////////////////////////////////////////////////////////////////////
+// Name:        wxtest.rc
+// Purpose:     a standard Win32 .rc file for the wxWidgets
+// Author:      Ryan Pusztai
+// Modified by: Ryan Mulder
+// Created:     11.21.05
+// Copyright:   (c) 2005 RJP Computing <support@rjpcomputing.com>
+/////////////////////////////////////////////////////////////////////////////
+
+// note that the icon used by the Explorer (i.e. the programs icon) is the
+// first icon in the executable and the icons are sorted both by their order
+// (Win9x) and by alphabetically (!) (NT), so put this icon first and give it
+// a name starting with "a"
+//aaaaaaaa ICON "main.ico"
+
+// this icon is used with wxFrame::SetIcon()
+amain ICON "editor.ico"
+
+// set this to 1 if you don't want to use manifest resource (manifest resource
+// is needed to enable visual styles on Windows XP - see docs/msw/winxp.txt
+// for more information)
+#define wxUSE_NO_MANIFEST 0
+
+// this is not always needed but doesn't hurt (except making the executable
+// very slightly larger): this file contains the standard icons, cursors, ...
+#include "wx/msw/wx.rc"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+#include "resource.h"
+#include "..\..\platform\assert.customrc"
+
+#include "afxres.h"
+
+// IDB_SPLASH              BITMAP                  "splashscreen.bmp"
+
+IDD_PROGRESSDLG DIALOGEX 0, 0, 335, 57
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU | DS_CENTER
+CAPTION "<Title>"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Cancel",IDCANCEL,278,36,50,14
+    LTEXT           "<Text>",IDC_PROGRESS_TEXT,7,7,321,8
+    CONTROL         "",IDC_PROGRESS_BAR,"msctls_progress32",WS_BORDER,7,17,321,14
+    LTEXT           "ETA: 00:00",IDC_PROGRESS_TIME,13,39,62,8
+END
+
+IDD_SPLASH DIALOGEX 0, 0, 280, 162
+STYLE DS_CENTER | DS_SETFONT | DS_FIXEDSYS | WS_POPUP
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         0,IDC_STATICBG,"Static",SS_BITMAP,0,0,280,162
+    LTEXT           "The Witcher, Build 0.4.9.1045",IDC_BUILD_TEXT,7,139,260,8
+    LTEXT           "Loading editor...",IDC_PROGRESS_TEXT,5,152,260,8
+END
+ 

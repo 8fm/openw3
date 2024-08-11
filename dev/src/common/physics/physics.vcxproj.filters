@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="compiledCollision.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="physicalCollision.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="physicsEngine.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="physicsLogger.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="physicsSettings.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="physicsWorld.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="physicsWorldInvalidAreaCache.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="physicsWorldTrace.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="build.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="PhysXStreams.cpp">
+      <Filter>physx</Filter>
+    </ClCompile>
+    <ClCompile Include="physicsChainedRagdollWrapperPhysx.cpp">
+      <Filter>physx</Filter>
+    </ClCompile>
+    <ClCompile Include="physicsDebuggerPhysx.cpp">
+      <Filter>physx</Filter>
+    </ClCompile>
+    <ClCompile Include="physicsJointedRagdollWrapperPhysx.cpp">
+      <Filter>physx</Filter>
+    </ClCompile>
+    <ClCompile Include="physicsParticleWrapperPhysx.cpp">
+      <Filter>physx</Filter>
+    </ClCompile>
+    <ClCompile Include="physicsRagdollWrapperPhysx.cpp">
+      <Filter>physx</Filter>
+    </ClCompile>
+    <ClCompile Include="physicsSimpleBodyWrapperPhysx.cpp">
+      <Filter>physx</Filter>
+    </ClCompile>
+    <ClCompile Include="physicsWrapperPhysx.cpp">
+      <Filter>physx</Filter>
+    </ClCompile>
+    <ClCompile Include="physXEngine.cpp">
+      <Filter>physx</Filter>
+    </ClCompile>
+    <ClCompile Include="physicsWorldPhysx.cpp">
+      <Filter>physx</Filter>
+    </ClCompile>
+    <ClCompile Include="physicsWorldBatchTracePhysx.cpp">
+      <Filter>physx</Filter>
+    </ClCompile>
+    <ClCompile Include="physXCpuDispatcher.cpp">
+      <Filter>physx</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="physicsChainedRagdollWrapper.h">
+      <Filter>public</Filter>
+    </ClInclude>
+    <ClInclude Include="physicalCollision.h">
+      <Filter>public</Filter>
+    </ClInclude>
+    <ClInclude Include="physicalMaterial.h">
+      <Filter>public</Filter>
+    </ClInclude>
+    <ClInclude Include="compiledCollision.h">
+      <Filter>public</Filter>
+    </ClInclude>
+    <ClInclude Include="physicalCallbacks.h">
+      <Filter>public</Filter>
+    </ClInclude>
+    <ClInclude Include="physicsContactListener.h">
+      <Filter>public</Filter>
+    </ClInclude>
+    <ClInclude Include="physicsDebugger.h">
+      <Filter>public</Filter>
+    </ClInclude>
+    <ClInclude Include="physicsJointedRagdollWrapper.h">
+      <Filter>public</Filter>
+    </ClInclude>
+    <ClInclude Include="physicsRagdollState.h">
+      <Filter>public</Filter>
+    </ClInclude>
+    <ClInclude Include="physicsRagdollWrapper.h">
+      <Filter>public</Filter>
+    </ClInclude>
+    <ClInclude Include="physicsParticleWrapper.h">
+      <Filter>public</Filter>
+    </ClInclude>
+    <ClInclude Include="physicsSettings.h">
+      <Filter>public</Filter>
+    </ClInclude>
+    <ClInclude Include="physicsEngine.h">
+      <Filter>public</Filter>
+    </ClInclude>
+    <ClInclude Include="physicsLogger.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="physicsSimpleBodyWrapper.h">
+      <Filter>public</Filter>
+    </ClInclude>
+    <ClInclude Include="physicsWorld.h">
+      <Filter>public</Filter>
+    </ClInclude>
+    <ClInclude Include="physicsWorldInvalidAreaCache.h">
+      <Filter>public</Filter>
+    </ClInclude>
+    <ClInclude Include="physicsWrapper.h">
+      <Filter>public</Filter>
+    </ClInclude>
+    <ClInclude Include="physicsWorldUtils.h">
+      <Filter>public</Filter>
+    </ClInclude>
+    <ClInclude Include="physicsWrapperPool.h">
+      <Filter>public</Filter>
+    </ClInclude>
+    <ClInclude Include="PhysicsWrappersDefinition.h">
+      <Filter>public</Filter>
+    </ClInclude>
+    <ClInclude Include="build.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="PhysXStreams.h">
+      <Filter>physx</Filter>
+    </ClInclude>
+    <ClInclude Include="physXCpuDispatcher.h">
+      <Filter>physx</Filter>
+    </ClInclude>
+    <ClInclude Include="physXEngine.h">
+      <Filter>physx</Filter>
+    </ClInclude>
+    <ClInclude Include="physicsWorldPhysxImplBatchTrace.h">
+      <Filter>physx</Filter>
+    </ClInclude>
+    <ClInclude Include="physicsWorldPhysXImpl.h">
+      <Filter>physx</Filter>
+    </ClInclude>
+    <ClInclude Include="physicsMemory.h">
+      <Filter>physx</Filter>
+    </ClInclude>
+    <ClInclude Include="physicsIncludes.h">
+      <Filter>physx</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="public">
+      <UniqueIdentifier>{93f27c69-6560-4c83-b8d4-353925c3fe01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{4da133d8-9dad-4a95-8a01-b18743b10b60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{ea5ef419-6898-43e0-af3d-9b0fcb130529}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="physx">
+      <UniqueIdentifier>{e7a2defb-831a-4031-952b-51e36c8643e8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

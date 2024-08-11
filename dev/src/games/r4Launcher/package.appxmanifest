@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest"
+         xmlns:mx="http://schemas.microsoft.com/appx/2013/xbox/manifest"
+         IgnorableNamespaces="mx">
+
+  <Identity Name="The-Witcher-3-Wild-Hunt-EFIGSPL"
+            Publisher="CN=CD-PROJEKT-SA"
+            Version="3.0.0.0" />
+
+  <Resources>
+    <Resource Language="en-US"/>
+    <Resource Language="de-DE"/>
+    <Resource Language="es-ES"/>
+    <Resource Language="es-MX"/>
+    <Resource Language="fr-FR"/>
+    <Resource Language="it-IT"/>
+    <Resource Language="ko-KR"/>
+    <Resource Language="en-AE"/>
+    <Resource Language="en-CZ"/>
+    <Resource Language="en-HU"/>
+    <Resource Language="ja-JP"/>
+    <Resource Language="zh-TW"/>
+    <Resource Language="pl-PL"/>
+    <Resource Language="pt-BR"/>
+    <Resource Language="ru-RU"/>
+  </Resources>
+
+  <Properties>
+    <DisplayName>The Witcher 3: Wild Hunt</DisplayName>
+    <PublisherDisplayName>CD Projekt S.A.</PublisherDisplayName>
+    <Logo>Manifest/logo.png</Logo>
+    <Description>The Witcher is a story-driven, next-generation open world role-playing game, set in a visually stunning fantasy universe, full of meaningful choices and impactful consequences. In The Witcher, you play as Geralt of Rivia and confront a foe darker than anything humanity has faced so far—the Wild Hunt.</Description>
+  </Properties>
+
+  <Prerequisites>
+    <OSMinVersion>6.2</OSMinVersion>
+    <OSMaxVersionTested>6.2</OSMaxVersionTested>
+  </Prerequisites>
+
+  <Applications>
+    <Application Id="w3applicationid"
+        Executable="$targetnametoken$.exe"
+        EntryPoint="r4Game.App">
+      <VisualElements
+          DisplayName="ms-resource:AppName"
+          Logo="Manifest/logo.png"
+          SmallLogo="Manifest/smallLogo.png"
+          Description="ms-resource:AppDescription"
+          ForegroundText="light"
+          BackgroundColor="#464646">
+        <DefaultTile ShowName="noLogos" ShortName="ms-resource:ShortName" WideLogo="Manifest/defaultTile.png" />
+        <SplashScreen Image="Manifest/splashScreen.png" />
+      </VisualElements>
+
+      <mx:Ratings Category="game">
+        <mx:Rating>DJCTQ:16</mx:Rating>
+        <mx:Rating>ESRB:M</mx:Rating>
+        <mx:Rating>USK:18</mx:Rating>
+        <mx:Rating>PEGI:18</mx:Rating>
+        <mx:Rating>PEGI-PT:18</mx:Rating>
+        <mx:Rating>PCBP:18</mx:Rating>
+        <mx:Rating>MDA:M18</mx:Rating>
+        <mx:Rating>COB-AU:R18</mx:Rating>
+        <mx:Rating>OFLC-NZ:R16</mx:Rating>
+        <mx:Rating>GRB:18</mx:Rating>
+        <mx:Rating>FPB:18</mx:Rating>
+        <mx:Rating>CSRR:R</mx:Rating>
+        <mx:Rating>CERO:Z</mx:Rating>
+      </mx:Ratings>
+
+      <Extensions>
+        <mx:Extension Category="windows.xbox.networking">
+          <mx:XboxNetworkingManifest>
+            <mx:SocketDescriptions>
+              <mx:SocketDescription Name="WwiseDiscoverySocket" SecureIpProtocol="Udp" BoundPort="24024">
+                <mx:AllowedUsages>
+                  <mx:SecureDeviceSocketUsage Type="Initiate" />
+                  <mx:SecureDeviceSocketUsage Type="Accept" />
+                  <mx:SecureDeviceSocketUsage Type="SendDebug" />
+                  <mx:SecureDeviceSocketUsage Type="ReceiveDebug" />
+                </mx:AllowedUsages>
+              </mx:SocketDescription>
+              <mx:SocketDescription Name="WwiseCommandSocket" SecureIpProtocol="Tcp" BoundPort="24025">
+                <mx:AllowedUsages>
+                  <mx:SecureDeviceSocketUsage Type="Initiate" />
+                  <mx:SecureDeviceSocketUsage Type="Accept" />
+                  <mx:SecureDeviceSocketUsage Type="SendDebug" />
+                  <mx:SecureDeviceSocketUsage Type="ReceiveDebug" />
+                </mx:AllowedUsages>
+              </mx:SocketDescription>
+              <mx:SocketDescription Name="WwiseNotificationSocket" SecureIpProtocol="Tcp" BoundPort="24026">
+                <mx:AllowedUsages>
+                  <mx:SecureDeviceSocketUsage Type="Initiate" />
+                  <mx:SecureDeviceSocketUsage Type="Accept" />
+                  <mx:SecureDeviceSocketUsage Type="SendDebug" />
+                  <mx:SecureDeviceSocketUsage Type="ReceiveDebug" />
+                </mx:AllowedUsages>
+              </mx:SocketDescription>
+              <mx:SocketDescription Name="RedToolDiscoverySocket" SecureIpProtocol="Tcp" BoundPort="37000-37001">
+                <mx:AllowedUsages>
+                  <mx:SecureDeviceSocketUsage Type="Initiate" />
+                  <mx:SecureDeviceSocketUsage Type="Accept" />
+                  <mx:SecureDeviceSocketUsage Type="SendDebug" />
+                  <mx:SecureDeviceSocketUsage Type="ReceiveDebug" />
+                </mx:AllowedUsages>
+              </mx:SocketDescription>
+              <mx:SocketDescription Name="RedDebugHTMLPagesSocket" SecureIpProtocol="Tcp" BoundPort="37010-37011">
+                <mx:AllowedUsages>
+                  <mx:SecureDeviceSocketUsage Type="Initiate" />
+                  <mx:SecureDeviceSocketUsage Type="Accept" />
+                  <mx:SecureDeviceSocketUsage Type="SendDebug" />
+                  <mx:SecureDeviceSocketUsage Type="ReceiveDebug" />
+                </mx:AllowedUsages>
+              </mx:SocketDescription>
+              <mx:SocketDescription Name="RedToolSleepSocket" SecureIpProtocol="Udp" BoundPort="36050-36060">
+                <mx:AllowedUsages>
+                  <mx:SecureDeviceSocketUsage Type="Initiate" />
+                  <mx:SecureDeviceSocketUsage Type="SendDebug" />
+                  <mx:SecureDeviceSocketUsage Type="ReceiveDebug" />
+                </mx:AllowedUsages>
+              </mx:SocketDescription>
+            </mx:SocketDescriptions>
+            <mx:SecureDeviceAssociationTemplates>
+              <mx:SecureDeviceAssociationTemplate Name="WwiseDiscovery" InitiatorSocketDescription="WwiseDiscoverySocket" AcceptorSocketDescription="WwiseDiscoverySocket" MultiplayerSessionRequirement="None">
+                <mx:AllowedUsages>
+                  <mx:SecureDeviceAssociationUsage Type="Default" />
+                </mx:AllowedUsages>
+              </mx:SecureDeviceAssociationTemplate>
+              <mx:SecureDeviceAssociationTemplate Name="WwiseCommand" InitiatorSocketDescription="WwiseCommandSocket" AcceptorSocketDescription="WwiseCommandSocket" MultiplayerSessionRequirement="None">
+                <mx:AllowedUsages>
+                  <mx:SecureDeviceAssociationUsage Type="Default" />
+                </mx:AllowedUsages>
+              </mx:SecureDeviceAssociationTemplate>
+              <mx:SecureDeviceAssociationTemplate Name="WwiseNotification" InitiatorSocketDescription="WwiseNotificationSocket" AcceptorSocketDescription="WwiseNotificationSocket" MultiplayerSessionRequirement="None">
+                <mx:AllowedUsages>
+                  <mx:SecureDeviceAssociationUsage Type="Default" />
+                </mx:AllowedUsages>
+              </mx:SecureDeviceAssociationTemplate>
+              <mx:SecureDeviceAssociationTemplate Name="RedToolDiscovery" InitiatorSocketDescription="RedToolDiscoverySocket" AcceptorSocketDescription="RedToolDiscoverySocket" MultiplayerSessionRequirement="None">
+                <mx:AllowedUsages>
+                  <mx:SecureDeviceAssociationUsage Type="Default" />
+                </mx:AllowedUsages>
+              </mx:SecureDeviceAssociationTemplate>
+              <mx:SecureDeviceAssociationTemplate Name="RedToolSleep" InitiatorSocketDescription="RedToolSleepSocket" AcceptorSocketDescription="RedToolSleepSocket" MultiplayerSessionRequirement="None">
+                <mx:AllowedUsages>
+                  <mx:SecureDeviceAssociationUsage Type="Default" />
+                </mx:AllowedUsages>
+              </mx:SecureDeviceAssociationTemplate>
+              <mx:SecureDeviceAssociationTemplate Name="RedDebugHTMLPages" InitiatorSocketDescription="RedDebugHTMLPagesSocket" AcceptorSocketDescription="RedDebugHTMLPagesSocket" MultiplayerSessionRequirement="None">
+                <mx:AllowedUsages>
+                  <mx:SecureDeviceAssociationUsage Type="Default" />
+                </mx:AllowedUsages>
+              </mx:SecureDeviceAssociationTemplate>
+            </mx:SecureDeviceAssociationTemplates>
+          </mx:XboxNetworkingManifest>
+        </mx:Extension>
+        <mx:Extension Category="xbox.live">
+          <mx:XboxLive TitleId="6B481C3D" PrimaryServiceConfigId="de360100-3ae5-4fd5-a7da-9d3d6b481c3d" RequireXboxLive="false"/>
+        </mx:Extension>
+        <mx:Extension Category="xbox.system.resources">
+          <mx:XboxSystemResources resourceConfiguration="extended">
+            <mx:GpuAvailability>variable</mx:GpuAvailability>
+          </mx:XboxSystemResources>
+        </mx:Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClientServer" />
+  </Capabilities>
+</Package>

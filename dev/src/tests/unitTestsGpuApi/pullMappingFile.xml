@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mappings>
+  <!-- The root package path is created with -->
+  <!-- the path passed into to the           -->
+  <!-- xbdeploy.exe pull command.           -->
+
+  <path source="Z:\dev\src\tests\unitTestsGpuApi" target="\" />
+ </mappings>

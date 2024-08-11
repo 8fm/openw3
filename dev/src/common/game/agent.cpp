@@ -1,0 +1,33 @@
+#include "build.h"
+#include "agent.h"
+#include "spawnStrategy.h"
+
+
+///////////////////////////////////////////////////////////////////////////////
+
+IAgent::IAgent() 
+	: m_lodWeight( LW_LOWEST )
+	, m_newLod( ALOD_Invisible )
+{}
+
+///////////////////////////////////////////////////////////////////////////////
+
+void IAgent::CalculateLOD( const CAgentsWorld& world )
+{
+	GetSpawnStrategy().SetLOD( world, *this );
+}
+
+///////////////////////////////////////////////////////////////////////////////
+
+Bool IAgent::ProcessLODChange( Float deltaTime )
+{
+	EAgentLOD lod = GetLOD();
+	if ( m_newLod != lod )
+	{
+		return OnLODChanged( m_newLod );
+	}
+
+	return true;
+}
+
+///////////////////////////////////////////////////////////////////////////////

@@ -1,0 +1,27 @@
+//SamplerState samp0 : register(s0);
+//Texture2D colorMap : register(t0);
+
+//ConstantBuffer ShaderConstants
+//{
+//	column_major matrix m_worldViewProj;
+//};
+
+#include "quad_vsoutput.pssl"
+
+struct VS_INPUT
+{
+	float3 Position		: POSITION0;
+	float4 Color		: COLOR0;
+	float2 UV			: TEXCOORD0;
+};
+
+VS_OUTPUT main( VS_INPUT Input )
+{
+	VS_OUTPUT Output;
+
+	Output.Position = float4( Input.Position.xyz, 1 );//mul( m_worldViewProj, float4( Input.Position.xyz, 1 ) );
+	Output.Color = Input.Color;
+	Output.UV = Input.UV;
+
+	return Output;
+}

@@ -1,0 +1,436 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" TreatAsLocalProperty="OutDir;TargetName;IntDir;PlatformToolset">
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedConfigurationSetup.props))\SharedConfigurationSetup.props" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{6351B389-DBCE-4410-815C-D2C2A3E6F11A}</ProjectGuid>
+    <RootNamespace>r6</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <ProjectClDirs>$(SolutionDir)../external/gfx4/Src;$(SolutionDir)../external/gfx4/Include;</ProjectClDirs>
+  </PropertyGroup>
+
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.props))\Shared.props" />
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedItemGroups.props))\SharedItemGroups.props" />
+
+  <ItemGroup>
+    <ClCompile Include="aiAction.cpp" />
+    <ClCompile Include="aiActionInteraction.cpp" />
+    <ClCompile Include="aiActionMoveTo.cpp" />
+    <ClCompile Include="aiActionPlayAnimation.cpp" />
+    <ClCompile Include="aiActionPerformerAttachment.cpp" />
+    <ClCompile Include="aiActionRotateTo.cpp" />
+    <ClCompile Include="aiActionScripted.cpp" />
+    <ClCompile Include="aimHelpTargetGatherer.cpp" />
+    <ClCompile Include="aimTarget.cpp" />
+    <ClCompile Include="aiTreeComponent.cpp" />
+    <ClCompile Include="avCameraTest.cpp" />
+    <ClCompile Include="avComponentTest.cpp" />
+    <ClCompile Include="avoidEnemiesSteeringTask.cpp" />
+    <ClCompile Include="baseUpgradeEventHandlerParam.cpp" />
+    <ClCompile Include="baseUpgradeEventHendler.cpp" />
+    <ClCompile Include="baseUpgradeStatsModyfier.cpp" />
+    <ClCompile Include="behTreeConditionIsPlayer.cpp" />
+    <ClCompile Include="behTreeNodeAIAction.cpp" />
+    <ClCompile Include="behTreeNodeDebugLog.cpp" />
+    <ClCompile Include="behTreeNodeInputDecorator.cpp" />
+    <ClCompile Include="behTreeNodePlayerChooseInteraction.cpp" />
+    <ClCompile Include="behTreeNodePlayerState.cpp" />
+    <ClCompile Include="behTreeNodePlayerStateIdle.cpp" />
+    <ClCompile Include="behTreeNodePlayerStateJump.cpp" />
+    <ClCompile Include="behTreeNodePlayerStateSelector.cpp" />
+    <ClCompile Include="behTreeNodePlayerStateWalk.cpp" />
+    <ClCompile Include="behTreeNodeSelectTargetByTagR6.cpp" />
+    <ClCompile Include="behTreeNodeSequenceR6.cpp" />
+    <ClCompile Include="build.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="bulletProjectile.cpp" />
+    <ClCompile Include="companionComponent.cpp" />
+    <ClCompile Include="crowdAreaComponent.cpp" />
+    <ClCompile Include="followerPOIComponent.cpp" />
+    <ClCompile Include="combatUtils.cpp" />
+    <ClCompile Include="coverPoint.cpp" />
+    <ClCompile Include="coversManager.cpp" />
+    <ClCompile Include="craftingBench.cpp" />
+    <ClCompile Include="crowdAgent.cpp" />
+    <ClCompile Include="crowdArea.cpp" />
+    <ClCompile Include="crowdEntryPoint.cpp" />
+    <ClCompile Include="crowdManager.cpp" />
+    <ClCompile Include="crowdObstacle.cpp" />
+    <ClCompile Include="crowdSpaceGrid.cpp" />
+    <ClCompile Include="crowdSpaceNaive.cpp" />
+    <ClCompile Include="debugPageInteractiveDialogs.cpp" />
+    <ClCompile Include="enemyAwareComponent.cpp" />
+    <ClCompile Include="idBasicBlocks.cpp" />
+    <ClCompile Include="idCondition.cpp" />
+    <ClCompile Include="idAreaCondition.cpp" />
+    <ClCompile Include="idConnector.cpp" />
+    <ClCompile Include="idEvent.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="idEventAbortInteraction.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="idEventAI.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="idEventAnimation.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="idEventEncounter.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="idEventFact.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="idEventGeneral.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="idEventInterlocutor.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="idEventQuest.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="idEventSender.cpp" />
+    <ClCompile Include="idEventSenderDataStructs.cpp" />
+    <ClCompile Include="idEventSound.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="idGraph.cpp" />
+    <ClCompile Include="idGraphBlockCheckpoint.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="idGraphBlockBranch.cpp" />
+    <ClCompile Include="idGraphBlockChoice.cpp" />
+    <ClCompile Include="idGraphBlockComunicatorSwitch.cpp" />
+    <ClCompile Include="idGraphBlockCondition.cpp" />
+    <ClCompile Include="idGraphBlockConnector.cpp" />
+    <ClCompile Include="idGraphBlockEvents.cpp" />
+    <ClCompile Include="idGraphBlockFact.cpp" />
+    <ClCompile Include="idGraphBlockFlow.cpp" />
+    <ClCompile Include="idGraphBlockInteraction.cpp" />
+    <ClCompile Include="idGraphBlockOutputTerminate.cpp" />
+    <ClCompile Include="idGraphBlockRequestFocus.cpp" />
+    <ClCompile Include="idGraphBlockText.cpp" />
+    <ClCompile Include="idHud.cpp" />
+    <ClCompile Include="idInterlocutor.cpp" />
+    <ClCompile Include="idLine.cpp" />
+    <ClCompile Include="idThread.cpp" />
+    <ClCompile Include="idThreadActivator.cpp" />
+    <ClCompile Include="interactionCameraComponent.cpp" />
+    <ClCompile Include="idResource.cpp" />
+    <ClCompile Include="idInstance.cpp" />
+    <ClCompile Include="idSystem.cpp" />
+    <ClCompile Include="idTopic.cpp" />
+    <ClCompile Include="npcMovementControllerComponent.cpp" />
+    <ClCompile Include="orvoSolver.cpp" />
+    <ClCompile Include="playerLocomotionController.cpp" />
+    <ClCompile Include="positionComputer.cpp" />
+    <ClCompile Include="questGraphBlockInteractiveDialog.cpp" />
+    <ClCompile Include="questGraphR6QuestBlock.cpp" />
+    <ClCompile Include="questGraphR6QuestConditionBlock.cpp" />
+    <ClCompile Include="questGraphR6QuestPauseBlock.cpp" />
+    <ClCompile Include="questObjectiveComponent.cpp" />
+    <ClCompile Include="r6AdvancedVehicleComponent.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="r6AimingComponent.cpp" />
+    <ClCompile Include="r6aiSystem.cpp" />
+    <ClCompile Include="r6BehaviorSlotComponent.cpp" />
+    <ClCompile Include="r6behTreeInstance.cpp" />
+    <ClCompile Include="r6behTreeVars.cpp" />
+    <ClCompile Include="r6CameraAttachment.cpp" />
+    <ClCompile Include="r6CameraComponent.cpp" />
+    <ClCompile Include="r6CameraDirector.cpp" />
+    <ClCompile Include="r6behTreeRtti.cpp" />
+    <ClCompile Include="r6Classes.cpp" />
+    <ClCompile Include="directMovementLocomotionSegment.cpp" />
+    <ClCompile Include="editableUpgradeStatsModyfier.cpp" />
+    <ClCompile Include="eventRouterComponent.cpp" />
+    <ClCompile Include="firearmBarrelDefinitionComponent.cpp" />
+    <ClCompile Include="firearmFrameDefinitionComponent.cpp" />
+    <ClCompile Include="forwardUpgradeHandlerParam.cpp" />
+    <ClCompile Include="itemPartDefinitionComponent.cpp" />
+    <ClCompile Include="itemPartSlotDefinition.cpp" />
+    <ClCompile Include="playAnimationUpgradeEventHandlerParam.cpp" />
+    <ClCompile Include="r6DialogDisplayManager.cpp" />
+    <ClCompile Include="r6GameResource.cpp" />
+    <ClCompile Include="r6Hud.cpp" />
+    <ClCompile Include="r6HudModule.cpp" />
+    <ClCompile Include="r6InteractionComponent.cpp" />
+    <ClCompile Include="r6InteractionTurnOnOff.cpp" />
+    <ClCompile Include="r6InventoryComponent.cpp" />
+    <ClCompile Include="r6InventoryItemComponent.cpp" />
+    <ClCompile Include="r6Menu.cpp" />
+    <ClCompile Include="r6GuiManager.cpp" />
+    <ClCompile Include="r6Names.cpp" />
+    <ClCompile Include="r6QuestSystem.cpp" />
+    <ClCompile Include="r6npc.cpp" />
+    <ClCompile Include="r6TelemetryScriptProxy.cpp" />
+    <ClCompile Include="safestPathRater.cpp" />
+    <ClCompile Include="scirptedStatsModyfier.cpp" />
+    <ClCompile Include="scriptedCameraComponent.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="simpleCrowdSteering.cpp" />
+    <ClCompile Include="slotCameraComponent.cpp" />
+    <ClCompile Include="team.cpp" />
+    <ClCompile Include="teamManager.cpp" />
+    <ClCompile Include="teamMemberComponent.cpp" />
+    <ClCompile Include="teamSharedKnowledge.cpp" />
+    <ClCompile Include="traitComponent.cpp" />
+    <ClCompile Include="traitData.cpp" />
+    <ClCompile Include="upgradeEventCallScriptFunction.cpp" />
+    <ClCompile Include="upgradesCustomisationComponent.cpp" />
+    <ClCompile Include="playerInventoryPanel.cpp" />
+    <ClCompile Include="r6Component.cpp" />
+    <ClCompile Include="r6damageData.cpp" />
+    <ClCompile Include="r6game.cpp" />
+    <ClCompile Include="r6Player.cpp" />
+    <ClCompile Include="shootUpgradeEventHandlerParam.cpp" />
+    <ClCompile Include="singleNameUpgradeEventHandlerParam.cpp" />
+    <ClCompile Include="statsContainerComponent.cpp" />
+    <ClCompile Include="switch.cpp" />
+    <ClCompile Include="explorationCameraComponent.cpp" />
+    <ClCompile Include="upgradeEventBarrelShootEventHandler.cpp" />
+    <ClCompile Include="upgradeEventBrodecastEvent.cpp" />
+    <ClCompile Include="upgradeEventFrameReloadEventHandler.cpp" />
+    <ClCompile Include="upgradeEventFrameShootEventHandler.cpp" />
+    <ClCompile Include="upgradeEventFrameStartAutoFire.cpp" />
+    <ClCompile Include="upgradeEventFrameStopAutoFire.cpp" />
+    <ClCompile Include="upgradeEventHandlerForwardEvent.cpp" />
+    <ClCompile Include="upgradeEventPlayAnimation.cpp" />
+    <ClCompile Include="upgradesSpawnerItemEntity.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="aiAction.h" />
+    <ClInclude Include="aiActionInteraction.h" />
+    <ClInclude Include="aiActionMoveTo.h" />
+    <ClInclude Include="aiActionPlayAnimation.h" />
+    <ClInclude Include="aiActionPerformerAttachment.h" />
+    <ClInclude Include="aiActionRotateTo.h" />
+    <ClInclude Include="aiActionScripted.h" />
+    <ClInclude Include="aimHelpTargetGatherer.h" />
+    <ClInclude Include="aimTarget.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="aiTreeComponent.h" />
+    <ClInclude Include="avCameraTest.h" />
+    <ClInclude Include="avComponentTest.h" />
+    <ClInclude Include="avoidEnemiesSteeringTask.h" />
+    <ClInclude Include="baseUpgradeEventHandlerParam.h" />
+    <ClInclude Include="baseUpgradeEventHendler.h" />
+    <ClInclude Include="baseUpgradeStatsModyfier.h" />
+    <ClInclude Include="behTreeConditionIsPlayer.h" />
+    <ClInclude Include="behTreeNodeAIAction.h" />
+    <ClInclude Include="behTreeNodeDebugLog.h" />
+    <ClInclude Include="behTreeNodeInputDecorator.h" />
+    <ClInclude Include="behTreeNodePlayerChooseInteraction.h" />
+    <ClInclude Include="behTreeNodePlayerState.h" />
+    <ClInclude Include="behTreeNodePlayerStateIdle.h" />
+    <ClInclude Include="behTreeNodePlayerStateJump.h" />
+    <ClInclude Include="behTreeNodePlayerStateSelector.h" />
+    <ClInclude Include="behTreeNodePlayerStateWalk.h" />
+    <ClInclude Include="behTreeNodeSelectTargetByTagR6.h" />
+    <ClInclude Include="behTreeNodeSequenceR6.h" />
+    <ClInclude Include="build.h" />
+    <ClInclude Include="bulletProjectile.h" />
+    <ClInclude Include="companionComponent.h" />
+    <ClInclude Include="crowdAreaComponent.h" />
+    <ClInclude Include="followerPOIComponent.h" />
+    <ClInclude Include="combatUtils.h" />
+    <ClInclude Include="coverPoint.h" />
+    <ClInclude Include="coversManager.h" />
+    <ClInclude Include="craftingBench.h" />
+    <ClInclude Include="crowdAgent.h" />
+    <ClInclude Include="crowdArea.h" />
+    <ClInclude Include="crowdEntryPoint.h" />
+    <ClInclude Include="crowdManager.h" />
+    <ClInclude Include="crowdObstacle.h" />
+    <ClInclude Include="crowdSpaceGrid.h" />
+    <ClInclude Include="crowdSpaceImplementation.h" />
+    <ClInclude Include="crowdSpaceNaive.h" />
+    <ClInclude Include="crowd.h" />
+    <ClInclude Include="enemyAwareComponent.h" />
+    <ClInclude Include="idAreaCondition.h" />
+    <ClInclude Include="idConnector.h" />
+    <ClInclude Include="idEvent.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="idEventAbortInteraction.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="idEventAI.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="idEventAnimation.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="idEventEncounter.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="idEventFact.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="idEventGeneral.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="idEventInterlocutor.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="idEventQuest.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="idEventSender.h" />
+    <ClInclude Include="idBasicBlocks.h" />
+    <ClInclude Include="idCondition.h" />
+    <ClInclude Include="idEventSenderDataStructs.h" />
+    <ClInclude Include="idEventSound.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="idGraph.h" />
+    <ClInclude Include="idGraphBlockCheckpoint.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="idGraphBlockBranch.h" />
+    <ClInclude Include="idGraphBlockChoice.h" />
+    <ClInclude Include="idGraphBlockComunicatorSwitch.h" />
+    <ClInclude Include="idGraphBlockCondition.h" />
+    <ClInclude Include="idGraphBlockConnector.h" />
+    <ClInclude Include="idGraphBlockEvents.h" />
+    <ClInclude Include="idGraphBlockFact.h" />
+    <ClInclude Include="idGraphBlockFlow.h" />
+    <ClInclude Include="idGraphBlockInteraction.h" />
+    <ClInclude Include="idGraphBlockOutputTerminate.h" />
+    <ClInclude Include="idGraphBlockRequestFocus.h" />
+    <ClInclude Include="idGraphBlockText.h" />
+    <ClInclude Include="idHud.h" />
+    <ClInclude Include="idInterlocutor.h" />
+    <ClInclude Include="idLine.h" />
+    <ClInclude Include="idThread.h" />
+    <ClInclude Include="idThreadActivator.h" />
+    <ClInclude Include="interactionCameraComponent.h" />
+    <ClInclude Include="idResource.h" />
+    <ClInclude Include="idInstance.h" />
+    <ClInclude Include="idSystem.h" />
+    <ClInclude Include="idTopic.h" />
+    <ClInclude Include="npcMovementControllerComponent.h" />
+    <ClInclude Include="orvoSolver.h" />
+    <ClInclude Include="playerLocomotionController.h" />
+    <ClInclude Include="questGraphBlockInteractiveDialog.h" />
+    <ClInclude Include="questGraphR6QuestBlock.h" />
+    <ClInclude Include="questGraphR6QuestConditionBlock.h" />
+    <ClInclude Include="questGraphR6QuestPauseBlock.h" />
+    <ClInclude Include="questObjectiveComponent.h" />
+    <ClInclude Include="r6AdvancedVehicleComponent.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="r6AimingComponent.h" />
+    <ClInclude Include="r6aiSystem.h" />
+    <ClInclude Include="r6BehaviorSlotComponent.h" />
+    <ClInclude Include="r6behTreeInstance.h" />
+    <ClInclude Include="r6behTreeVars.h" />
+    <ClInclude Include="r6CameraAttachment.h" />
+    <ClInclude Include="r6CameraComponent.h" />
+    <ClInclude Include="r6CameraDirector.h" />
+    <ClInclude Include="directMovementLocomotionSegment.h" />
+    <ClInclude Include="editableUpgradeStatsModyfier.h" />
+    <ClInclude Include="eventRouterComponent.h" />
+    <ClInclude Include="firearmBarrelDefinitionComponent.h" />
+    <ClInclude Include="firearmFrameDefinitionComponent.h" />
+    <ClInclude Include="forwardUpgradeHandlerParam.h" />
+    <ClInclude Include="itemPartDefinitionComponent.h" />
+    <ClInclude Include="itemPartSlotDefinition.h" />
+    <ClInclude Include="playAnimationUpgradeEventHandlerParam.h" />
+    <ClInclude Include="r6DialogDisplayManager.h" />
+    <ClInclude Include="r6error.h" />
+    <ClInclude Include="r6GameResource.h" />
+    <ClInclude Include="r6Hud.h" />
+    <ClInclude Include="r6HudModule.h" />
+    <ClInclude Include="r6InteractionComponent.h" />
+    <ClInclude Include="r6InteractionTurnOnOff.h" />
+    <ClInclude Include="r6InventoryComponent.h" />
+    <ClInclude Include="r6InventoryItemComponent.h" />
+    <ClInclude Include="r6Menu.h" />
+    <ClInclude Include="r6QuestSystem.h" />
+    <ClInclude Include="r6npc.h" />
+    <ClInclude Include="r6SystemOrder.h" />
+    <ClInclude Include="r6GuiManager.h" />
+    <ClInclude Include="r6TelemetryScriptProxy.h" />
+    <ClInclude Include="safestPathRater.h" />
+    <ClInclude Include="scriptedCameraComponent.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="scriptedStatsModyfier.h" />
+    <ClInclude Include="simpleCrowdSteering.h" />
+    <ClInclude Include="slotCameraComponent.h" />
+    <ClInclude Include="team.h" />
+    <ClInclude Include="teamManager.h" />
+    <ClInclude Include="teamMemberComponent.h" />
+    <ClInclude Include="teamSharedKnowledge.h" />
+    <ClInclude Include="traitComponent.h" />
+    <ClInclude Include="traitData.h" />
+    <ClInclude Include="upgradeEventCallScriptFunction.h" />
+    <ClInclude Include="upgradesCustomisationComponent.h" />
+    <ClInclude Include="playerInventoryPanel.h" />
+    <ClInclude Include="r6Component.h" />
+    <ClInclude Include="shootUpgradeEventHandlerParam.h" />
+    <ClInclude Include="r6.h" />
+    <ClInclude Include="r6damageData.h" />
+    <ClInclude Include="r6game.h" />
+    <ClInclude Include="r6NamesRegistry.h" />
+    <ClInclude Include="r6Player.h" />
+    <ClInclude Include="r6TypeRegistry.h" />
+    <ClInclude Include="singleNameUpgradeEventHandlerParam.h" />
+    <ClInclude Include="statsContainerComponent.h" />
+    <ClInclude Include="switch.h" />
+    <ClInclude Include="explorationCameraComponent.h" />
+    <ClInclude Include="upgradeEventBarrelShootEventHandler.h" />
+    <ClInclude Include="upgradeEventBrodecastEvent.h" />
+    <ClInclude Include="upgradeEventFrameReloadEventHandler.h" />
+    <ClInclude Include="upgradeEventFrameShootEventHandler.h" />
+    <ClInclude Include="upgradeEventFrameStartAutoFire.h" />
+    <ClInclude Include="upgradeEventFrameStopAutoFire.h" />
+    <ClInclude Include="upgradeEventHandlerForwardEvent.h" />
+    <ClInclude Include="upgradeEventPlayAnimation.h" />
+    <ClInclude Include="upgradesSpawnerItemEntity.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="gridCrawler.inl" />
+    <None Include="idInterlocutor.inl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.targets))\Shared.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

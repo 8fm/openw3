@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" TreatAsLocalProperty="OutDir;TargetName;IntDir;PlatformToolset">
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedConfigurationSetup.props))\SharedConfigurationSetup.props" />
+
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2EFFD008-66A3-4024-A06D-4A03F3A971A2}</ProjectGuid>
+    <RootNamespace>versionControl</RootNamespace>
+    <Keyword>ManagedCProj</Keyword>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <CLRSupport>false</CLRSupport>
+    <UsePrecompiledHeaders>false</UsePrecompiledHeaders>
+    <ProjectClDirs Condition="'$(Platform)'=='Win32'">$(SolutionDir)../external/P4V/include</ProjectClDirs>
+    <ProjectClDirs Condition="'$(Platform)'=='x64'">$(SolutionDir)../external/P4V/x64/include</ProjectClDirs>
+  </PropertyGroup>
+
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.props))\Shared.props" />
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedItemGroups.props))\SharedItemGroups.props" />
+
+  <ItemGroup>
+    <ClInclude Include="build.h" />
+    <ClInclude Include="clientUsers.h" />
+    <ClInclude Include="versionControlP4.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="clientUsers.cpp" />
+    <ClCompile Include="versionControlP4.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.targets))\Shared.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

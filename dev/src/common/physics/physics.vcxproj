@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" TreatAsLocalProperty="OutDir;TargetName;IntDir;PlatformToolset">
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedConfigurationSetup.props))\SharedConfigurationSetup.props" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{60A7E708-44B4-4337-908D-F125C77F81E9}</ProjectGuid>
+    <RootNamespace>physics</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <ProjectClDirs>$(SolutionDir)../external/PhysX3/Include;$(SolutionDir)../external/PhysX3/Include/characterkinematic;$(SolutionDir)../external/PhysX3/Include/common;$(SolutionDir)../external/PhysX3/Include/cooking;$(SolutionDir)../external/PhysX3/Include/extensions;$(SolutionDir)../external/PhysX3/Include/foundation;$(SolutionDir)../external/PhysX3/Include/geometry;$(SolutionDir)../external/PhysX3/Include/gpu;$(SolutionDir)../external/PhysX3/Include/physxvisualdebuggersdk;$(SolutionDir)../external/PhysX3/Include/pxtask;$(SolutionDir)../external/PhysX3/Include/pvd$(SolutionDir)../external/Apex/public;$(SolutionDir)../external/Apex/framework/public/;$(SolutionDir)../external/Apex/framework/public/PhysX3/;$(SolutionDir)../external/Apex/module/destructible/public;$(SolutionDir)../external/Apex/NxParameterized/public;$(SolutionDir)../external/Apex/shared/external/include;$(SolutionDir)../external/Apex/public;$(SolutionDir)../external/Apex/module/clothing/public;$(SolutionDir)../external/PhysX3/Source;$(SolutionDir)../external/PhysX3/Source/foundation/include;$(SolutionDir)../external/PhysX3/Source/common/src;$(SolutionDir)../external/Apex/module/legacy/public</ProjectClDirs>
+  </PropertyGroup>
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.props))\Shared.props" />
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedItemGroups.props))\SharedItemGroups.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <TargetName>$(ProjectName).$(Configuration)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup>
+    <UsePrecompiledHeaders Condition="'$(Configuration)|$(Platform)'=='ReleaseGame|x64'">false</UsePrecompiledHeaders>
+  </PropertyGroup>
+  <PropertyGroup>
+    <UsePrecompiledHeaders Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</UsePrecompiledHeaders>
+  </PropertyGroup>
+  <PropertyGroup>
+    <UsePrecompiledHeaders Condition="'$(Configuration)|$(Platform)'=='No opts|x64'">false</UsePrecompiledHeaders>
+  </PropertyGroup>
+  <PropertyGroup>
+    <UsePrecompiledHeaders Condition="'$(Configuration)|$(Platform)'=='Profiling|x64'">false</UsePrecompiledHeaders>
+  </PropertyGroup>
+  <PropertyGroup>
+    <UsePrecompiledHeaders Condition="'$(Configuration)|$(Platform)'=='Final|x64'">false</UsePrecompiledHeaders>
+  </PropertyGroup>
+  <PropertyGroup>
+    <UsePrecompiledHeaders Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</UsePrecompiledHeaders>
+  </PropertyGroup>
+  <PropertyGroup>
+    <UsePrecompiledHeaders Condition="'$(Configuration)|$(Platform)'=='FinalWithLogging|x64'">false</UsePrecompiledHeaders>
+  </PropertyGroup>
+  <PropertyGroup>
+    <UsePrecompiledHeaders Condition="'$(Configuration)|$(Platform)'=='No opts|Durango'">false</UsePrecompiledHeaders>
+  </PropertyGroup>
+  <PropertyGroup>
+    <UsePrecompiledHeaders Condition="'$(Configuration)|$(Platform)'=='Profiling|Durango'">false</UsePrecompiledHeaders>
+  </PropertyGroup>
+  <PropertyGroup>
+    <UsePrecompiledHeaders Condition="'$(Configuration)|$(Platform)'=='Final|Durango'">false</UsePrecompiledHeaders>
+  </PropertyGroup>
+  <PropertyGroup>
+    <UsePrecompiledHeaders Condition="'$(Configuration)|$(Platform)'=='Debug|Durango'">false</UsePrecompiledHeaders>
+  </PropertyGroup>
+  <PropertyGroup>
+    <UsePrecompiledHeaders Condition="'$(Configuration)|$(Platform)'=='FinalWithLogging|Durango'">false</UsePrecompiledHeaders>
+  </PropertyGroup>
+  <PropertyGroup>
+    <UsePrecompiledHeaders Condition="'$(Configuration)|$(Platform)'=='ReleaseGame|Durango'">false</UsePrecompiledHeaders>
+  </PropertyGroup>
+  <PropertyGroup>
+    <UsePrecompiledHeaders Condition="'$(Configuration)|$(Platform)'=='Release|Durango'">false</UsePrecompiledHeaders>
+  </PropertyGroup>
+  <PropertyGroup>
+    <UsePrecompiledHeaders Condition="'$(Configuration)|$(Platform)'=='No opts|ORBIS'">false</UsePrecompiledHeaders>
+  </PropertyGroup>
+  <PropertyGroup>
+    <UsePrecompiledHeaders Condition="'$(Configuration)|$(Platform)'=='Profiling|ORBIS'">false</UsePrecompiledHeaders>
+  </PropertyGroup>
+  <PropertyGroup>
+    <UsePrecompiledHeaders Condition="'$(Configuration)|$(Platform)'=='Final|ORBIS'">false</UsePrecompiledHeaders>
+  </PropertyGroup>
+  <PropertyGroup>
+    <UsePrecompiledHeaders Condition="'$(Configuration)|$(Platform)'=='Debug|ORBIS'">false</UsePrecompiledHeaders>
+  </PropertyGroup>
+  <PropertyGroup>
+    <UsePrecompiledHeaders Condition="'$(Configuration)|$(Platform)'=='FinalWithLogging|ORBIS'">false</UsePrecompiledHeaders>
+  </PropertyGroup>
+  <PropertyGroup>
+    <UsePrecompiledHeaders Condition="'$(Configuration)|$(Platform)'=='ReleaseGame|ORBIS'">false</UsePrecompiledHeaders>
+  </PropertyGroup>
+  <PropertyGroup>
+    <UsePrecompiledHeaders Condition="'$(Configuration)|$(Platform)'=='Release|ORBIS'">false</UsePrecompiledHeaders>
+  </PropertyGroup>
+  <ItemGroup>
+    <ClCompile Include="build.cpp" />
+    <ClCompile Include="compiledCollision.cpp" />
+    <ClCompile Include="physicalCollision.cpp" />
+    <ClCompile Include="physicsChainedRagdollWrapperPhysx.cpp" />
+    <ClCompile Include="physicsDebuggerPhysx.cpp" />
+    <ClCompile Include="physicsEngine.cpp" />
+    <ClCompile Include="physicsJointedRagdollWrapperPhysx.cpp" />
+    <ClCompile Include="physicsLogger.cpp" />
+    <ClCompile Include="physicsParticleWrapperPhysx.cpp" />
+    <ClCompile Include="physicsRagdollWrapperPhysx.cpp" />
+    <ClCompile Include="physicsSettings.cpp" />
+    <ClCompile Include="physicsSimpleBodyWrapperPhysx.cpp" />
+    <ClCompile Include="physicsWrapperPhysx.cpp" />
+    <ClCompile Include="physicsWorld.cpp" />
+    <ClCompile Include="physicsWorldInvalidAreaCache.cpp" />
+    <ClCompile Include="physicsWorldPhysx.cpp" />
+    <ClCompile Include="physicsWorldBatchTracePhysx.cpp" />
+    <ClCompile Include="physicsWorldTrace.cpp" />
+    <ClCompile Include="physXCpuDispatcher.cpp" />
+    <ClCompile Include="physXEngine.cpp" />
+    <ClCompile Include="PhysXStreams.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="build.h" />
+    <ClInclude Include="compiledCollision.h" />
+    <ClInclude Include="physicalCallbacks.h" />
+    <ClInclude Include="physicalCollision.h" />
+    <ClInclude Include="physicalMaterial.h" />
+    <ClInclude Include="physicsChainedRagdollWrapper.h" />
+    <ClInclude Include="physicsContactListener.h" />
+    <ClInclude Include="physicsDebugger.h" />
+    <ClInclude Include="physicsEngine.h" />
+    <ClInclude Include="physicsJointedRagdollWrapper.h" />
+    <ClInclude Include="physicsLogger.h" />
+    <ClInclude Include="physicsMemory.h" />
+    <ClInclude Include="physicsParticleWrapper.h" />
+    <ClInclude Include="physicsRagdollState.h" />
+    <ClInclude Include="physicsRagdollWrapper.h" />
+    <ClInclude Include="physicsSettings.h" />
+    <ClInclude Include="physicsSimpleBodyWrapper.h" />
+    <ClInclude Include="physicsWrapper.h" />
+    <ClInclude Include="physicsWorld.h" />
+    <ClInclude Include="physicsWorldInvalidAreaCache.h" />
+    <ClInclude Include="physicsWorldPhysXImpl.h" />
+    <ClInclude Include="physicsWorldPhysxImplBatchTrace.h" />
+    <ClInclude Include="physicsWorldUtils.h" />
+    <ClInclude Include="physicsWrapperPool.h" />
+    <ClInclude Include="PhysicsWrappersDefinition.h" />
+    <ClInclude Include="physXCpuDispatcher.h" />
+    <ClInclude Include="physXEngine.h" />
+    <ClInclude Include="physicsIncludes.h" />
+    <ClInclude Include="PhysXStreams.h" />
+  </ItemGroup>
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.targets))\Shared.targets" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+</Project>

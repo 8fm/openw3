@@ -1,0 +1,57 @@
+/////////////////////////////////////////////////////////////////
+//   Copyright © 2014 CD Projekt Red. All Rights Reserved.	   //
+//					GPU API UNIT TESTS v.1.0			       //
+//						USAGE INSTRUCTIONS					   //
+/////////////////////////////////////////////////////////////////
+
+Command options:
+
+1. You know what those are for.
+-noassert
+noassert
+
+2. Same here
+-window
+-windowed
+width X 
+height Y
+
+3. Save output of the test(s) to the reference file (named just like the test)
+saveref
+(FYI: there's no save texture to file implemented in Gnm so there's no use in using saveref with PS4)
+
+4. Provide a floating point number for margin of error (0.01 = 1%)
+error X
+
+- the error check condition is to be found at 247 line of testEngine.cpp.
+For each element of the float4 pixel representation (r,g,b,a):
+abs(ref.rgba - check.rgba) > error ? FAIL : SUCCESS
+
+5. Provide a test name to invoke unit testing just for specified test.
+test test_name
+
+----------------------------------------------------------------------------------
+
+USAGE EG:
+-windowed width 1280 height 720 test DRAW_PRIMITIVE error 0.01
+
+- Output test result to the window of size 720p 
+- Only DRAW_PRIMITIVE test will be checked.
+- error margin will be 1% per each color channel
+
+
+----------------------------------------------------------------------------------
+Tests list:
+	- FLICKERING_ILLUSION
+	- CONSTANT_BUFFERS
+	- VIEWPORTS
+	- DRAW_PRIMITIVE
+	- DRAW_PRIMITIVE_RAW
+	- DRAW_INDEXED_PRIMITIVE
+	- DRAW_INDEXED_PRIMITIVE_RAW
+	- DRAW_SYSTEM_PRIMITIVE
+	- DRAW_INSTANCED
+	- DRAW_INSTANCED_NO_BUFFER
+	- SAMPLER_TEXTURE
+		-- sampler with anisotropic filtering - margin of error needed 0.1!
+	- SIMPLE_CULL

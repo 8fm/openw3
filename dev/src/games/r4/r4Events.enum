@@ -1,0 +1,67 @@
+/*
+* Copyright © 2014 CD Projekt Red. All Rights Reserved.
+*/
+
+//! This is a definition of events for telemetry
+
+EVENT( TE_STATE_HORSE_RIDING,		"sc", "hr" )	//hero_action	state_change
+EVENT( TE_STATE_SAILING,			"sc", "slng" )	//hero_action	state_change
+EVENT( TE_STATE_AIM_THROW,			"sc", "at" )	//hero_action	state_change
+EVENT( TE_STATE_COMBAT,				"sc", "cmbt" )	//hero_action	state_change
+EVENT( TE_STATE_EXPLORING,			"sc", "xp" )	//hero_action	state_change
+EVENT( TE_STATE_DIALOG,				"sc", "dlg" )	//hero_action	state_change
+EVENT( TE_STATE_SWIMMING,			"sc", "swm" )	//hero_action	state_change
+
+EVENT( TE_HERO_FAST_TRAVEL,			"ha", "ft" )	//hero_action	fast_travel
+EVENT( TE_HERO_LEVEL_UP,			"ha", "nlg" )	//hero_action	new_level_gained
+EVENT( TE_HERO_EXP_EARNED,			"ha", "ee" )	//hero_action	exp_earned
+EVENT( TE_HERO_SKILL_POINT_EARNED,	"ha", "spg" )	//hero_action	skill_point_gained
+EVENT( TE_HERO_SKILL_UP,			"ha", "si" )	//hero_action	skill_improved
+EVENT( TE_HERO_CASH_CHANGED,		"ha", "cc" )	//hero_action	cash_changed
+EVENT( TE_HERO_SPAWNED,				"ha", "hs" )	//hero_action	hero_spawned
+EVENT( TE_HERO_FOCUS_ON,			"ha", "fon" )	//hero_action	focus_mode_on
+EVENT( TE_HERO_FOCUS_OFF,			"ha", "foff" )	//hero_action	focus_mode_off
+EVENT( TE_HERO_MUTAGEN_USED,		"ha", "mu" )	//hero_action	mutagen_used
+EVENT( TE_HERO_ACHIEVEMENT_UNLOCKED,"ha", "au" )	//hero_action	achievement_unlocked
+EVENT( TE_HERO_GWENT_MATCH_STARTED, "ha", "gms" )	//hero_action	gwent_match_started
+EVENT( TE_HERO_GWENT_MATCH_ENDED,   "ha", "gme" )	//hero_action	gwent_match_ended
+
+EVENT( TE_HERO_HEALTH_SEGMENT_LOST,		"ha", "hhsl" )	//hero_action	hero_health_segment_lost
+EVENT( TE_HERO_HEALTH_SEGMENT_REGAINED,	"ha", "hhsr" )	//hero_action	hero_health_segment_regained
+
+EVENT( TE_FIGHT_PLAYER_DIES,		"f",  "pd" )	//fighting		player_dies
+EVENT( TE_FIGHT_PLAYER_ATTACKS,		"f",  "pa" )	//fighting		player_attacks
+EVENT( TE_FIGHT_PLAYER_USE_SIGN,	"f",  "pus" )	//fighting		player_uses_sign
+EVENT( TE_FIGHT_ENEMY_DIES,			"f",  "edi" )	//fighting		enemy_dies
+EVENT( TE_FIGHT_ENEMY_GETS_HIT,		"f",  "egh" )	//fighting		enemy_gets_hit
+EVENT( TE_FIGHT_HERO_GETS_HIT,		"f",  "hgh" )	//fighting		hero_gets_hit
+EVENT( TE_FIGHT_HERO_THROWS_BOMB,	"f",  "htb" )	//fighting		hero_throws_a_bomb
+
+EVENT( TE_ITEM_COOKED,				"a",  "pc" )	//alchemy		potion_created
+EVENT( TE_ELIXIR_USED,				"a",  "eu" )	//alchemy		elixir_used
+
+EVENT( TE_INV_ITEM_EQUIPPED,		"iv", "ie" )	//inventory		item_equipped
+EVENT( TE_INV_ITEM_UNEQUIPPED,		"iv", "iue" )	//inventory		item_unequipped
+EVENT( TE_INV_ITEM_PICKED,			"iv", "ipu" )	//inventory		item_picked_up
+EVENT( TE_INV_ITEM_DROPPED,			"iv", "id" )	//inventory		item_dropped
+EVENT( TE_INV_ITEM_SOLD,			"iv", "is" )	//inventory		item_sold
+EVENT( TE_INV_ITEM_BOUGHT,			"iv", "ib" )	//inventory		item_bought
+
+EVENT( TE_INV_QUEST_COMPLETED,		"ec", "qc" )	//economy		quest completed
+
+EVENT( TE_HERO_MOVEMENT,			"mv", "pm" )	//movement		player_movement
+EVENT( TE_HERO_POSITION,			"mv", "pp" )	//movement		player_position
+
+EVENT( TE_SYS_END_SESISON,			"ss", "es" )	//system		end_session
+EVENT( TE_SYS_GAME_LOADED,			"ss", "glo" )	//system		game_loaded
+EVENT( TE_SYS_GAME_SAVED,			"ss", "gs" )	//system		game_saved
+EVENT( TE_SYS_GAME_LAUNCHED,		"ss", "glu" )	//system		game_launched
+EVENT( TE_SYS_GAME_PAUSE,			"ss", "gp" )	//system		game_pause 
+EVENT( TE_SYS_GAME_UNPAUSE,			"ss", "gup" )	//system		game_unpause 
+EVENT( TE_SYS_GAME_PROGRESS,		"ss", "gprs" )	//system		game_progress 
+
+EVENT( TE_QUEST_ACTIVATED,			"q", "qa" )		//quests		quest_activated
+EVENT( TE_QUEST_FINISHED,			"q", "qfn" )	//quests		quest_finished
+EVENT( TE_QUEST_FAILED,				"q", "qfl" )	//quests		quest_failed
+
+EVENT( TE_UNKNOWN,					"ss", "unk" )	//error			unknown_event

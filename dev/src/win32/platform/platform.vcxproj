@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" TreatAsLocalProperty="OutDir;TargetName;IntDir;PlatformToolset">
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedConfigurationSetup.props))\SharedConfigurationSetup.props" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D3FC2B93-22B2-44B4-97D2-6ABA46D0E580}</ProjectGuid>
+    <RootNamespace>platform</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <ProjectClDirs>$(SolutionDir)../external/gfx4/Src;$(SolutionDir)../external/gfx4/Include;</ProjectClDirs>
+  </PropertyGroup>
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.props))\Shared.props" />
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedItemGroups.props))\SharedItemGroups.props" />
+  <ItemGroup>
+    <ClCompile Include="build.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="clipboardWin32.cpp" />
+    <ClCompile Include="inputDeviceGamepadPS4ForPC.cpp" />
+    <ClCompile Include="inputDeviceGamepadXInput.cpp" />
+    <ClCompile Include="inputDeviceKeyboardDInput.cpp" />
+    <ClCompile Include="inputDeviceKeyboardRawInput.cpp" />
+    <ClCompile Include="inputDeviceManagerWin32.cpp" />
+    <ClCompile Include="inputDeviceMouseDInput.cpp" />
+    <ClCompile Include="inputDeviceTabletWintab.cpp" />
+    <ClCompile Include="inputLibWintab.cpp" />
+    <ClCompile Include="os.cpp" />
+    <ClCompile Include="userProfileManagerWindows.cpp" />
+    <ClCompile Include="userProfileManagerWindowsSaving.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="assertResource.h" />
+    <ClInclude Include="build.h" />
+    <ClInclude Include="clipboardWin32.h" />
+    <ClInclude Include="inputDeviceGamepadPS4ForPC.h" />
+    <ClInclude Include="inputDeviceGamepadXInput.h" />
+    <ClInclude Include="inputDeviceKeyboardDInput.h" />
+    <ClInclude Include="inputDeviceKeyboardRawInput.h" />
+    <ClInclude Include="inputDeviceManagerWin32.h" />
+    <ClInclude Include="inputDeviceMouseDInput.h" />
+    <ClInclude Include="inputDeviceTabletWintab.h" />
+    <ClInclude Include="inputDInputInterface.h" />
+    <ClInclude Include="inputLibWintab.h" />
+    <ClInclude Include="inputRawInputInterface.h" />
+    <ClInclude Include="internal.h" />
+    <ClInclude Include="os.h" />
+    <ClInclude Include="userProfileManagerWindows.h" />
+    <ClInclude Include="userProfileManagerWindowsSaving.h" />
+    <ClInclude Include="win32.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assert.customrc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.targets))\Shared.targets" />
+  </ImportGroup>
+</Project>

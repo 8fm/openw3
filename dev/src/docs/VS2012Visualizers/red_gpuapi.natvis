@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
+	<Type Name="GpuApi::ResourceRef&lt;0&gt;"> <!--TextureRef-->
+		<DisplayString Condition="id == 0">GpuApi Texture [null]</DisplayString>
+		<DisplayString>GpuApi Texture [{id}]</DisplayString>
+		<Expand>
+			<Item Name="RefCount" Condition="GpuApi::g_DeviceData != 0">GpuApi::g_DeviceData->m_Textures.m_Resources[id-1].refCount</Item>
+			<Item Name="Data" Condition="GpuApi::g_DeviceData != 0">GpuApi::g_DeviceData->m_Textures.m_Resources[id-1].data</Item>
+		</Expand>
+	</Type>
+	<Type Name="GpuApi::ResourceRef&lt;1&gt;"> <!--BufferRef-->
+		<DisplayString Condition="id == 0">GpuApi Buffer [null]</DisplayString>
+		<DisplayString>GpuApi Buffer [{id}]</DisplayString>
+		<Expand>
+			<Item Name="RefCount" Condition="GpuApi::g_DeviceData != 0">GpuApi::g_DeviceData->m_Buffers.m_Resources[id-1].refCount</Item>
+			<Item Name="Data" Condition="GpuApi::g_DeviceData != 0">GpuApi::g_DeviceData->m_Buffers.m_Resources[id-1].data</Item>
+		</Expand>
+	</Type>
+	<Type Name="GpuApi::ResourceRef&lt;2&gt;"> <!--SamplerStateRef-->
+		<DisplayString Condition="id == 0">GpuApi SamplerState [null]</DisplayString>
+		<DisplayString>GpuApi SamplerState [{id}]</DisplayString>
+		<Expand>
+			<Item Name="RefCount" Condition="GpuApi::g_DeviceData != 0">GpuApi::g_DeviceData->m_SamplerStates.m_Resources[id-1].refCount</Item>
+			<Item Name="Data" Condition="GpuApi::g_DeviceData != 0">GpuApi::g_DeviceData->m_SamplerStates.m_Resources[id-1].data</Item>
+		</Expand>
+	</Type>
+	<Type Name="GpuApi::ResourceRef&lt;3&gt;"> <!--QueryRef-->
+		<DisplayString Condition="id == 0">GpuApi Query [null]</DisplayString>
+		<DisplayString>GpuApi Query [{id}]</DisplayString>
+		<Expand>
+			<Item Name="RefCount" Condition="GpuApi::g_DeviceData != 0">GpuApi::g_DeviceData->m_Queries.m_Resources[id-1].refCount</Item>
+			<Item Name="Data" Condition="GpuApi::g_DeviceData != 0">GpuApi::g_DeviceData->m_Queries.m_Resources[id-1].data</Item>
+		</Expand>
+	</Type>
+	<Type Name="GpuApi::ResourceRef&lt;4&gt;"> <!--ShaderRef-->
+		<DisplayString Condition="id == 0">GpuApi Shader [null]</DisplayString>
+		<DisplayString>GpuApi Shader [{id}]</DisplayString>
+		<Expand>
+			<Item Name="RefCount" Condition="GpuApi::g_DeviceData != 0">GpuApi::g_DeviceData->m_Shaders.m_Resources[id-1].refCount</Item>
+			<Item Name="Data" Condition="GpuApi::g_DeviceData != 0">GpuApi::g_DeviceData->m_Shaders.m_Resources[id-1].data</Item>
+		</Expand>
+	</Type>
+	<Type Name="GpuApi::ResourceRef&lt;5&gt;"> <!--VertexLayoutRef-->
+		<DisplayString Condition="id == 0">GpuApi VertexLayout [null]</DisplayString>
+		<DisplayString>GpuApi VertexLayout [{id}]</DisplayString>
+		<Expand>
+			<Item Name="RefCount" Condition="GpuApi::g_DeviceData != 0">GpuApi::g_DeviceData->m_VertexLayouts.m_Resources[id-1].refCount</Item>
+			<Item Name="Data" Condition="GpuApi::g_DeviceData != 0">GpuApi::g_DeviceData->m_VertexLayouts.m_Resources[id-1].data</Item>
+		</Expand>
+	</Type>
+	<Type Name="GpuApi::ResourceRef&lt;6&gt;"> <!--SwapChainRef-->
+		<DisplayString Condition="id == 0">GpuApi SwapChain [null]</DisplayString>
+		<DisplayString>GpuApi SwapChain [{id}]</DisplayString>
+		<Expand>
+			<Item Name="RefCount" Condition="GpuApi::g_DeviceData != 0">GpuApi::g_DeviceData->m_SwapChains.m_Resources[id-1].refCount</Item>
+			<Item Name="Data" Condition="GpuApi::g_DeviceData != 0">GpuApi::g_DeviceData->m_SwapChains.m_Resources[id-1].data</Item>
+		</Expand>
+	</Type>
+</AutoVisualizer>

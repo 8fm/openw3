@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
+	
+	<Type Name="CObject">
+		<DisplayString>{m_class-&gt;m_name} (Object)</DisplayString>
+	</Type>
+	
+	<Type Name="CClass">
+		<DisplayString>{m_name} (Class)</DisplayString>
+	</Type>
+
+	<Type Name="CFunction">
+		<DisplayString Condition="m_class &amp;&amp; m_flags &amp; FF_NativeFunction">[{m_code.m_sourceFile}]{m_class-&gt;m_name}::{m_name} (Scripted Function)</DisplayString>
+		<DisplayString Condition="m_flags &amp; FF_NativeFunction">[{m_code.m_sourceFile}]{m_name} (Scripted Function)</DisplayString>
+		<DisplayString Condition="m_class">{m_class-&gt;m_name}::{m_name} (Function)</DisplayString>
+		<DisplayString>{m_name} (Function)</DisplayString>
+	</Type>
+
+	<Type Name="CProperty">
+		<DisplayString Condition="m_parent">{m_parent-&gt;m_name}::{m_name} ({*m_type}) (Property)</DisplayString>
+		<DisplayString>{m_name} ({*m_type}) (Property)</DisplayString>
+	</Type>
+	
+	<Type Name="CSimpleRTTITypeBool">
+		<DisplayString>(Bool)</DisplayString>
+	</Type>
+	
+	<Type Name="CSimpleRTTITypeUint8">
+		<DisplayString>(Uint8)</DisplayString>
+	</Type>
+	
+	<Type Name="CSimpleRTTITypeUint16">
+		<DisplayString>(Uint16)</DisplayString>
+	</Type>
+	
+	<Type Name="CSimpleRTTITypeUint32">
+		<DisplayString>()</DisplayString>
+	</Type>
+	
+	<Type Name="CSimpleRTTITypeUint32">
+		<DisplayString>(Uint32)</DisplayString>
+	</Type>
+	
+	<Type Name="CSimpleRTTITypeUint64">
+		<DisplayString>(Uint64)</DisplayString>
+	</Type>
+	
+	<Type Name="CSimpleRTTITypeInt8">
+		<DisplayString>(Int8)</DisplayString>
+	</Type>
+	
+	<Type Name="CSimpleRTTITypeInt16">
+		<DisplayString>(Int16)</DisplayString>
+	</Type>
+	
+	<Type Name="CSimpleRTTITypeInt32">
+		<DisplayString>(Int32)</DisplayString>
+	</Type>
+	
+	<Type Name="CSimpleRTTITypeInt64">
+		<DisplayString>(Int64)</DisplayString>
+	</Type>
+	
+	<Type Name="CSimpleRTTITypeFloat">
+		<DisplayString>(Float)</DisplayString>
+	</Type>
+	
+	<Type Name="CSimpleRTTITypeDouble">
+		<DisplayString>(Double)</DisplayString>
+	</Type>
+	
+	<Type Name="CSimpleRTTITypeCName">
+		<DisplayString>(CName)</DisplayString>
+	</Type>
+	
+	<Type Name="CSimpleRTTITypeString">
+		<DisplayString>(String)</DisplayString>
+	</Type>
+	
+	<Type Name="CSimpleRTTITypeStringAnsi">
+		<DisplayString>(AnsiString)</DisplayString>
+	</Type>
+	
+	<Type Name="CSimpleRTTITypeCGUID">
+		<DisplayString>(GUID)</DisplayString>
+	</Type>
+	
+	<Type Name="CRTTIArrayType">
+		<DisplayString>{*m_innerType} (Array)</DisplayString>
+	</Type>
+	
+	<Type Name="CRTTIPointerType">
+		<DisplayString>{*m_pointedType} (Pointer)</DisplayString>
+	</Type>
+	
+	<Type Name="CRTTIHandleType">
+		<DisplayString>{*m_pointedType} (Handle)</DisplayString>
+	</Type>
+
+	<Type Name="CRTTISoftHandleType">
+		<DisplayString>{*m_pointedType} (Soft Handle)</DisplayString>
+	</Type>
+	
+	<Type Name="CSimpleRTTITypeVariant">
+		<DisplayString>(Variant)</DisplayString>
+	</Type>
+	
+	<Type Name="CSimpleRTTITypeTagList">
+		<DisplayString>(TagList)</DisplayString>
+	</Type>
+	
+	<Type Name="CObjectInternalHandle">
+		<DisplayString Condition="m_object">{m_object}</DisplayString>
+		<DisplayString>&lt;null&gt;</DisplayString>
+		<Expand>
+			<Item Name="Reference Count" Condition="m_object">m_refCount</Item>
+			<ExpandedItem Condition="m_object">m_object</ExpandedItem> 
+		</Expand>
+	</Type>
+
+	<Type Name="TUniPointer&lt;*&gt;">
+		<DisplayString>{m_ptr}</DisplayString>
+		<Expand>
+			<ExpandedItem>m_ptr</ExpandedItem>
+		</Expand>
+	</Type>
+	
+	<Type Name="ReferencableInternalHandle">
+		<DisplayString>{m_object}</DisplayString>
+		<Expand>
+			<ExpandedItem>m_object</ExpandedItem>
+		</Expand>
+	</Type>
+	
+
+	<Type Name="BaseSafeHandle">
+		<DisplayString>{m_handle}</DisplayString>
+		<Expand>
+			<ExpandedItem>m_handle</ExpandedItem> 
+		</Expand>
+	</Type>
+	
+	<Type Name="BaseSoftHandle">
+		<DisplayString>{m_path}</DisplayString>
+		<Expand>
+			<ExpandedItem>this</ExpandedItem> 
+		</Expand>
+	</Type>
+	
+</AutoVisualizer>

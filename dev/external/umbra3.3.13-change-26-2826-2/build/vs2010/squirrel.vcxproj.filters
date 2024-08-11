@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="external">
+      <UniqueIdentifier>{074BBC23-7745-2947-8DD4-F9EDF888EA5D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\squirrel">
+      <UniqueIdentifier>{414B2FED-F478-6D42-B895-326EF659EC0F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\squirrel\squirrel">
+      <UniqueIdentifier>{DC39D7A9-3333-6E40-BBC0-BD831B882473}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\squirrel\include">
+      <UniqueIdentifier>{CD31F8E1-50C7-6644-9E49-FFA96F39F193}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\sqrat">
+      <UniqueIdentifier>{BA010997-FD14-0844-90E6-B339554743FD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\sqrat\include">
+      <UniqueIdentifier>{D992539A-2804-1F48-8443-F6A9CB657188}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\sqrat\include\sqrat">
+      <UniqueIdentifier>{8BD149BD-0EB7-0741-9C6F-BF5D02D306AC}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\external\squirrel\squirrel\sqarray.h">
+      <Filter>external\squirrel\squirrel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\squirrel\squirrel\sqclass.h">
+      <Filter>external\squirrel\squirrel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\squirrel\squirrel\sqclosure.h">
+      <Filter>external\squirrel\squirrel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\squirrel\squirrel\sqcompiler.h">
+      <Filter>external\squirrel\squirrel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\squirrel\squirrel\sqfuncproto.h">
+      <Filter>external\squirrel\squirrel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\squirrel\squirrel\sqfuncstate.h">
+      <Filter>external\squirrel\squirrel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\squirrel\squirrel\sqlexer.h">
+      <Filter>external\squirrel\squirrel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\squirrel\squirrel\sqobject.h">
+      <Filter>external\squirrel\squirrel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\squirrel\squirrel\sqopcodes.h">
+      <Filter>external\squirrel\squirrel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\squirrel\squirrel\sqpcheader.h">
+      <Filter>external\squirrel\squirrel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\squirrel\squirrel\sqstate.h">
+      <Filter>external\squirrel\squirrel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\squirrel\squirrel\sqstring.h">
+      <Filter>external\squirrel\squirrel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\squirrel\squirrel\sqtable.h">
+      <Filter>external\squirrel\squirrel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\squirrel\squirrel\squserdata.h">
+      <Filter>external\squirrel\squirrel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\squirrel\squirrel\squtils.h">
+      <Filter>external\squirrel\squirrel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\squirrel\squirrel\sqvm.h">
+      <Filter>external\squirrel\squirrel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\squirrel\include\sqstdaux.h">
+      <Filter>external\squirrel\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\squirrel\include\sqstdblob.h">
+      <Filter>external\squirrel\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\squirrel\include\sqstdio.h">
+      <Filter>external\squirrel\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\squirrel\include\sqstdmath.h">
+      <Filter>external\squirrel\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\squirrel\include\sqstdstring.h">
+      <Filter>external\squirrel\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\squirrel\include\sqstdsystem.h">
+      <Filter>external\squirrel\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\squirrel\include\squirrel.h">
+      <Filter>external\squirrel\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\sqrat\include\sqmodule.h">
+      <Filter>external\sqrat\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\sqrat\include\sqrat.h">
+      <Filter>external\sqrat\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\sqrat\include\sqratimport.h">
+      <Filter>external\sqrat\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\sqrat\include\sqrat\sqratAllocator.h">
+      <Filter>external\sqrat\include\sqrat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\sqrat\include\sqrat\sqratArray.h">
+      <Filter>external\sqrat\include\sqrat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\sqrat\include\sqrat\sqratClass.h">
+      <Filter>external\sqrat\include\sqrat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\sqrat\include\sqrat\sqratClassType.h">
+      <Filter>external\sqrat\include\sqrat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\sqrat\include\sqrat\sqratConst.h">
+      <Filter>external\sqrat\include\sqrat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\sqrat\include\sqrat\sqratFunction.h">
+      <Filter>external\sqrat\include\sqrat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\sqrat\include\sqrat\sqratGlobalMethods.h">
+      <Filter>external\sqrat\include\sqrat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\sqrat\include\sqrat\sqratMemberMethods.h">
+      <Filter>external\sqrat\include\sqrat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\sqrat\include\sqrat\sqratObject.h">
+      <Filter>external\sqrat\include\sqrat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\sqrat\include\sqrat\sqratOverloadMethods.h">
+      <Filter>external\sqrat\include\sqrat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\sqrat\include\sqrat\sqratScript.h">
+      <Filter>external\sqrat\include\sqrat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\sqrat\include\sqrat\sqratTable.h">
+      <Filter>external\sqrat\include\sqrat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\sqrat\include\sqrat\sqratTypes.h">
+      <Filter>external\sqrat\include\sqrat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\sqrat\include\sqrat\sqratUtil.h">
+      <Filter>external\sqrat\include\sqrat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\sqrat\include\sqrat\sqratVM.h">
+      <Filter>external\sqrat\include\sqrat</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\external\squirrel\squirrel\sqapi.cpp">
+      <Filter>external\squirrel\squirrel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\squirrel\squirrel\sqbaselib.cpp">
+      <Filter>external\squirrel\squirrel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\squirrel\squirrel\sqclass.cpp">
+      <Filter>external\squirrel\squirrel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\squirrel\squirrel\sqcompiler.cpp">
+      <Filter>external\squirrel\squirrel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\squirrel\squirrel\sqdebug.cpp">
+      <Filter>external\squirrel\squirrel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\squirrel\squirrel\sqfuncstate.cpp">
+      <Filter>external\squirrel\squirrel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\squirrel\squirrel\sqlexer.cpp">
+      <Filter>external\squirrel\squirrel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\squirrel\squirrel\sqmem.cpp">
+      <Filter>external\squirrel\squirrel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\squirrel\squirrel\sqobject.cpp">
+      <Filter>external\squirrel\squirrel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\squirrel\squirrel\sqstate.cpp">
+      <Filter>external\squirrel\squirrel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\squirrel\squirrel\sqtable.cpp">
+      <Filter>external\squirrel\squirrel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\squirrel\squirrel\sqvm.cpp">
+      <Filter>external\squirrel\squirrel</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

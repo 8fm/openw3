@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "orbis", "orbis.vcxproj", "{205E113C-42F1-446A-92EA-40FC4868FDE1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ORBIS = Debug|ORBIS
+		No opts|ORBIS = No opts|ORBIS
+		Release|ORBIS = Release|ORBIS
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{205E113C-42F1-446A-92EA-40FC4868FDE1}.Debug|ORBIS.ActiveCfg = Debug|ORBIS
+		{205E113C-42F1-446A-92EA-40FC4868FDE1}.Debug|ORBIS.Build.0 = Debug|ORBIS
+		{205E113C-42F1-446A-92EA-40FC4868FDE1}.No opts|ORBIS.ActiveCfg = No opts|ORBIS
+		{205E113C-42F1-446A-92EA-40FC4868FDE1}.No opts|ORBIS.Build.0 = No opts|ORBIS
+		{205E113C-42F1-446A-92EA-40FC4868FDE1}.Release|ORBIS.ActiveCfg = Release|ORBIS
+		{205E113C-42F1-446A-92EA-40FC4868FDE1}.Release|ORBIS.Build.0 = Release|ORBIS
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

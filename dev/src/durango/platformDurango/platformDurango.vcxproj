@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" TreatAsLocalProperty="OutDir;TargetName;IntDir;PlatformToolset">
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedConfigurationSetup.props))\SharedConfigurationSetup.props" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5FCDA94C-D915-4A3F-8AA6-158A8B189401}</ProjectGuid>
+    <RootNamespace>platformDurango</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <ProjectClDirs>$(SolutionDir)../external/gfx4/Src;$(SolutionDir)../external/gfx4/Include;</ProjectClDirs>
+    <ProjectCompileAsWinRT>true</ProjectCompileAsWinRT>
+    <ProjectExceptionHandling>Sync</ProjectExceptionHandling>
+  </PropertyGroup>
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.props))\Shared.props" />
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedItemGroups.props))\SharedItemGroups.props" />
+  <ItemGroup>
+    <ClInclude Include="build.h" />
+    <ClInclude Include="dlcInstallerDurango.h" />
+    <ClInclude Include="dlcInstallerDurango_p.h" />
+    <ClInclude Include="inputDeviceGamepadDurango.h" />
+    <ClInclude Include="inputDeviceKeyboardDurangoDebug.h" />
+    <ClInclude Include="inputDeviceManagerDurango.h" />
+    <ClInclude Include="inputDeviceMouseDurangoDebug.h" />
+    <ClInclude Include="kinectSpeechRecognizer.h" />
+    <ClInclude Include="readerRandomAccessStream.h" />
+    <ClInclude Include="secondScreenDeviceDurango.h" />
+    <ClInclude Include="secondScreenDeviceWatcherDurango.h" />
+    <ClInclude Include="streamingInstallerDurango.h" />
+    <ClInclude Include="userProfileDurango.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="build.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <PrecompiledHeaderFile>build.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="dlcInstallerDurango.cpp" />
+    <ClCompile Include="inputDeviceGamepadDurango.cpp" />
+    <ClCompile Include="inputDeviceKeyboardDurangoDebug.cpp" />
+    <ClCompile Include="inputDeviceManagerDurango.cpp" />
+    <ClCompile Include="inputDeviceMouseDurangoDebug.cpp" />
+    <ClCompile Include="kinectSpeechRecognizer.cpp" />
+    <ClCompile Include="readerRandomAccessStream.cpp" />
+    <ClCompile Include="secondScreenDeviceDurango.cpp" />
+    <ClCompile Include="secondScreenDeviceWatcherDurango.cpp" />
+    <ClCompile Include="streamingInstallerDurango.cpp" />
+    <ClCompile Include="userProfileDurango.cpp" />
+    <ClCompile Include="userProfileDurangoSaves.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="Xbox Services API, Version=8.0" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.targets))\Shared.targets" />
+  </ImportGroup>
+</Project>

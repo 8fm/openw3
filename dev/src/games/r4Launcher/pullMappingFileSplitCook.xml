@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mappings>
+  <!-- The root package path is created with -->
+  <!-- the path passed into to the           -->
+  <!-- xbdeploy.exe pull command.           -->
+
+  <path source="z:\content\" target="\content" />
+  <path source="z:\bin\shaders\" target="\bin\shaders" />
+  <path source="z:\bin\config\" target="\bin\config" />
+  <path source="z:\bin\xdkconfig\" target="\bin\xdkconfig" />
+  <path source="z:\bin\initialData\" target="\bin\initialData" />
+  <path source="z:\bin\dll\" target="\" />
+ </mappings>

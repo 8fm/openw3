@@ -1,0 +1,61 @@
+/*
+ * Copyright © 2010 CD Projekt Red. All Rights Reserved.
+ */
+
+#pragma once
+
+//////////////////////////////////////////////////////////////////////////
+
+// Enum for sound types
+enum ESoundType
+{
+	SOUND_GAMEPLAY_VOICE = 0,
+	SOUND_SCENE_VOICE,
+	SOUND_ANIMATION,
+	SOUND_AMBIENT,
+	SOUND_FX,
+	SOUND_SCENE,
+	SOUND_SCRIPT,
+	SOUND_TYPE_COUNT,
+};
+
+BEGIN_ENUM_RTTI( ESoundType )
+	ENUM_OPTION( SOUND_GAMEPLAY_VOICE )
+	ENUM_OPTION( SOUND_SCENE_VOICE )
+	ENUM_OPTION( SOUND_ANIMATION )
+	ENUM_OPTION( SOUND_AMBIENT )
+	ENUM_OPTION( SOUND_FX )
+	ENUM_OPTION( SOUND_SCENE )
+	ENUM_OPTION( SOUND_SCRIPT )
+END_ENUM_RTTI()
+
+//////////////////////////////////////////////////////////////////////////
+
+// Enum for sound type flags
+enum ESoundTypeFlag
+{
+	SOUND_GAMEPLAY_VOICE_FLAG	= FLAG( 0 ),
+	SOUND_SCENE_VOICE_FLAG		= FLAG( 1 ),
+	SOUND_ANIMATION_FLAG		= FLAG( 2 ),
+	SOUND_AMBIENT_FLAG			= FLAG( 3 ),
+	SOUND_FX_FLAG				= FLAG( 4 ),
+	SOUND_SCENE_FLAG			= FLAG( 5 ),
+	SOUND_SCRIPT_FLAG			= FLAG( 6 ),
+
+	SOUND_NONE_FLAG				= 0x00,
+	SOUND_ALL_FLAG				= 0xFF,
+};
+
+BEGIN_ENUM_RTTI( ESoundTypeFlag )
+	ENUM_OPTION( SOUND_GAMEPLAY_VOICE_FLAG )
+	ENUM_OPTION( SOUND_SCENE_VOICE_FLAG )
+	ENUM_OPTION( SOUND_ANIMATION_FLAG )
+	ENUM_OPTION( SOUND_AMBIENT_FLAG )
+	ENUM_OPTION( SOUND_FX_FLAG )
+	ENUM_OPTION( SOUND_SCENE_FLAG )
+	ENUM_OPTION( SOUND_SCRIPT_FLAG )
+	ENUM_OPTION( SOUND_NONE_FLAG )
+	ENUM_OPTION( SOUND_ALL_FLAG )
+END_ENUM_RTTI()
+
+//////////////////////////////////////////////////////////////////////////

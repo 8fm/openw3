@@ -1,0 +1,10 @@
+struct VS_OUTPUT
+{
+	float4 Position   : S_POSITION;
+	float4 Diffuse    : TEXCOORD0;
+};
+
+float4 main( VS_OUTPUT input ) : S_TARGET_OUTPUT
+{
+	return input.Diffuse;
+}

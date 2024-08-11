@@ -1,0 +1,1642 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<resource xmlns="http://www.wxwindows.org/wxxrc" version="2.3.0.1">
+	<object class="wxDialog" name="m_foliageGeneratorDialog">
+		<style>wxDEFAULT_DIALOG_STYLE|wxMINIMIZE_BOX</style>
+		<font>
+			<family>default</family>
+			<style>normal</style>
+			<weight>light</weight>
+			<underlined>0</underlined>
+		</font>
+		<title>Foliage Generator / Distribution Tool</title>
+		<centered>1</centered>
+		<object class="wxBoxSizer">
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxFlexGridSizer">
+					<rows>8</rows>
+					<cols>1</cols>
+					<vgap>0</vgap>
+					<hgap>0</hgap>
+					<growablecols></growablecols>
+					<growablerows></growablerows>
+					<object class="sizeritem">
+						<option>1</option>
+						<flag>wxEXPAND</flag>
+						<border>0</border>
+						<object class="wxBoxSizer">
+							<minsize>-1,76</minsize>
+							<orient>wxVERTICAL</orient>
+							<object class="sizeritem">
+								<option>1</option>
+								<flag>wxEXPAND | wxALL</flag>
+								<border>0</border>
+								<object class="wxPanel" name="progressBarPanel">
+									<style>wxDOUBLE_BORDER|wxTAB_TRAVERSAL</style>
+									<object class="wxBoxSizer">
+										<orient>wxHORIZONTAL</orient>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxEXPAND</flag>
+											<border>5</border>
+											<object class="wxBoxSizer">
+												<minsize>-1,76</minsize>
+												<orient>wxHORIZONTAL</orient>
+												<object class="sizeritem">
+													<option>1</option>
+													<flag>wxEXPAND</flag>
+													<border>0</border>
+													<object class="wxPanel" name="m_panel19">
+														<style>wxTAB_TRAVERSAL</style>
+														<object class="wxBoxSizer">
+															<orient>wxVERTICAL</orient>
+															<object class="sizeritem">
+																<option>0</option>
+																<flag>wxALL|wxEXPAND</flag>
+																<border>4</border>
+																<object class="wxGauge" name="m_genProg">
+																	<style>wxGA_HORIZONTAL|wxTAB_TRAVERSAL</style>
+																	<range>100</range>
+																	<value>0</value>
+																</object>
+															</object>
+															<object class="sizeritem">
+																<option>1</option>
+																<flag>wxALL|wxEXPAND</flag>
+																<border>2</border>
+																<object class="wxBoxSizer">
+																	<orient>wxVERTICAL</orient>
+																	<object class="sizeritem">
+																		<option>1</option>
+																		<flag>wxEXPAND</flag>
+																		<border>4</border>
+																		<object class="wxBoxSizer">
+																			<orient>wxHORIZONTAL</orient>
+																			<object class="sizeritem">
+																				<option>1</option>
+																				<flag>wxEXPAND</flag>
+																				<border>0</border>
+																				<object class="wxBoxSizer">
+																					<orient>wxVERTICAL</orient>
+																					<object class="sizeritem">
+																						<option>0</option>
+																						<flag>wxALL|wxEXPAND</flag>
+																						<border>2</border>
+																						<object class="wxStaticText" name="FGIterationsStaticTxt1">
+																							<style>wxALIGN_LEFT|wxST_NO_AUTORESIZE</style>
+																							<font>
+																								<family>default</family>
+																								<style>normal</style>
+																								<weight>light</weight>
+																								<underlined>0</underlined>
+																							</font>
+																							<label>Alive cells:</label>
+																							<wrap>-1</wrap>
+																						</object>
+																					</object>
+																				</object>
+																			</object>
+																			<object class="sizeritem">
+																				<option>1</option>
+																				<flag>wxEXPAND</flag>
+																				<border>5</border>
+																				<object class="wxBoxSizer">
+																					<orient>wxHORIZONTAL</orient>
+																					<object class="sizeritem">
+																						<option>1</option>
+																						<flag>wxALL|wxEXPAND</flag>
+																						<border>2</border>
+																						<object class="wxStaticText" name="FGTotalCellsStTxt">
+																							<style>wxST_NO_AUTORESIZE</style>
+																							<font>
+																								<family>default</family>
+																								<style>normal</style>
+																								<weight>light</weight>
+																								<underlined>0</underlined>
+																							</font>
+																							<label>0</label>
+																							<wrap>-1</wrap>
+																						</object>
+																					</object>
+																				</object>
+																			</object>
+																		</object>
+																	</object>
+																	<object class="sizeritem">
+																		<option>1</option>
+																		<flag>wxEXPAND|wxFIXED_MINSIZE</flag>
+																		<border>4</border>
+																		<object class="wxBoxSizer">
+																			<orient>wxVERTICAL</orient>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALIGN_LEFT|wxALL|wxEXPAND|wxFIXED_MINSIZE</flag>
+																				<border>2</border>
+																				<object class="wxStaticText" name="FGStatusInfoTxt">
+																					<style>wxST_NO_AUTORESIZE</style>
+																					<font>
+																						<family>default</family>
+																						<style>normal</style>
+																						<weight>light</weight>
+																						<underlined>0</underlined>
+																					</font>
+																					<label>Pick area!</label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																		</object>
+																	</object>
+																</object>
+															</object>
+														</object>
+													</object>
+												</object>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxEXPAND|wxFIXED_MINSIZE</flag>
+											<border>0</border>
+											<object class="wxBoxSizer">
+												<minsize>-1,76</minsize>
+												<orient>wxVERTICAL</orient>
+												<object class="sizeritem">
+													<option>1</option>
+													<flag>wxEXPAND|wxFIXED_MINSIZE</flag>
+													<border>5</border>
+													<object class="wxBoxSizer">
+														<minsize>105,36</minsize>
+														<orient>wxVERTICAL</orient>
+														<object class="sizeritem">
+															<option>1</option>
+															<flag>wxEXPAND | wxALL</flag>
+															<border>5</border>
+															<object class="wxPanel" name="m_panel30">
+																<style>wxTAB_TRAVERSAL</style>
+																<object class="wxBoxSizer">
+																	<orient>wxVERTICAL</orient>
+																	<object class="sizeritem">
+																		<option>1</option>
+																		<flag>wxALIGN_CENTER|wxALL</flag>
+																		<border>1</border>
+																		<object class="wxButton" name="FGGenerateFoliageButton">
+																			<pos>-1,-1</pos>
+																			<bg>#e0e078</bg>
+																			<font>
+																				<family>default</family>
+																				<style>normal</style>
+																				<weight>bold</weight>
+																				<underlined>0</underlined>
+																			</font>
+																			<label>Generate</label>
+																			<default>0</default>
+																		</object>
+																	</object>
+																</object>
+															</object>
+														</object>
+													</object>
+												</object>
+												<object class="sizeritem">
+													<option>0</option>
+													<flag></flag>
+													<border>5</border>
+													<object class="wxBoxSizer">
+														<minsize>105,-1</minsize>
+														<orient>wxHORIZONTAL</orient>
+														<object class="sizeritem">
+															<option>0</option>
+															<flag>wxALL|wxEXPAND</flag>
+															<border>4</border>
+															<object class="wxStaticText" name="FGIterationsStaticTxt">
+																<font>
+																	<family>default</family>
+																	<style>normal</style>
+																	<weight>light</weight>
+																	<underlined>0</underlined>
+																</font>
+																<label>Iterations:</label>
+																<wrap>-1</wrap>
+															</object>
+														</object>
+														<object class="sizeritem">
+															<option>1</option>
+															<flag>wxALIGN_LEFT|wxALL|wxEXPAND</flag>
+															<border>4</border>
+															<object class="wxStaticText" name="FGIterationsStTxt">
+																<font>
+																	<family>default</family>
+																	<style>normal</style>
+																	<weight>bold</weight>
+																	<underlined>0</underlined>
+																</font>
+																<label>0</label>
+																<wrap>-1</wrap>
+															</object>
+														</object>
+													</object>
+												</object>
+												<object class="sizeritem">
+													<option>0</option>
+													<flag>wxALL</flag>
+													<border>5</border>
+													<object class="wxCheckBox" name="FG_FreezeSimChkBox">
+														<label>Freeze simulation</label>
+														<checked>0</checked>
+													</object>
+												</object>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>1</option>
+											<flag>wxEXPAND</flag>
+											<border>0</border>
+											<object class="wxBoxSizer">
+												<orient>wxVERTICAL</orient>
+												<object class="sizeritem">
+													<option>0</option>
+													<flag>wxALL</flag>
+													<border>6</border>
+													<object class="wxButton" name="FGPickButton">
+														<pos>-1,-1</pos>
+														<bg>#51a8ff</bg>
+														<font>
+															<family>default</family>
+															<style>normal</style>
+															<weight>bold</weight>
+															<underlined>0</underlined>
+														</font>
+														<label>Pick</label>
+														<default>0</default>
+													</object>
+												</object>
+												<object class="sizeritem">
+													<option>0</option>
+													<flag>wxALIGN_LEFT|wxALL|wxEXPAND</flag>
+													<border>4</border>
+													<object class="wxStaticText" name="FGAreaStTxt">
+														<font>
+															<family>default</family>
+															<style>normal</style>
+															<weight>light</weight>
+															<underlined>0</underlined>
+														</font>
+														<label>No area!</label>
+														<wrap>-1</wrap>
+													</object>
+												</object>
+												<object class="spacer">
+													<option>1</option>
+													<flag>wxEXPAND</flag>
+													<border>5</border>
+													<size>0,0</size>
+												</object>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxALL</flag>
+											<border>0</border>
+											<object class="wxBoxSizer">
+												<orient>wxVERTICAL</orient>
+												<object class="sizeritem">
+													<option>0</option>
+													<flag>wxALIGN_TOP|wxALL</flag>
+													<border>6</border>
+													<object class="wxButton" name="FGResetFoliageButton">
+														<bg>#d75555</bg>
+														<font>
+															<family>default</family>
+															<style>normal</style>
+															<weight>bold</weight>
+															<underlined>0</underlined>
+														</font>
+														<label>Reset</label>
+														<default>0</default>
+													</object>
+												</object>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxEXPAND</flag>
+											<border>0</border>
+											<object class="wxBoxSizer">
+												<minsize>-1,76</minsize>
+												<orient>wxVERTICAL</orient>
+												<object class="sizeritem">
+													<option>0</option>
+													<flag>wxALL</flag>
+													<border>6</border>
+													<object class="wxButton" name="FGFinalizeButton">
+														<bg>#82bc41</bg>
+														<font>
+															<family>default</family>
+															<style>normal</style>
+															<weight>bold</weight>
+															<underlined>0</underlined>
+														</font>
+														<label>Finish</label>
+														<default>0</default>
+													</object>
+												</object>
+												<object class="sizeritem">
+													<option>0</option>
+													<flag>wxALL|wxEXPAND</flag>
+													<border>5</border>
+													<object class="wxCheckBox" name="FGTipsChBox">
+														<font>
+															<family>default</family>
+															<style>normal</style>
+															<weight>normal</weight>
+															<underlined>0</underlined>
+														</font>
+														<label>Show tips</label>
+														<checked>0</checked>
+													</object>
+												</object>
+											</object>
+										</object>
+									</object>
+								</object>
+							</object>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>1</option>
+						<flag>wxEXPAND</flag>
+						<border>0</border>
+						<object class="wxBoxSizer">
+							<orient>wxHORIZONTAL</orient>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALL|wxEXPAND</flag>
+								<border>0</border>
+								<object class="wxNotebook" name="m_notebook1">
+									<style>wxNB_FIXEDWIDTH</style>
+									<bg>#e4e4e4</bg>
+									<object class="notebookpage">
+										<label>Initial settings</label>
+										<selected>1</selected>
+										<object class="wxPanel" name="FGInitialResPage">
+											<style>wxTAB_TRAVERSAL</style>
+											<bg>#ffffff</bg>
+											<object class="wxBoxSizer">
+												<orient>wxHORIZONTAL</orient>
+												<object class="sizeritem">
+													<option>0</option>
+													<flag>wxALL|wxEXPAND</flag>
+													<border>0</border>
+													<object class="wxPanel" name="Initial">
+														<style>wxDOUBLE_BORDER|wxTAB_TRAVERSAL</style>
+														<bg>#ffffff</bg>
+														<object class="wxBoxSizer">
+															<orient>wxHORIZONTAL</orient>
+															<object class="sizeritem">
+																<option>1</option>
+																<flag>wxEXPAND</flag>
+																<border>5</border>
+																<object class="wxBoxSizer">
+																	<orient>wxHORIZONTAL</orient>
+																	<object class="sizeritem">
+																		<option>0</option>
+																		<flag>wxALL|wxEXPAND</flag>
+																		<border>5</border>
+																		<object class="wxPanel" name="FGDensity">
+																			<style>wxSIMPLE_BORDER|wxTAB_TRAVERSAL</style>
+																			<bg>#d4d0c8</bg>
+																			<object class="wxBoxSizer">
+																				<orient>wxVERTICAL</orient>
+																				<object class="sizeritem">
+																					<option>0</option>
+																					<flag>wxALL</flag>
+																					<border>10</border>
+																					<object class="wxStaticText" name="m_densityStTxt11111">
+																						<bg>#d4d0c8</bg>
+																						<font>
+																							<family>default</family>
+																							<style>normal</style>
+																							<weight>bold</weight>
+																							<underlined>0</underlined>
+																						</font>
+																						<label>Cell density</label>
+																						<wrap>-1</wrap>
+																					</object>
+																				</object>
+																				<object class="sizeritem">
+																					<option>0</option>
+																					<flag>wxALL</flag>
+																					<border>5</border>
+																					<object class="wxSlider" name="FGDensitySlider">
+																						<style>wxSL_HORIZONTAL|wxSL_LABELS|wxSL_SELRANGE</style>
+																						<bg>#d4d0c8</bg>
+																						<font>
+																							<family>default</family>
+																							<style>normal</style>
+																							<weight>normal</weight>
+																							<underlined>0</underlined>
+																						</font>
+																						<value>10</value>
+																						<min>1</min>
+																						<max>100</max>
+																					</object>
+																				</object>
+																			</object>
+																		</object>
+																	</object>
+																	<object class="sizeritem">
+																		<option>0</option>
+																		<flag>wxEXPAND | wxALL</flag>
+																		<border>5</border>
+																		<object class="wxPanel" name="FGWaterResources">
+																			<style>wxSIMPLE_BORDER|wxTAB_TRAVERSAL</style>
+																			<bg>#d4d0c8</bg>
+																			<object class="wxBoxSizer">
+																				<orient>wxVERTICAL</orient>
+																				<object class="sizeritem">
+																					<option>0</option>
+																					<flag>wxALL</flag>
+																					<border>10</border>
+																					<object class="wxStaticText" name="m_densityStTxt11">
+																						<bg>#d4d0c8</bg>
+																						<font>
+																							<family>default</family>
+																							<style>normal</style>
+																							<weight>bold</weight>
+																							<underlined>0</underlined>
+																						</font>
+																						<label>Water resources</label>
+																						<wrap>-1</wrap>
+																					</object>
+																				</object>
+																				<object class="sizeritem">
+																					<option>0</option>
+																					<flag>wxALL</flag>
+																					<border>5</border>
+																					<object class="wxSlider" name="FGWaterResSlider">
+																						<style>wxSL_HORIZONTAL|wxSL_LABELS|wxSL_SELRANGE</style>
+																						<bg>#d4d0c8</bg>
+																						<font>
+																							<family>default</family>
+																							<style>normal</style>
+																							<weight>normal</weight>
+																							<underlined>0</underlined>
+																						</font>
+																						<value>700</value>
+																						<min>0</min>
+																						<max>1500</max>
+																					</object>
+																				</object>
+																			</object>
+																		</object>
+																	</object>
+																	<object class="sizeritem">
+																		<option>0</option>
+																		<flag>wxALL</flag>
+																		<border>10</border>
+																		<object class="wxStaticText" name="m_staticText25">
+																			<label>Set before starting\nthe iterations.</label>
+																			<wrap>-1</wrap>
+																		</object>
+																	</object>
+																</object>
+															</object>
+														</object>
+													</object>
+												</object>
+											</object>
+										</object>
+									</object>
+									<object class="notebookpage">
+										<label>Population</label>
+										<selected>0</selected>
+										<object class="wxPanel" name="FGModPage">
+											<style>wxTAB_TRAVERSAL</style>
+											<bg>#ffffff</bg>
+											<object class="wxBoxSizer">
+												<orient>wxHORIZONTAL</orient>
+												<object class="sizeritem">
+													<option>0</option>
+													<flag>wxEXPAND | wxALL</flag>
+													<border>5</border>
+													<object class="wxPanel" name="FGMinSlopeLimit">
+														<style>wxSIMPLE_BORDER|wxTAB_TRAVERSAL</style>
+														<bg>#d4d0c8</bg>
+														<object class="wxBoxSizer">
+															<orient>wxVERTICAL</orient>
+															<object class="sizeritem">
+																<option>0</option>
+																<flag>wxALL</flag>
+																<border>10</border>
+																<object class="wxStaticText" name="m_densityStTxt112">
+																	<font>
+																		<family>default</family>
+																		<style>normal</style>
+																		<weight>bold</weight>
+																		<underlined>0</underlined>
+																	</font>
+																	<label>Min slope limit</label>
+																	<wrap>-1</wrap>
+																</object>
+															</object>
+															<object class="sizeritem">
+																<option>0</option>
+																<flag>wxALL</flag>
+																<border>5</border>
+																<object class="wxSlider" name="FGMinSlopeLimitSlider">
+																	<style>wxSL_HORIZONTAL|wxSL_LABELS|wxSL_SELRANGE</style>
+																	<value>0</value>
+																	<min>0</min>
+																	<max>90</max>
+																</object>
+															</object>
+														</object>
+													</object>
+												</object>
+												<object class="sizeritem">
+													<option>0</option>
+													<flag>wxEXPAND | wxALL</flag>
+													<border>5</border>
+													<object class="wxPanel" name="FGSlopeLimit">
+														<style>wxSIMPLE_BORDER|wxTAB_TRAVERSAL</style>
+														<bg>#d4d0c8</bg>
+														<object class="wxBoxSizer">
+															<orient>wxVERTICAL</orient>
+															<object class="sizeritem">
+																<option>0</option>
+																<flag>wxALL</flag>
+																<border>10</border>
+																<object class="wxStaticText" name="m_densityStTxt111111">
+																	<font>
+																		<family>default</family>
+																		<style>normal</style>
+																		<weight>bold</weight>
+																		<underlined>0</underlined>
+																	</font>
+																	<label>Max slope limit</label>
+																	<wrap>-1</wrap>
+																</object>
+															</object>
+															<object class="sizeritem">
+																<option>0</option>
+																<flag>wxALL</flag>
+																<border>5</border>
+																<object class="wxSlider" name="FGMaxSlopeLimitSlider">
+																	<style>wxSL_HORIZONTAL|wxSL_LABELS|wxSL_SELRANGE</style>
+																	<value>45</value>
+																	<min>1</min>
+																	<max>90</max>
+																</object>
+															</object>
+														</object>
+													</object>
+												</object>
+												<object class="sizeritem">
+													<option>0</option>
+													<flag>wxEXPAND | wxALL</flag>
+													<border>5</border>
+													<object class="wxPanel" name="FGAdditionalCells">
+														<style>wxSIMPLE_BORDER|wxTAB_TRAVERSAL</style>
+														<bg>#d4d0c8</bg>
+														<object class="wxBoxSizer">
+															<orient>wxVERTICAL</orient>
+															<object class="sizeritem">
+																<option>0</option>
+																<flag>wxALL</flag>
+																<border>10</border>
+																<object class="wxStaticText" name="m_densityStTxt1121">
+																	<font>
+																		<family>default</family>
+																		<style>normal</style>
+																		<weight>bold</weight>
+																		<underlined>0</underlined>
+																	</font>
+																	<label>Additional cells</label>
+																	<wrap>-1</wrap>
+																</object>
+															</object>
+															<object class="sizeritem">
+																<option>0</option>
+																<flag>wxALL</flag>
+																<border>5</border>
+																<object class="wxSlider" name="FGAddCellsSlider">
+																	<style>wxSL_HORIZONTAL|wxSL_LABELS|wxSL_SELRANGE</style>
+																	<value>0</value>
+																	<min>0</min>
+																	<max>12</max>
+																</object>
+															</object>
+														</object>
+													</object>
+												</object>
+												<object class="sizeritem">
+													<option>0</option>
+													<flag>wxEXPAND | wxALL</flag>
+													<border>5</border>
+													<object class="wxPanel" name="FGDistributionSpeed">
+														<style>wxSIMPLE_BORDER|wxTAB_TRAVERSAL</style>
+														<bg>#d4d0c8</bg>
+														<object class="wxBoxSizer">
+															<orient>wxVERTICAL</orient>
+															<object class="sizeritem">
+																<option>0</option>
+																<flag>wxALL</flag>
+																<border>10</border>
+																<object class="wxStaticText" name="m_densityStTxt1113">
+																	<font>
+																		<family>default</family>
+																		<style>normal</style>
+																		<weight>bold</weight>
+																		<underlined>0</underlined>
+																	</font>
+																	<label>Distribution speed</label>
+																	<wrap>-1</wrap>
+																</object>
+															</object>
+															<object class="sizeritem">
+																<option>0</option>
+																<flag>wxALL</flag>
+																<border>5</border>
+																<object class="wxSlider" name="FGDistributionSpeedSlider">
+																	<style>wxSL_HORIZONTAL|wxSL_LABELS|wxSL_SELRANGE</style>
+																	<value>6</value>
+																	<min>0</min>
+																	<max>9</max>
+																</object>
+															</object>
+														</object>
+													</object>
+												</object>
+											</object>
+										</object>
+									</object>
+									<object class="notebookpage">
+										<label>Color</label>
+										<selected>0</selected>
+										<object class="wxPanel" name="FGColorPage">
+											<style>wxTAB_TRAVERSAL</style>
+											<bg>#ffffff</bg>
+											<object class="wxBoxSizer">
+												<orient>wxHORIZONTAL</orient>
+												<object class="sizeritem">
+													<option>0</option>
+													<flag>wxEXPAND | wxALL</flag>
+													<border>5</border>
+													<object class="wxPanel" name="FGSunEnergyColor">
+														<style>wxSIMPLE_BORDER|wxTAB_TRAVERSAL</style>
+														<bg>#d4d0c8</bg>
+														<object class="wxBoxSizer">
+															<orient>wxVERTICAL</orient>
+															<object class="sizeritem">
+																<option>0</option>
+																<flag>wxALL</flag>
+																<border>10</border>
+																<object class="wxStaticText" name="m_densityStTxt1112">
+																	<font>
+																		<family>default</family>
+																		<style>normal</style>
+																		<weight>bold</weight>
+																		<underlined>0</underlined>
+																	</font>
+																	<label>Sun Energy Color</label>
+																	<wrap>-1</wrap>
+																</object>
+															</object>
+															<object class="sizeritem">
+																<option>0</option>
+																<flag>wxALL</flag>
+																<border>5</border>
+																<object class="wxSlider" name="FGAmbientSlider">
+																	<style>wxSL_HORIZONTAL|wxSL_LABELS|wxSL_SELRANGE</style>
+																	<value>0</value>
+																	<min>0</min>
+																	<max>100</max>
+																</object>
+															</object>
+														</object>
+													</object>
+												</object>
+												<object class="sizeritem">
+													<option>0</option>
+													<flag>wxEXPAND | wxALL</flag>
+													<border>5</border>
+													<object class="wxPanel" name="FGAmbientOcclusion">
+														<style>wxSIMPLE_BORDER|wxTAB_TRAVERSAL</style>
+														<bg>#d4d0c8</bg>
+														<object class="wxBoxSizer">
+															<orient>wxVERTICAL</orient>
+															<object class="sizeritem">
+																<option>0</option>
+																<flag>wxALL</flag>
+																<border>10</border>
+																<object class="wxStaticText" name="m_densityStTxt11121">
+																	<font>
+																		<family>default</family>
+																		<style>normal</style>
+																		<weight>bold</weight>
+																		<underlined>0</underlined>
+																	</font>
+																	<label>Ambient Occlusion</label>
+																	<wrap>-1</wrap>
+																</object>
+															</object>
+															<object class="sizeritem">
+																<option>0</option>
+																<flag>wxALL</flag>
+																<border>5</border>
+																<object class="wxSlider" name="FGAmbientOcclusionSlider">
+																	<style>wxSL_HORIZONTAL|wxSL_LABELS|wxSL_SELRANGE</style>
+																	<value>50</value>
+																	<min>0</min>
+																	<max>100</max>
+																</object>
+															</object>
+														</object>
+													</object>
+												</object>
+												<object class="sizeritem">
+													<option>0</option>
+													<flag>wxEXPAND | wxALL</flag>
+													<border>5</border>
+													<object class="wxPanel" name="FGAOSpread">
+														<style>wxSIMPLE_BORDER|wxTAB_TRAVERSAL</style>
+														<bg>#d4d0c8</bg>
+														<object class="wxBoxSizer">
+															<orient>wxVERTICAL</orient>
+															<object class="sizeritem">
+																<option>0</option>
+																<flag>wxALL</flag>
+																<border>10</border>
+																<object class="wxStaticText" name="m_densityStTxt111211">
+																	<font>
+																		<family>default</family>
+																		<style>normal</style>
+																		<weight>bold</weight>
+																		<underlined>0</underlined>
+																	</font>
+																	<label>AO Spread</label>
+																	<wrap>-1</wrap>
+																</object>
+															</object>
+															<object class="sizeritem">
+																<option>0</option>
+																<flag>wxALL</flag>
+																<border>5</border>
+																<object class="wxSlider" name="FGAOSpreadSlider">
+																	<style>wxSL_HORIZONTAL|wxSL_LABELS|wxSL_SELRANGE</style>
+																	<value>250</value>
+																	<min>1</min>
+																	<max>1000</max>
+																</object>
+															</object>
+														</object>
+													</object>
+												</object>
+												<object class="sizeritem">
+													<option>0</option>
+													<flag>wxEXPAND</flag>
+													<border>5</border>
+													<object class="wxBoxSizer">
+														<orient>wxVERTICAL</orient>
+														<object class="sizeritem">
+															<option>0</option>
+															<flag>wxALL</flag>
+															<border>8</border>
+															<object class="wxButton" name="FGColorizeOnlyButton">
+																<bg>#e0e078</bg>
+																<font>
+																	<family>default</family>
+																	<style>normal</style>
+																	<weight>bold</weight>
+																	<underlined>0</underlined>
+																</font>
+																<label>Bake</label>
+																<default>0</default>
+															</object>
+														</object>
+														<object class="sizeritem">
+															<option>0</option>
+															<flag>wxALL</flag>
+															<border>8</border>
+															<object class="wxStaticText" name="m_staticText26">
+																<label>Bake colors / ao into \ndistributed plants.</label>
+																<wrap>-1</wrap>
+															</object>
+														</object>
+													</object>
+												</object>
+											</object>
+										</object>
+									</object>
+									<object class="notebookpage">
+										<label>Advanced</label>
+										<selected>0</selected>
+										<object class="wxPanel" name="FGEnergyPage">
+											<style>wxTAB_TRAVERSAL</style>
+											<bg>#ffffff</bg>
+											<object class="wxBoxSizer">
+												<orient>wxHORIZONTAL</orient>
+												<object class="sizeritem">
+													<option>0</option>
+													<flag>wxEXPAND | wxALL</flag>
+													<border>5</border>
+													<object class="wxPanel" name="FGSunEnergy">
+														<style>wxSIMPLE_BORDER|wxTAB_TRAVERSAL</style>
+														<bg>#d4d0c8</bg>
+														<object class="wxBoxSizer">
+															<orient>wxVERTICAL</orient>
+															<object class="sizeritem">
+																<option>0</option>
+																<flag>wxALL</flag>
+																<border>10</border>
+																<object class="wxStaticText" name="m_densityStTxt11111111">
+																	<font>
+																		<family>default</family>
+																		<style>normal</style>
+																		<weight>bold</weight>
+																		<underlined>0</underlined>
+																	</font>
+																	<label>Sun energy</label>
+																	<wrap>-1</wrap>
+																</object>
+															</object>
+															<object class="sizeritem">
+																<option>0</option>
+																<flag>wxALL</flag>
+																<border>5</border>
+																<object class="wxSlider" name="FGSunEnergySlider">
+																	<style>wxSL_HORIZONTAL|wxSL_LABELS|wxSL_SELRANGE</style>
+																	<value>100</value>
+																	<min>0</min>
+																	<max>600</max>
+																</object>
+															</object>
+														</object>
+													</object>
+												</object>
+												<object class="sizeritem">
+													<option>0</option>
+													<flag>wxEXPAND | wxALL</flag>
+													<border>5</border>
+													<object class="wxPanel" name="FGGrowthEnergy">
+														<style>wxSIMPLE_BORDER|wxTAB_TRAVERSAL</style>
+														<bg>#d4d0c8</bg>
+														<object class="wxBoxSizer">
+															<orient>wxVERTICAL</orient>
+															<object class="sizeritem">
+																<option>0</option>
+																<flag>wxALL</flag>
+																<border>10</border>
+																<object class="wxStaticText" name="m_densityStTxt1111111">
+																	<font>
+																		<family>default</family>
+																		<style>normal</style>
+																		<weight>bold</weight>
+																		<underlined>0</underlined>
+																	</font>
+																	<label>Growth energy</label>
+																	<wrap>-1</wrap>
+																</object>
+															</object>
+															<object class="sizeritem">
+																<option>0</option>
+																<flag>wxALL</flag>
+																<border>5</border>
+																<object class="wxSlider" name="FGGrowthESlider">
+																	<style>wxSL_HORIZONTAL|wxSL_LABELS|wxSL_SELRANGE</style>
+																	<value>20</value>
+																	<min>1</min>
+																	<max>400</max>
+																</object>
+															</object>
+														</object>
+													</object>
+												</object>
+												<object class="sizeritem">
+													<option>0</option>
+													<flag>wxEXPAND | wxALL</flag>
+													<border>5</border>
+													<object class="wxPanel" name="FGTransferEnergy">
+														<style>wxSIMPLE_BORDER|wxTAB_TRAVERSAL</style>
+														<bg>#d4d0c8</bg>
+														<object class="wxBoxSizer">
+															<orient>wxVERTICAL</orient>
+															<object class="sizeritem">
+																<option>0</option>
+																<flag>wxALL</flag>
+																<border>10</border>
+																<object class="wxStaticText" name="m_densityStTxt111">
+																	<font>
+																		<family>default</family>
+																		<style>normal</style>
+																		<weight>bold</weight>
+																		<underlined>0</underlined>
+																	</font>
+																	<label>Transfer energy</label>
+																	<wrap>-1</wrap>
+																</object>
+															</object>
+															<object class="sizeritem">
+																<option>0</option>
+																<flag>wxALL</flag>
+																<border>5</border>
+																<object class="wxSlider" name="FGMinEnergySlider">
+																	<style>wxSL_HORIZONTAL|wxSL_LABELS|wxSL_SELRANGE</style>
+																	<value>0</value>
+																	<min>0</min>
+																	<max>500</max>
+																</object>
+															</object>
+														</object>
+													</object>
+												</object>
+												<object class="sizeritem">
+													<option>0</option>
+													<flag>wxEXPAND | wxALL</flag>
+													<border>5</border>
+													<object class="wxPanel" name="FGSeedEnergy">
+														<style>wxSIMPLE_BORDER|wxTAB_TRAVERSAL</style>
+														<bg>#d4d0c8</bg>
+														<object class="wxBoxSizer">
+															<orient>wxVERTICAL</orient>
+															<object class="sizeritem">
+																<option>0</option>
+																<flag>wxALL</flag>
+																<border>10</border>
+																<object class="wxStaticText" name="m_densityStTxt1111">
+																	<font>
+																		<family>default</family>
+																		<style>normal</style>
+																		<weight>bold</weight>
+																		<underlined>0</underlined>
+																	</font>
+																	<label>Seed energy</label>
+																	<wrap>-1</wrap>
+																</object>
+															</object>
+															<object class="sizeritem">
+																<option>0</option>
+																<flag>wxALL</flag>
+																<border>5</border>
+																<object class="wxSlider" name="FGSeedESlider">
+																	<style>wxSL_HORIZONTAL|wxSL_LABELS|wxSL_SELRANGE</style>
+																	<value>1100</value>
+																	<min>200</min>
+																	<max>2000</max>
+																</object>
+															</object>
+														</object>
+													</object>
+												</object>
+											</object>
+										</object>
+									</object>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>1</option>
+								<flag>wxEXPAND</flag>
+								<border>5</border>
+								<object class="wxBoxSizer">
+									<orient>wxVERTICAL</orient>
+									<object class="sizeritem">
+										<option>1</option>
+										<flag>wxEXPAND | wxALL</flag>
+										<border>0</border>
+										<object class="wxPanel" name="FGPresets">
+											<style>wxDOUBLE_BORDER|wxTAB_TRAVERSAL</style>
+											<object class="wxBoxSizer">
+												<orient>wxVERTICAL</orient>
+												<object class="sizeritem">
+													<option>0</option>
+													<flag>wxALL</flag>
+													<border>5</border>
+													<object class="wxStaticText" name="m_staticText23">
+														<label>Preset:</label>
+														<wrap>-1</wrap>
+													</object>
+												</object>
+												<object class="sizeritem">
+													<option>0</option>
+													<flag>wxALL</flag>
+													<border>5</border>
+													<object class="wxChoice" name="FGPresetChoice">
+														<font>
+															<family>default</family>
+															<style>normal</style>
+															<weight>bold</weight>
+															<underlined>0</underlined>
+														</font>
+														<selection>0</selection>
+														<content>
+															<item>default</item>
+															<item>high growth</item>
+															<item>islands</item>
+															<item>grassy</item>
+														</content>
+													</object>
+												</object>
+												<object class="sizeritem">
+													<option>1</option>
+													<flag>wxEXPAND | wxALL</flag>
+													<border>5</border>
+													<object class="wxPanel" name="m_panel32">
+														<style>wxTAB_TRAVERSAL</style>
+														<object class="wxBoxSizer">
+															<orient>wxHORIZONTAL</orient>
+															<object class="sizeritem">
+																<option>0</option>
+																<flag>wxALL</flag>
+																<border>5</border>
+																<object class="wxButton" name="FGSavePresetButton">
+																	<label>Save Preset</label>
+																	<default>0</default>
+																</object>
+															</object>
+															<object class="sizeritem">
+																<option>0</option>
+																<flag>wxALL</flag>
+																<border>5</border>
+																<object class="wxButton" name="FGLoadPresetButton">
+																	<label>Load Preset</label>
+																	<default>0</default>
+																</object>
+															</object>
+														</object>
+													</object>
+												</object>
+											</object>
+										</object>
+									</object>
+								</object>
+							</object>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>1</option>
+						<flag>wxEXPAND</flag>
+						<border>5</border>
+						<object class="wxBoxSizer">
+							<orient>wxHORIZONTAL</orient>
+							<object class="sizeritem">
+								<option>1</option>
+								<flag>wxALL|wxEXPAND</flag>
+								<border>0</border>
+								<object class="wxPanel" name="FGEntryList">
+									<style>wxDOUBLE_BORDER|wxTAB_TRAVERSAL</style>
+									<object class="wxBoxSizer">
+										<orient>wxVERTICAL</orient>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxALL|wxEXPAND</flag>
+											<border>5</border>
+											<object class="wxChoice" name="FGSpeciesChoice">
+												<font>
+													<family>default</family>
+													<style>normal</style>
+													<weight>bold</weight>
+													<underlined>0</underlined>
+												</font>
+												<selection>0</selection>
+												<content />
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>1</option>
+											<flag>wxALL|wxEXPAND</flag>
+											<border>2</border>
+											<object class="wxListBox" name="FGEntriesListBox">
+												<style>wxLB_NEEDED_SB|wxLB_SINGLE</style>
+												<size>-1,160</size>
+												<font>
+													<family>default</family>
+													<style>normal</style>
+													<weight>bold</weight>
+													<underlined>0</underlined>
+												</font>
+												<content />
+											</object>
+										</object>
+									</object>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxEXPAND</flag>
+								<border>0</border>
+								<object class="wxPanel" name="FGSetupPanel">
+									<style>wxDOUBLE_BORDER|wxTAB_TRAVERSAL</style>
+									<object class="wxBoxSizer">
+										<orient>wxHORIZONTAL</orient>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxEXPAND</flag>
+											<border>5</border>
+											<object class="wxBoxSizer">
+												<orient>wxHORIZONTAL</orient>
+												<object class="sizeritem">
+													<option>0</option>
+													<flag>wxALL|wxEXPAND</flag>
+													<border>0</border>
+													<object class="wxBoxSizer">
+														<orient>wxVERTICAL</orient>
+														<object class="sizeritem">
+															<option>1</option>
+															<flag>wxEXPAND | wxALL</flag>
+															<border>1</border>
+															<object class="wxPanel" name="FGPlantDensity">
+																<style>wxSIMPLE_BORDER|wxTAB_TRAVERSAL</style>
+																<bg>#d4d0c8</bg>
+																<object class="wxBoxSizer">
+																	<orient>wxVERTICAL</orient>
+																	<object class="sizeritem">
+																		<option>0</option>
+																		<flag>wxEXPAND</flag>
+																		<border>5</border>
+																		<object class="wxBoxSizer">
+																			<orient>wxVERTICAL</orient>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL</flag>
+																				<border>8</border>
+																				<object class="wxStaticText" name="m_staticText23111">
+																					<font>
+																						<family>default</family>
+																						<style>normal</style>
+																						<weight>bold</weight>
+																						<underlined>0</underlined>
+																					</font>
+																					<label>Density:</label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxEXPAND | wxALL</flag>
+																				<border>0</border>
+																				<object class="wxStaticLine" name="m_staticline61">
+																					<style>wxLI_HORIZONTAL</style>
+																				</object>
+																			</object>
+																		</object>
+																	</object>
+																	<object class="sizeritem">
+																		<option>1</option>
+																		<flag>wxEXPAND</flag>
+																		<border>5</border>
+																		<object class="wxBoxSizer">
+																			<orient>wxVERTICAL</orient>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL|wxEXPAND</flag>
+																				<border>5</border>
+																				<object class="wxSlider" name="FGEntryDensitySlider">
+																					<style>wxSL_INVERSE|wxSL_LABELS|wxSL_SELRANGE|wxSL_VERTICAL</style>
+																					<value>20</value>
+																					<min>0</min>
+																					<max>100</max>
+																				</object>
+																			</object>
+																		</object>
+																	</object>
+																	<object class="sizeritem">
+																		<option>0</option>
+																		<flag></flag>
+																		<border>5</border>
+																		<object class="wxBoxSizer">
+																			<orient>wxHORIZONTAL</orient>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL</flag>
+																				<border>5</border>
+																				<object class="wxCheckBox" name="FG_LockChkBox">
+																					<label>Lock</label>
+																					<checked>0</checked>
+																				</object>
+																			</object>
+																		</object>
+																	</object>
+																</object>
+															</object>
+														</object>
+													</object>
+												</object>
+												<object class="sizeritem">
+													<option>0</option>
+													<flag>wxEXPAND</flag>
+													<border>0</border>
+													<object class="wxBoxSizer">
+														<orient>wxVERTICAL</orient>
+														<object class="sizeritem">
+															<option>1</option>
+															<flag>wxEXPAND | wxALL</flag>
+															<border>1</border>
+															<object class="wxPanel" name="FGPlantDensity1">
+																<style>wxSIMPLE_BORDER|wxTAB_TRAVERSAL</style>
+																<bg>#d4d0c8</bg>
+																<object class="wxBoxSizer">
+																	<orient>wxVERTICAL</orient>
+																	<object class="sizeritem">
+																		<option>0</option>
+																		<flag>wxEXPAND</flag>
+																		<border>5</border>
+																		<object class="wxBoxSizer">
+																			<orient>wxVERTICAL</orient>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL</flag>
+																				<border>8</border>
+																				<object class="wxStaticText" name="m_staticText231111">
+																					<font>
+																						<family>default</family>
+																						<style>normal</style>
+																						<weight>bold</weight>
+																						<underlined>0</underlined>
+																					</font>
+																					<label>Clusters:</label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxEXPAND | wxALL</flag>
+																				<border>0</border>
+																				<object class="wxStaticLine" name="m_staticline611">
+																					<style>wxLI_HORIZONTAL</style>
+																				</object>
+																			</object>
+																		</object>
+																	</object>
+																	<object class="sizeritem">
+																		<option>1</option>
+																		<flag>wxEXPAND</flag>
+																		<border>5</border>
+																		<object class="wxBoxSizer">
+																			<orient>wxVERTICAL</orient>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL|wxEXPAND</flag>
+																				<border>5</border>
+																				<object class="wxSlider" name="FGEntryClustersSlider">
+																					<style>wxSL_INVERSE|wxSL_LABELS|wxSL_SELRANGE|wxSL_VERTICAL</style>
+																					<value>75</value>
+																					<min>0</min>
+																					<max>110</max>
+																				</object>
+																			</object>
+																		</object>
+																	</object>
+																	<object class="sizeritem">
+																		<option>0</option>
+																		<flag></flag>
+																		<border>5</border>
+																		<object class="wxBoxSizer">
+																			<orient>wxHORIZONTAL</orient>
+																		</object>
+																	</object>
+																</object>
+															</object>
+														</object>
+													</object>
+												</object>
+												<object class="sizeritem">
+													<option>0</option>
+													<flag>wxEXPAND|wxFIXED_MINSIZE</flag>
+													<border>0</border>
+													<object class="wxBoxSizer">
+														<minsize>95,-1</minsize>
+														<orient>wxVERTICAL</orient>
+														<object class="sizeritem">
+															<option>1</option>
+															<flag>wxALL|wxEXPAND|wxFIXED_MINSIZE</flag>
+															<border>1</border>
+															<object class="wxPanel" name="FGRangeOfPlant">
+																<style>wxSIMPLE_BORDER|wxTAB_TRAVERSAL</style>
+																<bg>#d4d0c8</bg>
+																<object class="wxBoxSizer">
+																	<orient>wxVERTICAL</orient>
+																	<object class="sizeritem">
+																		<option>0</option>
+																		<flag>wxALL|wxEXPAND|wxFIXED_MINSIZE</flag>
+																		<border>8</border>
+																		<object class="wxStaticText" name="m_staticText19">
+																			<font>
+																				<family>default</family>
+																				<style>normal</style>
+																				<weight>bold</weight>
+																				<underlined>0</underlined>
+																			</font>
+																			<label>Plant energy range:</label>
+																			<wrap>-1</wrap>
+																		</object>
+																	</object>
+																	<object class="sizeritem">
+																		<option>1</option>
+																		<flag>wxEXPAND</flag>
+																		<border>5</border>
+																		<object class="wxBoxSizer">
+																			<orient>wxVERTICAL</orient>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxEXPAND | wxALL</flag>
+																				<border>0</border>
+																				<object class="wxStaticLine" name="m_staticline21">
+																					<style>wxLI_HORIZONTAL</style>
+																				</object>
+																			</object>
+																			<object class="sizeritem">
+																				<option>1</option>
+																				<flag>wxEXPAND</flag>
+																				<border>5</border>
+																				<object class="wxBoxSizer">
+																					<orient>wxVERTICAL</orient>
+																					<object class="sizeritem">
+																						<option>0</option>
+																						<flag>wxALIGN_CENTER|wxALL</flag>
+																						<border>3</border>
+																						<object class="wxStaticText" name="m_staticText192">
+																							<font>
+																								<family>default</family>
+																								<style>normal</style>
+																								<weight>normal</weight>
+																								<underlined>0</underlined>
+																							</font>
+																							<label>Min</label>
+																							<wrap>-1</wrap>
+																						</object>
+																					</object>
+																					<object class="sizeritem">
+																						<option>0</option>
+																						<flag>wxALL|wxEXPAND|wxFIXED_MINSIZE</flag>
+																						<border>3</border>
+																						<object class="wxSlider" name="FGEntryScopeSliderMIN">
+																							<style>wxSL_HORIZONTAL|wxSL_LABELS|wxSL_SELRANGE</style>
+																							<value>500</value>
+																							<min>0</min>
+																							<max>1000</max>
+																						</object>
+																					</object>
+																				</object>
+																			</object>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxEXPAND | wxALL</flag>
+																				<border>0</border>
+																				<object class="wxStaticLine" name="m_staticline2">
+																					<style>wxLI_HORIZONTAL</style>
+																				</object>
+																			</object>
+																			<object class="sizeritem">
+																				<option>1</option>
+																				<flag>wxEXPAND</flag>
+																				<border>5</border>
+																				<object class="wxBoxSizer">
+																					<orient>wxVERTICAL</orient>
+																					<object class="sizeritem">
+																						<option>0</option>
+																						<flag>wxALIGN_CENTER|wxALL|wxFIXED_MINSIZE</flag>
+																						<border>3</border>
+																						<object class="wxStaticText" name="m_staticText191">
+																							<font>
+																								<family>default</family>
+																								<style>normal</style>
+																								<weight>normal</weight>
+																								<underlined>0</underlined>
+																							</font>
+																							<label>Max</label>
+																							<wrap>-1</wrap>
+																						</object>
+																					</object>
+																					<object class="sizeritem">
+																						<option>0</option>
+																						<flag>wxALL|wxEXPAND|wxFIXED_MINSIZE</flag>
+																						<border>3</border>
+																						<object class="wxSlider" name="FGEntryScopeSliderMAX">
+																							<style>wxSL_HORIZONTAL|wxSL_LABELS|wxSL_SELRANGE</style>
+																							<value>500</value>
+																							<min>0</min>
+																							<max>1000</max>
+																						</object>
+																					</object>
+																				</object>
+																			</object>
+																		</object>
+																	</object>
+																</object>
+															</object>
+														</object>
+													</object>
+												</object>
+												<object class="sizeritem">
+													<option>1</option>
+													<flag>wxEXPAND</flag>
+													<border>5</border>
+													<object class="wxBoxSizer">
+														<orient>wxVERTICAL</orient>
+														<object class="sizeritem">
+															<option>1</option>
+															<flag>wxEXPAND | wxALL</flag>
+															<border>1</border>
+															<object class="wxPanel" name="FGPlantType">
+																<style>wxSIMPLE_BORDER|wxTAB_TRAVERSAL</style>
+																<bg>#d4d0c8</bg>
+																<object class="wxBoxSizer">
+																	<orient>wxVERTICAL</orient>
+																	<object class="sizeritem">
+																		<option>0</option>
+																		<flag>wxEXPAND</flag>
+																		<border>5</border>
+																		<object class="wxBoxSizer">
+																			<orient>wxVERTICAL</orient>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL</flag>
+																				<border>8</border>
+																				<object class="wxStaticText" name="m_staticText2311">
+																					<font>
+																						<family>default</family>
+																						<style>normal</style>
+																						<weight>bold</weight>
+																						<underlined>0</underlined>
+																					</font>
+																					<label>Type:</label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxEXPAND | wxALL</flag>
+																				<border>0</border>
+																				<object class="wxStaticLine" name="m_staticline6">
+																					<style>wxLI_HORIZONTAL</style>
+																				</object>
+																			</object>
+																		</object>
+																	</object>
+																	<object class="sizeritem">
+																		<option>0</option>
+																		<flag>wxEXPAND</flag>
+																		<border>5</border>
+																		<object class="wxBoxSizer">
+																			<orient>wxVERTICAL</orient>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL|wxEXPAND</flag>
+																				<border>5</border>
+																				<object class="wxRadioButton" name="FGSetupTree">
+																					<label>Tree</label>
+																					<value>0</value>
+																				</object>
+																			</object>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL|wxEXPAND</flag>
+																				<border>5</border>
+																				<object class="wxRadioButton" name="FGSetupLowTree">
+																					<label>Low tree</label>
+																					<value>0</value>
+																				</object>
+																			</object>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL|wxEXPAND</flag>
+																				<border>5</border>
+																				<object class="wxRadioButton" name="FGSetupBush">
+																					<label>Bush</label>
+																					<value>0</value>
+																				</object>
+																			</object>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL|wxEXPAND</flag>
+																				<border>5</border>
+																				<object class="wxRadioButton" name="FGSetupLowBush">
+																					<label>Low Bush</label>
+																					<value>0</value>
+																				</object>
+																			</object>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL</flag>
+																				<border>5</border>
+																				<object class="wxRadioButton" name="FGSetupGrass">
+																					<label>Grass</label>
+																					<value>0</value>
+																				</object>
+																			</object>
+																		</object>
+																	</object>
+																	<object class="sizeritem">
+																		<option>0</option>
+																		<flag>wxALL</flag>
+																		<border>5</border>
+																		<object class="wxButton" name="FGAnalizeButton">
+																			<bg>#e0e078</bg>
+																			<font>
+																				<family>default</family>
+																				<style>normal</style>
+																				<weight>bold</weight>
+																				<underlined>0</underlined>
+																			</font>
+																			<label>Analize</label>
+																			<default>0</default>
+																		</object>
+																	</object>
+																</object>
+															</object>
+														</object>
+													</object>
+												</object>
+												<object class="sizeritem">
+													<option>0</option>
+													<flag>wxEXPAND</flag>
+													<border>5</border>
+													<object class="wxBoxSizer">
+														<orient>wxVERTICAL</orient>
+														<object class="sizeritem">
+															<option>1</option>
+															<flag>wxFIXED_MINSIZE</flag>
+															<border>0</border>
+															<object class="wxPanel" name="FGSetupThumbnail">
+																<style>wxDOUBLE_BORDER|wxTAB_TRAVERSAL</style>
+																<size>187,187</size>
+															</object>
+														</object>
+													</object>
+												</object>
+											</object>
+										</object>
+									</object>
+								</object>
+							</object>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>1</option>
+						<flag>wxEXPAND</flag>
+						<border>5</border>
+						<object class="wxBoxSizer">
+							<orient>wxVERTICAL</orient>
+							<object class="sizeritem">
+								<option>1</option>
+								<flag>wxEXPAND | wxALL</flag>
+								<border>0</border>
+								<object class="wxPanel" name="FGTipsPanel">
+									<style>wxDOUBLE_BORDER|wxTAB_TRAVERSAL</style>
+									<hidden>1</hidden>
+									<object class="wxBoxSizer">
+										<minsize>-1,140</minsize>
+										<orient>wxVERTICAL</orient>
+										<object class="sizeritem">
+											<option>1</option>
+											<flag>wxALL|wxEXPAND</flag>
+											<border>5</border>
+											<object class="wxHtmlWindow" name="FGTipsHtmlWindow">
+												<style>wxHW_SCROLLBAR_AUTO</style>
+												<bg>#ffffe1</bg>
+											</object>
+										</object>
+									</object>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>1</option>
+								<flag>wxEXPAND | wxALL</flag>
+								<border>5</border>
+								<object class="wxPanel" name="FGWarningPanel">
+									<style>wxTAB_TRAVERSAL</style>
+									<bg>#d75555</bg>
+									<hidden>1</hidden>
+									<object class="wxBoxSizer">
+										<orient>wxVERTICAL</orient>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxALL|wxEXPAND</flag>
+											<border>15</border>
+											<object class="wxStaticText" name="m_staticText3">
+												<bg>#d75555</bg>
+												<fg>#000000</fg>
+												<font>
+													<size>14</size>
+													<family>default</family>
+													<style>normal</style>
+													<weight>bold</weight>
+													<underlined>0</underlined>
+												</font>
+												<label>No area selected. Make sure that you are inside \nat least one area. Or select area manually!</label>
+												<wrap>-1</wrap>
+											</object>
+										</object>
+									</object>
+								</object>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+</resource>

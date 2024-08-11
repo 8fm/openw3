@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="build.h" />
+    <ClInclude Include="inputDeviceGamepadOrbis.h">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="inputDeviceKeyboardOrbisDebug.h">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="inputDeviceManagerOrbis.h">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="streamingInstallerOrbis.h">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="inputDeviceMouseOrbisDebug.h">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="inputDevicePlatformDataOrbis.h">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="userProfileOrbis.h">
+      <Filter>Game\User Profile</Filter>
+    </ClInclude>
+    <ClInclude Include="userProfileTasks.h">
+      <Filter>Game\User Profile</Filter>
+    </ClInclude>
+    <ClInclude Include="orbisApiCall.h" />
+    <ClInclude Include="orbisSystemDialog.h">
+      <Filter>Game\User Profile</Filter>
+    </ClInclude>
+    <ClInclude Include="dlcInstallerOrbis.h">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="contentManagerOrbis.h">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="dlcInstallerOrbis_p.h">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="gestureRecognizerOrbis.h">
+      <Filter>Input</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="build.cpp" />
+    <ClCompile Include="inputDeviceGamepadOrbis.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="inputDeviceKeyboardOrbisDebug.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="inputDeviceManagerOrbis.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="streamingInstallerOrbis.cpp">
+      <Filter>Content</Filter>
+    </ClCompile>
+    <ClCompile Include="inputDeviceMouseOrbisDebug.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="userProfileOrbis.cpp">
+      <Filter>Game\User Profile</Filter>
+    </ClCompile>
+    <ClCompile Include="userProfileTasks.cpp">
+      <Filter>Game\User Profile</Filter>
+    </ClCompile>
+    <ClCompile Include="userProfileOrbisSaves.cpp">
+      <Filter>Game\User Profile</Filter>
+    </ClCompile>
+    <ClCompile Include="orbisSystemDialog.cpp">
+      <Filter>Game\User Profile</Filter>
+    </ClCompile>
+    <ClCompile Include="dlcInstallerOrbis.cpp">
+      <Filter>Content</Filter>
+    </ClCompile>
+    <ClCompile Include="contentManagerOrbis.cpp">
+      <Filter>Content</Filter>
+    </ClCompile>
+    <ClCompile Include="gestureRecognizerOrbis.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Input">
+      <UniqueIdentifier>{7b919e21-b8c7-493c-b393-e4abdda9e24e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{7097deb0-9abb-4b0c-9b0f-2855dd7bad3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\User Profile">
+      <UniqueIdentifier>{0e1588da-db26-4b03-8ab0-546519dca35b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Content">
+      <UniqueIdentifier>{250a8757-462a-4523-b10b-b83b699c06da}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

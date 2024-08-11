@@ -1,0 +1,2817 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="fileSystem">
+      <UniqueIdentifier>{47212971-d661-4484-ad59-d58d8c8dccee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="fileSystem\latent">
+      <UniqueIdentifier>{f0e73f37-6b49-4c10-b61f-0b58fae98ea0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="fileSystem\buffers">
+      <UniqueIdentifier>{0f7d04d3-8881-4926-8ac6-c8e2e371f98c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="rtti">
+      <UniqueIdentifier>{d28950d8-4c56-4b44-895d-0539df34cec5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="objects">
+      <UniqueIdentifier>{8a296eaa-f87c-4c4e-8690-61d7b932916c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system">
+      <UniqueIdentifier>{f4e5efba-a06e-4d59-af79-7c96276b24fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\win32">
+      <UniqueIdentifier>{81096b94-2a65-471f-98ba-7b25db2a1a83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\error">
+      <UniqueIdentifier>{557aa027-01d5-4b66-8235-b59f0ffd7e8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\profiler">
+      <UniqueIdentifier>{bb37fd22-7982-436b-b3d5-2abdeebc2a58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\versionControl">
+      <UniqueIdentifier>{4711b29e-3a76-462b-b460-0d5e07c42104}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\feedback">
+      <UniqueIdentifier>{f04b82d4-1a3b-42d5-aeb2-f0174a214690}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="math">
+      <UniqueIdentifier>{652cbe42-4637-4b23-a88b-0d9db7e94b86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="math\fpu">
+      <UniqueIdentifier>{a98a4764-3072-476e-a557-268242d43f22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="math\sse">
+      <UniqueIdentifier>{50778bda-1b7c-4516-9cec-ad6becfa3a20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="math\altiVec">
+      <UniqueIdentifier>{12039bcb-a039-479d-9798-bd1efc678e45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="math\frustum">
+      <UniqueIdentifier>{3924d266-f32a-4713-b54b-823d60afa2c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="math\transform">
+      <UniqueIdentifier>{bc969875-03ee-49d3-a831-8d023cc13f55}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="types">
+      <UniqueIdentifier>{13f3fd31-63cb-43b8-a421-de21787192c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="container">
+      <UniqueIdentifier>{4fdd6c97-af29-4bcc-887b-c90cfd54dee3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="container\string">
+      <UniqueIdentifier>{7091bbee-8504-4f51-9c7d-bf83ae55b8c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="container\array">
+      <UniqueIdentifier>{7b70d7ca-a96c-4581-b7ed-0cc703cc27ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="container\set">
+      <UniqueIdentifier>{d0c87668-ee7c-4838-a5f4-199fab91ad6a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="container\list">
+      <UniqueIdentifier>{61550801-bb64-4994-8f6b-28ee021f950d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="container\queue">
+      <UniqueIdentifier>{270e8e21-8c7e-4cc7-9274-7503e654e8ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="container\bitfield">
+      <UniqueIdentifier>{e5ca96ab-c0f2-44e3-949b-322c33e9ccb8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resourceSystem">
+      <UniqueIdentifier>{579de1bf-cd9a-4717-9df5-fcee11cd99fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="serialization">
+      <UniqueIdentifier>{62dd4ba2-5e8d-4056-b076-4822c1e4c4fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="serialization\XML">
+      <UniqueIdentifier>{509db4e5-b76e-464c-aea0-a0b4bee1fa43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="serialization\XML\rapidxml">
+      <UniqueIdentifier>{ae2661b3-595f-47e1-bc48-4061f55bdbf1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="memory">
+      <UniqueIdentifier>{4f5dc564-c04e-480f-bccc-27f93037dcdb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="algorithm">
+      <UniqueIdentifier>{50c04879-8d3f-4a76-80a5-925970c86f4e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="instancing">
+      <UniqueIdentifier>{c0e2797e-50c4-4cdd-8187-b23ee630223f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="handles">
+      <UniqueIdentifier>{484be645-9452-4b14-9bc4-3edea6167ab4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scripting">
+      <UniqueIdentifier>{f3f0b085-98a8-48b9-afc4-cf7dd1e4b50c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scripting\LowLevel">
+      <UniqueIdentifier>{a21e2f1a-ee20-4809-88cb-06dd3ac45b2b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scripting\Compilation">
+      <UniqueIdentifier>{670d1376-91f1-48dc-9190-6c20d6900435}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scripting\Compilation\FileParser">
+      <UniqueIdentifier>{367462ef-2826-4897-8418-20b34e3e9a3b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scripting\Compilation\FunctionParser">
+      <UniqueIdentifier>{be7ef312-bc2b-44ed-a510-0b21d73837e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scripting\Compilation\CoreGeneration">
+      <UniqueIdentifier>{b4fb45ba-8704-4c0b-a5dd-93b53010fc6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scripting\Compilation\SyntaxNode">
+      <UniqueIdentifier>{9313801b-5b38-4c84-9099-692aab43a16e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scripting\Natives">
+      <UniqueIdentifier>{90accb2f-de9c-4bf8-97ba-175cdc9fb974}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="config">
+      <UniqueIdentifier>{10df1378-7d5d-4994-95b7-7fc950b283cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="commanlets">
+      <UniqueIdentifier>{04554f64-0cab-41c9-8a8e-2c1f44005a77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="names">
+      <UniqueIdentifier>{8612478f-f86d-485b-8ef7-1ae5715fd79f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="settings">
+      <UniqueIdentifier>{87545452-a585-40d5-8fa1-71127ead2435}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gameSave">
+      <UniqueIdentifier>{c88f6f7f-d9c5-4c7f-bfc2-107300e722df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="spatialstructures">
+      <UniqueIdentifier>{9ac38619-f923-418e-8cd1-9852b65db81b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="spatialstructures\grid">
+      <UniqueIdentifier>{88fd086a-f81d-45c1-91c4-055bb844c70b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="spatialstructures\trees">
+      <UniqueIdentifier>{485d2fba-84d4-438d-b6a6-41e2e425f62b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="functors">
+      <UniqueIdentifier>{158c39a1-d595-4747-9a46-34b369aaadcd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resourceSystem\resourceManagement">
+      <UniqueIdentifier>{baabf2ac-5495-489d-a1cb-5fab1d3b8e2e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\clipboard">
+      <UniqueIdentifier>{19bb96c6-131c-4f62-a3c8-bb0620cf8e15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\orbis">
+      <UniqueIdentifier>{2972d7db-0506-4e42-ab96-5aef9cdcbdc1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\task">
+      <UniqueIdentifier>{c3239ceb-b1d3-4d5a-b07c-0bca0011b0a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\task\Impl">
+      <UniqueIdentifier>{aef85dd0-e20b-4ee8-9955-205bc3d83d41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resourceSystem\resourceManagement\json">
+      <UniqueIdentifier>{1df0775b-6355-43ae-bf46-c1ea2fc5db72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resourceSystem\resourceManagement\resourceDatabase">
+      <UniqueIdentifier>{460f6037-a8c9-4e62-83cf-d5f23bef2b76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\profiler\newProfiler">
+      <UniqueIdentifier>{2213a966-d776-4754-9c8f-7bbacf12c348}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="redTelemetryService">
+      <UniqueIdentifier>{ecfd7108-5a96-4474-8e8b-f9b3be051ca5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="curves">
+      <UniqueIdentifier>{5a73bdfc-13fc-4b13-bbd6-837ca45cee03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="smartObject">
+      <UniqueIdentifier>{a6d30abf-08ac-4485-a972-ef7ea8b61448}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="container\pool">
+      <UniqueIdentifier>{1c11d7cd-93eb-4704-b445-b539093390b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scripting\Runtime">
+      <UniqueIdentifier>{947f39b4-6367-408c-82ca-6cd475c4073f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="smartObject\internal">
+      <UniqueIdentifier>{9b92069c-7681-4d77-98f6-7fff95703cc6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scripting\Runtime\StateMachine">
+      <UniqueIdentifier>{3f15b37e-6a36-4838-8385-7f5a0fc7e14e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="container\map">
+      <UniqueIdentifier>{845c2f9f-f18b-40f0-9fd4-fdce090fa708}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\task\util">
+      <UniqueIdentifier>{b6a79121-42f8-4a86-a3d1-ffe71a4b7211}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="fileSystem\bundle">
+      <UniqueIdentifier>{2d7d3a63-6abe-47d6-813a-8b57de29a84f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="fileSystem\bundle\file interface">
+      <UniqueIdentifier>{8189f1d7-42ac-42c7-96f7-3ca9004af95a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="fileSystem\bundle\interchanges">
+      <UniqueIdentifier>{78781536-4f0a-4ac9-b7a9-4e84c8d18f77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="compression">
+      <UniqueIdentifier>{8f86dcb3-d9e8-4ba7-a502-793816d7f7b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="fileSystem\tasks">
+      <UniqueIdentifier>{2b3a652d-f960-40f3-8de9-91ebadcc9221}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="fileSystem\bundle\datacache">
+      <UniqueIdentifier>{5fef9e9a-091a-40ad-a282-e2355a789a0e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="serialization\JSON">
+      <UniqueIdentifier>{bd865387-ad22-4aaa-bee8-ed0518ba6a6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="serialization\JSON\rapidJSON">
+      <UniqueIdentifier>{72fb9ece-85b5-47ae-9664-dcee21bafe99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="serialization\JSON\rapidJSON\internal">
+      <UniqueIdentifier>{0dc2e782-09c5-402a-bd48-c8d2ddbae1c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="fileSystem\PS4">
+      <UniqueIdentifier>{d4d75fa7-cc77-4b9f-ae74-83e2d3c993f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resourceSystem\depot">
+      <UniqueIdentifier>{88783b94-716d-4fbc-8a0d-18ee658a1693}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\profiler\profilerTools">
+      <UniqueIdentifier>{5523d32a-54ce-440d-bbe6-0d47ec95785c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\profiler\redProfiler">
+      <UniqueIdentifier>{e01db0bb-d67f-42ac-8835-c33a0eea6fc3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="fileSystem\loading">
+      <UniqueIdentifier>{372983c2-7f95-477c-8a0d-bb8c5379f14e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="memory\allocators">
+      <UniqueIdentifier>{687ca734-cea9-4279-9b5d-840d472a3213}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="memory\lameAllocators">
+      <UniqueIdentifier>{44bd0954-0bd0-45ad-a8e2-cb60e63990c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="config\legacy">
+      <UniqueIdentifier>{fd92a76e-eb0c-4413-9049-9adf92f60055}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="serialization\adapters">
+      <UniqueIdentifier>{24e52ec4-b2a8-44d5-9bc1-2f0ba33944a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="objects\implementations">
+      <UniqueIdentifier>{41197ad7-1548-4af0-94ea-e3b2c2dc9a1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="console">
+      <UniqueIdentifier>{059684c0-78ef-4f05-81ff-b73f8c458fa4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="serialization\stream">
+      <UniqueIdentifier>{fbf32104-23a4-4945-9e76-c5900123cb3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="fileSystem\async">
+      <UniqueIdentifier>{f0adbb94-d633-4d44-b06f-f944111c3070}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="fileSystem\compression">
+      <UniqueIdentifier>{0f5bed57-2972-4187-a1ce-fc296f4f4e1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="fileSystem\profiling">
+      <UniqueIdentifier>{aa8cfc50-4b37-4f69-9df0-4afe1ba9cf83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\profiler\quickDump">
+      <UniqueIdentifier>{ed906fd4-a3e0-4c32-8ac5-04c5b8cad140}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="algorithm\grid">
+      <UniqueIdentifier>{c754b4c6-0fbf-4fbb-a298-8f4e0095408d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="fileSystem\XboxOne">
+      <UniqueIdentifier>{462af65d-106d-4406-bf1d-d76e09c629fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="fileSystem\priorities">
+      <UniqueIdentifier>{bbc8de32-3be0-4522-bee8-6b23cd51b469}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="http">
+      <UniqueIdentifier>{97e4382e-09fc-4720-8399-72ea453e79c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="http\http">
+      <UniqueIdentifier>{a0a2eac5-a6f2-419f-baf8-86fab639e779}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="http\html">
+      <UniqueIdentifier>{97f4375d-9f95-4986-ab99-ffc731459c59}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="http\basics">
+      <UniqueIdentifier>{c7312ab3-3858-40de-ab54-49d844d7ae1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="debug">
+      <UniqueIdentifier>{600dd23a-781b-4bf8-9900-538b6a8b7bee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="objects\debug">
+      <UniqueIdentifier>{2cefc525-b78a-4ded-b600-7a46a223aaea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resourceSystem\debug">
+      <UniqueIdentifier>{bec88025-5d56-4cd8-89cd-21da6826b208}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="fileSystem\bundle\debug">
+      <UniqueIdentifier>{b6364e8e-e158-45f2-b266-9aa709130cac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="memory\debug">
+      <UniqueIdentifier>{b3587ef4-1636-4855-a9bb-44f8233c1bea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="fileSystem\debug">
+      <UniqueIdentifier>{2c7f1a5a-a0de-42e0-9de3-ecfc68065568}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="fileSystem\dlc">
+      <UniqueIdentifier>{75ae2956-bec9-4050-aac0-70a040698d9b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resourceSystem\content">
+      <UniqueIdentifier>{0b8ddfab-2408-4382-bf5d-56568249e2cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="content">
+      <UniqueIdentifier>{da763c78-6828-4711-9e54-d3278e2033d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="memory\pagedWriter">
+      <UniqueIdentifier>{4b741061-55f9-4e64-a3ee-214214a9438c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hardware Instrumentation">
+      <UniqueIdentifier>{dcdf2392-239e-4b2f-89b3-d0386803676e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="crypto">
+      <UniqueIdentifier>{b707ee69-2e70-4eea-ada4-9b259aab0f48}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="compressedNumSerializer.cpp">
+      <Filter>fileSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="file.cpp">
+      <Filter>fileSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="fileFormat.cpp">
+      <Filter>fileSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="filePath.cpp">
+      <Filter>fileSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="fileSys.cpp">
+      <Filter>fileSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="memoryFileReader.cpp">
+      <Filter>fileSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="memoryFileWriter.cpp">
+      <Filter>fileSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="dataBuffer.cpp">
+      <Filter>fileSystem\buffers</Filter>
+    </ClCompile>
+    <ClCompile Include="latentDataBuffer.cpp">
+      <Filter>fileSystem\buffers</Filter>
+    </ClCompile>
+    <ClCompile Include="bitField.cpp">
+      <Filter>rtti</Filter>
+    </ClCompile>
+    <ClCompile Include="class.cpp">
+      <Filter>rtti</Filter>
+    </ClCompile>
+    <ClCompile Include="defaultValue.cpp">
+      <Filter>rtti</Filter>
+    </ClCompile>
+    <ClCompile Include="enum.cpp">
+      <Filter>rtti</Filter>
+    </ClCompile>
+    <ClCompile Include="function.cpp">
+      <Filter>rtti</Filter>
+    </ClCompile>
+    <ClCompile Include="functionBuilder.cpp">
+      <Filter>rtti</Filter>
+    </ClCompile>
+    <ClCompile Include="functionCalling.cpp">
+      <Filter>rtti</Filter>
+    </ClCompile>
+    <ClCompile Include="property.cpp">
+      <Filter>rtti</Filter>
+    </ClCompile>
+    <ClCompile Include="propertyBuilder.cpp">
+      <Filter>rtti</Filter>
+    </ClCompile>
+    <ClCompile Include="rttiSerializer.cpp">
+      <Filter>rtti</Filter>
+    </ClCompile>
+    <ClCompile Include="rttiSystem.cpp">
+      <Filter>rtti</Filter>
+    </ClCompile>
+    <ClCompile Include="rttiType.cpp">
+      <Filter>rtti</Filter>
+    </ClCompile>
+    <ClCompile Include="softHandle.cpp">
+      <Filter>rtti</Filter>
+    </ClCompile>
+    <ClCompile Include="tagList.cpp">
+      <Filter>rtti</Filter>
+    </ClCompile>
+    <ClCompile Include="variant.cpp">
+      <Filter>rtti</Filter>
+    </ClCompile>
+    <ClCompile Include="variantArray.cpp">
+      <Filter>rtti</Filter>
+    </ClCompile>
+    <ClCompile Include="object.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="objectNatives.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="objectUtils.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="crt.cpp">
+      <Filter>system</Filter>
+    </ClCompile>
+    <ClCompile Include="events.cpp">
+      <Filter>system</Filter>
+    </ClCompile>
+    <ClCompile Include="os.cpp">
+      <Filter>system</Filter>
+    </ClCompile>
+    <ClCompile Include="sync.cpp">
+      <Filter>system</Filter>
+    </ClCompile>
+    <ClCompile Include="systemWin32.cpp">
+      <Filter>system\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="profiler.cpp">
+      <Filter>system\profiler</Filter>
+    </ClCompile>
+    <ClCompile Include="versionControl.cpp">
+      <Filter>system\versionControl</Filter>
+    </ClCompile>
+    <ClCompile Include="feedback.cpp">
+      <Filter>system\feedback</Filter>
+    </ClCompile>
+    <ClCompile Include="math.cpp">
+      <Filter>math</Filter>
+    </ClCompile>
+    <ClCompile Include="mathUtils.cpp">
+      <Filter>math</Filter>
+    </ClCompile>
+    <ClCompile Include="randomSystem.cpp">
+      <Filter>math</Filter>
+    </ClCompile>
+    <ClCompile Include="frustum.cpp">
+      <Filter>math\frustum</Filter>
+    </ClCompile>
+    <ClCompile Include="engineQsTransform.cpp">
+      <Filter>math\transform</Filter>
+    </ClCompile>
+    <ClCompile Include="engineTransform.cpp">
+      <Filter>math\transform</Filter>
+    </ClCompile>
+    <ClCompile Include="engineTime.cpp">
+      <Filter>types</Filter>
+    </ClCompile>
+    <ClCompile Include="string.cpp">
+      <Filter>container\string</Filter>
+    </ClCompile>
+    <ClCompile Include="tokenizer.cpp">
+      <Filter>container\string</Filter>
+    </ClCompile>
+    <ClCompile Include="wildcard.cpp">
+      <Filter>container\string</Filter>
+    </ClCompile>
+    <ClCompile Include="dynarray.cpp">
+      <Filter>container\array</Filter>
+    </ClCompile>
+    <ClCompile Include="longBitField.cpp">
+      <Filter>container\bitfield</Filter>
+    </ClCompile>
+    <ClCompile Include="2darray.cpp">
+      <Filter>resourceSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="cooker.cpp">
+      <Filter>resourceSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="diskPackage.cpp">
+      <Filter>resourceSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="exporter.cpp">
+      <Filter>resourceSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="factory.cpp">
+      <Filter>resourceSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="gatheredResource.cpp">
+      <Filter>resourceSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="importer.cpp">
+      <Filter>resourceSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="resource.cpp">
+      <Filter>resourceSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="resourceDefManager.cpp">
+      <Filter>resourceSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="resourcePath.cpp">
+      <Filter>resourceSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="thumbnail.cpp">
+      <Filter>resourceSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencyLinker.cpp">
+      <Filter>serialization</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencyLinkerFactory.cpp">
+      <Filter>serialization</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencyLoader.cpp">
+      <Filter>serialization</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencyLoader2dArray.cpp">
+      <Filter>serialization</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencyMapper.cpp">
+      <Filter>serialization</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencySaver.cpp">
+      <Filter>serialization</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencySaver2dArray.cpp">
+      <Filter>serialization</Filter>
+    </ClCompile>
+    <ClCompile Include="fileLoadingStats.cpp">
+      <Filter>serialization</Filter>
+    </ClCompile>
+    <ClCompile Include="xmlFile.cpp">
+      <Filter>serialization\XML</Filter>
+    </ClCompile>
+    <ClCompile Include="xmlFileReader.cpp">
+      <Filter>serialization\XML</Filter>
+    </ClCompile>
+    <ClCompile Include="xmlFileWriter.cpp">
+      <Filter>serialization\XML</Filter>
+    </ClCompile>
+    <ClCompile Include="xmlReader.cpp">
+      <Filter>serialization\XML</Filter>
+    </ClCompile>
+    <ClCompile Include="xmlWriter.cpp">
+      <Filter>serialization\XML</Filter>
+    </ClCompile>
+    <ClCompile Include="instanceBuffer.cpp">
+      <Filter>instancing</Filter>
+    </ClCompile>
+    <ClCompile Include="instanceDataLayout.cpp">
+      <Filter>instancing</Filter>
+    </ClCompile>
+    <ClCompile Include="instanceDataLayoutCompiler.cpp">
+      <Filter>instancing</Filter>
+    </ClCompile>
+    <ClCompile Include="instanceVar.cpp">
+      <Filter>instancing</Filter>
+    </ClCompile>
+    <ClCompile Include="handleMap.cpp">
+      <Filter>handles</Filter>
+    </ClCompile>
+    <ClCompile Include="scriptingSystem.cpp">
+      <Filter>scripting</Filter>
+    </ClCompile>
+    <ClCompile Include="scriptCompiledCode.cpp">
+      <Filter>scripting\LowLevel</Filter>
+    </ClCompile>
+    <ClCompile Include="scriptDebugger.cpp">
+      <Filter>scripting\LowLevel</Filter>
+    </ClCompile>
+    <ClCompile Include="scriptDebuggerLocals.cpp">
+      <Filter>scripting\LowLevel</Filter>
+    </ClCompile>
+    <ClCompile Include="scriptNativeFunctionMap.cpp">
+      <Filter>scripting\LowLevel</Filter>
+    </ClCompile>
+    <ClCompile Include="scriptSnapshot.cpp">
+      <Filter>scripting\LowLevel</Filter>
+    </ClCompile>
+    <ClCompile Include="scriptStackFrame.cpp">
+      <Filter>scripting\LowLevel</Filter>
+    </ClCompile>
+    <ClCompile Include="scriptThread.cpp">
+      <Filter>scripting\LowLevel</Filter>
+    </ClCompile>
+    <ClCompile Include="scriptThreadSerializer.cpp">
+      <Filter>scripting\LowLevel</Filter>
+    </ClCompile>
+    <ClCompile Include="scriptCompiler.cpp">
+      <Filter>scripting\Compilation</Filter>
+    </ClCompile>
+    <ClCompile Include="scriptDefaultValue.cpp">
+      <Filter>scripting\Compilation</Filter>
+    </ClCompile>
+    <ClCompile Include="scriptFieldStubs.cpp">
+      <Filter>scripting\Compilation</Filter>
+    </ClCompile>
+    <ClCompile Include="scriptFunctionCompiler.cpp">
+      <Filter>scripting\Compilation</Filter>
+    </ClCompile>
+    <ClCompile Include="scriptLexer.cpp">
+      <Filter>scripting\Compilation</Filter>
+    </ClCompile>
+    <ClCompile Include="scriptTokenStream.cpp">
+      <Filter>scripting\Compilation</Filter>
+    </ClCompile>
+    <ClCompile Include="scriptTypeInfo.cpp">
+      <Filter>scripting\Compilation</Filter>
+    </ClCompile>
+    <ClCompile Include="scriptFileParser.cpp">
+      <Filter>scripting\Compilation\FileParser</Filter>
+    </ClCompile>
+    <ClCompile Include="scriptFunctionParser.cpp">
+      <Filter>scripting\Compilation\FunctionParser</Filter>
+    </ClCompile>
+    <ClCompile Include="scriptCodeGenerator.cpp">
+      <Filter>scripting\Compilation\CoreGeneration</Filter>
+    </ClCompile>
+    <ClCompile Include="scriptCodeNode.cpp">
+      <Filter>scripting\Compilation\CoreGeneration</Filter>
+    </ClCompile>
+    <ClCompile Include="scriptSyntaxNode.cpp">
+      <Filter>scripting\Compilation\SyntaxNode</Filter>
+    </ClCompile>
+    <ClCompile Include="scriptSyntaxNodeChecking.cpp">
+      <Filter>scripting\Compilation\SyntaxNode</Filter>
+    </ClCompile>
+    <ClCompile Include="scriptSyntaxNodeCodeGeneration.cpp">
+      <Filter>scripting\Compilation\SyntaxNode</Filter>
+    </ClCompile>
+    <ClCompile Include="scriptSyntaxNodeFunctions.cpp">
+      <Filter>scripting\Compilation\SyntaxNode</Filter>
+    </ClCompile>
+    <ClCompile Include="scriptSyntaxNodeTypes.cpp">
+      <Filter>scripting\Compilation\SyntaxNode</Filter>
+    </ClCompile>
+    <ClCompile Include="scriptCoreMath.cpp">
+      <Filter>scripting\Natives</Filter>
+    </ClCompile>
+    <ClCompile Include="scriptCoreNatives.cpp">
+      <Filter>scripting\Natives</Filter>
+    </ClCompile>
+    <ClCompile Include="scriptCoreOpcodes.cpp">
+      <Filter>scripting\Natives</Filter>
+    </ClCompile>
+    <ClCompile Include="scriptCoreOperators.cpp">
+      <Filter>scripting\Natives</Filter>
+    </ClCompile>
+    <ClCompile Include="scriptCoreString.cpp">
+      <Filter>scripting\Natives</Filter>
+    </ClCompile>
+    <ClCompile Include="commandlet.cpp">
+      <Filter>commanlets</Filter>
+    </ClCompile>
+    <ClCompile Include="names.cpp">
+      <Filter>names</Filter>
+    </ClCompile>
+    <ClCompile Include="build.cpp" />
+    <ClCompile Include="singleton.cpp" />
+    <ClCompile Include="packageManager.cpp">
+      <Filter>resourceSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="memoryFileAnalizer.cpp">
+      <Filter>fileSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="dataError.cpp">
+      <Filter>system\error</Filter>
+    </ClCompile>
+    <ClCompile Include="codeParser.cpp">
+      <Filter>container\string</Filter>
+    </ClCompile>
+    <ClCompile Include="stringLocale.cpp">
+      <Filter>container\string</Filter>
+    </ClCompile>
+    <ClCompile Include="stringConversion.cpp">
+      <Filter>container\string</Filter>
+    </ClCompile>
+    <ClCompile Include="gameConfiguration.cpp">
+      <Filter>config</Filter>
+    </ClCompile>
+    <ClCompile Include="memory.cpp">
+      <Filter>memory</Filter>
+    </ClCompile>
+    <ClCompile Include="explatformos.cpp" />
+    <ClCompile Include="clipboardBase.cpp">
+      <Filter>system\clipboard</Filter>
+    </ClCompile>
+    <ClCompile Include="systemOrbis.cpp">
+      <Filter>system\orbis</Filter>
+    </ClCompile>
+    <ClCompile Include="kdTree.cpp">
+      <Filter>spatialstructures\trees</Filter>
+    </ClCompile>
+    <ClCompile Include="kdTreeSearchUtils.cpp">
+      <Filter>spatialstructures\trees</Filter>
+    </ClCompile>
+    <ClCompile Include="kdTreeSplitter.cpp">
+      <Filter>spatialstructures\trees</Filter>
+    </ClCompile>
+    <ClCompile Include="kdTreeUtils.cpp">
+      <Filter>spatialstructures\trees</Filter>
+    </ClCompile>
+    <ClCompile Include="coreNatives.cpp" />
+    <ClCompile Include="gameApplication.cpp">
+      <Filter>system</Filter>
+    </ClCompile>
+    <ClCompile Include="taskAllocator.cpp">
+      <Filter>system\task\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="taskDebug.cpp">
+      <Filter>system\task\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="taskDeque.cpp">
+      <Filter>system\task\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="taskDispatcher.cpp">
+      <Filter>system\task\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="taskRunner.cpp">
+      <Filter>system\task\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="taskSchedList.cpp">
+      <Filter>system\task\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="taskSchedNode.cpp">
+      <Filter>system\task\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="taskSchedTimer.cpp">
+      <Filter>system\task\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="taskScheduler.cpp">
+      <Filter>system\task\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="taskThread.cpp">
+      <Filter>system\task\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="task.cpp">
+      <Filter>system\task</Filter>
+    </ClCompile>
+    <ClCompile Include="taskManager.cpp">
+      <Filter>system\task</Filter>
+    </ClCompile>
+    <ClCompile Include="taskBatch.cpp">
+      <Filter>system\task</Filter>
+    </ClCompile>
+    <ClCompile Include="bundledefinition.cpp">
+      <Filter>resourceSystem\resourceManagement\json</Filter>
+    </ClCompile>
+    <ClCompile Include="coreNames.cpp">
+      <Filter>rtti</Filter>
+    </ClCompile>
+    <ClCompile Include="coreClasses.cpp" />
+    <ClCompile Include="namesPool.cpp">
+      <Filter>names</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencygraph.cpp">
+      <Filter>resourceSystem\resourceManagement\resourceDatabase</Filter>
+    </ClCompile>
+    <ClCompile Include="resourcedatabase.cpp">
+      <Filter>resourceSystem\resourceManagement\resourceDatabase</Filter>
+    </ClCompile>
+    <ClCompile Include="resourcedatabasepool.cpp">
+      <Filter>resourceSystem\resourceManagement\resourceDatabase</Filter>
+    </ClCompile>
+    <ClCompile Include="resourcedatabasegraphgeneration.cpp">
+      <Filter>resourceSystem\resourceManagement\resourceDatabase</Filter>
+    </ClCompile>
+    <ClCompile Include="compression\snappy.cpp">
+      <Filter>compression</Filter>
+    </ClCompile>
+    <ClCompile Include="compression\zlib.cpp">
+      <Filter>compression</Filter>
+    </ClCompile>
+    <ClCompile Include="compression\compression.cpp">
+      <Filter>compression</Filter>
+    </ClCompile>
+    <ClCompile Include="compression\doboz.cpp">
+      <Filter>compression</Filter>
+    </ClCompile>
+    <ClCompile Include="compression\lz4.cpp">
+      <Filter>compression</Filter>
+    </ClCompile>
+    <ClCompile Include="compression\lz4hc.cpp">
+      <Filter>compression</Filter>
+    </ClCompile>
+    <ClCompile Include="compression\doboz.cpp">
+      <Filter>resourceSystem\resourceManagement\compression</Filter>
+    </ClCompile>
+    <ClCompile Include="compression\lz4.cpp">
+      <Filter>resourceSystem\resourceManagement\compression</Filter>
+    </ClCompile>
+    <ClCompile Include="compression\lz4hc.cpp">
+      <Filter>resourceSystem\resourceManagement\compression</Filter>
+    </ClCompile>
+    <ClCompile Include="serializable.cpp">
+      <Filter>rtti</Filter>
+    </ClCompile>
+    <ClCompile Include="pointer.cpp">
+      <Filter>rtti</Filter>
+    </ClCompile>
+    <ClCompile Include="profiler\newRedProfiler.cpp">
+      <Filter>system\profiler\newProfiler</Filter>
+    </ClCompile>
+    <ClCompile Include="referencable.cpp">
+      <Filter>handles</Filter>
+    </ClCompile>
+    <ClCompile Include="profiler\profilerFile.cpp">
+      <Filter>system\profiler\newProfiler</Filter>
+    </ClCompile>
+    <ClCompile Include="redTelemetryServicesManager.cpp">
+      <Filter>redTelemetryService</Filter>
+    </ClCompile>
+    <ClCompile Include="redTelemetryServiceInterface.cpp">
+      <Filter>redTelemetryService</Filter>
+    </ClCompile>
+    <ClCompile Include="redTelemetryServiceImplWin32.cpp">
+      <Filter>redTelemetryService</Filter>
+    </ClCompile>
+    <ClCompile Include="redTelemetryServiceConfig.cpp">
+      <Filter>redTelemetryService</Filter>
+    </ClCompile>
+    <ClCompile Include="redTelemetryService.cpp">
+      <Filter>redTelemetryService</Filter>
+    </ClCompile>
+    <ClCompile Include="curveBase.cpp">
+      <Filter>curves</Filter>
+    </ClCompile>
+    <ClCompile Include="curveData.cpp">
+      <Filter>curves</Filter>
+    </ClCompile>
+    <ClCompile Include="curveSimple.cpp">
+      <Filter>curves</Filter>
+    </ClCompile>
+    <ClCompile Include="curve3DData.cpp">
+      <Filter>curves</Filter>
+    </ClCompile>
+    <ClCompile Include="bezier2d.cpp">
+      <Filter>curves</Filter>
+    </ClCompile>
+    <ClCompile Include="pool.cpp">
+      <Filter>container\pool</Filter>
+    </ClCompile>
+    <ClCompile Include="scriptable.cpp">
+      <Filter>scripting\Runtime</Filter>
+    </ClCompile>
+    <ClCompile Include="scriptableStateMachine.cpp">
+      <Filter>scripting\Runtime\StateMachine</Filter>
+    </ClCompile>
+    <ClCompile Include="scriptableState.cpp">
+      <Filter>scripting\Runtime\StateMachine</Filter>
+    </ClCompile>
+    <ClCompile Include="runnable.cpp">
+      <Filter>scripting\Runtime\StateMachine</Filter>
+    </ClCompile>
+    <ClCompile Include="resourcepaths.cpp">
+      <Filter>resourceSystem\resourceManagement</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencyCache.cpp" />
+    <ClCompile Include="simplexTree.cpp" />
+    <ClCompile Include="bezier2dHandle.cpp">
+      <Filter>curves</Filter>
+    </ClCompile>
+    <ClCompile Include="bezierUtils.cpp">
+      <Filter>curves</Filter>
+    </ClCompile>
+    <ClCompile Include="bundlePreambleParser.cpp">
+      <Filter>fileSystem\bundle</Filter>
+    </ClCompile>
+    <ClCompile Include="debugBundleHeaderParser.cpp">
+      <Filter>fileSystem\bundle</Filter>
+    </ClCompile>
+    <ClCompile Include="bundleMetadataStore.cpp">
+      <Filter>fileSystem\bundle</Filter>
+    </ClCompile>
+    <ClCompile Include="bundleMetadataStoreBuilder.cpp">
+      <Filter>fileSystem\bundle</Filter>
+    </ClCompile>
+    <ClCompile Include="bundleBufferToFilesInterchange.cpp">
+      <Filter>fileSystem\bundle\interchanges</Filter>
+    </ClCompile>
+    <ClCompile Include="bundleFileReaderDecompression.cpp">
+      <Filter>fileSystem\bundle\file interface</Filter>
+    </ClCompile>
+    <ClCompile Include="diskFile.cpp">
+      <Filter>resourceSystem\depot</Filter>
+    </ClCompile>
+    <ClCompile Include="bundleDepotPopulator.cpp">
+      <Filter>fileSystem\bundle</Filter>
+    </ClCompile>
+    <ClCompile Include="deferredDataBuffer.cpp">
+      <Filter>fileSystem\buffers</Filter>
+    </ClCompile>
+    <ClCompile Include="deferredDataBufferExtractor.cpp">
+      <Filter>fileSystem\buffers</Filter>
+    </ClCompile>
+    <ClCompile Include="bundleDataCache.cpp">
+      <Filter>fileSystem\bundle\datacache</Filter>
+    </ClCompile>
+    <ClCompile Include="ioBufferAcquireContext.cpp">
+      <Filter>fileSystem\bundle\datacache</Filter>
+    </ClCompile>
+    <ClCompile Include="bufferSpan.cpp">
+      <Filter>fileSystem\bundle\datacache</Filter>
+    </ClCompile>
+    <ClCompile Include="scriptCodeNodeCompilationPool.cpp">
+      <Filter>scripting\Compilation</Filter>
+    </ClCompile>
+    <ClCompile Include="commandLineParser.cpp" />
+    <ClCompile Include="datetime.cpp">
+      <Filter>types</Filter>
+    </ClCompile>
+    <ClCompile Include="softHandleProcessor.cpp">
+      <Filter>rtti</Filter>
+    </ClCompile>
+    <ClCompile Include="decompresstask.cpp">
+      <Filter>fileSystem\tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="analyzer.cpp">
+      <Filter>commanlets</Filter>
+    </ClCompile>
+    <ClCompile Include="objectIterator.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="objectMap.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="objectDiscardList.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="objectRootSet.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="objectGC.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="objectReachability.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="nullFile.cpp">
+      <Filter>fileSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="scriptsOpcodeExaminer.cpp">
+      <Filter>scripting\LowLevel</Filter>
+    </ClCompile>
+    <ClCompile Include="resourceLoading.cpp">
+      <Filter>resourceSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="bufferedTempFile.cpp">
+      <Filter>fileSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="resourceUnloading.cpp">
+      <Filter>resourceSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="genericFence.cpp">
+      <Filter>system</Filter>
+    </ClCompile>
+    <ClCompile Include="playGoPackage.cpp">
+      <Filter>fileSystem\PS4</Filter>
+    </ClCompile>
+    <ClCompile Include="depot.cpp">
+      <Filter>resourceSystem\depot</Filter>
+    </ClCompile>
+    <ClCompile Include="loadingProfiler.cpp">
+      <Filter>system\profiler</Filter>
+    </ClCompile>
+    <ClCompile Include="directory.cpp">
+      <Filter>resourceSystem\depot</Filter>
+    </ClCompile>
+    <ClCompile Include="directory.sourcecontrol.cpp">
+      <Filter>resourceSystem\depot</Filter>
+    </ClCompile>
+    <ClCompile Include="directoryEntries.cpp">
+      <Filter>resourceSystem\depot</Filter>
+    </ClCompile>
+    <ClCompile Include="redProfilerTool.cpp">
+      <Filter>system\profiler\profilerTools</Filter>
+    </ClCompile>
+    <ClCompile Include="newRedProfilerTool.cpp">
+      <Filter>system\profiler\profilerTools</Filter>
+    </ClCompile>
+    <ClCompile Include="intelProfilerTool.cpp">
+      <Filter>system\profiler\profilerTools</Filter>
+    </ClCompile>
+    <ClCompile Include="nvidiaProfilerTool.cpp">
+      <Filter>system\profiler\profilerTools</Filter>
+    </ClCompile>
+    <ClCompile Include="pixProfilerTool.cpp">
+      <Filter>system\profiler\profilerTools</Filter>
+    </ClCompile>
+    <ClCompile Include="profilerToolPool.cpp">
+      <Filter>system\profiler</Filter>
+    </ClCompile>
+    <ClCompile Include="profilerManager.cpp">
+      <Filter>system\profiler</Filter>
+    </ClCompile>
+    <ClCompile Include="redProfiler.cpp">
+      <Filter>system\profiler\redProfiler</Filter>
+    </ClCompile>
+    <ClCompile Include="razorProfilerTool.cpp">
+      <Filter>system\profiler\profilerTools</Filter>
+    </ClCompile>
+    <ClCompile Include="telemetryTool.cpp">
+      <Filter>system\profiler\profilerTools</Filter>
+    </ClCompile>
+    <ClCompile Include="profilerChannels.cpp">
+      <Filter>system\profiler</Filter>
+    </ClCompile>
+    <ClCompile Include="loadingJob.cpp">
+      <Filter>fileSystem\loading</Filter>
+    </ClCompile>
+    <ClCompile Include="loadingJobThread.cpp">
+      <Filter>fileSystem\loading</Filter>
+    </ClCompile>
+    <ClCompile Include="loadingJobManager.cpp">
+      <Filter>fileSystem\loading</Filter>
+    </ClCompile>
+    <ClCompile Include="serializationDispatchJob.cpp" />
+    <ClCompile Include="jobGenericJobs.cpp">
+      <Filter>fileSystem\loading</Filter>
+    </ClCompile>
+    <ClCompile Include="serializationDispatchJob.cpp" />
+    <ClCompile Include="diskBundle.cpp">
+      <Filter>resourceSystem\depot</Filter>
+    </ClCompile>
+    <ClCompile Include="fileHandleCache.cpp">
+      <Filter>fileSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="fileHandleReader.cpp">
+      <Filter>fileSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="bundleDataHandleReader.cpp">
+      <Filter>fileSystem\bundle\datacache</Filter>
+    </ClCompile>
+    <ClCompile Include="depotBundles.cpp">
+      <Filter>resourceSystem\depot</Filter>
+    </ClCompile>
+    <ClCompile Include="ringAllocator.cpp">
+      <Filter>memory\lameAllocators</Filter>
+    </ClCompile>
+    <ClCompile Include="configFileManager.cpp">
+      <Filter>config\legacy</Filter>
+    </ClCompile>
+    <ClCompile Include="configVar.cpp">
+      <Filter>config</Filter>
+    </ClCompile>
+    <ClCompile Include="configVarRegistry.cpp">
+      <Filter>config</Filter>
+    </ClCompile>
+    <ClCompile Include="configVarStorage.cpp">
+      <Filter>config</Filter>
+    </ClCompile>
+    <ClCompile Include="configVarSystem.cpp">
+      <Filter>config</Filter>
+    </ClCompile>
+    <ClCompile Include="fileStringReader.cpp">
+      <Filter>fileSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="configVarHierarchy.cpp">
+      <Filter>config</Filter>
+    </ClCompile>
+    <ClCompile Include="objectGC_MarkAndSweep.cpp">
+      <Filter>objects\implementations</Filter>
+    </ClCompile>
+    <ClCompile Include="objectGC_Legacy.cpp">
+      <Filter>objects\implementations</Filter>
+    </ClCompile>
+    <ClCompile Include="remoteConfig.cpp">
+      <Filter>config</Filter>
+    </ClCompile>
+    <ClCompile Include="configVarLegacyWrapper.cpp">
+      <Filter>config</Filter>
+    </ClCompile>
+    <ClCompile Include="objectAllocationTracer.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencyFileTables.cpp">
+      <Filter>serialization</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencyFileTablesBuilder.cpp">
+      <Filter>serialization</Filter>
+    </ClCompile>
+    <ClCompile Include="fileShadowWriter.cpp">
+      <Filter>fileSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="serializationStreamParser.cpp">
+      <Filter>serialization\stream</Filter>
+    </ClCompile>
+    <ClCompile Include="asyncFileAccess.cpp">
+      <Filter>fileSystem\async</Filter>
+    </ClCompile>
+    <ClCompile Include="asyncIO.cpp">
+      <Filter>fileSystem\async</Filter>
+    </ClCompile>
+    <ClCompile Include="asyncLoadToken.cpp">
+      <Filter>fileSystem\async</Filter>
+    </ClCompile>
+    <ClCompile Include="fileDecompression.cpp">
+      <Filter>fileSystem\compression</Filter>
+    </ClCompile>
+    <ClCompile Include="fileDecompressionImpl.cpp">
+      <Filter>fileSystem\compression</Filter>
+    </ClCompile>
+    <ClCompile Include="fileDecompressionAsyncFileWrapper.cpp">
+      <Filter>fileSystem\compression</Filter>
+    </ClCompile>
+    <ClCompile Include="fileSystemProfilerWrapper.cpp">
+      <Filter>fileSystem\profiling</Filter>
+    </ClCompile>
+    <ClCompile Include="fileSystemProfiler.cpp">
+      <Filter>fileSystem\profiling</Filter>
+    </ClCompile>
+    <ClCompile Include="profilerFileWriter.cpp">
+      <Filter>system\profiler\quickDump</Filter>
+    </ClCompile>
+    <ClCompile Include="profilerBlockFileWriter.cpp">
+      <Filter>system\profiler\quickDump</Filter>
+    </ClCompile>
+    <ClCompile Include="serializationStreamBuilder.cpp">
+      <Filter>serialization\stream</Filter>
+    </ClCompile>
+    <ClCompile Include="deferredDataBufferAsync.cpp">
+      <Filter>fileSystem\buffers</Filter>
+    </ClCompile>
+    <ClCompile Include="deferredDataBufferLoaders.cpp">
+      <Filter>fileSystem\buffers</Filter>
+    </ClCompile>
+    <ClCompile Include="deferredDataBufferKickoff.cpp">
+      <Filter>fileSystem\buffers</Filter>
+    </ClCompile>
+    <ClCompile Include="idAllocator.cpp">
+      <Filter>memory\allocators</Filter>
+    </ClCompile>
+    <ClCompile Include="bitset.cpp">
+      <Filter>container\set</Filter>
+    </ClCompile>
+    <ClCompile Include="streamingGrid.cpp">
+      <Filter>algorithm\grid</Filter>
+    </ClCompile>
+    <ClCompile Include="streamingGridHelpers.cpp">
+      <Filter>algorithm\grid</Filter>
+    </ClCompile>
+    <ClCompile Include="xvcPackage.cpp">
+      <Filter>fileSystem\XboxOne</Filter>
+    </ClCompile>
+    <ClCompile Include="diskBundlePreloader.cpp">
+      <Filter>resourceSystem\depot</Filter>
+    </ClCompile>
+    <ClCompile Include="ioTagResolver.cpp">
+      <Filter>fileSystem\priorities</Filter>
+    </ClCompile>
+    <ClCompile Include="namesReporter.cpp" />
+    <ClCompile Include="messagePump.cpp" />
+    <ClCompile Include="diskBundleContent.cpp">
+      <Filter>resourceSystem\depot</Filter>
+    </ClCompile>
+    <ClCompile Include="diskBundleIOCache.cpp">
+      <Filter>fileSystem\bundle\datacache</Filter>
+    </ClCompile>
+    <ClCompile Include="httpHeader.cpp">
+      <Filter>http\http</Filter>
+    </ClCompile>
+    <ClCompile Include="httpRequestParser.cpp">
+      <Filter>http\http</Filter>
+    </ClCompile>
+    <ClCompile Include="httpServer.cpp">
+      <Filter>http\http</Filter>
+    </ClCompile>
+    <ClCompile Include="httpResponseSender.cpp">
+      <Filter>http\http</Filter>
+    </ClCompile>
+    <ClCompile Include="httpResponseData.cpp">
+      <Filter>http\http</Filter>
+    </ClCompile>
+    <ClCompile Include="basicURL.cpp">
+      <Filter>http\basics</Filter>
+    </ClCompile>
+    <ClCompile Include="basicDataBlob.cpp">
+      <Filter>http\basics</Filter>
+    </ClCompile>
+    <ClCompile Include="basicTextBuilder.cpp">
+      <Filter>http\basics</Filter>
+    </ClCompile>
+    <ClCompile Include="htmlDocument.cpp">
+      <Filter>http\html</Filter>
+    </ClCompile>
+    <ClCompile Include="debugPageHandler.cpp">
+      <Filter>debug</Filter>
+    </ClCompile>
+    <ClCompile Include="debugPageHTMLDoc.cpp">
+      <Filter>debug</Filter>
+    </ClCompile>
+    <ClCompile Include="debugPageServer.cpp">
+      <Filter>debug</Filter>
+    </ClCompile>
+    <ClCompile Include="debugPageDepot.cpp">
+      <Filter>resourceSystem\depot</Filter>
+    </ClCompile>
+    <ClCompile Include="debugPageObjects.cpp">
+      <Filter>objects\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="debugPageResource.cpp">
+      <Filter>resourceSystem\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="debugPageBundles.cpp">
+      <Filter>fileSystem\bundle\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="debugPageMemory.cpp">
+      <Filter>memory\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="debugPageFileHandleCache.cpp">
+      <Filter>fileSystem\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="compression\chainedzlib.cpp">
+      <Filter>compression</Filter>
+    </ClCompile>
+    <ClCompile Include="contentManager.cpp">
+      <Filter>resourceSystem\content</Filter>
+    </ClCompile>
+    <ClCompile Include="contentManifest.cpp">
+      <Filter>content</Filter>
+    </ClCompile>
+    <ClCompile Include="contentManifestAsyncLoader.cpp">
+      <Filter>content</Filter>
+    </ClCompile>
+    <ClCompile Include="contentManifestParser.cpp">
+      <Filter>content</Filter>
+    </ClCompile>
+    <ClCompile Include="streamingInstaller.cpp">
+      <Filter>content</Filter>
+    </ClCompile>
+    <ClCompile Include="diskBundleCache.cpp">
+      <Filter>resourceSystem\depot</Filter>
+    </ClCompile>
+    <ClCompile Include="diskBundleCacheEntry.cpp">
+      <Filter>resourceSystem\depot</Filter>
+    </ClCompile>
+    <ClCompile Include="indexed2dArray.cpp" />
+    <ClCompile Include="chunkedLZ4File.cpp">
+      <Filter>fileSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="pagedMemoryWriter.cpp">
+      <Filter>memory\pagedWriter</Filter>
+    </ClCompile>
+    <ClCompile Include="objectGCLock.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencyFileUnpacker.cpp">
+      <Filter>serialization</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencyFileGluer.cpp">
+      <Filter>serialization</Filter>
+    </ClCompile>
+    <ClCompile Include="sharedDataBuffer.cpp">
+      <Filter>fileSystem\buffers</Filter>
+    </ClCompile>
+    <ClCompile Include="sharedDataBufferImpl.cpp">
+      <Filter>fileSystem\buffers</Filter>
+    </ClCompile>
+    <ClCompile Include="deferredDataBufferOOMQueue.cpp">
+      <Filter>fileSystem\buffers</Filter>
+    </ClCompile>
+    <ClCompile Include="diskInstrumentationPC.cpp">
+      <Filter>Hardware Instrumentation</Filter>
+    </ClCompile>
+    <ClCompile Include="cpuRecognizer.cpp">
+      <Filter>Hardware Instrumentation</Filter>
+    </ClCompile>
+    <ClCompile Include="redTelemetryServiceDDI.cpp">
+      <Filter>redTelemetryService</Filter>
+    </ClCompile>
+    <ClCompile Include="debugPageFios2.cpp">
+      <Filter>fileSystem\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="keyboardRecognizer.cpp">
+      <Filter>Hardware Instrumentation</Filter>
+    </ClCompile>
+    <ClCompile Include="sha256.cpp">
+      <Filter>crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto.cpp">
+      <Filter>crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="memoryHelpers.cpp">
+      <Filter>memory</Filter>
+    </ClCompile>
+    <ClCompile Include="memoryAdapter.cpp">
+      <Filter>memory</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="bufferedReader.h">
+      <Filter>fileSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="bufferedWriter.h">
+      <Filter>fileSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="compressedNumSerializer.h">
+      <Filter>fileSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="file.h">
+      <Filter>fileSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="fileFormat.h">
+      <Filter>fileSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="filePath.h">
+      <Filter>fileSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="fileSkipableBlock.h">
+      <Filter>fileSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="fileSys.h">
+      <Filter>fileSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="memoryFileReader.h">
+      <Filter>fileSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="memoryFileWriter.h">
+      <Filter>fileSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="rawFileReader.h">
+      <Filter>fileSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="rawFileSearcher.h">
+      <Filter>fileSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="rawFileWriter.h">
+      <Filter>fileSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="fileLatentLoadingToken.h">
+      <Filter>fileSystem\latent</Filter>
+    </ClInclude>
+    <ClInclude Include="latentLoader.h">
+      <Filter>fileSystem\latent</Filter>
+    </ClInclude>
+    <ClInclude Include="dataBuffer.h">
+      <Filter>fileSystem\buffers</Filter>
+    </ClInclude>
+    <ClInclude Include="latentDataBuffer.h">
+      <Filter>fileSystem\buffers</Filter>
+    </ClInclude>
+    <ClInclude Include="bitField.h">
+      <Filter>rtti</Filter>
+    </ClInclude>
+    <ClInclude Include="bitFieldBuilder.h">
+      <Filter>rtti</Filter>
+    </ClInclude>
+    <ClInclude Include="class.h">
+      <Filter>rtti</Filter>
+    </ClInclude>
+    <ClInclude Include="classBuilder.h">
+      <Filter>rtti</Filter>
+    </ClInclude>
+    <ClInclude Include="coreTypeRegistry.h">
+      <Filter>rtti</Filter>
+    </ClInclude>
+    <ClInclude Include="defaultValue.h">
+      <Filter>rtti</Filter>
+    </ClInclude>
+    <ClInclude Include="enum.h">
+      <Filter>rtti</Filter>
+    </ClInclude>
+    <ClInclude Include="enumBuilder.h">
+      <Filter>rtti</Filter>
+    </ClInclude>
+    <ClInclude Include="function.h">
+      <Filter>rtti</Filter>
+    </ClInclude>
+    <ClInclude Include="functionBuilder.h">
+      <Filter>rtti</Filter>
+    </ClInclude>
+    <ClInclude Include="functionCalling.h">
+      <Filter>rtti</Filter>
+    </ClInclude>
+    <ClInclude Include="functionFlags.h">
+      <Filter>rtti</Filter>
+    </ClInclude>
+    <ClInclude Include="property.h">
+      <Filter>rtti</Filter>
+    </ClInclude>
+    <ClInclude Include="propertyBuilder.h">
+      <Filter>rtti</Filter>
+    </ClInclude>
+    <ClInclude Include="rttiSerializer.h">
+      <Filter>rtti</Filter>
+    </ClInclude>
+    <ClInclude Include="rttiSystem.h">
+      <Filter>rtti</Filter>
+    </ClInclude>
+    <ClInclude Include="rttiType.h">
+      <Filter>rtti</Filter>
+    </ClInclude>
+    <ClInclude Include="softHandle.h">
+      <Filter>rtti</Filter>
+    </ClInclude>
+    <ClInclude Include="tagList.h">
+      <Filter>rtti</Filter>
+    </ClInclude>
+    <ClInclude Include="variant.h">
+      <Filter>rtti</Filter>
+    </ClInclude>
+    <ClInclude Include="variantArray.h">
+      <Filter>rtti</Filter>
+    </ClInclude>
+    <ClInclude Include="object.h">
+      <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="objectIterator.h">
+      <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="crt.h">
+      <Filter>system</Filter>
+    </ClInclude>
+    <ClInclude Include="events.h">
+      <Filter>system</Filter>
+    </ClInclude>
+    <ClInclude Include="sync.h">
+      <Filter>system</Filter>
+    </ClInclude>
+    <ClInclude Include="system.h">
+      <Filter>system</Filter>
+    </ClInclude>
+    <ClInclude Include="osTypesWin32.h">
+      <Filter>system\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="profiler.h">
+      <Filter>system\profiler</Filter>
+    </ClInclude>
+    <ClInclude Include="versionControl.h">
+      <Filter>system\versionControl</Filter>
+    </ClInclude>
+    <ClInclude Include="feedback.h">
+      <Filter>system\feedback</Filter>
+    </ClInclude>
+    <ClInclude Include="math.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="mathConversions.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="mathForward.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="mathUtils.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="numericLimits.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="randomSystem.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="frustum.h">
+      <Filter>math\frustum</Filter>
+    </ClInclude>
+    <ClInclude Include="engineQsTransform.h">
+      <Filter>math\transform</Filter>
+    </ClInclude>
+    <ClInclude Include="engineTransform.h">
+      <Filter>math\transform</Filter>
+    </ClInclude>
+    <ClInclude Include="engineTime.h">
+      <Filter>types</Filter>
+    </ClInclude>
+    <ClInclude Include="util.h">
+      <Filter>types</Filter>
+    </ClInclude>
+    <ClInclude Include="string.h">
+      <Filter>container\string</Filter>
+    </ClInclude>
+    <ClInclude Include="tokenizer.h">
+      <Filter>container\string</Filter>
+    </ClInclude>
+    <ClInclude Include="wildcard.h">
+      <Filter>container\string</Filter>
+    </ClInclude>
+    <ClInclude Include="dynarray.h">
+      <Filter>container\array</Filter>
+    </ClInclude>
+    <ClInclude Include="sortedarray.h">
+      <Filter>container\array</Filter>
+    </ClInclude>
+    <ClInclude Include="staticarray.h">
+      <Filter>container\array</Filter>
+    </ClInclude>
+    <ClInclude Include="bitset.h">
+      <Filter>container\set</Filter>
+    </ClInclude>
+    <ClInclude Include="hashset.h">
+      <Filter>container\set</Filter>
+    </ClInclude>
+    <ClInclude Include="hashset2.h">
+      <Filter>container\set</Filter>
+    </ClInclude>
+    <ClInclude Include="set.h">
+      <Filter>container\set</Filter>
+    </ClInclude>
+    <ClInclude Include="sortedset.h">
+      <Filter>container\set</Filter>
+    </ClInclude>
+    <ClInclude Include="doubleList.h">
+      <Filter>container\list</Filter>
+    </ClInclude>
+    <ClInclude Include="list.h">
+      <Filter>container\list</Filter>
+    </ClInclude>
+    <ClInclude Include="priqueue.h">
+      <Filter>container\queue</Filter>
+    </ClInclude>
+    <ClInclude Include="queue.h">
+      <Filter>container\queue</Filter>
+    </ClInclude>
+    <ClInclude Include="fragPool.h">
+      <Filter>container\pool</Filter>
+    </ClInclude>
+    <ClInclude Include="longBitField.h">
+      <Filter>container\bitfield</Filter>
+    </ClInclude>
+    <ClInclude Include="2darray.h">
+      <Filter>resourceSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="cooker.h">
+      <Filter>resourceSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="diskPackage.h">
+      <Filter>resourceSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="exporter.h">
+      <Filter>resourceSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="factory.h">
+      <Filter>resourceSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="gatheredResource.h">
+      <Filter>resourceSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="importer.h">
+      <Filter>resourceSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>resourceSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="resourceDefManager.h">
+      <Filter>resourceSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="resourcePath.h">
+      <Filter>resourceSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="thumbnail.h">
+      <Filter>resourceSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencyLinker.h">
+      <Filter>serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencyLinkerFactory.h">
+      <Filter>serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencyLoader.h">
+      <Filter>serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencyLoader2dArray.h">
+      <Filter>serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencyLoaderFactory.h">
+      <Filter>serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencyMapper.h">
+      <Filter>serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencySaver.h">
+      <Filter>serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencySaver2dArray.h">
+      <Filter>serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencySaverFactory.h">
+      <Filter>serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="fileLoadingStats.h">
+      <Filter>serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="fileVersionList.h">
+      <Filter>serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="xmlFile.h">
+      <Filter>serialization\XML</Filter>
+    </ClInclude>
+    <ClInclude Include="xmlFileReader.h">
+      <Filter>serialization\XML</Filter>
+    </ClInclude>
+    <ClInclude Include="xmlFileWriter.h">
+      <Filter>serialization\XML</Filter>
+    </ClInclude>
+    <ClInclude Include="xmlReader.h">
+      <Filter>serialization\XML</Filter>
+    </ClInclude>
+    <ClInclude Include="xmlWriter.h">
+      <Filter>serialization\XML</Filter>
+    </ClInclude>
+    <ClInclude Include="rapidxml.hpp">
+      <Filter>serialization\XML\rapidxml</Filter>
+    </ClInclude>
+    <ClInclude Include="rapidxml_iterators.hpp">
+      <Filter>serialization\XML\rapidxml</Filter>
+    </ClInclude>
+    <ClInclude Include="rapidxml_print.hpp">
+      <Filter>serialization\XML\rapidxml</Filter>
+    </ClInclude>
+    <ClInclude Include="rapidxml_utils.hpp">
+      <Filter>serialization\XML\rapidxml</Filter>
+    </ClInclude>
+    <ClInclude Include="memory.h">
+      <Filter>memory</Filter>
+    </ClInclude>
+    <ClInclude Include="algorithms.h">
+      <Filter>algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="compare.h">
+      <Filter>algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="countedBool.h">
+      <Filter>algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="hash.h">
+      <Filter>algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="instanceBuffer.h">
+      <Filter>instancing</Filter>
+    </ClInclude>
+    <ClInclude Include="instanceDataLayout.h">
+      <Filter>instancing</Filter>
+    </ClInclude>
+    <ClInclude Include="instanceDataLayoutCompiler.h">
+      <Filter>instancing</Filter>
+    </ClInclude>
+    <ClInclude Include="instanceVar.h">
+      <Filter>instancing</Filter>
+    </ClInclude>
+    <ClInclude Include="handleMap.h">
+      <Filter>handles</Filter>
+    </ClInclude>
+    <ClInclude Include="scriptingSystem.h">
+      <Filter>scripting</Filter>
+    </ClInclude>
+    <ClInclude Include="scriptCompiledCode.h">
+      <Filter>scripting\LowLevel</Filter>
+    </ClInclude>
+    <ClInclude Include="scriptDebugger.h">
+      <Filter>scripting\LowLevel</Filter>
+    </ClInclude>
+    <ClInclude Include="scriptNativeFunctionMap.h">
+      <Filter>scripting\LowLevel</Filter>
+    </ClInclude>
+    <ClInclude Include="scriptSnapshot.h">
+      <Filter>scripting\LowLevel</Filter>
+    </ClInclude>
+    <ClInclude Include="scriptStackFrame.h">
+      <Filter>scripting\LowLevel</Filter>
+    </ClInclude>
+    <ClInclude Include="scriptThread.h">
+      <Filter>scripting\LowLevel</Filter>
+    </ClInclude>
+    <ClInclude Include="scriptThreadSerializer.h">
+      <Filter>scripting\LowLevel</Filter>
+    </ClInclude>
+    <ClInclude Include="scriptCompiler.h">
+      <Filter>scripting\Compilation</Filter>
+    </ClInclude>
+    <ClInclude Include="scriptDefaultValue.h">
+      <Filter>scripting\Compilation</Filter>
+    </ClInclude>
+    <ClInclude Include="scriptFieldStubs.h">
+      <Filter>scripting\Compilation</Filter>
+    </ClInclude>
+    <ClInclude Include="scriptFileContext.h">
+      <Filter>scripting\Compilation</Filter>
+    </ClInclude>
+    <ClInclude Include="scriptFunctionCompiler.h">
+      <Filter>scripting\Compilation</Filter>
+    </ClInclude>
+    <ClInclude Include="scriptLexer.h">
+      <Filter>scripting\Compilation</Filter>
+    </ClInclude>
+    <ClInclude Include="scriptToken.h">
+      <Filter>scripting\Compilation</Filter>
+    </ClInclude>
+    <ClInclude Include="scriptTokenStream.h">
+      <Filter>scripting\Compilation</Filter>
+    </ClInclude>
+    <ClInclude Include="scriptTypeInfo.h">
+      <Filter>scripting\Compilation</Filter>
+    </ClInclude>
+    <ClInclude Include="scriptFileParser.h">
+      <Filter>scripting\Compilation\FileParser</Filter>
+    </ClInclude>
+    <ClInclude Include="scriptFunctionParser.h">
+      <Filter>scripting\Compilation\FunctionParser</Filter>
+    </ClInclude>
+    <ClInclude Include="scriptCodeGenerator.h">
+      <Filter>scripting\Compilation\CoreGeneration</Filter>
+    </ClInclude>
+    <ClInclude Include="scriptCodeNode.h">
+      <Filter>scripting\Compilation\CoreGeneration</Filter>
+    </ClInclude>
+    <ClInclude Include="scriptSyntaxNode.h">
+      <Filter>scripting\Compilation\SyntaxNode</Filter>
+    </ClInclude>
+    <ClInclude Include="commandlet.h">
+      <Filter>commanlets</Filter>
+    </ClInclude>
+    <ClInclude Include="names.h">
+      <Filter>names</Filter>
+    </ClInclude>
+    <ClInclude Include="genericSettings.h">
+      <Filter>settings</Filter>
+    </ClInclude>
+    <ClInclude Include="settings.h">
+      <Filter>settings</Filter>
+    </ClInclude>
+    <ClInclude Include="gameSave.h">
+      <Filter>gameSave</Filter>
+    </ClInclude>
+    <ClInclude Include="build.h" />
+    <ClInclude Include="core.h" />
+    <ClInclude Include="listener.h" />
+    <ClInclude Include="namesRegistry.h" />
+    <ClInclude Include="singleton.h" />
+    <ClInclude Include="version.h" />
+    <ClInclude Include="rc4generator.h">
+      <Filter>algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="threadSafeNodeList.h">
+      <Filter>container\list</Filter>
+    </ClInclude>
+    <ClInclude Include="packageManager.h">
+      <Filter>resourceSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="memoryFileAnalizer.h">
+      <Filter>fileSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="heap.h">
+      <Filter>container\array</Filter>
+    </ClInclude>
+    <ClInclude Include="dataError.h">
+      <Filter>system\error</Filter>
+    </ClInclude>
+    <ClInclude Include="codeParser.h">
+      <Filter>container\string</Filter>
+    </ClInclude>
+    <ClInclude Include="stringLocale.h">
+      <Filter>container\string</Filter>
+    </ClInclude>
+    <ClInclude Include="stringConversion.h">
+      <Filter>container\string</Filter>
+    </ClInclude>
+    <ClInclude Include="intsBitField.h">
+      <Filter>container\bitfield</Filter>
+    </ClInclude>
+    <ClInclude Include="iterator.h" />
+    <ClInclude Include="gameConfiguration.h">
+      <Filter>config</Filter>
+    </ClInclude>
+    <ClInclude Include="memoryClasses.h">
+      <Filter>memory</Filter>
+    </ClInclude>
+    <ClInclude Include="memoryMacros.h">
+      <Filter>memory</Filter>
+    </ClInclude>
+    <ClInclude Include="changelist.h">
+      <Filter>system\versionControl</Filter>
+    </ClInclude>
+    <ClInclude Include="memoryPools.h">
+      <Filter>memory</Filter>
+    </ClInclude>
+    <ClInclude Include="memoryPoolsWindows.h">
+      <Filter>memory</Filter>
+    </ClInclude>
+    <ClInclude Include="functor.h">
+      <Filter>functors</Filter>
+    </ClInclude>
+    <ClInclude Include="dynarray_new.h">
+      <Filter>container\array</Filter>
+    </ClInclude>
+    <ClInclude Include="staticarray_new.h">
+      <Filter>container\array</Filter>
+    </ClInclude>
+    <ClInclude Include="intrusiveList.h">
+      <Filter>container\list</Filter>
+    </ClInclude>
+    <ClInclude Include="explatformos.h" />
+    <ClInclude Include="memoryPoolsOrbis.h">
+      <Filter>memory</Filter>
+    </ClInclude>
+    <ClInclude Include="container_util.h">
+      <Filter>container</Filter>
+    </ClInclude>
+    <ClInclude Include="osTypesOrbis.h">
+      <Filter>system\orbis</Filter>
+    </ClInclude>
+    <ClInclude Include="grid.h">
+      <Filter>spatialstructures\grid</Filter>
+    </ClInclude>
+    <ClInclude Include="kdTree.h">
+      <Filter>spatialstructures\trees</Filter>
+    </ClInclude>
+    <ClInclude Include="kdTreeBuilder.h">
+      <Filter>spatialstructures\trees</Filter>
+    </ClInclude>
+    <ClInclude Include="kdTreeMediator.h">
+      <Filter>spatialstructures\trees</Filter>
+    </ClInclude>
+    <ClInclude Include="kdTreeNNCollector.h">
+      <Filter>spatialstructures\trees</Filter>
+    </ClInclude>
+    <ClInclude Include="kdTreeNnItem.h">
+      <Filter>spatialstructures\trees</Filter>
+    </ClInclude>
+    <ClInclude Include="kdTreePointSet.h">
+      <Filter>spatialstructures\trees</Filter>
+    </ClInclude>
+    <ClInclude Include="kdTreePrinter.h">
+      <Filter>spatialstructures\trees</Filter>
+    </ClInclude>
+    <ClInclude Include="kdTreeSearchUtils.h">
+      <Filter>spatialstructures\trees</Filter>
+    </ClInclude>
+    <ClInclude Include="kdTreeSplitter.h">
+      <Filter>spatialstructures\trees</Filter>
+    </ClInclude>
+    <ClInclude Include="kdTreeTypes.h">
+      <Filter>spatialstructures\trees</Filter>
+    </ClInclude>
+    <ClInclude Include="kdTreeUtils.h">
+      <Filter>spatialstructures\trees</Filter>
+    </ClInclude>
+    <ClInclude Include="cycleList.h">
+      <Filter>container\list</Filter>
+    </ClInclude>
+    <ClInclude Include="clipboardBase.h">
+      <Filter>system\clipboard</Filter>
+    </ClInclude>
+    <ClInclude Include="memoryPoolsDurango.h">
+      <Filter>memory</Filter>
+    </ClInclude>
+    <ClInclude Include="gameApplication.h">
+      <Filter>system</Filter>
+    </ClInclude>
+    <ClInclude Include="uniPointer.h">
+      <Filter>rtti</Filter>
+    </ClInclude>
+    <ClInclude Include="taskAllocator.h">
+      <Filter>system\task\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="taskDebug.h">
+      <Filter>system\task\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="taskDeque.h">
+      <Filter>system\task\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="taskDispatcher.h">
+      <Filter>system\task\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="taskRunner.h">
+      <Filter>system\task\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="taskSched.h">
+      <Filter>system\task\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="taskSchedList.h">
+      <Filter>system\task\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="taskSchedNode.h">
+      <Filter>system\task\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="taskSchedTimer.h">
+      <Filter>system\task\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="taskScheduler.h">
+      <Filter>system\task\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="taskThread.h">
+      <Filter>system\task\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="task.h">
+      <Filter>system\task</Filter>
+    </ClInclude>
+    <ClInclude Include="taskManager.h">
+      <Filter>system\task</Filter>
+    </ClInclude>
+    <ClInclude Include="taskBatch.h">
+      <Filter>system\task</Filter>
+    </ClInclude>
+    <ClInclude Include="bundledefinition.h">
+      <Filter>resourceSystem\resourceManagement\json</Filter>
+    </ClInclude>
+    <ClInclude Include="namesPool.h">
+      <Filter>names</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencygraph.h">
+      <Filter>resourceSystem\resourceManagement\resourceDatabase</Filter>
+    </ClInclude>
+    <ClInclude Include="resourcedatabase.h">
+      <Filter>resourceSystem\resourceManagement\resourceDatabase</Filter>
+    </ClInclude>
+    <ClInclude Include="resourcedatabasepool.h">
+      <Filter>resourceSystem\resourceManagement\resourceDatabase</Filter>
+    </ClInclude>
+    <ClInclude Include="resourcedatabaserecord.h">
+      <Filter>resourceSystem\resourceManagement\resourceDatabase</Filter>
+    </ClInclude>
+    <ClInclude Include="resourcedatabasepoolentry.h">
+      <Filter>resourceSystem\resourceManagement\resourceDatabase</Filter>
+    </ClInclude>
+    <ClInclude Include="resourcedatabaseshareddata.h">
+      <Filter>resourceSystem\resourceManagement\resourceDatabase</Filter>
+    </ClInclude>
+    <ClInclude Include="resourcedatabasepooleddata.h">
+      <Filter>resourceSystem\resourceManagement\resourceDatabase</Filter>
+    </ClInclude>
+    <ClInclude Include="resourcedatabasegraphgeneration.h">
+      <Filter>resourceSystem\resourceManagement\resourceDatabase</Filter>
+    </ClInclude>
+    <ClInclude Include="compression\snappy.h">
+      <Filter>compression</Filter>
+    </ClInclude>
+    <ClInclude Include="compression\zlib.h">
+      <Filter>compression</Filter>
+    </ClInclude>
+    <ClInclude Include="compression\compression.h">
+      <Filter>compression</Filter>
+    </ClInclude>
+    <ClInclude Include="compression\doboz.h">
+      <Filter>compression</Filter>
+    </ClInclude>
+    <ClInclude Include="compression\build.h">
+      <Filter>compression</Filter>
+    </ClInclude>
+    <ClInclude Include="bundleHeader.h">
+      <Filter>resourceSystem\resourceManagement</Filter>
+    </ClInclude>
+    <ClInclude Include="compression\lz4.h">
+      <Filter>compression</Filter>
+    </ClInclude>
+    <ClInclude Include="compression\lz4hc.h">
+      <Filter>compression</Filter>
+    </ClInclude>
+    <ClInclude Include="compression\doboz.h">
+      <Filter>resourceSystem\resourceManagement\compression</Filter>
+    </ClInclude>
+    <ClInclude Include="compression\build.h">
+      <Filter>resourceSystem\resourceManagement\compression</Filter>
+    </ClInclude>
+    <ClInclude Include="bundleHeader.h">
+      <Filter>resourceSystem\resourceManagement</Filter>
+    </ClInclude>
+    <ClInclude Include="compression\lz4.h">
+      <Filter>resourceSystem\resourceManagement\compression</Filter>
+    </ClInclude>
+    <ClInclude Include="compression\lz4hc.h">
+      <Filter>resourceSystem\resourceManagement\compression</Filter>
+    </ClInclude>
+    <ClInclude Include="serializable.h">
+      <Filter>rtti</Filter>
+    </ClInclude>
+    <ClInclude Include="pointer.h">
+      <Filter>rtti</Filter>
+    </ClInclude>
+    <ClInclude Include="profiler\instrumentedFunction.h">
+      <Filter>system\profiler\newProfiler</Filter>
+    </ClInclude>
+    <ClInclude Include="profiler\newRedProfiler.h">
+      <Filter>system\profiler\newProfiler</Filter>
+    </ClInclude>
+    <ClInclude Include="profiler\profilerFile.h">
+      <Filter>system\profiler\newProfiler</Filter>
+    </ClInclude>
+    <ClInclude Include="redTelemetryServiceUpdateJob.h">
+      <Filter>redTelemetryService</Filter>
+    </ClInclude>
+    <ClInclude Include="redTelemetryServicesManager.h">
+      <Filter>redTelemetryService</Filter>
+    </ClInclude>
+    <ClInclude Include="redTelemetryServiceInterface.h">
+      <Filter>redTelemetryService</Filter>
+    </ClInclude>
+    <ClInclude Include="redTelemetryServiceImplWin32.h">
+      <Filter>redTelemetryService</Filter>
+    </ClInclude>
+    <ClInclude Include="redTelemetryServiceConfig.h">
+      <Filter>redTelemetryService</Filter>
+    </ClInclude>
+    <ClInclude Include="redTelemetryService.h">
+      <Filter>redTelemetryService</Filter>
+    </ClInclude>
+    <ClInclude Include="types.h">
+      <Filter>types</Filter>
+    </ClInclude>
+    <ClInclude Include="typedClass.h">
+      <Filter>rtti</Filter>
+    </ClInclude>
+    <ClInclude Include="referencable.h">
+      <Filter>handles</Filter>
+    </ClInclude>
+    <ClInclude Include="coreInternal.h" />
+    <ClInclude Include="typeName.h">
+      <Filter>rtti</Filter>
+    </ClInclude>
+    <ClInclude Include="scriptable.h">
+      <Filter>scripting\Runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="curveBase.h">
+      <Filter>curves</Filter>
+    </ClInclude>
+    <ClInclude Include="curveData.h">
+      <Filter>curves</Filter>
+    </ClInclude>
+    <ClInclude Include="curveSimple.h">
+      <Filter>curves</Filter>
+    </ClInclude>
+    <ClInclude Include="curve3DData.h">
+      <Filter>curves</Filter>
+    </ClInclude>
+    <ClInclude Include="bezier2d.h">
+      <Filter>curves</Filter>
+    </ClInclude>
+    <ClInclude Include="scopedPtr.h">
+      <Filter>smartObject</Filter>
+    </ClInclude>
+    <ClInclude Include="pool.h">
+      <Filter>container\pool</Filter>
+    </ClInclude>
+    <ClInclude Include="scriptable.inl.h">
+      <Filter>scripting\Runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="sharedPtr.h">
+      <Filter>smartObject</Filter>
+    </ClInclude>
+    <ClInclude Include="intrusivePtr.h">
+      <Filter>smartObject</Filter>
+    </ClInclude>
+    <ClInclude Include="uniquePtr.h">
+      <Filter>smartObject</Filter>
+    </ClInclude>
+    <ClInclude Include="defaultDeleter.h">
+      <Filter>smartObject\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="atomicSharedPtr.h">
+      <Filter>smartObject</Filter>
+    </ClInclude>
+    <ClInclude Include="scriptableStateMachine.h">
+      <Filter>scripting\Runtime\StateMachine</Filter>
+    </ClInclude>
+    <ClInclude Include="scriptableState.h">
+      <Filter>scripting\Runtime\StateMachine</Filter>
+    </ClInclude>
+    <ClInclude Include="resourceid.h">
+      <Filter>resourceSystem\resourceManagement</Filter>
+    </ClInclude>
+    <ClInclude Include="resourcepaths.h">
+      <Filter>resourceSystem\resourceManagement</Filter>
+    </ClInclude>
+    <ClInclude Include="weakPtr.h">
+      <Filter>smartObject</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencyCache.h" />
+    <ClInclude Include="sortedmap.h">
+      <Filter>container\map</Filter>
+    </ClInclude>
+    <ClInclude Include="hashmap.h">
+      <Filter>container\map</Filter>
+    </ClInclude>
+    <ClInclude Include="parallelFor.h">
+      <Filter>system\task\util</Filter>
+    </ClInclude>
+    <ClInclude Include="refCountPointer.h">
+      <Filter>smartObject</Filter>
+    </ClInclude>
+    <ClInclude Include="simplexTree.h" />
+    <ClInclude Include="bezier2dHandle.h">
+      <Filter>curves</Filter>
+    </ClInclude>
+    <ClInclude Include="bezierUtils.h">
+      <Filter>curves</Filter>
+    </ClInclude>
+    <ClInclude Include="bundlePreambleParser.h">
+      <Filter>fileSystem\bundle</Filter>
+    </ClInclude>
+    <ClInclude Include="debugBundleHeaderParser.h">
+      <Filter>fileSystem\bundle</Filter>
+    </ClInclude>
+    <ClInclude Include="bundleParser.h">
+      <Filter>fileSystem\bundle</Filter>
+    </ClInclude>
+    <ClInclude Include="bundleMetadataStore.h">
+      <Filter>fileSystem\bundle</Filter>
+    </ClInclude>
+    <ClInclude Include="bundleMetadataStoreEntry.h">
+      <Filter>fileSystem\bundle</Filter>
+    </ClInclude>
+    <ClInclude Include="bundleMetadataStoreBuilder.h">
+      <Filter>fileSystem\bundle</Filter>
+    </ClInclude>
+    <ClInclude Include="bundleBufferToFilesInterchange.h">
+      <Filter>fileSystem\bundle\interchanges</Filter>
+    </ClInclude>
+    <ClInclude Include="bufferFileInterchangeEntry.h">
+      <Filter>fileSystem\bundle\interchanges</Filter>
+    </ClInclude>
+    <ClInclude Include="bundleFileReaderDecompression.h">
+      <Filter>fileSystem\bundle\file interface</Filter>
+    </ClInclude>
+    <ClInclude Include="diskFile.h">
+      <Filter>resourceSystem\depot</Filter>
+    </ClInclude>
+    <ClInclude Include="atomicWeakPtr.h">
+      <Filter>smartObject</Filter>
+    </ClInclude>
+    <ClInclude Include="bundleDepotPopulator.h">
+      <Filter>fileSystem\bundle</Filter>
+    </ClInclude>
+    <ClInclude Include="deferredDataBuffer.h">
+      <Filter>fileSystem\buffers</Filter>
+    </ClInclude>
+    <ClInclude Include="deferredDataBufferExtractor.h">
+      <Filter>fileSystem\buffers</Filter>
+    </ClInclude>
+    <ClInclude Include="memoryHooks.h">
+      <Filter>memory</Filter>
+    </ClInclude>
+    <ClInclude Include="allocArray.h">
+      <Filter>container\array</Filter>
+    </ClInclude>
+    <ClInclude Include="bundleDataCache.h">
+      <Filter>fileSystem\bundle\datacache</Filter>
+    </ClInclude>
+    <ClInclude Include="bundleDataBuffer.h">
+      <Filter>fileSystem\bundle\datacache</Filter>
+    </ClInclude>
+    <ClInclude Include="bundleDataHandle.h">
+      <Filter>fileSystem\bundle\datacache</Filter>
+    </ClInclude>
+    <ClInclude Include="ioBufferAcquireContext.h">
+      <Filter>fileSystem\bundle\datacache</Filter>
+    </ClInclude>
+    <ClInclude Include="bufferSpan.h">
+      <Filter>fileSystem\bundle\datacache</Filter>
+    </ClInclude>
+    <ClInclude Include="uniqueBuffer.h">
+      <Filter>smartObject</Filter>
+    </ClInclude>
+    <ClInclude Include="scriptCodeNodeCompilationPool.h">
+      <Filter>scripting\Compilation</Filter>
+    </ClInclude>
+    <ClInclude Include="commandLineParser.h" />
+    <ClInclude Include="datetime.h">
+      <Filter>types</Filter>
+    </ClInclude>
+    <ClInclude Include="softHandleProcessor.h">
+      <Filter>rtti</Filter>
+    </ClInclude>
+    <ClInclude Include="decompresstask.h">
+      <Filter>fileSystem\tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="analyzer.h">
+      <Filter>commanlets</Filter>
+    </ClInclude>
+    <ClInclude Include="objectMap.h">
+      <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="objectDiscardList.h">
+      <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="objectRootSet.h">
+      <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="objectGC.h">
+      <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="objectReachability.h">
+      <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="nullFile.h">
+      <Filter>fileSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="resourceUsage.h">
+      <Filter>resourceSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="bundlePreamble.h" />
+    <ClInclude Include="scriptsOpcodeExaminer.h">
+      <Filter>scripting\LowLevel</Filter>
+    </ClInclude>
+    <ClInclude Include="resourceLoading.h">
+      <Filter>resourceSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="bufferedTempFile.h">
+      <Filter>fileSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="resourceUnloading.h">
+      <Filter>resourceSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="rapidjson\document.h">
+      <Filter>serialization\JSON\rapidJSON</Filter>
+    </ClInclude>
+    <ClInclude Include="rapidjson\filestream.h">
+      <Filter>serialization\JSON\rapidJSON</Filter>
+    </ClInclude>
+    <ClInclude Include="rapidjson\prettywriter.h">
+      <Filter>serialization\JSON\rapidJSON</Filter>
+    </ClInclude>
+    <ClInclude Include="rapidjson\rapidjson.h">
+      <Filter>serialization\JSON\rapidJSON</Filter>
+    </ClInclude>
+    <ClInclude Include="rapidjson\reader.h">
+      <Filter>serialization\JSON\rapidJSON</Filter>
+    </ClInclude>
+    <ClInclude Include="rapidjson\stringbuffer.h">
+      <Filter>serialization\JSON\rapidJSON</Filter>
+    </ClInclude>
+    <ClInclude Include="rapidjson\writer.h">
+      <Filter>serialization\JSON\rapidJSON</Filter>
+    </ClInclude>
+    <ClInclude Include="rapidjson\internal\pow10.h">
+      <Filter>serialization\JSON\rapidJSON\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="rapidjson\internal\stack.h">
+      <Filter>serialization\JSON\rapidJSON\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="rapidjson\internal\strfunc.h">
+      <Filter>serialization\JSON\rapidJSON\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="jsonAllocator.h">
+      <Filter>serialization\JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="jsonWriter.h">
+      <Filter>serialization\JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="jsonReader.h">
+      <Filter>serialization\JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="jsonBasic.h">
+      <Filter>serialization\JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="jsonObject.h">
+      <Filter>serialization\JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="jsonValue.h">
+      <Filter>serialization\JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="jsonArray.h">
+      <Filter>serialization\JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="jsonDocument.h">
+      <Filter>serialization\JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="jsonFileReader.h">
+      <Filter>serialization\JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="jsonSimpleWriter.h">
+      <Filter>serialization\JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="jsonFileSimpleWriter.h">
+      <Filter>serialization\JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="genericFence.h">
+      <Filter>system</Filter>
+    </ClInclude>
+    <ClInclude Include="playGoPackage.h">
+      <Filter>fileSystem\PS4</Filter>
+    </ClInclude>
+    <ClInclude Include="jsonPrettyWriter.h">
+      <Filter>serialization\JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="jsonFilePrettyWriter.h">
+      <Filter>serialization\JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="depot.h">
+      <Filter>resourceSystem\depot</Filter>
+    </ClInclude>
+    <ClInclude Include="directory.h">
+      <Filter>resourceSystem\depot</Filter>
+    </ClInclude>
+    <ClInclude Include="loadingProfiler.h">
+      <Filter>system\profiler</Filter>
+    </ClInclude>
+    <ClInclude Include="directoryEntries.h">
+      <Filter>resourceSystem\depot</Filter>
+    </ClInclude>
+    <ClInclude Include="redProfilerTool.h">
+      <Filter>system\profiler\profilerTools</Filter>
+    </ClInclude>
+    <ClInclude Include="pixProfilerTool.h">
+      <Filter>system\profiler\profilerTools</Filter>
+    </ClInclude>
+    <ClInclude Include="newRedProfilerTool.h">
+      <Filter>system\profiler\profilerTools</Filter>
+    </ClInclude>
+    <ClInclude Include="nvidiaProfilerTool.h">
+      <Filter>system\profiler\profilerTools</Filter>
+    </ClInclude>
+    <ClInclude Include="intelProfilerTool.h">
+      <Filter>system\profiler\profilerTools</Filter>
+    </ClInclude>
+    <ClInclude Include="profilerToolPool.h">
+      <Filter>system\profiler</Filter>
+    </ClInclude>
+    <ClInclude Include="profilerManager.h">
+      <Filter>system\profiler</Filter>
+    </ClInclude>
+    <ClInclude Include="redProfiler.h">
+      <Filter>system\profiler\redProfiler</Filter>
+    </ClInclude>
+    <ClInclude Include="profilerTypes.h">
+      <Filter>system\profiler</Filter>
+    </ClInclude>
+    <ClInclude Include="razorProfilerTool.h">
+      <Filter>system\profiler\profilerTools</Filter>
+    </ClInclude>
+    <ClInclude Include="profilerConfiguration.h">
+      <Filter>system\profiler</Filter>
+    </ClInclude>
+    <ClInclude Include="telemetryTool.h">
+      <Filter>system\profiler\profilerTools</Filter>
+    </ClInclude>
+    <ClInclude Include="profilerChannels.h">
+      <Filter>system\profiler</Filter>
+    </ClInclude>
+    <ClInclude Include="loadingJob.h">
+      <Filter>fileSystem\loading</Filter>
+    </ClInclude>
+    <ClInclude Include="loadingJobManager.h">
+      <Filter>fileSystem\loading</Filter>
+    </ClInclude>
+    <ClInclude Include="loadingJobThread.h">
+      <Filter>fileSystem\loading</Filter>
+    </ClInclude>
+    <ClInclude Include="jobGenericJobs.h">
+      <Filter>fileSystem\loading</Filter>
+    </ClInclude>
+    <ClInclude Include="loadingJobMonitor.h">
+      <Filter>fileSystem\loading</Filter>
+    </ClInclude>
+    <ClInclude Include="serializationDispatchJob.h" />
+    <ClInclude Include="idAllocator.h">
+      <Filter>memory\allocators</Filter>
+    </ClInclude>
+    <ClInclude Include="diskBundle.h">
+      <Filter>resourceSystem\depot</Filter>
+    </ClInclude>
+    <ClInclude Include="fileHandleCache.h">
+      <Filter>fileSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="fileHandleReader.h">
+      <Filter>fileSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="bundleDataHandleReader.h">
+      <Filter>fileSystem\bundle\datacache</Filter>
+    </ClInclude>
+    <ClInclude Include="depotBundles.h">
+      <Filter>resourceSystem\depot</Filter>
+    </ClInclude>
+    <ClInclude Include="ringAllocator.h">
+      <Filter>memory\lameAllocators</Filter>
+    </ClInclude>
+    <ClInclude Include="lazyCacheChain.h">
+      <Filter>resourceSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="configFileManager.h">
+      <Filter>config\legacy</Filter>
+    </ClInclude>
+    <ClInclude Include="configVarRegistry.h">
+      <Filter>config</Filter>
+    </ClInclude>
+    <ClInclude Include="configVarStorage.h">
+      <Filter>config</Filter>
+    </ClInclude>
+    <ClInclude Include="configVarSystem.h">
+      <Filter>config</Filter>
+    </ClInclude>
+    <ClInclude Include="fileStringReader.h">
+      <Filter>fileSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="fileStringWriter.h">
+      <Filter>fileSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="configVarHierarchy.h">
+      <Filter>config</Filter>
+    </ClInclude>
+    <ClInclude Include="objectGC_MarkAndSweep.h">
+      <Filter>objects\implementations</Filter>
+    </ClInclude>
+    <ClInclude Include="objectGC_Legacy.h">
+      <Filter>objects\implementations</Filter>
+    </ClInclude>
+    <ClInclude Include="configVar.h" />
+    <ClInclude Include="garbageCollector.h" />
+    <ClInclude Include="remoteConfig.h">
+      <Filter>config</Filter>
+    </ClInclude>
+    <ClInclude Include="speechCollector.h">
+      <Filter>resourceSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="configVarLegacyWrapper.h">
+      <Filter>config</Filter>
+    </ClInclude>
+    <ClInclude Include="objectAllocationTracer.h">
+      <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencyFileTables.h">
+      <Filter>serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencyFileTables_AdapterLegacy.h">
+      <Filter>serialization\adapters</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencyFileTablesBuilder.h">
+      <Filter>serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="fileProxy.h">
+      <Filter>fileSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="fileShadowWriter.h">
+      <Filter>fileSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="serializationStreamData.h">
+      <Filter>serialization\stream</Filter>
+    </ClInclude>
+    <ClInclude Include="serializationStreamParser.h">
+      <Filter>serialization\stream</Filter>
+    </ClInclude>
+    <ClInclude Include="asyncFileAccess.h">
+      <Filter>fileSystem\async</Filter>
+    </ClInclude>
+    <ClInclude Include="asyncIO.h">
+      <Filter>fileSystem\async</Filter>
+    </ClInclude>
+    <ClInclude Include="asyncLoadToken.h">
+      <Filter>fileSystem\async</Filter>
+    </ClInclude>
+    <ClInclude Include="fileDecompression.h">
+      <Filter>fileSystem\compression</Filter>
+    </ClInclude>
+    <ClInclude Include="fileDecompressionImpl.h">
+      <Filter>fileSystem\compression</Filter>
+    </ClInclude>
+    <ClInclude Include="fileDecompressionAsyncFileWrapper.h">
+      <Filter>fileSystem\compression</Filter>
+    </ClInclude>
+    <ClInclude Include="fileSystemProfiler.h">
+      <Filter>fileSystem\profiling</Filter>
+    </ClInclude>
+    <ClInclude Include="fileSystemProfilerWrapper.h">
+      <Filter>fileSystem\profiling</Filter>
+    </ClInclude>
+    <ClInclude Include="profilerBlockFileWriter.h">
+      <Filter>system\profiler\quickDump</Filter>
+    </ClInclude>
+    <ClInclude Include="profilerFileWriter.h">
+      <Filter>system\profiler\quickDump</Filter>
+    </ClInclude>
+    <ClInclude Include="serializationStreamBuilder.h">
+      <Filter>serialization\stream</Filter>
+    </ClInclude>
+    <ClInclude Include="serializationStreamOpcodes.h">
+      <Filter>serialization\stream</Filter>
+    </ClInclude>
+    <ClInclude Include="deferredDataBufferAsync.h">
+      <Filter>fileSystem\buffers</Filter>
+    </ClInclude>
+    <ClInclude Include="deferredDataBufferLoaders.h">
+      <Filter>fileSystem\buffers</Filter>
+    </ClInclude>
+    <ClInclude Include="deferredDataBufferKickoff.h">
+      <Filter>fileSystem\buffers</Filter>
+    </ClInclude>
+    <ClInclude Include="streamingGrid.h">
+      <Filter>algorithm\grid</Filter>
+    </ClInclude>
+    <ClInclude Include="streamingGridHelpers.h">
+      <Filter>algorithm\grid</Filter>
+    </ClInclude>
+    <ClInclude Include="multiAllocatorCreationHelper.h">
+      <Filter>memory</Filter>
+    </ClInclude>
+    <ClInclude Include="xvcPackage.h">
+      <Filter>fileSystem\XboxOne</Filter>
+    </ClInclude>
+    <ClInclude Include="diskBundlePreloader.h">
+      <Filter>resourceSystem\depot</Filter>
+    </ClInclude>
+    <ClInclude Include="intrusivePriorityQueue.h">
+      <Filter>container\queue</Filter>
+    </ClInclude>
+    <ClInclude Include="ioTags.h">
+      <Filter>fileSystem\priorities</Filter>
+    </ClInclude>
+    <ClInclude Include="ioTagResolver.h">
+      <Filter>fileSystem\priorities</Filter>
+    </ClInclude>
+    <ClInclude Include="namesReporter.h" />
+    <ClInclude Include="messagePump.h" />
+    <ClInclude Include="standardSettings.h">
+      <Filter>settings</Filter>
+    </ClInclude>
+    <ClInclude Include="diskBundleContent.h">
+      <Filter>resourceSystem\depot</Filter>
+    </ClInclude>
+    <ClInclude Include="diskBundleIOCache.h">
+      <Filter>fileSystem\bundle\datacache</Filter>
+    </ClInclude>
+    <ClInclude Include="httpHeader.h">
+      <Filter>http\http</Filter>
+    </ClInclude>
+    <ClInclude Include="httpRequestParser.h">
+      <Filter>http\http</Filter>
+    </ClInclude>
+    <ClInclude Include="httpServer.h">
+      <Filter>http\http</Filter>
+    </ClInclude>
+    <ClInclude Include="httpResponseSender.h">
+      <Filter>http\http</Filter>
+    </ClInclude>
+    <ClInclude Include="httpResponseData.h">
+      <Filter>http\http</Filter>
+    </ClInclude>
+    <ClInclude Include="httpRequestHandler.h">
+      <Filter>http\http</Filter>
+    </ClInclude>
+    <ClInclude Include="htmlDocument.h">
+      <Filter>http\html</Filter>
+    </ClInclude>
+    <ClInclude Include="basicURL.h">
+      <Filter>http\basics</Filter>
+    </ClInclude>
+    <ClInclude Include="basicDataBlob.h">
+      <Filter>http\basics</Filter>
+    </ClInclude>
+    <ClInclude Include="basicTextBuilder.h">
+      <Filter>http\basics</Filter>
+    </ClInclude>
+    <ClInclude Include="debugPageHandler.h">
+      <Filter>debug</Filter>
+    </ClInclude>
+    <ClInclude Include="debugPageHTMLDoc.h">
+      <Filter>debug</Filter>
+    </ClInclude>
+    <ClInclude Include="debugPageServer.h">
+      <Filter>debug</Filter>
+    </ClInclude>
+    <ClInclude Include="compression\chainedzlib.h">
+      <Filter>compression</Filter>
+    </ClInclude>
+    <ClInclude Include="contentListener.h">
+      <Filter>content</Filter>
+    </ClInclude>
+    <ClInclude Include="contentManager.h">
+      <Filter>content</Filter>
+    </ClInclude>
+    <ClInclude Include="contentManifest.h">
+      <Filter>content</Filter>
+    </ClInclude>
+    <ClInclude Include="contentManifestAsyncLoader.h">
+      <Filter>content</Filter>
+    </ClInclude>
+    <ClInclude Include="contentType.h">
+      <Filter>content</Filter>
+    </ClInclude>
+    <ClInclude Include="contentManifestParser.h">
+      <Filter>content</Filter>
+    </ClInclude>
+    <ClInclude Include="streamingInstaller.h">
+      <Filter>content</Filter>
+    </ClInclude>
+    <ClInclude Include="installer.h">
+      <Filter>content</Filter>
+    </ClInclude>
+    <ClInclude Include="dlcManifest.h">
+      <Filter>resourceSystem\content</Filter>
+    </ClInclude>
+    <ClInclude Include="diskBundleCache.h">
+      <Filter>resourceSystem\depot</Filter>
+    </ClInclude>
+    <ClInclude Include="diskBundleCacheEntry.h">
+      <Filter>resourceSystem\depot</Filter>
+    </ClInclude>
+    <ClInclude Include="indexed2dArray.h" />
+    <ClInclude Include="cacheFilenames.h">
+      <Filter>content</Filter>
+    </ClInclude>
+    <ClInclude Include="chunkedLZ4File.h">
+      <Filter>fileSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="pagedMemoryWriter.h">
+      <Filter>memory\pagedWriter</Filter>
+    </ClInclude>
+    <ClInclude Include="taskGroup.h">
+      <Filter>system\task</Filter>
+    </ClInclude>
+    <ClInclude Include="objectGCLock.h">
+      <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencyFileUnpacker.h">
+      <Filter>serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencyFileGluer.h">
+      <Filter>serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="sharedDataBuffer.h">
+      <Filter>fileSystem\buffers</Filter>
+    </ClInclude>
+    <ClInclude Include="sharedDataBufferImpl.h">
+      <Filter>fileSystem\buffers</Filter>
+    </ClInclude>
+    <ClInclude Include="deferredDataBufferOOMQueue.h">
+      <Filter>fileSystem\buffers</Filter>
+    </ClInclude>
+    <ClInclude Include="diskInstrumentationPC.h">
+      <Filter>Hardware Instrumentation</Filter>
+    </ClInclude>
+    <ClInclude Include="commandLineParams.h" />
+    <ClInclude Include="cpuRecognizer.h">
+      <Filter>Hardware Instrumentation</Filter>
+    </ClInclude>
+    <ClInclude Include="redTelemetryServiceDDI.h">
+      <Filter>redTelemetryService</Filter>
+    </ClInclude>
+    <ClInclude Include="contentVersion.h">
+      <Filter>content</Filter>
+    </ClInclude>
+    <ClInclude Include="keyboardRecognizer.h">
+      <Filter>Hardware Instrumentation</Filter>
+    </ClInclude>
+    <ClInclude Include="sha256.h">
+      <Filter>crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="crypto.h">
+      <Filter>crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="memoryHelpers.h">
+      <Filter>memory</Filter>
+    </ClInclude>
+    <ClInclude Include="memoryHelpers.hpp">
+      <Filter>memory</Filter>
+    </ClInclude>
+    <ClInclude Include="redMemoryPools.h">
+      <Filter>memory</Filter>
+    </ClInclude>
+    <ClInclude Include="memoryAdapter.h">
+      <Filter>memory</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="object.inl">
+      <Filter>objects</Filter>
+    </None>
+    <None Include="math.inl">
+      <Filter>math</Filter>
+    </None>
+    <None Include="mathBoxFPU.inl">
+      <Filter>math\fpu</Filter>
+    </None>
+    <None Include="mathColorFPU.inl">
+      <Filter>math\fpu</Filter>
+    </None>
+    <None Include="mathEulerAnglesFPU.inl">
+      <Filter>math\fpu</Filter>
+    </None>
+    <None Include="mathFPU.inl">
+      <Filter>math\fpu</Filter>
+    </None>
+    <None Include="mathFuncsFPU.inl">
+      <Filter>math\fpu</Filter>
+    </None>
+    <None Include="mathMatrixFPU.inl">
+      <Filter>math\fpu</Filter>
+    </None>
+    <None Include="mathPlaneFPU.inl">
+      <Filter>math\fpu</Filter>
+    </None>
+    <None Include="mathRectFPU.inl">
+      <Filter>math\fpu</Filter>
+    </None>
+    <None Include="mathSphereFPU.inl">
+      <Filter>math\fpu</Filter>
+    </None>
+    <None Include="mathTypesFPU.inl">
+      <Filter>math\fpu</Filter>
+    </None>
+    <None Include="mathVectorFPU.inl">
+      <Filter>math\fpu</Filter>
+    </None>
+    <None Include="mathSSE.inl">
+      <Filter>math\sse</Filter>
+    </None>
+    <None Include="mathTypesSSE.inl">
+      <Filter>math\sse</Filter>
+    </None>
+    <None Include="mathAltiVec.inl">
+      <Filter>math\altiVec</Filter>
+    </None>
+    <None Include="mathTypesAltiVec.inl">
+      <Filter>math\altiVec</Filter>
+    </None>
+    <None Include="listener.inl" />
+    <None Include="mathCapsuleFPU.inl">
+      <Filter>math\fpu</Filter>
+    </None>
+    <None Include="profiler.inl">
+      <Filter>system\profiler</Filter>
+    </None>
+    <None Include="longBitField.inl">
+      <Filter>container\bitfield</Filter>
+    </None>
+    <None Include="intrusiveList.inl">
+      <Filter>container\list</Filter>
+    </None>
+    <None Include="kdTree.inl">
+      <Filter>spatialstructures\trees</Filter>
+    </None>
+    <None Include="cycleList.inl">
+      <Filter>container\list</Filter>
+    </None>
+    <None Include="dependencygraph.inl">
+      <Filter>resourceSystem\resourceManagement\resourceDatabase</Filter>
+    </None>
+    <None Include="resourcedatabasepool.inl">
+      <Filter>resourceSystem\resourceManagement\resourceDatabase</Filter>
+    </None>
+    <None Include="resourcedatabaserecord.inl">
+      <Filter>resourceSystem\resourceManagement\resourceDatabase</Filter>
+    </None>
+    <None Include="resourcedatabasepoolentry.inl">
+      <Filter>resourceSystem\resourceManagement\resourceDatabase</Filter>
+    </None>
+    <None Include="resourcedatabaseshareddata.inl">
+      <Filter>resourceSystem\resourceManagement\resourceDatabase</Filter>
+    </None>
+    <None Include="resourcedatabasepooleddata.inl">
+      <Filter>resourceSystem\resourceManagement\resourceDatabase</Filter>
+    </None>
+    <None Include="pointer.inl">
+      <Filter>rtti</Filter>
+    </None>
+    <None Include="scopedPtr.inl">
+      <Filter>smartObject</Filter>
+    </None>
+    <None Include="sharedPtr.inl">
+      <Filter>smartObject</Filter>
+    </None>
+    <None Include="intrusivePtr.inl">
+      <Filter>smartObject</Filter>
+    </None>
+    <None Include="uniquePtr.inl">
+      <Filter>smartObject</Filter>
+    </None>
+    <None Include="atomicSharedPtr.inl">
+      <Filter>smartObject</Filter>
+    </None>
+    <None Include="handleMap.h.inl" />
+    <None Include="weakPtr.inl">
+      <Filter>smartObject</Filter>
+    </None>
+    <None Include="atomicWeakPtr.inl">
+      <Filter>smartObject</Filter>
+    </None>
+    <None Include="deferredDataBuffer.inl">
+      <Filter>fileSystem\buffers</Filter>
+    </None>
+    <None Include="bundleBufferToFilesInterchange.inl">
+      <Filter>fileSystem\bundle\interchanges</Filter>
+    </None>
+    <None Include="filePath.inl">
+      <Filter>fileSystem</Filter>
+    </None>
+    <None Include="bundleDataBuffer.inl">
+      <Filter>fileSystem\bundle\datacache</Filter>
+    </None>
+    <None Include="bundleDataHandle.inl">
+      <Filter>fileSystem\bundle\datacache</Filter>
+    </None>
+    <None Include="uniqueBuffer.inl">
+      <Filter>smartObject</Filter>
+    </None>
+    <None Include="bufferFileInterchangeEntry.inl">
+      <Filter>fileSystem\bundle\interchanges</Filter>
+    </None>
+    <None Include="bundleMetadataStore.inl">
+      <Filter>fileSystem\bundle</Filter>
+    </None>
+    <None Include="directory.inl">
+      <Filter>resourceSystem\depot</Filter>
+    </None>
+    <None Include="operatorNewDelete.inl">
+      <Filter>memory</Filter>
+    </None>
+    <None Include="idAllocator.inl">
+      <Filter>memory\allocators</Filter>
+    </None>
+    <None Include="fileSystemProfiler.inl">
+      <Filter>fileSystem\profiling</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BisonScripts Include="scriptFileParser.bison">
+      <Filter>scripting\Compilation\FileParser</Filter>
+    </BisonScripts>
+    <BisonScripts Include="scriptFunctionParser.bison">
+      <Filter>scripting\Compilation\FunctionParser</Filter>
+    </BisonScripts>
+  </ItemGroup>
+</Project>

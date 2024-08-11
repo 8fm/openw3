@@ -1,0 +1,895 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" TreatAsLocalProperty="OutDir;TargetName;IntDir;PlatformToolset">
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedConfigurationSetup.props))\SharedConfigurationSetup.props" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{CAE14B93-3735-453E-8734-38841F384203}</ProjectGuid>
+    <RootNamespace>r4</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <ProjectClDirs>$(SolutionDir)../external/gfx4/Src;$(SolutionDir)../external/gfx4/Include;</ProjectClDirs>
+  </PropertyGroup>
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.props))\Shared.props" />
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedItemGroups.props))\SharedItemGroups.props" />
+  <ItemGroup>
+    <ClCompile Include="abilityManager.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="alchemy.cpp" />
+    <ClCompile Include="animAttackEvent.cpp" />
+    <ClCompile Include="areaMappinsResource.cpp" />
+    <ClCompile Include="beehive.cpp" />
+    <ClCompile Include="behTreeCarryingItemBaseDecorator.cpp" />
+    <ClCompile Include="behTreeCarryingItemBaseNode.cpp" />
+    <ClCompile Include="behTreeCarryingItemData.cpp" />
+    <ClCompile Include="behTreeCarryingItemDrop.cpp" />
+    <ClCompile Include="behTreeCarryingItemPick.cpp" />
+    <ClCompile Include="behTreeFindDestinyItemStoreDecorator.cpp" />
+    <ClCompile Include="behTreeFindSourceItemStoreDecorator.cpp" />
+    <ClCompile Include="behTreeFlightData.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeMetanodeOnCombatstyle.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeMetanodeSetupReachability.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeAtomicFlight.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeAtomicFlyTo.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeAtomicFlyAround.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeBroadcastReactionScene.cpp" />
+    <ClCompile Include="behTreeNodeConditionHasAbility.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeConditionIsInInterior.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeConditionIsTargetThePlayer.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeConditionShouldPursueCombatTarget.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeConditionSpeech.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeDecoratorFindLandingSpot.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeDecoratorGlide.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeDecoratorHLCombatWildHorse.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeDecoratorBruxaDeath.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeDisableTalkInteraction.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeGreetingReactionScene.cpp" />
+    <ClCompile Include="behTreeNodeDynamicFlightIdle.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeNodePCLockControl.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeNodePCReleaseControl.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeDynamicCombatStyle.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeRequestItems.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeSelectTargetOrMountByTag.cpp" />
+    <ClCompile Include="behTreeNodeSpeech.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeSailorFollowPath.cpp" />
+    <ClCompile Include="behTreeNodeFlee.cpp" />
+    <ClCompile Include="behTreeDecoratorRiderHorseReachability.cpp" />
+    <ClCompile Include="behTreeNodeHLCombatLock.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeSailorMoveTo.cpp" />
+    <ClCompile Include="boatSpawner.cpp" />
+    <ClCompile Include="cameraTools.cpp" />
+    <ClCompile Include="carryableItemsRegistry.cpp" />
+    <ClCompile Include="carryableItemsStorePoint.cpp" />
+    <ClCompile Include="cityLightManager.cpp" />
+    <ClCompile Include="commonMapStructs.cpp" />
+    <ClCompile Include="customCSEvents.cpp" />
+    <ClCompile Include="customSceneEvents.cpp" />
+    <ClCompile Include="dlcQuestMounter.cpp" />
+    <ClCompile Include="dynamicTagsContainer.cpp" />
+    <ClCompile Include="effectComponent.cpp" />
+    <ClCompile Include="fistfightMinigame.cpp" />
+    <ClCompile Include="gameParams.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="getRiderOrMountHelper.cpp" />
+    <ClCompile Include="minimapManager.cpp" />
+    <ClCompile Include="questMapPinsResource.cpp" />
+    <ClCompile Include="questResetScriptedActionsBlock.cpp" />
+    <ClCompile Include="questSpawnNotStreamedBoatBlock.cpp" />
+    <ClCompile Include="journalQuestMonsterKnownGraphBlock.cpp" />
+    <ClCompile Include="journalQuestTrackBlock.cpp" />
+    <ClCompile Include="moveOnRoadSteering.cpp" />
+    <ClCompile Include="questGraphWalker.cpp" />
+    <ClCompile Include="r4BehTreeNodePredefinedPath.cpp" />
+    <ClCompile Include="r4DLCActionPointCategoriesMounter.cpp" />
+    <ClCompile Include="r4DLCAnalyzer.cpp" />
+    <ClCompile Include="r4DLCAnimationsCategoriesMounter.cpp" />
+    <ClCompile Include="r4DLCAppearanceMounter.cpp" />
+    <ClCompile Include="r4DLCAttitudesMounter.cpp" />
+    <ClCompile Include="r4DLCDefinitionsEntitieTemplatesMounter.cpp" />
+    <ClCompile Include="r4DLCDefinitionsMounter.cpp" />
+    <ClCompile Include="r4DLCDefinitionsNGPlusMounter.cpp" />
+    <ClCompile Include="r4DLCDropPhysicsSetupMounter.cpp" />
+    <ClCompile Include="r4DLCEntityTemplateParamMounter.cpp" />
+    <ClCompile Include="r4DLCEntityTemplateSlotMounter.cpp" />
+    <ClCompile Include="r4DLCFinishersMounter.cpp" />
+    <ClCompile Include="r4DLCJournalEntriesMounter.cpp" />
+    <ClCompile Include="r4DLCJournalMounter.cpp" />
+    <ClCompile Include="r4DLCMappinsMounter.cpp" />
+    <ClCompile Include="r4DLCResourceDefinitionsMounter.cpp" />
+    <ClCompile Include="r4DLCRewardsMounter.cpp" />
+    <ClCompile Include="r4DLCScaleformContentMounter.cpp" />
+    <ClCompile Include="r4DLCSceneAnimationsMounter.cpp" />
+    <ClCompile Include="r4DLCVoicetagMounter.cpp" />
+    <ClCompile Include="r4DLCVideoMounter.cpp" />
+    <ClCompile Include="r4DLCWorldMounter.cpp" />
+    <ClCompile Include="r4GameDebuggerCommands.cpp" />
+    <ClCompile Include="gameplayLightComponent.cpp" />
+    <ClCompile Include="gwintMinigame.cpp" />
+    <ClCompile Include="instantMountPartySpawnOrganizer.cpp" />
+    <ClCompile Include="behTreeDecoratorCluePath.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeDecoratorHorseSpeedManager.cpp" />
+    <ClCompile Include="behTreeDecoratorRiderWaitHorseScriptedAction.cpp" />
+    <ClCompile Include="behTreeNodeClosestNonFriendlyTargetSelection.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeNodePredefinedPathRubberBand.cpp" />
+    <ClCompile Include="behTreeRiderSpecific.cpp" />
+    <ClCompile Include="behTreeConditionAttackersCount.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeConditionIsDead.cpp" />
+    <ClCompile Include="behTreeConditionIsEnemyAround.cpp" />
+    <ClCompile Include="behTreeAtomicForgetCombatTarget.cpp" />
+    <ClCompile Include="behTreeNodeCombatTargetSelection.cpp" />
+    <ClCompile Include="behTreeDecoratorHLCombat.cpp" />
+    <ClCompile Include="behTreeNodeRiderForced.cpp" />
+    <ClCompile Include="behTreeNodeRiderIdleRoot.cpp" />
+    <ClCompile Include="behTreeNodeStrafing.cpp" />
+    <ClCompile Include="behTreeNodeTicketDecoratorBase.cpp" />
+    <ClCompile Include="behTreeNodeTicketHas.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeTicketLock.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeTicketManager.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeTicketRelease.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeTicketRequest.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeVitalSpotActive.cpp" />
+    <ClCompile Include="behTreeRidingManager.cpp" />
+    <ClCompile Include="behTreeScriptTicketAlgorithm.cpp" />
+    <ClCompile Include="behTreeTicketAlgorithm.cpp" />
+    <ClCompile Include="behTreeTicketData.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeTicketGet.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="behTreeCluePathData.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="commonMapManager.cpp" />
+    <ClCompile Include="dynamicClueStorage.cpp" />
+    <ClCompile Include="fastSurround.cpp" />
+    <ClCompile Include="horseSteering.cpp" />
+    <ClCompile Include="mapFastTravel.cpp" />
+    <ClCompile Include="questSpawnVehicleBlock.cpp" />
+    <ClCompile Include="menuEvents.cpp" />
+    <ClCompile Include="r4CommonAnalyzer.cpp" />
+    <ClCompile Include="r4GameAnalyzer.cpp" />
+    <ClCompile Include="r4GameDebuggerPlugin.cpp" />
+    <ClCompile Include="r4GuiAnalyzer.cpp" />
+    <ClCompile Include="r4GwintManager.cpp" />
+    <ClCompile Include="r4HumanoidCombatComponent.cpp" />
+    <ClCompile Include="r4interiorAreaComponent.cpp" />
+    <ClCompile Include="journalPlace.cpp" />
+    <ClCompile Include="r4ItemAnalyzer.cpp" />
+    <ClCompile Include="r4journalPlaceEntity.cpp" />
+    <ClCompile Include="mainMenuController.cpp" />
+    <ClCompile Include="profilerConsoleCommands.cpp" />
+    <ClCompile Include="questCombatManagerBlock.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="r4ActionPointSelector.cpp" />
+    <ClCompile Include="r4BehTreeVarEnums.cpp" />
+    <ClCompile Include="r4CameraDirector.cpp" />
+    <ClCompile Include="r4CreateEntityManager.cpp" />
+    <ClCompile Include="r4GlobalEventsScriptsDispatcher.cpp" />
+    <ClCompile Include="r4Kinect.cpp" />
+    <ClCompile Include="r4MapPinEntity.cpp" />
+    <ClCompile Include="r4LootManager.cpp" />
+    <ClCompile Include="r4MapTracking.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="r4MemoryBudgets.cpp" />
+    <ClCompile Include="r4PlayerTargeting.cpp" />
+    <ClCompile Include="r4PlayerTypes.cpp" />
+    <ClCompile Include="r4popup.cpp" />
+    <ClCompile Include="r4ReactionManager.cpp" />
+    <ClCompile Include="r4ResourceAnalyzer.cpp" />
+    <ClCompile Include="r4SecondScreenManager.cpp" />
+    <ClCompile Include="r4SecondScreenManagerScriptProxy.cpp" />
+    <ClCompile Include="r4StartupAnalyzer.cpp" />
+    <ClCompile Include="r4Enums.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="rainActionPointSelector.cpp" />
+    <ClCompile Include="rangedWeapon.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="spawnTreeInitializerFlight.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="swarmCellMap.cpp" />
+    <ClCompile Include="swarmEnvironment.cpp" />
+    <ClCompile Include="ticketGlobalSource.cpp" />
+    <ClCompile Include="ticketSourceProvider.cpp" />
+    <ClCompile Include="toxicCloud.cpp" />
+    <ClCompile Include="tutorial.cpp" />
+    <ClCompile Include="volumePathManager.cpp" />
+    <ClCompile Include="gameDebugMenu.cpp" />
+    <ClCompile Include="gameEngine.cpp" />
+    <ClCompile Include="gameStartupDebugPage.cpp" />
+    <ClCompile Include="horsePrediction.cpp" />
+    <ClCompile Include="journalCharacter.cpp" />
+    <ClCompile Include="journalCreature.cpp" />
+    <ClCompile Include="journalEvents.cpp" />
+    <ClCompile Include="journalGlossary.cpp" />
+    <ClCompile Include="journalItems.cpp" />
+    <ClCompile Include="journalQuest.cpp" />
+    <ClCompile Include="journalQuestBlock.cpp" />
+    <ClCompile Include="journalQuestHuntingBlock.cpp" />
+    <ClCompile Include="journalQuestMappinStateBlock.cpp" />
+    <ClCompile Include="journalQuestObjectiveCounterGraphBlock.cpp" />
+    <ClCompile Include="journalStoryBook.cpp" />
+    <ClCompile Include="journalTutorial.cpp" />
+    <ClCompile Include="manageSwitchBlock.cpp" />
+    <ClCompile Include="questChangeWorldBlock.cpp" />
+    <ClCompile Include="questPlayAnimationBlock.cpp" />
+    <ClCompile Include="questUICondition.cpp" />
+    <ClCompile Include="questRiderScriptedActionsBlock.cpp" />
+    <ClCompile Include="questUsedFastTravelCondition.cpp" />
+    <ClCompile Include="r4AiParameters.cpp" />
+    <ClCompile Include="r4DebugDataService.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseGame|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='No opts|Durango'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Final|Durango'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Durango'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Durango'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseGame|Durango'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='No opts|ORBIS'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Final|ORBIS'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ORBIS'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ORBIS'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseGame|ORBIS'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='No opts|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseGame|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='No opts|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Final|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="r4DebugDataServiceLogOutputDevice.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseGame|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='No opts|Durango'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Final|Durango'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Durango'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Durango'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseGame|Durango'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='No opts|ORBIS'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Final|ORBIS'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ORBIS'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ORBIS'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseGame|ORBIS'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='No opts|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseGame|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='No opts|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Final|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="r4GuiManager.cpp" />
+    <ClCompile Include="r4Hud.cpp" />
+    <ClCompile Include="r4HudModule.cpp" />
+    <ClCompile Include="r4JournalManager.cpp" />
+    <ClCompile Include="r4Menu.cpp" />
+    <ClCompile Include="r4Names.cpp" />
+    <ClCompile Include="riderSpawnTreeInitializers.cpp" />
+    <ClCompile Include="ridingAiStorage.cpp" />
+    <ClCompile Include="r4Classes.cpp" />
+    <ClCompile Include="r4LootDefinitions.cpp" />
+    <ClCompile Include="EntityMappinsResource.cpp" />
+    <ClCompile Include="r4BehTreeRtti.cpp" />
+    <ClCompile Include="behTreeStrafingAlgorithm.cpp" />
+    <ClCompile Include="behTreeDecoratorChangeBehaviorGraph.cpp" />
+    <ClCompile Include="behTreeDecoratorSetBehaviourVariable.cpp" />
+    <ClCompile Include="buffImmunity.cpp" />
+    <ClCompile Include="build.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="flyingPoiConfig.cpp" />
+    <ClCompile Include="combatDataComponent.cpp" />
+    <ClCompile Include="comboAspect.cpp" />
+    <ClCompile Include="comboDefinition.cpp" />
+    <ClCompile Include="comboPlayer.cpp" />
+    <ClCompile Include="comboString.cpp" />
+    <ClCompile Include="customCameraCollision.cpp" />
+    <ClCompile Include="damageData.cpp" />
+    <ClCompile Include="encounterMountedEntry.cpp" />
+    <ClCompile Include="encounterImpl.cpp" />
+    <ClCompile Include="flyingCritterAlgorithmData.cpp" />
+    <ClCompile Include="flyingCrittersAI.cpp" />
+    <ClCompile Include="flyingCrittersLairEntity.cpp" />
+    <ClCompile Include="flyingCrittersLairEntityScript.cpp" />
+    <ClCompile Include="flyingCrittersParams.cpp" />
+    <ClCompile Include="flyingCritterUpdateJob.cpp" />
+    <ClCompile Include="flyingSwarmGroup.cpp" />
+    <ClCompile Include="focusModeController.cpp" />
+    <ClCompile Include="gameplayEffectExecutor.cpp" />
+    <ClCompile Include="GameplayFXMedalion.cpp" />
+    <ClCompile Include="gameplayFXSurfacePost.cpp" />
+    <ClCompile Include="horseAnimNode.cpp" />
+    <ClCompile Include="humbleCritterAlgorithmData.cpp" />
+    <ClCompile Include="humbleCrittersLairEntity.cpp" />
+    <ClCompile Include="humbleCrittersAI.cpp" />
+    <ClCompile Include="humbleCritterSound.cpp" />
+    <ClCompile Include="humbleCritterUpdateJob.cpp" />
+    <ClCompile Include="mapPinData.cpp" />
+    <ClCompile Include="customCameraControllers.cpp" />
+    <ClCompile Include="customCamera.cpp" />
+    <ClCompile Include="monsterParam.cpp" />
+    <ClCompile Include="playerStateUseVehicle.cpp" />
+    <ClCompile Include="preAttackEvent.cpp" />
+    <ClCompile Include="questBehaviorCtrlBlock.cpp" />
+    <ClCompile Include="questBehaviorEventBlock.cpp" />
+    <ClCompile Include="questBehaviorNotificationBlock.cpp" />
+    <ClCompile Include="questBehaviorSocket.cpp" />
+    <ClCompile Include="questControlledNPC.cpp" />
+    <ClCompile Include="questManageFastTravelBlock.cpp" />
+    <ClCompile Include="r4BehTreeInstance.cpp" />
+    <ClCompile Include="r4Game.cpp" />
+    <ClCompile Include="r4GameResource.cpp" />
+    <ClCompile Include="r4Player.cpp" />
+    <ClCompile Include="r4PlayerControlAction.cpp" />
+    <ClCompile Include="r4PlayerController.cpp" />
+    <ClCompile Include="r4PlayerLocomotionSegment.cpp" />
+    <ClCompile Include="r4QuestSystem.cpp" />
+    <ClCompile Include="r4BoidSpecies.cpp" />
+    <ClCompile Include="r4SwarmSound.cpp" />
+    <ClCompile Include="r4SwarmUtils.cpp" />
+    <ClCompile Include="enemiesCachedData.cpp" />
+    <ClCompile Include="r4Telemetry.cpp" />
+    <ClCompile Include="r4TelemetryScriptProxy.cpp" />
+    <ClCompile Include="steeringStrafing.cpp" />
+    <ClCompile Include="stepClipAnimationParam.cpp" />
+    <ClCompile Include="applySteeringToPlayer.cpp" />
+    <ClCompile Include="ticketSystem.cpp" />
+    <ClCompile Include="ticketSystemConfiguration.cpp" />
+    <ClCompile Include="vitalSpot.cpp" />
+    <ClCompile Include="w2saveImporter.cpp" />
+    <ClCompile Include="w3Boat.cpp" />
+    <ClCompile Include="w3GenericVehicle.cpp" />
+    <ClCompile Include="witcherSword.cpp" />
+    <ClCompile Include="worldMap.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="abilityManager.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="alchemy.h" />
+    <ClInclude Include="animAttackEvent.h" />
+    <ClInclude Include="areaMappinsResource.h" />
+    <ClInclude Include="beehive.h" />
+    <ClInclude Include="behTreeCarryingItemBaseDecorator.h" />
+    <ClInclude Include="behTreeCarryingItemBaseNode.h" />
+    <ClInclude Include="behTreeCarryingItemData.h" />
+    <ClInclude Include="behTreeCarryingItemDrop.h" />
+    <ClInclude Include="behTreeCarryingItemPick.h" />
+    <ClInclude Include="behTreeFindDestinyItemStoreDecorator.h" />
+    <ClInclude Include="behTreeFindSourceItemStoreDecorator.h" />
+    <ClInclude Include="behTreeFlightData.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="behTreeMetanodeOnCombatstyle.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="behTreeMetanodeSetupReachability.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeAtomicFlight.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeAtomicFlyAround.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeAtomicFlyTo.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeBroadcastReactionScene.h" />
+    <ClInclude Include="behTreeNodeConditionHasAbility.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeConditionIsInInterior.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeConditionIsTargetThePlayer.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeConditionShouldPursueCombatTarget.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeConditionSpeech.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeDecoratorFindLandingSpot.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeDecoratorFlight.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeDecoratorGlide.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeDecoratorHLCombatWildHorse.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeDecoratorBruxaDeath.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeDisableTalkInteraction.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeGreetingReactionScene.h" />
+    <ClInclude Include="behTreeNodeDynamicFlightIdle.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="behTreeNodePCLockControl.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="behTreeNodePCReleaseControl.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeDynamicCombatStyle.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeRequestItems.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeSelectTargetOrMountByTag.h" />
+    <ClInclude Include="behTreeNodeSpeech.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="behTreeSailorFollowPath.h" />
+    <ClInclude Include="behTreeNodeFlee.h" />
+    <ClInclude Include="behTreeDecoratorRiderHorseReachability.h" />
+    <ClInclude Include="behTreeNodeHLCombatLock.h" />
+    <ClInclude Include="behTreeSailorMoveTo.h" />
+    <ClInclude Include="boatSpawner.h" />
+    <ClInclude Include="cameraTools.h" />
+    <ClInclude Include="carryableItemsRegistry.h" />
+    <ClInclude Include="carryableItemsStorePoint.h" />
+    <ClInclude Include="cityLightManager.h" />
+    <ClInclude Include="commonMapStructs.h" />
+    <ClInclude Include="dlcQuestMounter.h" />
+    <ClInclude Include="dynamicTagsContainer.h" />
+    <ClInclude Include="effectComponent.h" />
+    <ClInclude Include="gameParams.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="getRiderOrMountHelper.h" />
+    <ClInclude Include="minimapManager.h" />
+    <ClInclude Include="questMapPinsResource.h" />
+    <ClInclude Include="questResetScriptedActionsBlock.h" />
+    <ClInclude Include="questSpawnNotStreamedBoatBlock.h" />
+    <ClInclude Include="journalQuestMonsterKnownGraphBlock.h" />
+    <ClInclude Include="journalQuestTrackBlock.h" />
+    <ClInclude Include="mapFastTravel.h" />
+    <ClInclude Include="moveOnRoadSteering.h" />
+    <ClInclude Include="questGraphWalker.h" />
+    <ClInclude Include="questSpawnVehicleBlock.h" />
+    <ClInclude Include="menuEvents.h" />
+    <ClInclude Include="r4BehTreeNodePredefinedPath.h" />
+    <ClInclude Include="r4DLCActionPointCategoriesMounter.h" />
+    <ClInclude Include="r4DLCAnimationsCategoriesMounter.h" />
+    <ClInclude Include="r4DLCAppearanceMounter.h" />
+    <ClInclude Include="r4DLCAttitudesMounter.h" />
+    <ClInclude Include="r4DLCDefinitionsEntitieTemplatesMounter.h" />
+    <ClInclude Include="r4DLCDefinitionsMounter.h" />
+    <ClInclude Include="r4DLCDefinitionsNGPlusMounter.h" />
+    <ClInclude Include="r4DLCDropPhysicsSetupMounter.h" />
+    <ClInclude Include="r4DLCEntityTemplateParamMounter.h" />
+    <ClInclude Include="r4DLCEntityTemplateSlotMounter.h" />
+    <ClInclude Include="r4DLCFinishersMounter.h" />
+    <ClInclude Include="r4DLCJournalEntriesMounter.h" />
+    <ClInclude Include="r4DLCJournalMounter.h" />
+    <ClInclude Include="r4DLCMappinsMounter.h" />
+    <ClInclude Include="r4DLCResourceDefinitionsMounter.h" />
+    <ClInclude Include="r4DLCRewardsMounter.h" />
+    <ClInclude Include="r4DLCScaleformContentMounter.h" />
+    <ClInclude Include="r4DLCSceneAnimationsMounter.h" />
+    <ClInclude Include="r4DLCVoicetagMounter.h" />
+    <ClInclude Include="r4DLCVideoMounter.h" />
+    <ClInclude Include="r4DLCWorldMounter.h" />
+    <ClInclude Include="r4GameDebuggerCommands.h" />
+    <ClInclude Include="r4GameDebuggerPlugin.h" />
+    <ClInclude Include="r4GwintManager.h" />
+    <ClInclude Include="r4HumanoidCombatComponent.h" />
+    <ClInclude Include="r4interiorAreaComponent.h" />
+    <ClInclude Include="journalPlace.h" />
+    <ClInclude Include="r4journalPlaceEntity.h" />
+    <ClInclude Include="r4ActionPointSelector.h" />
+    <ClInclude Include="r4CreateEntityManager.h" />
+    <ClInclude Include="customCSEvents.h" />
+    <ClInclude Include="customSceneEvents.h" />
+    <ClInclude Include="fistfightMinigame.h" />
+    <ClInclude Include="gameplayLightComponent.h" />
+    <ClInclude Include="gwintMinigame.h" />
+    <ClInclude Include="instantMountPartySpawnOrganizer.h" />
+    <ClInclude Include="behTreeDecoratorCluePath.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="behTreeDecoratorHorseSpeedManager.h" />
+    <ClInclude Include="behTreeDecoratorRiderWaitHorseScriptedAction.h" />
+    <ClInclude Include="behTreeNodeClosestNonFriendlyTargetSelection.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeCombatTargetSelectionBase.h" />
+    <ClInclude Include="behTreeNodePredefinedPathRubberBand.h" />
+    <ClInclude Include="behTreeRiderSpecific.h" />
+    <ClInclude Include="behTreeConditionAttackersCount.h" />
+    <ClInclude Include="behTreeConditionIsDead.h" />
+    <ClInclude Include="behTreeConditionIsEnemyAround.h" />
+    <ClInclude Include="behTreeAtomicForgetCombatTarget.h" />
+    <ClInclude Include="behTreeNodeCombatTargetSelection.h" />
+    <ClInclude Include="behTreeDecoratorHLCombat.h" />
+    <ClInclude Include="behTreeNodeRiderForced.h" />
+    <ClInclude Include="behTreeNodeRiderIdleRoot.h" />
+    <ClInclude Include="behTreeNodeStrafing.h" />
+    <ClInclude Include="behTreeNodeTicketDecoratorBase.h" />
+    <ClInclude Include="behTreeNodeTicketGet.h" />
+    <ClInclude Include="behTreeNodeTicketHas.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeTicketLock.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeTicketManager.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeTicketRelease.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeTicketRequest.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeVitalSpotActive.h" />
+    <ClInclude Include="behTreeRidingManager.h" />
+    <ClInclude Include="behTreeScriptTicketAlgorithm.h" />
+    <ClInclude Include="behTreeStrafingAlgorithm.h" />
+    <ClInclude Include="behTreeDecoratorChangeBehaviorGraph.h" />
+    <ClInclude Include="behTreeDecoratorSetBehaviourVariable.h" />
+    <ClInclude Include="behTreeTicketAlgorithm.h" />
+    <ClInclude Include="behTreeTicketData.h" />
+    <ClInclude Include="buffImmunity.h" />
+    <ClInclude Include="build.h" />
+    <ClInclude Include="behTreeCluePathData.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="combatDataComponent.h" />
+    <ClInclude Include="comboAspect.h" />
+    <ClInclude Include="comboDefinition.h" />
+    <ClInclude Include="comboPlayer.h" />
+    <ClInclude Include="comboString.h" />
+    <ClInclude Include="commonMapManager.h" />
+    <ClInclude Include="customCameraCollision.h" />
+    <ClInclude Include="damageData.h" />
+    <ClInclude Include="dynamicClueStorage.h" />
+    <ClInclude Include="encounterMountedEntry.h" />
+    <ClInclude Include="encounterImpl.h" />
+    <ClInclude Include="fastSurround.h" />
+    <ClInclude Include="horseSteering.h" />
+    <ClInclude Include="mainMenuController.h" />
+    <ClInclude Include="profilerConsoleCommands.h" />
+    <ClInclude Include="questCombatManagerBlock.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="r4BehTreeVarEnums.h" />
+    <ClInclude Include="r4CameraDirector.h" />
+    <ClInclude Include="r4GlobalEventsScriptsDispatcher.h" />
+    <ClInclude Include="r4Kinect.h" />
+    <ClInclude Include="r4MapPinEntity.h" />
+    <ClInclude Include="r4LootManager.h" />
+    <ClInclude Include="r4MapTracking.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="r4MemoryBudgets.h" />
+    <ClInclude Include="r4PlayerTargeting.h" />
+    <ClInclude Include="r4PlayerTypes.h" />
+    <ClInclude Include="r4popup.h" />
+    <ClInclude Include="r4ReactionManager.h" />
+    <ClInclude Include="r4SecondScreenManager.h" />
+    <ClInclude Include="r4SecondScreenManagerScriptProxy.h" />
+    <ClInclude Include="r4Enums.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="rainActionPointSelector.h" />
+    <ClInclude Include="rangedWeapon.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="spawnTreeInitializerFlight.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="swarmCellMap.h" />
+    <ClInclude Include="swarmEnvironment.h" />
+    <ClInclude Include="ticketGlobalSource.h" />
+    <ClInclude Include="ticketSourceProvider.h" />
+    <ClInclude Include="toxicCloud.h" />
+    <ClInclude Include="tutorial.h" />
+    <ClInclude Include="volumePathManager.h" />
+    <ClInclude Include="flyingCritterAlgorithmData.h" />
+    <ClInclude Include="flyingCrittersAI.h" />
+    <ClInclude Include="flyingCrittersLairEntity.h" />
+    <ClInclude Include="flyingCrittersLairEntityScript.h" />
+    <ClInclude Include="flyingCrittersParams.h" />
+    <ClInclude Include="flyingCritterUpdateJob.h" />
+    <ClInclude Include="flyingPoiConfig.h" />
+    <ClInclude Include="flyingSwarmGroup.h" />
+    <ClInclude Include="focusModeController.h" />
+    <ClInclude Include="gameDebugMenu.h" />
+    <ClInclude Include="gameEngine.h" />
+    <ClInclude Include="gameplayEffectExecutor.h" />
+    <ClInclude Include="GameplayFXMedalion.h" />
+    <ClInclude Include="gameplayFXSurfacePost.h" />
+    <ClInclude Include="horseAnimNode.h" />
+    <ClInclude Include="horsePrediction.h" />
+    <ClInclude Include="humbleCritterAlgorithmData.h" />
+    <ClInclude Include="humbleCrittersLairEntity.h" />
+    <ClInclude Include="humbleCrittersAI.h" />
+    <ClInclude Include="humbleCritterSound.h" />
+    <ClInclude Include="humbleCritterUpdateJob.h" />
+    <ClInclude Include="journal.h" />
+    <ClInclude Include="journalCharacter.h" />
+    <ClInclude Include="journalCreature.h" />
+    <ClInclude Include="journalEvents.h" />
+    <ClInclude Include="journalGlossary.h" />
+    <ClInclude Include="journalItems.h" />
+    <ClInclude Include="journalQuest.h" />
+    <ClInclude Include="journalQuestBlock.h" />
+    <ClInclude Include="journalQuestHuntingBlock.h" />
+    <ClInclude Include="journalQuestMappinStateBlock.h" />
+    <ClInclude Include="journalQuestObjectiveCounterGraphBlock.h" />
+    <ClInclude Include="journalStoryBook.h" />
+    <ClInclude Include="journalTutorial.h" />
+    <ClInclude Include="manageSwitchBlock.h" />
+    <ClInclude Include="mapPinData.h" />
+    <ClInclude Include="EntityMappinsResource.h" />
+    <ClInclude Include="customCameraControllers.h" />
+    <ClInclude Include="customCamera.h" />
+    <ClInclude Include="monsterParam.h" />
+    <ClInclude Include="playerStateUseVehicle.h" />
+    <ClInclude Include="preAttackEvent.h" />
+    <ClInclude Include="questBehaviorCtrlBlock.h" />
+    <ClInclude Include="questBehaviorEventBlock.h" />
+    <ClInclude Include="questBehaviorNotificationBlock.h" />
+    <ClInclude Include="questBehaviorSocket.h" />
+    <ClInclude Include="questChangeWorldBlock.h" />
+    <ClInclude Include="questControlledNPC.h" />
+    <ClInclude Include="questManageFastTravelBlock.h" />
+    <ClInclude Include="questPlayAnimationBlock.h" />
+    <ClInclude Include="questUICondition.h" />
+    <ClInclude Include="questRiderScriptedActionsBlock.h" />
+    <ClInclude Include="questUsedFastTravelCondition.h" />
+    <ClInclude Include="r4.h" />
+    <ClInclude Include="r4AiParameters.h" />
+    <ClInclude Include="r4DebugDataService.h" />
+    <ClInclude Include="r4DebugDataServiceLogOutputDevice.h" />
+    <ClInclude Include="r4GuiManager.h" />
+    <ClInclude Include="r4Hud.h" />
+    <ClInclude Include="r4HudModule.h" />
+    <ClInclude Include="r4JournalManager.h" />
+    <ClInclude Include="r4Menu.h" />
+    <ClInclude Include="riderSpawnTreeInitializers.h" />
+    <ClInclude Include="ridingAiStorage.h" />
+    <ClInclude Include="r4BehTreeInstance.h" />
+    <ClInclude Include="r4LootDefinitions.h" />
+    <ClInclude Include="r4SwarmSound.h" />
+    <ClInclude Include="r4SwarmUtils.h" />
+    <ClInclude Include="r4Game.h" />
+    <ClInclude Include="r4GameResource.h" />
+    <ClInclude Include="r4NamesRegistry.h" />
+    <ClInclude Include="r4Player.h" />
+    <ClInclude Include="r4PlayerControlAction.h" />
+    <ClInclude Include="r4PlayerController.h" />
+    <ClInclude Include="r4PlayerLocomotionSegment.h" />
+    <ClInclude Include="r4QuestSystem.h" />
+    <ClInclude Include="r4BoidSpecies.h" />
+    <ClInclude Include="r4SystemOrder.h" />
+    <ClInclude Include="r4Telemetry.h" />
+    <ClInclude Include="r4TelemetryScriptProxy.h" />
+    <ClInclude Include="r4TypeRegistry.h" />
+    <ClInclude Include="enemiesCachedData.h" />
+    <ClInclude Include="steeringStrafing.h" />
+    <ClInclude Include="stepClipAnimationParam.h" />
+    <ClInclude Include="applySteeringToPlayer.h" />
+    <ClInclude Include="ticketSystem.h" />
+    <ClInclude Include="ticketSystemConfiguration.h" />
+    <ClInclude Include="vitalSpot.h" />
+    <ClInclude Include="w2saveImporter.h" />
+    <ClInclude Include="w3Boat.h" />
+    <ClInclude Include="w3GenericVehicle.h" />
+    <ClInclude Include="witcherSword.h" />
+    <ClInclude Include="worldMap.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="r4CommonStats.enum">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='No opts|Durango'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='No opts|ORBIS'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='No opts|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='No opts|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Durango'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ORBIS'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Final|Durango'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Final|ORBIS'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Final|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Durango'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseGame|Durango'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ORBIS'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseGame|ORBIS'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseGame|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseGame|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="r4Events.enum">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='No opts|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseGame|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Durango'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Final|Durango'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='No opts|Durango'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Durango'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseGame|Durango'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='No opts|ORBIS'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='No opts|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ORBIS'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Final|ORBIS'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Final|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ORBIS'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseGame|ORBIS'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseGame|x64'">true</ExcludedFromBuild>
+    </None>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.targets))\Shared.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

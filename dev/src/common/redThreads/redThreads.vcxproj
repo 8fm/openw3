@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" TreatAsLocalProperty="OutDir;TargetName;IntDir;PlatformToolset">
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedConfigurationSetup.props))\SharedConfigurationSetup.props" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{50404845-5499-4116-911C-55A575807EF6}</ProjectGuid>
+    <RootNamespace>redThreads</RootNamespace>
+    <ProjectName>redThreads</ProjectName>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <UsePrecompiledHeaders>false</UsePrecompiledHeaders>
+  </PropertyGroup>
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.props))\Shared.props" />
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedItemGroups.props))\SharedItemGroups.props" />
+  <ItemGroup>
+    <ClInclude Include="readWriteSpinLock.h" />
+    <ClInclude Include="redThreadsAtomic.h" />
+    <ClInclude Include="redThreadsCommon.h" />
+    <ClInclude Include="redThreadsPlatform.h" />
+    <ClInclude Include="redThreadsThread.h" />
+    <ClInclude Include="redThreadsThreadOrbisAPI.h" />
+    <ClInclude Include="redThreadsThreadWinAPI.h" />
+    <ClInclude Include="redThreadsTypes.h" />
+    <ClInclude Include="redThreadsRedSystem.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="redThreadsThread.cpp" />
+    <ClCompile Include="redThreadsThreadOrbisAPI.cpp" />
+    <ClCompile Include="redThreadsThreadWinAPI.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="readWriteSpinLock.inl" />
+    <None Include="redThreadsAtomic.inl" />
+    <None Include="redThreadsAtomicOrbisAPI.inl" />
+    <None Include="redThreadsAtomicWinAPI.inl" />
+    <None Include="redThreadsThread.inl" />
+    <None Include="redThreadsThreadOrbisAPI.inl" />
+    <None Include="redThreadsThreadWinAPI.inl" />
+  </ItemGroup>
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.targets))\Shared.targets" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="samples">
+      <UniqueIdentifier>{01C4E8A5-8A4C-B04D-84FE-7AC71D110195}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="samples\resources">
+      <UniqueIdentifier>{928EC2F1-85ED-E341-8C7C-44FE0325D84B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils">
+      <UniqueIdentifier>{47B8E47A-F262-4540-B0E6-F435F391A18C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils\visibilitycacher">
+      <UniqueIdentifier>{302A6A5E-219F-B04F-B30D-29E476B3186A}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\samples\resources\testkey.pfx">
+      <Filter>samples\resources</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\samples\resources\Logo.png">
+      <Filter>samples\resources</Filter>
+    </Image>
+    <Image Include="..\..\samples\resources\SmallLogo.png">
+      <Filter>samples\resources</Filter>
+    </Image>
+    <Image Include="..\..\samples\resources\SplashScreen.png">
+      <Filter>samples\resources</Filter>
+    </Image>
+    <Image Include="..\..\samples\resources\StoreLogo.png">
+      <Filter>samples\resources</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\utils\visibilitycacher\umbraVisibilityCacher.hpp">
+      <Filter>utils\visibilitycacher</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\utils\visibilitycacher\main.cpp">
+      <Filter>utils\visibilitycacher</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\utils\visibilitycacher\umbraVisibilityCacher.cpp">
+      <Filter>utils\visibilitycacher</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

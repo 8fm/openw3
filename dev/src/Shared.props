@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup Label="Configuration">
+    <PlatformToolset Condition="$(VisualStudioVersion) == 11.0">v110</PlatformToolset>
+    <PlatformToolset Condition="'$(Platform)'=='ORBIS'">Clang</PlatformToolset>
+    <UseDebugLibraries Condition="'$(Configuration)'=='Debug'">true</UseDebugLibraries>
+    <UseDebugLibraries Condition="'$(Configuration)'=='Game - Debug'">true</UseDebugLibraries>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Globals">
+    <ApplicationEnvironment Condition="'$(Platform)' == 'Durango'">title</ApplicationEnvironment>
+    <DefaultLanguage Condition="'$(Platform)' == 'Durango'">en-US</DefaultLanguage>
+  </PropertyGroup>
+
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+
+  <PropertyGroup>
+    <UseMinimalRebuild>false</UseMinimalRebuild>
+    <MPBuild>false</MPBuild>
+    <UseMinimalRebuild Condition="'$(ProjectCompileAsWinRT)'=='true'">false</UseMinimalRebuild>
+    <GeneratePDB Condition="'$(GeneratePDB)' == ''">true</GeneratePDB>
+    <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    <DebugInformationFormat Condition="'$(Configuration)'=='Release'">ProgramDatabase</DebugInformationFormat>
+    <DebugInformationFormat Condition="'$(Configuration)'=='Final'">ProgramDatabase</DebugInformationFormat>
+    <DebugInformationFormat Condition="'$(Platform)'=='x64'">ProgramDatabase</DebugInformationFormat>
+    <DebugInformationFormat Condition="'$(GeneratePDB)'=='false'">None</DebugInformationFormat>
+    <OutDir Condition="'$(ConfigurationType)' != 'StaticLibrary'">$(SolutionDir)..\..\bin\$(Platform)\</OutDir>
+    <OutDir Condition="'$(ConfigurationType)' == 'StaticLibrary'">$(SolutionDir)..\..\bin\$(Platform)\libs\$(ProjectName)\</OutDir>
+    <SharedPreprocessorDefines>_UNICODE;UNICODE;PROJECT_CONFIGURATION=$(Configuration);PROJECT_PLATFORM=$(Platform);</SharedPreprocessorDefines>
+    <SharedPreprocessorDefines Condition="'$(Configuration)'=='Final'">$(SharedPreprocessorDefines);RED_FINAL_BUILD;RED_CONFIGURATION_FINAL;NDEBUG;NO_SECUROM;NO_EDITOR;RELEASE</SharedPreprocessorDefines>
+    <SharedPreprocessorDefines Condition="'$(Configuration)'=='Profiling'">$(SharedPreprocessorDefines);RED_FINAL_BUILD;RED_CONFIGURATION_RELEASE;NDEBUG;NO_SECUROM;NO_EDITOR;RELEASE;RED_PROFILE_BUILD</SharedPreprocessorDefines>
+    <SharedPreprocessorDefines Condition="'$(Configuration)'=='FinalWithLogging'">$(SharedPreprocessorDefines);RED_FINAL_BUILD;RED_CONFIGURATION_FINAL;NDEBUG;NO_SECUROM;NO_EDITOR;RELEASE;LOG_IN_FINAL</SharedPreprocessorDefines>
+	
+	  <SharedPreprocessorDefines Condition="'$(Configuration)'=='Release'">$(SharedPreprocessorDefines);RED_CONFIGURATION_RELEASE;NDEBUG;NO_SECUROM;RELEASE;</SharedPreprocessorDefines>
+    <SharedPreprocessorDefines Condition="'$(Configuration)'=='No opts'">$(SharedPreprocessorDefines);RED_CONFIGURATION_NOPTS;NO_SECUROM;NDEBUG;</SharedPreprocessorDefines>
+    <SharedPreprocessorDefines Condition="'$(Configuration)'=='Debug'">$(SharedPreprocessorDefines);RED_CONFIGURATION_DEBUG;_DEBUG</SharedPreprocessorDefines>
+    <SharedPreprocessorDefines Condition="'$(Configuration)'=='ReleaseGame'">$(SharedPreprocessorDefines);RED_CONFIGURATION_RELEASEGAME;NO_EDITOR;NO_SECUROM;RELEASE;NDEBUG;</SharedPreprocessorDefines>
+    <SharedPreprocessorDefines Condition="'$(Platform)'=='x64'">$(SharedPreprocessorDefines);_WIN64;_WINDOWS;WIN32_LEAN_AND_MEAN</SharedPreprocessorDefines>
+    <SharedPreprocessorDefines Condition="'$(Platform)'=='Orbis'">$(SharedPreprocessorDefines);__PS4__;AK_PS4;NO_EDITOR</SharedPreprocessorDefines>
+    <SharedPreprocessorDefines Condition="'$(Platform)'=='Durango'">$(SharedPreprocessorDefines);_DURANGO;_XBOX_ONE;XBOXONE;WINAPI_FAMILY=WINAPI_FAMILY_TV_TITLE;WIN32_LEAN_AND_MEAN;NO_EDITOR</SharedPreprocessorDefines>
+    <SharedPreprocessorDefines Condition="'$(ConfigurationType)' == 'StaticLibrary'">$(SharedPreprocessorDefines);_LIB</SharedPreprocessorDefines>
+    <SharedPreprocessorDefines Condition="'$(Configuration)|$(Platform)'=='No opts|ORBIS'">$(SharedPreprocessorDefines);SCE_GNM_DEBUG</SharedPreprocessorDefines>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <IntDir>$(SolutionDir)..\..\temp\$(Platform).$(Configuration)\$(ProjectName)\</IntDir>
+    <TargetName>$(ProjectName).$(Configuration)</TargetName>
+    <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
+    <LocalDebuggerWorkingDirectory>$(OutDir)</LocalDebuggerWorkingDirectory>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)'=='Release'">
+    <TargetName>$(ProjectName)</TargetName>
+  </PropertyGroup>
+
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+
+  <PropertyGroup Condition="'$(Platform)' == 'Orbis'">
+    <OutDir Condition="'$(ConfigurationType)' != 'StaticLibrary'">$(SolutionDir)..\..\bin\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(ConfigurationType)' == 'StaticLibrary'">$(SolutionDir)..\..\bin\$(Platform)\libs\$(ProjectName)\</OutDir>
+    <TargetExt Condition="'$(ConfigurationType)' == 'StaticLibrary'">.a</TargetExt>
+    <TargetExt Condition="'$(ConfigurationType)' == 'Application'">.elf</TargetExt>
+  </PropertyGroup>
+  
+  <PropertyGroup Condition="'$(Platform)'=='x64'">
+    <!-- The 64 bit tracking framework is required for the x64 toolset (please read this: https://connect.microsoft.com/VisualStudio/feedback/details/505682/x64-c-c-projects-cannot-compile) -->
+    <CLTrackerFrameworkPath>C:\Windows\Microsoft.NET\Framework64\v4.0.30319\</CLTrackerFrameworkPath>
+    <CLTrackerSdkPath>C:\Program Files (x86)\Microsoft SDKs\Windows\v8.1A\bin\NETFX 4.5.1 Tools\x64\</CLTrackerSdkPath>
+    <LibTrackerFrameworkPath>C:\Windows\Microsoft.NET\Framework64\v4.0.30319\</LibTrackerFrameworkPath>
+    <LibTrackerSdkPath>C:\Program Files (x86)\Microsoft SDKs\Windows\v8.1A\bin\NETFX 4.5.1 Tools\x64\</LibTrackerSdkPath>
+    <LinkTrackerFrameworkPath>C:\Windows\Microsoft.NET\Framework64\v4.0.30319\</LinkTrackerFrameworkPath>
+    <LinkTrackerSdkPath>C:\Program Files (x86)\Microsoft SDKs\Windows\v8.1A\bin\NETFX 4.5.1 Tools\x64\</LinkTrackerSdkPath>
+    <RCTrackerFrameworkPath>C:\Windows\Microsoft.NET\Framework64\v4.0.30319\</RCTrackerFrameworkPath>
+    <RCTrackerSdkPath>C:\Program Files (x86)\Microsoft SDKs\Windows\v8.1A\bin\NETFX 4.5.1 Tools\x64\</RCTrackerSdkPath>
+    <ExecutablePath>$(VCInstallDir)bin\amd64;$(VCInstallDir)bin;$(WindowsSdkDir)bin\NETFX 4.0 Tools;$(ProgramFiles)\Windows Kits\8.1\bin\x64;$(VSInstallDir)Common7\Tools\bin;$(VSInstallDir)Common7\tools;$(VSInstallDir)Common7\ide;$(ProgramFiles)\HTML Help Workshop;$(FrameworkSDKDir)\bin;$(MSBuildToolsPath32);$(VSInstallDir);$(SystemRoot)\SysWow64;$(FxCopDir);$(PATH)</ExecutablePath>
+    <IncludePath>$(ProgramFiles)\Windows Kits\8.1\Include\um;$(ProgramFiles)\Windows Kits\8.1\Include\shared;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(FrameworkSDKDir)\include;</IncludePath>
+    <LibraryPath>$(VCInstallDir)lib\amd64;$(VCInstallDir)atlmfc\lib\amd64;$(ProgramFiles)\Windows Kits\8.1\lib\winv6.3\um\x64;$(FrameworkSDKDir)\lib\x64</LibraryPath>
+    <ExcludePath>$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(ProgramFiles)\Windows Kits\8.1\Include\um;$(ProgramFiles)\Windows Kits\8.1\Include\shared;$(FrameworkSDKDir)\include;$(MSBuildToolsPath32);$(VCInstallDir)atlmfc\lib;$(VCInstallDir)lib;</ExcludePath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Platform)' == 'Durango'">
+    <LayoutDir>$(Platform)\Layout\$(Configuration)</LayoutDir>
+    <OutDir>$(SolutionDir)..\..\bin\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(ConfigurationType)' == 'Application'">$(SolutionDir)..\..\bin\$(Platform)\$(Configuration)\$(ProjectName)\</OutDir>
+    <ReferencePath>$(Console_SdkLibPath);$(Console_SdkWindowsMetadataPath)</ReferencePath>
+    <LibraryPath>$(Console_SdkLibPath)</LibraryPath>
+    <LibraryWPath>$(Console_SdkLibPath);$(Console_SdkWindowsMetadataPath)</LibraryWPath>
+    <IncludePath>$(Console_SdkIncludeRoot)</IncludePath>
+    <ExecutablePath>$(Console_SdkRoot)bin;$(VCInstallDir)bin\x86_amd64;$(VCInstallDir)bin;$(WindowsSDK_ExecutablePath_x86);$(VSInstallDir)Common7\Tools\bin;$(VSInstallDir)Common7\tools;$(VSInstallDir)Common7\ide;$(ProgramFiles)\HTML Help Workshop;$(MSBuildToolsPath32);$(FxCopDir);$(PATH);</ExecutablePath>
+    <DurangoAdditionalUsingDirectories>$(Console_SdkPackagesRoot);$(Console_SdkWindowsMetadataPath)</DurangoAdditionalUsingDirectories>
+    <DurangoAdditionalDependencies>d3d11.lib;combase.lib;kernelx.lib;uuid.lib</DurangoAdditionalDependencies>
+    <PullMappingFile>pullMappingFile.xml</PullMappingFile>
+    <PullTemporaryFolder />
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <LocalDebuggerWorkingDirectory>$(OutDir)</LocalDebuggerWorkingDirectory>
+    <LocalDebuggerWorkingDirectory Condition="'$(Platform)' == 'Orbis'">$(SolutionDir)..\..\</LocalDebuggerWorkingDirectory>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <GenerateManifest>false</GenerateManifest>
+    <EmbedManifest>false</EmbedManifest>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)'=='Release'">
+    <LinkIncremental>true</LinkIncremental>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)'=='ReleaseGame'">
+    <LinkIncremental>true</LinkIncremental>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)'=='Profiling'">
+    <LinkIncremental>true</LinkIncremental>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)'=='Final'">
+    <LinkIncremental>true</LinkIncremental>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)'=='FinalWithLogging'">
+    <LinkIncremental>true</LinkIncremental>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)'=='No opts'">
+    <LinkIncremental>true</LinkIncremental>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)'=='Debug'">
+    <LinkIncremental>true</LinkIncremental>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+
+</Project>

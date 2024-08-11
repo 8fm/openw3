@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="utils">
+      <UniqueIdentifier>{4CBCE4BD-9973-A542-80DA-9AAC78D8C7BF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils\debugger">
+      <UniqueIdentifier>{4405A71D-33BE-6F46-9281-573C45F6AF7B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils\debugger\engine">
+      <UniqueIdentifier>{9D903644-AA42-774F-9FDC-E58A38A60B08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils\debugger\renderer">
+      <UniqueIdentifier>{D81F5BAF-2822-554E-9520-082970D53C75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils\debugger\renderer\opengl">
+      <UniqueIdentifier>{B6D960A0-818D-0046-9615-3300E77C62D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils\debugger\scripter">
+      <UniqueIdentifier>{583E5723-8937-2C43-B289-5F4076D66649}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils\debugger\scripter\squirrel">
+      <UniqueIdentifier>{E2C7473C-88CC-3E46-933E-30D0ED365DBF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils\debugger\squirrel">
+      <UniqueIdentifier>{E3B603B8-F24F-1C4D-9404-12FC53F50204}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils\debugger\renderer\opengl\glsl">
+      <UniqueIdentifier>{E5FA4ABC-BD65-134A-9CDA-02395FE5EAA0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\utils\debugger\squirrel\DebuggerModule.nut">
+      <Filter>utils\debugger\squirrel</Filter>
+    </None>
+    <None Include="..\..\utils\debugger\squirrel\fpsCamera.nut">
+      <Filter>utils\debugger\squirrel</Filter>
+    </None>
+    <None Include="..\..\utils\debugger\squirrel\freeCamera.nut">
+      <Filter>utils\debugger\squirrel</Filter>
+    </None>
+    <None Include="..\..\utils\debugger\squirrel\view.nut">
+      <Filter>utils\debugger\squirrel</Filter>
+    </None>
+    <None Include="..\..\utils\debugger\renderer\opengl\glsl\gui.vert">
+      <Filter>utils\debugger\renderer\opengl\glsl</Filter>
+    </None>
+    <None Include="..\..\utils\debugger\renderer\opengl\glsl\scene.vert">
+      <Filter>utils\debugger\renderer\opengl\glsl</Filter>
+    </None>
+    <None Include="..\..\utils\debugger\renderer\opengl\glsl\ssao.vert">
+      <Filter>utils\debugger\renderer\opengl\glsl</Filter>
+    </None>
+    <None Include="..\..\utils\debugger\renderer\opengl\glsl\gui.frag">
+      <Filter>utils\debugger\renderer\opengl\glsl</Filter>
+    </None>
+    <None Include="..\..\utils\debugger\renderer\opengl\glsl\scene.frag">
+      <Filter>utils\debugger\renderer\opengl\glsl</Filter>
+    </None>
+    <None Include="..\..\utils\debugger\renderer\opengl\glsl\ssao.frag">
+      <Filter>utils\debugger\renderer\opengl\glsl</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\utils\debugger\engine\AspectRatio.hpp">
+      <Filter>utils\debugger\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\utils\debugger\engine\Callbacks.hpp">
+      <Filter>utils\debugger\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\utils\debugger\engine\Camera.hpp">
+      <Filter>utils\debugger\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\utils\debugger\engine\CameraManager.hpp">
+      <Filter>utils\debugger\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\utils\debugger\engine\DebuggerModule.hpp">
+      <Filter>utils\debugger\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\utils\debugger\engine\DebuggerModuleEvents.hpp">
+      <Filter>utils\debugger\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\utils\debugger\engine\DebuggerScene.hpp">
+      <Filter>utils\debugger\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\utils\debugger\engine\Engine.hpp">
+      <Filter>utils\debugger\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\utils\debugger\engine\Input.hpp">
+      <Filter>utils\debugger\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\utils\debugger\engine\InputEnum.hpp">
+      <Filter>utils\debugger\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\utils\debugger\engine\Loggers.hpp">
+      <Filter>utils\debugger\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\utils\debugger\engine\SearchPath.hpp">
+      <Filter>utils\debugger\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\utils\debugger\engine\Serializer.hpp">
+      <Filter>utils\debugger\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\utils\debugger\engine\Signals.hpp">
+      <Filter>utils\debugger\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\utils\debugger\engine\TestingManager.hpp">
+      <Filter>utils\debugger\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\utils\debugger\engine\TomeManager.hpp">
+      <Filter>utils\debugger\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\utils\debugger\engine\Viewport.hpp">
+      <Filter>utils\debugger\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\utils\debugger\engine\ViewportVisualizations.hpp">
+      <Filter>utils\debugger\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\utils\debugger\engine\Visualization.hpp">
+      <Filter>utils\debugger\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\utils\debugger\renderer\defaultfont.hpp">
+      <Filter>utils\debugger\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\utils\debugger\renderer\defaultskin.hpp">
+      <Filter>utils\debugger\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\utils\debugger\renderer\Glew.hpp">
+      <Filter>utils\debugger\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\utils\debugger\renderer\Renderer.hpp">
+      <Filter>utils\debugger\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\utils\debugger\renderer\opengl\GlfwInput.hpp">
+      <Filter>utils\debugger\renderer\opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\utils\debugger\renderer\opengl\ShaderCache.hpp">
+      <Filter>utils\debugger\renderer\opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\utils\debugger\scripter\Scripter.hpp">
+      <Filter>utils\debugger\scripter</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\utils\debugger\engine\AspectRatio.cpp">
+      <Filter>utils\debugger\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\engine\Camera.cpp">
+      <Filter>utils\debugger\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\engine\CameraManager.cpp">
+      <Filter>utils\debugger\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\engine\DebuggerModule.cpp">
+      <Filter>utils\debugger\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\engine\DebuggerScene.cpp">
+      <Filter>utils\debugger\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\engine\Engine.cpp">
+      <Filter>utils\debugger\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\engine\HighlightVisualizations.cpp">
+      <Filter>utils\debugger\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\engine\Input.cpp">
+      <Filter>utils\debugger\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\engine\Loggers.cpp">
+      <Filter>utils\debugger\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\engine\Serializer.cpp">
+      <Filter>utils\debugger\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\engine\TestingManager.cpp">
+      <Filter>utils\debugger\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\engine\TomeManager.cpp">
+      <Filter>utils\debugger\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\engine\Viewport.cpp">
+      <Filter>utils\debugger\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\engine\Visualization.cpp">
+      <Filter>utils\debugger\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\renderer\Glew.cpp">
+      <Filter>utils\debugger\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\renderer\Renderer.cpp">
+      <Filter>utils\debugger\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\renderer\opengl\GlfwInput.cpp">
+      <Filter>utils\debugger\renderer\opengl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\renderer\opengl\OpenGLGwenRenderer.cpp">
+      <Filter>utils\debugger\renderer\opengl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\renderer\opengl\OpenGLSceneRenderer.cpp">
+      <Filter>utils\debugger\renderer\opengl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\renderer\opengl\OpenGLWindow.cpp">
+      <Filter>utils\debugger\renderer\opengl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\renderer\opengl\ShaderCache.cpp">
+      <Filter>utils\debugger\renderer\opengl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\scripter\squirrel\bind.cpp">
+      <Filter>utils\debugger\scripter\squirrel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\scripter\squirrel\SquirrelScripter.cpp">
+      <Filter>utils\debugger\scripter\squirrel</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

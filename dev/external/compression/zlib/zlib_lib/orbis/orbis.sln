@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "orbis", "orbis.vcxproj", "{68F4B6B8-CABE-420C-874A-136F6DB29CD6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ORBIS = Debug|ORBIS
+		Final|ORBIS = Final|ORBIS
+		No opts|ORBIS = No opts|ORBIS
+		Release|ORBIS = Release|ORBIS
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{68F4B6B8-CABE-420C-874A-136F6DB29CD6}.Debug|ORBIS.ActiveCfg = Debug|ORBIS
+		{68F4B6B8-CABE-420C-874A-136F6DB29CD6}.Debug|ORBIS.Build.0 = Debug|ORBIS
+		{68F4B6B8-CABE-420C-874A-136F6DB29CD6}.Final|ORBIS.ActiveCfg = Final|ORBIS
+		{68F4B6B8-CABE-420C-874A-136F6DB29CD6}.Final|ORBIS.Build.0 = Final|ORBIS
+		{68F4B6B8-CABE-420C-874A-136F6DB29CD6}.No opts|ORBIS.ActiveCfg = No opts|ORBIS
+		{68F4B6B8-CABE-420C-874A-136F6DB29CD6}.No opts|ORBIS.Build.0 = No opts|ORBIS
+		{68F4B6B8-CABE-420C-874A-136F6DB29CD6}.Release|ORBIS.ActiveCfg = Release|ORBIS
+		{68F4B6B8-CABE-420C-874A-136F6DB29CD6}.Release|ORBIS.Build.0 = Release|ORBIS
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

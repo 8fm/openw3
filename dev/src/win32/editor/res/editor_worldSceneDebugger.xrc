@@ -1,0 +1,1799 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<resource xmlns="http://www.wxwindows.org/wxxrc" version="2.3.0.1">
+	<object class="wxFrame" name="WorldSceneDebuggerFrame">
+		<style>wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL</style>
+		<size>800,600</size>
+		<title>World scene debugger</title>
+		<centered>1</centered>
+		<aui_managed>0</aui_managed>
+		<object class="wxMenuBar" name="menubar">
+			<label>MyMenuBar</label>
+			<object class="wxMenu" name="actionsMenu">
+				<label>Actions</label>
+				<object class="wxMenuItem" name="refreshData">
+					<label>Refresh data</label>
+					<help></help>
+				</object>
+				<object class="wxMenuItem" name="saveAsCSV">
+					<label>Save as CSV</label>
+					<help></help>
+				</object>
+				<object class="wxMenuItem" name="scrollToSelectedEntity">
+					<label>Scroll to selected entity</label>
+					<help></help>
+				</object>
+			</object>
+		</object>
+		<object class="wxNotebook" name="modeNotebook">
+			<object class="notebookpage">
+				<label>Memory</label>
+				<selected>0</selected>
+				<object class="wxPanel" name="memoryPanel">
+					<style>wxTAB_TRAVERSAL</style>
+					<object class="wxBoxSizer">
+						<orient>wxVERTICAL</orient>
+						<object class="sizeritem">
+							<option>1</option>
+							<flag>wxEXPAND | wxALL</flag>
+							<border>5</border>
+							<object class="wxNotebook" name="notebook">
+								<object class="notebookpage">
+									<label>Entities</label>
+									<selected>1</selected>
+									<object class="wxPanel" name="entitiesPanel">
+										<style>wxTAB_TRAVERSAL</style>
+										<object class="wxBoxSizer">
+											<orient>wxVERTICAL</orient>
+											<object class="sizeritem">
+												<option>0</option>
+												<flag>wxEXPAND</flag>
+												<border>5</border>
+												<object class="wxBoxSizer">
+													<orient>wxHORIZONTAL</orient>
+													<object class="sizeritem">
+														<option>1</option>
+														<flag>wxEXPAND</flag>
+														<border>5</border>
+														<object class="wxStaticBoxSizer">
+															<orient>wxVERTICAL</orient>
+															<label>General info</label>
+															<object class="sizeritem">
+																<option>0</option>
+																<flag>wxEXPAND</flag>
+																<border>5</border>
+																<object class="wxBoxSizer">
+																	<orient>wxVERTICAL</orient>
+																	<object class="sizeritem">
+																		<option>1</option>
+																		<flag>wxEXPAND</flag>
+																		<border>5</border>
+																		<object class="wxBoxSizer">
+																			<orient>wxHORIZONTAL</orient>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+																				<border>0</border>
+																				<object class="wxStaticText" name="m_staticText162">
+																					<label>Potential duplicate entities: </label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+																				<border>0</border>
+																				<object class="wxStaticText" name="duplicateEntitiesCount">
+																					<font>
+																						<family>default</family>
+																						<style>normal</style>
+																						<weight>bold</weight>
+																						<underlined>0</underlined>
+																					</font>
+																					<label>0</label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																		</object>
+																	</object>
+																	<object class="spacer">
+																		<option>0</option>
+																		<flag></flag>
+																		<border>5</border>
+																		<size>0,5</size>
+																	</object>
+																	<object class="sizeritem">
+																		<option>1</option>
+																		<flag>wxEXPAND</flag>
+																		<border>5</border>
+																		<object class="wxBoxSizer">
+																			<orient>wxHORIZONTAL</orient>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																				<border>0</border>
+																				<object class="wxStaticText" name="m_staticText163">
+																					<label>Total different entities: </label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																				<border>0</border>
+																				<object class="wxStaticText" name="differentEntitiesCount">
+																					<font>
+																						<family>default</family>
+																						<style>normal</style>
+																						<weight>bold</weight>
+																						<underlined>0</underlined>
+																					</font>
+																					<label>0</label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																		</object>
+																	</object>
+																	<object class="sizeritem">
+																		<option>1</option>
+																		<flag>wxEXPAND</flag>
+																		<border>5</border>
+																		<object class="wxBoxSizer">
+																			<orient>wxHORIZONTAL</orient>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																				<border>0</border>
+																				<object class="wxStaticText" name="m_staticText1612">
+																					<label>Total different entities data: </label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																				<border>0</border>
+																				<object class="wxStaticText" name="differentEntitiesDataCount">
+																					<font>
+																						<family>default</family>
+																						<style>normal</style>
+																						<weight>bold</weight>
+																						<underlined>0</underlined>
+																					</font>
+																					<label>0</label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																				<border>0</border>
+																				<object class="wxStaticText" name="m_staticText5521">
+																					<label> MB</label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																		</object>
+																	</object>
+																	<object class="spacer">
+																		<option>0</option>
+																		<flag></flag>
+																		<border>5</border>
+																		<size>0,5</size>
+																	</object>
+																	<object class="sizeritem">
+																		<option>1</option>
+																		<flag>wxEXPAND</flag>
+																		<border>5</border>
+																		<object class="wxBoxSizer">
+																			<orient>wxHORIZONTAL</orient>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																				<border>0</border>
+																				<object class="wxStaticText" name="m_staticText16112">
+																					<label>Total different entities occuring once: </label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																				<border>0</border>
+																				<object class="wxStaticText" name="differentEntitiesOccuringOnceCount">
+																					<font>
+																						<family>default</family>
+																						<style>normal</style>
+																						<weight>bold</weight>
+																						<underlined>0</underlined>
+																					</font>
+																					<label>0</label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																		</object>
+																	</object>
+																	<object class="sizeritem">
+																		<option>1</option>
+																		<flag>wxEXPAND</flag>
+																		<border>5</border>
+																		<object class="wxBoxSizer">
+																			<orient>wxHORIZONTAL</orient>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																				<border>0</border>
+																				<object class="wxStaticText" name="m_staticText161111">
+																					<label>Total different data in entities occuring once: </label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																				<border>0</border>
+																				<object class="wxStaticText" name="differentDataInEntitiesOccuringOnceCount">
+																					<font>
+																						<family>default</family>
+																						<style>normal</style>
+																						<weight>bold</weight>
+																						<underlined>0</underlined>
+																					</font>
+																					<label>0</label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																				<border>0</border>
+																				<object class="wxStaticText" name="m_staticText5531">
+																					<label> MB</label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																		</object>
+																	</object>
+																</object>
+															</object>
+														</object>
+													</object>
+													<object class="sizeritem">
+														<option>0</option>
+														<flag>wxRIGHT|wxLEFT</flag>
+														<border>5</border>
+														<object class="wxStaticBoxSizer">
+															<orient>wxVERTICAL</orient>
+															<label>Thumbnail</label>
+															<object class="sizeritem">
+																<option>0</option>
+																<flag></flag>
+																<border>5</border>
+																<object class="wxStaticBitmap" name="m_entityThumbnailImage">
+																	<size>128,128</size>
+																	<bitmap />
+																</object>
+															</object>
+														</object>
+													</object>
+												</object>
+											</object>
+											<object class="sizeritem">
+												<option>1</option>
+												<flag>wxEXPAND</flag>
+												<border>5</border>
+												<object class="wxBoxSizer">
+													<orient>wxHORIZONTAL</orient>
+													<object class="sizeritem">
+														<option>1</option>
+														<flag>wxALL|wxEXPAND</flag>
+														<border>5</border>
+														<object class="wxGrid" name="entitiesGrid" />
+													</object>
+												</object>
+											</object>
+										</object>
+									</object>
+								</object>
+								<object class="notebookpage">
+									<label>Meshes</label>
+									<selected>0</selected>
+									<object class="wxPanel" name="meshesPanel">
+										<style>wxTAB_TRAVERSAL</style>
+										<object class="wxBoxSizer">
+											<orient>wxVERTICAL</orient>
+											<object class="sizeritem">
+												<option>0</option>
+												<flag>wxEXPAND</flag>
+												<border>5</border>
+												<object class="wxBoxSizer">
+													<orient>wxHORIZONTAL</orient>
+													<object class="sizeritem">
+														<option>1</option>
+														<flag>wxEXPAND</flag>
+														<border>5</border>
+														<object class="wxStaticBoxSizer">
+															<orient>wxVERTICAL</orient>
+															<label>General info</label>
+															<object class="sizeritem">
+																<option>0</option>
+																<flag>wxEXPAND</flag>
+																<border>5</border>
+																<object class="wxBoxSizer">
+																	<orient>wxVERTICAL</orient>
+																	<object class="sizeritem">
+																		<option>1</option>
+																		<flag>wxEXPAND</flag>
+																		<border>5</border>
+																		<object class="wxBoxSizer">
+																			<orient>wxHORIZONTAL</orient>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																				<border>0</border>
+																				<object class="wxStaticText" name="m_staticText1">
+																					<label>Total different meshes: </label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																				<border>0</border>
+																				<object class="wxStaticText" name="differentMeshesCount">
+																					<font>
+																						<family>default</family>
+																						<style>normal</style>
+																						<weight>bold</weight>
+																						<underlined>0</underlined>
+																					</font>
+																					<label>0</label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																		</object>
+																	</object>
+																	<object class="sizeritem">
+																		<option>1</option>
+																		<flag>wxEXPAND</flag>
+																		<border>5</border>
+																		<object class="wxBoxSizer">
+																			<orient>wxHORIZONTAL</orient>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																				<border>0</border>
+																				<object class="wxStaticText" name="m_staticText11">
+																					<label>Total different chunks: </label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																				<border>0</border>
+																				<object class="wxStaticText" name="differentChunksCount">
+																					<font>
+																						<family>default</family>
+																						<style>normal</style>
+																						<weight>bold</weight>
+																						<underlined>0</underlined>
+																					</font>
+																					<label>0</label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																		</object>
+																	</object>
+																	<object class="sizeritem">
+																		<option>1</option>
+																		<flag>wxEXPAND</flag>
+																		<border>5</border>
+																		<object class="wxBoxSizer">
+																			<orient>wxHORIZONTAL</orient>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																				<border>0</border>
+																				<object class="wxStaticText" name="m_staticText12">
+																					<label>Total different mesh data: </label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																				<border>0</border>
+																				<object class="wxStaticText" name="differentMeshesDataCount">
+																					<font>
+																						<family>default</family>
+																						<style>normal</style>
+																						<weight>bold</weight>
+																						<underlined>0</underlined>
+																					</font>
+																					<label>0</label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																				<border>0</border>
+																				<object class="wxStaticText" name="m_staticText55">
+																					<label> MB</label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																		</object>
+																	</object>
+																	<object class="spacer">
+																		<option>0</option>
+																		<flag></flag>
+																		<border>5</border>
+																		<size>0,5</size>
+																	</object>
+																	<object class="sizeritem">
+																		<option>1</option>
+																		<flag>wxEXPAND</flag>
+																		<border>5</border>
+																		<object class="wxBoxSizer">
+																			<orient>wxHORIZONTAL</orient>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																				<border>0</border>
+																				<object class="wxStaticText" name="m_staticText13">
+																					<label>Total different meshes occuring once: </label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																				<border>0</border>
+																				<object class="wxStaticText" name="differentMeshesOccuringOnceCount">
+																					<font>
+																						<family>default</family>
+																						<style>normal</style>
+																						<weight>bold</weight>
+																						<underlined>0</underlined>
+																					</font>
+																					<label>0</label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																		</object>
+																	</object>
+																	<object class="sizeritem">
+																		<option>1</option>
+																		<flag>wxEXPAND</flag>
+																		<border>5</border>
+																		<object class="wxBoxSizer">
+																			<orient>wxHORIZONTAL</orient>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																				<border>0</border>
+																				<object class="wxStaticText" name="m_staticText14">
+																					<label>Total different chunks in meshes occuring once: </label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																				<border>0</border>
+																				<object class="wxStaticText" name="differentChunksInMeshesOccuringOnceCount">
+																					<font>
+																						<family>default</family>
+																						<style>normal</style>
+																						<weight>bold</weight>
+																						<underlined>0</underlined>
+																					</font>
+																					<label>0</label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																		</object>
+																	</object>
+																	<object class="sizeritem">
+																		<option>1</option>
+																		<flag>wxEXPAND</flag>
+																		<border>5</border>
+																		<object class="wxBoxSizer">
+																			<orient>wxHORIZONTAL</orient>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																				<border>0</border>
+																				<object class="wxStaticText" name="m_staticText15">
+																					<label>Total different mesh data in meshes occuring once: </label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																				<border>0</border>
+																				<object class="wxStaticText" name="differentMeshDataInMeshesOccuringOnceCount">
+																					<font>
+																						<family>default</family>
+																						<style>normal</style>
+																						<weight>bold</weight>
+																						<underlined>0</underlined>
+																					</font>
+																					<label>0</label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																				<border>0</border>
+																				<object class="wxStaticText" name="m_staticText551">
+																					<label> MB</label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																		</object>
+																	</object>
+																</object>
+															</object>
+														</object>
+													</object>
+													<object class="sizeritem">
+														<option>0</option>
+														<flag>wxRIGHT|wxLEFT</flag>
+														<border>5</border>
+														<object class="wxStaticBoxSizer">
+															<orient>wxVERTICAL</orient>
+															<label>Thumbnail</label>
+															<object class="sizeritem">
+																<option>0</option>
+																<flag></flag>
+																<border>5</border>
+																<object class="wxStaticBitmap" name="m_meshThumbnailImage">
+																	<size>128,128</size>
+																	<bitmap />
+																</object>
+															</object>
+														</object>
+													</object>
+												</object>
+											</object>
+											<object class="sizeritem">
+												<option>1</option>
+												<flag>wxEXPAND</flag>
+												<border>5</border>
+												<object class="wxBoxSizer">
+													<orient>wxVERTICAL</orient>
+													<object class="sizeritem">
+														<option>1</option>
+														<flag>wxALL|wxEXPAND</flag>
+														<border>5</border>
+														<object class="wxGrid" name="meshesGrid" />
+													</object>
+												</object>
+											</object>
+										</object>
+									</object>
+								</object>
+								<object class="notebookpage">
+									<label>Textures</label>
+									<selected>0</selected>
+									<object class="wxPanel" name="texturesPanel">
+										<style>wxTAB_TRAVERSAL</style>
+										<object class="wxBoxSizer">
+											<orient>wxVERTICAL</orient>
+											<object class="sizeritem">
+												<option>0</option>
+												<flag>wxEXPAND</flag>
+												<border>5</border>
+												<object class="wxBoxSizer">
+													<orient>wxHORIZONTAL</orient>
+													<object class="sizeritem">
+														<option>1</option>
+														<flag>wxEXPAND</flag>
+														<border>5</border>
+														<object class="wxStaticBoxSizer">
+															<orient>wxVERTICAL</orient>
+															<label>General info</label>
+															<object class="sizeritem">
+																<option>0</option>
+																<flag>wxEXPAND</flag>
+																<border>5</border>
+																<object class="wxBoxSizer">
+																	<orient>wxVERTICAL</orient>
+																	<object class="sizeritem">
+																		<option>1</option>
+																		<flag>wxEXPAND</flag>
+																		<border>5</border>
+																		<object class="wxBoxSizer">
+																			<orient>wxHORIZONTAL</orient>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																				<border>0</border>
+																				<object class="wxStaticText" name="m_staticText16">
+																					<label>Total different textures: </label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																				<border>0</border>
+																				<object class="wxStaticText" name="differentTexturesCount">
+																					<font>
+																						<family>default</family>
+																						<style>normal</style>
+																						<weight>bold</weight>
+																						<underlined>0</underlined>
+																					</font>
+																					<label>0</label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																		</object>
+																	</object>
+																	<object class="sizeritem">
+																		<option>1</option>
+																		<flag>wxEXPAND</flag>
+																		<border>5</border>
+																		<object class="wxBoxSizer">
+																			<orient>wxHORIZONTAL</orient>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																				<border>0</border>
+																				<object class="wxStaticText" name="m_staticText161">
+																					<label>Total different texture data: </label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																				<border>0</border>
+																				<object class="wxStaticText" name="differentTexturesDataCount">
+																					<font>
+																						<family>default</family>
+																						<style>normal</style>
+																						<weight>bold</weight>
+																						<underlined>0</underlined>
+																					</font>
+																					<label>0</label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL</flag>
+																				<border>0</border>
+																				<object class="wxStaticText" name="m_staticText552">
+																					<label> MB</label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																		</object>
+																	</object>
+																	<object class="spacer">
+																		<option>0</option>
+																		<flag></flag>
+																		<border>5</border>
+																		<size>0,5</size>
+																	</object>
+																	<object class="sizeritem">
+																		<option>1</option>
+																		<flag>wxEXPAND</flag>
+																		<border>5</border>
+																		<object class="wxBoxSizer">
+																			<orient>wxHORIZONTAL</orient>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																				<border>0</border>
+																				<object class="wxStaticText" name="m_staticText1611">
+																					<label>Total different texture occuring once: </label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																				<border>0</border>
+																				<object class="wxStaticText" name="differentTextureOccuringOnceCount">
+																					<font>
+																						<family>default</family>
+																						<style>normal</style>
+																						<weight>bold</weight>
+																						<underlined>0</underlined>
+																					</font>
+																					<label>0</label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																		</object>
+																	</object>
+																	<object class="sizeritem">
+																		<option>1</option>
+																		<flag>wxEXPAND</flag>
+																		<border>5</border>
+																		<object class="wxBoxSizer">
+																			<orient>wxHORIZONTAL</orient>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																				<border>0</border>
+																				<object class="wxStaticText" name="m_staticText16111">
+																					<label>Total different data in textures occuring once: </label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																				<border>0</border>
+																				<object class="wxStaticText" name="differentDataInTextureOccuringOnceCount">
+																					<font>
+																						<family>default</family>
+																						<style>normal</style>
+																						<weight>bold</weight>
+																						<underlined>0</underlined>
+																					</font>
+																					<label>0</label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL</flag>
+																				<border>0</border>
+																				<object class="wxStaticText" name="m_staticText553">
+																					<label> MB</label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																		</object>
+																	</object>
+																</object>
+															</object>
+														</object>
+													</object>
+													<object class="sizeritem">
+														<option>0</option>
+														<flag>wxRIGHT|wxLEFT</flag>
+														<border>5</border>
+														<object class="wxStaticBoxSizer">
+															<orient>wxVERTICAL</orient>
+															<label>Thumbnail</label>
+															<object class="sizeritem">
+																<option>0</option>
+																<flag></flag>
+																<border>5</border>
+																<object class="wxStaticBitmap" name="m_textureThumbnailImage">
+																	<size>128,128</size>
+																	<bitmap />
+																</object>
+															</object>
+														</object>
+													</object>
+												</object>
+											</object>
+											<object class="sizeritem">
+												<option>1</option>
+												<flag>wxEXPAND</flag>
+												<border>5</border>
+												<object class="wxBoxSizer">
+													<orient>wxVERTICAL</orient>
+													<object class="sizeritem">
+														<option>1</option>
+														<flag>wxALL|wxEXPAND</flag>
+														<border>5</border>
+														<object class="wxGrid" name="texturesGrid" />
+													</object>
+												</object>
+											</object>
+										</object>
+									</object>
+								</object>
+								<object class="notebookpage">
+									<label>Texture Arrays</label>
+									<selected>0</selected>
+									<object class="wxPanel" name="textureArraysPanel">
+										<style>wxTAB_TRAVERSAL</style>
+										<object class="wxBoxSizer">
+											<orient>wxVERTICAL</orient>
+											<object class="sizeritem">
+												<option>0</option>
+												<flag>wxEXPAND</flag>
+												<border>5</border>
+												<object class="wxBoxSizer">
+													<orient>wxHORIZONTAL</orient>
+													<object class="sizeritem">
+														<option>1</option>
+														<flag>wxEXPAND</flag>
+														<border>5</border>
+														<object class="wxStaticBoxSizer">
+															<orient>wxVERTICAL</orient>
+															<label>General info</label>
+															<object class="sizeritem">
+																<option>0</option>
+																<flag>wxEXPAND</flag>
+																<border>5</border>
+																<object class="wxBoxSizer">
+																	<orient>wxVERTICAL</orient>
+																	<object class="sizeritem">
+																		<option>1</option>
+																		<flag>wxEXPAND</flag>
+																		<border>5</border>
+																		<object class="wxBoxSizer">
+																			<orient>wxHORIZONTAL</orient>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																				<border>0</border>
+																				<object class="wxStaticText" name="m_staticText1631">
+																					<label>Total different texture arrays: </label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																				<border>0</border>
+																				<object class="wxStaticText" name="differentTextureArraysCount">
+																					<font>
+																						<family>default</family>
+																						<style>normal</style>
+																						<weight>bold</weight>
+																						<underlined>0</underlined>
+																					</font>
+																					<label>0</label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																		</object>
+																	</object>
+																	<object class="sizeritem">
+																		<option>1</option>
+																		<flag>wxEXPAND</flag>
+																		<border>5</border>
+																		<object class="wxBoxSizer">
+																			<orient>wxHORIZONTAL</orient>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																				<border>0</border>
+																				<object class="wxStaticText" name="m_staticText16121">
+																					<label>Total different texture arrays data: </label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																				<border>0</border>
+																				<object class="wxStaticText" name="differentTextureArraysDataCount">
+																					<font>
+																						<family>default</family>
+																						<style>normal</style>
+																						<weight>bold</weight>
+																						<underlined>0</underlined>
+																					</font>
+																					<label>0</label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																				<border>0</border>
+																				<object class="wxStaticText" name="m_staticText554">
+																					<label> MB</label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																		</object>
+																	</object>
+																	<object class="spacer">
+																		<option>0</option>
+																		<flag></flag>
+																		<border>5</border>
+																		<size>0,5</size>
+																	</object>
+																	<object class="sizeritem">
+																		<option>1</option>
+																		<flag>wxEXPAND</flag>
+																		<border>5</border>
+																		<object class="wxBoxSizer">
+																			<orient>wxHORIZONTAL</orient>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																				<border>0</border>
+																				<object class="wxStaticText" name="m_staticText161121">
+																					<label>Total different texture arrays occuring once: </label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																				<border>0</border>
+																				<object class="wxStaticText" name="differentTextureArraysOccuringOnceCount">
+																					<font>
+																						<family>default</family>
+																						<style>normal</style>
+																						<weight>bold</weight>
+																						<underlined>0</underlined>
+																					</font>
+																					<label>0</label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																		</object>
+																	</object>
+																	<object class="sizeritem">
+																		<option>1</option>
+																		<flag>wxEXPAND</flag>
+																		<border>5</border>
+																		<object class="wxBoxSizer">
+																			<orient>wxHORIZONTAL</orient>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																				<border>0</border>
+																				<object class="wxStaticText" name="m_staticText1611111">
+																					<label>Total different data in texture arrays occuring once: </label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																				<border>0</border>
+																				<object class="wxStaticText" name="differentDataInTextureArraysOccuringOnceCount">
+																					<font>
+																						<family>default</family>
+																						<style>normal</style>
+																						<weight>bold</weight>
+																						<underlined>0</underlined>
+																					</font>
+																					<label>0</label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																				<border>0</border>
+																				<object class="wxStaticText" name="m_staticText555">
+																					<label> MB</label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																		</object>
+																	</object>
+																</object>
+															</object>
+														</object>
+													</object>
+													<object class="sizeritem">
+														<option>0</option>
+														<flag>wxRIGHT|wxLEFT</flag>
+														<border>5</border>
+														<object class="wxStaticBoxSizer">
+															<orient>wxVERTICAL</orient>
+															<label>Thumbnail</label>
+															<object class="sizeritem">
+																<option>0</option>
+																<flag></flag>
+																<border>5</border>
+																<object class="wxStaticBitmap" name="m_textureArrayThumbnailImage">
+																	<size>128,128</size>
+																	<bitmap />
+																</object>
+															</object>
+														</object>
+													</object>
+												</object>
+											</object>
+											<object class="sizeritem">
+												<option>1</option>
+												<flag>wxEXPAND</flag>
+												<border>5</border>
+												<object class="wxBoxSizer">
+													<orient>wxVERTICAL</orient>
+													<object class="sizeritem">
+														<option>1</option>
+														<flag>wxALL|wxEXPAND</flag>
+														<border>5</border>
+														<object class="wxGrid" name="textureArraysGrid" />
+													</object>
+												</object>
+											</object>
+										</object>
+									</object>
+								</object>
+								<object class="notebookpage">
+									<label>Apex</label>
+									<selected>0</selected>
+									<object class="wxPanel" name="ApexPanel">
+										<style>wxTAB_TRAVERSAL</style>
+										<object class="wxBoxSizer">
+											<orient>wxVERTICAL</orient>
+											<object class="sizeritem">
+												<option>0</option>
+												<flag>wxEXPAND</flag>
+												<border>5</border>
+												<object class="wxBoxSizer">
+													<orient>wxHORIZONTAL</orient>
+													<object class="sizeritem">
+														<option>1</option>
+														<flag>wxEXPAND</flag>
+														<border>5</border>
+														<object class="wxStaticBoxSizer">
+															<orient>wxVERTICAL</orient>
+															<label>General info</label>
+															<object class="sizeritem">
+																<option>0</option>
+																<flag>wxEXPAND</flag>
+																<border>5</border>
+																<object class="wxBoxSizer">
+																	<orient>wxVERTICAL</orient>
+																	<object class="sizeritem">
+																		<option>1</option>
+																		<flag>wxEXPAND</flag>
+																		<border>5</border>
+																		<object class="wxBoxSizer">
+																			<orient>wxHORIZONTAL</orient>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																				<border>0</border>
+																				<object class="wxStaticText" name="m_staticText17">
+																					<label>Total different cloth components: </label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																				<border>0</border>
+																				<object class="wxStaticText" name="differentApexClothComponent">
+																					<font>
+																						<family>default</family>
+																						<style>normal</style>
+																						<weight>bold</weight>
+																						<underlined>0</underlined>
+																					</font>
+																					<label>0</label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																		</object>
+																	</object>
+																	<object class="sizeritem">
+																		<option>1</option>
+																		<flag>wxEXPAND</flag>
+																		<border>5</border>
+																		<object class="wxBoxSizer">
+																			<orient>wxHORIZONTAL</orient>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																				<border>0</border>
+																				<object class="wxStaticText" name="m_staticText171">
+																					<label>Total different destructible components: </label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																				<border>0</border>
+																				<object class="wxStaticText" name="differentApexDestructibleComponent">
+																					<font>
+																						<family>default</family>
+																						<style>normal</style>
+																						<weight>bold</weight>
+																						<underlined>0</underlined>
+																					</font>
+																					<label>0</label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																		</object>
+																	</object>
+																	<object class="spacer">
+																		<option>0</option>
+																		<flag></flag>
+																		<border>5</border>
+																		<size>0,5</size>
+																	</object>
+																	<object class="sizeritem">
+																		<option>1</option>
+																		<flag>wxEXPAND</flag>
+																		<border>5</border>
+																		<object class="wxBoxSizer">
+																			<orient>wxHORIZONTAL</orient>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																				<border>0</border>
+																				<object class="wxStaticText" name="m_staticText172">
+																					<label>Total different apex components occuring once: </label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																				<border>0</border>
+																				<object class="wxStaticText" name="differentApexComponentOccuringOnce">
+																					<font>
+																						<family>default</family>
+																						<style>normal</style>
+																						<weight>bold</weight>
+																						<underlined>0</underlined>
+																					</font>
+																					<label>0</label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																		</object>
+																	</object>
+																</object>
+															</object>
+														</object>
+													</object>
+													<object class="sizeritem">
+														<option>0</option>
+														<flag>wxRIGHT|wxLEFT</flag>
+														<border>5</border>
+														<object class="wxStaticBoxSizer">
+															<orient>wxVERTICAL</orient>
+															<label>Thumbnail</label>
+															<object class="sizeritem">
+																<option>0</option>
+																<flag></flag>
+																<border>5</border>
+																<object class="wxStaticBitmap" name="m_apexThumbnailImage">
+																	<size>128,128</size>
+																	<bitmap />
+																</object>
+															</object>
+														</object>
+													</object>
+												</object>
+											</object>
+											<object class="sizeritem">
+												<option>1</option>
+												<flag>wxEXPAND</flag>
+												<border>5</border>
+												<object class="wxBoxSizer">
+													<orient>wxVERTICAL</orient>
+													<object class="sizeritem">
+														<option>1</option>
+														<flag>wxALL|wxEXPAND</flag>
+														<border>5</border>
+														<object class="wxGrid" name="apexGrid" />
+													</object>
+												</object>
+											</object>
+										</object>
+									</object>
+								</object>
+								<object class="notebookpage">
+									<label>Foliage</label>
+									<selected>0</selected>
+									<object class="wxPanel" name="FoliagePanel">
+										<style>wxTAB_TRAVERSAL</style>
+										<object class="wxBoxSizer">
+											<orient>wxVERTICAL</orient>
+											<object class="sizeritem">
+												<option>0</option>
+												<flag>wxEXPAND</flag>
+												<border>5</border>
+												<object class="wxBoxSizer">
+													<orient>wxHORIZONTAL</orient>
+													<object class="sizeritem">
+														<option>1</option>
+														<flag>wxEXPAND</flag>
+														<border>5</border>
+														<object class="wxStaticBoxSizer">
+															<orient>wxVERTICAL</orient>
+															<label>General info</label>
+															<object class="sizeritem">
+																<option>0</option>
+																<flag>wxEXPAND</flag>
+																<border>5</border>
+																<object class="wxBoxSizer">
+																	<orient>wxVERTICAL</orient>
+																	<object class="sizeritem">
+																		<option>0</option>
+																		<flag>wxEXPAND</flag>
+																		<border>5</border>
+																		<object class="wxBoxSizer">
+																			<orient>wxHORIZONTAL</orient>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALIGN_CENTER_VERTICAL|wxRIGHT|wxLEFT</flag>
+																				<border>0</border>
+																				<object class="wxStaticText" name="m_staticText161111111">
+																					<label>Total speed tree data: </label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALIGN_CENTER_VERTICAL|wxRIGHT|wxLEFT</flag>
+																				<border>0</border>
+																				<object class="wxStaticText" name="totalSpeedTreeData">
+																					<font>
+																						<family>default</family>
+																						<style>normal</style>
+																						<weight>bold</weight>
+																						<underlined>0</underlined>
+																					</font>
+																					<label>0</label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALIGN_CENTER_VERTICAL|wxRIGHT|wxLEFT</flag>
+																				<border>0</border>
+																				<object class="wxStaticText" name="m_staticText55511">
+																					<label> MB</label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																		</object>
+																	</object>
+																	<object class="sizeritem">
+																		<option>0</option>
+																		<flag>wxEXPAND</flag>
+																		<border>5</border>
+																		<object class="wxBoxSizer">
+																			<orient>wxHORIZONTAL</orient>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALIGN_CENTER_VERTICAL|wxRIGHT</flag>
+																				<border>5</border>
+																				<object class="wxStaticText" name="m_staticText66">
+																					<label>Total number of speed tree types:</label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALIGN_CENTER_VERTICAL|wxRIGHT</flag>
+																				<border>5</border>
+																				<object class="wxStaticText" name="speedTreeNumTypes">
+																					<font>
+																						<size>8</size>
+																						<family>swiss</family>
+																						<style>normal</style>
+																						<weight>bold</weight>
+																						<underlined>0</underlined>
+																						<face>Tahoma</face>
+																					</font>
+																					<label>0</label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																		</object>
+																	</object>
+																	<object class="spacer">
+																		<option>0</option>
+																		<flag></flag>
+																		<border>5</border>
+																		<size>0,5</size>
+																	</object>
+																	<object class="sizeritem">
+																		<option>0</option>
+																		<flag>wxEXPAND</flag>
+																		<border>5</border>
+																		<object class="wxBoxSizer">
+																			<orient>wxHORIZONTAL</orient>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALIGN_CENTER_VERTICAL|wxRIGHT|wxLEFT</flag>
+																				<border>0</border>
+																				<object class="wxStaticText" name="m_staticText161122">
+																					<label>Total different speed tree type occuring less than 10 times: </label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALIGN_CENTER_VERTICAL|wxRIGHT|wxLEFT</flag>
+																				<border>0</border>
+																				<object class="wxStaticText" name="differentSpeedTreeTypeOccuringOnceCount">
+																					<font>
+																						<family>default</family>
+																						<style>normal</style>
+																						<weight>bold</weight>
+																						<underlined>0</underlined>
+																					</font>
+																					<label>0</label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																		</object>
+																	</object>
+																	<object class="sizeritem">
+																		<option>0</option>
+																		<flag>wxEXPAND</flag>
+																		<border>5</border>
+																		<object class="wxBoxSizer">
+																			<orient>wxHORIZONTAL</orient>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALIGN_CENTER_VERTICAL|wxRIGHT|wxLEFT</flag>
+																				<border>0</border>
+																				<object class="wxStaticText" name="m_staticText16111111">
+																					<label>Total different data in speed tree types occuring less than 10 times: </label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALIGN_CENTER_VERTICAL|wxRIGHT|wxLEFT</flag>
+																				<border>0</border>
+																				<object class="wxStaticText" name="differentDataInSpeedTreeTypeOccuringOnceCount">
+																					<font>
+																						<family>default</family>
+																						<style>normal</style>
+																						<weight>bold</weight>
+																						<underlined>0</underlined>
+																					</font>
+																					<label>0</label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																			<object class="sizeritem">
+																				<option>0</option>
+																				<flag>wxALIGN_CENTER_VERTICAL|wxRIGHT|wxLEFT</flag>
+																				<border>0</border>
+																				<object class="wxStaticText" name="m_staticText5551">
+																					<label> MB</label>
+																					<wrap>-1</wrap>
+																				</object>
+																			</object>
+																		</object>
+																	</object>
+																</object>
+															</object>
+														</object>
+													</object>
+													<object class="sizeritem">
+														<option>0</option>
+														<flag>wxRIGHT|wxLEFT</flag>
+														<border>5</border>
+														<object class="wxStaticBoxSizer">
+															<orient>wxVERTICAL</orient>
+															<label>Thumbnail</label>
+															<object class="sizeritem">
+																<option>0</option>
+																<flag></flag>
+																<border>5</border>
+																<object class="wxStaticBitmap" name="m_speedTreeThumbnailImage">
+																	<size>128,128</size>
+																	<bitmap />
+																</object>
+															</object>
+														</object>
+													</object>
+												</object>
+											</object>
+											<object class="sizeritem">
+												<option>1</option>
+												<flag>wxEXPAND</flag>
+												<border>5</border>
+												<object class="wxBoxSizer">
+													<orient>wxHORIZONTAL</orient>
+													<object class="sizeritem">
+														<option>1</option>
+														<flag>wxALL|wxEXPAND</flag>
+														<border>5</border>
+														<object class="wxGrid" name="speedTreeGrid" />
+													</object>
+												</object>
+											</object>
+										</object>
+									</object>
+								</object>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="notebookpage">
+				<label>Force Rendering</label>
+				<selected>1</selected>
+				<object class="wxPanel" name="forcePanel">
+					<style>wxTAB_TRAVERSAL</style>
+					<object class="wxBoxSizer">
+						<orient>wxVERTICAL</orient>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxEXPAND</flag>
+							<border>5</border>
+							<object class="wxStaticBoxSizer">
+								<orient>wxVERTICAL</orient>
+								<label>Force render options</label>
+								<object class="sizeritem">
+									<option>0</option>
+									<flag>wxALL</flag>
+									<border>5</border>
+									<object class="wxToggleButton" name="autohideToggle">
+										<label>Autohide enabled</label>
+										<checked>0</checked>
+									</object>
+								</object>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxEXPAND</flag>
+							<border>5</border>
+							<object class="wxStaticBoxSizer">
+								<orient>wxVERTICAL</orient>
+								<label>Force render platform</label>
+								<object class="sizeritem">
+									<option>0</option>
+									<flag>wxEXPAND</flag>
+									<border>5</border>
+									<object class="wxBoxSizer">
+										<orient>wxVERTICAL</orient>
+										<object class="sizeritem">
+											<option>1</option>
+											<flag>wxEXPAND</flag>
+											<border>5</border>
+											<object class="wxBoxSizer">
+												<orient>wxHORIZONTAL</orient>
+												<object class="sizeritem">
+													<option>0</option>
+													<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+													<border>5</border>
+													<object class="wxStaticText" name="m_staticText601">
+														<style>wxALIGN_CENTRE</style>
+														<size>200,-1</size>
+														<font>
+															<family>default</family>
+															<style>normal</style>
+															<weight>bold</weight>
+															<underlined>0</underlined>
+														</font>
+														<label>FoliageDistanceScale</label>
+														<wrap>-1</wrap>
+													</object>
+												</object>
+												<object class="sizeritem">
+													<option>1</option>
+													<flag>wxALL|wxEXPAND</flag>
+													<border>5</border>
+													<object class="wxSlider" name="foliageDistanceScaleSlider">
+														<style>wxSL_HORIZONTAL</style>
+														<value>1</value>
+														<min>1</min>
+														<max>1000</max>
+													</object>
+												</object>
+												<object class="sizeritem">
+													<option>0</option>
+													<flag>wxALL</flag>
+													<border>5</border>
+													<object class="wxSpinCtrl" name="foliageDistanceScaleSpinner">
+														<style>wxSP_ARROW_KEYS</style>
+														<size>50,-1</size>
+														<value>1</value>
+														<min>1</min>
+														<max>10</max>
+													</object>
+												</object>
+												<object class="spacer">
+													<option>1</option>
+													<flag>wxEXPAND</flag>
+													<border>5</border>
+													<size>0,0</size>
+												</object>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>1</option>
+											<flag>wxEXPAND</flag>
+											<border>5</border>
+											<object class="wxBoxSizer">
+												<orient>wxHORIZONTAL</orient>
+												<object class="sizeritem">
+													<option>0</option>
+													<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+													<border>5</border>
+													<object class="wxStaticText" name="m_staticText602">
+														<style>wxALIGN_CENTRE</style>
+														<size>200,-1</size>
+														<font>
+															<family>default</family>
+															<style>normal</style>
+															<weight>bold</weight>
+															<underlined>0</underlined>
+														</font>
+														<label>GrassDistanceScale</label>
+														<wrap>-1</wrap>
+													</object>
+												</object>
+												<object class="sizeritem">
+													<option>1</option>
+													<flag>wxALL|wxEXPAND</flag>
+													<border>5</border>
+													<object class="wxSlider" name="grassDistanceScaleSlider">
+														<style>wxSL_HORIZONTAL</style>
+														<value>1</value>
+														<min>1</min>
+														<max>1000</max>
+													</object>
+												</object>
+												<object class="sizeritem">
+													<option>0</option>
+													<flag>wxALL</flag>
+													<border>5</border>
+													<object class="wxSpinCtrl" name="grassDistanceScaleSpinner">
+														<style>wxSP_ARROW_KEYS</style>
+														<size>50,-1</size>
+														<value>1</value>
+														<min>1</min>
+														<max>10</max>
+													</object>
+												</object>
+												<object class="spacer">
+													<option>1</option>
+													<flag>wxEXPAND</flag>
+													<border>5</border>
+													<size>0,0</size>
+												</object>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>1</option>
+											<flag>wxEXPAND</flag>
+											<border>5</border>
+											<object class="wxBoxSizer">
+												<orient>wxHORIZONTAL</orient>
+												<object class="sizeritem">
+													<option>0</option>
+													<flag>wxALL</flag>
+													<border>5</border>
+													<object class="wxStaticText" name="m_staticText603">
+														<style>wxALIGN_CENTRE</style>
+														<size>200,-1</size>
+														<font>
+															<family>default</family>
+															<style>normal</style>
+															<weight>bold</weight>
+															<underlined>0</underlined>
+														</font>
+														<label>MeshRenderDistScale</label>
+														<wrap>-1</wrap>
+													</object>
+												</object>
+												<object class="sizeritem">
+													<option>1</option>
+													<flag>wxALL|wxEXPAND</flag>
+													<border>5</border>
+													<object class="wxSlider" name="meshRenderDistanceScaleSlider">
+														<style>wxSL_HORIZONTAL</style>
+														<value>1</value>
+														<min>1</min>
+														<max>1000</max>
+													</object>
+												</object>
+												<object class="sizeritem">
+													<option>0</option>
+													<flag>wxALL</flag>
+													<border>5</border>
+													<object class="wxSpinCtrl" name="meshRenderDistanceScaleSpinner">
+														<style>wxSP_ARROW_KEYS</style>
+														<size>50,-1</size>
+														<value>1</value>
+														<min>1</min>
+														<max>20</max>
+													</object>
+												</object>
+												<object class="spacer">
+													<option>1</option>
+													<flag>wxEXPAND</flag>
+													<border>5</border>
+													<size>0,0</size>
+												</object>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>1</option>
+											<flag>wxEXPAND</flag>
+											<border>5</border>
+											<object class="wxBoxSizer">
+												<orient>wxHORIZONTAL</orient>
+												<object class="sizeritem">
+													<option>0</option>
+													<flag>wxALL</flag>
+													<border>5</border>
+													<object class="wxStaticText" name="m_staticText6031">
+														<style>wxALIGN_CENTRE</style>
+														<size>200,-1</size>
+														<font>
+															<family>default</family>
+															<style>normal</style>
+															<weight>bold</weight>
+															<underlined>0</underlined>
+														</font>
+														<label>MeshLODDistScale</label>
+														<wrap>-1</wrap>
+													</object>
+												</object>
+												<object class="sizeritem">
+													<option>1</option>
+													<flag>wxALL|wxEXPAND</flag>
+													<border>5</border>
+													<object class="wxSlider" name="meshLODDistanceScaleSlider">
+														<style>wxSL_HORIZONTAL</style>
+														<value>1</value>
+														<min>1</min>
+														<max>1000</max>
+													</object>
+												</object>
+												<object class="sizeritem">
+													<option>0</option>
+													<flag>wxALL</flag>
+													<border>5</border>
+													<object class="wxSpinCtrl" name="meshLODDistanceScaleSpinner">
+														<style>wxSP_ARROW_KEYS</style>
+														<size>50,-1</size>
+														<value>1</value>
+														<min>1</min>
+														<max>20</max>
+													</object>
+												</object>
+												<object class="spacer">
+													<option>1</option>
+													<flag>wxEXPAND</flag>
+													<border>5</border>
+													<size>0,0</size>
+												</object>
+											</object>
+										</object>
+									</object>
+								</object>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+	<object class="wxFrame" name="ExportToCSVWindow">
+		<style>wxCAPTION|wxTAB_TRAVERSAL</style>
+		<size>200,273</size>
+		<title>Export to CSV</title>
+		<centered>1</centered>
+		<aui_managed>0</aui_managed>
+		<object class="wxPanel" name="m_panel7">
+			<style>wxTAB_TRAVERSAL</style>
+			<object class="wxBoxSizer">
+				<orient>wxVERTICAL</orient>
+				<object class="sizeritem">
+					<option>1</option>
+					<flag>wxEXPAND</flag>
+					<border>5</border>
+					<object class="wxStaticBoxSizer">
+						<orient>wxVERTICAL</orient>
+						<label>Tabs to export:</label>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxEXPAND</flag>
+							<border>5</border>
+							<object class="wxBoxSizer">
+								<orient>wxHORIZONTAL</orient>
+								<object class="spacer">
+									<option>0</option>
+									<flag></flag>
+									<border>0</border>
+									<size>3,0</size>
+								</object>
+								<object class="sizeritem">
+									<option>1</option>
+									<flag>wxALL|wxEXPAND</flag>
+									<border>1</border>
+									<object class="wxCheckBox" name="selectAllTabsToExport">
+										<label>Select all</label>
+										<checked>0</checked>
+									</object>
+								</object>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>1</option>
+							<flag>wxALL|wxEXPAND</flag>
+							<border>1</border>
+							<object class="wxCheckListBox" name="tabsListToExport">
+								<style>wxLB_MULTIPLE</style>
+								<content>
+									<item>Entities</item>
+									<item>Meshes</item>
+									<item>Textures</item>
+									<item>Atlases</item>
+									<item>Apex</item>
+									<item>Speed Tree</item>
+								</content>
+							</object>
+						</object>
+					</object>
+				</object>
+				<object class="sizeritem">
+					<option>0</option>
+					<flag>wxALL|wxEXPAND</flag>
+					<border>1</border>
+					<object class="wxRadioBox" name="exportToFile">
+						<style>wxRA_SPECIFY_ROWS</style>
+						<label>Export to</label>
+						<selection>0</selection>
+						<content>
+							<item>one file</item>
+							<item>different files</item>
+						</content>
+						<dimension>1</dimension>
+					</object>
+				</object>
+				<object class="sizeritem">
+					<option>0</option>
+					<flag>wxALL</flag>
+					<border>5</border>
+					<object class="wxCheckBox" name="onyDuplicatedCheckbox">
+						<label>Export only duplicated entities</label>
+						<checked>0</checked>
+					</object>
+				</object>
+				<object class="sizeritem">
+					<option>0</option>
+					<flag>wxALIGN_CENTER_HORIZONTAL|wxEXPAND</flag>
+					<border>5</border>
+					<object class="wxBoxSizer">
+						<orient>wxHORIZONTAL</orient>
+						<object class="spacer">
+							<option>1</option>
+							<flag>wxEXPAND</flag>
+							<border>5</border>
+							<size>0,0</size>
+						</object>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+							<border>5</border>
+							<object class="wxButton" name="exportButton">
+								<label>Export</label>
+								<default>1</default>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+							<border>5</border>
+							<object class="wxButton" name="cancelButton">
+								<label>Cancel</label>
+								<default>0</default>
+							</object>
+						</object>
+						<object class="spacer">
+							<option>1</option>
+							<flag>wxEXPAND</flag>
+							<border>5</border>
+							<size>0,0</size>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+</resource>

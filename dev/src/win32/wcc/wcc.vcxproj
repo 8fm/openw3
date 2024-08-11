@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" TreatAsLocalProperty="OutDir;TargetName;IntDir;PlatformToolset;ProjectConfiguration">
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedConfigurationSetup.props))\SharedConfigurationSetup.props" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{577B5F2B-AF08-402A-8C59-7D3CCF2A4D80}</ProjectGuid>
+    <RootNamespace>wcc</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <SubSystem>Console</SubSystem>
+    <ProjectClDirs>$(SolutionDir)../external/freetype/include;$(SolutionDir)../external/harfbuzz-0.9.33/src;$(SolutionDir)../external/gfx4/Src;$(SolutionDir)../external/gfx4/Include;$(SolutionDir)../external/hk650r1/Source;$(SolutionDir)../external/speedtree/Include;$(SCE_ORBIS_SDK_DIR)/target/include_common;$(SolutionDir)../internal/ReTech;</ProjectClDirs>
+    <ProjectLiDirs>$(SolutionDir)../internal/ReTech/re_archive/lib;$(SolutionDir)../internal/ReTech/re_math/lib</ProjectLiDirs>
+    <ProjectLiDeps Condition="'$(Platform)' == 'x64' and '$(Configuration)' != 'Debug'">$(ProjectLiDeps);re_archive_Release_x64.lib;re_math_Release_x64.lib</ProjectLiDeps>
+    <ProjectLiDeps Condition="'$(Platform)' == 'x64' and '$(Configuration)' == 'Debug'">$(ProjectLiDeps);re_archive_Debug_x64.lib;re_math_Debug_x64.lib</ProjectLiDeps>
+  </PropertyGroup>
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.props))\Shared.props" />
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedItemGroups.props))\SharedItemGroups.props" />
+  <ItemGroup>
+    <ClCompile Include="analyzeCommandlet.cpp" />
+    <ClCompile Include="animValidatorCommandlet.cpp" />
+    <ClCompile Include="cacheSplitterCommandlet.cpp" />
+    <ClCompile Include="chunkReportCommandlet.cpp" />
+    <ClCompile Include="cleanScriptsCommandlet.cpp" />
+    <ClCompile Include="cookFileWriter.cpp" />
+    <ClCompile Include="cookSplitList.cpp" />
+    <ClCompile Include="dumpBundleInfoCommandlet.cpp" />
+    <ClCompile Include="dumpScriptsCommandlet.cpp" />
+    <ClCompile Include="exportCommandlet.cpp" />
+    <ClCompile Include="extraDLCAnalzyer.cpp" />
+    <ClCompile Include="glueFilesCommandlet.cpp" />
+    <ClCompile Include="glueFilesDLCCommandlet.cpp" />
+    <ClCompile Include="importCommandlet.cpp" />
+    <ClCompile Include="loadTestCommandlet.cpp" />
+    <ClCompile Include="dataValidatorCommandlet.cpp" />
+    <ClCompile Include="dialogSceneLinesCommandlet.cpp" />
+    <ClCompile Include="fileDumpCommandlet.cpp" />
+    <ClCompile Include="markPerInstancePropertiesCommandlet.cpp" />
+    <ClCompile Include="materialCookerHairworks.cpp" />
+    <ClCompile Include="manualBundlesReader.cpp" />
+    <ClCompile Include="optimizeCollisionCacheCommandlet.cpp" />
+    <ClCompile Include="packCommandlet.cpp" />
+    <ClCompile Include="patchBuilder.cpp" />
+    <ClCompile Include="patchBundles.cpp" />
+    <ClCompile Include="patchCommandlet.cpp" />
+    <ClCompile Include="patchShaders.cpp" />
+    <ClCompile Include="patchSpeeches.cpp" />
+    <ClCompile Include="patchStreamingCacheCommandlet.cpp" />
+    <ClCompile Include="patchStrings.cpp" />
+    <ClCompile Include="patchPhysics.cpp" />
+    <ClCompile Include="patchSounds.cpp" />
+    <ClCompile Include="patchSpecialCases.cpp" />
+    <ClCompile Include="patchTextureCache.cpp" />
+    <ClCompile Include="patchUtils.cpp" />
+    <ClCompile Include="r4extractCharactersCommandlet.cpp" />
+    <ClCompile Include="r4extractCharactersDLCCommandlet.cpp" />
+    <ClCompile Include="resourceGridOptimizer.cpp" />
+    <ClCompile Include="scriptsHashCommandlet.cpp" />
+    <ClCompile Include="sectorBuilderCommandlet.cpp" />
+    <ClCompile Include="resourceGrid.cpp" />
+    <ClCompile Include="soundBankHelper.cpp" />
+    <ClCompile Include="soundCacheSplitter.cpp" />
+    <ClCompile Include="stringStripperCommandlet.cpp" />
+    <ClCompile Include="testNGPlusDefinitionsComandlet.cpp" />
+    <ClCompile Include="textureCacheProcessing.cpp" />
+    <ClCompile Include="unbundleCommandlet.cpp" />
+    <ClCompile Include="stringCharsetDumperCommandlet.cpp" />
+    <ClCompile Include="uncookCommandlet.cpp" />
+    <ClCompile Include="useForShadowMeshCommandlet.cpp" />
+    <ClCompile Include="videoEncoderCommandlet.cpp" />
+    <ClCompile Include="worldSceneDependencyInfoFileCommandlet.cpp" />
+    <ClCompile Include="packageFileCollector.cpp" />
+    <ClCompile Include="packageFileCollectorXboxOne.cpp" />
+    <ClCompile Include="packageMainPS4.cpp" />
+    <ClCompile Include="packageMainXboxOne.cpp" />
+    <ClCompile Include="packageMapFileBuilderXboxOne.cpp" />
+    <ClCompile Include="packagePlayGoChunksBuilder.cpp" />
+    <ClCompile Include="packageProjectBuilderPS4.cpp" />
+    <ClCompile Include="baseCacheBuilder.cpp" />
+    <ClCompile Include="cacheBuilderCommandlet.cpp" />
+    <ClCompile Include="bundleMetadataStoreCommandlet.cpp" />
+    <ClCompile Include="cookDataBaseIO.cpp" />
+    <ClCompile Include="cookFramework.cpp" />
+    <ClCompile Include="dependenciesCommandlet.cpp" />
+    <ClCompile Include="exportBundlesCommandlet.cpp" />
+    <ClCompile Include="cookDataBase.cpp" />
+    <ClCompile Include="cookerSpeedTreeSupport.cpp" />
+    <ClCompile Include="cookerUtils.cpp" />
+    <ClCompile Include="fileVerCommandlet.cpp" />
+    <ClCompile Include="flashCooker.cpp" />
+    <ClCompile Include="cookCommandlet.cpp" />
+    <ClCompile Include="cookSeedFile.cpp" />
+    <ClCompile Include="packageBatchCommandWriterPS4.cpp" />
+    <ClCompile Include="packageFileCollectorPS4.cpp" />
+    <ClCompile Include="packageTool.cpp" />
+    <ClCompile Include="packageToolPS4.cpp" />
+    <ClCompile Include="packageToolXboxOne.cpp" />
+    <ClCompile Include="packageXmlWriterXboxOne.cpp" />
+    <ClCompile Include="physicsCacheBuilder.cpp" />
+    <ClCompile Include="physicsCacheSplitter.cpp" />
+    <ClCompile Include="playgoHelper.cpp" />
+    <ClCompile Include="questLayoutDumpCommandlet.cpp" />
+    <ClCompile Include="reportWriter.cpp" />
+    <ClCompile Include="processRunner.cpp" />
+    <ClCompile Include="resourceUsageCommandlet.cpp" />
+    <ClCompile Include="resourceUsageDataBase.cpp" />
+    <ClCompile Include="subtitlesCooker.cpp" />
+    <ClCompile Include="shaderCacheSplitter.cpp" />
+    <ClCompile Include="shaderCompiler.cpp" />
+    <ClCompile Include="shadersCacheBuilder.cpp" />
+    <ClCompile Include="soundCommandlet.cpp" />
+    <ClCompile Include="splitFilesCommandlet.cpp" />
+    <ClCompile Include="streamingLodsCommandlet.cpp" />
+    <ClCompile Include="packageCommandlet.cpp" />
+    <ClCompile Include="stringSplitterCommandlet.cpp" />
+    <ClCompile Include="swfDumpCommandlet.cpp" />
+    <ClCompile Include="swfImportCommandlet.cpp" />
+    <ClCompile Include="pathlibFoliageCooker.cpp" />
+    <ClCompile Include="resaveCommandlet.cpp" />
+    <ClCompile Include="shaderCompilerDurango.cpp" />
+    <ClCompile Include="cookerDependencyAnalyzer.cpp" />
+    <ClCompile Include="materialCookerCommandlet.cpp" />
+    <ClCompile Include="materialCookerGeneric.cpp" />
+    <ClCompile Include="shaderCompilerOrbis.cpp" />
+    <ClCompile Include="materialCookerStatic.cpp" />
+    <ClCompile Include="meshCooker.cpp" />
+    <ClCompile Include="occlusionCommandlet.cpp" />
+    <ClCompile Include="pathlibCommandlet.cpp" />
+    <ClCompile Include="pathlibCooker.cpp" />
+    <ClCompile Include="pathlibObstacleCooker.cpp" />
+    <ClCompile Include="pathlibTaskPool.cpp" />
+    <ClCompile Include="stringCookerCommandlet.cpp" />
+    <ClCompile Include="testCollisionCacheCommandlet.cpp" />
+    <ClCompile Include="testCommandlet.cpp" />
+    <ClCompile Include="testMemCommandlet.cpp" />
+    <ClCompile Include="cookerTextEncoder.cpp" />
+    <ClCompile Include="textureCacheBuilder.cpp" />
+    <ClCompile Include="textureCacheCooker.cpp" />
+    <ClCompile Include="textureCacheSplitter.cpp" />
+    <ClCompile Include="textureCookerNonResource.cpp" />
+    <ClCompile Include="voiceoverConversionCommandlet.cpp" />
+    <ClCompile Include="entityTemplateCooker.cpp" />
+    <ClCompile Include="shaderCompilerPC.cpp" />
+    <ClCompile Include="wccDummyGame.cpp" />
+    <ClCompile Include="wccExternalReport.cpp" />
+    <ClCompile Include="wccStats.cpp" />
+    <ClCompile Include="wccTTYWriter.cpp" />
+    <ClCompile Include="wccVersionControl.cpp" />
+    <ClCompile Include="build.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="wccClasses.cpp" />
+    <ClCompile Include="wccEngine.cpp" />
+    <ClCompile Include="worldFileAnalyzer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="analyzeCommandlet.h" />
+    <ClInclude Include="baseCacheSplitter.h" />
+    <ClInclude Include="cacheSplitterCommandlet.h" />
+    <ClInclude Include="cookFileWriter.h" />
+    <ClInclude Include="cookSplitList.h" />
+    <ClInclude Include="manualBundlesReader.h" />
+    <ClInclude Include="packageChunkLayerPairPS4.h" />
+    <ClInclude Include="packageConstants.h" />
+    <ClInclude Include="packageFileCollector.h" />
+    <ClInclude Include="packageFileCollectorXboxOne.h" />
+    <ClInclude Include="packageFiles.h" />
+    <ClInclude Include="packageLanguagesXboxOne.h" />
+    <ClInclude Include="packageMainPS4.h" />
+    <ClInclude Include="packageMainXboxOne.h" />
+    <ClInclude Include="packageMapFileBuilderXboxOne.h" />
+    <ClInclude Include="packagePlayGoChunksBuilder.h" />
+    <ClInclude Include="packageProjectBuilderPS4.h" />
+    <ClInclude Include="cacheBuilderCommandlet.h" />
+    <ClInclude Include="bundleCommandlet.h" />
+    <ClInclude Include="bundleMetadataStoreCommandlet.h" />
+    <ClInclude Include="cookDataBaseHelper.h" />
+    <ClInclude Include="cookFramework.h" />
+    <ClInclude Include="exportBundlesCommandlet.h" />
+    <ClInclude Include="cookerDependencyAnalyzer.h" />
+    <ClInclude Include="cookerSpeedTreeSupport.h" />
+    <ClInclude Include="cookerUtils.h" />
+    <ClInclude Include="cookDataBase.h" />
+    <ClInclude Include="baseCacheBuilder.h" />
+    <ClInclude Include="IPlatformUtils.h" />
+    <ClInclude Include="build.h" />
+    <ClInclude Include="cookCommandlet.h" />
+    <ClInclude Include="jsonFileHelper.h" />
+    <ClInclude Include="materialCooker.h" />
+    <ClInclude Include="packageBatchCommandWriterPS4.h" />
+    <ClInclude Include="packageFileCollectorPS4.h" />
+    <ClInclude Include="packageLanguagesPS4.h" />
+    <ClInclude Include="packageSkuPS4.h" />
+    <ClInclude Include="packageSkuXboxOne.h" />
+    <ClInclude Include="packageTool.h" />
+    <ClInclude Include="packageToolPS4.h" />
+    <ClInclude Include="packageToolXboxOne.h" />
+    <ClInclude Include="packageXmlWriterXboxOne.h" />
+    <ClInclude Include="patchBuilder.h" />
+    <ClInclude Include="patchBundles.h" />
+    <ClInclude Include="patchCommandlet.h" />
+    <ClInclude Include="patchShaders.h" />
+    <ClInclude Include="patchSpeeches.h" />
+    <ClInclude Include="patchStrings.h" />
+    <ClInclude Include="patchPhysics.h" />
+    <ClInclude Include="patchSounds.h" />
+    <ClInclude Include="patchSpecialCases.h" />
+    <ClInclude Include="patchTextureCache.h" />
+    <ClInclude Include="patchUtils.h" />
+    <ClInclude Include="pathlibCooker.h" />
+    <ClInclude Include="pathlibFoliageCooker.h" />
+    <ClInclude Include="pathlibObstacleCooker.h" />
+    <ClInclude Include="pathlibTaskPool.h" />
+    <ClInclude Include="cookSeedFile.h" />
+    <ClInclude Include="playgoHelper.h" />
+    <ClInclude Include="reportWriter.h" />
+    <ClInclude Include="processRunner.h" />
+    <ClInclude Include="resourceGridOptimizer.h" />
+    <ClInclude Include="resourceUsageCommandlet.h" />
+    <ClInclude Include="resourceUsageDataBase.h" />
+    <ClInclude Include="sectorBuilderCommandlet.h" />
+    <ClInclude Include="resourceGrid.h" />
+    <ClInclude Include="shaderCompilerDurango.h" />
+    <ClInclude Include="shaderCompilerOrbis.h" />
+    <ClInclude Include="shaderCompiler.h" />
+    <ClInclude Include="shaderCompilerPC.h" />
+    <ClInclude Include="soundBankHelper.h" />
+    <ClInclude Include="splitFilesCommandlet.h" />
+    <ClInclude Include="testMemCommandlet.h" />
+    <ClInclude Include="cookerTextEncoder.h" />
+    <ClInclude Include="textureCacheCooker.h" />
+    <ClInclude Include="textureCacheProcessing.h" />
+    <ClInclude Include="textureCookerNonResource.h" />
+    <ClInclude Include="uncookDDSUtils.h" />
+    <ClInclude Include="wccDummyGame.h" />
+    <ClInclude Include="wccEngine.h" />
+    <ClInclude Include="wccExternalReporter.h" />
+    <ClInclude Include="wccMemory.h" />
+    <ClInclude Include="wccStats.h" />
+    <ClInclude Include="wccTTYWriter.h" />
+    <ClInclude Include="wccTypeRegistry.h" />
+    <ClInclude Include="wccVersionControl.h" />
+    <ClInclude Include="worldFileAnalyzer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\common\core\core.vcxproj">
+      <Project>{bec313e8-15bc-4693-930f-d5fe597adab0}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\engine\engine.vcxproj">
+      <Project>{61b04d76-fc60-4662-9917-ce2ccd6c6b25}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\game\game.vcxproj">
+      <Project>{b1e9721b-f7a2-4497-9409-67487ba3b419}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\gpuApiDX10\gpuApiDX10.vcxproj">
+      <Project>{7e8999e0-7735-4eeb-a328-b2763dbe04bd}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\gpuApiUtils\gpuApiUtils.vcxproj">
+      <Project>{25a08abc-1a48-45e3-a6a1-8853070c2d72}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\matcompiler\matcompiler.vcxproj">
+      <Project>{5304ffb3-a910-464d-ba75-4c96ca90bb59}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\nullrender\nullrender.vcxproj">
+      <Project>{57f5b282-d3af-447e-9bd0-622e31f86c5e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\physics\physics.vcxproj">
+      <Project>{60a7e708-44b4-4337-908d-f125c77f81e9}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\platformCommon\platformCommon.vcxproj">
+      <Project>{c30680e9-5cda-4a71-89e6-0b195dfc8bfd}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\redIO\redIO.vcxproj">
+      <Project>{cb12e47d-db64-4466-9c54-59c3da05e6bf}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\redMath\redMath.vcxproj">
+      <Project>{14054554-1f10-4eb8-839b-d4bb8592515b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\redMemoryFramework\redMemoryFramework.vcxproj">
+      <Project>{6bcfb601-80ce-4183-9ae2-ba3cf6c68715}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\redNetwork\RedNetwork.vcxproj">
+      <Project>{99596beb-157a-4c15-94b4-25e3a580de22}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\redSystem\redSystem.vcxproj">
+      <Project>{9c1f2dbf-9ea5-41b9-8430-d869c8ac2189}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\redThreads\redThreads.vcxproj">
+      <Project>{50404845-5499-4116-911c-55a575807ef6}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\scripts\scripts.vcxproj">
+      <Project>{2bb69d9f-79fc-4a10-b998-c0ba982efbc6}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\games\r4\r4.vcxproj">
+      <Project>{cae14b93-3735-453e-8734-38841f384203}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\importer\importer.vcxproj" Condition="'$(Configuration)'!='ReleaseGame' And '$(Configuration)'!='Final'">
+      <Project>{3dc466a5-bfe1-477b-b09f-3de227cd3f74}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\platform\platform.vcxproj">
+      <Project>{d3fc2b93-22b2-44b4-97d2-6aba46d0e580}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\versionControl\versionControl.vcxproj" Condition="'$(Configuration)'!='ReleaseGame' And '$(Configuration)'!='Final'">
+      <Project>{2effd008-66a3-4024-a06d-4a03f3a971a2}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.targets))\Shared.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
