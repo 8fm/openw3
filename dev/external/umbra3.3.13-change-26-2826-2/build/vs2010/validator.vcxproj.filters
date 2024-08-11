@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="utils">
+      <UniqueIdentifier>{8389CBE6-B168-DF45-9964-012FF7FDB908}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils\validator">
+      <UniqueIdentifier>{EFD737D7-3D7C-BB42-A52D-0C449B113B8F}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\utils\validator\umbraTrace.hpp">
+      <Filter>utils\validator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\utils\validator\umbraValidator.hpp">
+      <Filter>utils\validator</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\utils\validator\umbraValidator.cpp">
+      <Filter>utils\validator</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<resource xmlns="http://www.wxwindows.org/wxxrc" version="2.3.0.1">
+	<object class="wxFrame" name="ParticleEditor2">
+		<style>wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL</style>
+		<size>942,729</size>
+		<title>ParticleEditor</title>
+		<aui_managed>0</aui_managed>
+		<object class="wxBoxSizer">
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxEXPAND | wxALL</flag>
+				<border>0</border>
+				<object class="wxPanel" name="m_panel2">
+					<style>wxTAB_TRAVERSAL</style>
+					<object class="wxBoxSizer">
+						<orient>wxHORIZONTAL</orient>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxBOTTOM|wxLEFT|wxTOP</flag>
+							<border>8</border>
+							<object class="wxStaticText" name="m_staticText1">
+								<label>LOD:</label>
+								<wrap>-1</wrap>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxALL</flag>
+							<border>5</border>
+							<object class="wxSpinCtrl" name="m_lod">
+								<style>wxSP_ARROW_KEYS</style>
+								<size>80,-1</size>
+								<tooltip>LOD being edited and previewed.</tooltip>
+								<value>0</value>
+								<min>0</min>
+								<max>10</max>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxBOTTOM|wxRIGHT|wxTOP</flag>
+							<border>8</border>
+							<object class="wxStaticText" name="m_numLods">
+								<label>(##)</label>
+								<wrap>-1</wrap>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxBOTTOM|wxLEFT|wxTOP</flag>
+							<border>8</border>
+							<object class="wxStaticText" name="m_staticText2">
+								<label>Distance:</label>
+								<wrap>-1</wrap>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxALL</flag>
+							<border>5</border>
+							<object class="wxTextCtrl" name="m_lodDistance">
+								<style>wxTE_PROCESS_ENTER</style>
+								<tooltip>Distance after which this LOD will be active</tooltip>
+								<value></value>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxBOTTOM|wxLEFT|wxTOP</flag>
+							<border>5</border>
+							<object class="wxBitmapButton" name="m_addLod">
+								<style>wxBU_AUTODRAW</style>
+								<size>20,20</size>
+								<tooltip>Add LOD</tooltip>
+								<bitmap>images\add.png</bitmap>
+								<default>0</default>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxBOTTOM|wxRIGHT|wxTOP</flag>
+							<border>5</border>
+							<object class="wxBitmapButton" name="m_removeLod">
+								<style>wxBU_AUTODRAW</style>
+								<size>20,20</size>
+								<tooltip>Remove LOD</tooltip>
+								<bitmap>images\delete.png</bitmap>
+								<default>0</default>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxEXPAND | wxALL</flag>
+				<border>0</border>
+				<object class="wxPanel" name="SmartContainerPanel">
+					<style>wxTAB_TRAVERSAL</style>
+					<object class="wxBoxSizer">
+						<orient>wxVERTICAL</orient>
+					</object>
+				</object>
+			</object>
+		</object>
+		<object class="wxMenuBar" name="m_menubar21">
+			<label>MyMenuBar</label>
+			<object class="wxMenu" name="File">
+				<label>_File</label>
+				<object class="wxMenuItem" name="save">
+					<label>_Save\tCtrl+S</label>
+					<help></help>
+				</object>
+				<object class="wxMenuItem" name="restart">
+					<label>Restart Emitter\tSPACE</label>
+					<help></help>
+				</object>
+			</object>
+			<object class="wxMenu" name="View">
+				<label>View</label>
+				<object class="wxMenuItem" name="ResetLayout">
+					<label>Reset layout</label>
+					<help></help>
+				</object>
+				<object class="wxMenuItem" name="SaveCustomLayout">
+					<label>Save custom layout</label>
+					<help></help>
+				</object>
+				<object class="wxMenuItem" name="LoadCustomLayout">
+					<label>Load custom layout</label>
+					<help></help>
+				</object>
+			</object>
+		</object>
+	</object>
+	<object class="wxPanel" name="PreviewPanel">
+		<style>wxTAB_TRAVERSAL</style>
+		<size>500,300</size>
+		<object class="wxBoxSizer">
+			<orient>wxVERTICAL</orient>
+		</object>
+	</object>
+	<object class="wxPanel" name="CurvePanel">
+		<style>wxTAB_TRAVERSAL</style>
+		<size>500,300</size>
+	</object>
+	<object class="wxPanel" name="SystemPropertiesPanel">
+		<style>wxTAB_TRAVERSAL</style>
+		<size>500,300</size>
+	</object>
+	<object class="wxPanel" name="PropertiesPanel">
+		<style>wxTAB_TRAVERSAL</style>
+		<size>500,300</size>
+		<object class="wxBoxSizer">
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxSplitterWindow" name="EmitterPropertiesSplitter">
+					<style>wxSP_3D|wxSP_LIVE_UPDATE|wxSP_NO_XP_THEME</style>
+					<sashpos>147</sashpos>
+					<gravity>0.5</gravity>
+					<minsize>50</minsize>
+					<orientation>horizontal</orientation>
+					<object class="wxPanel" name="EmitterPropertiesPanel">
+						<style>wxTAB_TRAVERSAL</style>
+					</object>
+					<object class="wxPanel" name="EmitterLodPropertiesPanel">
+						<style>wxTAB_TRAVERSAL</style>
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+	<object class="wxPanel" name="MaterialsPanel">
+		<style>wxTAB_TRAVERSAL</style>
+		<size>500,300</size>
+	</object>
+	<object class="wxToolBar" name="ParticleToolbar">
+		<style>wxTB_HORIZONTAL</style>
+		<size>56,27</size>
+		<bitmapsize></bitmapsize>
+		<margins></margins>
+		<packing>1</packing>
+		<separation>5</separation>
+		<object class="tool" name="restart">
+			<label>tool</label>
+			<tooltip>Time Restart</tooltip>
+			<longhelp></longhelp>
+			<bitmap>images/control_repeat_blue.png</bitmap>
+		</object>
+		<object class="tool" name="play">
+			<label>tool</label>
+			<tooltip>Time Normal</tooltip>
+			<longhelp></longhelp>
+			<bitmap>images/control_play_blue.png</bitmap>
+		</object>
+	</object>
+	<object class="wxPanel" name="PreviewRenderPanel">
+		<style>wxTAB_TRAVERSAL</style>
+		<size>500,300</size>
+		<object class="wxBoxSizer">
+			<orient>wxVERTICAL</orient>
+		</object>
+	</object>
+	<object class="wxPanel" name="EmitterGraphPanel">
+		<style>wxTAB_TRAVERSAL</style>
+		<size>500,300</size>
+	</object>
+</resource>

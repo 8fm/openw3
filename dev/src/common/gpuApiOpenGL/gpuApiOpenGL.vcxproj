@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" TreatAsLocalProperty="OutDir;TargetName;IntDir;PlatformToolset">
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedConfigurationSetup.props))\SharedConfigurationSetup.props" />
+  
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D15B6700-8827-4132-A135-AB6BC21CC66F}</ProjectGuid>
+    <RootNamespace>gpuApiOpenGL</RootNamespace>
+  </PropertyGroup>
+  
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UsePrecompiledHeaders>false</UsePrecompiledHeaders>
+  </PropertyGroup>
+  
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.props))\Shared.props" />
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedItemGroups.props))\SharedItemGroups.props" />
+  
+  <ItemGroup>
+    <ClInclude Include="gpuApi.h" />
+    <ClInclude Include="gpuApiBase.h" />
+    <ClInclude Include="gpuApiMapping.h" />
+    <ClInclude Include="gpuApiRenderState.h" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ClCompile Include="gpuApiBuffer.cpp" />
+    <ClCompile Include="gpuApiDevice.cpp" />
+    <ClCompile Include="gpuApiDrawContext.cpp" />
+    <ClCompile Include="gpuApiRender.cpp" />
+    <ClCompile Include="gpuApiRenderState.cpp" />
+    <ClCompile Include="gpuApiRenderTarget.cpp" />
+    <ClCompile Include="gpuApiSamplerStates.cpp" />
+    <ClCompile Include="gpuApiShader.cpp" />
+    <ClCompile Include="gpuApiTexture.cpp" />
+    <ClCompile Include="gpuApiVertexLayouts.cpp" />
+  </ItemGroup>
+  
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.targets))\Shared.targets" />
+  </ImportGroup>
+  
+</Project>

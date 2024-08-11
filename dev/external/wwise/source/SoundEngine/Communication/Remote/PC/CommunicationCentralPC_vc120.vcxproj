@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup Label="ProjectConfigurations">
+		<ProjectConfiguration Include="Debug|Win32">
+			<Configuration>Debug</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Debug|x64">
+			<Configuration>Debug</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Debug(StaticCRT)|Win32">
+			<Configuration>Debug(StaticCRT)</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Debug(StaticCRT)|x64">
+			<Configuration>Debug(StaticCRT)</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Profile|Win32">
+			<Configuration>Profile</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Profile|x64">
+			<Configuration>Profile</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Profile(StaticCRT)|Win32">
+			<Configuration>Profile(StaticCRT)</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Profile(StaticCRT)|x64">
+			<Configuration>Profile(StaticCRT)</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Release|Win32">
+			<Configuration>Release</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Release|x64">
+			<Configuration>Release</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Release(StaticCRT)|Win32">
+			<Configuration>Release(StaticCRT)</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Release(StaticCRT)|x64">
+			<Configuration>Release(StaticCRT)</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+	</ItemGroup>
+	<PropertyGroup Label="Globals">
+		<ProjectGuid>{0EDEFAE4-4B66-0065-D034-1C97048D51A6}</ProjectGuid>
+		<RootNamespace>CommunicationCentral</RootNamespace>
+		<Keyword>Win32Proj</Keyword>
+		<ProjectName>CommunicationCentral</ProjectName>
+		<DefaultLanguage>en-US</DefaultLanguage>
+	</PropertyGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<UseDebugLibraries>true</UseDebugLibraries>
+		<PlatformToolset>v120</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<UseDebugLibraries>true</UseDebugLibraries>
+		<PlatformToolset>v120</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|Win32'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<UseDebugLibraries>true</UseDebugLibraries>
+		<PlatformToolset>v120</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|x64'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<UseDebugLibraries>true</UseDebugLibraries>
+		<PlatformToolset>v120</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<UseDebugLibraries>true</UseDebugLibraries>
+		<PlatformToolset>v120</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|x64'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<UseDebugLibraries>true</UseDebugLibraries>
+		<PlatformToolset>v120</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|Win32'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<UseDebugLibraries>true</UseDebugLibraries>
+		<PlatformToolset>v120</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|x64'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<UseDebugLibraries>true</UseDebugLibraries>
+		<PlatformToolset>v120</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<UseDebugLibraries>true</UseDebugLibraries>
+		<PlatformToolset>v120</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<UseDebugLibraries>true</UseDebugLibraries>
+		<PlatformToolset>v120</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|Win32'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<UseDebugLibraries>true</UseDebugLibraries>
+		<PlatformToolset>v120</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|x64'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<UseDebugLibraries>true</UseDebugLibraries>
+		<PlatformToolset>v120</PlatformToolset>
+	</PropertyGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+	<ImportGroup Label="ExtensionSettings">
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../../Build/PropertySheets/Win32/Debug_vc120.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../../Build/PropertySheets/Win32/Debug_vc120.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../../Build/PropertySheets/Win32/Debug_StaticCRT_vc120.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|x64'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../../Build/PropertySheets/Win32/Debug_StaticCRT_vc120.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../../Build/PropertySheets/Win32/NDebug_vc120.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Profile|x64'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../../Build/PropertySheets/Win32/NDebug_vc120.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../../Build/PropertySheets/Win32/NDebug_StaticCRT_vc120.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|x64'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../../Build/PropertySheets/Win32/NDebug_StaticCRT_vc120.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../../Build/PropertySheets/Win32/NDebug_vc120.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../../Build/PropertySheets/Win32/NDebug_vc120.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../../Build/PropertySheets/Win32/NDebug_StaticCRT_vc120.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|x64'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../../Build/PropertySheets/Win32/NDebug_StaticCRT_vc120.props" />
+	</ImportGroup>
+	<PropertyGroup Label="UserMacros" />
+	<PropertyGroup>
+		<_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\..\..\$(Platform)_vc120\$(Configuration)\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\..\..\$(Platform)_vc120\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CommunicationCentral</TargetName>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\..\..\$(Platform)_vc120\$(Configuration)\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\..\..\$(Platform)_vc120\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CommunicationCentral</TargetName>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|Win32'">..\..\..\..\..\$(Platform)_vc120\$(Configuration)\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|Win32'">..\..\..\..\..\$(Platform)_vc120\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|Win32'">CommunicationCentral</TargetName>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|x64'">..\..\..\..\..\$(Platform)_vc120\$(Configuration)\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|x64'">..\..\..\..\..\$(Platform)_vc120\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|x64'">CommunicationCentral</TargetName>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'">..\..\..\..\..\$(Platform)_vc120\$(Configuration)\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'">..\..\..\..\..\$(Platform)_vc120\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'">CommunicationCentral</TargetName>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">..\..\..\..\..\$(Platform)_vc120\$(Configuration)\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">..\..\..\..\..\$(Platform)_vc120\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">CommunicationCentral</TargetName>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|Win32'">..\..\..\..\..\$(Platform)_vc120\$(Configuration)\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|Win32'">..\..\..\..\..\$(Platform)_vc120\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|Win32'">CommunicationCentral</TargetName>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|x64'">..\..\..\..\..\$(Platform)_vc120\$(Configuration)\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|x64'">..\..\..\..\..\$(Platform)_vc120\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|x64'">CommunicationCentral</TargetName>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\..\..\$(Platform)_vc120\$(Configuration)\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\..\..\$(Platform)_vc120\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CommunicationCentral</TargetName>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\..\..\$(Platform)_vc120\$(Configuration)\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\..\..\$(Platform)_vc120\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CommunicationCentral</TargetName>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|Win32'">..\..\..\..\..\$(Platform)_vc120\$(Configuration)\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|Win32'">..\..\..\..\..\$(Platform)_vc120\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|Win32'">CommunicationCentral</TargetName>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|x64'">..\..\..\..\..\$(Platform)_vc120\$(Configuration)\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|x64'">..\..\..\..\..\$(Platform)_vc120\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|x64'">CommunicationCentral</TargetName>
+	</PropertyGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+		<ClCompile>
+			<AdditionalOptions>/wd4355 %(AdditionalOptions)</AdditionalOptions>
+			<AdditionalIncludeDirectories>.;..\..\Common;..\CodeBase;..\..\..\..\..\include;..\..\..\SoundEngineProxy\Remote\CodeBase;..\..\..\SoundEngineProxy\Common;..\..\..\AkAudiolib\PC;..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>_DEBUG;WIN32;PROXYCENTRAL_CONNECTED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+			<EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>_DEBUG;WIN32;PROXYCENTRAL_CONNECTED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>.;..\..\Common;..\CodeBase;..\..\..\..\..\include;..\..\..\SoundEngineProxy\Remote\CodeBase;..\..\..\SoundEngineProxy\Common;..\..\..\AkAudiolib\PC;..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)CommunicationCentral.lib</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+		<ClCompile>
+			<AdditionalOptions>/wd4355 %(AdditionalOptions)</AdditionalOptions>
+			<AdditionalIncludeDirectories>.;..\..\Common;..\CodeBase;..\..\..\..\..\include;..\..\..\SoundEngineProxy\Remote\CodeBase;..\..\..\SoundEngineProxy\Common;..\..\..\AkAudiolib\PC;..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>_DEBUG;WIN64;PROXYCENTRAL_CONNECTED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+			<EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>_DEBUG;WIN64;PROXYCENTRAL_CONNECTED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>.;..\..\Common;..\CodeBase;..\..\..\..\..\include;..\..\..\SoundEngineProxy\Remote\CodeBase;..\..\..\SoundEngineProxy\Common;..\..\..\AkAudiolib\PC;..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)CommunicationCentral.lib</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|Win32'">
+		<ClCompile>
+			<AdditionalOptions>/wd4355 %(AdditionalOptions)</AdditionalOptions>
+			<AdditionalIncludeDirectories>.;..\..\Common;..\CodeBase;..\..\..\..\..\include;..\..\..\SoundEngineProxy\Remote\CodeBase;..\..\..\SoundEngineProxy\Common;..\..\..\AkAudiolib\PC;..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>_DEBUG;WIN32;PROXYCENTRAL_CONNECTED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+			<EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>_DEBUG;WIN32;PROXYCENTRAL_CONNECTED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>.;..\..\Common;..\CodeBase;..\..\..\..\..\include;..\..\..\SoundEngineProxy\Remote\CodeBase;..\..\..\SoundEngineProxy\Common;..\..\..\AkAudiolib\PC;..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)CommunicationCentral.lib</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|x64'">
+		<ClCompile>
+			<AdditionalOptions>/wd4355 %(AdditionalOptions)</AdditionalOptions>
+			<AdditionalIncludeDirectories>.;..\..\Common;..\CodeBase;..\..\..\..\..\include;..\..\..\SoundEngineProxy\Remote\CodeBase;..\..\..\SoundEngineProxy\Common;..\..\..\AkAudiolib\PC;..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>_DEBUG;WIN64;PROXYCENTRAL_CONNECTED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+			<EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>_DEBUG;WIN64;PROXYCENTRAL_CONNECTED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>.;..\..\Common;..\CodeBase;..\..\..\..\..\include;..\..\..\SoundEngineProxy\Remote\CodeBase;..\..\..\SoundEngineProxy\Common;..\..\..\AkAudiolib\PC;..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)CommunicationCentral.lib</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'">
+		<ClCompile>
+			<AdditionalOptions>/wd4355 %(AdditionalOptions)</AdditionalOptions>
+			<AdditionalIncludeDirectories>.;..\..\Common;..\CodeBase;..\..\..\..\..\include;..\..\..\SoundEngineProxy\Remote\CodeBase;..\..\..\SoundEngineProxy\Common;..\..\..\AkAudiolib\PC;..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>NDEBUG;WIN32;PROXYCENTRAL_CONNECTED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+			<EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>NDEBUG;WIN32;PROXYCENTRAL_CONNECTED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>.;..\..\Common;..\CodeBase;..\..\..\..\..\include;..\..\..\SoundEngineProxy\Remote\CodeBase;..\..\..\SoundEngineProxy\Common;..\..\..\AkAudiolib\PC;..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)CommunicationCentral.lib</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">
+		<ClCompile>
+			<AdditionalOptions>/wd4355 %(AdditionalOptions)</AdditionalOptions>
+			<AdditionalIncludeDirectories>.;..\..\Common;..\CodeBase;..\..\..\..\..\include;..\..\..\SoundEngineProxy\Remote\CodeBase;..\..\..\SoundEngineProxy\Common;..\..\..\AkAudiolib\PC;..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>NDEBUG;WIN64;PROXYCENTRAL_CONNECTED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+			<EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>NDEBUG;WIN64;PROXYCENTRAL_CONNECTED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>.;..\..\Common;..\CodeBase;..\..\..\..\..\include;..\..\..\SoundEngineProxy\Remote\CodeBase;..\..\..\SoundEngineProxy\Common;..\..\..\AkAudiolib\PC;..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)CommunicationCentral.lib</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|Win32'">
+		<ClCompile>
+			<AdditionalOptions>/wd4355 %(AdditionalOptions)</AdditionalOptions>
+			<AdditionalIncludeDirectories>.;..\..\Common;..\CodeBase;..\..\..\..\..\include;..\..\..\SoundEngineProxy\Remote\CodeBase;..\..\..\SoundEngineProxy\Common;..\..\..\AkAudiolib\PC;..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>NDEBUG;WIN32;PROXYCENTRAL_CONNECTED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+			<EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>NDEBUG;WIN32;PROXYCENTRAL_CONNECTED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>.;..\..\Common;..\CodeBase;..\..\..\..\..\include;..\..\..\SoundEngineProxy\Remote\CodeBase;..\..\..\SoundEngineProxy\Common;..\..\..\AkAudiolib\PC;..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)CommunicationCentral.lib</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|x64'">
+		<ClCompile>
+			<AdditionalOptions>/wd4355 %(AdditionalOptions)</AdditionalOptions>
+			<AdditionalIncludeDirectories>.;..\..\Common;..\CodeBase;..\..\..\..\..\include;..\..\..\SoundEngineProxy\Remote\CodeBase;..\..\..\SoundEngineProxy\Common;..\..\..\AkAudiolib\PC;..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>NDEBUG;WIN64;PROXYCENTRAL_CONNECTED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+			<EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>NDEBUG;WIN64;PROXYCENTRAL_CONNECTED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>.;..\..\Common;..\CodeBase;..\..\..\..\..\include;..\..\..\SoundEngineProxy\Remote\CodeBase;..\..\..\SoundEngineProxy\Common;..\..\..\AkAudiolib\PC;..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)CommunicationCentral.lib</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+		<ClCompile>
+			<AdditionalOptions>/wd4355 %(AdditionalOptions)</AdditionalOptions>
+			<AdditionalIncludeDirectories>.;..\..\Common;..\CodeBase;..\..\..\..\..\include;..\..\..\SoundEngineProxy\Remote\CodeBase;..\..\..\SoundEngineProxy\Common;..\..\..\AkAudiolib\PC;..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>NDEBUG;AK_OPTIMIZED;WIN32;PROXYCENTRAL_CONNECTED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+			<EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>NDEBUG;AK_OPTIMIZED;WIN32;PROXYCENTRAL_CONNECTED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>.;..\..\Common;..\CodeBase;..\..\..\..\..\include;..\..\..\SoundEngineProxy\Remote\CodeBase;..\..\..\SoundEngineProxy\Common;..\..\..\AkAudiolib\PC;..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)CommunicationCentral.lib</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+		<ClCompile>
+			<AdditionalOptions>/wd4355 %(AdditionalOptions)</AdditionalOptions>
+			<AdditionalIncludeDirectories>.;..\..\Common;..\CodeBase;..\..\..\..\..\include;..\..\..\SoundEngineProxy\Remote\CodeBase;..\..\..\SoundEngineProxy\Common;..\..\..\AkAudiolib\PC;..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>NDEBUG;AK_OPTIMIZED;WIN64;PROXYCENTRAL_CONNECTED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+			<EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>NDEBUG;AK_OPTIMIZED;WIN64;PROXYCENTRAL_CONNECTED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>.;..\..\Common;..\CodeBase;..\..\..\..\..\include;..\..\..\SoundEngineProxy\Remote\CodeBase;..\..\..\SoundEngineProxy\Common;..\..\..\AkAudiolib\PC;..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)CommunicationCentral.lib</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|Win32'">
+		<ClCompile>
+			<AdditionalOptions>/wd4355 %(AdditionalOptions)</AdditionalOptions>
+			<AdditionalIncludeDirectories>.;..\..\Common;..\CodeBase;..\..\..\..\..\include;..\..\..\SoundEngineProxy\Remote\CodeBase;..\..\..\SoundEngineProxy\Common;..\..\..\AkAudiolib\PC;..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>NDEBUG;AK_OPTIMIZED;WIN32;PROXYCENTRAL_CONNECTED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+			<EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>NDEBUG;AK_OPTIMIZED;WIN32;PROXYCENTRAL_CONNECTED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>.;..\..\Common;..\CodeBase;..\..\..\..\..\include;..\..\..\SoundEngineProxy\Remote\CodeBase;..\..\..\SoundEngineProxy\Common;..\..\..\AkAudiolib\PC;..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)CommunicationCentral.lib</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|x64'">
+		<ClCompile>
+			<AdditionalOptions>/wd4355 %(AdditionalOptions)</AdditionalOptions>
+			<AdditionalIncludeDirectories>.;..\..\Common;..\CodeBase;..\..\..\..\..\include;..\..\..\SoundEngineProxy\Remote\CodeBase;..\..\..\SoundEngineProxy\Common;..\..\..\AkAudiolib\PC;..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>NDEBUG;AK_OPTIMIZED;WIN64;PROXYCENTRAL_CONNECTED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+			<EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>NDEBUG;AK_OPTIMIZED;WIN64;PROXYCENTRAL_CONNECTED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>.;..\..\Common;..\CodeBase;..\..\..\..\..\include;..\..\..\SoundEngineProxy\Remote\CodeBase;..\..\..\SoundEngineProxy\Common;..\..\..\AkAudiolib\PC;..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)CommunicationCentral.lib</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemGroup>
+		<ClInclude Include="stdafx.h" />
+		<ClInclude Include="..\CodeBase\CommandChannel.h" />
+		<ClInclude Include="..\CodeBase\CommunicationCentral.h" />
+		<ClInclude Include="..\CodeBase\DiscoveryChannel.h" />
+		<ClInclude Include="..\CodeBase\GameSocket.h" />
+		<ClInclude Include="..\CodeBase\GameSocketAddr.h" />
+		<ClInclude Include="..\CodeBase\IChannelsHolder.h" />
+		<ClInclude Include="..\CodeBase\ICommandChannelHandler.h" />
+		<ClInclude Include="..\CodeBase\ICommunicationCentral.h" />
+		<ClInclude Include="..\CodeBase\ICommunicationCentralNotifyHandler.h" />
+		<ClInclude Include="..\CodeBase\IncomingChannel.h" />
+		<ClInclude Include="..\CodeBase\INotificationChannel.h" />
+		<ClInclude Include="..\CodeBase\Network.h" />
+		<ClInclude Include="..\CodeBase\NetworkCaptureWriter.h" />
+		<ClInclude Include="..\CodeBase\NetworkTypes.h" />
+		<ClInclude Include="..\CodeBase\NotificationChannel.h" />
+		<ClInclude Include="..\..\Common\CommunicationDefines.h" />
+		<ClInclude Include="..\..\Common\ConsoleDiscoveryMessage.h" />
+		<ClInclude Include="..\..\Common\IPConnectorPorts.h" />
+		<ClInclude Include="..\..\Common\Serializer.h" />
+	</ItemGroup>
+	<ItemGroup>
+		<ClCompile Include="stdafx.cpp">
+			<PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+			<PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+			<PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|Win32'">Create</PrecompiledHeader>
+			<PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|x64'">Create</PrecompiledHeader>
+			<PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'">Create</PrecompiledHeader>
+			<PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">Create</PrecompiledHeader>
+			<PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|Win32'">Create</PrecompiledHeader>
+			<PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|x64'">Create</PrecompiledHeader>
+			<PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+			<PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+			<PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|Win32'">Create</PrecompiledHeader>
+			<PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|x64'">Create</PrecompiledHeader>
+		</ClCompile>
+		<ClCompile Include="..\CodeBase\CommandChannel.cpp">
+		</ClCompile>
+		<ClCompile Include="..\CodeBase\Communication.cpp">
+		</ClCompile>
+		<ClCompile Include="..\CodeBase\CommunicationCentral.cpp">
+		</ClCompile>
+		<ClCompile Include="..\CodeBase\DiscoveryChannel.cpp">
+		</ClCompile>
+		<ClCompile Include="..\CodeBase\IncomingChannel.cpp">
+		</ClCompile>
+		<ClCompile Include="..\CodeBase\NetworkCaptureWriter.cpp">
+		</ClCompile>
+		<ClCompile Include="..\CodeBase\NotificationChannel.cpp">
+		</ClCompile>
+		<ClCompile Include="GameSocket.cpp">
+		</ClCompile>
+		<ClCompile Include="GameSocketAddr.cpp">
+		</ClCompile>
+		<ClCompile Include="Network.cpp">
+		</ClCompile>
+		<ClCompile Include="..\..\Common\ConsoleDiscoveryMessage.cpp">
+		</ClCompile>
+		<ClCompile Include="..\..\Common\IPConnectorPorts.cpp">
+		</ClCompile>
+		<ClCompile Include="..\..\Common\Serializer.cpp">
+		</ClCompile>
+	</ItemGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+	<ImportGroup Label="ExtensionTargets">
+	</ImportGroup>
+</Project>

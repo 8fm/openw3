@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;cc;s;asm</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp</Extensions>
+    </Filter>
+    <Filter Include="Grass">
+      <UniqueIdentifier>{dc1b63e7-9611-4550-af6d-9fbbcd7bd3ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sky">
+      <UniqueIdentifier>{52af3f14-3c79-47d1-8b4e-924d0a94eb41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Terrain">
+      <UniqueIdentifier>{41b82699-db92-492e-9f84-7321a143a47a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility">
+      <UniqueIdentifier>{96f504df-e587-420d-b8ab-b950b279662e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\CommonSource\MyGrass.cpp">
+      <Filter>Grass</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonSource\MyTerrain.cpp">
+      <Filter>Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonSource\MyTerrainData.cpp">
+      <Filter>Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonSource\MySky.cpp">
+      <Filter>Sky</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonSource\MyCmdLineOptions.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonSource\MyConfigFile.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonSource\MyDebugRenderFunctions.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonSource\MyNavigationBase.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonSource\MyParamAdjuster.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonSource\MyStatsReporter.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonSource\MyTgaLoader.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonSource\MyApplication.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonSource\MyFullscreenQuad.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonSource\MyOverlays.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonSource\MyPopulate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonSource\MyRenderFunctions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonSource\MyRenderTargets.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonSource\MyShadowSystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\MyMainOrbis.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonSource\MyMouseNavigation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonSource\MyText.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonSource\Testing.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\CommonSource\MyGrass.h">
+      <Filter>Grass</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyTerrain.h">
+      <Filter>Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\My2dInterpolator.h">
+      <Filter>Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\My2dInterpolator_inl.h">
+      <Filter>Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyTerrain_inl.h">
+      <Filter>Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyTerrainData.h">
+      <Filter>Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyTerrainData_inl.h">
+      <Filter>Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MySky.h">
+      <Filter>Sky</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyCmdLineOptions.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyConfigFile.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyDebugRenderFunctions.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyNavigationBase.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyParamAdjuster.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyStatsReporter.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyTgaLoader.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyPopulate_inl.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyApplication.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyCustomAllocator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyFileSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyFullscreenQuad.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyOverlays.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyPopulate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyRenderTargets.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyShadowSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MySpeedTreeRenderer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyMouseNavigation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyText.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\Testing.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

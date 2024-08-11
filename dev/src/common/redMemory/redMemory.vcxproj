@@ -1,0 +1,362 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" TreatAsLocalProperty="OutDir;TargetName;IntDir;PlatformToolset">
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedConfigurationSetup.props))\SharedConfigurationSetup.props" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0328983F-0FB2-42F1-953A-2CAEC84C7C90}</ProjectGuid>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <ProjectName>redMemory</ProjectName>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <UsePrecompiledHeaders>false</UsePrecompiledHeaders>
+  </PropertyGroup>
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.props))\Shared.props" />
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedItemGroups.props))\SharedItemGroups.props" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='No opts|Durango'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>src;include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Profiling|Durango'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>src;include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Final|Durango'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>src;include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Durango'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>src;include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='FinalWithLogging|Durango'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>src;include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseGame|Durango'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>src;include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Durango'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>src;include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='No opts|ORBIS'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>src;include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Profiling|ORBIS'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>src;include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Final|ORBIS'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>src;include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ORBIS'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>src;include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='FinalWithLogging|ORBIS'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>src;include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseGame|ORBIS'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>src;include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ORBIS'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>src;include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='No opts|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>src;include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Profiling|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>src;include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Final|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>src;include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>src;include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='FinalWithLogging|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>src;include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseGame|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>src;include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>src;include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="include\atomicSharedPtr.hpp" />
+    <ClInclude Include="include\atomicWeakPtr.hpp" />
+    <ClInclude Include="include\defaultAllocator.h" />
+    <ClInclude Include="include\fixedSizeAllocator.h" />
+    <ClInclude Include="include\flags.h" />
+    <ClInclude Include="include\gpuAllocator.h" />
+    <ClInclude Include="include\hookSettings.h" />
+    <ClInclude Include="include\integrationStub.h" />
+    <ClInclude Include="include\intrusivePtr.hpp" />
+    <ClInclude Include="include\metricsUtils.h" />
+    <ClInclude Include="include\pool.h" />
+    <ClInclude Include="include\poolRoot.h" />
+    <ClInclude Include="include\poolTypes.h" />
+    <ClInclude Include="include\poolUtils.h" />
+    <ClInclude Include="include\poolUtils.hpp" />
+    <ClInclude Include="include\redMemoryPublic.h" />
+    <ClInclude Include="include\redMemoryInternal.h" />
+    <ClInclude Include="include\operators.h" />
+    <ClInclude Include="include\operatorsLegacy.h" />
+    <ClInclude Include="include\redMemoryApi.h" />
+    <ClInclude Include="include\reportUtils.h" />
+    <ClInclude Include="include\scopedPtr.hpp" />
+    <ClInclude Include="include\settings.h" />
+    <ClInclude Include="include\sharedPtr.hpp" />
+    <ClInclude Include="include\tlsfAllocator.h" />
+    <ClInclude Include="include\types.h" />
+    <ClInclude Include="include\uniqueBuffer.hpp" />
+    <ClInclude Include="include\uniquePtr.hpp" />
+    <ClInclude Include="include\utils.h" />
+    <ClInclude Include="include\utils.hpp" />
+    <ClInclude Include="include\weakPtr.hpp" />
+    <ClInclude Include="src\allocator.h" />
+    <ClInclude Include="src\allocatorMetrics.h" />
+    <ClInclude Include="src\defaultAllocator.hpp" />
+    <ClInclude Include="src\hookOverrunDetector.h" />
+    <ClInclude Include="src\proxyTypeId.h" />
+    <ClInclude Include="src\proxyTypeId.hpp" />
+    <ClInclude Include="src\block.h" />
+    <ClInclude Include="src\block.hpp" />
+    <ClInclude Include="src\build.h" />
+    <ClInclude Include="src\debugAllocator.h" />
+    <ClInclude Include="src\debugAllocatorConstant.h" />
+    <ClInclude Include="src\defaultAllocator.h" />
+    <ClInclude Include="src\dynamicFixedSizeAllocator.h" />
+    <ClInclude Include="src\dynamicTlsfAllocator.h" />
+    <ClInclude Include="src\fixedSizeAllocator.h" />
+    <ClInclude Include="src\flexibleSystemAllocator.h" />
+    <ClInclude Include="src\functions.h" />
+    <ClInclude Include="src\functions.hpp" />
+    <ClInclude Include="src\hook.h" />
+    <ClInclude Include="src\hookMarkBlock.h" />
+    <ClInclude Include="src\hookTypes.h" />
+    <ClInclude Include="src\hookHandler.hpp" />
+    <ClInclude Include="src\hookPool.h" />
+    <ClInclude Include="src\hookUtils.h" />
+    <ClInclude Include="src\hookUtils.hpp" />
+    <ClInclude Include="include\atomicSharedPtr.h" />
+    <ClInclude Include="include\atomicWeakPtr.h" />
+    <ClInclude Include="include\intrusivePtr.h" />
+    <ClInclude Include="include\scopedPtr.h" />
+    <ClInclude Include="include\sharedPtr.h" />
+    <ClInclude Include="include\uniqueBuffer.h" />
+    <ClInclude Include="include\uniquePtr.h" />
+    <ClInclude Include="include\uniquePtrStorage.h" />
+    <ClInclude Include="include\uniquePtrStorage.hpp" />
+    <ClInclude Include="include\weakPtr.h" />
+    <ClInclude Include="src\intrusiveList.h" />
+    <ClInclude Include="src\intrusiveList.hpp" />
+    <ClInclude Include="src\legacyGpuAllocator.h" />
+    <ClInclude Include="src\legacyGpuAllocatorRegion.h" />
+    <ClInclude Include="src\linearAllocator.h" />
+    <ClInclude Include="src\lockingDynamicTlsfAllocator.h" />
+    <ClInclude Include="src\locklessSlabAllocator.h" />
+    <ClInclude Include="src\locklessSlabAllocator.hpp" />
+    <ClInclude Include="src\log.h" />
+    <ClInclude Include="src\macroUtils.h" />
+    <ClInclude Include="src\metricsRegistry.h" />
+    <ClInclude Include="src\metricsRegistry.hpp" />
+    <ClInclude Include="src\metricsUtils.h" />
+    <ClInclude Include="src\metricsUtils.hpp" />
+    <ClInclude Include="src\nullAllocator.h" />
+    <ClInclude Include="src\oomHandler.h" />
+    <ClInclude Include="src\oomHandlerBreak.h" />
+    <ClInclude Include="src\oomHandlerIgnore.h" />
+    <ClInclude Include="src\operatorsInternal.h" />
+    <ClInclude Include="src\operatorsInternal.hpp" />
+    <ClInclude Include="src\pageAllocator.h" />
+    <ClInclude Include="src\pageAllocatorDurango.h" />
+    <ClInclude Include="src\pageAllocatorOrbis.h" />
+    <ClInclude Include="src\pageAllocatorType.h" />
+    <ClInclude Include="src\pageAllocatorWin.h" />
+    <ClInclude Include="src\pool.h" />
+    <ClInclude Include="src\pool.hpp" />
+    <ClInclude Include="src\poolDeclaration.h" />
+    <ClInclude Include="src\poolConstant.h" />
+    <ClInclude Include="src\poolMetrics.h" />
+    <ClInclude Include="src\poolRegistry.h" />
+    <ClInclude Include="src\poolRegistry.hpp" />
+    <ClInclude Include="src\poolStorage.h" />
+    <ClInclude Include="src\poolStorage.hpp" />
+    <ClInclude Include="src\poolUnitTest.h" />
+    <ClInclude Include="src\assert.h" />
+    <ClInclude Include="src\hookHandler.h" />
+    <ClInclude Include="src\proxy.h" />
+    <ClInclude Include="src\reporter.h" />
+    <ClInclude Include="src\slabAllocator.h" />
+    <ClInclude Include="src\slabAllocator.hpp" />
+    <ClInclude Include="src\slabChunk.h" />
+    <ClInclude Include="src\slabChunkAllocatorInterface.h" />
+    <ClInclude Include="src\slabConstant.h" />
+    <ClInclude Include="src\slabHeader.h" />
+    <ClInclude Include="src\slabHeader.hpp" />
+    <ClInclude Include="src\slabList.h" />
+    <ClInclude Include="src\slabMetrics.h" />
+    <ClInclude Include="src\staticFixedSizeAllocator.h" />
+    <ClInclude Include="src\staticTlsfAllocator.h" />
+    <ClInclude Include="src\systemAllocator.h" />
+    <ClInclude Include="src\systemAllocatorDurango.h" />
+    <ClInclude Include="src\systemAllocatorOrbis.h" />
+    <ClInclude Include="src\systemAllocatorOrbisHelper.h" />
+    <ClInclude Include="src\systemAllocatorType.h" />
+    <ClInclude Include="src\systemAllocatorWin.h" />
+    <ClInclude Include="src\systemBlock.h" />
+    <ClInclude Include="src\threadConstant.h" />
+    <ClInclude Include="src\threadIdProvider.h" />
+    <ClInclude Include="src\threadIdProvider.hpp" />
+    <ClInclude Include="src\threadMonitor.h" />
+    <ClInclude Include="src\tlsfAllocator.h" />
+    <ClInclude Include="src\tlsfBlock.h" />
+    <ClInclude Include="src\tlsfBlock.hpp" />
+    <ClInclude Include="src\tlsfConstant.h" />
+    <ClInclude Include="src\vault.h" />
+    <ClInclude Include="src\virtualRange.h" />
+    <ClInclude Include="src\virtualRange.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\allocatorMetrics.cpp" />
+    <ClCompile Include="src\block.cpp" />
+    <ClCompile Include="src\build.cpp">
+      <PrecompiledHeader Condition="'$(UsePrecompiledHeaders)' != 'false'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\debugAllocator.cpp">
+      <ExcludedFromBuild Condition="'$(Platform)'=='Durango'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Platform)'=='ORBIS'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\defaultAllocator.cpp" />
+    <ClCompile Include="src\documentation.cpp" />
+    <ClCompile Include="src\dynamicFixedSizeAllocator.cpp" />
+    <ClCompile Include="src\dynamicTlsfAllocator.cpp" />
+    <ClCompile Include="src\fixedSizeAllocator.cpp" />
+    <ClCompile Include="src\flexibleSystemAllocator.cpp">
+      <ExcludedFromBuild Condition="'$(Platform)'=='x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Platform)'=='Durango'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\hook.cpp" />
+    <ClCompile Include="src\hookMarkBlock.cpp" />
+    <ClCompile Include="src\hookOverrunDetector.cpp" />
+    <ClCompile Include="src\hookPool.cpp" />
+    <ClCompile Include="src\hookTypes.cpp" />
+    <ClCompile Include="src\hookUtils.cpp" />
+    <ClCompile Include="src\intrusiveList.cpp" />
+    <ClCompile Include="src\legacyGpuAllocator.cpp" />
+    <ClCompile Include="src\linearAllocator.cpp" />
+    <ClCompile Include="src\lockingDynamicTlsfAllocator.cpp" />
+    <ClCompile Include="src\locklessSlabAllocator.cpp" />
+    <ClCompile Include="src\log.cpp" />
+    <ClCompile Include="src\redMemoryInit.cpp" />
+    <ClCompile Include="src\metricsRegistry.cpp" />
+    <ClCompile Include="src\metricsUtils.cpp" />
+    <ClCompile Include="src\nullAllocator.cpp" />
+    <ClCompile Include="src\oomHandler.cpp" />
+    <ClCompile Include="src\oomHandlerBreak.cpp" />
+    <ClCompile Include="src\oomHandlerIgnore.cpp" />
+    <ClCompile Include="src\operatorsLegacy.cpp">
+      <ExcludedFromBuild Condition="'$(Platform)'=='ORBIS'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\pageAllocator.cpp" />
+    <ClCompile Include="src\pageAllocatorDurango.cpp">
+      <ExcludedFromBuild Condition="'$(Platform)'=='x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Platform)'=='ORBIS'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\pageAllocatorOrbis.cpp">
+      <ExcludedFromBuild Condition="'$(Platform)'=='Durango'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Platform)'=='x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\pageAllocatorWin.cpp">
+      <ExcludedFromBuild Condition="'$(Platform)'=='Durango'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Platform)'=='ORBIS'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\pool.cpp" />
+    <ClCompile Include="src\poolStorage.cpp" />
+    <ClCompile Include="src\poolMetrics.cpp" />
+    <ClCompile Include="src\poolRegistry.cpp" />
+    <ClCompile Include="src\hookHandler.cpp" />
+    <ClCompile Include="src\poolUnitTest.cpp" />
+    <ClCompile Include="src\poolUtils.cpp" />
+    <ClCompile Include="src\reportUtils.cpp" />
+    <ClCompile Include="src\reporter.cpp" />
+    <ClCompile Include="src\slabAllocator.cpp" />
+    <ClCompile Include="src\slabChunk.cpp" />
+    <ClCompile Include="src\slabHeader.cpp" />
+    <ClCompile Include="src\staticFixedSizeAllocator.cpp" />
+    <ClCompile Include="src\staticTlsfAllocator.cpp" />
+    <ClCompile Include="src\systemAllocator.cpp" />
+    <ClCompile Include="src\systemAllocatorDurango.cpp">
+      <ExcludedFromBuild Condition="'$(Platform)'=='x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Platform)'=='ORBIS'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\systemAllocatorOrbis.cpp">
+      <ExcludedFromBuild Condition="'$(Platform)'=='x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Platform)'=='Durango'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\systemAllocatorOrbisHelper.cpp">
+      <ExcludedFromBuild Condition="'$(Platform)'=='Durango'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Platform)'=='x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\systemAllocatorType.cpp" />
+    <ClCompile Include="src\systemAllocatorWin.cpp">
+      <ExcludedFromBuild Condition="'$(Platform)'=='ORBIS'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Platform)'=='Durango'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\systemBlock.cpp" />
+    <ClCompile Include="src\threadIdProvider.cpp" />
+    <ClCompile Include="src\threadMonitor.cpp" />
+    <ClCompile Include="src\tlsfAllocator.cpp" />
+    <ClCompile Include="src\tlsfBlock.cpp" />
+    <ClCompile Include="src\utils.cpp" />
+    <ClCompile Include="src\vault.cpp" />
+    <ClCompile Include="src\virtualRange.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\redSystem\redSystem.vcxproj">
+      <Project>{9c1f2dbf-9ea5-41b9-8430-d869c8ac2189}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.targets))\Shared.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="source">
+      <UniqueIdentifier>{FF432197-2482-584D-8158-7A8349EBA6BC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\runtime">
+      <UniqueIdentifier>{5D6A1025-E682-8642-B756-DBDF6D0E8826}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\runtime\ps3">
+      <UniqueIdentifier>{0E401E9A-B1D8-8049-98A6-546682C75F25}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\source\runtime\ps3\umbraQueryJob.hpp">
+      <Filter>source\runtime\ps3</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\source\runtime\ps3\umbraspursruntime_frustum.cpp">
+      <Filter>source\runtime\ps3</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

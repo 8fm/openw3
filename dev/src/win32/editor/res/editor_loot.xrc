@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<resource xmlns="http://www.wxwindows.org/wxxrc" version="2.3.0.1">
+	<object class="wxFrame" name="LootEditor">
+		<style>wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL</style>
+		<size>678,426</size>
+		<title>Loot Editor</title>
+		<centered>1</centered>
+		<aui_managed>0</aui_managed>
+		<object class="wxMenuBar" name="menuBar">
+			<label>MyMenuBar</label>
+			<object class="wxMenu" name="menuFile">
+				<label>File</label>
+				<object class="wxMenuItem" name="menuItemSave">
+					<label>Save\tCTRL+S</label>
+					<help></help>
+				</object>
+				<object class="wxMenuItem" name="menuItemSubmit">
+					<label>Submit</label>
+					<help></help>
+				</object>
+				<object class="wxMenuItem" name="menuItemExit">
+					<label>Exit</label>
+					<help></help>
+				</object>
+			</object>
+			<object class="wxMenu" name="menuTools">
+				<label>Tools</label>
+				<object class="wxMenuItem" name="menuReloadDefinitions">
+					<label>Reload Game Definitions</label>
+					<help></help>
+				</object>
+			</object>
+		</object>
+		<object class="wxPanel" name="panelGlobal">
+			<style>wxTAB_TRAVERSAL</style>
+			<object class="wxBoxSizer">
+				<orient>wxHORIZONTAL</orient>
+				<object class="sizeritem">
+					<option>1</option>
+					<flag>wxEXPAND</flag>
+					<border>5</border>
+					<object class="wxSplitterWindow" name="splitterMain">
+						<style>wxSP_3D</style>
+						<sashpos>219</sashpos>
+						<gravity>0</gravity>
+						<minsize>0</minsize>
+						<orientation>vertical</orientation>
+						<object class="wxPanel" name="panelControls">
+							<style>wxTAB_TRAVERSAL</style>
+							<object class="wxBoxSizer">
+								<orient>wxVERTICAL</orient>
+								<object class="sizeritem">
+									<option>0</option>
+									<flag>wxALL</flag>
+									<border>5</border>
+									<object class="wxStaticText" name="testFilename">
+										<label>Filename:</label>
+										<wrap>-1</wrap>
+									</object>
+								</object>
+								<object class="sizeritem">
+									<option>0</option>
+									<flag>wxEXPAND</flag>
+									<border>5</border>
+									<object class="wxComboBox" name="comboFilenames">
+										<style>wxCB_READONLY</style>
+										<pos>-1,-1</pos>
+										<value>Combo!</value>
+										<content />
+									</object>
+								</object>
+								<object class="sizeritem">
+									<option>0</option>
+									<flag>wxALL</flag>
+									<border>5</border>
+									<object class="wxStaticText" name="textDefinitions">
+										<label>Definitions:</label>
+										<wrap>-1</wrap>
+									</object>
+								</object>
+								<object class="sizeritem">
+									<option>3</option>
+									<flag>wxEXPAND</flag>
+									<border>5</border>
+									<object class="wxListBox" name="listDefinitions">
+										<content />
+									</object>
+								</object>
+								<object class="sizeritem">
+									<option>1</option>
+									<flag></flag>
+									<border>5</border>
+									<object class="wxBoxSizer">
+										<orient>wxHORIZONTAL</orient>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxTOP</flag>
+											<border>5</border>
+											<object class="wxBitmapButton" name="buttonAddDefinition">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/add.png</bitmap>
+												<default>0</default>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxTOP</flag>
+											<border>5</border>
+											<object class="wxBitmapButton" name="buttonDeleteDefinition">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/delete.png</bitmap>
+												<default>0</default>
+											</object>
+										</object>
+									</object>
+								</object>
+							</object>
+						</object>
+						<object class="wxPanel" name="panelProperties">
+							<style>wxTAB_TRAVERSAL</style>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+</resource>

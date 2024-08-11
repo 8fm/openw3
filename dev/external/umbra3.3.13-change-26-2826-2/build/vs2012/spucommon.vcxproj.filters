@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="source">
+      <UniqueIdentifier>{9EB67093-0813-0247-9C11-3C0D914E3CC3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\common">
+      <UniqueIdentifier>{39CECB68-9D3E-B149-8683-A8421D63DE1A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\common\cell">
+      <UniqueIdentifier>{0F5EABF8-5E83-C642-A0C3-8B764134B9C0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\source\common\umbraProcess.inl">
+      <Filter>source\common</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\source\common\umbraAABB.hpp">
+      <Filter>source\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\common\umbraArray.hpp">
+      <Filter>source\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\common\umbraBinStream.hpp">
+      <Filter>source\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\common\umbraBitMath.hpp">
+      <Filter>source\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\common\umbraBitOps.hpp">
+      <Filter>source\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\common\umbraChecksum.hpp">
+      <Filter>source\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\common\umbraCmdlineApp.hpp">
+      <Filter>source\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\common\umbraConvexHull.hpp">
+      <Filter>source\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\common\umbraCRCStream.hpp">
+      <Filter>source\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\common\umbraDirScan.hpp">
+      <Filter>source\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\common\umbraDouble.hpp">
+      <Filter>source\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\common\umbraDPVSShared.hpp">
+      <Filter>source\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\common\umbraFile.hpp">
+      <Filter>source\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\common\umbraFileStream.hpp">
+      <Filter>source\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\common\umbraFloat.hpp">
+      <Filter>source\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\common\umbraFPUControl.hpp">
+      <Filter>source\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\common\umbraHash.hpp">
+      <Filter>source\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\common\umbraHeap.hpp">
+      <Filter>source\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\common\umbraHttp.hpp">
+      <Filter>source\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\common\umbraIntersect.hpp">
+      <Filter>source\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\common\umbraJson.hpp">
+      <Filter>source\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\common\umbraLogger.hpp">
+      <Filter>source\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\common\umbraMath.hpp">
+      <Filter>source\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\common\umbraMatrix.hpp">
+      <Filter>source\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\common\umbraMemory.hpp">
+      <Filter>source\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\common\umbraObjectPool.hpp">
+      <Filter>source\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\common\umbraOs.hpp">
+      <Filter>source\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\common\umbraPair.hpp">
+      <Filter>source\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\common\umbraPatcher.hpp">
+      <Filter>source\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\common\umbraPoolAllocator.hpp">
+      <Filter>source\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\common\umbraPrimitives.hpp">
+      <Filter>source\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\common\umbraPrivateDefs.hpp">
+      <Filter>source\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\common\umbraPrivateVersion.hpp">
+      <Filter>source\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\common\umbraProcess.hpp">
+      <Filter>source\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\common\umbraProgress.hpp">
+      <Filter>source\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\common\umbraPropertyFile.hpp">
+      <Filter>source\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\common\umbraRandom.hpp">
+      <Filter>source\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\common\umbraRect.hpp">
+      <Filter>source\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\common\umbraSerializer.hpp">
+      <Filter>source\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\common\umbraSet.hpp">
+      <Filter>source\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\common\umbraSort.hpp">
+      <Filter>source\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\common\umbraStaticHeap.hpp">
+      <Filter>source\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\common\umbraStats.hpp">
+      <Filter>source\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\common\umbraStatsHeap.hpp">
+      <Filter>source\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\common\umbraString.hpp">
+      <Filter>source\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\common\umbraStructBuilder.hpp">
+      <Filter>source\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\common\umbraThread.hpp">
+      <Filter>source\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\common\umbraTimer.hpp">
+      <Filter>source\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\common\umbraUnionFind.hpp">
+      <Filter>source\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\common\umbraUUID.hpp">
+      <Filter>source\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\common\umbraVector.hpp">
+      <Filter>source\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\common\umbraVectorT.hpp">
+      <Filter>source\common</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\source\common\umbraAABB.cpp">
+      <Filter>source\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\umbraBinStream.cpp">
+      <Filter>source\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\umbraBitMath.cpp">
+      <Filter>source\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\umbraBitOps.cpp">
+      <Filter>source\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\umbraChecksum.cpp">
+      <Filter>source\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\umbraCmdlineApp.cpp">
+      <Filter>source\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\umbraCRCStream.cpp">
+      <Filter>source\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\umbraDirScan.cpp">
+      <Filter>source\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\umbraDouble.cpp">
+      <Filter>source\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\umbraDPVSShared.cpp">
+      <Filter>source\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\umbraFileStream.cpp">
+      <Filter>source\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\umbraFile_ansic.cpp">
+      <Filter>source\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\umbraFloat.cpp">
+      <Filter>source\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\umbraHttp.cpp">
+      <Filter>source\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\umbraIntersect.cpp">
+      <Filter>source\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\umbraJson.cpp">
+      <Filter>source\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\umbraLogger.cpp">
+      <Filter>source\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\umbraMatrix.cpp">
+      <Filter>source\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\umbraMemory.cpp">
+      <Filter>source\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\umbraPatcher.cpp">
+      <Filter>source\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\umbraPoolAllocator.cpp">
+      <Filter>source\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\umbraPrivateVersion.cpp">
+      <Filter>source\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\umbraPropertyFile.cpp">
+      <Filter>source\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\umbraRandom.cpp">
+      <Filter>source\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\umbraSerializer.cpp">
+      <Filter>source\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\umbraStatsHeap.cpp">
+      <Filter>source\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\umbraString.cpp">
+      <Filter>source\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\umbraThread.cpp">
+      <Filter>source\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\umbraTimer.cpp">
+      <Filter>source\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\cell\umbraOsCell.cpp">
+      <Filter>source\common\cell</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

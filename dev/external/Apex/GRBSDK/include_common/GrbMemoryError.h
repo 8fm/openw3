@@ -1,0 +1,16 @@
+#ifndef GRB_MEMORY_ERROR_H
+#define GRB_MEMORY_ERROR_H
+
+struct GrbMemoryError
+{
+	enum 
+	{
+		GRB_MEM_ERR_NO_ERR = 0, 
+		GRB_MEM_ERR_OUT_OF_POOL = 1,
+		GRB_MEM_ERR_OUT_OF_HOST_HEAP = 2, 
+		GRB_MEM_ERR_OUT_OF_DEVICE_HEAP = 3, 
+		GRB_MEM_ERR_INIT_FAILED = 4
+	};
+};
+
+#endif

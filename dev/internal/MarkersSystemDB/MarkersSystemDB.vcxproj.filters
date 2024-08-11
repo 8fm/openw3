@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="ReviewFlagsSqlCommandsDefinitions.h">
+      <Filter>ReviewFlags</Filter>
+    </ClInclude>
+    <ClInclude Include="ReviewFlagsDB.h">
+      <Filter>ReviewFlags</Filter>
+    </ClInclude>
+    <ClInclude Include="PointsofInterestDB.h">
+      <Filter>PointsofInterest</Filter>
+    </ClInclude>
+    <ClInclude Include="POISqlCommandsDefinitions.h">
+      <Filter>PointsofInterest</Filter>
+    </ClInclude>
+    <ClInclude Include="HelperFunctions.h" />
+    <ClInclude Include="MarkersSystemDB.h" />
+    <ClInclude Include="StickersDB.h">
+      <Filter>Stickers</Filter>
+    </ClInclude>
+    <ClInclude Include="StickersSqlCommandsDefinitions.h">
+      <Filter>Stickers</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="ReviewFlags">
+      <UniqueIdentifier>{76f88011-f629-47e5-b787-ce9f3a7a0278}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PointsofInterest">
+      <UniqueIdentifier>{ee2c84cf-fa7f-4f0c-9fb1-f8f7bd36b267}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Stickers">
+      <UniqueIdentifier>{f24ecf76-d60c-473b-9cc9-fddbedcd841b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ReviewFlagsDB.cpp">
+      <Filter>ReviewFlags</Filter>
+    </ClCompile>
+    <ClCompile Include="PointsofInterestDB.cpp">
+      <Filter>PointsofInterest</Filter>
+    </ClCompile>
+    <ClCompile Include="HelperFunctions.cpp" />
+    <ClCompile Include="StickersDB.cpp">
+      <Filter>Stickers</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

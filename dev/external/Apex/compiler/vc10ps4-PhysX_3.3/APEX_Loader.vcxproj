@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="debug|ORBIS">
+      <Configuration>debug</Configuration>
+      <Platform>ORBIS</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="checked|ORBIS">
+      <Configuration>checked</Configuration>
+      <Platform>ORBIS</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="release|ORBIS">
+      <Configuration>release</Configuration>
+      <Platform>ORBIS</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="profile|ORBIS">
+      <Configuration>profile</Configuration>
+      <Platform>ORBIS</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E4359E1C-FB24-D016-611C-A3283B38FEA4}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debug|ORBIS'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <GenerateManifest>false</GenerateManifest>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='checked|ORBIS'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <GenerateManifest>false</GenerateManifest>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='release|ORBIS'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <GenerateManifest>false</GenerateManifest>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='profile|ORBIS'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <GenerateManifest>false</GenerateManifest>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='debug|ORBIS'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="./nxpath.vsprops" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='checked|ORBIS'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="./nxpath.vsprops" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='release|ORBIS'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="./nxpath.vsprops" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='profile|ORBIS'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="./nxpath.vsprops" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debug|ORBIS'">
+    <OutDir>$(SolutionDir)../../lib/vc10ps4-PhysX_3.3\</OutDir>
+    <IntDir>build//ORBIS/APEX_Loader/debug\</IntDir>
+    <TargetExt>.a</TargetExt>
+    <TargetName>lib$(ProjectName)DEBUG</TargetName>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules />
+    <CodeAnalysisRuleAssemblies />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='debug|ORBIS'">
+    <ClCompile>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <BasicRuntimeChecks>UninitializedLocalUsageCheck</BasicRuntimeChecks>
+      <AdditionalOptions>-fdiagnostics-show-option -Wall -fno-rtti -fno-exceptions -ffast-math -fno-strict-aliasing -ffunction-sections -fdata-sections -Wno-missing-braces -Wno-c++11-narrowing -Wno-char-subscripts -Wno-unneeded-internal-declaration -Wno-unused-variable -Wno-unused-function -Wno-unknown-pragmas -Wno-uninitialized -Wno-switch -Wno-tautological-compare -Wno-dynamic-class-memaccess -Wno-overloaded-virtual -Wno-self-assign -g</AdditionalOptions>
+      <OptimizationLevel>Level0</OptimizationLevel>
+      <FastMath>false</FastMath>
+      <NoStrictAliasing>false</NoStrictAliasing>
+      <UnrollLoops>false</UnrollLoops>
+      <AnsiCompliance>false</AnsiCompliance>
+      <MsExtensions>false</MsExtensions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalIncludeDirectories>$(NXPATH)/Include;$(NXPATH)/Include/common;$(NXPATH)/Include/cooking;$(NXPATH)/Include/extensions;$(NXPATH)/Include/geometry;$(NXPATH)/Include/pvd;$(NXPATH)/Include/gpu;$(NXPATH)/Include/deformable;$(NXPATH)/Include/particles;$(NXPATH)/Include/characterkinematic;$(NXPATH)/Include/characterdynamic;$(NXPATH)/Include/vehicle;$(NXPATH)/Source/GeomUtils/headers;$(NXPATH)/Source/PhysXGpu/include;$(NXPATH)/Include/pxtask;$(NXPATH)/Include/physxprofilesdk;$(NXPATH)/Source/physxprofilesdk;$(NXPATH)/Include/physxvisualdebuggersdk;$(NXPATH)/Source/physxvisualdebuggersdk;./../../shared/general/shared;$(NXPATH)/Include/foundation;$(NXPATH)/Include/foundation/ps4;$(NXPATH)/Source/foundation/include;$(NXPATH)/Source/foundation/include/ps4;./../../public;./../../shared/general/renderdebug/public;./../../shared/general/renderdebug/include;./../../shared/general/PxIOStream/public;./../../shared/general/PxIOStream/include;./../../shared/general/string_parsing/include;./../../framework/public;./../../framework/public/PhysX3;./../../common/include;./../../common/include/ps4;./../../shared/internal/include;./../../module/common/include;./../../NxParameterized/public;./../../NxParameterized/include;./../../module/loader/include;./../../module/loader/public;./../../module/clothing/public;./../../module/destructible/public;./../../module/clothing_legacy/public;./../../module/legacy/public;./../../module/destructible_legacy/public;./../../module/framework_legacy/public;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>__PS4__;PS4;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;NX_USE_SDK_STATICLIBS;NX_FOUNDATION_STATICLIB;NX_PARAMETERIZED_HIDE_DESCRIPTIONS=1;_LIB;_DEBUG;PX_DEBUG;PX_CHECKED;PHYSX_PROFILE_SDK;PX_SUPPORT_VISUAL_DEBUGGER;PX_PROFILE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CppExceptions>false</CppExceptions>
+      <WarningLevel>Level3</WarningLevel>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+    </ClCompile>
+    <Lib>
+      <AdditionalOptions>
+      </AdditionalOptions>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)lib$(ProjectName)DEBUG.a</OutputFile>
+      <AdditionalLibraryDirectories>$(NXPATH)/Lib/PS4;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ProgramDatabaseFile>$(OutDir)/lib$(ProjectName)DEBUG.a.pdb</ProgramDatabaseFile>
+    </Lib>
+    <ResourceCompile>
+    </ResourceCompile>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='checked|ORBIS'">
+    <OutDir>$(SolutionDir)../../lib/vc10ps4-PhysX_3.3\</OutDir>
+    <IntDir>build//ORBIS/APEX_Loader/checked\</IntDir>
+    <TargetExt>.a</TargetExt>
+    <TargetName>lib$(ProjectName)CHECKED</TargetName>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules />
+    <CodeAnalysisRuleAssemblies />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='checked|ORBIS'">
+    <ClCompile>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <AdditionalOptions>-fdiagnostics-show-option -Wall -fno-rtti -fno-exceptions -ffast-math -fno-strict-aliasing -ffunction-sections -fdata-sections -Wno-missing-braces -Wno-c++11-narrowing -Wno-char-subscripts -Wno-unneeded-internal-declaration -Wno-unused-variable -Wno-unused-function -Wno-unknown-pragmas -Wno-uninitialized -Wno-switch -Wno-tautological-compare -Wno-dynamic-class-memaccess -Wno-overloaded-virtual -Wno-self-assign</AdditionalOptions>
+      <OptimizationLevel>Level2</OptimizationLevel>
+      <FastMath>false</FastMath>
+      <NoStrictAliasing>false</NoStrictAliasing>
+      <UnrollLoops>false</UnrollLoops>
+      <AnsiCompliance>false</AnsiCompliance>
+      <MsExtensions>false</MsExtensions>
+      <AdditionalIncludeDirectories>$(NXPATH)/Include;$(NXPATH)/Include/common;$(NXPATH)/Include/cooking;$(NXPATH)/Include/extensions;$(NXPATH)/Include/geometry;$(NXPATH)/Include/pvd;$(NXPATH)/Include/gpu;$(NXPATH)/Include/deformable;$(NXPATH)/Include/particles;$(NXPATH)/Include/characterkinematic;$(NXPATH)/Include/characterdynamic;$(NXPATH)/Include/vehicle;$(NXPATH)/Source/GeomUtils/headers;$(NXPATH)/Source/PhysXGpu/include;$(NXPATH)/Include/pxtask;$(NXPATH)/Include/physxprofilesdk;$(NXPATH)/Source/physxprofilesdk;$(NXPATH)/Include/physxvisualdebuggersdk;$(NXPATH)/Source/physxvisualdebuggersdk;./../../shared/general/shared;$(NXPATH)/Include/foundation;$(NXPATH)/Include/foundation/ps4;$(NXPATH)/Source/foundation/include;$(NXPATH)/Source/foundation/include/ps4;./../../public;./../../shared/general/renderdebug/public;./../../shared/general/renderdebug/include;./../../shared/general/PxIOStream/public;./../../shared/general/PxIOStream/include;./../../shared/general/string_parsing/include;./../../framework/public;./../../framework/public/PhysX3;./../../common/include;./../../common/include/ps4;./../../shared/internal/include;./../../module/common/include;./../../NxParameterized/public;./../../NxParameterized/include;./../../module/loader/include;./../../module/loader/public;./../../module/clothing/public;./../../module/destructible/public;./../../module/clothing_legacy/public;./../../module/legacy/public;./../../module/destructible_legacy/public;./../../module/framework_legacy/public;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>__PS4__;PS4;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;NX_USE_SDK_STATICLIBS;NX_FOUNDATION_STATICLIB;NX_PARAMETERIZED_HIDE_DESCRIPTIONS=1;_LIB;NDEBUG;PX_CHECKED;PHYSX_PROFILE_SDK;PX_SUPPORT_VISUAL_DEBUGGER;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CppExceptions>false</CppExceptions>
+      <WarningLevel>Level3</WarningLevel>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+    </ClCompile>
+    <Lib>
+      <AdditionalOptions>
+      </AdditionalOptions>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)lib$(ProjectName)CHECKED.a</OutputFile>
+      <AdditionalLibraryDirectories>$(NXPATH)/Lib/PS4;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ProgramDatabaseFile>$(OutDir)/lib$(ProjectName)CHECKED.a.pdb</ProgramDatabaseFile>
+    </Lib>
+    <ResourceCompile>
+    </ResourceCompile>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='release|ORBIS'">
+    <OutDir>$(SolutionDir)../../lib/vc10ps4-PhysX_3.3\</OutDir>
+    <IntDir>build//ORBIS/APEX_Loader/release\</IntDir>
+    <TargetExt>.a</TargetExt>
+    <TargetName>lib$(ProjectName)</TargetName>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules />
+    <CodeAnalysisRuleAssemblies />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='release|ORBIS'">
+    <ClCompile>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <AdditionalOptions>-fdiagnostics-show-option -Wall -fno-rtti -fno-exceptions -ffast-math -fno-strict-aliasing -ffunction-sections -fdata-sections -Wno-missing-braces -Wno-c++11-narrowing -Wno-char-subscripts -Wno-unneeded-internal-declaration -Wno-unused-variable -Wno-unused-function -Wno-unknown-pragmas -Wno-uninitialized -Wno-switch -Wno-tautological-compare -Wno-dynamic-class-memaccess -Wno-overloaded-virtual -Wno-self-assign</AdditionalOptions>
+      <OptimizationLevel>Level3</OptimizationLevel>
+      <FastMath>false</FastMath>
+      <NoStrictAliasing>false</NoStrictAliasing>
+      <UnrollLoops>false</UnrollLoops>
+      <AnsiCompliance>false</AnsiCompliance>
+      <MsExtensions>false</MsExtensions>
+      <AdditionalIncludeDirectories>$(NXPATH)/Include;$(NXPATH)/Include/common;$(NXPATH)/Include/cooking;$(NXPATH)/Include/extensions;$(NXPATH)/Include/geometry;$(NXPATH)/Include/pvd;$(NXPATH)/Include/gpu;$(NXPATH)/Include/deformable;$(NXPATH)/Include/particles;$(NXPATH)/Include/characterkinematic;$(NXPATH)/Include/characterdynamic;$(NXPATH)/Include/vehicle;$(NXPATH)/Source/GeomUtils/headers;$(NXPATH)/Source/PhysXGpu/include;$(NXPATH)/Include/pxtask;$(NXPATH)/Include/physxprofilesdk;$(NXPATH)/Source/physxprofilesdk;$(NXPATH)/Include/physxvisualdebuggersdk;$(NXPATH)/Source/physxvisualdebuggersdk;./../../shared/general/shared;$(NXPATH)/Include/foundation;$(NXPATH)/Include/foundation/ps4;$(NXPATH)/Source/foundation/include;$(NXPATH)/Source/foundation/include/ps4;./../../public;./../../shared/general/renderdebug/public;./../../shared/general/renderdebug/include;./../../shared/general/PxIOStream/public;./../../shared/general/PxIOStream/include;./../../shared/general/string_parsing/include;./../../framework/public;./../../framework/public/PhysX3;./../../common/include;./../../common/include/ps4;./../../shared/internal/include;./../../module/common/include;./../../NxParameterized/public;./../../NxParameterized/include;./../../module/loader/include;./../../module/loader/public;./../../module/clothing/public;./../../module/destructible/public;./../../module/clothing_legacy/public;./../../module/legacy/public;./../../module/destructible_legacy/public;./../../module/framework_legacy/public;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>__PS4__;PS4;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;NX_USE_SDK_STATICLIBS;NX_FOUNDATION_STATICLIB;NX_PARAMETERIZED_HIDE_DESCRIPTIONS=1;_LIB;NDEBUG;APEX_SHIPPING;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CppExceptions>false</CppExceptions>
+      <WarningLevel>Level3</WarningLevel>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+    </ClCompile>
+    <Lib>
+      <AdditionalOptions>
+      </AdditionalOptions>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)lib$(ProjectName).a</OutputFile>
+      <AdditionalLibraryDirectories>$(NXPATH)/Lib/PS4;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ProgramDatabaseFile>$(OutDir)/lib$(ProjectName).a.pdb</ProgramDatabaseFile>
+    </Lib>
+    <ResourceCompile>
+    </ResourceCompile>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='profile|ORBIS'">
+    <OutDir>$(SolutionDir)../../lib/vc10ps4-PhysX_3.3\</OutDir>
+    <IntDir>build//ORBIS/APEX_Loader/profile\</IntDir>
+    <TargetExt>.a</TargetExt>
+    <TargetName>lib$(ProjectName)PROFILE</TargetName>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules />
+    <CodeAnalysisRuleAssemblies />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='profile|ORBIS'">
+    <ClCompile>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <AdditionalOptions>-fdiagnostics-show-option -Wall -fno-rtti -fno-exceptions -ffast-math -fno-strict-aliasing -ffunction-sections -fdata-sections -Wno-missing-braces -Wno-c++11-narrowing -Wno-char-subscripts -Wno-unneeded-internal-declaration -Wno-unused-variable -Wno-unused-function -Wno-unknown-pragmas -Wno-uninitialized -Wno-switch -Wno-tautological-compare -Wno-dynamic-class-memaccess -Wno-overloaded-virtual -Wno-self-assign</AdditionalOptions>
+      <OptimizationLevel>Level2</OptimizationLevel>
+      <FastMath>false</FastMath>
+      <NoStrictAliasing>false</NoStrictAliasing>
+      <UnrollLoops>false</UnrollLoops>
+      <AnsiCompliance>false</AnsiCompliance>
+      <MsExtensions>false</MsExtensions>
+      <AdditionalIncludeDirectories>$(NXPATH)/Include;$(NXPATH)/Include/common;$(NXPATH)/Include/cooking;$(NXPATH)/Include/extensions;$(NXPATH)/Include/geometry;$(NXPATH)/Include/pvd;$(NXPATH)/Include/gpu;$(NXPATH)/Include/deformable;$(NXPATH)/Include/particles;$(NXPATH)/Include/characterkinematic;$(NXPATH)/Include/characterdynamic;$(NXPATH)/Include/vehicle;$(NXPATH)/Source/GeomUtils/headers;$(NXPATH)/Source/PhysXGpu/include;$(NXPATH)/Include/pxtask;$(NXPATH)/Include/physxprofilesdk;$(NXPATH)/Source/physxprofilesdk;$(NXPATH)/Include/physxvisualdebuggersdk;$(NXPATH)/Source/physxvisualdebuggersdk;./../../shared/general/shared;$(NXPATH)/Include/foundation;$(NXPATH)/Include/foundation/ps4;$(NXPATH)/Source/foundation/include;$(NXPATH)/Source/foundation/include/ps4;./../../public;./../../shared/general/renderdebug/public;./../../shared/general/renderdebug/include;./../../shared/general/PxIOStream/public;./../../shared/general/PxIOStream/include;./../../shared/general/string_parsing/include;./../../framework/public;./../../framework/public/PhysX3;./../../common/include;./../../common/include/ps4;./../../shared/internal/include;./../../module/common/include;./../../NxParameterized/public;./../../NxParameterized/include;./../../module/loader/include;./../../module/loader/public;./../../module/clothing/public;./../../module/destructible/public;./../../module/clothing_legacy/public;./../../module/legacy/public;./../../module/destructible_legacy/public;./../../module/framework_legacy/public;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>__PS4__;PS4;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;NX_USE_SDK_STATICLIBS;NX_FOUNDATION_STATICLIB;NX_PARAMETERIZED_HIDE_DESCRIPTIONS=1;_LIB;NDEBUG;PX_PROFILE;PHYSX_PROFILE_SDK;PX_SUPPORT_VISUAL_DEBUGGER;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CppExceptions>false</CppExceptions>
+      <WarningLevel>Level3</WarningLevel>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+    </ClCompile>
+    <Lib>
+      <AdditionalOptions>
+      </AdditionalOptions>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)lib$(ProjectName)PROFILE.a</OutputFile>
+      <AdditionalLibraryDirectories>$(NXPATH)/Lib/PS4;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ProgramDatabaseFile>$(OutDir)/lib$(ProjectName)PROFILE.a.pdb</ProgramDatabaseFile>
+    </Lib>
+    <ResourceCompile>
+    </ResourceCompile>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\module\loader\include\LoaderParamClasses.h">
+    </ClInclude>
+    <ClInclude Include="..\..\module\loader\include\ModuleLoader.h">
+    </ClInclude>
+    <ClInclude Include="..\..\module\loader\include\Modules.h">
+    </ClInclude>
+    <ClInclude Include="..\..\module\loader\include\ModuleXmacro.h">
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\module\loader\public\NxModuleLoader.h">
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\module\loader\src\ModuleLoader.cpp">
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="./ApexCommon.vcxproj">
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="./ApexFramework.vcxproj">
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="./APEX_Clothing.vcxproj">
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="./APEX_Destructible.vcxproj">
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="./APEX_Legacy.vcxproj">
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

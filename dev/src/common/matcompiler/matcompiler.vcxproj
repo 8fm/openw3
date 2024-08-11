@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" TreatAsLocalProperty="OutDir;TargetName;IntDir;PlatformToolset">
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedConfigurationSetup.props))\SharedConfigurationSetup.props" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5304FFB3-A910-464D-BA75-4C96CA90BB59}</ProjectGuid>
+    <RootNamespace>matcompiler</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <ProjectClDirs>$(SolutionDir)../external/gfx4/Src;$(SolutionDir)../external/gfx4/Include;</ProjectClDirs>
+  </PropertyGroup>
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.props))\Shared.props" />
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedItemGroups.props))\SharedItemGroups.props" />
+  <ItemGroup>
+    <ClCompile Include="mbGammaCorrection.cpp" />
+    <ClCompile Include="matClasses.cpp" />
+    <ClCompile Include="matNames.cpp" />
+    <ClCompile Include="materialCompiler.cpp" />
+    <ClCompile Include="materialPixelShaderCompiler.cpp" />
+    <ClCompile Include="materialShaderCompiler.cpp" />
+    <ClCompile Include="materialVertexShaderCompiler.cpp" />
+    <ClCompile Include="legacyBlocks.cpp" />
+    <ClCompile Include="mbAmbientLight.cpp" />
+    <ClCompile Include="mbCoarseReflection.cpp" />
+    <ClCompile Include="mbColorShiftRB.cpp" />
+    <ClCompile Include="mbCustomFunction.cpp" />
+    <ClCompile Include="mbForwardLight.cpp" />
+    <ClCompile Include="mbForwardLightCustom.cpp" />
+    <ClCompile Include="mbGlobalFog.cpp" />
+    <ClCompile Include="mbGlossinessPack.cpp" />
+    <ClCompile Include="mbGradient.cpp" />
+    <ClCompile Include="mbLocalReflection.cpp" />
+    <ClCompile Include="mbMathAppendVector.cpp" />
+    <ClCompile Include="mbMathMapValue.cpp" />
+    <ClCompile Include="mbMathSH.cpp" />
+    <ClCompile Include="mbMathSplitVector.cpp" />
+    <ClCompile Include="mbMathWorldViewRecalculation.cpp" />
+    <ClCompile Include="mbNoise.cpp" />
+    <ClCompile Include="mbNoise2D.cpp" />
+    <ClCompile Include="mbOutputColorEnhanced.cpp" />
+    <ClCompile Include="mbOutputColorEye.cpp" />
+    <ClCompile Include="mbOutputColorSkin.cpp" />
+    <ClCompile Include="mbOutputColorEyeOverlay.cpp" />
+    <ClCompile Include="mbOutputVertexModifiers.cpp" />
+    <ClCompile Include="mbOutputVolume.cpp" />
+    <ClCompile Include="mbPackNormal.cpp" />
+    <ClCompile Include="mbSamplerDetail.cpp" />
+    <ClCompile Include="mbSamplerNormalArray.cpp" />
+    <ClCompile Include="mbSamplerTextureArray.cpp" />
+    <ClCompile Include="mbShadowSample.cpp" />
+    <ClCompile Include="mbShadowSurfaceDepth.cpp" />
+    <ClCompile Include="mbStreamingBlendRatio.cpp" />
+    <ClCompile Include="mbTerrainMaterialBlending.cpp" />
+    <ClCompile Include="mbTexCoords.cpp" />
+    <ClCompile Include="mbVertexColor.cpp" />
+    <ClCompile Include="mbVertexFrame.cpp" />
+    <ClCompile Include="mbVertexLight.cpp" />
+    <ClCompile Include="mbVertexMotionBlend.cpp" />
+    <ClCompile Include="mbVertexNormal.cpp" />
+    <ClCompile Include="mbVertexPosition.cpp" />
+    <ClCompile Include="mbVFace.cpp" />
+    <ClCompile Include="mbViewPosition.cpp" />
+    <ClCompile Include="mbViewVector.cpp" />
+    <ClCompile Include="mbViewZ.cpp" />
+    <ClCompile Include="mbVolumeBlend.cpp" />
+    <ClCompile Include="mbWetness.cpp" />
+    <ClCompile Include="mbWorldBinormal.cpp" />
+    <ClCompile Include="mbWorldNormal.cpp" />
+    <ClCompile Include="mbWorldPosition.cpp" />
+    <ClCompile Include="mbWorldTangent.cpp" />
+    <ClCompile Include="mbWorldBasis.cpp" />
+    <ClCompile Include="mbMathWorldTangentRecalculation.cpp" />
+    <ClCompile Include="mbMathSplitAppendVector.cpp" />
+    <ClCompile Include="mbDerivativeNormal.cpp" />
+    <ClCompile Include="mbLightingBase.cpp" />
+    <ClCompile Include="mbLightingPhong.cpp" />
+    <ClCompile Include="mbMathAbs.cpp" />
+    <ClCompile Include="mbMathAdd.cpp" />
+    <ClCompile Include="mbMathClamp.cpp" />
+    <ClCompile Include="mbMathCos.cpp" />
+    <ClCompile Include="mbMathDerivativeToNormal.cpp" />
+    <ClCompile Include="mbMathDesaturate.cpp" />
+    <ClCompile Include="mbMathDiv.cpp" />
+    <ClCompile Include="mbMathDot3.cpp" />
+    <ClCompile Include="mbMathCross.cpp" />
+    <ClCompile Include="mbMathFloor.cpp" />
+    <ClCompile Include="mbMathFrac.cpp" />
+    <ClCompile Include="mbMathFresnel.cpp" />
+    <ClCompile Include="mbMathInterpolate.cpp" />
+    <ClCompile Include="mbMathInvert.cpp" />
+    <ClCompile Include="mbMathMax.cpp" />
+    <ClCompile Include="mbMathMin.cpp" />
+    <ClCompile Include="mbMathMultiply.cpp" />
+    <ClCompile Include="mbMathNegate.cpp" />
+    <ClCompile Include="mbMathNormalize.cpp" />
+    <ClCompile Include="mbMathNormalToDerivative.cpp" />
+    <ClCompile Include="mbMathPower.cpp" />
+    <ClCompile Include="mbMathReflection.cpp" />
+    <ClCompile Include="mbMathSaturate.cpp" />
+    <ClCompile Include="mbMathSin.cpp" />
+    <ClCompile Include="mbMathSubtract.cpp" />
+    <ClCompile Include="mbMathTangentToWorld.cpp" />
+    <ClCompile Include="mbMathTime.cpp" />
+    <ClCompile Include="mbWorldToTangent.cpp" />
+    <ClCompile Include="mbSamplerCube.cpp" />
+    <ClCompile Include="mbSamplerHeightmap2Normal.cpp" />
+    <ClCompile Include="mbSamplerNormal.cpp" />
+    <ClCompile Include="mbSamplerNormalDetail.cpp" />
+    <ClCompile Include="mbSamplerTexture.cpp" />
+    <ClCompile Include="mbSamplerTextureDetail.cpp" />
+    <ClCompile Include="mbBlendByDistance.cpp" />
+    <ClCompile Include="mbColorShift.cpp" />
+    <ClCompile Include="mbCombineNormals.cpp" />
+    <ClCompile Include="mbDithering.cpp" />
+    <ClCompile Include="mbNormalmapBlend.cpp" />
+    <ClCompile Include="mbOutputColor.cpp" />
+    <ClCompile Include="mbOutputColorDecalBlended.cpp" />
+    <ClCompile Include="mbOutputColorDecalModulative.cpp" />
+    <ClCompile Include="mbOutputColorDeferred.cpp" />
+    <ClCompile Include="mbOutputColorHair.cpp" />
+    <ClCompile Include="mbRenderFeedbackDataFetch.cpp" />
+    <ClCompile Include="mbSoftTransparencyAlpha.cpp" />
+    <ClCompile Include="mbTexCoordMad.cpp" />
+    <ClCompile Include="mbConvertGammaToLinear.cpp" />
+    <ClCompile Include="mbConvertLinearToGamma.cpp" />
+    <ClCompile Include="mbEnvTransparencyColorFilter.cpp" />
+    <ClCompile Include="mbTerrainMaterialSampler.cpp" />
+    <ClCompile Include="build.cpp">
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="materialDefaults.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="mbGammaCorrection.h" />
+    <ClInclude Include="matNamesRegistry.h" />
+    <ClInclude Include="materialCompiler.h" />
+    <ClInclude Include="materialPixelShaderCompiler.h" />
+    <ClInclude Include="materialShaderCompiler.h" />
+    <ClInclude Include="materialShaderConstants.h" />
+    <ClInclude Include="materialVertexShaderCompiler.h" />
+    <ClInclude Include="matTypeRegistry.h" />
+    <ClInclude Include="mbGradient.h" />
+    <ClInclude Include="mbForwardLightCustom.h" />
+    <ClInclude Include="mbMathAdd.h" />
+    <ClInclude Include="mbMathInterpolate.h" />
+    <ClInclude Include="mbMathMultiply.h" />
+    <ClInclude Include="mbMathWorldViewRecalculation.h" />
+    <ClInclude Include="mbNoise.h" />
+    <ClInclude Include="mbOutputVolume.h" />
+    <ClInclude Include="mbTerrainMaterialBlending.h" />
+    <ClInclude Include="mbVertexLight.h" />
+    <ClInclude Include="mbWetness.h" />
+    <ClInclude Include="mbWorldBasis.h" />
+    <ClInclude Include="mbMathWorldTangentRecalculation.h" />
+    <ClInclude Include="mbMathSplitAppendVector.h" />
+    <ClInclude Include="mbDerivativeNormal.h" />
+    <ClInclude Include="mbOutputColorEnhanced.h" />
+    <ClInclude Include="mbOutputColorEye.h" />
+    <ClInclude Include="mbOutputColorSkin.h" />
+    <ClInclude Include="mbOutputColorEyeOverlay.h" />
+    <ClInclude Include="mbOutputVertexModifiers.h" />
+    <ClInclude Include="mbPackNormal.h" />
+    <ClInclude Include="mbSamplerDetail.h" />
+    <ClInclude Include="mbSamplerNormalArray.h" />
+    <ClInclude Include="mbSamplerTextureArray.h" />
+    <ClInclude Include="mbStreamingBlendRatio.h" />
+    <ClInclude Include="mbTexCoords.h" />
+    <ClInclude Include="mbLighitngBase.h" />
+    <ClInclude Include="mbSamplerCube.h" />
+    <ClInclude Include="mbSamplerHeightmap2Normal.h" />
+    <ClInclude Include="mbSamplerNormal.h" />
+    <ClInclude Include="mbSamplerNormalDetail.h" />
+    <ClInclude Include="mbSamplerTexture.h" />
+    <ClInclude Include="mbSamplerTextureDetail.h" />
+    <ClInclude Include="mbOutputColor.h" />
+    <ClInclude Include="mbOutputColorDecalBlended.h" />
+    <ClInclude Include="mbOutputColorDecalModulative.h" />
+    <ClInclude Include="mbOutputColorDeferred.h" />
+    <ClInclude Include="mbOutputColorHair.h" />
+    <ClInclude Include="build.h" />
+    <ClInclude Include="matcompiler.h" />
+    <ClInclude Include="materialDefaults.h" />
+    <ClInclude Include="stringPrinter.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.targets))\Shared.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

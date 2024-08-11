@@ -1,0 +1,1457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<Filter Include="Common">
+			<UniqueIdentifier>{B86D05D1-8D88-1149-9B95-A9F32BCD5B59}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="SoundEngineProxy">
+			<UniqueIdentifier>{EA177621-65E6-1644-B4B6-D7510B1DA6CE}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="SoundEngineProxy\Common">
+			<UniqueIdentifier>{D42495BB-9A9B-F74F-96F4-8BB001E67641}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="SoundEngineProxy\Remote">
+			<UniqueIdentifier>{E4AA25BA-3789-264D-A653-1A7580D90CF0}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="SoundEngineProxy\Remote\CodeBase">
+			<UniqueIdentifier>{6E1717D6-72E3-B749-8E51-F1A7761C2C4A}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="SoftwarePipeline">
+			<UniqueIdentifier>{693A4F76-4B01-9243-A865-9255BAEAF9F8}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Motion">
+			<UniqueIdentifier>{248CEB72-F027-F34E-AD9E-B24FA45CCD85}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="include">
+			<UniqueIdentifier>{7436B893-F22A-5D4F-B525-376527847C2E}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="include\AK">
+			<UniqueIdentifier>{E8A2080E-BD0D-2040-8CA7-F814E3A5175A}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="include\AK\SoundEngine">
+			<UniqueIdentifier>{862649B3-787D-0140-8ED7-876C5A83DFA7}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="include\AK\SoundEngine\Common">
+			<UniqueIdentifier>{605843FA-F422-134B-8A94-CB2C2509A65F}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="include\AK\SoundEngine\Platforms">
+			<UniqueIdentifier>{64DD4F2C-C916-024F-9579-7F77E53432A5}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="include\AK\SoundEngine\Platforms\PS4">
+			<UniqueIdentifier>{51D55962-D552-5B4C-8838-6B13203E0FE8}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="include\AK\Tools">
+			<UniqueIdentifier>{B7067B2E-FF0A-574C-92DE-950D29BD0076}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="include\AK\Tools\PS4">
+			<UniqueIdentifier>{0AF9905C-2CBA-6840-AAF3-AC4102CC2017}</UniqueIdentifier>
+		</Filter>
+	</ItemGroup>
+	<ItemGroup>
+		<ClInclude Include="stdafx.h" />
+		<ClInclude Include="..\..\..\..\include\AK\SoundEngine\Common\AkCallback.h">
+			<Filter>include\AK\SoundEngine\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\include\AK\SoundEngine\Common\AkCommonDefs.h">
+			<Filter>include\AK\SoundEngine\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\include\AK\SoundEngine\Common\AkDynamicDialogue.h">
+			<Filter>include\AK\SoundEngine\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\include\AK\SoundEngine\Common\AkDynamicSequence.h">
+			<Filter>include\AK\SoundEngine\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\include\AK\SoundEngine\Common\AkFPUtilities.h">
+			<Filter>include\AK\SoundEngine\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\include\AK\SoundEngine\Common\AkMemoryMgr.h">
+			<Filter>include\AK\SoundEngine\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\include\AK\SoundEngine\Common\AkModule.h">
+			<Filter>include\AK\SoundEngine\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\include\AK\SoundEngine\Common\AkQueryParameters.h">
+			<Filter>include\AK\SoundEngine\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\include\AK\SoundEngine\Common\AkSimd.h">
+			<Filter>include\AK\SoundEngine\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\include\AK\SoundEngine\Common\AkSoundEngine.h">
+			<Filter>include\AK\SoundEngine\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\include\AK\SoundEngine\Common\AkSoundEngineExport.h">
+			<Filter>include\AK\SoundEngine\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\include\AK\SoundEngine\Common\AkSpeakerConfig.h">
+			<Filter>include\AK\SoundEngine\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\include\AK\SoundEngine\Common\AkStreamMgrModule.h">
+			<Filter>include\AK\SoundEngine\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\include\AK\SoundEngine\Common\AkTypes.h">
+			<Filter>include\AK\SoundEngine\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\include\AK\SoundEngine\Common\IAkPlugin.h">
+			<Filter>include\AK\SoundEngine\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\include\AK\SoundEngine\Common\IAkPluginMemAlloc.h">
+			<Filter>include\AK\SoundEngine\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\include\AK\SoundEngine\Common\IAkProcessorFeatures.h">
+			<Filter>include\AK\SoundEngine\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\include\AK\SoundEngine\Common\IAkRTPCSubscriber.h">
+			<Filter>include\AK\SoundEngine\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\include\AK\SoundEngine\Common\IAkStreamMgr.h">
+			<Filter>include\AK\SoundEngine\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\include\AK\SoundEngine\Platforms\PS4\AkPS4SoundEngine.h">
+			<Filter>include\AK\SoundEngine\Platforms\PS4</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\include\AK\SoundEngine\Platforms\PS4\AkSimd.h">
+			<Filter>include\AK\SoundEngine\Platforms\PS4</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\include\AK\SoundEngine\Platforms\PS4\AkTypes.h">
+			<Filter>include\AK\SoundEngine\Platforms\PS4</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\include\AK\Tools\PS4\AkLock.h">
+			<Filter>include\AK\Tools\PS4</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\include\AK\Tools\PS4\AkPlatformFuncs.h">
+			<Filter>include\AK\Tools\PS4</Filter>
+		</ClInclude>
+		<ClInclude Include="AkACPManager.h" />
+		<ClInclude Include="AkATRAC9.h" />
+		<ClInclude Include="AkAudioThread.h" />
+		<ClInclude Include="AkFeedbackMixBus.h" />
+		<ClInclude Include="AkLEngine.h" />
+		<ClInclude Include="AkManualEvent.h" />
+		<ClInclude Include="AkRuntimeDetector.h" />
+		<ClInclude Include="AkSIMDSpeakerVolumes.h" />
+		<ClInclude Include="AkSink.h" />
+		<ClInclude Include="AkSrcACPBase.h" />
+		<ClInclude Include="AkSrcACPHelper.h" />
+		<ClInclude Include="AkSrcBankAt9.h" />
+		<ClInclude Include="AkSrcFileAt9.h" />
+		<ClInclude Include="PlatformAudiolibDefs.h" />
+		<ClInclude Include="..\Common\ActivityChunk.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\Ak3DListener.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\Ak3DParams.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkAction.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkActionActive.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkActionBreak.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkActionBypassFX.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkActionDuck.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkActionEvent.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkActionExcept.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkActionMute.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkActionPause.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkActionPlay.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkActionPlayAndContinue.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkActionResume.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkActions.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkActionSeek.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkActionSetAkProp.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkActionSetGameParameter.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkActionSetState.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkActionSetSwitch.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkActionSetValue.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkActionStop.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkActionTrigger.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkActionUseState.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkActiveParent.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkActorMixer.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkAttenuationMgr.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkAudioLib.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkAudioLibIndex.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkAudioLibTimer.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkAudioMgr.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkAuxBus.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkBankCallbackMgr.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkBankList.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkBankMgr.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkBankReader.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkBanks.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkBankStructs.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkBitArray.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkBus.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkBusCallbackMgr.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkBusCtx.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkCaptureMgr.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkChunkRing.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkCntrHistory.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkCommon.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkContainerBase.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkContinuationList.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkContinuousPBI.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkConversionTable.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkCritical.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkDecisionTree.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkDefault3DParams.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkDialogueEvent.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkDownmix.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkDuckItem.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkDynamicSequence.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkDynamicSequencePBI.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkEffectsMgr.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkEndianByteSwap.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkEnvironmentsMgr.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkEvent.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkFeedbackStructs.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkFileParserBase.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkFxBase.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkFXContext.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkFxIDs.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkFXMemAlloc.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkGen3DParams.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkHashList.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkIDStringMap.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkIndexable.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkInterpolation.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkKeyArray.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkKeyDef.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkKeyList.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkLayer.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkLayerCntr.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkLEngineCmds.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkLEngineDefs.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkLEngineStructs.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkLEngine_Common_incl.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkList2.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkMarkers.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkMath.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkMemTracker.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkMeterTools.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkModifiers.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkMonitor.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkMonitorData.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkMultiKeyList.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkMultiPlayNode.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkMutedMap.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkOutputMgr.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkParameterNode.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkParameterNodeBase.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkParameters.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkParentNode.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkPath.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkPathManager.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkPBI.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkPBIAware.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkPlayingMgr.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkPlaylist.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkPoolSizes.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkPositionKeeper.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkPositionRepository.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkPreparationAware.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkPrivateTypes.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkProfile.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkPropBundle.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkRandom.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkRanSeqBaseInfo.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkRanSeqCntr.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkRegisteredObj.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkRegistryMgr.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkRTPC.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkRTPCMgr.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkRuntimeEnvironmentMgr.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkSettings.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkSharedEnum.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkSIS.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkSound.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkSoundBase.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkSource.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkSpeakerPan.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkSrcFileServices.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkState.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkStateMgr.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkStaticArray.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkSwitchAware.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkSwitchCntr.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkTransition.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkTransitionManager.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkTransportAware.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkURenderer.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\ALBytesMem.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AudiolibDefs.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AudiolibLimitations.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\FileCaptureWriter.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\IALMonitor.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\IALMonitorSink.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\ITransitionable.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\PrivateStructures.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\resource.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\ActionProxyLocal.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\ActorMixerProxyLocal.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\ALMonitorProxyLocal.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\AttenuationProxyLocal.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\AuxBusProxyLocal.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\BusProxyLocal.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\CommandData.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\CommandDataSerializer.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\DialogueEventProxyLocal.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\EventProxyLocal.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\FeedbackBusProxyLocal.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\FeedbackNodeProxyLocal.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\FxBaseProxyLocal.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\IActionProxy.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\IActorMixerProxy.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\IALMonitorProxy.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\IALMonitorSubProxy.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\IAttenuationProxy.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\IAudioRenderer.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\IAuxBusProxy.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\IBusProxy.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\IDialogueEventProxy.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\IEventProxy.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\IFeedbackBusProxy.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\IFeedbackMgrProxy.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\IFeedbackNodeProxy.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\IFxBaseProxy.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\IHierarchicalProxy.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\ILayerContainerProxy.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\ILayerProxy.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\IMultiSwitchProxy.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\IObjectProxy.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\IParameterableProxy.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\IParameterNodeProxy.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\IPluginMgrProxy.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\IProxyFramework.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\IProxyFrameworkConnected.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\IRanSeqContainerProxy.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\IRendererProxy.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\ISoundProxy.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\IStateMgrProxy.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\IStateProxy.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\ISwitchContainerProxy.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\LayerContainerProxyLocal.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\LayerProxyLocal.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\MultiSwitchProxyLocal.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\ObjectProxyLocal.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\ParameterableProxyLocal.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\ParameterNodeProxyLocal.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\RanSeqContainerProxyLocal.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\RendererProxyLocal.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\SoundProxyLocal.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\StateMgrProxyLocal.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\StateProxyLocal.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\SwitchContainerProxyLocal.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Remote\CodeBase\ActionProxyConnected.h">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Remote\CodeBase\ActorMixerProxyConnected.h">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Remote\CodeBase\ALMonitorProxyConnected.h">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Remote\CodeBase\AttenuationProxyConnected.h">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Remote\CodeBase\AuxBusProxyConnected.h">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Remote\CodeBase\BaseBusConnected.h">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Remote\CodeBase\BusProxyConnected.h">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Remote\CodeBase\DialogueEventProxyConnected.h">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Remote\CodeBase\EventProxyConnected.h">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Remote\CodeBase\FeedbackBusProxyConnected.h">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Remote\CodeBase\FeedbackNodeProxyConnected.h">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Remote\CodeBase\FxBaseProxyConnected.h">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Remote\CodeBase\LayerContainerProxyConnected.h">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Remote\CodeBase\LayerProxyConnected.h">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Remote\CodeBase\MultiSwitchProxyConnected.h">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Remote\CodeBase\ObjectProxyConnected.h">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Remote\CodeBase\ParameterableProxyConnected.h">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Remote\CodeBase\ParameterNodeProxyConnected.h">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Remote\CodeBase\ProxyFrameworkConnected.h">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Remote\CodeBase\ProxyFrameworkFactory.h">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Remote\CodeBase\RanSeqContainerProxyConnected.h">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Remote\CodeBase\RendererProxyConnected.h">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Remote\CodeBase\SoundProxyConnected.h">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Remote\CodeBase\StateMgrProxyConnected.h">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Remote\CodeBase\StateProxyConnected.h">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Remote\CodeBase\SwitchContainerProxyConnected.h">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClInclude>
+		<ClInclude Include="..\SoftwarePipeline\AkADPCMCodec.h">
+			<Filter>SoftwarePipeline</Filter>
+		</ClInclude>
+		<ClInclude Include="..\SoftwarePipeline\AkInternalLPFState.h">
+			<Filter>SoftwarePipeline</Filter>
+		</ClInclude>
+		<ClInclude Include="..\SoftwarePipeline\AkInternalPitchState.h">
+			<Filter>SoftwarePipeline</Filter>
+		</ClInclude>
+		<ClInclude Include="..\SoftwarePipeline\AkLEngine_SoftwarePipeline.h">
+			<Filter>SoftwarePipeline</Filter>
+		</ClInclude>
+		<ClInclude Include="..\SoftwarePipeline\AkLEngine_SoftwarePipeline_incl.h">
+			<Filter>SoftwarePipeline</Filter>
+		</ClInclude>
+		<ClInclude Include="..\SoftwarePipeline\AkLPFCommon.h">
+			<Filter>SoftwarePipeline</Filter>
+		</ClInclude>
+		<ClInclude Include="..\SoftwarePipeline\AkMixer.h">
+			<Filter>SoftwarePipeline</Filter>
+		</ClInclude>
+		<ClInclude Include="..\SoftwarePipeline\AkResampler.h">
+			<Filter>SoftwarePipeline</Filter>
+		</ClInclude>
+		<ClInclude Include="..\SoftwarePipeline\AkResamplerCommon.h">
+			<Filter>SoftwarePipeline</Filter>
+		</ClInclude>
+		<ClInclude Include="..\SoftwarePipeline\AkSrcBankADPCM.h">
+			<Filter>SoftwarePipeline</Filter>
+		</ClInclude>
+		<ClInclude Include="..\SoftwarePipeline\AkSrcBankPCM.h">
+			<Filter>SoftwarePipeline</Filter>
+		</ClInclude>
+		<ClInclude Include="..\SoftwarePipeline\AkSrcBase.h">
+			<Filter>SoftwarePipeline</Filter>
+		</ClInclude>
+		<ClInclude Include="..\SoftwarePipeline\AkSrcFileADPCM.h">
+			<Filter>SoftwarePipeline</Filter>
+		</ClInclude>
+		<ClInclude Include="..\SoftwarePipeline\AkSrcFileBase.h">
+			<Filter>SoftwarePipeline</Filter>
+		</ClInclude>
+		<ClInclude Include="..\SoftwarePipeline\AkSrcFilePCM.h">
+			<Filter>SoftwarePipeline</Filter>
+		</ClInclude>
+		<ClInclude Include="..\SoftwarePipeline\AkSrcLpFilter.h">
+			<Filter>SoftwarePipeline</Filter>
+		</ClInclude>
+		<ClInclude Include="..\SoftwarePipeline\AkSrcPhysModel.h">
+			<Filter>SoftwarePipeline</Filter>
+		</ClInclude>
+		<ClInclude Include="..\SoftwarePipeline\AkVPL.h">
+			<Filter>SoftwarePipeline</Filter>
+		</ClInclude>
+		<ClInclude Include="..\SoftwarePipeline\AkVPLFilterNode.h">
+			<Filter>SoftwarePipeline</Filter>
+		</ClInclude>
+		<ClInclude Include="..\SoftwarePipeline\AkVPLFilterNodeBase.h">
+			<Filter>SoftwarePipeline</Filter>
+		</ClInclude>
+		<ClInclude Include="..\SoftwarePipeline\AkVPLFilterNodeOutOfPlace.h">
+			<Filter>SoftwarePipeline</Filter>
+		</ClInclude>
+		<ClInclude Include="..\SoftwarePipeline\AkVPLFinalMixNode.h">
+			<Filter>SoftwarePipeline</Filter>
+		</ClInclude>
+		<ClInclude Include="..\SoftwarePipeline\AkVPLLPFNode.h">
+			<Filter>SoftwarePipeline</Filter>
+		</ClInclude>
+		<ClInclude Include="..\SoftwarePipeline\AkVPLMixBusNode.h">
+			<Filter>SoftwarePipeline</Filter>
+		</ClInclude>
+		<ClInclude Include="..\SoftwarePipeline\AkVPLNode.h">
+			<Filter>SoftwarePipeline</Filter>
+		</ClInclude>
+		<ClInclude Include="..\SoftwarePipeline\AkVPLPitchNode.h">
+			<Filter>SoftwarePipeline</Filter>
+		</ClInclude>
+		<ClInclude Include="..\SoftwarePipeline\AkVPLSrcCbxNode.h">
+			<Filter>SoftwarePipeline</Filter>
+		</ClInclude>
+		<ClInclude Include="..\SoftwarePipeline\AkVPLSrcNode.h">
+			<Filter>SoftwarePipeline</Filter>
+		</ClInclude>
+	</ItemGroup>
+	<ItemGroup>
+		<ClCompile Include="stdafx.cpp" />
+		<ClCompile Include="AkACPManager.cpp" />
+		<ClCompile Include="AkAudioThread.cpp" />
+		<ClCompile Include="AkLEngine.cpp" />
+		<ClCompile Include="AkSink.cpp" />
+		<ClCompile Include="AkSrcACPHelper.cpp" />
+		<ClCompile Include="AkSrcBankAt9.cpp" />
+		<ClCompile Include="AkSrcFileAt9.cpp" />
+		<ClCompile Include="..\Common\Ak3DListener.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkAction.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkActionActive.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkActionBreak.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkActionBypassFX.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkActionDuck.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkActionEvent.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkActionExcept.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkActionMute.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkActionPause.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkActionPlay.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkActionPlayAndContinue.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkActionResume.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkActionSeek.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkActionSetAkProp.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkActionSetGameParameter.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkActionSetState.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkActionSetSwitch.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkActionSetValue.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkActionStop.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkActionTrigger.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkActionUseState.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkActiveParent.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkActorMixer.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkAttenuationMgr.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkAudioLib.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkAudioLibIndex.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkAudioLibTimer.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkAudioMgr.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkAuxBus.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkBankCallbackMgr.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkBankList.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkBankMgr.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkBankReader.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkBus.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkBusCallbackMgr.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkBusCtx.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkCaptureMgr.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkChunkRing.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkCommon.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkContainerBase.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkContinuationList.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkContinuousPBI.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkDecisionTree.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkDefault3DParams.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkDialogueEvent.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkDuckItem.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkDynamicSequence.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkDynamicSequencePBI.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkEffectsMgr.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkEnvironmentsMgr.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkEvent.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkFileParserBase.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkFxBase.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkFXContext.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkFXMemAlloc.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkGen3DParams.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkIDStringMap.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkIndexable.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkLayer.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkLayerCntr.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkLEngineCmds.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkLEngine_Common.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkMarkers.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkMath.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkMonitor.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkMultiPlayNode.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkOutputMgr.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkParameterNode.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkParameterNodeBase.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkPath.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkPathManager.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkPBI.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkPBIAware.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkPlayingMgr.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkPlaylist.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkPositionRepository.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkPreparationAware.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkProfile.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkQueryParameters.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkRanSeqBaseInfo.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkRanSeqCntr.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkRegisteredObj.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkRegistryMgr.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkRTPCMgr.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkRuntimeEnvironmentMgr.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkSettings.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkSIS.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkSound.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkSoundBase.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkSource.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkSpeakerPan.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkState.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkStateMgr.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkSwitchAware.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkSwitchCntr.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkTransition.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkTransitionManager.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkURenderer.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\ALBytesMem.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\FileCaptureWriter.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Common\ActionProxyLocal.cpp">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Common\ActorMixerProxyLocal.cpp">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Common\ALMonitorProxyLocal.cpp">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Common\AttenuationProxyLocal.cpp">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Common\AuxBusProxyLocal.cpp">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Common\BusProxyLocal.cpp">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Common\CommandData.cpp">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Common\CommandDataSerializer.cpp">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Common\DialogueEventProxyLocal.cpp">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Common\EventProxyLocal.cpp">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Common\FeedbackBusProxyLocal.cpp">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Common\FeedbackNodeProxyLocal.cpp">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Common\FxBaseProxyLocal.cpp">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Common\LayerContainerProxyLocal.cpp">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Common\LayerProxyLocal.cpp">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Common\ObjectProxyLocal.cpp">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Common\ParameterableProxyLocal.cpp">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Common\ParameterNodeProxyLocal.cpp">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Common\RanSeqContainerProxyLocal.cpp">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Common\RendererProxyLocal.cpp">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Common\SoundProxyLocal.cpp">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Common\StateMgrProxyLocal.cpp">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Common\StateProxyLocal.cpp">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Common\SwitchContainerProxyLocal.cpp">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Remote\CodeBase\ActionProxyConnected.cpp">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Remote\CodeBase\ActorMixerProxyConnected.cpp">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Remote\CodeBase\ALMonitorProxyConnected.cpp">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Remote\CodeBase\AttenuationProxyConnected.cpp">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Remote\CodeBase\AuxBusProxyConnected.cpp">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Remote\CodeBase\BaseBusConnected.cpp">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Remote\CodeBase\BusProxyConnected.cpp">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Remote\CodeBase\DialogueEventProxyConnected.cpp">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Remote\CodeBase\EventProxyConnected.cpp">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Remote\CodeBase\FeedbackBusProxyConnected.cpp">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Remote\CodeBase\FeedbackNodeProxyConnected.cpp">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Remote\CodeBase\FxBaseProxyConnected.cpp">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Remote\CodeBase\LayerContainerProxyConnected.cpp">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Remote\CodeBase\LayerProxyConnected.cpp">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Remote\CodeBase\ObjectProxyConnected.cpp">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Remote\CodeBase\ParameterableProxyConnected.cpp">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Remote\CodeBase\ParameterNodeProxyConnected.cpp">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Remote\CodeBase\ProxyFrameworkConnected.cpp">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Remote\CodeBase\ProxyFrameworkFactory.cpp">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Remote\CodeBase\RanSeqContainerProxyConnected.cpp">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Remote\CodeBase\RendererProxyConnected.cpp">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Remote\CodeBase\SoundProxyConnected.cpp">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Remote\CodeBase\StateMgrProxyConnected.cpp">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Remote\CodeBase\StateProxyConnected.cpp">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Remote\CodeBase\SwitchContainerProxyConnected.cpp">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClCompile>
+		<ClCompile Include="..\SoftwarePipeline\AkADPCMCodec.cpp">
+			<Filter>SoftwarePipeline</Filter>
+		</ClCompile>
+		<ClCompile Include="..\SoftwarePipeline\AkLEngine_SoftwarePipeline.cpp">
+			<Filter>SoftwarePipeline</Filter>
+		</ClCompile>
+		<ClCompile Include="..\SoftwarePipeline\AkLPFCommon.cpp">
+			<Filter>SoftwarePipeline</Filter>
+		</ClCompile>
+		<ClCompile Include="..\SoftwarePipeline\AkMixer.cpp">
+			<Filter>SoftwarePipeline</Filter>
+		</ClCompile>
+		<ClCompile Include="..\SoftwarePipeline\AkMixerSIMD.cpp">
+			<Filter>SoftwarePipeline</Filter>
+		</ClCompile>
+		<ClCompile Include="..\SoftwarePipeline\AkResampler.cpp">
+			<Filter>SoftwarePipeline</Filter>
+		</ClCompile>
+		<ClCompile Include="..\SoftwarePipeline\AkResamplerCommon.cpp">
+			<Filter>SoftwarePipeline</Filter>
+		</ClCompile>
+		<ClCompile Include="..\SoftwarePipeline\AkResamplerSIMD.cpp">
+			<Filter>SoftwarePipeline</Filter>
+		</ClCompile>
+		<ClCompile Include="..\SoftwarePipeline\AkSrcBankADPCM.cpp">
+			<Filter>SoftwarePipeline</Filter>
+		</ClCompile>
+		<ClCompile Include="..\SoftwarePipeline\AkSrcBankPCM.cpp">
+			<Filter>SoftwarePipeline</Filter>
+		</ClCompile>
+		<ClCompile Include="..\SoftwarePipeline\AkSrcBase.cpp">
+			<Filter>SoftwarePipeline</Filter>
+		</ClCompile>
+		<ClCompile Include="..\SoftwarePipeline\AkSrcFileADPCM.cpp">
+			<Filter>SoftwarePipeline</Filter>
+		</ClCompile>
+		<ClCompile Include="..\SoftwarePipeline\AkSrcFileBase.cpp">
+			<Filter>SoftwarePipeline</Filter>
+		</ClCompile>
+		<ClCompile Include="..\SoftwarePipeline\AkSrcFilePCM.cpp">
+			<Filter>SoftwarePipeline</Filter>
+		</ClCompile>
+		<ClCompile Include="..\SoftwarePipeline\AkSrcLpFilter.cpp">
+			<Filter>SoftwarePipeline</Filter>
+		</ClCompile>
+		<ClCompile Include="..\SoftwarePipeline\AkSrcPhysModel.cpp">
+			<Filter>SoftwarePipeline</Filter>
+		</ClCompile>
+		<ClCompile Include="..\SoftwarePipeline\AkVPLFilterNode.cpp">
+			<Filter>SoftwarePipeline</Filter>
+		</ClCompile>
+		<ClCompile Include="..\SoftwarePipeline\AkVPLFilterNodeBase.cpp">
+			<Filter>SoftwarePipeline</Filter>
+		</ClCompile>
+		<ClCompile Include="..\SoftwarePipeline\AkVPLFilterNodeOutOfPlace.cpp">
+			<Filter>SoftwarePipeline</Filter>
+		</ClCompile>
+		<ClCompile Include="..\SoftwarePipeline\AkVPLFinalMixNode.cpp">
+			<Filter>SoftwarePipeline</Filter>
+		</ClCompile>
+		<ClCompile Include="..\SoftwarePipeline\AkVPLLPFNode.cpp">
+			<Filter>SoftwarePipeline</Filter>
+		</ClCompile>
+		<ClCompile Include="..\SoftwarePipeline\AkVPLMixBusNode.cpp">
+			<Filter>SoftwarePipeline</Filter>
+		</ClCompile>
+		<ClCompile Include="..\SoftwarePipeline\AkVPLNode.cpp">
+			<Filter>SoftwarePipeline</Filter>
+		</ClCompile>
+		<ClCompile Include="..\SoftwarePipeline\AkVPLPitchNode.cpp">
+			<Filter>SoftwarePipeline</Filter>
+		</ClCompile>
+		<ClCompile Include="..\SoftwarePipeline\AkVPLSrcCbxNode.cpp">
+			<Filter>SoftwarePipeline</Filter>
+		</ClCompile>
+		<ClCompile Include="..\SoftwarePipeline\AkVPLSrcNode.cpp">
+			<Filter>SoftwarePipeline</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Motion\AkFeedbackBus.cpp">
+			<Filter>Motion</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Motion\AkFeedbackMgr.cpp">
+			<Filter>Motion</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Motion\AkFeedbackNode.cpp">
+			<Filter>Motion</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Motion\AkFeedbackStructs.cpp">
+			<Filter>Motion</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Motion\AkSplitterBus.cpp">
+			<Filter>Motion</Filter>
+		</ClCompile>
+	</ItemGroup>
+</Project>

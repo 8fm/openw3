@@ -1,0 +1,10 @@
+ConstantBuffer customvs : register( b3 )
+{
+    row_major float4x4 viewMatrix;
+	row_major float4x4 projMatrix;
+	float4 lightPos;
+	row_major float4x4 worldMatrix;
+	float4 surfaceColor;
+}
+
+#include "simplePhong_vv.pssl"

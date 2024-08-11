@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mappings>
+  <!-- The root package path is created with -->
+  <!-- the path passed into to the           -->
+  <!-- xbdeploy.exe pull command.           -->
+
+  <path source="f:\cook\bundles\" target="\bundles" />
+  <path source="f:\cook\r4data\" target="\r4data" />
+  <path source="f:\cook\bin\shaders\" target="\bin\shaders" />
+  <path source="f:\cook\bin\config\" target="\bin\config" />
+  <path source="f:\cook\bin\xdkconfig\" target="\bin\xdkconfig" />
+  <path source="f:\cook\bin\initialData\" target="\bin\initialData" />
+  <path source="f:\cook\bin\dll\" target="\" />
+ </mappings>

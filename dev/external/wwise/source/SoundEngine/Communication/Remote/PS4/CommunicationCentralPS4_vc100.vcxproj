@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup Label="ProjectConfigurations">
+		<ProjectConfiguration Include="Debug|ORBIS">
+			<Configuration>Debug</Configuration>
+			<Platform>ORBIS</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Profile|ORBIS">
+			<Configuration>Profile</Configuration>
+			<Platform>ORBIS</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Release|ORBIS">
+			<Configuration>Release</Configuration>
+			<Platform>ORBIS</Platform>
+		</ProjectConfiguration>
+	</ItemGroup>
+	<PropertyGroup Label="Globals">
+		<ProjectGuid>{A381447D-5860-1F15-269E-2AEF30806CDC}</ProjectGuid>
+		<RootNamespace>CommunicationCentral</RootNamespace>
+		<Keyword>Win32Proj</Keyword>
+		<ProjectName>CommunicationCentral</ProjectName>
+	</PropertyGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ORBIS'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>MultiByte</CharacterSet>
+		<UseDebugLibraries>true</UseDebugLibraries>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|ORBIS'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>MultiByte</CharacterSet>
+		<UseDebugLibraries>false</UseDebugLibraries>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ORBIS'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>MultiByte</CharacterSet>
+		<UseDebugLibraries>false</UseDebugLibraries>
+	</PropertyGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+	<ImportGroup Label="ExtensionSettings">
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ORBIS'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Profile|ORBIS'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|ORBIS'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Label="UserMacros" />
+	<PropertyGroup>
+		<_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|ORBIS'">..\..\..\..\..\PS4\Debug\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|ORBIS'">..\..\..\..\..\PS4\Debug\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|ORBIS'">CommunicationCentral</TargetName>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Profile|ORBIS'">..\..\..\..\..\PS4\Profile\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Profile|ORBIS'">..\..\..\..\..\PS4\Profile\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Profile|ORBIS'">CommunicationCentral</TargetName>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Release|ORBIS'">..\..\..\..\..\PS4\Release\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Release|ORBIS'">..\..\..\..\..\PS4\Release\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Release|ORBIS'">CommunicationCentral</TargetName>
+	</PropertyGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ORBIS'">
+		<ClCompile>
+			<AdditionalOptions>-Wno-invalid-offsetof -Wno-switch  -Wno-unused-variable -Wno-missing-braces %(AdditionalOptions)</AdditionalOptions>
+			<AdditionalIncludeDirectories>$(SCE_ORBIS_SDK_DIR)\target\include;$(SCE_ORBIS_SDK_DIR)\target\include_common;$(SCE_ORBIS_SDK_DIR)\host_tools\lib\clang\3.1\include;.;..\..\Common;..\CodeBase;..\..\..\..\..\include;..\..\..\SoundEngineProxy\Remote\CodeBase;..\..\..\SoundEngineProxy\Common;..\..\..\AkAudiolib\PS4;..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>SN_TARGET_ORBIS;__SCE__;AUDIOKINETIC;AK_PS4;_DEBUG;PROXYCENTRAL_CONNECTED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>SN_TARGET_ORBIS;__SCE__;AUDIOKINETIC;AK_PS4;_DEBUG;PROXYCENTRAL_CONNECTED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>$(SCE_ORBIS_SDK_DIR)\target\include;$(SCE_ORBIS_SDK_DIR)\target\include_common;$(SCE_ORBIS_SDK_DIR)\host_tools\lib\clang\3.1\include;.;..\..\Common;..\CodeBase;..\..\..\..\..\include;..\..\..\SoundEngineProxy\Remote\CodeBase;..\..\..\SoundEngineProxy\Common;..\..\..\AkAudiolib\PS4;..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)CommunicationCentral.a</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Profile|ORBIS'">
+		<ClCompile>
+			<AdditionalOptions>-Wno-invalid-offsetof -Wno-switch  -Wno-unused-variable -Wno-missing-braces %(AdditionalOptions)</AdditionalOptions>
+			<Optimization>MaxSpeed</Optimization>
+			<AdditionalIncludeDirectories>$(SCE_ORBIS_SDK_DIR)\target\include;$(SCE_ORBIS_SDK_DIR)\target\include_common;$(SCE_ORBIS_SDK_DIR)\host_tools\lib\clang\3.1\include;.;..\..\Common;..\CodeBase;..\..\..\..\..\include;..\..\..\SoundEngineProxy\Remote\CodeBase;..\..\..\SoundEngineProxy\Common;..\..\..\AkAudiolib\PS4;..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>SN_TARGET_ORBIS;__SCE__;AUDIOKINETIC;AK_PS4;NDEBUG;PROXYCENTRAL_CONNECTED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+			<OptimizationLevel>Level3</OptimizationLevel>
+			<FastMath>true</FastMath>
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>SN_TARGET_ORBIS;__SCE__;AUDIOKINETIC;AK_PS4;NDEBUG;PROXYCENTRAL_CONNECTED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>$(SCE_ORBIS_SDK_DIR)\target\include;$(SCE_ORBIS_SDK_DIR)\target\include_common;$(SCE_ORBIS_SDK_DIR)\host_tools\lib\clang\3.1\include;.;..\..\Common;..\CodeBase;..\..\..\..\..\include;..\..\..\SoundEngineProxy\Remote\CodeBase;..\..\..\SoundEngineProxy\Common;..\..\..\AkAudiolib\PS4;..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)CommunicationCentral.a</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+			<OptimizeReferences>true</OptimizeReferences>
+			<EnableCOMDATFolding>true</EnableCOMDATFolding>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ORBIS'">
+		<ClCompile>
+			<AdditionalOptions>-Wno-invalid-offsetof -Wno-switch  -Wno-unused-variable -Wno-missing-braces %(AdditionalOptions)</AdditionalOptions>
+			<Optimization>MaxSpeed</Optimization>
+			<AdditionalIncludeDirectories>$(SCE_ORBIS_SDK_DIR)\target\include;$(SCE_ORBIS_SDK_DIR)\target\include_common;$(SCE_ORBIS_SDK_DIR)\host_tools\lib\clang\3.1\include;.;..\..\Common;..\CodeBase;..\..\..\..\..\include;..\..\..\SoundEngineProxy\Remote\CodeBase;..\..\..\SoundEngineProxy\Common;..\..\..\AkAudiolib\PS4;..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>SN_TARGET_ORBIS;__SCE__;AUDIOKINETIC;AK_PS4;NDEBUG;AK_OPTIMIZED;PROXYCENTRAL_CONNECTED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+			<OptimizationLevel>Level3</OptimizationLevel>
+			<FastMath>true</FastMath>
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>SN_TARGET_ORBIS;__SCE__;AUDIOKINETIC;AK_PS4;NDEBUG;AK_OPTIMIZED;PROXYCENTRAL_CONNECTED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>$(SCE_ORBIS_SDK_DIR)\target\include;$(SCE_ORBIS_SDK_DIR)\target\include_common;$(SCE_ORBIS_SDK_DIR)\host_tools\lib\clang\3.1\include;.;..\..\Common;..\CodeBase;..\..\..\..\..\include;..\..\..\SoundEngineProxy\Remote\CodeBase;..\..\..\SoundEngineProxy\Common;..\..\..\AkAudiolib\PS4;..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)CommunicationCentral.a</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+			<OptimizeReferences>true</OptimizeReferences>
+			<EnableCOMDATFolding>true</EnableCOMDATFolding>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemGroup>
+		<ClInclude Include="stdafx.h" />
+		<ClInclude Include="..\CodeBase\CommandChannel.h" />
+		<ClInclude Include="..\CodeBase\CommunicationCentral.h" />
+		<ClInclude Include="..\CodeBase\DiscoveryChannel.h" />
+		<ClInclude Include="..\CodeBase\GameSocket.h" />
+		<ClInclude Include="..\CodeBase\GameSocketAddr.h" />
+		<ClInclude Include="..\CodeBase\IChannelsHolder.h" />
+		<ClInclude Include="..\CodeBase\ICommandChannelHandler.h" />
+		<ClInclude Include="..\CodeBase\ICommunicationCentral.h" />
+		<ClInclude Include="..\CodeBase\ICommunicationCentralNotifyHandler.h" />
+		<ClInclude Include="..\CodeBase\IncomingChannel.h" />
+		<ClInclude Include="..\CodeBase\INotificationChannel.h" />
+		<ClInclude Include="..\CodeBase\Network.h" />
+		<ClInclude Include="..\CodeBase\NetworkCaptureWriter.h" />
+		<ClInclude Include="..\CodeBase\NetworkTypes.h" />
+		<ClInclude Include="..\CodeBase\NotificationChannel.h" />
+		<ClInclude Include="..\..\Common\CommunicationDefines.h" />
+		<ClInclude Include="..\..\Common\ConsoleDiscoveryMessage.h" />
+		<ClInclude Include="..\..\Common\IPConnectorPorts.h" />
+		<ClInclude Include="..\..\Common\Serializer.h" />
+	</ItemGroup>
+	<ItemGroup>
+		<ClCompile Include="stdafx.cpp">
+			<PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ORBIS'">Create</PrecompiledHeader>
+			<PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Profile|ORBIS'">Create</PrecompiledHeader>
+			<PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|ORBIS'">Create</PrecompiledHeader>
+		</ClCompile>
+		<ClCompile Include="..\CodeBase\CommandChannel.cpp">
+		</ClCompile>
+		<ClCompile Include="..\CodeBase\Communication.cpp">
+		</ClCompile>
+		<ClCompile Include="..\CodeBase\CommunicationCentral.cpp">
+		</ClCompile>
+		<ClCompile Include="..\CodeBase\DiscoveryChannel.cpp">
+		</ClCompile>
+		<ClCompile Include="..\CodeBase\IncomingChannel.cpp">
+		</ClCompile>
+		<ClCompile Include="..\CodeBase\NetworkCaptureWriter.cpp">
+		</ClCompile>
+		<ClCompile Include="..\CodeBase\NotificationChannel.cpp">
+		</ClCompile>
+		<ClCompile Include="GameSocket.cpp">
+		</ClCompile>
+		<ClCompile Include="GameSocketAddr.cpp">
+		</ClCompile>
+		<ClCompile Include="Network.cpp">
+		</ClCompile>
+		<ClCompile Include="..\..\Common\ConsoleDiscoveryMessage.cpp">
+		</ClCompile>
+		<ClCompile Include="..\..\Common\IPConnectorPorts.cpp">
+		</ClCompile>
+		<ClCompile Include="..\..\Common\Serializer.cpp">
+		</ClCompile>
+	</ItemGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+	<ImportGroup Label="ExtensionTargets">
+	</ImportGroup>
+</Project>

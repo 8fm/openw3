@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" TreatAsLocalProperty="OutDir;TargetName;IntDir;PlatformToolset">
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedConfigurationSetup.props))\SharedConfigurationSetup.props" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2BB69D9F-79FC-4A10-B998-C0BA982EFBC6}</ProjectGuid>
+    <RootNamespace>scripts</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <UsePrecompiledHeaders>false</UsePrecompiledHeaders>
+  </PropertyGroup>
+
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.props))\Shared.props" />
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedItemGroups.props))\SharedItemGroups.props" />
+
+  <ItemGroup>
+    <ClCompile Include="Lexer\definition.cpp" />
+    <ClCompile Include="Lexer\lexer.cpp" />
+    <ClCompile Include="Memory\allocatorProxy.cpp" />
+    <ClCompile Include="Memory\simpleDynArray.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Lexer\definition.h" />
+    <ClInclude Include="Lexer\lexer.h" />
+    <ClInclude Include="Memory\allocatorProxy.h" />
+    <ClInclude Include="Memory\simpleDynArray.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.targets))\Shared.targets" />
+  </ImportGroup>
+</Project>

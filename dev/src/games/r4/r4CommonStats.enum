@@ -1,0 +1,24 @@
+/*
+* Copyright © 2013 CD Projekt Red. All Rights Reserved.
+*/
+
+//! This is a definition of common stats for telemetry
+
+STAT( CS_VITALITY,		"vit" )	//"vitality"
+STAT( CS_TOXICITY,		"tox" )	//"toxicity"
+STAT( CS_VIGOR,			"vig" )	//"vigor"
+STAT( CS_SKILLPOINTS,	"sp" )	//"skillpoints"
+STAT( CS_POSITION_X,	"x" )
+STAT( CS_POSITION_Y,	"y" )
+STAT( CS_POSITION_Z,	"z" )
+STAT( CS_DIFFICULTY_LVL,	"dlv" )
+STAT( CS_GAME_PROGRESS,	"prgs" )
+
+STAT( CS_MEMORY,		"mem" )
+STAT( CS_FPS,			"fps" )
+STAT( CS_WORLD_ID,		"wrd" ) //"world"
+
+STAT( CS_GAME_TIME,		"gt" )	//"game_time"
+
+STAT( CS_UNKNOWN,		"unk" )	//"unknown"
+

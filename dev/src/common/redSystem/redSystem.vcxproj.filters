@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Log">
+      <UniqueIdentifier>{bfa3de87-83c3-4e8f-a423-e64b5cf3cbf3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Names">
+      <UniqueIdentifier>{53e520ca-1ed0-44c8-aad7-748d8a1e8ca1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Time">
+      <UniqueIdentifier>{e5c3e256-1e3b-4a0e-967e-b4b7df07d07d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Debugging">
+      <UniqueIdentifier>{89b54e21-52d8-4438-b7fe-569edbb8d8b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CRT">
+      <UniqueIdentifier>{4486f13f-eb26-4da5-ad80-c2472539b6f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Base">
+      <UniqueIdentifier>{1f7069ea-fe73-4956-a575-14516d2f260f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Types">
+      <UniqueIdentifier>{f64ac180-f3f9-4942-b8f2-7d65d2ca4aa2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hashing">
+      <UniqueIdentifier>{adc0717c-e355-4f54-b627-b4e95d73032f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StringWriter">
+      <UniqueIdentifier>{1721062a-e199-4294-861a-1996025ff6fb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="timerWindows.h">
+      <Filter>Time</Filter>
+    </ClInclude>
+    <ClInclude Include="log.h">
+      <Filter>Log</Filter>
+    </ClInclude>
+    <ClInclude Include="clock.h">
+      <Filter>Time</Filter>
+    </ClInclude>
+    <ClInclude Include="timer.h">
+      <Filter>Time</Filter>
+    </ClInclude>
+    <ClInclude Include="utilityTimers.h">
+      <Filter>Time</Filter>
+    </ClInclude>
+    <ClInclude Include="errorWindows.h">
+      <Filter>Debugging</Filter>
+    </ClInclude>
+    <ClInclude Include="error.h">
+      <Filter>Debugging</Filter>
+    </ClInclude>
+    <ClInclude Include="cpuid.h" />
+    <ClInclude Include="crtWindows.h">
+      <Filter>CRT</Filter>
+    </ClInclude>
+    <ClInclude Include="crt.h">
+      <Filter>CRT</Filter>
+    </ClInclude>
+    <ClInclude Include="bitUtils.h" />
+    <ClInclude Include="crtOrbis.h">
+      <Filter>CRT</Filter>
+    </ClInclude>
+    <ClInclude Include="timerOrbis.h">
+      <Filter>Time</Filter>
+    </ClInclude>
+    <ClInclude Include="formatMacros.h">
+      <Filter>CRT</Filter>
+    </ClInclude>
+    <ClInclude Include="logFile.h">
+      <Filter>Log</Filter>
+    </ClInclude>
+    <ClInclude Include="logCommonOutputDevice.h">
+      <Filter>Log</Filter>
+    </ClInclude>
+    <ClInclude Include="errorOrbis.h">
+      <Filter>Debugging</Filter>
+    </ClInclude>
+    <ClInclude Include="crashReportDataBuffer.h">
+      <Filter>Debugging</Filter>
+    </ClInclude>
+    <ClInclude Include="crashReportDataBufferWindows.h">
+      <Filter>Debugging</Filter>
+    </ClInclude>
+    <ClInclude Include="errorDurango.h">
+      <Filter>Debugging</Filter>
+    </ClInclude>
+    <ClInclude Include="crashReportDataBufferOrbis.h">
+      <Filter>Debugging</Filter>
+    </ClInclude>
+    <ClInclude Include="architecture.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="os.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="threads.h">
+      <Filter>Types</Filter>
+    </ClInclude>
+    <ClInclude Include="typetraits.h">
+      <Filter>Types</Filter>
+    </ClInclude>
+    <ClInclude Include="types.h">
+      <Filter>Types</Filter>
+    </ClInclude>
+    <ClInclude Include="numericalLimits.h">
+      <Filter>Types</Filter>
+    </ClInclude>
+    <ClInclude Include="utility.h">
+      <Filter>Types</Filter>
+    </ClInclude>
+    <ClInclude Include="compilerExtensions.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="settings.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="ttyWriter.h">
+      <Filter>Log</Filter>
+    </ClInclude>
+    <ClInclude Include="windowsDebuggerWriter.h">
+      <Filter>Log</Filter>
+    </ClInclude>
+    <ClInclude Include="nameHash.h">
+      <Filter>Names</Filter>
+    </ClInclude>
+    <ClInclude Include="crc.h">
+      <Filter>Hashing</Filter>
+    </ClInclude>
+    <ClInclude Include="guid.h">
+      <Filter>Hashing</Filter>
+    </ClInclude>
+    <ClInclude Include="hash.h">
+      <Filter>Hashing</Filter>
+    </ClInclude>
+    <ClInclude Include="stringWriter.h">
+      <Filter>StringWriter</Filter>
+    </ClInclude>
+    <ClInclude Include="unitTestMode.h">
+      <Filter>Debugging</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="timerWindows.cpp">
+      <Filter>Time</Filter>
+    </ClCompile>
+    <ClCompile Include="log.cpp">
+      <Filter>Log</Filter>
+    </ClCompile>
+    <ClCompile Include="clock.cpp">
+      <Filter>Time</Filter>
+    </ClCompile>
+    <ClCompile Include="errorWindows.cpp">
+      <Filter>Debugging</Filter>
+    </ClCompile>
+    <ClCompile Include="error.cpp">
+      <Filter>Debugging</Filter>
+    </ClCompile>
+    <ClCompile Include="cpuid.cpp" />
+    <ClCompile Include="crtWindows.cpp">
+      <Filter>CRT</Filter>
+    </ClCompile>
+    <ClCompile Include="crtOrbis.cpp">
+      <Filter>CRT</Filter>
+    </ClCompile>
+    <ClCompile Include="errorOrbis.cpp">
+      <Filter>Debugging</Filter>
+    </ClCompile>
+    <ClCompile Include="timerOrbis.cpp">
+      <Filter>Time</Filter>
+    </ClCompile>
+    <ClCompile Include="logFile.cpp">
+      <Filter>Log</Filter>
+    </ClCompile>
+    <ClCompile Include="logCommonOutputDevice.cpp">
+      <Filter>Log</Filter>
+    </ClCompile>
+    <ClCompile Include="crashReportDataBufferWindows.cpp">
+      <Filter>Debugging</Filter>
+    </ClCompile>
+    <ClCompile Include="crashReportDataBufferOrbis.cpp">
+      <Filter>Debugging</Filter>
+    </ClCompile>
+    <ClCompile Include="errorDurango.cpp">
+      <Filter>Debugging</Filter>
+    </ClCompile>
+    <ClCompile Include="ttyWriter.cpp">
+      <Filter>Log</Filter>
+    </ClCompile>
+    <ClCompile Include="windowsDebuggerWriter.cpp">
+      <Filter>Log</Filter>
+    </ClCompile>
+    <ClCompile Include="nameHash.cpp">
+      <Filter>Names</Filter>
+    </ClCompile>
+    <ClCompile Include="crc.cpp">
+      <Filter>Hashing</Filter>
+    </ClCompile>
+    <ClCompile Include="guid.cpp">
+      <Filter>Hashing</Filter>
+    </ClCompile>
+    <ClCompile Include="unitTestMode.cpp">
+      <Filter>Debugging</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="stringWriter.inl">
+      <Filter>StringWriter</Filter>
+    </None>
+  </ItemGroup>
+</Project>

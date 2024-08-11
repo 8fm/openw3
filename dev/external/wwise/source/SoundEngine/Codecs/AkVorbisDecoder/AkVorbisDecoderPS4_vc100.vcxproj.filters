@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<Filter Include="Common">
+			<UniqueIdentifier>{F8F4E882-72F2-5249-B102-F7B591F530E6}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Tremor">
+			<UniqueIdentifier>{348C44CF-4167-4249-AC1A-442A69E96919}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Tremor\FloatingPoint">
+			<UniqueIdentifier>{70F3ADA1-15DF-764F-9E67-5BC3915E01D7}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Win32">
+			<UniqueIdentifier>{00801637-ABE3-8343-9DE4-6A2D92906D09}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Tremor\Win32">
+			<UniqueIdentifier>{0B81BA9F-1F7B-3D47-BF56-6E32098C1B14}</UniqueIdentifier>
+		</Filter>
+	</ItemGroup>
+	<ItemGroup>
+		<ClInclude Include="Common\AkSrcBankVorbis.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="Common\AkSrcFileVorbis.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="Common\AkSrcVorbis.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="Common\AkVorbisCodebookMgr.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="Common\AkVorbisInfo.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="Tremor\FloatingPoint\mdct.h">
+			<Filter>Tremor\FloatingPoint</Filter>
+		</ClInclude>
+		<ClInclude Include="Tremor\FloatingPoint\mdct_lookup.h">
+			<Filter>Tremor\FloatingPoint</Filter>
+		</ClInclude>
+		<ClInclude Include="Tremor\FloatingPoint\misc.h">
+			<Filter>Tremor\FloatingPoint</Filter>
+		</ClInclude>
+		<ClInclude Include="Tremor\FloatingPoint\window_lookup.h">
+			<Filter>Tremor\FloatingPoint</Filter>
+		</ClInclude>
+		<ClInclude Include="Win32\AkVorbisCodec.h">
+			<Filter>Win32</Filter>
+		</ClInclude>
+		<ClInclude Include="Tremor\Win32\codec_internal.h">
+			<Filter>Tremor\Win32</Filter>
+		</ClInclude>
+		<ClInclude Include="Tremor\codebook.h">
+			<Filter>Tremor</Filter>
+		</ClInclude>
+		<ClInclude Include="Tremor\ivorbiscodec.h">
+			<Filter>Tremor</Filter>
+		</ClInclude>
+		<ClInclude Include="Tremor\lsp_lookup.h">
+			<Filter>Tremor</Filter>
+		</ClInclude>
+		<ClInclude Include="Tremor\ogg.h">
+			<Filter>Tremor</Filter>
+		</ClInclude>
+		<ClInclude Include="Tremor\os.h">
+			<Filter>Tremor</Filter>
+		</ClInclude>
+		<ClInclude Include="Tremor\os_types.h">
+			<Filter>Tremor</Filter>
+		</ClInclude>
+		<ClInclude Include="Tremor\packed_codebooks.h">
+			<Filter>Tremor</Filter>
+		</ClInclude>
+	</ItemGroup>
+	<ItemGroup>
+		<ClCompile Include="Common\AkSrcBankVorbis.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="Common\AkSrcFileVorbis.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="Common\AkVorbisCodebookMgr.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="Tremor\FloatingPoint\floor1.cpp">
+			<Filter>Tremor\FloatingPoint</Filter>
+		</ClCompile>
+		<ClCompile Include="Tremor\FloatingPoint\floor_lookup.cpp">
+			<Filter>Tremor\FloatingPoint</Filter>
+		</ClCompile>
+		<ClCompile Include="Tremor\FloatingPoint\mdct.cpp">
+			<Filter>Tremor\FloatingPoint</Filter>
+		</ClCompile>
+		<ClCompile Include="Win32\AkVorbisCodec.cpp">
+			<Filter>Win32</Filter>
+		</ClCompile>
+		<ClCompile Include="Tremor\Win32\codebook.cpp">
+			<Filter>Tremor\Win32</Filter>
+		</ClCompile>
+		<ClCompile Include="Tremor\Win32\dsp.cpp">
+			<Filter>Tremor\Win32</Filter>
+		</ClCompile>
+		<ClCompile Include="Tremor\bitwise.cpp">
+			<Filter>Tremor</Filter>
+		</ClCompile>
+		<ClCompile Include="Tremor\info.cpp">
+			<Filter>Tremor</Filter>
+		</ClCompile>
+		<ClCompile Include="Tremor\mapping0.cpp">
+			<Filter>Tremor</Filter>
+		</ClCompile>
+		<ClCompile Include="Tremor\packed_codebooks.cpp">
+			<Filter>Tremor</Filter>
+		</ClCompile>
+		<ClCompile Include="Tremor\res012.cpp">
+			<Filter>Tremor</Filter>
+		</ClCompile>
+	</ItemGroup>
+</Project>

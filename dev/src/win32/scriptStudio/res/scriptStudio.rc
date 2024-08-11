@@ -1,0 +1,79 @@
+/////////////////////////////////////////////////////////////////////////////
+// Name:        wxtest.rc
+// Purpose:     a standard Win32 .rc file for the wxWidgets
+// Author:      Ryan Pusztai
+// Modified by: Ryan Mulder
+// Created:     11.21.05
+// Copyright:   (c) 2005 RJP Computing <support@rjpcomputing.com>
+/////////////////////////////////////////////////////////////////////////////
+
+// note that the icon used by the Explorer (i.e. the programs icon) is the
+// first icon in the executable and the icons are sorted both by their order
+// (Win9x) and by alphabetically (!) (NT), so put this icon first and give it
+// a name starting with "a"
+//aaaaaaaa ICON "main.ico"
+
+// this icon is used with wxFrame::SetIcon()
+amain ICON "scriptStudio.ico"
+
+// set this to 1 if you don't want to use manifest resource (manifest resource
+// is needed to enable visual styles on Windows XP - see docs/msw/winxp.txt
+// for more information)
+#define wxUSE_NO_MANIFEST 0
+
+// this is not always needed but doesn't hurt (except making the executable
+// very slightly larger): this file contains the standard icons, cursors, ...
+#include "wx/msw/wx.rc"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+#include "resource.h"
+
+#include "afxres.h"
+
+IDD_ASSERTDLG DIALOGEX 0, 0, 427, 317
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_CAPTION | WS_SYSMENU
+CAPTION "The Witcher 3 - Assertion failed!"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Debug assertion failed!",IDC_STATIC,7,7,201,10
+    LTEXT           "Expression:",IDC_STATIC,7,23,38,8
+    PUSHBUTTON      "Continue",IDC_CONTINUE,7,291,70,19
+    PUSHBUTTON      "Continue (Always)",IDC_CONTINUEALW,84,291,70,19
+    PUSHBUTTON      "Debug",IDC_DEBUG,161,291,70,19
+    PUSHBUTTON      "Close program",IDC_CLOSE,238,291,70,19
+    EDITTEXT        IDC_CALLSTACK,7,76,413,207,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL
+    LTEXT           "Callstack:",IDC_STATIC,7,65,32,8
+    LTEXT           "File:",IDC_STATIC,7,37,14,8
+    LTEXT           "Line: ",IDC_STATIC,7,51,18,8
+    EDITTEXT        IDC_LINE,53,51,267,8,ES_READONLY | NOT WS_BORDER
+    EDITTEXT        IDC_FILE,53,37,267,8,ES_READONLY | NOT WS_BORDER
+    EDITTEXT        IDC_EXPRESSION,53,23,267,8,ES_READONLY | NOT WS_BORDER
+END
+
+IDD_ERRORDLG DIALOGEX 0, 0, 427, 317
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_CAPTION | WS_SYSMENU
+CAPTION "The Witcher 3 - Error occured!"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Error occured",IDC_ERRORTEXT,7,7,313,8
+    EDITTEXT        IDC_MESSAGE,7,30,413,57,ES_MULTILINE | WS_VSCROLL
+    EDITTEXT        IDC_CALLSTACK,7,103,413,181,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL
+    LTEXT           "Additional info:",IDC_STATIC,7,19,49,8
+    LTEXT           "Callstack:",IDC_STATIC,7,92,32,8
+    PUSHBUTTON      "OK",IDC_OK,350,291,70,19
+END
+
+IDD_PROGRESSDLG DIALOGEX 0, 0, 335, 57
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU | DS_CENTER
+CAPTION "<Title>"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Cancel",IDCANCEL,278,36,50,14
+    LTEXT           "<Text>",IDC_PROGRESS_TEXT,7,7,321,8
+    CONTROL         "",IDC_PROGRESS_BAR,"msctls_progress32",WS_BORDER,7,17,321,14
+    LTEXT           "ETA: 00:00",IDC_PROGRESS_TIME,13,39,62,8
+END

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<resource xmlns="http://www.wxwindows.org/wxxrc" version="2.3.0.1">
+	<object class="wxFrame" name="JournalEditor">
+		<style>wxCAPTION|wxDEFAULT_FRAME_STYLE|wxRESIZE_BORDER|wxCLIP_CHILDREN|wxTAB_TRAVERSAL</style>
+		<size>650,700</size>
+		<title>Journal Editor</title>
+		<centered>1</centered>
+		<aui_managed>0</aui_managed>
+		<object class="wxMenuBar" name="JournalMenuBar">
+			<label>Journal Menu Bar</label>
+			<object class="wxMenu" name="fileMenu">
+				<label>_File</label>
+				<object class="wxMenuItem" name="saveAll">
+					<label>Save All\tctrl+shift+s</label>
+					<help></help>
+				</object>
+				<object class="wxMenuItem" name="checkAllIn">
+					<label>Check in everything\tctrl+shift+c</label>
+					<help></help>
+				</object>
+				<object class="separator" />
+				<object class="wxMenuItem" name="fileSelectTargetDLC">
+					<label>Select Target DLC...</label>
+					<help></help>
+				</object>
+			</object>
+			<object class="wxMenu" name="itemMenu">
+				<label>_Item</label>
+			</object>
+			<object class="wxMenu" name="view">
+				<label>_View</label>
+				<object class="wxMenuItem" name="collapseAll">
+					<label>Collapse All</label>
+					<help></help>
+				</object>
+				<object class="wxMenuItem" name="expandAll">
+					<label>Expand All</label>
+					<help></help>
+				</object>
+				<object class="wxMenuItem" name="resetWindowSize">
+					<label>Reset To Original Size</label>
+					<help></help>
+				</object>
+			</object>
+			<object class="wxMenu" name="tools">
+				<label>_Tools</label>
+				<object class="wxMenuItem" name="checkDuplicatedUniqueScriptTags">
+					<label>_Check duplicated Unique Script Tags</label>
+					<help></help>
+				</object>
+				<object class="wxMenuItem" name="checkDuplicatedGUIDs">
+					<label>_Check duplicated GUIDs</label>
+					<help></help>
+				</object>
+				<object class="separator" />
+				<object class="wxMenuItem" name="generateMissingUniqueScriptTags">
+					<label>_Generate missing unique script tags</label>
+					<help></help>
+				</object>
+			</object>
+		</object>
+		<object class="wxPanel" name="m_panel7">
+			<style>wxTAB_TRAVERSAL</style>
+			<object class="wxBoxSizer">
+				<orient>wxVERTICAL</orient>
+				<object class="sizeritem">
+					<option>1</option>
+					<flag>wxALL|wxEXPAND</flag>
+					<border>5</border>
+					<object class="wxSplitterWindow" name="Splitter">
+						<style>wxSP_3D</style>
+						<sashpos>0</sashpos>
+						<gravity>0</gravity>
+						<minsize>1</minsize>
+						<orientation>vertical</orientation>
+						<object class="wxPanel" name="m_panel2">
+							<style>wxTAB_TRAVERSAL</style>
+							<object class="wxBoxSizer">
+								<orient>wxVERTICAL</orient>
+								<object class="sizeritem">
+									<option>1</option>
+									<flag>wxEXPAND</flag>
+									<border>5</border>
+									<object class="wxTreeCtrl" name="journalTree" subclass="CEdJournalTree">
+										<style>wxTR_DEFAULT_STYLE|wxTR_HAS_BUTTONS|wxTR_HIDE_ROOT|wxTR_LINES_AT_ROOT|wxTR_SINGLE</style>
+									</object>
+								</object>
+							</object>
+						</object>
+						<object class="wxPanel" name="SubContainer">
+							<style>wxSIMPLE_BORDER|wxTAB_TRAVERSAL</style>
+							<object class="wxBoxSizer">
+								<orient>wxVERTICAL</orient>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+</resource>

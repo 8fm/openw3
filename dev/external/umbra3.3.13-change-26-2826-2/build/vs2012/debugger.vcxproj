@@ -1,0 +1,734 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Test|Win32">
+      <Configuration>Test</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Test|x64">
+      <Configuration>Test</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{39B488CF-0762-6847-B8D1-6C91CE7D5CA0}</ProjectGuid>
+    <RootNamespace>debugger</RootNamespace>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <ApplicationEnvironment>title</ApplicationEnvironment>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Test|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Test|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Test|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Test|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\..\bin\win32\</OutDir>
+    <IntDir>..\..\intermediates\debugger\x32\Debug\</IntDir>
+    <TargetName>umbradebugger32_d</TargetName>
+    <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    <LinkIncremental>false</LinkIncremental>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>..\..\bin\win64\</OutDir>
+    <IntDir>..\..\intermediates\debugger\x64\Debug\</IntDir>
+    <TargetName>umbradebugger64_d</TargetName>
+    <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    <LinkIncremental>false</LinkIncremental>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Test|Win32'">
+    <OutDir>..\..\bin\win32\</OutDir>
+    <IntDir>..\..\intermediates\debugger\x32\Test\</IntDir>
+    <TargetName>umbradebugger32_t</TargetName>
+    <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    <LinkIncremental>false</LinkIncremental>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Test|x64'">
+    <OutDir>..\..\bin\win64\</OutDir>
+    <IntDir>..\..\intermediates\debugger\x64\Test\</IntDir>
+    <TargetName>umbradebugger64_t</TargetName>
+    <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    <LinkIncremental>false</LinkIncremental>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>..\..\bin\win32\</OutDir>
+    <IntDir>..\..\intermediates\debugger\x32\Release\</IntDir>
+    <TargetName>umbradebugger32</TargetName>
+    <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    <LinkIncremental>false</LinkIncremental>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>..\..\bin\win64\</OutDir>
+    <IntDir>..\..\intermediates\debugger\x64\Release\</IntDir>
+    <TargetName>umbradebugger64</TargetName>
+    <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    <LinkIncremental>false</LinkIncremental>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;..\..\source\common;..\..\utils\debugger;..\..\utils\tools;..\..\external\glew\include;..\..\external\squirrel\include;..\..\external\sqrat\include;..\..\external\qt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>DEBUG;_DEBUG;UMBRA_BUILD_ID=0;UMBRA_DEBUG;_CRT_SECURE_NO_WARNINGS;_WIN32_WINNT=0x0501;GLEW_STATIC;GLEW_MX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <SmallerTypeCheck>true</SmallerTypeCheck>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>DEBUG;_DEBUG;UMBRA_BUILD_ID=0;UMBRA_DEBUG;_CRT_SECURE_NO_WARNINGS;_WIN32_WINNT=0x0501;GLEW_STATIC;GLEW_MX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;..\..\source\common;..\..\utils\debugger;..\..\utils\tools;..\..\external\glew\include;..\..\external\squirrel\include;..\..\external\sqrat\include;..\..\external\qt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+      <AdditionalDependencies>Qt5Core.lib;Qt5GUI.lib;Qt5OpenGL.lib;Qt5Widgets.lib;libcurl_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)umbradebugger32_d.exe</OutputFile>
+      <AdditionalLibraryDirectories>..\..\external\qt\win32\lib;..\..\external\curl\win32\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>if not exist ..\..\work\debugger mkdir ..\..\work\debugger&#x0D;&#x0A;if not exist ..\..\work\debugger\squirrel mkdir ..\..\work\debugger\squirrel</Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtCameraInspectorWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtCameraInspectorWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtCameraManagerWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtCameraManagerWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtCollapseList.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtCollapseList_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtComputationWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtComputationWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtContentWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtContentWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtCullingWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtCullingWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtGlobalSignals.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtGlobalSignals_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtInspector.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtInspector_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtLoggerWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtLoggerWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtMainWindow.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtMainWindow_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtObjectInspectorWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtObjectInspectorWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtQueryStatsWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtQueryStatsWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtSceneInspectorWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtSceneInspectorWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtSlider.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtSlider_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtTestPositionsWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtTestPositionsWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtThreading.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtThreading_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtTomePropertiesWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtTomePropertiesWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtViewport.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtViewport_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtVisualization.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtVisualization_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtVisualizationWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtVisualizationWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtWorldProperties.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtWorldProperties_hpp_moc.hpp&quot;</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;..\..\source\common;..\..\utils\debugger;..\..\utils\tools;..\..\external\glew\include;..\..\external\squirrel\include;..\..\external\sqrat\include;..\..\external\qt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>DEBUG;_DEBUG;UMBRA_BUILD_ID=0;UMBRA_DEBUG;_CRT_SECURE_NO_WARNINGS;_WIN32_WINNT=0x0501;GLEW_STATIC;GLEW_MX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <SmallerTypeCheck>true</SmallerTypeCheck>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>DEBUG;_DEBUG;UMBRA_BUILD_ID=0;UMBRA_DEBUG;_CRT_SECURE_NO_WARNINGS;_WIN32_WINNT=0x0501;GLEW_STATIC;GLEW_MX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;..\..\source\common;..\..\utils\debugger;..\..\utils\tools;..\..\external\glew\include;..\..\external\squirrel\include;..\..\external\sqrat\include;..\..\external\qt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+      <AdditionalDependencies>Qt5Core.lib;Qt5GUI.lib;Qt5OpenGL.lib;Qt5Widgets.lib;libcurl_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)umbradebugger64_d.exe</OutputFile>
+      <AdditionalLibraryDirectories>..\..\external\qt\win64\lib;..\..\external\curl\win64\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>if not exist ..\..\work\debugger mkdir ..\..\work\debugger&#x0D;&#x0A;if not exist ..\..\work\debugger\squirrel mkdir ..\..\work\debugger\squirrel</Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtCameraInspectorWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtCameraInspectorWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtCameraManagerWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtCameraManagerWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtCollapseList.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtCollapseList_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtComputationWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtComputationWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtContentWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtContentWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtCullingWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtCullingWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtGlobalSignals.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtGlobalSignals_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtInspector.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtInspector_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtLoggerWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtLoggerWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtMainWindow.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtMainWindow_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtObjectInspectorWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtObjectInspectorWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtQueryStatsWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtQueryStatsWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtSceneInspectorWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtSceneInspectorWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtSlider.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtSlider_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtTestPositionsWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtTestPositionsWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtThreading.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtThreading_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtTomePropertiesWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtTomePropertiesWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtViewport.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtViewport_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtVisualization.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtVisualization_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtVisualizationWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtVisualizationWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtWorldProperties.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtWorldProperties_hpp_moc.hpp&quot;</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Test|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;..\..\source\common;..\..\utils\debugger;..\..\utils\tools;..\..\external\glew\include;..\..\external\squirrel\include;..\..\external\sqrat\include;..\..\external\qt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>UMBRA_BUILD_ID=0;UMBRA_DEBUG;_CRT_SECURE_NO_WARNINGS;_WIN32_WINNT=0x0501;GLEW_STATIC;GLEW_MX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>UMBRA_BUILD_ID=0;UMBRA_DEBUG;_CRT_SECURE_NO_WARNINGS;_WIN32_WINNT=0x0501;GLEW_STATIC;GLEW_MX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;..\..\source\common;..\..\utils\debugger;..\..\utils\tools;..\..\external\glew\include;..\..\external\squirrel\include;..\..\external\sqrat\include;..\..\external\qt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>Qt5Core.lib;Qt5GUI.lib;Qt5OpenGL.lib;Qt5Widgets.lib;libcurl.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)umbradebugger32_t.exe</OutputFile>
+      <AdditionalLibraryDirectories>..\..\external\qt\win32\lib;..\..\external\curl\win32\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>if not exist ..\..\work\debugger mkdir ..\..\work\debugger&#x0D;&#x0A;if not exist ..\..\work\debugger\squirrel mkdir ..\..\work\debugger\squirrel</Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtCameraInspectorWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtCameraInspectorWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtCameraManagerWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtCameraManagerWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtCollapseList.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtCollapseList_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtComputationWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtComputationWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtContentWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtContentWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtCullingWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtCullingWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtGlobalSignals.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtGlobalSignals_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtInspector.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtInspector_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtLoggerWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtLoggerWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtMainWindow.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtMainWindow_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtObjectInspectorWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtObjectInspectorWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtQueryStatsWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtQueryStatsWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtSceneInspectorWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtSceneInspectorWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtSlider.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtSlider_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtTestPositionsWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtTestPositionsWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtThreading.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtThreading_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtTomePropertiesWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtTomePropertiesWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtViewport.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtViewport_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtVisualization.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtVisualization_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtVisualizationWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtVisualizationWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtWorldProperties.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtWorldProperties_hpp_moc.hpp&quot;</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Test|x64'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;..\..\source\common;..\..\utils\debugger;..\..\utils\tools;..\..\external\glew\include;..\..\external\squirrel\include;..\..\external\sqrat\include;..\..\external\qt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>UMBRA_BUILD_ID=0;UMBRA_DEBUG;_CRT_SECURE_NO_WARNINGS;_WIN32_WINNT=0x0501;GLEW_STATIC;GLEW_MX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>UMBRA_BUILD_ID=0;UMBRA_DEBUG;_CRT_SECURE_NO_WARNINGS;_WIN32_WINNT=0x0501;GLEW_STATIC;GLEW_MX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;..\..\source\common;..\..\utils\debugger;..\..\utils\tools;..\..\external\glew\include;..\..\external\squirrel\include;..\..\external\sqrat\include;..\..\external\qt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>Qt5Core.lib;Qt5GUI.lib;Qt5OpenGL.lib;Qt5Widgets.lib;libcurl.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)umbradebugger64_t.exe</OutputFile>
+      <AdditionalLibraryDirectories>..\..\external\qt\win64\lib;..\..\external\curl\win64\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>if not exist ..\..\work\debugger mkdir ..\..\work\debugger&#x0D;&#x0A;if not exist ..\..\work\debugger\squirrel mkdir ..\..\work\debugger\squirrel</Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtCameraInspectorWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtCameraInspectorWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtCameraManagerWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtCameraManagerWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtCollapseList.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtCollapseList_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtComputationWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtComputationWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtContentWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtContentWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtCullingWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtCullingWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtGlobalSignals.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtGlobalSignals_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtInspector.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtInspector_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtLoggerWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtLoggerWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtMainWindow.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtMainWindow_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtObjectInspectorWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtObjectInspectorWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtQueryStatsWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtQueryStatsWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtSceneInspectorWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtSceneInspectorWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtSlider.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtSlider_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtTestPositionsWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtTestPositionsWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtThreading.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtThreading_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtTomePropertiesWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtTomePropertiesWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtViewport.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtViewport_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtVisualization.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtVisualization_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtVisualizationWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtVisualizationWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtWorldProperties.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtWorldProperties_hpp_moc.hpp&quot;</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;..\..\source\common;..\..\utils\debugger;..\..\utils\tools;..\..\external\glew\include;..\..\external\squirrel\include;..\..\external\sqrat\include;..\..\external\qt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;UMBRA_BUILD_ID=0;_CRT_SECURE_NO_WARNINGS;_WIN32_WINNT=0x0501;GLEW_STATIC;GLEW_MX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;UMBRA_BUILD_ID=0;_CRT_SECURE_NO_WARNINGS;_WIN32_WINNT=0x0501;GLEW_STATIC;GLEW_MX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;..\..\source\common;..\..\utils\debugger;..\..\utils\tools;..\..\external\glew\include;..\..\external\squirrel\include;..\..\external\sqrat\include;..\..\external\qt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>Qt5Core.lib;Qt5GUI.lib;Qt5OpenGL.lib;Qt5Widgets.lib;libcurl.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)umbradebugger32.exe</OutputFile>
+      <AdditionalLibraryDirectories>..\..\external\qt\win32\lib;..\..\external\curl\win32\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>if not exist ..\..\work\debugger mkdir ..\..\work\debugger&#x0D;&#x0A;if not exist ..\..\work\debugger\squirrel mkdir ..\..\work\debugger\squirrel</Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtCameraInspectorWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtCameraInspectorWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtCameraManagerWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtCameraManagerWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtCollapseList.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtCollapseList_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtComputationWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtComputationWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtContentWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtContentWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtCullingWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtCullingWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtGlobalSignals.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtGlobalSignals_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtInspector.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtInspector_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtLoggerWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtLoggerWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtMainWindow.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtMainWindow_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtObjectInspectorWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtObjectInspectorWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtQueryStatsWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtQueryStatsWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtSceneInspectorWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtSceneInspectorWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtSlider.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtSlider_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtTestPositionsWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtTestPositionsWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtThreading.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtThreading_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtTomePropertiesWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtTomePropertiesWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtViewport.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtViewport_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtVisualization.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtVisualization_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtVisualizationWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtVisualizationWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtWorldProperties.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtWorldProperties_hpp_moc.hpp&quot;</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;..\..\source\common;..\..\utils\debugger;..\..\utils\tools;..\..\external\glew\include;..\..\external\squirrel\include;..\..\external\sqrat\include;..\..\external\qt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;UMBRA_BUILD_ID=0;_CRT_SECURE_NO_WARNINGS;_WIN32_WINNT=0x0501;GLEW_STATIC;GLEW_MX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;UMBRA_BUILD_ID=0;_CRT_SECURE_NO_WARNINGS;_WIN32_WINNT=0x0501;GLEW_STATIC;GLEW_MX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;..\..\source\common;..\..\utils\debugger;..\..\utils\tools;..\..\external\glew\include;..\..\external\squirrel\include;..\..\external\sqrat\include;..\..\external\qt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>Qt5Core.lib;Qt5GUI.lib;Qt5OpenGL.lib;Qt5Widgets.lib;libcurl.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)umbradebugger64.exe</OutputFile>
+      <AdditionalLibraryDirectories>..\..\external\qt\win64\lib;..\..\external\curl\win64\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>if not exist ..\..\work\debugger mkdir ..\..\work\debugger&#x0D;&#x0A;if not exist ..\..\work\debugger\squirrel mkdir ..\..\work\debugger\squirrel</Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtCameraInspectorWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtCameraInspectorWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtCameraManagerWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtCameraManagerWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtCollapseList.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtCollapseList_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtComputationWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtComputationWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtContentWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtContentWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtCullingWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtCullingWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtGlobalSignals.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtGlobalSignals_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtInspector.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtInspector_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtLoggerWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtLoggerWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtMainWindow.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtMainWindow_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtObjectInspectorWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtObjectInspectorWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtQueryStatsWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtQueryStatsWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtSceneInspectorWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtSceneInspectorWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtSlider.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtSlider_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtTestPositionsWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtTestPositionsWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtThreading.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtThreading_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtTomePropertiesWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtTomePropertiesWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtViewport.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtViewport_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtVisualization.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtVisualization_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtVisualizationWidget.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtVisualizationWidget_hpp_moc.hpp&quot;&#x0D;&#x0A;..\..\external\qt\moc.exe &quot;..\..\utils/debugger/qt/QtWorldProperties.hpp&quot; &gt; &quot;..\..\utils/debugger/qt\QtWorldProperties_hpp_moc.hpp&quot;</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\utils\debugger\qt\QtApplicationState.hpp" />
+    <ClInclude Include="..\..\utils\debugger\qt\QtCameraInspectorWidget.hpp" />
+    <ClInclude Include="..\..\utils\debugger\qt\QtCameraManagerWidget.hpp" />
+    <ClInclude Include="..\..\utils\debugger\qt\QtCollapseList.hpp" />
+    <ClInclude Include="..\..\utils\debugger\qt\QtCommon.hpp" />
+    <ClInclude Include="..\..\utils\debugger\qt\QtComputationWidget.hpp" />
+    <ClInclude Include="..\..\utils\debugger\qt\QtContentWidget.hpp" />
+    <ClInclude Include="..\..\utils\debugger\qt\QtCullingWidget.hpp" />
+    <ClInclude Include="..\..\utils\debugger\qt\QtGlobalSignals.hpp" />
+    <ClInclude Include="..\..\utils\debugger\qt\QtInspector.hpp" />
+    <ClInclude Include="..\..\utils\debugger\qt\QtLoggerWidget.hpp" />
+    <ClInclude Include="..\..\utils\debugger\qt\QtMainWindow.hpp" />
+    <ClInclude Include="..\..\utils\debugger\qt\QtObjectInspectorWidget.hpp" />
+    <ClInclude Include="..\..\utils\debugger\qt\QtQueryStatsWidget.hpp" />
+    <ClInclude Include="..\..\utils\debugger\qt\QtSceneInspectorWidget.hpp" />
+    <ClInclude Include="..\..\utils\debugger\qt\QtSlider.hpp" />
+    <ClInclude Include="..\..\utils\debugger\qt\QtTestPositionsWidget.hpp" />
+    <ClInclude Include="..\..\utils\debugger\qt\QtThreading.hpp" />
+    <ClInclude Include="..\..\utils\debugger\qt\QtTomePropertiesWidget.hpp" />
+    <ClInclude Include="..\..\utils\debugger\qt\QtViewport.hpp" />
+    <ClInclude Include="..\..\utils\debugger\qt\QtVisualization.hpp" />
+    <ClInclude Include="..\..\utils\debugger\qt\QtVisualizationWidget.hpp" />
+    <ClInclude Include="..\..\utils\debugger\qt\QtWorldProperties.hpp" />
+    <ClInclude Include="..\..\utils\debugger\qt\WinResource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\utils\debugger\qt\QtApplicationState.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\qt\QtCameraInspectorWidget.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\qt\QtCameraManagerWidget.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\qt\QtCollapseList.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\qt\QtComputationWidget.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\qt\QtContentWidget.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\qt\QtCullingWidget.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\qt\QtGlobalSignals.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\qt\QtInspector.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\qt\QtLoggerWidget.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\qt\QtMain.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\qt\QtMainWindow.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\qt\QtObjectInspectorWidget.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\qt\QtQueryStatsWidget.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\qt\QtSceneInspectorWidget.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\qt\QtSlider.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\qt\QtTestPositionsWidget.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\qt\QtThreading.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\qt\QtTomePropertiesWidget.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\qt\QtViewport.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\qt\QtVisualization.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\qt\QtVisualizationWidget.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\qt\QtWorldProperties.cpp">
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\samples\resources\Logo.png" />
+    <Image Include="..\..\samples\resources\SmallLogo.png" />
+    <Image Include="..\..\samples\resources\SplashScreen.png" />
+    <Image Include="..\..\samples\resources\StoreLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\samples\resources\testkey.pfx" />
+    <None Include="..\..\utils\debugger\qt\umbra.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\utils\debugger\qt\WinResource.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="debugger_core.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      <Project>{D93534B8-4803-744D-AFE1-0D85226C7E3D}</Project>
+    </ProjectReference>
+    <ProjectReference Include="debugger_core.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      <Project>{D93534B8-4803-744D-AFE1-0D85226C7E3D}</Project>
+    </ProjectReference>
+    <ProjectReference Include="debugger_core.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Test|Win32'">
+      <Project>{D93534B8-4803-744D-AFE1-0D85226C7E3D}</Project>
+    </ProjectReference>
+    <ProjectReference Include="debugger_core.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Test|x64'">
+      <Project>{D93534B8-4803-744D-AFE1-0D85226C7E3D}</Project>
+    </ProjectReference>
+    <ProjectReference Include="debugger_core.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      <Project>{D93534B8-4803-744D-AFE1-0D85226C7E3D}</Project>
+    </ProjectReference>
+    <ProjectReference Include="debugger_core.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      <Project>{D93534B8-4803-744D-AFE1-0D85226C7E3D}</Project>
+    </ProjectReference>
+    <ProjectReference Include="runtime.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      <Project>{2AA4D7FA-C309-7245-B642-0E64E6211D90}</Project>
+    </ProjectReference>
+    <ProjectReference Include="runtime.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      <Project>{2AA4D7FA-C309-7245-B642-0E64E6211D90}</Project>
+    </ProjectReference>
+    <ProjectReference Include="runtime.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'">
+      <Project>{2AA4D7FA-C309-7245-B642-0E64E6211D90}</Project>
+    </ProjectReference>
+    <ProjectReference Include="runtime.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Debug|PS3'">
+      <Project>{2AA4D7FA-C309-7245-B642-0E64E6211D90}</Project>
+    </ProjectReference>
+    <ProjectReference Include="runtime.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Debug|ORBIS'">
+      <Project>{2AA4D7FA-C309-7245-B642-0E64E6211D90}</Project>
+    </ProjectReference>
+    <ProjectReference Include="runtime.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Debug|Durango'">
+      <Project>{2AA4D7FA-C309-7245-B642-0E64E6211D90}</Project>
+    </ProjectReference>
+    <ProjectReference Include="runtime.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Test|Win32'">
+      <Project>{2AA4D7FA-C309-7245-B642-0E64E6211D90}</Project>
+    </ProjectReference>
+    <ProjectReference Include="runtime.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Test|x64'">
+      <Project>{2AA4D7FA-C309-7245-B642-0E64E6211D90}</Project>
+    </ProjectReference>
+    <ProjectReference Include="runtime.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Test|Xbox 360'">
+      <Project>{2AA4D7FA-C309-7245-B642-0E64E6211D90}</Project>
+    </ProjectReference>
+    <ProjectReference Include="runtime.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Test|PS3'">
+      <Project>{2AA4D7FA-C309-7245-B642-0E64E6211D90}</Project>
+    </ProjectReference>
+    <ProjectReference Include="runtime.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Test|ORBIS'">
+      <Project>{2AA4D7FA-C309-7245-B642-0E64E6211D90}</Project>
+    </ProjectReference>
+    <ProjectReference Include="runtime.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Test|Durango'">
+      <Project>{2AA4D7FA-C309-7245-B642-0E64E6211D90}</Project>
+    </ProjectReference>
+    <ProjectReference Include="runtime.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      <Project>{2AA4D7FA-C309-7245-B642-0E64E6211D90}</Project>
+    </ProjectReference>
+    <ProjectReference Include="runtime.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      <Project>{2AA4D7FA-C309-7245-B642-0E64E6211D90}</Project>
+    </ProjectReference>
+    <ProjectReference Include="runtime.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'">
+      <Project>{2AA4D7FA-C309-7245-B642-0E64E6211D90}</Project>
+    </ProjectReference>
+    <ProjectReference Include="runtime.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Release|PS3'">
+      <Project>{2AA4D7FA-C309-7245-B642-0E64E6211D90}</Project>
+    </ProjectReference>
+    <ProjectReference Include="runtime.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Release|ORBIS'">
+      <Project>{2AA4D7FA-C309-7245-B642-0E64E6211D90}</Project>
+    </ProjectReference>
+    <ProjectReference Include="runtime.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Release|Durango'">
+      <Project>{2AA4D7FA-C309-7245-B642-0E64E6211D90}</Project>
+    </ProjectReference>
+    <ProjectReference Include="optimizer_static.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      <Project>{04A3007C-B832-8046-823C-BAC2F316A6E2}</Project>
+    </ProjectReference>
+    <ProjectReference Include="optimizer_static.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      <Project>{04A3007C-B832-8046-823C-BAC2F316A6E2}</Project>
+    </ProjectReference>
+    <ProjectReference Include="optimizer_static.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Test|Win32'">
+      <Project>{04A3007C-B832-8046-823C-BAC2F316A6E2}</Project>
+    </ProjectReference>
+    <ProjectReference Include="optimizer_static.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Test|x64'">
+      <Project>{04A3007C-B832-8046-823C-BAC2F316A6E2}</Project>
+    </ProjectReference>
+    <ProjectReference Include="optimizer_static.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      <Project>{04A3007C-B832-8046-823C-BAC2F316A6E2}</Project>
+    </ProjectReference>
+    <ProjectReference Include="optimizer_static.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      <Project>{04A3007C-B832-8046-823C-BAC2F316A6E2}</Project>
+    </ProjectReference>
+    <ProjectReference Include="testdb.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      <Project>{78D304BA-7F79-2F48-9A92-D324086C5CF8}</Project>
+    </ProjectReference>
+    <ProjectReference Include="testdb.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      <Project>{78D304BA-7F79-2F48-9A92-D324086C5CF8}</Project>
+    </ProjectReference>
+    <ProjectReference Include="testdb.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'">
+      <Project>{78D304BA-7F79-2F48-9A92-D324086C5CF8}</Project>
+    </ProjectReference>
+    <ProjectReference Include="testdb.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Debug|PS3'">
+      <Project>{78D304BA-7F79-2F48-9A92-D324086C5CF8}</Project>
+    </ProjectReference>
+    <ProjectReference Include="testdb.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Debug|ORBIS'">
+      <Project>{78D304BA-7F79-2F48-9A92-D324086C5CF8}</Project>
+    </ProjectReference>
+    <ProjectReference Include="testdb.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Debug|Durango'">
+      <Project>{78D304BA-7F79-2F48-9A92-D324086C5CF8}</Project>
+    </ProjectReference>
+    <ProjectReference Include="testdb.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Test|Win32'">
+      <Project>{78D304BA-7F79-2F48-9A92-D324086C5CF8}</Project>
+    </ProjectReference>
+    <ProjectReference Include="testdb.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Test|x64'">
+      <Project>{78D304BA-7F79-2F48-9A92-D324086C5CF8}</Project>
+    </ProjectReference>
+    <ProjectReference Include="testdb.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Test|Xbox 360'">
+      <Project>{78D304BA-7F79-2F48-9A92-D324086C5CF8}</Project>
+    </ProjectReference>
+    <ProjectReference Include="testdb.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Test|PS3'">
+      <Project>{78D304BA-7F79-2F48-9A92-D324086C5CF8}</Project>
+    </ProjectReference>
+    <ProjectReference Include="testdb.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Test|ORBIS'">
+      <Project>{78D304BA-7F79-2F48-9A92-D324086C5CF8}</Project>
+    </ProjectReference>
+    <ProjectReference Include="testdb.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Test|Durango'">
+      <Project>{78D304BA-7F79-2F48-9A92-D324086C5CF8}</Project>
+    </ProjectReference>
+    <ProjectReference Include="testdb.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      <Project>{78D304BA-7F79-2F48-9A92-D324086C5CF8}</Project>
+    </ProjectReference>
+    <ProjectReference Include="testdb.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      <Project>{78D304BA-7F79-2F48-9A92-D324086C5CF8}</Project>
+    </ProjectReference>
+    <ProjectReference Include="testdb.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'">
+      <Project>{78D304BA-7F79-2F48-9A92-D324086C5CF8}</Project>
+    </ProjectReference>
+    <ProjectReference Include="testdb.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Release|PS3'">
+      <Project>{78D304BA-7F79-2F48-9A92-D324086C5CF8}</Project>
+    </ProjectReference>
+    <ProjectReference Include="testdb.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Release|ORBIS'">
+      <Project>{78D304BA-7F79-2F48-9A92-D324086C5CF8}</Project>
+    </ProjectReference>
+    <ProjectReference Include="testdb.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Release|Durango'">
+      <Project>{78D304BA-7F79-2F48-9A92-D324086C5CF8}</Project>
+    </ProjectReference>
+    <ProjectReference Include="common.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      <Project>{E2D9B976-8C95-5F4A-9FC9-9E3D7D216383}</Project>
+    </ProjectReference>
+    <ProjectReference Include="common.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      <Project>{E2D9B976-8C95-5F4A-9FC9-9E3D7D216383}</Project>
+    </ProjectReference>
+    <ProjectReference Include="common.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'">
+      <Project>{E2D9B976-8C95-5F4A-9FC9-9E3D7D216383}</Project>
+    </ProjectReference>
+    <ProjectReference Include="common.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Debug|PS3'">
+      <Project>{E2D9B976-8C95-5F4A-9FC9-9E3D7D216383}</Project>
+    </ProjectReference>
+    <ProjectReference Include="common.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Debug|ORBIS'">
+      <Project>{E2D9B976-8C95-5F4A-9FC9-9E3D7D216383}</Project>
+    </ProjectReference>
+    <ProjectReference Include="common.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Debug|Durango'">
+      <Project>{E2D9B976-8C95-5F4A-9FC9-9E3D7D216383}</Project>
+    </ProjectReference>
+    <ProjectReference Include="common.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Test|Win32'">
+      <Project>{E2D9B976-8C95-5F4A-9FC9-9E3D7D216383}</Project>
+    </ProjectReference>
+    <ProjectReference Include="common.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Test|x64'">
+      <Project>{E2D9B976-8C95-5F4A-9FC9-9E3D7D216383}</Project>
+    </ProjectReference>
+    <ProjectReference Include="common.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Test|Xbox 360'">
+      <Project>{E2D9B976-8C95-5F4A-9FC9-9E3D7D216383}</Project>
+    </ProjectReference>
+    <ProjectReference Include="common.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Test|PS3'">
+      <Project>{E2D9B976-8C95-5F4A-9FC9-9E3D7D216383}</Project>
+    </ProjectReference>
+    <ProjectReference Include="common.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Test|ORBIS'">
+      <Project>{E2D9B976-8C95-5F4A-9FC9-9E3D7D216383}</Project>
+    </ProjectReference>
+    <ProjectReference Include="common.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Test|Durango'">
+      <Project>{E2D9B976-8C95-5F4A-9FC9-9E3D7D216383}</Project>
+    </ProjectReference>
+    <ProjectReference Include="common.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      <Project>{E2D9B976-8C95-5F4A-9FC9-9E3D7D216383}</Project>
+    </ProjectReference>
+    <ProjectReference Include="common.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      <Project>{E2D9B976-8C95-5F4A-9FC9-9E3D7D216383}</Project>
+    </ProjectReference>
+    <ProjectReference Include="common.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'">
+      <Project>{E2D9B976-8C95-5F4A-9FC9-9E3D7D216383}</Project>
+    </ProjectReference>
+    <ProjectReference Include="common.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Release|PS3'">
+      <Project>{E2D9B976-8C95-5F4A-9FC9-9E3D7D216383}</Project>
+    </ProjectReference>
+    <ProjectReference Include="common.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Release|ORBIS'">
+      <Project>{E2D9B976-8C95-5F4A-9FC9-9E3D7D216383}</Project>
+    </ProjectReference>
+    <ProjectReference Include="common.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Release|Durango'">
+      <Project>{E2D9B976-8C95-5F4A-9FC9-9E3D7D216383}</Project>
+    </ProjectReference>
+    <ProjectReference Include="glew.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      <Project>{3E022EE7-8AC9-0A40-A666-A40FF62857CA}</Project>
+    </ProjectReference>
+    <ProjectReference Include="glew.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      <Project>{3E022EE7-8AC9-0A40-A666-A40FF62857CA}</Project>
+    </ProjectReference>
+    <ProjectReference Include="glew.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Test|Win32'">
+      <Project>{3E022EE7-8AC9-0A40-A666-A40FF62857CA}</Project>
+    </ProjectReference>
+    <ProjectReference Include="glew.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Test|x64'">
+      <Project>{3E022EE7-8AC9-0A40-A666-A40FF62857CA}</Project>
+    </ProjectReference>
+    <ProjectReference Include="glew.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      <Project>{3E022EE7-8AC9-0A40-A666-A40FF62857CA}</Project>
+    </ProjectReference>
+    <ProjectReference Include="glew.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      <Project>{3E022EE7-8AC9-0A40-A666-A40FF62857CA}</Project>
+    </ProjectReference>
+    <ProjectReference Include="squirrel.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      <Project>{BF974199-CCA4-A544-B05B-42C8DCA73A40}</Project>
+    </ProjectReference>
+    <ProjectReference Include="squirrel.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      <Project>{BF974199-CCA4-A544-B05B-42C8DCA73A40}</Project>
+    </ProjectReference>
+    <ProjectReference Include="squirrel.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Test|Win32'">
+      <Project>{BF974199-CCA4-A544-B05B-42C8DCA73A40}</Project>
+    </ProjectReference>
+    <ProjectReference Include="squirrel.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Test|x64'">
+      <Project>{BF974199-CCA4-A544-B05B-42C8DCA73A40}</Project>
+    </ProjectReference>
+    <ProjectReference Include="squirrel.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      <Project>{BF974199-CCA4-A544-B05B-42C8DCA73A40}</Project>
+    </ProjectReference>
+    <ProjectReference Include="squirrel.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      <Project>{BF974199-CCA4-A544-B05B-42C8DCA73A40}</Project>
+    </ProjectReference>
+    <ProjectReference Include="squirrelLib.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      <Project>{822A606B-938A-864E-B859-F97D579C6221}</Project>
+    </ProjectReference>
+    <ProjectReference Include="squirrelLib.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      <Project>{822A606B-938A-864E-B859-F97D579C6221}</Project>
+    </ProjectReference>
+    <ProjectReference Include="squirrelLib.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Test|Win32'">
+      <Project>{822A606B-938A-864E-B859-F97D579C6221}</Project>
+    </ProjectReference>
+    <ProjectReference Include="squirrelLib.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Test|x64'">
+      <Project>{822A606B-938A-864E-B859-F97D579C6221}</Project>
+    </ProjectReference>
+    <ProjectReference Include="squirrelLib.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      <Project>{822A606B-938A-864E-B859-F97D579C6221}</Project>
+    </ProjectReference>
+    <ProjectReference Include="squirrelLib.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      <Project>{822A606B-938A-864E-B859-F97D579C6221}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

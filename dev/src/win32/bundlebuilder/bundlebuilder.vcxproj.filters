@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="common">
+      <UniqueIdentifier>{481615fb-2084-4436-8d48-a8775fe4b24e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Compression">
+      <UniqueIdentifier>{ce71f997-073c-4837-ac63-23b600e40fc8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Interface">
+      <UniqueIdentifier>{5f4d11e9-a552-4ee2-abb9-e70b6fafd6f8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="bundlewriter.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="bundle.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="bufferedFileWriter.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="compressionProfiler.cpp">
+      <Filter>Compression</Filter>
+    </ClCompile>
+    <ClCompile Include="options.cpp">
+      <Filter>Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="feedback.cpp">
+      <Filter>Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="autoCache.cpp">
+      <Filter>Compression</Filter>
+    </ClCompile>
+    <ClCompile Include="autoCacheBuilder.cpp">
+      <Filter>Compression</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="bundlewriter.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="bundle.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="bufferedFileWriter.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="compressionProfiler.h">
+      <Filter>Compression</Filter>
+    </ClInclude>
+    <ClInclude Include="options.h">
+      <Filter>Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="feedback.h">
+      <Filter>Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="autoCache.h">
+      <Filter>Compression</Filter>
+    </ClInclude>
+    <ClInclude Include="creationParams.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="autoCacheBuilder.h">
+      <Filter>Compression</Filter>
+    </ClInclude>
+    <ClInclude Include="consumer.h">
+      <Filter>Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="producer.h">
+      <Filter>Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="bundleBuilderMemory.h">
+      <Filter>Interface</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

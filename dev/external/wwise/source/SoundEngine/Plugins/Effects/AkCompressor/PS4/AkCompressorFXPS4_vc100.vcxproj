@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup Label="ProjectConfigurations">
+		<ProjectConfiguration Include="Debug|ORBIS">
+			<Configuration>Debug</Configuration>
+			<Platform>ORBIS</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Profile|ORBIS">
+			<Configuration>Profile</Configuration>
+			<Platform>ORBIS</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Release|ORBIS">
+			<Configuration>Release</Configuration>
+			<Platform>ORBIS</Platform>
+		</ProjectConfiguration>
+	</ItemGroup>
+	<PropertyGroup Label="Globals">
+		<ProjectGuid>{A96E4F34-5F76-6E5A-539A-06294C6B9AC2}</ProjectGuid>
+		<RootNamespace>AkCompressorFX</RootNamespace>
+		<Keyword>Win32Proj</Keyword>
+		<ProjectName>AkCompressorFX</ProjectName>
+	</PropertyGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ORBIS'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>MultiByte</CharacterSet>
+		<UseDebugLibraries>false</UseDebugLibraries>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|ORBIS'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>MultiByte</CharacterSet>
+		<UseDebugLibraries>false</UseDebugLibraries>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ORBIS'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>MultiByte</CharacterSet>
+		<UseDebugLibraries>false</UseDebugLibraries>
+	</PropertyGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+	<ImportGroup Label="ExtensionSettings">
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ORBIS'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Profile|ORBIS'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|ORBIS'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Label="UserMacros" />
+	<PropertyGroup>
+		<_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|ORBIS'">..\..\..\..\..\..\PS4\Debug\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|ORBIS'">..\..\..\..\..\..\PS4\Debug\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|ORBIS'">AkCompressorFX</TargetName>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Profile|ORBIS'">..\..\..\..\..\..\PS4\Profile\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Profile|ORBIS'">..\..\..\..\..\..\PS4\Profile\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Profile|ORBIS'">AkCompressorFX</TargetName>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Release|ORBIS'">..\..\..\..\..\..\PS4\Release\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Release|ORBIS'">..\..\..\..\..\..\PS4\Release\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Release|ORBIS'">AkCompressorFX</TargetName>
+	</PropertyGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ORBIS'">
+		<ClCompile>
+			<AdditionalOptions>-Wno-invalid-offsetof -Wno-switch  -Wno-unused-variable -Wno-missing-braces %(AdditionalOptions)</AdditionalOptions>
+			<Optimization>Full</Optimization>
+			<AdditionalIncludeDirectories>$(SCE_ORBIS_SDK_DIR)\target\include;$(SCE_ORBIS_SDK_DIR)\target\include_common;$(SCE_ORBIS_SDK_DIR)\host_tools\lib\clang\3.1\include;..;..\..\..\..\..\..\include;..\..\Common\Win32;..\..\Common;..\..\..\Common;..\..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>SN_TARGET_ORBIS;__SCE__;AUDIOKINETIC;AK_PS4;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+			<PrecompiledHeader></PrecompiledHeader>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>SN_TARGET_ORBIS;__SCE__;AUDIOKINETIC;AK_PS4;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>$(SCE_ORBIS_SDK_DIR)\target\include;$(SCE_ORBIS_SDK_DIR)\target\include_common;$(SCE_ORBIS_SDK_DIR)\host_tools\lib\clang\3.1\include;..;..\..\..\..\..\..\include;..\..\Common\Win32;..\..\Common;..\..\..\Common;..\..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)AkCompressorFX.a</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+			<OptimizeReferences>true</OptimizeReferences>
+			<EnableCOMDATFolding>true</EnableCOMDATFolding>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Profile|ORBIS'">
+		<ClCompile>
+			<AdditionalOptions>-Wno-invalid-offsetof -Wno-switch  -Wno-unused-variable -Wno-missing-braces %(AdditionalOptions)</AdditionalOptions>
+			<Optimization>Full</Optimization>
+			<AdditionalIncludeDirectories>$(SCE_ORBIS_SDK_DIR)\target\include;$(SCE_ORBIS_SDK_DIR)\target\include_common;$(SCE_ORBIS_SDK_DIR)\host_tools\lib\clang\3.1\include;..;..\..\..\..\..\..\include;..\..\Common\Win32;..\..\Common;..\..\..\Common;..\..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>SN_TARGET_ORBIS;__SCE__;AUDIOKINETIC;AK_PS4;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+			<OptimizationLevel>Level3</OptimizationLevel>
+			<FastMath>true</FastMath>
+			<PrecompiledHeader></PrecompiledHeader>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>SN_TARGET_ORBIS;__SCE__;AUDIOKINETIC;AK_PS4;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>$(SCE_ORBIS_SDK_DIR)\target\include;$(SCE_ORBIS_SDK_DIR)\target\include_common;$(SCE_ORBIS_SDK_DIR)\host_tools\lib\clang\3.1\include;..;..\..\..\..\..\..\include;..\..\Common\Win32;..\..\Common;..\..\..\Common;..\..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)AkCompressorFX.a</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+			<OptimizeReferences>true</OptimizeReferences>
+			<EnableCOMDATFolding>true</EnableCOMDATFolding>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ORBIS'">
+		<ClCompile>
+			<AdditionalOptions>-Wno-invalid-offsetof -Wno-switch  -Wno-unused-variable -Wno-missing-braces %(AdditionalOptions)</AdditionalOptions>
+			<Optimization>Full</Optimization>
+			<AdditionalIncludeDirectories>$(SCE_ORBIS_SDK_DIR)\target\include;$(SCE_ORBIS_SDK_DIR)\target\include_common;$(SCE_ORBIS_SDK_DIR)\host_tools\lib\clang\3.1\include;..;..\..\..\..\..\..\include;..\..\Common\Win32;..\..\Common;..\..\..\Common;..\..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>SN_TARGET_ORBIS;__SCE__;AUDIOKINETIC;AK_PS4;NDEBUG;AK_OPTIMIZED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+			<OptimizationLevel>Level3</OptimizationLevel>
+			<FastMath>true</FastMath>
+			<PrecompiledHeader></PrecompiledHeader>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>SN_TARGET_ORBIS;__SCE__;AUDIOKINETIC;AK_PS4;NDEBUG;AK_OPTIMIZED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>$(SCE_ORBIS_SDK_DIR)\target\include;$(SCE_ORBIS_SDK_DIR)\target\include_common;$(SCE_ORBIS_SDK_DIR)\host_tools\lib\clang\3.1\include;..;..\..\..\..\..\..\include;..\..\Common\Win32;..\..\Common;..\..\..\Common;..\..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)AkCompressorFX.a</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+			<OptimizeReferences>true</OptimizeReferences>
+			<EnableCOMDATFolding>true</EnableCOMDATFolding>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemGroup>
+		<ClInclude Include="..\Win32\AkCompressorFX.h" />
+		<ClInclude Include="..\AkCompressorFXParams.h" />
+	</ItemGroup>
+	<ItemGroup>
+		<ClCompile Include="..\Win32\AkCompressorFX.cpp">
+		</ClCompile>
+		<ClCompile Include="..\AkCompressorFXParams.cpp">
+		</ClCompile>
+	</ItemGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+	<ImportGroup Label="ExtensionTargets">
+	</ImportGroup>
+</Project>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="utils">
+      <UniqueIdentifier>{D56BF8AE-6215-7C4D-BC57-C6343499827F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils\dpvs">
+      <UniqueIdentifier>{CCAE247D-9AEB-C148-ACAF-1445C2B98823}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\utils\dpvs\umbraDPVSValidator.hpp">
+      <Filter>utils\dpvs</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\utils\dpvs\umbraDPVSCommandLineTool.cpp">
+      <Filter>utils\dpvs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\utils\dpvs\umbraDPVSValidator.cpp">
+      <Filter>utils\dpvs</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

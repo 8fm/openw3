@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="redIOFiosFileOrbisAPI.cpp">
+      <Filter>Internal\Orbis</Filter>
+    </ClCompile>
+    <ClCompile Include="redIOSystemFileWinAPI.cpp">
+      <Filter>Internal\Win</Filter>
+    </ClCompile>
+    <ClCompile Include="redIOAsyncFileHandleCache.cpp">
+      <Filter>Internal</Filter>
+    </ClCompile>
+    <ClCompile Include="redIOFile.cpp">
+      <Filter>Internal</Filter>
+    </ClCompile>
+    <ClCompile Include="redIO.cpp">
+      <Filter>Internal</Filter>
+    </ClCompile>
+    <ClCompile Include="redIOAsyncIO.cpp">
+      <Filter>Internal</Filter>
+    </ClCompile>
+    <ClCompile Include="redIOProactorGenericAPI.cpp">
+      <Filter>Internal\Generic</Filter>
+    </ClCompile>
+    <ClCompile Include="redIOProactorOrbisAPI.cpp">
+      <Filter>Internal\Orbis</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="redIO.h" />
+    <ClInclude Include="redIOFiosFwd.h">
+      <Filter>Internal\Orbis</Filter>
+    </ClInclude>
+    <ClInclude Include="redIOFiosFileOrbisAPI.h">
+      <Filter>Internal\Orbis</Filter>
+    </ClInclude>
+    <ClInclude Include="redIOSystemFileWinAPI.h">
+      <Filter>Internal\Win</Filter>
+    </ClInclude>
+    <ClInclude Include="redIOAsyncFileHandleCache.h">
+      <Filter>Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="redIOTypes.h">
+      <Filter>Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="redIOFile.h">
+      <Filter>Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="redIOPlatform.h">
+      <Filter>Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="redIOAsyncReadToken.h">
+      <Filter>Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="redIOCommon.h">
+      <Filter>Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="redIOTempBitset.h">
+      <Filter>Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="redIOAsyncIO.h">
+      <Filter>Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="redIOProactorGenericAPI.h">
+      <Filter>Internal\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="redIOProactorOrbisAPI.h">
+      <Filter>Internal\Orbis</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Internal">
+      <UniqueIdentifier>{9e828caf-03a9-4a49-bb50-00622d28f7f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Internal\Orbis">
+      <UniqueIdentifier>{14d2bd14-d07e-4290-8173-3e85b3c4cf30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Internal\Win">
+      <UniqueIdentifier>{cd2ba0c3-7f46-42c8-b80b-2f43d74d10fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Internal\Generic">
+      <UniqueIdentifier>{c18055bc-86ac-456f-8213-93df0aff507c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,356 @@
+; Paste everything to [Visualizer] section in your autoexp.dat file
+; By default the file is located in:
+; Program Files\Microsoft Visual Studio 10\Common7\Packages\Debugger\
+
+; LavaEngine stuff
+
+
+CStaticMesh::Chunk{
+	preview 
+	(
+		#(
+			"MaterialID=", $c.m_materialID,
+			" Vertices=", $c.m_firstVertex, "-", $c.m_firstVertex + $c.m_numVertices, " (Count:", $c.m_numVertices, ")",
+			" Indices=", $c.m_firstIndex, "-", $c.m_firstIndex + $c.m_numIndices, " (Count:", $c.m_numIndices, ")"
+		)
+	)
+}
+
+CStaticMesh::Vertex{
+	preview 
+	(
+		#(
+			"Pos=(", [$c.m_position[0],g], ",", [$c.m_position[1],g], ",", [$c.m_position[2],g], ")",
+			" Normal=(", [$c.m_normal[0],g], ",", [$c.m_normal[1],g], ",", [$c.m_normal[2],g], ")",
+			" Color=", [$c.m_color,x],
+			" UV0=(", [$c.m_uv0[0],g], ",", [$c.m_uv0[1],g], ")",
+			" UV1=(", [$c.m_uv1[0],g], ",", [$c.m_uv1[1],g], ")",
+			" Tangent=(", [$c.m_tangent[0],g], ",", [$c.m_tangent[1],g], ",", [$c.m_tangent[2],g], ",", [$c.m_tangent[3],g], ")"
+		)
+	)
+}
+
+TPair<CName,*,*,*,*,*>{
+	preview
+	(
+		#(
+			( **((CNamePool::NameInternal**)CNamePool::s_namesPool->m_names.m_buf + $e.m_first.m_index )).m_name, " (Index=", $e.m_first.m_index, ")"
+		)
+	)
+	children
+	(
+		#(
+			Key			: $e.m_first,
+			Value		: $e.m_second,
+			[Members]	: [$e,!]
+		)
+	)
+}
+
+TPair<*,*,*,*,*,*>{
+	preview
+	(
+		#(
+			$e.m_first
+		)
+	)
+	children
+	(
+		#(
+			Key			: $e.m_first,
+			Value		: $e.m_second,
+			[Members]	: [$e,!]
+		)
+	)
+}
+
+TDynArray<*,*>|TSortedArray<*,*,*>{
+	preview
+	(
+		#if( ($c.m_size) >= 0 )
+		(
+			#if( ($c.m_size) == 0 )
+			(
+				"<Empty>"
+			)
+			#else
+			(
+				#if( ($c.m_size) <= ($c.m_allocatedSize) )
+				(
+					#( "Num=", $c.m_size, " Max=", $c.m_allocatedSize )
+				)
+				#else
+				(
+					"<Invalid>"
+				)
+			)
+		)
+		#else
+		(
+			"<Invalid>"
+		)
+	)
+	children
+	(
+		#if( ($c.m_size) >= 0 )
+		(
+			#if( ($c.m_size) <= ($c.m_allocatedSize) )
+			(
+				#if( ($c.m_size) > 0 )
+				(
+					#(
+						#array 
+						(
+							expr: *(($T1 *)$c.m_buf + $i),
+							size: $c.m_size
+						),
+						#( [Members]: [$c,!] )
+					)
+				)
+				#else
+				(
+					#( [Members]: [$c,!] )
+				)
+			)
+		)
+	)
+}
+
+Red::System::NameBase|CName{
+	preview
+	(
+		#(
+			[(*Red::System::NameBase::visualStudioDebuggerAid).m_names[$c.m_index].m_name,sb]
+		)
+	)
+	children
+	(
+		[((*Red::System::NameBase::visualStudioDebuggerAid).m_names[$c.m_index]),!]
+	)
+	stringview
+	(
+		[((*Red::System::NameBase::visualStudioDebuggerAid).m_names[$c.m_index].m_name),sb]
+	)
+}
+
+TString<*>{
+	preview
+	( 
+		#if( ($c.m_size) <= ($c.m_allocatedSize) )
+		(
+			#if( ($c.m_size) > 1 )
+			(
+				#( [$c.m_buf,su], " (Len=", ($c.m_size - 1), ")" ) 
+			)
+			#else
+			(
+				"<Empty>"
+			)
+		)
+		#else
+		(
+			"<Invalid>"
+		)
+	)
+	stringview
+	(
+		#if( ($c.m_size) <= ($c.m_allocatedSize) )
+		(
+			#if( ($c.m_size) > 1 )
+			(
+				#( [$c.m_buf,sub] ) 
+			)
+			#else
+			(
+				"<Empty>"
+			)
+		)
+		#else
+		(
+			"<Invalid>"
+		)
+	)
+}
+
+TList<*>{
+	children
+	(
+		#list
+		(
+			head: $c.m_head,
+			next: m_next,
+		) : $e.m_key
+	)
+}
+
+TSet<*,*>{
+	children
+	(
+		#tree
+		(
+			head: $c.m_root,
+			left: m_child0_doNotUseIt,
+			right: m_child1_doNotUseIt
+		) : $e.m_key
+	)
+}
+
+THashSet<*,*,*>{
+	preview
+	(
+		#( "(Buckets=", ($c.m_hashArray.m_size), ")" )
+	)
+   children (
+            #array (
+                expr : *((CBaseArray *)( (char*)$c.m_hashArray.m_buf + $i * $c.m_hashArray.m_elemSize ) ),
+                size : $c.m_hashArray.m_size
+            ) : #array (
+					expr: &$e,
+                    size: $e.m_buf != 0
+                )
+                 : #array (
+					   expr : ($T1*)( (char*)$e.m_buf + $i * $e.m_elemSize ),
+					   size : $e.m_size
+					)
+    )
+}
+
+THandle<*>{
+	preview
+	(
+		#( "(Index=", ($c.m_index), ")" )
+	)
+   children (
+		#array (
+			expr : (unsigned int *)( (char*)$c.m_map->m_handleMap.m_keyArray.m_buf + $i * $c.m_map->m_handleMap.m_keyArray.m_elemSize ),
+			size : $c.m_map->m_handleMap.m_keyArray.m_size
+		) : #if ( $e == $c.m_index ) (
+				($T1*)*(void**)( &$e + 1 )
+			) #else (
+				0
+			)
+    )
+}
+
+TConstHandle<*>{
+	preview
+	(
+		#( "(Index=", ($c.m_index), ")" )
+	)
+   children (
+		#array (
+			expr : (unsigned int *)( (char*)$c.m_map->m_handleMap.m_keyArray.m_buf + $i * $c.m_map->m_handleMap.m_keyArray.m_elemSize ),
+			size : $c.m_map->m_handleMap.m_keyArray.m_size
+		) : #if ( $e == $c.m_index ) (
+				($T1*)*(void**)( &$e + 1 )
+			) #else (
+				0
+			)
+    )
+}
+
+Vector{
+	preview
+	(
+		#(
+			"X=",
+			$e.A[0],
+			", Y=",
+			$e.A[1],
+			", Z=",
+			$e.A[2],
+			", W=",
+			$e.A[3]
+		)
+	)
+	stringview
+	(
+		#(
+			"X=",
+			$e.A[0],
+			", Y=",
+			$e.A[1],
+			", Z=",
+			$e.A[2],
+			", W=",
+			$e.A[3]
+		)
+	)
+	children
+	(
+		#(
+			X			: $e.A[0],
+			Y			: $e.A[1],
+			Z			: $e.A[2],
+			W			: $e.A[3],
+			[Members]	: [$e,!]
+		)
+	)
+}
+
+EulerAngles{
+	preview
+	(
+		#(
+			"Roll=",
+			$e.Roll,
+			", Pitch=",
+			$e.Pitch,
+			", Yaw=",
+			$e.Yaw
+		)
+	)
+	stringview
+	(
+		#(
+			"Roll = ",
+			$e.Roll,
+			", Pitch = ",
+			$e.Pitch,
+			", Yaw = ",
+			$e.Yaw
+		)
+	)
+	children
+	(
+		#(
+			Roll		: $e.Roll,
+			Pitch		: $e.Pitch,
+			Yaw			: $e.Yaw,
+			[Members]	: [$e,!]
+		)
+	)
+}
+
+Matrix{
+	preview
+	(
+		#(
+			"Pos X=",
+			$e.V[3].A[0],
+			", Y=",
+			$e.V[3].A[1],
+			", Z=",
+			$e.V[3].A[2]
+		)
+	)
+	stringview
+	(
+		#(
+			" // 0 ", $e.V[0],
+			" // 1 ", $e.V[1],
+			" // 2 ", $e.V[2],
+			" // 3 ", $e.V[3]
+		)
+	)
+	children
+	(
+		#(
+			X			: $e.V[0],
+			Y			: $e.V[1],
+			Z			: $e.V[2],
+			W			: $e.V[3],
+			[Members]	: [$e,!]
+		)
+	)
+}

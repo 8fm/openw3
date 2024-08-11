@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" TreatAsLocalProperty="OutDir;TargetName;IntDir;PlatformToolset">
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedConfigurationSetup.props))\SharedConfigurationSetup.props" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{99596BEB-157A-4C15-94B4-25E3A580DE22}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>RedNetwork</RootNamespace>
+    <ProjectName>redNetwork</ProjectName>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <UsePrecompiledHeaders>false</UsePrecompiledHeaders>
+  </PropertyGroup>
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.props))\Shared.props" />
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedItemGroups.props))\SharedItemGroups.props" />
+  <ItemGroup>
+    <ClInclude Include="address.h" />
+    <ClInclude Include="channel.h" />
+    <ClInclude Include="manager.h" />
+    <ClInclude Include="memory.h" />
+    <ClInclude Include="network.h" />
+    <ClInclude Include="packet.h" />
+    <ClInclude Include="fixedPoolList.h" />
+    <ClInclude Include="ping.h" />
+    <ClInclude Include="platform\platformOrbis.h" />
+    <ClInclude Include="platform\platformWindows.h" />
+    <ClInclude Include="rawManager.h" />
+    <ClInclude Include="simpleDynArray.h" />
+    <ClInclude Include="list.h" />
+    <ClInclude Include="socket.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="address.cpp" />
+    <ClCompile Include="channel.cpp" />
+    <ClCompile Include="manager.cpp" />
+    <ClCompile Include="memory.cpp" />
+    <ClCompile Include="packet.cpp" />
+    <ClCompile Include="ping.cpp" />
+    <ClCompile Include="platform\platformWindows.cpp">
+      <ExcludedFromBuild Condition="'$(Platform)'=='ORBIS'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="rawManager.cpp" />
+    <ClCompile Include="simpleDynArray.cpp" />
+    <ClCompile Include="socket.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.targets))\Shared.targets" />
+  </ImportGroup>
+</Project>

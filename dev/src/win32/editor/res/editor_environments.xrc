@@ -1,0 +1,965 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<resource xmlns="http://www.wxwindows.org/wxxrc" version="2.3.0.1">
+	<object class="wxPanel" name="WorldEnvironmentTool">
+		<style>wxTAB_TRAVERSAL</style>
+		<size>975,503</size>
+		<object class="wxBoxSizer">
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxEXPAND|wxTOP|wxBOTTOM</flag>
+				<border>5</border>
+				<object class="wxBoxSizer">
+					<orient>wxHORIZONTAL</orient>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxLEFT</flag>
+						<border>5</border>
+						<object class="wxBitmapButton" name="m_stayOnTop">
+							<style>wxBU_AUTODRAW</style>
+							<tooltip>Stay On Top</tooltip>
+							<bitmap>images/pin.png</bitmap>
+							<default>0</default>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>12</border>
+						<object class="wxStaticText" name="m_staticText16">
+							<font>
+								<family>default</family>
+								<style>normal</style>
+								<weight>bold</weight>
+								<underlined>0</underlined>
+							</font>
+							<label>Weather System</label>
+							<wrap>-1</wrap>
+						</object>
+					</object>
+					<object class="spacer">
+						<option>1</option>
+						<flag>wxEXPAND</flag>
+						<border>5</border>
+						<size>0,0</size>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxEXPAND</flag>
+						<border>5</border>
+						<object class="wxBoxSizer">
+							<orient>wxVERTICAL</orient>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALIGN_CENTER_VERTICAL|wxALIGN_LEFT|wxALL</flag>
+								<border>5</border>
+								<object class="wxStaticText" name="m_staticText7">
+									<label>Force weather preset:</label>
+									<wrap>-1</wrap>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALIGN_CENTER_VERTICAL</flag>
+								<border>5</border>
+								<object class="wxChoice" name="envWeatherChoice">
+									<font>
+										<size>7</size>
+										<family>default</family>
+										<style>normal</style>
+										<weight>normal</weight>
+										<underlined>0</underlined>
+									</font>
+									<selection>0</selection>
+									<content />
+								</object>
+							</object>
+						</object>
+					</object>
+					<object class="spacer">
+						<option>1</option>
+						<flag>wxEXPAND</flag>
+						<border>5</border>
+						<size>0,0</size>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxEXPAND</flag>
+						<border>5</border>
+						<object class="wxBoxSizer">
+							<orient>wxHORIZONTAL</orient>
+							<object class="sizeritem">
+								<option>3</option>
+								<flag>wxEXPAND</flag>
+								<border>5</border>
+								<object class="wxBoxSizer">
+									<orient>wxVERTICAL</orient>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALIGN_CENTER_VERTICAL|wxALIGN_LEFT|wxALL</flag>
+										<border>5</border>
+										<object class="wxStaticText" name="m_staticText72">
+											<label>Current weather condition:</label>
+											<wrap>-1</wrap>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALIGN_CENTER_VERTICAL|wxEXPAND</flag>
+										<border>5</border>
+										<object class="wxTextCtrl" name="m_currentWCondition">
+											<style>wxTE_READONLY</style>
+											<font>
+												<size>6</size>
+												<family>default</family>
+												<style>normal</style>
+												<weight>normal</weight>
+												<underlined>0</underlined>
+											</font>
+											<value></value>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<option>5</option>
+										<flag>wxALIGN_CENTER_VERTICAL|wxEXPAND</flag>
+										<border>5</border>
+										<object class="wxGauge" name="m_currentWStatus">
+											<style>wxGA_HORIZONTAL</style>
+											<range>100</range>
+											<value>0</value>
+										</object>
+									</object>
+								</object>
+							</object>
+							<object class="spacer">
+								<option>3</option>
+								<flag>wxEXPAND</flag>
+								<border>5</border>
+								<size>0,0</size>
+							</object>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>1</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxBoxSizer">
+							<orient>wxHORIZONTAL</orient>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<object class="wxCheckBox" name="m_pause">
+							<label>Pause</label>
+							<checked>1</checked>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALIGN_CENTER|wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="m_openWTRes">
+							<label>Open WT</label>
+							<default>0</default>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxEXPAND | wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticLine" name="m_staticline411">
+							<style>wxLI_VERTICAL</style>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="buttonStabilizeAreaEnv">
+							<label>Stabilize</label>
+							<default>0</default>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxEXPAND | wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticLine" name="m_staticline41">
+							<style>wxLI_VERTICAL</style>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxEXPAND | wxALL</flag>
+				<border>5</border>
+				<object class="wxStaticLine" name="m_staticline3">
+					<style>wxLI_HORIZONTAL</style>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxBOTTOM|wxEXPAND|wxTOP</flag>
+				<border>5</border>
+				<object class="wxBoxSizer">
+					<orient>wxHORIZONTAL</orient>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>12</border>
+						<object class="wxStaticText" name="m_staticText161">
+							<font>
+								<family>default</family>
+								<style>normal</style>
+								<weight>bold</weight>
+								<underlined>0</underlined>
+							</font>
+							<label>Environment System</label>
+							<wrap>-1</wrap>
+						</object>
+					</object>
+					<object class="spacer">
+						<option>1</option>
+						<flag>wxEXPAND</flag>
+						<border>5</border>
+						<size>0,0</size>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALIGN_CENTER_VERTICAL|wxRIGHT</flag>
+						<border>10</border>
+						<object class="wxStaticText" name="m_staticText71">
+							<label>Force preset:</label>
+							<wrap>-1</wrap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<object class="wxChoice" name="m_envStdEnvChoice">
+							<selection>3</selection>
+							<content />
+						</object>
+					</object>
+					<object class="spacer">
+						<option>1</option>
+						<flag>wxEXPAND</flag>
+						<border>5</border>
+						<size>0,0</size>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxToggleButton" name="m_showAdvancedTools">
+							<label>Curve advanced options</label>
+							<checked>1</checked>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxEXPAND | wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticLine" name="m_staticline4">
+							<style>wxLI_VERTICAL</style>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="m_save">
+							<label>_Save</label>
+							<default>0</default>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxEXPAND | wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticLine" name="m_staticline42">
+							<style>wxLI_VERTICAL</style>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxBoxSizer">
+					<orient>wxVERTICAL</orient>
+					<object class="sizeritem">
+						<option>1</option>
+						<flag>wxEXPAND</flag>
+						<border>5</border>
+						<object class="wxBoxSizer">
+							<orient>wxHORIZONTAL</orient>
+							<object class="sizeritem">
+								<option>1</option>
+								<flag>wxEXPAND|wxALL</flag>
+								<border>5</border>
+								<object class="wxSplitterWindow" name="m_splitter1">
+									<style>wxSP_3D|wxSP_LIVE_UPDATE|wxSP_NOBORDER</style>
+									<sashpos>224</sashpos>
+									<gravity>0</gravity>
+									<minsize>50</minsize>
+									<orientation>vertical</orientation>
+									<object class="wxPanel" name="m_panel5">
+										<style>wxTAB_TRAVERSAL</style>
+										<object class="wxBoxSizer">
+											<orient>wxVERTICAL</orient>
+											<object class="sizeritem">
+												<option>1</option>
+												<flag>wxEXPAND</flag>
+												<border>5</border>
+												<object class="wxNotebook" name="m_notebook1">
+													<size>200,-1</size>
+													<object class="notebookpage">
+														<label>Settings</label>
+														<selected>0</selected>
+														<object class="wxPanel" name="globalSettingsPagePanel">
+															<style>wxTAB_TRAVERSAL</style>
+															<object class="wxBoxSizer">
+																<orient>wxVERTICAL</orient>
+																<object class="sizeritem">
+																	<option>0</option>
+																	<flag>wxEXPAND</flag>
+																	<border>5</border>
+																	<object class="wxStaticBoxSizer">
+																		<orient>wxVERTICAL</orient>
+																		<label>Editor parameters</label>
+																		<object class="sizeritem">
+																			<option>0</option>
+																			<flag>wxLEFT|wxRIGHT|wxTOP</flag>
+																			<border>5</border>
+																			<object class="wxCheckBox" name="instantAdaptationEnable">
+																				<label>Instant adaptation</label>
+																				<checked>0</checked>
+																			</object>
+																		</object>
+																		<object class="sizeritem">
+																			<option>0</option>
+																			<flag>wxLEFT|wxRIGHT|wxTOP</flag>
+																			<border>5</border>
+																			<object class="wxCheckBox" name="trajectoryDisplayEnable">
+																				<label>Trajectory display</label>
+																				<checked>0</checked>
+																			</object>
+																		</object>
+																		<object class="sizeritem">
+																			<option>0</option>
+																			<flag>wxLEFT|wxRIGHT|wxTOP</flag>
+																			<border>5</border>
+																			<object class="wxCheckBox" name="envProbeInstantUpdate">
+																				<label>EnvProbe instant update</label>
+																				<checked>0</checked>
+																			</object>
+																		</object>
+																		<object class="sizeritem">
+																			<option>0</option>
+																			<flag>wxLEFT|wxRIGHT|wxTOP</flag>
+																			<border>5</border>
+																			<object class="wxCheckBox" name="allowEnvProbeUpdate">
+																				<label>Allow envProbe update</label>
+																				<checked>0</checked>
+																			</object>
+																		</object>
+																		<object class="sizeritem">
+																			<option>0</option>
+																			<flag>wxTOP|wxRIGHT|wxLEFT</flag>
+																			<border>5</border>
+																			<object class="wxCheckBox" name="bloomAllow">
+																				<label>Allow bloom</label>
+																				<checked>0</checked>
+																			</object>
+																		</object>
+																		<object class="sizeritem">
+																			<option>0</option>
+																			<flag>wxTOP|wxRIGHT|wxLEFT</flag>
+																			<border>5</border>
+																			<object class="wxCheckBox" name="allowColorMod">
+																				<label>Allow color balance</label>
+																				<checked>0</checked>
+																			</object>
+																		</object>
+																		<object class="sizeritem">
+																			<option>0</option>
+																			<flag>wxTOP|wxRIGHT|wxLEFT</flag>
+																			<border>5</border>
+																			<object class="wxCheckBox" name="allowAntialiasing">
+																				<label>Allow antialiasing</label>
+																				<checked>0</checked>
+																			</object>
+																		</object>
+																		<object class="sizeritem">
+																			<option>0</option>
+																			<flag>wxTOP|wxRIGHT|wxLEFT</flag>
+																			<border>5</border>
+																			<object class="wxCheckBox" name="allowGlobalFog">
+																				<label>Allow global fog</label>
+																				<checked>0</checked>
+																			</object>
+																		</object>
+																		<object class="sizeritem">
+																			<option>0</option>
+																			<flag>wxTOP|wxRIGHT|wxLEFT</flag>
+																			<border>5</border>
+																			<object class="wxCheckBox" name="allowDepthOfField">
+																				<label>Allow depth of field</label>
+																				<checked>0</checked>
+																			</object>
+																		</object>
+																		<object class="sizeritem">
+																			<option>0</option>
+																			<flag>wxTOP|wxRIGHT|wxLEFT</flag>
+																			<border>5</border>
+																			<object class="wxCheckBox" name="allowSSAO">
+																				<label>Allow SSAO</label>
+																				<checked>0</checked>
+																			</object>
+																		</object>
+																		<object class="sizeritem">
+																			<option>0</option>
+																			<flag>wxTOP|wxRIGHT|wxLEFT</flag>
+																			<border>5</border>
+																			<object class="wxCheckBox" name="allowCloudsShadow">
+																				<label>Allow clouds shadow</label>
+																				<checked>0</checked>
+																			</object>
+																		</object>
+																		<object class="sizeritem">
+																			<option>0</option>
+																			<flag>wxTOP|wxRIGHT|wxLEFT</flag>
+																			<border>5</border>
+																			<object class="wxCheckBox" name="allowVignette">
+																				<label>Allow vignette</label>
+																				<checked>0</checked>
+																			</object>
+																		</object>
+																		<object class="sizeritem">
+																			<option>0</option>
+																			<flag>wxALL</flag>
+																			<border>5</border>
+																			<object class="wxCheckBox" name="allowWaterShader">
+																				<label>Allow water shader</label>
+																				<checked>0</checked>
+																			</object>
+																		</object>
+																		<object class="sizeritem">
+																			<option>0</option>
+																			<flag>wxTOP|wxRIGHT|wxLEFT</flag>
+																			<border>5</border>
+																			<object class="wxCheckBox" name="forceCutsceneDofMode">
+																				<label>Force cutscene DOF mode</label>
+																				<checked>0</checked>
+																			</object>
+																		</object>
+																	</object>
+																</object>
+															</object>
+														</object>
+													</object>
+													<object class="notebookpage">
+														<label>Env List</label>
+														<selected>1</selected>
+														<object class="wxPanel" name="areaEnvPagePanel">
+															<style>wxTAB_TRAVERSAL</style>
+															<object class="wxBoxSizer">
+																<orient>wxVERTICAL</orient>
+																<object class="sizeritem">
+																	<option>0</option>
+																	<flag>wxRIGHT</flag>
+																	<border>5</border>
+																	<object class="wxStaticText" name="m_staticText252">
+																		<label>Active environments</label>
+																		<wrap>-1</wrap>
+																	</object>
+																</object>
+																<object class="sizeritem">
+																	<option>1</option>
+																	<flag>wxEXPAND</flag>
+																	<border>5</border>
+																	<object class="wxListBox" name="activeEnvs">
+																		<font>
+																			<size>7</size>
+																			<family>default</family>
+																			<style>normal</style>
+																			<weight>normal</weight>
+																			<underlined>0</underlined>
+																		</font>
+																		<content />
+																	</object>
+																</object>
+															</object>
+														</object>
+													</object>
+													<object class="notebookpage">
+														<label>Definitions</label>
+														<selected>0</selected>
+														<object class="wxPanel" name="definitionsPagePanel">
+															<style>wxTAB_TRAVERSAL</style>
+															<object class="wxBoxSizer">
+																<orient>wxVERTICAL</orient>
+																<object class="sizeritem">
+																	<option>1</option>
+																	<flag>wxEXPAND</flag>
+																	<border>5</border>
+																	<object class="wxTreeCtrl" name="m_definitionsTree">
+																		<style>wxTR_HAS_BUTTONS|wxTR_HIDE_ROOT|wxTR_LINES_AT_ROOT|wxTR_SINGLE</style>
+																	</object>
+																</object>
+															</object>
+														</object>
+													</object>
+												</object>
+											</object>
+										</object>
+									</object>
+									<object class="wxPanel" name="m_panel8">
+										<style>wxTAB_TRAVERSAL</style>
+										<object class="wxBoxSizer">
+											<orient>wxVERTICAL</orient>
+											<object class="sizeritem">
+												<option>0</option>
+												<flag>wxEXPAND</flag>
+												<border>5</border>
+												<object class="wxPanel" name="m_panel3">
+													<style>wxTAB_TRAVERSAL</style>
+													<object class="wxStaticBoxSizer">
+														<orient>wxVERTICAL</orient>
+														<label>Fake daycycle</label>
+														<object class="sizeritem">
+															<option>0</option>
+															<flag>wxEXPAND</flag>
+															<border>5</border>
+															<object class="wxBoxSizer">
+																<orient>wxHORIZONTAL</orient>
+																<object class="sizeritem">
+																	<option>0</option>
+																	<flag>wxEXPAND|wxALIGN_CENTER_VERTICAL</flag>
+																	<border>5</border>
+																	<object class="wxBoxSizer">
+																		<orient>wxVERTICAL</orient>
+																		<object class="sizeritem">
+																			<option>0</option>
+																			<flag>wxALIGN_CENTER_HORIZONTAL|wxEXPAND</flag>
+																			<border>5</border>
+																			<object class="wxBoxSizer">
+																				<orient>wxHORIZONTAL</orient>
+																				<object class="sizeritem">
+																					<option>0</option>
+																					<flag>wxALIGN_CENTER|wxRIGHT|wxLEFT</flag>
+																					<border>5</border>
+																					<object class="wxCheckBox" name="fakeDayCycleEnable">
+																						<style>wxALIGN_RIGHT</style>
+																						<label>Enable</label>
+																						<checked>0</checked>
+																					</object>
+																				</object>
+																				<object class="sizeritem">
+																					<option>0</option>
+																					<flag>wxALIGN_CENTER_VERTICAL|wxRIGHT|wxLEFT</flag>
+																					<border>5</border>
+																					<object class="wxPanel" name="fakeDayCycleTimePanel">
+																						<style>wxTAB_TRAVERSAL</style>
+																						<object class="wxBoxSizer">
+																							<orient>wxVERTICAL</orient>
+																						</object>
+																					</object>
+																				</object>
+																			</object>
+																		</object>
+																		<object class="spacer">
+																			<option>1</option>
+																			<flag>wxEXPAND</flag>
+																			<border>5</border>
+																			<size>0,0</size>
+																		</object>
+																	</object>
+																</object>
+																<object class="sizeritem">
+																	<option>1</option>
+																	<flag>wxEXPAND|wxALIGN_CENTER_VERTICAL</flag>
+																	<border>5</border>
+																	<object class="wxBoxSizer">
+																		<orient>wxVERTICAL</orient>
+																		<object class="sizeritem">
+																			<option>0</option>
+																			<flag>wxEXPAND|wxALIGN_CENTER_HORIZONTAL</flag>
+																			<border>0</border>
+																			<object class="wxSlider" name="fakeDayCycleProgressSlider">
+																				<style>wxSL_HORIZONTAL</style>
+																				<value>43199</value>
+																				<min>0</min>
+																				<max>86399</max>
+																			</object>
+																		</object>
+																		<object class="sizeritem">
+																			<option>0</option>
+																			<flag>wxEXPAND|wxALIGN_CENTER_HORIZONTAL</flag>
+																			<border>0</border>
+																			<object class="wxBoxSizer">
+																				<orient>wxHORIZONTAL</orient>
+																				<object class="spacer">
+																					<option>1</option>
+																					<flag>wxEXPAND</flag>
+																					<border>0</border>
+																					<size>0,0</size>
+																				</object>
+																				<object class="sizeritem">
+																					<option>1</option>
+																					<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																					<border>0</border>
+																					<object class="wxStaticText" name="m_staticText2">
+																						<style>wxALIGN_CENTRE</style>
+																						<label>2:00</label>
+																						<wrap>-1</wrap>
+																					</object>
+																				</object>
+																				<object class="spacer">
+																					<option>1</option>
+																					<flag>wxEXPAND</flag>
+																					<border>0</border>
+																					<size>0,0</size>
+																				</object>
+																				<object class="sizeritem">
+																					<option>1</option>
+																					<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																					<border>0</border>
+																					<object class="wxStaticText" name="m_staticText22">
+																						<style>wxALIGN_CENTRE</style>
+																						<label>7:00</label>
+																						<wrap>-1</wrap>
+																					</object>
+																				</object>
+																				<object class="spacer">
+																					<option>1</option>
+																					<flag>wxEXPAND</flag>
+																					<border>0</border>
+																					<size>0,0</size>
+																				</object>
+																				<object class="sizeritem">
+																					<option>1</option>
+																					<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																					<border>0</border>
+																					<object class="wxStaticText" name="m_staticText21">
+																						<style>wxALIGN_CENTRE</style>
+																						<label>12:00</label>
+																						<wrap>-1</wrap>
+																					</object>
+																				</object>
+																				<object class="spacer">
+																					<option>1</option>
+																					<flag>wxEXPAND</flag>
+																					<border>0</border>
+																					<size>0,0</size>
+																				</object>
+																				<object class="sizeritem">
+																					<option>1</option>
+																					<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																					<border>0</border>
+																					<object class="wxStaticText" name="m_staticText212">
+																						<style>wxALIGN_CENTRE</style>
+																						<label>17:00</label>
+																						<wrap>-1</wrap>
+																					</object>
+																				</object>
+																				<object class="spacer">
+																					<option>1</option>
+																					<flag>wxEXPAND</flag>
+																					<border>0</border>
+																					<size>0,0</size>
+																				</object>
+																				<object class="sizeritem">
+																					<option>1</option>
+																					<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																					<border>0</border>
+																					<object class="wxStaticText" name="m_staticText211">
+																						<style>wxALIGN_CENTRE</style>
+																						<label>22:00</label>
+																						<wrap>-1</wrap>
+																					</object>
+																				</object>
+																				<object class="spacer">
+																					<option>1</option>
+																					<flag>wxEXPAND</flag>
+																					<border>0</border>
+																					<size>0,0</size>
+																				</object>
+																			</object>
+																		</object>
+																	</object>
+																</object>
+															</object>
+														</object>
+													</object>
+												</object>
+											</object>
+											<object class="sizeritem">
+												<option>0</option>
+												<flag>wxEXPAND|wxALIGN_CENTER_HORIZONTAL</flag>
+												<border>5</border>
+												<object class="wxPanel" name="m_copyPasteTool">
+													<style>wxTAB_TRAVERSAL</style>
+													<object class="wxStaticBoxSizer">
+														<orient>wxVERTICAL</orient>
+														<label>Curve advanced options</label>
+														<object class="sizeritem">
+															<option>1</option>
+															<flag>wxEXPAND</flag>
+															<border>5</border>
+															<object class="wxBoxSizer">
+																<orient>wxHORIZONTAL</orient>
+																<object class="spacer">
+																	<option>1</option>
+																	<flag>wxEXPAND</flag>
+																	<border>5</border>
+																	<size>0,0</size>
+																</object>
+																<object class="sizeritem">
+																	<option>0</option>
+																	<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																	<border>5</border>
+																	<object class="wxStaticText" name="m_staticText141">
+																		<label>Tolerance:</label>
+																		<wrap>-1</wrap>
+																	</object>
+																</object>
+																<object class="sizeritem">
+																	<option>0</option>
+																	<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																	<border>5</border>
+																	<object class="wxSpinCtrl" name="m_newKeyToleranceTime">
+																		<style>wxSP_ARROW_KEYS</style>
+																		<size>45,-1</size>
+																		<tooltip>Tolerance time distance for new keys (in minutes)</tooltip>
+																		<value>20</value>
+																		<min>0</min>
+																		<max>20</max>
+																	</object>
+																</object>
+																<object class="sizeritem">
+																	<option>0</option>
+																	<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																	<border>5</border>
+																	<object class="wxButton" name="m_newKey">
+																		<tooltip>Create new control points in a place where it is set fake daycycle slider</tooltip>
+																		<label>New keys</label>
+																		<default>0</default>
+																	</object>
+																</object>
+																<object class="sizeritem">
+																	<option>0</option>
+																	<flag>wxEXPAND | wxALL</flag>
+																	<border>5</border>
+																	<object class="wxStaticLine" name="m_staticline1">
+																		<style>wxLI_VERTICAL</style>
+																	</object>
+																</object>
+																<object class="sizeritem">
+																	<option>0</option>
+																	<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																	<border>5</border>
+																	<object class="wxButton" name="m_copySelection">
+																		<tooltip>Copies points from the selected area</tooltip>
+																		<label>Copy</label>
+																		<default>0</default>
+																	</object>
+																</object>
+																<object class="sizeritem">
+																	<option>0</option>
+																	<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																	<border>5</border>
+																	<object class="wxButton" name="m_pasteSelection">
+																		<tooltip>Pastes the points from clipboard, first point will be pasted in a place where it is set fake daycycle slider</tooltip>
+																		<label>Paste</label>
+																		<default>0</default>
+																	</object>
+																</object>
+																<object class="sizeritem">
+																	<option>0</option>
+																	<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																	<border>5</border>
+																	<object class="wxButton" name="m_removePoints">
+																		<tooltip>Removes points from the selected area</tooltip>
+																		<label>Remove</label>
+																		<default>0</default>
+																	</object>
+																</object>
+																<object class="sizeritem">
+																	<option>0</option>
+																	<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																	<border>5</border>
+																	<object class="wxButton" name="m_clearSelection">
+																		<tooltip>Clears selected area</tooltip>
+																		<label>Clear selection</label>
+																		<default>0</default>
+																	</object>
+																</object>
+																<object class="spacer">
+																	<option>1</option>
+																	<flag>wxEXPAND</flag>
+																	<border>5</border>
+																	<size>0,0</size>
+																</object>
+																<object class="sizeritem">
+																	<option>0</option>
+																	<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																	<border>5</border>
+																	<object class="wxStaticText" name="m_staticText15">
+																		<label>AREA:</label>
+																		<wrap>-1</wrap>
+																	</object>
+																</object>
+																<object class="sizeritem">
+																	<option>0</option>
+																	<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+																	<border>5</border>
+																	<object class="wxChoice" name="m_selectedTab">
+																		<style>wxCB_SORT</style>
+																		<tooltip>Area of ​​activity advanced options</tooltip>
+																		<selection>0</selection>
+																		<content>
+																			<item>All</item>
+																		</content>
+																	</object>
+																</object>
+																<object class="spacer">
+																	<option>1</option>
+																	<flag>wxEXPAND</flag>
+																	<border>5</border>
+																	<size>0,0</size>
+																</object>
+															</object>
+														</object>
+														<object class="sizeritem">
+															<option>1</option>
+															<flag>wxEXPAND</flag>
+															<border>5</border>
+															<object class="wxBoxSizer">
+																<orient>wxHORIZONTAL</orient>
+																<object class="sizeritem">
+																	<option>0</option>
+																	<flag>wxALIGN_CENTER_VERTICAL</flag>
+																	<border>5</border>
+																	<object class="wxStaticText" name="m_staticText13">
+																		<label>Min: </label>
+																		<wrap>-1</wrap>
+																	</object>
+																</object>
+																<object class="sizeritem">
+																	<option>1</option>
+																	<flag>wxALIGN_CENTER_VERTICAL</flag>
+																	<border>5</border>
+																	<object class="wxBoxSizer">
+																		<orient>wxHORIZONTAL</orient>
+																		<object class="sizeritem">
+																			<option>1</option>
+																			<flag>wxEXPAND</flag>
+																			<border>0</border>
+																			<object class="wxSlider" name="m_leftSelect">
+																				<style>wxSL_HORIZONTAL</style>
+																				<value>0</value>
+																				<min>0</min>
+																				<max>86399</max>
+																			</object>
+																		</object>
+																		<object class="sizeritem">
+																			<option>0</option>
+																			<flag>wxALIGN_CENTER_HORIZONTAL|wxRIGHT|wxLEFT</flag>
+																			<border>0</border>
+																			<object class="wxPanel" name="m_leftSelectValuePanel">
+																				<style>wxTAB_TRAVERSAL</style>
+																				<object class="wxBoxSizer">
+																					<orient>wxVERTICAL</orient>
+																				</object>
+																			</object>
+																		</object>
+																		<object class="sizeritem">
+																			<option>0</option>
+																			<flag>wxEXPAND | wxALL</flag>
+																			<border>5</border>
+																			<object class="wxStaticLine" name="m_staticline2">
+																				<style>wxLI_VERTICAL</style>
+																			</object>
+																		</object>
+																	</object>
+																</object>
+																<object class="sizeritem">
+																	<option>0</option>
+																	<flag>wxALIGN_CENTER_VERTICAL</flag>
+																	<border>5</border>
+																	<object class="wxStaticText" name="m_staticText14">
+																		<label>Max:</label>
+																		<wrap>-1</wrap>
+																	</object>
+																</object>
+																<object class="sizeritem">
+																	<option>1</option>
+																	<flag>wxALIGN_CENTER_VERTICAL</flag>
+																	<border>5</border>
+																	<object class="wxBoxSizer">
+																		<orient>wxHORIZONTAL</orient>
+																		<object class="sizeritem">
+																			<option>1</option>
+																			<flag>wxALIGN_CENTER_HORIZONTAL|wxEXPAND</flag>
+																			<border>0</border>
+																			<object class="wxSlider" name="m_rightSelect">
+																				<style>wxSL_HORIZONTAL</style>
+																				<value>0</value>
+																				<min>0</min>
+																				<max>86399</max>
+																			</object>
+																		</object>
+																		<object class="sizeritem">
+																			<option>0</option>
+																			<flag>wxALIGN_CENTER_HORIZONTAL|wxRIGHT|wxLEFT</flag>
+																			<border>0</border>
+																			<object class="wxPanel" name="m_rightSelectValuePanel">
+																				<style>wxTAB_TRAVERSAL</style>
+																				<object class="wxBoxSizer">
+																					<orient>wxVERTICAL</orient>
+																				</object>
+																			</object>
+																		</object>
+																	</object>
+																</object>
+															</object>
+														</object>
+													</object>
+												</object>
+											</object>
+											<object class="sizeritem">
+												<option>1</option>
+												<flag>wxEXPAND</flag>
+												<border>5</border>
+												<object class="wxStaticBoxSizer">
+													<orient>wxVERTICAL</orient>
+													<label>Properties</label>
+													<object class="sizeritem">
+														<option>1</option>
+														<flag>wxEXPAND | wxALL</flag>
+														<border>0</border>
+														<object class="wxScrolledWindow" name="envDataPanel">
+															<style>wxHSCROLL|wxVSCROLL</style>
+															<scrollrate>5,5</scrollrate>
+														</object>
+													</object>
+												</object>
+											</object>
+										</object>
+									</object>
+								</object>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+</resource>

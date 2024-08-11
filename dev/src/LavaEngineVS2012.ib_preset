@@ -1,0 +1,1808 @@
+<Presets>
+  <Preset Name="WCC" FormatVersion="1">
+    <Configuration Name="Release|Win32">
+      <Project Name="wcc" RelativePath="win32\wcc\wcc.vcxproj" MSBuildName="tools\wcc"/>
+    </Configuration>
+    <Configuration Name="Release|x64">
+      <Project Name="wcc" RelativePath="win32\wcc\wcc.vcxproj" MSBuildName="tools\wcc"/>
+    </Configuration>
+  </Preset>
+  <Preset Name="BUNDLER" FormatVersion="1">
+    <Configuration Name="Debug|x64"/>
+    <Configuration Name="Release|Win32"/>
+    <Configuration Name="Release|x64">
+      <Project Name="bundlebuilder" RelativePath="win32\bundlebuilder\bundlebuilder.vcxproj" MSBuildName="tools\bundlebuilder"/>
+      <Project Name="wcc" RelativePath="win32\wcc\wcc.vcxproj" MSBuildName="tools\wcc"/>
+    </Configuration>
+  </Preset>
+  <Preset Name="CoreTest" FormatVersion="1">
+    <Configuration Name="Debug|Durango">
+      <Project Name="core" RelativePath="common\core\core.vcxproj" MSBuildName="common\core"/>
+    </Configuration>
+    <Configuration Name="Debug|ORBIS"/>
+    <Configuration Name="Debug|Win32">
+      <Project Name="core" RelativePath="common\core\core.vcxproj" MSBuildName="common\core"/>
+    </Configuration>
+    <Configuration Name="Debug|x64">
+      <Project Name="core" RelativePath="common\core\core.vcxproj" MSBuildName="common\core"/>
+    </Configuration>
+    <Configuration Name="Final|Durango">
+      <Project Name="core" RelativePath="common\core\core.vcxproj" MSBuildName="common\core"/>
+    </Configuration>
+    <Configuration Name="Final|ORBIS"/>
+    <Configuration Name="Final|Win32">
+      <Project Name="core" RelativePath="common\core\core.vcxproj" MSBuildName="common\core"/>
+    </Configuration>
+    <Configuration Name="Final|x64">
+      <Project Name="core" RelativePath="common\core\core.vcxproj" MSBuildName="common\core"/>
+    </Configuration>
+    <Configuration Name="No opts|Durango">
+      <Project Name="core" RelativePath="common\core\core.vcxproj" MSBuildName="common\core"/>
+    </Configuration>
+    <Configuration Name="No opts|ORBIS"/>
+    <Configuration Name="No opts|Win32">
+      <Project Name="core" RelativePath="common\core\core.vcxproj" MSBuildName="common\core"/>
+    </Configuration>
+    <Configuration Name="No opts|x64">
+      <Project Name="core" RelativePath="common\core\core.vcxproj" MSBuildName="common\core"/>
+    </Configuration>
+    <Configuration Name="Release|Durango">
+      <Project Name="core" RelativePath="common\core\core.vcxproj" MSBuildName="common\core"/>
+    </Configuration>
+    <Configuration Name="Release|ORBIS"/>
+    <Configuration Name="Release|Win32">
+      <Project Name="core" RelativePath="common\core\core.vcxproj" MSBuildName="common\core"/>
+    </Configuration>
+    <Configuration Name="Release|x64">
+      <Project Name="core" RelativePath="common\core\core.vcxproj" MSBuildName="common\core"/>
+    </Configuration>
+  </Preset>
+  <Preset Name="FunctionalTests" FormatVersion="1">
+    <Configuration Name="Release|x64">
+      <Project Name="editor" RelativePath="win32\editor\editor.vcxproj" MSBuildName="tools\editor"/>
+      <Project Name="r4Launcher" RelativePath="games\r4Launcher\r4Launcher.vcxproj" MSBuildName="games\r4\r4Launcher"/>
+      <Project Name="wcc" RelativePath="win32\wcc\wcc.vcxproj" MSBuildName="tools\wcc"/>
+    </Configuration>
+  </Preset>
+  <Preset Name="R4.Release" FormatVersion="1">
+    <Configuration Name="Release|Durango">
+      <Project Name="r4Launcher" RelativePath="games\r4Launcher\r4Launcher.vcxproj" MSBuildName="games\r4\r4Launcher"/>
+    </Configuration>
+    <Configuration Name="Release|ORBIS"/>
+    <Configuration Name="Release|x64">
+      <Project Name="editor" RelativePath="win32\editor\editor.vcxproj" MSBuildName="tools\editor"/>
+      <Project Name="r4Launcher" RelativePath="games\r4Launcher\r4Launcher.vcxproj" MSBuildName="games\r4\r4Launcher"/>
+      <Project Name="unitTestsCore" RelativePath="tests\unitTestsCore\unitTestsCore.vcxproj" MSBuildName="tests\unitTestsCore"/>
+      <Project Name="unitTestsEngine" RelativePath="tests\unitTestsEngine\unitTestsEngine.vcxproj" MSBuildName="tests\unitTestsEngine"/>
+      <Project Name="unitTestsGame" RelativePath="tests\unitTestsGame\unitTestsGame.vcxproj" MSBuildName="tests\unitTestsGame"/>
+      <Project Name="unitTestsKernel" RelativePath="tests\unitTestsKernel\unitTestsKernel.vcxproj" MSBuildName="tests\unitTestsKernel"/>
+      <Project Name="wcc" RelativePath="win32\wcc\wcc.vcxproj" MSBuildName="tools\wcc"/>
+    </Configuration>
+  </Preset>
+  <Preset Name="PS4_Release" FormatVersion="1">
+    <Configuration Name="Debug|Durango"/>
+    <Configuration Name="Debug|ORBIS"/>
+    <Configuration Name="Debug|Win32"/>
+    <Configuration Name="Debug|x64"/>
+    <Configuration Name="Final|Durango"/>
+    <Configuration Name="Final|ORBIS"/>
+    <Configuration Name="Final|Win32"/>
+    <Configuration Name="Final|x64"/>
+    <Configuration Name="No opts|Durango"/>
+    <Configuration Name="No opts|ORBIS"/>
+    <Configuration Name="No opts|Win32"/>
+    <Configuration Name="No opts|x64"/>
+    <Configuration Name="Release|Durango"/>
+    <Configuration Name="Release|ORBIS">
+      <Project Name="RedNetwork" RelativePath="common\redNetwork\RedNetwork.vcxproj" MSBuildName="common\kernelFramework\RedNetwork"/>
+      <Project Name="bundlebuilder" RelativePath="win32\bundlebuilder\bundlebuilder.vcxproj" MSBuildName="tools\bundlebuilder"/>
+      <Project Name="core" RelativePath="common\core\core.vcxproj" MSBuildName="common\core"/>
+      <Project Name="dlcTool" RelativePath="win32\dlcTool\dlcTool.vcxproj" MSBuildName="tools\dlcTool"/>
+      <Project Name="editor" RelativePath="win32\editor\editor.vcxproj" MSBuildName="tools\editor"/>
+      <Project Name="engine" RelativePath="common\engine\engine.vcxproj" MSBuildName="common\engine"/>
+      <Project Name="game" RelativePath="common\game\game.vcxproj" MSBuildName="common\game"/>
+      <Project Name="gpuApiDX10" RelativePath="common\gpuApiDX10\gpuApiDX10.vcxproj" MSBuildName="common\renderFramework\gpuApiDX10"/>
+      <Project Name="gpuApiGnm" RelativePath="common\gpuApiGnm\gpuApiGnm.vcxproj" MSBuildName="common\renderFramework\gpuApiGnm"/>
+      <Project Name="gpuApiUtils" RelativePath="common\gpuApiUtils\gpuApiUtils.vcxproj" MSBuildName="common\renderFramework\gpuApiUtils"/>
+      <Project Name="importer" RelativePath="win32\importer\importer.vcxproj" MSBuildName="tools\importer"/>
+      <Project Name="matcompiler" RelativePath="common\matcompiler\matcompiler.vcxproj" MSBuildName="tools\matcompiler"/>
+      <Project Name="nullrender" RelativePath="common\nullrender\nullrender.vcxproj" MSBuildName="common\renderFramework\nullrender"/>
+      <Project Name="platform" RelativePath="win32\platform\platform.vcxproj" MSBuildName="platform\platform"/>
+      <Project Name="platformCommon" RelativePath="common\platformCommon\platformCommon.vcxproj" MSBuildName="platform\platformCommon"/>
+      <Project Name="r4" RelativePath="games\r4\r4.vcxproj" MSBuildName="games\r4\r4"/>
+      <Project Name="r4Launcher" RelativePath="games\r4Launcher\r4Launcher.vcxproj" MSBuildName="games\r4\r4Launcher"/>
+      <Project Name="r6" RelativePath="games\r6\r6.vcxproj" MSBuildName="games\r6\r6"/>
+      <Project Name="r6game" RelativePath="win32\r6game\r6game.vcxproj" MSBuildName="games\r6\windows\r6game"/>
+      <Project Name="redContainers" RelativePath="common\redContainers\redContainers.vcxproj" MSBuildName="common\kernelFramework\redContainers"/>
+      <Project Name="redIO" RelativePath="common\redIO\redIO.vcxproj" MSBuildName="common\kernelFramework\redIO"/>
+      <Project Name="redMath" RelativePath="common\redMath\redMath.vcxproj" MSBuildName="common\kernelFramework\redMath"/>
+      <Project Name="redMemoryFramework" RelativePath="common\redMemoryFramework\redMemoryFramework.vcxproj" MSBuildName="common\kernelFramework\redMemoryFramework"/>
+      <Project Name="redSystem" RelativePath="common\redSystem\redSystem.vcxproj" MSBuildName="common\kernelFramework\redSystem"/>
+      <Project Name="redThreads" RelativePath="common\redThreads\redThreads.vcxproj" MSBuildName="common\kernelFramework\redThreads"/>
+      <Project Name="render" RelativePath="common\renderer\render.vcxproj" MSBuildName="common\renderFramework\render"/>
+      <Project Name="resf" RelativePath="resf\resf.vcxproj" MSBuildName="tools\resf"/>
+      <Project Name="scriptStudio" RelativePath="win32\scriptStudio\scriptStudio.vcxproj" MSBuildName="tools\scriptStudio"/>
+      <Project Name="scripts" RelativePath="common\scripts\scripts.vcxproj" MSBuildName="common\scripts"/>
+      <Project Name="unitTestsCore" RelativePath="tests\unitTestsCore\unitTestsCore.vcxproj" MSBuildName="tests\unitTestsCore"/>
+      <Project Name="unitTestsEngine" RelativePath="tests\unitTestsEngine\unitTestsEngine.vcxproj" MSBuildName="tests\unitTestsEngine"/>
+      <Project Name="unitTestsFramework" RelativePath="tests\unitTestsFramework\unitTestsFramework.vcxproj" MSBuildName="tests\unitTestsFramework"/>
+      <Project Name="unitTestsGame" RelativePath="tests\unitTestsGame\unitTestsGame.vcxproj" MSBuildName="tests\unitTestsGame"/>
+      <Project Name="unitTestsGpuApi" RelativePath="tests\unitTestsGpuApi\unitTestsGpuApi.vcxproj" MSBuildName="tests\unitTestsGpuApi"/>
+      <Project Name="unitTestsKernel" RelativePath="tests\unitTestsKernel\unitTestsKernel.vcxproj" MSBuildName="tests\unitTestsKernel"/>
+      <Project Name="versionControl" RelativePath="win32\versionControl\versionControl.vcxproj" MSBuildName="tools\versionControl"/>
+      <Project Name="wcc" RelativePath="win32\wcc\wcc.vcxproj" MSBuildName="tools\wcc"/>
+    </Configuration>
+    <Configuration Name="Release|Win32"/>
+    <Configuration Name="Release|x64"/>
+  </Preset>
+  <Preset Name="XboxOne_Release" FormatVersion="1">
+    <Configuration Name="Debug|Durango"/>
+    <Configuration Name="Debug|ORBIS"/>
+    <Configuration Name="Debug|Win32"/>
+    <Configuration Name="Debug|x64"/>
+    <Configuration Name="Final|Durango"/>
+    <Configuration Name="Final|ORBIS"/>
+    <Configuration Name="Final|Win32"/>
+    <Configuration Name="Final|x64"/>
+    <Configuration Name="No opts|Durango"/>
+    <Configuration Name="No opts|ORBIS"/>
+    <Configuration Name="No opts|Win32"/>
+    <Configuration Name="No opts|x64"/>
+    <Configuration Name="Release|Durango">
+      <Project Name="RedNetwork" RelativePath="common\redNetwork\RedNetwork.vcxproj" MSBuildName="common\kernelFramework\RedNetwork"/>
+      <Project Name="bundlebuilder" RelativePath="win32\bundlebuilder\bundlebuilder.vcxproj" MSBuildName="tools\bundlebuilder"/>
+      <Project Name="core" RelativePath="common\core\core.vcxproj" MSBuildName="common\core"/>
+      <Project Name="dlcTool" RelativePath="win32\dlcTool\dlcTool.vcxproj" MSBuildName="tools\dlcTool"/>
+      <Project Name="editor" RelativePath="win32\editor\editor.vcxproj" MSBuildName="tools\editor"/>
+      <Project Name="engine" RelativePath="common\engine\engine.vcxproj" MSBuildName="common\engine"/>
+      <Project Name="game" RelativePath="common\game\game.vcxproj" MSBuildName="common\game"/>
+      <Project Name="gpuApiDX10" RelativePath="common\gpuApiDX10\gpuApiDX10.vcxproj" MSBuildName="common\renderFramework\gpuApiDX10"/>
+      <Project Name="gpuApiGnm" RelativePath="common\gpuApiGnm\gpuApiGnm.vcxproj" MSBuildName="common\renderFramework\gpuApiGnm"/>
+      <Project Name="gpuApiUtils" RelativePath="common\gpuApiUtils\gpuApiUtils.vcxproj" MSBuildName="common\renderFramework\gpuApiUtils"/>
+      <Project Name="importer" RelativePath="win32\importer\importer.vcxproj" MSBuildName="tools\importer"/>
+      <Project Name="matcompiler" RelativePath="common\matcompiler\matcompiler.vcxproj" MSBuildName="tools\matcompiler"/>
+      <Project Name="nullrender" RelativePath="common\nullrender\nullrender.vcxproj" MSBuildName="common\renderFramework\nullrender"/>
+      <Project Name="platform" RelativePath="win32\platform\platform.vcxproj" MSBuildName="platform\platform"/>
+      <Project Name="platformCommon" RelativePath="common\platformCommon\platformCommon.vcxproj" MSBuildName="platform\platformCommon"/>
+      <Project Name="r4" RelativePath="games\r4\r4.vcxproj" MSBuildName="games\r4\r4"/>
+      <Project Name="r4Launcher" RelativePath="games\r4Launcher\r4Launcher.vcxproj" MSBuildName="games\r4\r4Launcher"/>
+      <Project Name="r6" RelativePath="games\r6\r6.vcxproj" MSBuildName="games\r6\r6"/>
+      <Project Name="r6game" RelativePath="win32\r6game\r6game.vcxproj" MSBuildName="games\r6\windows\r6game"/>
+      <Project Name="redContainers" RelativePath="common\redContainers\redContainers.vcxproj" MSBuildName="common\kernelFramework\redContainers"/>
+      <Project Name="redIO" RelativePath="common\redIO\redIO.vcxproj" MSBuildName="common\kernelFramework\redIO"/>
+      <Project Name="redMath" RelativePath="common\redMath\redMath.vcxproj" MSBuildName="common\kernelFramework\redMath"/>
+      <Project Name="redMemoryFramework" RelativePath="common\redMemoryFramework\redMemoryFramework.vcxproj" MSBuildName="common\kernelFramework\redMemoryFramework"/>
+      <Project Name="redSystem" RelativePath="common\redSystem\redSystem.vcxproj" MSBuildName="common\kernelFramework\redSystem"/>
+      <Project Name="redThreads" RelativePath="common\redThreads\redThreads.vcxproj" MSBuildName="common\kernelFramework\redThreads"/>
+      <Project Name="render" RelativePath="common\renderer\render.vcxproj" MSBuildName="common\renderFramework\render"/>
+      <Project Name="resf" RelativePath="resf\resf.vcxproj" MSBuildName="tools\resf"/>
+      <Project Name="scriptStudio" RelativePath="win32\scriptStudio\scriptStudio.vcxproj" MSBuildName="tools\scriptStudio"/>
+      <Project Name="scripts" RelativePath="common\scripts\scripts.vcxproj" MSBuildName="common\scripts"/>
+      <Project Name="unitTestsCore" RelativePath="tests\unitTestsCore\unitTestsCore.vcxproj" MSBuildName="tests\unitTestsCore"/>
+      <Project Name="unitTestsEngine" RelativePath="tests\unitTestsEngine\unitTestsEngine.vcxproj" MSBuildName="tests\unitTestsEngine"/>
+      <Project Name="unitTestsFramework" RelativePath="tests\unitTestsFramework\unitTestsFramework.vcxproj" MSBuildName="tests\unitTestsFramework"/>
+      <Project Name="unitTestsGame" RelativePath="tests\unitTestsGame\unitTestsGame.vcxproj" MSBuildName="tests\unitTestsGame"/>
+      <Project Name="unitTestsGpuApi" RelativePath="tests\unitTestsGpuApi\unitTestsGpuApi.vcxproj" MSBuildName="tests\unitTestsGpuApi"/>
+      <Project Name="unitTestsKernel" RelativePath="tests\unitTestsKernel\unitTestsKernel.vcxproj" MSBuildName="tests\unitTestsKernel"/>
+      <Project Name="versionControl" RelativePath="win32\versionControl\versionControl.vcxproj" MSBuildName="tools\versionControl"/>
+      <Project Name="wcc" RelativePath="win32\wcc\wcc.vcxproj" MSBuildName="tools\wcc"/>
+    </Configuration>
+    <Configuration Name="Release|ORBIS"/>
+    <Configuration Name="Release|Win32"/>
+    <Configuration Name="Release|x64"/>
+  </Preset>
+  <Preset Name="Submit_Final" FormatVersion="1">
+    <Configuration Name="Final|x64">
+      <Project Name="r4Launcher" RelativePath="games\r4Launcher\r4Launcher.vcxproj" MSBuildName="games\r4\r4Launcher"/>
+    </Configuration>
+    <Configuration Name="Release|x64"/>
+  </Preset>
+  <Preset Name="XboxOne_Final" FormatVersion="1">
+    <Configuration Name="Debug|Durango"/>
+    <Configuration Name="Debug|ORBIS"/>
+    <Configuration Name="Debug|Win32"/>
+    <Configuration Name="Debug|x64"/>
+    <Configuration Name="Final|Durango">
+      <Project Name="RedNetwork" RelativePath="common\redNetwork\RedNetwork.vcxproj" MSBuildName="common\kernelFramework\RedNetwork"/>
+      <Project Name="bundlebuilder" RelativePath="win32\bundlebuilder\bundlebuilder.vcxproj" MSBuildName="tools\bundlebuilder"/>
+      <Project Name="core" RelativePath="common\core\core.vcxproj" MSBuildName="common\core"/>
+      <Project Name="dlcTool" RelativePath="win32\dlcTool\dlcTool.vcxproj" MSBuildName="tools\dlcTool"/>
+      <Project Name="editor" RelativePath="win32\editor\editor.vcxproj" MSBuildName="tools\editor"/>
+      <Project Name="engine" RelativePath="common\engine\engine.vcxproj" MSBuildName="common\engine"/>
+      <Project Name="game" RelativePath="common\game\game.vcxproj" MSBuildName="common\game"/>
+      <Project Name="gpuApiDX10" RelativePath="common\gpuApiDX10\gpuApiDX10.vcxproj" MSBuildName="common\renderFramework\gpuApiDX10"/>
+      <Project Name="gpuApiGnm" RelativePath="common\gpuApiGnm\gpuApiGnm.vcxproj" MSBuildName="common\renderFramework\gpuApiGnm"/>
+      <Project Name="gpuApiUtils" RelativePath="common\gpuApiUtils\gpuApiUtils.vcxproj" MSBuildName="common\renderFramework\gpuApiUtils"/>
+      <Project Name="importer" RelativePath="win32\importer\importer.vcxproj" MSBuildName="tools\importer"/>
+      <Project Name="matcompiler" RelativePath="common\matcompiler\matcompiler.vcxproj" MSBuildName="tools\matcompiler"/>
+      <Project Name="nullrender" RelativePath="common\nullrender\nullrender.vcxproj" MSBuildName="common\renderFramework\nullrender"/>
+      <Project Name="platform" RelativePath="win32\platform\platform.vcxproj" MSBuildName="platform\platform"/>
+      <Project Name="platformCommon" RelativePath="common\platformCommon\platformCommon.vcxproj" MSBuildName="platform\platformCommon"/>
+      <Project Name="platformDurango" RelativePath="durango\platformDurango\platformDurango.vcxproj" MSBuildName="platform\platformDurango"/>
+      <Project Name="platformOrbis" RelativePath="orbis\platformOrbis\platformOrbis.vcxproj" MSBuildName="platform\platformOrbis"/>
+      <Project Name="r4" RelativePath="games\r4\r4.vcxproj" MSBuildName="games\r4\r4"/>
+      <Project Name="r4Launcher" RelativePath="games\r4Launcher\r4Launcher.vcxproj" MSBuildName="games\r4\r4Launcher"/>
+      <Project Name="r6" RelativePath="games\r6\r6.vcxproj" MSBuildName="games\r6\r6"/>
+      <Project Name="r6game" RelativePath="win32\r6game\r6game.vcxproj" MSBuildName="games\r6\windows\r6game"/>
+      <Project Name="redContainers" RelativePath="common\redContainers\redContainers.vcxproj" MSBuildName="common\kernelFramework\redContainers"/>
+      <Project Name="redIO" RelativePath="common\redIO\redIO.vcxproj" MSBuildName="common\kernelFramework\redIO"/>
+      <Project Name="redMath" RelativePath="common\redMath\redMath.vcxproj" MSBuildName="common\kernelFramework\redMath"/>
+      <Project Name="redMemoryFramework" RelativePath="common\redMemoryFramework\redMemoryFramework.vcxproj" MSBuildName="common\kernelFramework\redMemoryFramework"/>
+      <Project Name="redSystem" RelativePath="common\redSystem\redSystem.vcxproj" MSBuildName="common\kernelFramework\redSystem"/>
+      <Project Name="redThreads" RelativePath="common\redThreads\redThreads.vcxproj" MSBuildName="common\kernelFramework\redThreads"/>
+      <Project Name="render" RelativePath="common\renderer\render.vcxproj" MSBuildName="common\renderFramework\render"/>
+      <Project Name="resf" RelativePath="resf\resf.vcxproj" MSBuildName="tools\resf"/>
+      <Project Name="scriptStudio" RelativePath="win32\scriptStudio\scriptStudio.vcxproj" MSBuildName="tools\scriptStudio"/>
+      <Project Name="scripts" RelativePath="common\scripts\scripts.vcxproj" MSBuildName="common\scripts"/>
+      <Project Name="unitTestsCore" RelativePath="tests\unitTestsCore\unitTestsCore.vcxproj" MSBuildName="tests\unitTestsCore"/>
+      <Project Name="unitTestsEngine" RelativePath="tests\unitTestsEngine\unitTestsEngine.vcxproj" MSBuildName="tests\unitTestsEngine"/>
+      <Project Name="unitTestsFramework" RelativePath="tests\unitTestsFramework\unitTestsFramework.vcxproj" MSBuildName="tests\unitTestsFramework"/>
+      <Project Name="unitTestsGame" RelativePath="tests\unitTestsGame\unitTestsGame.vcxproj" MSBuildName="tests\unitTestsGame"/>
+      <Project Name="unitTestsGpuApi" RelativePath="tests\unitTestsGpuApi\unitTestsGpuApi.vcxproj" MSBuildName="tests\unitTestsGpuApi"/>
+      <Project Name="unitTestsKernel" RelativePath="tests\unitTestsKernel\unitTestsKernel.vcxproj" MSBuildName="tests\unitTestsKernel"/>
+      <Project Name="versionControl" RelativePath="win32\versionControl\versionControl.vcxproj" MSBuildName="tools\versionControl"/>
+      <Project Name="wcc" RelativePath="win32\wcc\wcc.vcxproj" MSBuildName="tools\wcc"/>
+    </Configuration>
+    <Configuration Name="Final|ORBIS"/>
+    <Configuration Name="Final|Win32"/>
+    <Configuration Name="Final|x64"/>
+    <Configuration Name="No opts|Durango"/>
+    <Configuration Name="No opts|ORBIS"/>
+    <Configuration Name="No opts|Win32"/>
+    <Configuration Name="No opts|x64"/>
+    <Configuration Name="Release|Durango"/>
+    <Configuration Name="Release|ORBIS"/>
+    <Configuration Name="Release|Win32"/>
+    <Configuration Name="Release|x64"/>
+  </Preset>
+  <Preset Name="Lava_Submit" FormatVersion="1">
+    <Configuration Name="Final|x64"/>
+    <Configuration Name="Profiling|x64"/>
+    <Configuration Name="ReleaseGame|x64">
+      <Project Name="r4Launcher" RelativePath="games\r4Launcher\r4Launcher.vcxproj" MSBuildName="games\r4\r4Launcher"/>
+    </Configuration>
+    <Configuration Name="Release|x64">
+      <Project Name="bundlebuilder" RelativePath="win32\bundlebuilder\bundlebuilder.vcxproj" MSBuildName="tools\bundlebuilder"/>
+      <Project Name="editor" RelativePath="win32\editor\editor.vcxproj" MSBuildName="tools\editor"/>
+      <Project Name="r6game" RelativePath="win32\r6game\r6game.vcxproj" MSBuildName="games\r6\windows\r6game"/>
+      <Project Name="scriptStudio" RelativePath="win32\scriptStudio\scriptStudio.vcxproj" MSBuildName="tools\scriptStudio"/>
+      <Project Name="unitTestsCore" RelativePath="tests\unitTestsCore\unitTestsCore.vcxproj" MSBuildName="tests\unitTestsCore"/>
+      <Project Name="unitTestsEngine" RelativePath="tests\unitTestsEngine\unitTestsEngine.vcxproj" MSBuildName="tests\unitTestsEngine"/>
+      <Project Name="unitTestsGame" RelativePath="tests\unitTestsGame\unitTestsGame.vcxproj" MSBuildName="tests\unitTestsGame"/>
+      <Project Name="unitTestsKernel" RelativePath="tests\unitTestsKernel\unitTestsKernel.vcxproj" MSBuildName="tests\unitTestsKernel"/>
+      <Project Name="versionControl" RelativePath="win32\versionControl\versionControl.vcxproj" MSBuildName="tools\versionControl"/>
+      <Project Name="wcc" RelativePath="win32\wcc\wcc.vcxproj" MSBuildName="tools\wcc"/>
+    </Configuration>
+  </Preset>
+  <Preset Name="All_MS_Projects" FormatVersion="1">
+    <Configuration Name="Debug|Durango">
+      <Project Name="RedNetwork" RelativePath="common\redNetwork\RedNetwork.vcxproj" MSBuildName="common\kernelFramework\RedNetwork"/>
+      <Project Name="bundlebuilder" RelativePath="win32\bundlebuilder\bundlebuilder.vcxproj" MSBuildName="tools\bundlebuilder"/>
+      <Project Name="core" RelativePath="common\core\core.vcxproj" MSBuildName="common\core"/>
+      <Project Name="dlcTool" RelativePath="win32\dlcTool\dlcTool.vcxproj" MSBuildName="tools\dlcTool"/>
+      <Project Name="editor" RelativePath="win32\editor\editor.vcxproj" MSBuildName="tools\editor"/>
+      <Project Name="engine" RelativePath="common\engine\engine.vcxproj" MSBuildName="common\engine"/>
+      <Project Name="game" RelativePath="common\game\game.vcxproj" MSBuildName="common\game"/>
+      <Project Name="gpuApiDX10" RelativePath="common\gpuApiDX10\gpuApiDX10.vcxproj" MSBuildName="common\renderFramework\gpuApiDX10"/>
+      <Project Name="gpuApiGnm" RelativePath="common\gpuApiGnm\gpuApiGnm.vcxproj" MSBuildName="common\renderFramework\gpuApiGnm"/>
+      <Project Name="gpuApiUtils" RelativePath="common\gpuApiUtils\gpuApiUtils.vcxproj" MSBuildName="common\renderFramework\gpuApiUtils"/>
+      <Project Name="importer" RelativePath="win32\importer\importer.vcxproj" MSBuildName="tools\importer"/>
+      <Project Name="matcompiler" RelativePath="common\matcompiler\matcompiler.vcxproj" MSBuildName="tools\matcompiler"/>
+      <Project Name="nullrender" RelativePath="common\nullrender\nullrender.vcxproj" MSBuildName="common\renderFramework\nullrender"/>
+      <Project Name="platform" RelativePath="win32\platform\platform.vcxproj" MSBuildName="platform\platform"/>
+      <Project Name="platformCommon" RelativePath="common\platformCommon\platformCommon.vcxproj" MSBuildName="platform\platformCommon"/>
+      <Project Name="platformDurango" RelativePath="durango\platformDurango\platformDurango.vcxproj" MSBuildName="platform\platformDurango"/>
+      <Project Name="platformOrbis" RelativePath="orbis\platformOrbis\platformOrbis.vcxproj" MSBuildName="platform\platformOrbis"/>
+      <Project Name="r4" RelativePath="games\r4\r4.vcxproj" MSBuildName="games\r4\r4"/>
+      <Project Name="r4Launcher" RelativePath="games\r4Launcher\r4Launcher.vcxproj" MSBuildName="games\r4\r4Launcher"/>
+      <Project Name="r6" RelativePath="games\r6\r6.vcxproj" MSBuildName="games\r6\r6"/>
+      <Project Name="r6game" RelativePath="win32\r6game\r6game.vcxproj" MSBuildName="games\r6\windows\r6game"/>
+      <Project Name="redContainers" RelativePath="common\redContainers\redContainers.vcxproj" MSBuildName="common\kernelFramework\redContainers"/>
+      <Project Name="redIO" RelativePath="common\redIO\redIO.vcxproj" MSBuildName="common\kernelFramework\redIO"/>
+      <Project Name="redMath" RelativePath="common\redMath\redMath.vcxproj" MSBuildName="common\kernelFramework\redMath"/>
+      <Project Name="redMemoryFramework" RelativePath="common\redMemoryFramework\redMemoryFramework.vcxproj" MSBuildName="common\kernelFramework\redMemoryFramework"/>
+      <Project Name="redSystem" RelativePath="common\redSystem\redSystem.vcxproj" MSBuildName="common\kernelFramework\redSystem"/>
+      <Project Name="redThreads" RelativePath="common\redThreads\redThreads.vcxproj" MSBuildName="common\kernelFramework\redThreads"/>
+      <Project Name="render" RelativePath="common\renderer\render.vcxproj" MSBuildName="common\renderFramework\render"/>
+      <Project Name="resf" RelativePath="resf\resf.vcxproj" MSBuildName="tools\resf"/>
+      <Project Name="scriptStudio" RelativePath="win32\scriptStudio\scriptStudio.vcxproj" MSBuildName="tools\scriptStudio"/>
+      <Project Name="scripts" RelativePath="common\scripts\scripts.vcxproj" MSBuildName="common\scripts"/>
+      <Project Name="unitTestsCore" RelativePath="tests\unitTestsCore\unitTestsCore.vcxproj" MSBuildName="tests\unitTestsCore"/>
+      <Project Name="unitTestsEngine" RelativePath="tests\unitTestsEngine\unitTestsEngine.vcxproj" MSBuildName="tests\unitTestsEngine"/>
+      <Project Name="unitTestsFramework" RelativePath="tests\unitTestsFramework\unitTestsFramework.vcxproj" MSBuildName="tests\unitTestsFramework"/>
+      <Project Name="unitTestsGame" RelativePath="tests\unitTestsGame\unitTestsGame.vcxproj" MSBuildName="tests\unitTestsGame"/>
+      <Project Name="unitTestsGpuApi" RelativePath="tests\unitTestsGpuApi\unitTestsGpuApi.vcxproj" MSBuildName="tests\unitTestsGpuApi"/>
+      <Project Name="unitTestsKernel" RelativePath="tests\unitTestsKernel\unitTestsKernel.vcxproj" MSBuildName="tests\unitTestsKernel"/>
+      <Project Name="versionControl" RelativePath="win32\versionControl\versionControl.vcxproj" MSBuildName="tools\versionControl"/>
+      <Project Name="wcc" RelativePath="win32\wcc\wcc.vcxproj" MSBuildName="tools\wcc"/>
+      <Project Name="wcc_lite" RelativePath="win32\wcc\wcc_lite.vcxproj" MSBuildName="tools\wcc_lite"/>
+    </Configuration>
+    <Configuration Name="Debug|ORBIS"/>
+    <Configuration Name="Debug|Win32"/>
+    <Configuration Name="Debug|x64">
+      <Project Name="RedNetwork" RelativePath="common\redNetwork\RedNetwork.vcxproj" MSBuildName="common\kernelFramework\RedNetwork"/>
+      <Project Name="bundlebuilder" RelativePath="win32\bundlebuilder\bundlebuilder.vcxproj" MSBuildName="tools\bundlebuilder"/>
+      <Project Name="core" RelativePath="common\core\core.vcxproj" MSBuildName="common\core"/>
+      <Project Name="dlcTool" RelativePath="win32\dlcTool\dlcTool.vcxproj" MSBuildName="tools\dlcTool"/>
+      <Project Name="editor" RelativePath="win32\editor\editor.vcxproj" MSBuildName="tools\editor"/>
+      <Project Name="engine" RelativePath="common\engine\engine.vcxproj" MSBuildName="common\engine"/>
+      <Project Name="game" RelativePath="common\game\game.vcxproj" MSBuildName="common\game"/>
+      <Project Name="gpuApiDX10" RelativePath="common\gpuApiDX10\gpuApiDX10.vcxproj" MSBuildName="common\renderFramework\gpuApiDX10"/>
+      <Project Name="gpuApiGnm" RelativePath="common\gpuApiGnm\gpuApiGnm.vcxproj" MSBuildName="common\renderFramework\gpuApiGnm"/>
+      <Project Name="gpuApiUtils" RelativePath="common\gpuApiUtils\gpuApiUtils.vcxproj" MSBuildName="common\renderFramework\gpuApiUtils"/>
+      <Project Name="importer" RelativePath="win32\importer\importer.vcxproj" MSBuildName="tools\importer"/>
+      <Project Name="matcompiler" RelativePath="common\matcompiler\matcompiler.vcxproj" MSBuildName="tools\matcompiler"/>
+      <Project Name="nullrender" RelativePath="common\nullrender\nullrender.vcxproj" MSBuildName="common\renderFramework\nullrender"/>
+      <Project Name="platform" RelativePath="win32\platform\platform.vcxproj" MSBuildName="platform\platform"/>
+      <Project Name="platformCommon" RelativePath="common\platformCommon\platformCommon.vcxproj" MSBuildName="platform\platformCommon"/>
+      <Project Name="platformDurango" RelativePath="durango\platformDurango\platformDurango.vcxproj" MSBuildName="platform\platformDurango"/>
+      <Project Name="platformOrbis" RelativePath="orbis\platformOrbis\platformOrbis.vcxproj" MSBuildName="platform\platformOrbis"/>
+      <Project Name="r4" RelativePath="games\r4\r4.vcxproj" MSBuildName="games\r4\r4"/>
+      <Project Name="r4Launcher" RelativePath="games\r4Launcher\r4Launcher.vcxproj" MSBuildName="games\r4\r4Launcher"/>
+      <Project Name="r6" RelativePath="games\r6\r6.vcxproj" MSBuildName="games\r6\r6"/>
+      <Project Name="r6game" RelativePath="win32\r6game\r6game.vcxproj" MSBuildName="games\r6\windows\r6game"/>
+      <Project Name="redContainers" RelativePath="common\redContainers\redContainers.vcxproj" MSBuildName="common\kernelFramework\redContainers"/>
+      <Project Name="redIO" RelativePath="common\redIO\redIO.vcxproj" MSBuildName="common\kernelFramework\redIO"/>
+      <Project Name="redMath" RelativePath="common\redMath\redMath.vcxproj" MSBuildName="common\kernelFramework\redMath"/>
+      <Project Name="redMemoryFramework" RelativePath="common\redMemoryFramework\redMemoryFramework.vcxproj" MSBuildName="common\kernelFramework\redMemoryFramework"/>
+      <Project Name="redSystem" RelativePath="common\redSystem\redSystem.vcxproj" MSBuildName="common\kernelFramework\redSystem"/>
+      <Project Name="redThreads" RelativePath="common\redThreads\redThreads.vcxproj" MSBuildName="common\kernelFramework\redThreads"/>
+      <Project Name="render" RelativePath="common\renderer\render.vcxproj" MSBuildName="common\renderFramework\render"/>
+      <Project Name="resf" RelativePath="resf\resf.vcxproj" MSBuildName="tools\resf"/>
+      <Project Name="scriptStudio" RelativePath="win32\scriptStudio\scriptStudio.vcxproj" MSBuildName="tools\scriptStudio"/>
+      <Project Name="scripts" RelativePath="common\scripts\scripts.vcxproj" MSBuildName="common\scripts"/>
+      <Project Name="unitTestsCore" RelativePath="tests\unitTestsCore\unitTestsCore.vcxproj" MSBuildName="tests\unitTestsCore"/>
+      <Project Name="unitTestsEngine" RelativePath="tests\unitTestsEngine\unitTestsEngine.vcxproj" MSBuildName="tests\unitTestsEngine"/>
+      <Project Name="unitTestsFramework" RelativePath="tests\unitTestsFramework\unitTestsFramework.vcxproj" MSBuildName="tests\unitTestsFramework"/>
+      <Project Name="unitTestsGame" RelativePath="tests\unitTestsGame\unitTestsGame.vcxproj" MSBuildName="tests\unitTestsGame"/>
+      <Project Name="unitTestsGpuApi" RelativePath="tests\unitTestsGpuApi\unitTestsGpuApi.vcxproj" MSBuildName="tests\unitTestsGpuApi"/>
+      <Project Name="unitTestsKernel" RelativePath="tests\unitTestsKernel\unitTestsKernel.vcxproj" MSBuildName="tests\unitTestsKernel"/>
+      <Project Name="versionControl" RelativePath="win32\versionControl\versionControl.vcxproj" MSBuildName="tools\versionControl"/>
+      <Project Name="wcc" RelativePath="win32\wcc\wcc.vcxproj" MSBuildName="tools\wcc"/>
+      <Project Name="wcc_lite" RelativePath="win32\wcc\wcc_lite.vcxproj" MSBuildName="tools\wcc_lite"/>
+    </Configuration>
+    <Configuration Name="FinalWithLogging|Durango">
+      <Project Name="RedNetwork" RelativePath="common\redNetwork\RedNetwork.vcxproj" MSBuildName="common\kernelFramework\RedNetwork"/>
+      <Project Name="bundlebuilder" RelativePath="win32\bundlebuilder\bundlebuilder.vcxproj" MSBuildName="tools\bundlebuilder"/>
+      <Project Name="core" RelativePath="common\core\core.vcxproj" MSBuildName="common\core"/>
+      <Project Name="dlcTool" RelativePath="win32\dlcTool\dlcTool.vcxproj" MSBuildName="tools\dlcTool"/>
+      <Project Name="editor" RelativePath="win32\editor\editor.vcxproj" MSBuildName="tools\editor"/>
+      <Project Name="engine" RelativePath="common\engine\engine.vcxproj" MSBuildName="common\engine"/>
+      <Project Name="game" RelativePath="common\game\game.vcxproj" MSBuildName="common\game"/>
+      <Project Name="gpuApiDX10" RelativePath="common\gpuApiDX10\gpuApiDX10.vcxproj" MSBuildName="common\renderFramework\gpuApiDX10"/>
+      <Project Name="gpuApiGnm" RelativePath="common\gpuApiGnm\gpuApiGnm.vcxproj" MSBuildName="common\renderFramework\gpuApiGnm"/>
+      <Project Name="gpuApiUtils" RelativePath="common\gpuApiUtils\gpuApiUtils.vcxproj" MSBuildName="common\renderFramework\gpuApiUtils"/>
+      <Project Name="importer" RelativePath="win32\importer\importer.vcxproj" MSBuildName="tools\importer"/>
+      <Project Name="matcompiler" RelativePath="common\matcompiler\matcompiler.vcxproj" MSBuildName="tools\matcompiler"/>
+      <Project Name="nullrender" RelativePath="common\nullrender\nullrender.vcxproj" MSBuildName="common\renderFramework\nullrender"/>
+      <Project Name="platform" RelativePath="win32\platform\platform.vcxproj" MSBuildName="platform\platform"/>
+      <Project Name="platformCommon" RelativePath="common\platformCommon\platformCommon.vcxproj" MSBuildName="platform\platformCommon"/>
+      <Project Name="platformDurango" RelativePath="durango\platformDurango\platformDurango.vcxproj" MSBuildName="platform\platformDurango"/>
+      <Project Name="platformOrbis" RelativePath="orbis\platformOrbis\platformOrbis.vcxproj" MSBuildName="platform\platformOrbis"/>
+      <Project Name="r4" RelativePath="games\r4\r4.vcxproj" MSBuildName="games\r4\r4"/>
+      <Project Name="r4Launcher" RelativePath="games\r4Launcher\r4Launcher.vcxproj" MSBuildName="games\r4\r4Launcher"/>
+      <Project Name="r6" RelativePath="games\r6\r6.vcxproj" MSBuildName="games\r6\r6"/>
+      <Project Name="r6game" RelativePath="win32\r6game\r6game.vcxproj" MSBuildName="games\r6\windows\r6game"/>
+      <Project Name="redContainers" RelativePath="common\redContainers\redContainers.vcxproj" MSBuildName="common\kernelFramework\redContainers"/>
+      <Project Name="redIO" RelativePath="common\redIO\redIO.vcxproj" MSBuildName="common\kernelFramework\redIO"/>
+      <Project Name="redMath" RelativePath="common\redMath\redMath.vcxproj" MSBuildName="common\kernelFramework\redMath"/>
+      <Project Name="redMemoryFramework" RelativePath="common\redMemoryFramework\redMemoryFramework.vcxproj" MSBuildName="common\kernelFramework\redMemoryFramework"/>
+      <Project Name="redSystem" RelativePath="common\redSystem\redSystem.vcxproj" MSBuildName="common\kernelFramework\redSystem"/>
+      <Project Name="redThreads" RelativePath="common\redThreads\redThreads.vcxproj" MSBuildName="common\kernelFramework\redThreads"/>
+      <Project Name="render" RelativePath="common\renderer\render.vcxproj" MSBuildName="common\renderFramework\render"/>
+      <Project Name="resf" RelativePath="resf\resf.vcxproj" MSBuildName="tools\resf"/>
+      <Project Name="scriptStudio" RelativePath="win32\scriptStudio\scriptStudio.vcxproj" MSBuildName="tools\scriptStudio"/>
+      <Project Name="scripts" RelativePath="common\scripts\scripts.vcxproj" MSBuildName="common\scripts"/>
+      <Project Name="unitTestsCore" RelativePath="tests\unitTestsCore\unitTestsCore.vcxproj" MSBuildName="tests\unitTestsCore"/>
+      <Project Name="unitTestsEngine" RelativePath="tests\unitTestsEngine\unitTestsEngine.vcxproj" MSBuildName="tests\unitTestsEngine"/>
+      <Project Name="unitTestsFramework" RelativePath="tests\unitTestsFramework\unitTestsFramework.vcxproj" MSBuildName="tests\unitTestsFramework"/>
+      <Project Name="unitTestsGame" RelativePath="tests\unitTestsGame\unitTestsGame.vcxproj" MSBuildName="tests\unitTestsGame"/>
+      <Project Name="unitTestsGpuApi" RelativePath="tests\unitTestsGpuApi\unitTestsGpuApi.vcxproj" MSBuildName="tests\unitTestsGpuApi"/>
+      <Project Name="unitTestsKernel" RelativePath="tests\unitTestsKernel\unitTestsKernel.vcxproj" MSBuildName="tests\unitTestsKernel"/>
+      <Project Name="versionControl" RelativePath="win32\versionControl\versionControl.vcxproj" MSBuildName="tools\versionControl"/>
+      <Project Name="wcc" RelativePath="win32\wcc\wcc.vcxproj" MSBuildName="tools\wcc"/>
+      <Project Name="wcc_lite" RelativePath="win32\wcc\wcc_lite.vcxproj" MSBuildName="tools\wcc_lite"/>
+    </Configuration>
+    <Configuration Name="FinalWithLogging|x64">
+      <Project Name="RedNetwork" RelativePath="common\redNetwork\RedNetwork.vcxproj" MSBuildName="common\kernelFramework\RedNetwork"/>
+      <Project Name="bundlebuilder" RelativePath="win32\bundlebuilder\bundlebuilder.vcxproj" MSBuildName="tools\bundlebuilder"/>
+      <Project Name="core" RelativePath="common\core\core.vcxproj" MSBuildName="common\core"/>
+      <Project Name="dlcTool" RelativePath="win32\dlcTool\dlcTool.vcxproj" MSBuildName="tools\dlcTool"/>
+      <Project Name="editor" RelativePath="win32\editor\editor.vcxproj" MSBuildName="tools\editor"/>
+      <Project Name="engine" RelativePath="common\engine\engine.vcxproj" MSBuildName="common\engine"/>
+      <Project Name="game" RelativePath="common\game\game.vcxproj" MSBuildName="common\game"/>
+      <Project Name="gpuApiDX10" RelativePath="common\gpuApiDX10\gpuApiDX10.vcxproj" MSBuildName="common\renderFramework\gpuApiDX10"/>
+      <Project Name="gpuApiGnm" RelativePath="common\gpuApiGnm\gpuApiGnm.vcxproj" MSBuildName="common\renderFramework\gpuApiGnm"/>
+      <Project Name="gpuApiUtils" RelativePath="common\gpuApiUtils\gpuApiUtils.vcxproj" MSBuildName="common\renderFramework\gpuApiUtils"/>
+      <Project Name="importer" RelativePath="win32\importer\importer.vcxproj" MSBuildName="tools\importer"/>
+      <Project Name="matcompiler" RelativePath="common\matcompiler\matcompiler.vcxproj" MSBuildName="tools\matcompiler"/>
+      <Project Name="nullrender" RelativePath="common\nullrender\nullrender.vcxproj" MSBuildName="common\renderFramework\nullrender"/>
+      <Project Name="platform" RelativePath="win32\platform\platform.vcxproj" MSBuildName="platform\platform"/>
+      <Project Name="platformCommon" RelativePath="common\platformCommon\platformCommon.vcxproj" MSBuildName="platform\platformCommon"/>
+      <Project Name="platformDurango" RelativePath="durango\platformDurango\platformDurango.vcxproj" MSBuildName="platform\platformDurango"/>
+      <Project Name="platformOrbis" RelativePath="orbis\platformOrbis\platformOrbis.vcxproj" MSBuildName="platform\platformOrbis"/>
+      <Project Name="r4" RelativePath="games\r4\r4.vcxproj" MSBuildName="games\r4\r4"/>
+      <Project Name="r4Launcher" RelativePath="games\r4Launcher\r4Launcher.vcxproj" MSBuildName="games\r4\r4Launcher"/>
+      <Project Name="r6" RelativePath="games\r6\r6.vcxproj" MSBuildName="games\r6\r6"/>
+      <Project Name="r6game" RelativePath="win32\r6game\r6game.vcxproj" MSBuildName="games\r6\windows\r6game"/>
+      <Project Name="redContainers" RelativePath="common\redContainers\redContainers.vcxproj" MSBuildName="common\kernelFramework\redContainers"/>
+      <Project Name="redIO" RelativePath="common\redIO\redIO.vcxproj" MSBuildName="common\kernelFramework\redIO"/>
+      <Project Name="redMath" RelativePath="common\redMath\redMath.vcxproj" MSBuildName="common\kernelFramework\redMath"/>
+      <Project Name="redMemoryFramework" RelativePath="common\redMemoryFramework\redMemoryFramework.vcxproj" MSBuildName="common\kernelFramework\redMemoryFramework"/>
+      <Project Name="redSystem" RelativePath="common\redSystem\redSystem.vcxproj" MSBuildName="common\kernelFramework\redSystem"/>
+      <Project Name="redThreads" RelativePath="common\redThreads\redThreads.vcxproj" MSBuildName="common\kernelFramework\redThreads"/>
+      <Project Name="render" RelativePath="common\renderer\render.vcxproj" MSBuildName="common\renderFramework\render"/>
+      <Project Name="resf" RelativePath="resf\resf.vcxproj" MSBuildName="tools\resf"/>
+      <Project Name="scriptStudio" RelativePath="win32\scriptStudio\scriptStudio.vcxproj" MSBuildName="tools\scriptStudio"/>
+      <Project Name="scripts" RelativePath="common\scripts\scripts.vcxproj" MSBuildName="common\scripts"/>
+      <Project Name="unitTestsCore" RelativePath="tests\unitTestsCore\unitTestsCore.vcxproj" MSBuildName="tests\unitTestsCore"/>
+      <Project Name="unitTestsEngine" RelativePath="tests\unitTestsEngine\unitTestsEngine.vcxproj" MSBuildName="tests\unitTestsEngine"/>
+      <Project Name="unitTestsFramework" RelativePath="tests\unitTestsFramework\unitTestsFramework.vcxproj" MSBuildName="tests\unitTestsFramework"/>
+      <Project Name="unitTestsGame" RelativePath="tests\unitTestsGame\unitTestsGame.vcxproj" MSBuildName="tests\unitTestsGame"/>
+      <Project Name="unitTestsGpuApi" RelativePath="tests\unitTestsGpuApi\unitTestsGpuApi.vcxproj" MSBuildName="tests\unitTestsGpuApi"/>
+      <Project Name="unitTestsKernel" RelativePath="tests\unitTestsKernel\unitTestsKernel.vcxproj" MSBuildName="tests\unitTestsKernel"/>
+      <Project Name="versionControl" RelativePath="win32\versionControl\versionControl.vcxproj" MSBuildName="tools\versionControl"/>
+      <Project Name="wcc" RelativePath="win32\wcc\wcc.vcxproj" MSBuildName="tools\wcc"/>
+      <Project Name="wcc_lite" RelativePath="win32\wcc\wcc_lite.vcxproj" MSBuildName="tools\wcc_lite"/>
+    </Configuration>
+    <Configuration Name="Final|Durango">
+      <Project Name="RedNetwork" RelativePath="common\redNetwork\RedNetwork.vcxproj" MSBuildName="common\kernelFramework\RedNetwork"/>
+      <Project Name="bundlebuilder" RelativePath="win32\bundlebuilder\bundlebuilder.vcxproj" MSBuildName="tools\bundlebuilder"/>
+      <Project Name="core" RelativePath="common\core\core.vcxproj" MSBuildName="common\core"/>
+      <Project Name="dlcTool" RelativePath="win32\dlcTool\dlcTool.vcxproj" MSBuildName="tools\dlcTool"/>
+      <Project Name="editor" RelativePath="win32\editor\editor.vcxproj" MSBuildName="tools\editor"/>
+      <Project Name="engine" RelativePath="common\engine\engine.vcxproj" MSBuildName="common\engine"/>
+      <Project Name="game" RelativePath="common\game\game.vcxproj" MSBuildName="common\game"/>
+      <Project Name="gpuApiDX10" RelativePath="common\gpuApiDX10\gpuApiDX10.vcxproj" MSBuildName="common\renderFramework\gpuApiDX10"/>
+      <Project Name="gpuApiGnm" RelativePath="common\gpuApiGnm\gpuApiGnm.vcxproj" MSBuildName="common\renderFramework\gpuApiGnm"/>
+      <Project Name="gpuApiUtils" RelativePath="common\gpuApiUtils\gpuApiUtils.vcxproj" MSBuildName="common\renderFramework\gpuApiUtils"/>
+      <Project Name="importer" RelativePath="win32\importer\importer.vcxproj" MSBuildName="tools\importer"/>
+      <Project Name="matcompiler" RelativePath="common\matcompiler\matcompiler.vcxproj" MSBuildName="tools\matcompiler"/>
+      <Project Name="nullrender" RelativePath="common\nullrender\nullrender.vcxproj" MSBuildName="common\renderFramework\nullrender"/>
+      <Project Name="platform" RelativePath="win32\platform\platform.vcxproj" MSBuildName="platform\platform"/>
+      <Project Name="platformCommon" RelativePath="common\platformCommon\platformCommon.vcxproj" MSBuildName="platform\platformCommon"/>
+      <Project Name="platformDurango" RelativePath="durango\platformDurango\platformDurango.vcxproj" MSBuildName="platform\platformDurango"/>
+      <Project Name="platformOrbis" RelativePath="orbis\platformOrbis\platformOrbis.vcxproj" MSBuildName="platform\platformOrbis"/>
+      <Project Name="r4" RelativePath="games\r4\r4.vcxproj" MSBuildName="games\r4\r4"/>
+      <Project Name="r4Launcher" RelativePath="games\r4Launcher\r4Launcher.vcxproj" MSBuildName="games\r4\r4Launcher"/>
+      <Project Name="r6" RelativePath="games\r6\r6.vcxproj" MSBuildName="games\r6\r6"/>
+      <Project Name="r6game" RelativePath="win32\r6game\r6game.vcxproj" MSBuildName="games\r6\windows\r6game"/>
+      <Project Name="redContainers" RelativePath="common\redContainers\redContainers.vcxproj" MSBuildName="common\kernelFramework\redContainers"/>
+      <Project Name="redIO" RelativePath="common\redIO\redIO.vcxproj" MSBuildName="common\kernelFramework\redIO"/>
+      <Project Name="redMath" RelativePath="common\redMath\redMath.vcxproj" MSBuildName="common\kernelFramework\redMath"/>
+      <Project Name="redMemoryFramework" RelativePath="common\redMemoryFramework\redMemoryFramework.vcxproj" MSBuildName="common\kernelFramework\redMemoryFramework"/>
+      <Project Name="redSystem" RelativePath="common\redSystem\redSystem.vcxproj" MSBuildName="common\kernelFramework\redSystem"/>
+      <Project Name="redThreads" RelativePath="common\redThreads\redThreads.vcxproj" MSBuildName="common\kernelFramework\redThreads"/>
+      <Project Name="render" RelativePath="common\renderer\render.vcxproj" MSBuildName="common\renderFramework\render"/>
+      <Project Name="resf" RelativePath="resf\resf.vcxproj" MSBuildName="tools\resf"/>
+      <Project Name="scriptStudio" RelativePath="win32\scriptStudio\scriptStudio.vcxproj" MSBuildName="tools\scriptStudio"/>
+      <Project Name="scripts" RelativePath="common\scripts\scripts.vcxproj" MSBuildName="common\scripts"/>
+      <Project Name="unitTestsCore" RelativePath="tests\unitTestsCore\unitTestsCore.vcxproj" MSBuildName="tests\unitTestsCore"/>
+      <Project Name="unitTestsEngine" RelativePath="tests\unitTestsEngine\unitTestsEngine.vcxproj" MSBuildName="tests\unitTestsEngine"/>
+      <Project Name="unitTestsFramework" RelativePath="tests\unitTestsFramework\unitTestsFramework.vcxproj" MSBuildName="tests\unitTestsFramework"/>
+      <Project Name="unitTestsGame" RelativePath="tests\unitTestsGame\unitTestsGame.vcxproj" MSBuildName="tests\unitTestsGame"/>
+      <Project Name="unitTestsGpuApi" RelativePath="tests\unitTestsGpuApi\unitTestsGpuApi.vcxproj" MSBuildName="tests\unitTestsGpuApi"/>
+      <Project Name="unitTestsKernel" RelativePath="tests\unitTestsKernel\unitTestsKernel.vcxproj" MSBuildName="tests\unitTestsKernel"/>
+      <Project Name="versionControl" RelativePath="win32\versionControl\versionControl.vcxproj" MSBuildName="tools\versionControl"/>
+      <Project Name="wcc" RelativePath="win32\wcc\wcc.vcxproj" MSBuildName="tools\wcc"/>
+      <Project Name="wcc_lite" RelativePath="win32\wcc\wcc_lite.vcxproj" MSBuildName="tools\wcc_lite"/>
+    </Configuration>
+    <Configuration Name="Final|ORBIS"/>
+    <Configuration Name="Final|Win32"/>
+    <Configuration Name="Final|x64">
+      <Project Name="RedNetwork" RelativePath="common\redNetwork\RedNetwork.vcxproj" MSBuildName="common\kernelFramework\RedNetwork"/>
+      <Project Name="bundlebuilder" RelativePath="win32\bundlebuilder\bundlebuilder.vcxproj" MSBuildName="tools\bundlebuilder"/>
+      <Project Name="core" RelativePath="common\core\core.vcxproj" MSBuildName="common\core"/>
+      <Project Name="dlcTool" RelativePath="win32\dlcTool\dlcTool.vcxproj" MSBuildName="tools\dlcTool"/>
+      <Project Name="editor" RelativePath="win32\editor\editor.vcxproj" MSBuildName="tools\editor"/>
+      <Project Name="engine" RelativePath="common\engine\engine.vcxproj" MSBuildName="common\engine"/>
+      <Project Name="game" RelativePath="common\game\game.vcxproj" MSBuildName="common\game"/>
+      <Project Name="gpuApiDX10" RelativePath="common\gpuApiDX10\gpuApiDX10.vcxproj" MSBuildName="common\renderFramework\gpuApiDX10"/>
+      <Project Name="gpuApiGnm" RelativePath="common\gpuApiGnm\gpuApiGnm.vcxproj" MSBuildName="common\renderFramework\gpuApiGnm"/>
+      <Project Name="gpuApiUtils" RelativePath="common\gpuApiUtils\gpuApiUtils.vcxproj" MSBuildName="common\renderFramework\gpuApiUtils"/>
+      <Project Name="importer" RelativePath="win32\importer\importer.vcxproj" MSBuildName="tools\importer"/>
+      <Project Name="matcompiler" RelativePath="common\matcompiler\matcompiler.vcxproj" MSBuildName="tools\matcompiler"/>
+      <Project Name="nullrender" RelativePath="common\nullrender\nullrender.vcxproj" MSBuildName="common\renderFramework\nullrender"/>
+      <Project Name="platform" RelativePath="win32\platform\platform.vcxproj" MSBuildName="platform\platform"/>
+      <Project Name="platformCommon" RelativePath="common\platformCommon\platformCommon.vcxproj" MSBuildName="platform\platformCommon"/>
+      <Project Name="platformDurango" RelativePath="durango\platformDurango\platformDurango.vcxproj" MSBuildName="platform\platformDurango"/>
+      <Project Name="platformOrbis" RelativePath="orbis\platformOrbis\platformOrbis.vcxproj" MSBuildName="platform\platformOrbis"/>
+      <Project Name="r4" RelativePath="games\r4\r4.vcxproj" MSBuildName="games\r4\r4"/>
+      <Project Name="r4Launcher" RelativePath="games\r4Launcher\r4Launcher.vcxproj" MSBuildName="games\r4\r4Launcher"/>
+      <Project Name="r6" RelativePath="games\r6\r6.vcxproj" MSBuildName="games\r6\r6"/>
+      <Project Name="r6game" RelativePath="win32\r6game\r6game.vcxproj" MSBuildName="games\r6\windows\r6game"/>
+      <Project Name="redContainers" RelativePath="common\redContainers\redContainers.vcxproj" MSBuildName="common\kernelFramework\redContainers"/>
+      <Project Name="redIO" RelativePath="common\redIO\redIO.vcxproj" MSBuildName="common\kernelFramework\redIO"/>
+      <Project Name="redMath" RelativePath="common\redMath\redMath.vcxproj" MSBuildName="common\kernelFramework\redMath"/>
+      <Project Name="redMemoryFramework" RelativePath="common\redMemoryFramework\redMemoryFramework.vcxproj" MSBuildName="common\kernelFramework\redMemoryFramework"/>
+      <Project Name="redSystem" RelativePath="common\redSystem\redSystem.vcxproj" MSBuildName="common\kernelFramework\redSystem"/>
+      <Project Name="redThreads" RelativePath="common\redThreads\redThreads.vcxproj" MSBuildName="common\kernelFramework\redThreads"/>
+      <Project Name="render" RelativePath="common\renderer\render.vcxproj" MSBuildName="common\renderFramework\render"/>
+      <Project Name="resf" RelativePath="resf\resf.vcxproj" MSBuildName="tools\resf"/>
+      <Project Name="scriptStudio" RelativePath="win32\scriptStudio\scriptStudio.vcxproj" MSBuildName="tools\scriptStudio"/>
+      <Project Name="scripts" RelativePath="common\scripts\scripts.vcxproj" MSBuildName="common\scripts"/>
+      <Project Name="unitTestsCore" RelativePath="tests\unitTestsCore\unitTestsCore.vcxproj" MSBuildName="tests\unitTestsCore"/>
+      <Project Name="unitTestsEngine" RelativePath="tests\unitTestsEngine\unitTestsEngine.vcxproj" MSBuildName="tests\unitTestsEngine"/>
+      <Project Name="unitTestsFramework" RelativePath="tests\unitTestsFramework\unitTestsFramework.vcxproj" MSBuildName="tests\unitTestsFramework"/>
+      <Project Name="unitTestsGame" RelativePath="tests\unitTestsGame\unitTestsGame.vcxproj" MSBuildName="tests\unitTestsGame"/>
+      <Project Name="unitTestsGpuApi" RelativePath="tests\unitTestsGpuApi\unitTestsGpuApi.vcxproj" MSBuildName="tests\unitTestsGpuApi"/>
+      <Project Name="unitTestsKernel" RelativePath="tests\unitTestsKernel\unitTestsKernel.vcxproj" MSBuildName="tests\unitTestsKernel"/>
+      <Project Name="versionControl" RelativePath="win32\versionControl\versionControl.vcxproj" MSBuildName="tools\versionControl"/>
+      <Project Name="wcc" RelativePath="win32\wcc\wcc.vcxproj" MSBuildName="tools\wcc"/>
+      <Project Name="wcc_lite" RelativePath="win32\wcc\wcc_lite.vcxproj" MSBuildName="tools\wcc_lite"/>
+    </Configuration>
+    <Configuration Name="No opts|Durango">
+      <Project Name="RedNetwork" RelativePath="common\redNetwork\RedNetwork.vcxproj" MSBuildName="common\kernelFramework\RedNetwork"/>
+      <Project Name="bundlebuilder" RelativePath="win32\bundlebuilder\bundlebuilder.vcxproj" MSBuildName="tools\bundlebuilder"/>
+      <Project Name="core" RelativePath="common\core\core.vcxproj" MSBuildName="common\core"/>
+      <Project Name="dlcTool" RelativePath="win32\dlcTool\dlcTool.vcxproj" MSBuildName="tools\dlcTool"/>
+      <Project Name="editor" RelativePath="win32\editor\editor.vcxproj" MSBuildName="tools\editor"/>
+      <Project Name="engine" RelativePath="common\engine\engine.vcxproj" MSBuildName="common\engine"/>
+      <Project Name="game" RelativePath="common\game\game.vcxproj" MSBuildName="common\game"/>
+      <Project Name="gpuApiDX10" RelativePath="common\gpuApiDX10\gpuApiDX10.vcxproj" MSBuildName="common\renderFramework\gpuApiDX10"/>
+      <Project Name="gpuApiGnm" RelativePath="common\gpuApiGnm\gpuApiGnm.vcxproj" MSBuildName="common\renderFramework\gpuApiGnm"/>
+      <Project Name="gpuApiUtils" RelativePath="common\gpuApiUtils\gpuApiUtils.vcxproj" MSBuildName="common\renderFramework\gpuApiUtils"/>
+      <Project Name="importer" RelativePath="win32\importer\importer.vcxproj" MSBuildName="tools\importer"/>
+      <Project Name="matcompiler" RelativePath="common\matcompiler\matcompiler.vcxproj" MSBuildName="tools\matcompiler"/>
+      <Project Name="nullrender" RelativePath="common\nullrender\nullrender.vcxproj" MSBuildName="common\renderFramework\nullrender"/>
+      <Project Name="platform" RelativePath="win32\platform\platform.vcxproj" MSBuildName="platform\platform"/>
+      <Project Name="platformCommon" RelativePath="common\platformCommon\platformCommon.vcxproj" MSBuildName="platform\platformCommon"/>
+      <Project Name="platformDurango" RelativePath="durango\platformDurango\platformDurango.vcxproj" MSBuildName="platform\platformDurango"/>
+      <Project Name="platformOrbis" RelativePath="orbis\platformOrbis\platformOrbis.vcxproj" MSBuildName="platform\platformOrbis"/>
+      <Project Name="r4" RelativePath="games\r4\r4.vcxproj" MSBuildName="games\r4\r4"/>
+      <Project Name="r4Launcher" RelativePath="games\r4Launcher\r4Launcher.vcxproj" MSBuildName="games\r4\r4Launcher"/>
+      <Project Name="r6" RelativePath="games\r6\r6.vcxproj" MSBuildName="games\r6\r6"/>
+      <Project Name="r6game" RelativePath="win32\r6game\r6game.vcxproj" MSBuildName="games\r6\windows\r6game"/>
+      <Project Name="redContainers" RelativePath="common\redContainers\redContainers.vcxproj" MSBuildName="common\kernelFramework\redContainers"/>
+      <Project Name="redIO" RelativePath="common\redIO\redIO.vcxproj" MSBuildName="common\kernelFramework\redIO"/>
+      <Project Name="redMath" RelativePath="common\redMath\redMath.vcxproj" MSBuildName="common\kernelFramework\redMath"/>
+      <Project Name="redMemoryFramework" RelativePath="common\redMemoryFramework\redMemoryFramework.vcxproj" MSBuildName="common\kernelFramework\redMemoryFramework"/>
+      <Project Name="redSystem" RelativePath="common\redSystem\redSystem.vcxproj" MSBuildName="common\kernelFramework\redSystem"/>
+      <Project Name="redThreads" RelativePath="common\redThreads\redThreads.vcxproj" MSBuildName="common\kernelFramework\redThreads"/>
+      <Project Name="render" RelativePath="common\renderer\render.vcxproj" MSBuildName="common\renderFramework\render"/>
+      <Project Name="resf" RelativePath="resf\resf.vcxproj" MSBuildName="tools\resf"/>
+      <Project Name="scriptStudio" RelativePath="win32\scriptStudio\scriptStudio.vcxproj" MSBuildName="tools\scriptStudio"/>
+      <Project Name="scripts" RelativePath="common\scripts\scripts.vcxproj" MSBuildName="common\scripts"/>
+      <Project Name="unitTestsCore" RelativePath="tests\unitTestsCore\unitTestsCore.vcxproj" MSBuildName="tests\unitTestsCore"/>
+      <Project Name="unitTestsEngine" RelativePath="tests\unitTestsEngine\unitTestsEngine.vcxproj" MSBuildName="tests\unitTestsEngine"/>
+      <Project Name="unitTestsFramework" RelativePath="tests\unitTestsFramework\unitTestsFramework.vcxproj" MSBuildName="tests\unitTestsFramework"/>
+      <Project Name="unitTestsGame" RelativePath="tests\unitTestsGame\unitTestsGame.vcxproj" MSBuildName="tests\unitTestsGame"/>
+      <Project Name="unitTestsGpuApi" RelativePath="tests\unitTestsGpuApi\unitTestsGpuApi.vcxproj" MSBuildName="tests\unitTestsGpuApi"/>
+      <Project Name="unitTestsKernel" RelativePath="tests\unitTestsKernel\unitTestsKernel.vcxproj" MSBuildName="tests\unitTestsKernel"/>
+      <Project Name="versionControl" RelativePath="win32\versionControl\versionControl.vcxproj" MSBuildName="tools\versionControl"/>
+      <Project Name="wcc" RelativePath="win32\wcc\wcc.vcxproj" MSBuildName="tools\wcc"/>
+      <Project Name="wcc_lite" RelativePath="win32\wcc\wcc_lite.vcxproj" MSBuildName="tools\wcc_lite"/>
+    </Configuration>
+    <Configuration Name="No opts|ORBIS"/>
+    <Configuration Name="No opts|Win32"/>
+    <Configuration Name="No opts|x64">
+      <Project Name="RedNetwork" RelativePath="common\redNetwork\RedNetwork.vcxproj" MSBuildName="common\kernelFramework\RedNetwork"/>
+      <Project Name="bundlebuilder" RelativePath="win32\bundlebuilder\bundlebuilder.vcxproj" MSBuildName="tools\bundlebuilder"/>
+      <Project Name="core" RelativePath="common\core\core.vcxproj" MSBuildName="common\core"/>
+      <Project Name="dlcTool" RelativePath="win32\dlcTool\dlcTool.vcxproj" MSBuildName="tools\dlcTool"/>
+      <Project Name="editor" RelativePath="win32\editor\editor.vcxproj" MSBuildName="tools\editor"/>
+      <Project Name="engine" RelativePath="common\engine\engine.vcxproj" MSBuildName="common\engine"/>
+      <Project Name="game" RelativePath="common\game\game.vcxproj" MSBuildName="common\game"/>
+      <Project Name="gpuApiDX10" RelativePath="common\gpuApiDX10\gpuApiDX10.vcxproj" MSBuildName="common\renderFramework\gpuApiDX10"/>
+      <Project Name="gpuApiGnm" RelativePath="common\gpuApiGnm\gpuApiGnm.vcxproj" MSBuildName="common\renderFramework\gpuApiGnm"/>
+      <Project Name="gpuApiUtils" RelativePath="common\gpuApiUtils\gpuApiUtils.vcxproj" MSBuildName="common\renderFramework\gpuApiUtils"/>
+      <Project Name="importer" RelativePath="win32\importer\importer.vcxproj" MSBuildName="tools\importer"/>
+      <Project Name="matcompiler" RelativePath="common\matcompiler\matcompiler.vcxproj" MSBuildName="tools\matcompiler"/>
+      <Project Name="nullrender" RelativePath="common\nullrender\nullrender.vcxproj" MSBuildName="common\renderFramework\nullrender"/>
+      <Project Name="platform" RelativePath="win32\platform\platform.vcxproj" MSBuildName="platform\platform"/>
+      <Project Name="platformCommon" RelativePath="common\platformCommon\platformCommon.vcxproj" MSBuildName="platform\platformCommon"/>
+      <Project Name="platformDurango" RelativePath="durango\platformDurango\platformDurango.vcxproj" MSBuildName="platform\platformDurango"/>
+      <Project Name="platformOrbis" RelativePath="orbis\platformOrbis\platformOrbis.vcxproj" MSBuildName="platform\platformOrbis"/>
+      <Project Name="r4" RelativePath="games\r4\r4.vcxproj" MSBuildName="games\r4\r4"/>
+      <Project Name="r4Launcher" RelativePath="games\r4Launcher\r4Launcher.vcxproj" MSBuildName="games\r4\r4Launcher"/>
+      <Project Name="r6" RelativePath="games\r6\r6.vcxproj" MSBuildName="games\r6\r6"/>
+      <Project Name="r6game" RelativePath="win32\r6game\r6game.vcxproj" MSBuildName="games\r6\windows\r6game"/>
+      <Project Name="redContainers" RelativePath="common\redContainers\redContainers.vcxproj" MSBuildName="common\kernelFramework\redContainers"/>
+      <Project Name="redIO" RelativePath="common\redIO\redIO.vcxproj" MSBuildName="common\kernelFramework\redIO"/>
+      <Project Name="redMath" RelativePath="common\redMath\redMath.vcxproj" MSBuildName="common\kernelFramework\redMath"/>
+      <Project Name="redMemoryFramework" RelativePath="common\redMemoryFramework\redMemoryFramework.vcxproj" MSBuildName="common\kernelFramework\redMemoryFramework"/>
+      <Project Name="redSystem" RelativePath="common\redSystem\redSystem.vcxproj" MSBuildName="common\kernelFramework\redSystem"/>
+      <Project Name="redThreads" RelativePath="common\redThreads\redThreads.vcxproj" MSBuildName="common\kernelFramework\redThreads"/>
+      <Project Name="render" RelativePath="common\renderer\render.vcxproj" MSBuildName="common\renderFramework\render"/>
+      <Project Name="resf" RelativePath="resf\resf.vcxproj" MSBuildName="tools\resf"/>
+      <Project Name="scriptStudio" RelativePath="win32\scriptStudio\scriptStudio.vcxproj" MSBuildName="tools\scriptStudio"/>
+      <Project Name="scripts" RelativePath="common\scripts\scripts.vcxproj" MSBuildName="common\scripts"/>
+      <Project Name="unitTestsCore" RelativePath="tests\unitTestsCore\unitTestsCore.vcxproj" MSBuildName="tests\unitTestsCore"/>
+      <Project Name="unitTestsEngine" RelativePath="tests\unitTestsEngine\unitTestsEngine.vcxproj" MSBuildName="tests\unitTestsEngine"/>
+      <Project Name="unitTestsFramework" RelativePath="tests\unitTestsFramework\unitTestsFramework.vcxproj" MSBuildName="tests\unitTestsFramework"/>
+      <Project Name="unitTestsGame" RelativePath="tests\unitTestsGame\unitTestsGame.vcxproj" MSBuildName="tests\unitTestsGame"/>
+      <Project Name="unitTestsGpuApi" RelativePath="tests\unitTestsGpuApi\unitTestsGpuApi.vcxproj" MSBuildName="tests\unitTestsGpuApi"/>
+      <Project Name="unitTestsKernel" RelativePath="tests\unitTestsKernel\unitTestsKernel.vcxproj" MSBuildName="tests\unitTestsKernel"/>
+      <Project Name="versionControl" RelativePath="win32\versionControl\versionControl.vcxproj" MSBuildName="tools\versionControl"/>
+      <Project Name="wcc" RelativePath="win32\wcc\wcc.vcxproj" MSBuildName="tools\wcc"/>
+      <Project Name="wcc_lite" RelativePath="win32\wcc\wcc_lite.vcxproj" MSBuildName="tools\wcc_lite"/>
+    </Configuration>
+    <Configuration Name="Profiling|Durango">
+      <Project Name="RedNetwork" RelativePath="common\redNetwork\RedNetwork.vcxproj" MSBuildName="common\kernelFramework\RedNetwork"/>
+      <Project Name="bundlebuilder" RelativePath="win32\bundlebuilder\bundlebuilder.vcxproj" MSBuildName="tools\bundlebuilder"/>
+      <Project Name="core" RelativePath="common\core\core.vcxproj" MSBuildName="common\core"/>
+      <Project Name="dlcTool" RelativePath="win32\dlcTool\dlcTool.vcxproj" MSBuildName="tools\dlcTool"/>
+      <Project Name="editor" RelativePath="win32\editor\editor.vcxproj" MSBuildName="tools\editor"/>
+      <Project Name="engine" RelativePath="common\engine\engine.vcxproj" MSBuildName="common\engine"/>
+      <Project Name="game" RelativePath="common\game\game.vcxproj" MSBuildName="common\game"/>
+      <Project Name="gpuApiDX10" RelativePath="common\gpuApiDX10\gpuApiDX10.vcxproj" MSBuildName="common\renderFramework\gpuApiDX10"/>
+      <Project Name="gpuApiGnm" RelativePath="common\gpuApiGnm\gpuApiGnm.vcxproj" MSBuildName="common\renderFramework\gpuApiGnm"/>
+      <Project Name="gpuApiUtils" RelativePath="common\gpuApiUtils\gpuApiUtils.vcxproj" MSBuildName="common\renderFramework\gpuApiUtils"/>
+      <Project Name="importer" RelativePath="win32\importer\importer.vcxproj" MSBuildName="tools\importer"/>
+      <Project Name="matcompiler" RelativePath="common\matcompiler\matcompiler.vcxproj" MSBuildName="tools\matcompiler"/>
+      <Project Name="nullrender" RelativePath="common\nullrender\nullrender.vcxproj" MSBuildName="common\renderFramework\nullrender"/>
+      <Project Name="platform" RelativePath="win32\platform\platform.vcxproj" MSBuildName="platform\platform"/>
+      <Project Name="platformCommon" RelativePath="common\platformCommon\platformCommon.vcxproj" MSBuildName="platform\platformCommon"/>
+      <Project Name="platformDurango" RelativePath="durango\platformDurango\platformDurango.vcxproj" MSBuildName="platform\platformDurango"/>
+      <Project Name="platformOrbis" RelativePath="orbis\platformOrbis\platformOrbis.vcxproj" MSBuildName="platform\platformOrbis"/>
+      <Project Name="r4" RelativePath="games\r4\r4.vcxproj" MSBuildName="games\r4\r4"/>
+      <Project Name="r4Launcher" RelativePath="games\r4Launcher\r4Launcher.vcxproj" MSBuildName="games\r4\r4Launcher"/>
+      <Project Name="r6" RelativePath="games\r6\r6.vcxproj" MSBuildName="games\r6\r6"/>
+      <Project Name="r6game" RelativePath="win32\r6game\r6game.vcxproj" MSBuildName="games\r6\windows\r6game"/>
+      <Project Name="redContainers" RelativePath="common\redContainers\redContainers.vcxproj" MSBuildName="common\kernelFramework\redContainers"/>
+      <Project Name="redIO" RelativePath="common\redIO\redIO.vcxproj" MSBuildName="common\kernelFramework\redIO"/>
+      <Project Name="redMath" RelativePath="common\redMath\redMath.vcxproj" MSBuildName="common\kernelFramework\redMath"/>
+      <Project Name="redMemoryFramework" RelativePath="common\redMemoryFramework\redMemoryFramework.vcxproj" MSBuildName="common\kernelFramework\redMemoryFramework"/>
+      <Project Name="redSystem" RelativePath="common\redSystem\redSystem.vcxproj" MSBuildName="common\kernelFramework\redSystem"/>
+      <Project Name="redThreads" RelativePath="common\redThreads\redThreads.vcxproj" MSBuildName="common\kernelFramework\redThreads"/>
+      <Project Name="render" RelativePath="common\renderer\render.vcxproj" MSBuildName="common\renderFramework\render"/>
+      <Project Name="resf" RelativePath="resf\resf.vcxproj" MSBuildName="tools\resf"/>
+      <Project Name="scriptStudio" RelativePath="win32\scriptStudio\scriptStudio.vcxproj" MSBuildName="tools\scriptStudio"/>
+      <Project Name="scripts" RelativePath="common\scripts\scripts.vcxproj" MSBuildName="common\scripts"/>
+      <Project Name="unitTestsCore" RelativePath="tests\unitTestsCore\unitTestsCore.vcxproj" MSBuildName="tests\unitTestsCore"/>
+      <Project Name="unitTestsEngine" RelativePath="tests\unitTestsEngine\unitTestsEngine.vcxproj" MSBuildName="tests\unitTestsEngine"/>
+      <Project Name="unitTestsFramework" RelativePath="tests\unitTestsFramework\unitTestsFramework.vcxproj" MSBuildName="tests\unitTestsFramework"/>
+      <Project Name="unitTestsGame" RelativePath="tests\unitTestsGame\unitTestsGame.vcxproj" MSBuildName="tests\unitTestsGame"/>
+      <Project Name="unitTestsGpuApi" RelativePath="tests\unitTestsGpuApi\unitTestsGpuApi.vcxproj" MSBuildName="tests\unitTestsGpuApi"/>
+      <Project Name="unitTestsKernel" RelativePath="tests\unitTestsKernel\unitTestsKernel.vcxproj" MSBuildName="tests\unitTestsKernel"/>
+      <Project Name="versionControl" RelativePath="win32\versionControl\versionControl.vcxproj" MSBuildName="tools\versionControl"/>
+      <Project Name="wcc" RelativePath="win32\wcc\wcc.vcxproj" MSBuildName="tools\wcc"/>
+      <Project Name="wcc_lite" RelativePath="win32\wcc\wcc_lite.vcxproj" MSBuildName="tools\wcc_lite"/>
+    </Configuration>
+    <Configuration Name="Profiling|x64">
+      <Project Name="RedNetwork" RelativePath="common\redNetwork\RedNetwork.vcxproj" MSBuildName="common\kernelFramework\RedNetwork"/>
+      <Project Name="bundlebuilder" RelativePath="win32\bundlebuilder\bundlebuilder.vcxproj" MSBuildName="tools\bundlebuilder"/>
+      <Project Name="core" RelativePath="common\core\core.vcxproj" MSBuildName="common\core"/>
+      <Project Name="dlcTool" RelativePath="win32\dlcTool\dlcTool.vcxproj" MSBuildName="tools\dlcTool"/>
+      <Project Name="editor" RelativePath="win32\editor\editor.vcxproj" MSBuildName="tools\editor"/>
+      <Project Name="engine" RelativePath="common\engine\engine.vcxproj" MSBuildName="common\engine"/>
+      <Project Name="game" RelativePath="common\game\game.vcxproj" MSBuildName="common\game"/>
+      <Project Name="gpuApiDX10" RelativePath="common\gpuApiDX10\gpuApiDX10.vcxproj" MSBuildName="common\renderFramework\gpuApiDX10"/>
+      <Project Name="gpuApiGnm" RelativePath="common\gpuApiGnm\gpuApiGnm.vcxproj" MSBuildName="common\renderFramework\gpuApiGnm"/>
+      <Project Name="gpuApiUtils" RelativePath="common\gpuApiUtils\gpuApiUtils.vcxproj" MSBuildName="common\renderFramework\gpuApiUtils"/>
+      <Project Name="importer" RelativePath="win32\importer\importer.vcxproj" MSBuildName="tools\importer"/>
+      <Project Name="matcompiler" RelativePath="common\matcompiler\matcompiler.vcxproj" MSBuildName="tools\matcompiler"/>
+      <Project Name="nullrender" RelativePath="common\nullrender\nullrender.vcxproj" MSBuildName="common\renderFramework\nullrender"/>
+      <Project Name="platform" RelativePath="win32\platform\platform.vcxproj" MSBuildName="platform\platform"/>
+      <Project Name="platformCommon" RelativePath="common\platformCommon\platformCommon.vcxproj" MSBuildName="platform\platformCommon"/>
+      <Project Name="platformDurango" RelativePath="durango\platformDurango\platformDurango.vcxproj" MSBuildName="platform\platformDurango"/>
+      <Project Name="platformOrbis" RelativePath="orbis\platformOrbis\platformOrbis.vcxproj" MSBuildName="platform\platformOrbis"/>
+      <Project Name="r4" RelativePath="games\r4\r4.vcxproj" MSBuildName="games\r4\r4"/>
+      <Project Name="r4Launcher" RelativePath="games\r4Launcher\r4Launcher.vcxproj" MSBuildName="games\r4\r4Launcher"/>
+      <Project Name="r6" RelativePath="games\r6\r6.vcxproj" MSBuildName="games\r6\r6"/>
+      <Project Name="r6game" RelativePath="win32\r6game\r6game.vcxproj" MSBuildName="games\r6\windows\r6game"/>
+      <Project Name="redContainers" RelativePath="common\redContainers\redContainers.vcxproj" MSBuildName="common\kernelFramework\redContainers"/>
+      <Project Name="redIO" RelativePath="common\redIO\redIO.vcxproj" MSBuildName="common\kernelFramework\redIO"/>
+      <Project Name="redMath" RelativePath="common\redMath\redMath.vcxproj" MSBuildName="common\kernelFramework\redMath"/>
+      <Project Name="redMemoryFramework" RelativePath="common\redMemoryFramework\redMemoryFramework.vcxproj" MSBuildName="common\kernelFramework\redMemoryFramework"/>
+      <Project Name="redSystem" RelativePath="common\redSystem\redSystem.vcxproj" MSBuildName="common\kernelFramework\redSystem"/>
+      <Project Name="redThreads" RelativePath="common\redThreads\redThreads.vcxproj" MSBuildName="common\kernelFramework\redThreads"/>
+      <Project Name="render" RelativePath="common\renderer\render.vcxproj" MSBuildName="common\renderFramework\render"/>
+      <Project Name="resf" RelativePath="resf\resf.vcxproj" MSBuildName="tools\resf"/>
+      <Project Name="scriptStudio" RelativePath="win32\scriptStudio\scriptStudio.vcxproj" MSBuildName="tools\scriptStudio"/>
+      <Project Name="scripts" RelativePath="common\scripts\scripts.vcxproj" MSBuildName="common\scripts"/>
+      <Project Name="unitTestsCore" RelativePath="tests\unitTestsCore\unitTestsCore.vcxproj" MSBuildName="tests\unitTestsCore"/>
+      <Project Name="unitTestsEngine" RelativePath="tests\unitTestsEngine\unitTestsEngine.vcxproj" MSBuildName="tests\unitTestsEngine"/>
+      <Project Name="unitTestsFramework" RelativePath="tests\unitTestsFramework\unitTestsFramework.vcxproj" MSBuildName="tests\unitTestsFramework"/>
+      <Project Name="unitTestsGame" RelativePath="tests\unitTestsGame\unitTestsGame.vcxproj" MSBuildName="tests\unitTestsGame"/>
+      <Project Name="unitTestsGpuApi" RelativePath="tests\unitTestsGpuApi\unitTestsGpuApi.vcxproj" MSBuildName="tests\unitTestsGpuApi"/>
+      <Project Name="unitTestsKernel" RelativePath="tests\unitTestsKernel\unitTestsKernel.vcxproj" MSBuildName="tests\unitTestsKernel"/>
+      <Project Name="versionControl" RelativePath="win32\versionControl\versionControl.vcxproj" MSBuildName="tools\versionControl"/>
+      <Project Name="wcc" RelativePath="win32\wcc\wcc.vcxproj" MSBuildName="tools\wcc"/>
+      <Project Name="wcc_lite" RelativePath="win32\wcc\wcc_lite.vcxproj" MSBuildName="tools\wcc_lite"/>
+    </Configuration>
+    <Configuration Name="ReleaseGame|Durango">
+      <Project Name="RedNetwork" RelativePath="common\redNetwork\RedNetwork.vcxproj" MSBuildName="common\kernelFramework\RedNetwork"/>
+      <Project Name="bundlebuilder" RelativePath="win32\bundlebuilder\bundlebuilder.vcxproj" MSBuildName="tools\bundlebuilder"/>
+      <Project Name="core" RelativePath="common\core\core.vcxproj" MSBuildName="common\core"/>
+      <Project Name="dlcTool" RelativePath="win32\dlcTool\dlcTool.vcxproj" MSBuildName="tools\dlcTool"/>
+      <Project Name="editor" RelativePath="win32\editor\editor.vcxproj" MSBuildName="tools\editor"/>
+      <Project Name="engine" RelativePath="common\engine\engine.vcxproj" MSBuildName="common\engine"/>
+      <Project Name="game" RelativePath="common\game\game.vcxproj" MSBuildName="common\game"/>
+      <Project Name="gpuApiDX10" RelativePath="common\gpuApiDX10\gpuApiDX10.vcxproj" MSBuildName="common\renderFramework\gpuApiDX10"/>
+      <Project Name="gpuApiGnm" RelativePath="common\gpuApiGnm\gpuApiGnm.vcxproj" MSBuildName="common\renderFramework\gpuApiGnm"/>
+      <Project Name="gpuApiUtils" RelativePath="common\gpuApiUtils\gpuApiUtils.vcxproj" MSBuildName="common\renderFramework\gpuApiUtils"/>
+      <Project Name="importer" RelativePath="win32\importer\importer.vcxproj" MSBuildName="tools\importer"/>
+      <Project Name="matcompiler" RelativePath="common\matcompiler\matcompiler.vcxproj" MSBuildName="tools\matcompiler"/>
+      <Project Name="nullrender" RelativePath="common\nullrender\nullrender.vcxproj" MSBuildName="common\renderFramework\nullrender"/>
+      <Project Name="platform" RelativePath="win32\platform\platform.vcxproj" MSBuildName="platform\platform"/>
+      <Project Name="platformCommon" RelativePath="common\platformCommon\platformCommon.vcxproj" MSBuildName="platform\platformCommon"/>
+      <Project Name="platformDurango" RelativePath="durango\platformDurango\platformDurango.vcxproj" MSBuildName="platform\platformDurango"/>
+      <Project Name="platformOrbis" RelativePath="orbis\platformOrbis\platformOrbis.vcxproj" MSBuildName="platform\platformOrbis"/>
+      <Project Name="r4" RelativePath="games\r4\r4.vcxproj" MSBuildName="games\r4\r4"/>
+      <Project Name="r4Launcher" RelativePath="games\r4Launcher\r4Launcher.vcxproj" MSBuildName="games\r4\r4Launcher"/>
+      <Project Name="r6" RelativePath="games\r6\r6.vcxproj" MSBuildName="games\r6\r6"/>
+      <Project Name="r6game" RelativePath="win32\r6game\r6game.vcxproj" MSBuildName="games\r6\windows\r6game"/>
+      <Project Name="redContainers" RelativePath="common\redContainers\redContainers.vcxproj" MSBuildName="common\kernelFramework\redContainers"/>
+      <Project Name="redIO" RelativePath="common\redIO\redIO.vcxproj" MSBuildName="common\kernelFramework\redIO"/>
+      <Project Name="redMath" RelativePath="common\redMath\redMath.vcxproj" MSBuildName="common\kernelFramework\redMath"/>
+      <Project Name="redMemoryFramework" RelativePath="common\redMemoryFramework\redMemoryFramework.vcxproj" MSBuildName="common\kernelFramework\redMemoryFramework"/>
+      <Project Name="redSystem" RelativePath="common\redSystem\redSystem.vcxproj" MSBuildName="common\kernelFramework\redSystem"/>
+      <Project Name="redThreads" RelativePath="common\redThreads\redThreads.vcxproj" MSBuildName="common\kernelFramework\redThreads"/>
+      <Project Name="render" RelativePath="common\renderer\render.vcxproj" MSBuildName="common\renderFramework\render"/>
+      <Project Name="resf" RelativePath="resf\resf.vcxproj" MSBuildName="tools\resf"/>
+      <Project Name="scriptStudio" RelativePath="win32\scriptStudio\scriptStudio.vcxproj" MSBuildName="tools\scriptStudio"/>
+      <Project Name="scripts" RelativePath="common\scripts\scripts.vcxproj" MSBuildName="common\scripts"/>
+      <Project Name="unitTestsCore" RelativePath="tests\unitTestsCore\unitTestsCore.vcxproj" MSBuildName="tests\unitTestsCore"/>
+      <Project Name="unitTestsEngine" RelativePath="tests\unitTestsEngine\unitTestsEngine.vcxproj" MSBuildName="tests\unitTestsEngine"/>
+      <Project Name="unitTestsFramework" RelativePath="tests\unitTestsFramework\unitTestsFramework.vcxproj" MSBuildName="tests\unitTestsFramework"/>
+      <Project Name="unitTestsGame" RelativePath="tests\unitTestsGame\unitTestsGame.vcxproj" MSBuildName="tests\unitTestsGame"/>
+      <Project Name="unitTestsGpuApi" RelativePath="tests\unitTestsGpuApi\unitTestsGpuApi.vcxproj" MSBuildName="tests\unitTestsGpuApi"/>
+      <Project Name="unitTestsKernel" RelativePath="tests\unitTestsKernel\unitTestsKernel.vcxproj" MSBuildName="tests\unitTestsKernel"/>
+      <Project Name="versionControl" RelativePath="win32\versionControl\versionControl.vcxproj" MSBuildName="tools\versionControl"/>
+      <Project Name="wcc" RelativePath="win32\wcc\wcc.vcxproj" MSBuildName="tools\wcc"/>
+      <Project Name="wcc_lite" RelativePath="win32\wcc\wcc_lite.vcxproj" MSBuildName="tools\wcc_lite"/>
+    </Configuration>
+    <Configuration Name="ReleaseGame|Win32"/>
+    <Configuration Name="ReleaseGame|x64">
+      <Project Name="RedNetwork" RelativePath="common\redNetwork\RedNetwork.vcxproj" MSBuildName="common\kernelFramework\RedNetwork"/>
+      <Project Name="bundlebuilder" RelativePath="win32\bundlebuilder\bundlebuilder.vcxproj" MSBuildName="tools\bundlebuilder"/>
+      <Project Name="core" RelativePath="common\core\core.vcxproj" MSBuildName="common\core"/>
+      <Project Name="dlcTool" RelativePath="win32\dlcTool\dlcTool.vcxproj" MSBuildName="tools\dlcTool"/>
+      <Project Name="editor" RelativePath="win32\editor\editor.vcxproj" MSBuildName="tools\editor"/>
+      <Project Name="engine" RelativePath="common\engine\engine.vcxproj" MSBuildName="common\engine"/>
+      <Project Name="game" RelativePath="common\game\game.vcxproj" MSBuildName="common\game"/>
+      <Project Name="gpuApiDX10" RelativePath="common\gpuApiDX10\gpuApiDX10.vcxproj" MSBuildName="common\renderFramework\gpuApiDX10"/>
+      <Project Name="gpuApiGnm" RelativePath="common\gpuApiGnm\gpuApiGnm.vcxproj" MSBuildName="common\renderFramework\gpuApiGnm"/>
+      <Project Name="gpuApiUtils" RelativePath="common\gpuApiUtils\gpuApiUtils.vcxproj" MSBuildName="common\renderFramework\gpuApiUtils"/>
+      <Project Name="importer" RelativePath="win32\importer\importer.vcxproj" MSBuildName="tools\importer"/>
+      <Project Name="matcompiler" RelativePath="common\matcompiler\matcompiler.vcxproj" MSBuildName="tools\matcompiler"/>
+      <Project Name="nullrender" RelativePath="common\nullrender\nullrender.vcxproj" MSBuildName="common\renderFramework\nullrender"/>
+      <Project Name="platform" RelativePath="win32\platform\platform.vcxproj" MSBuildName="platform\platform"/>
+      <Project Name="platformCommon" RelativePath="common\platformCommon\platformCommon.vcxproj" MSBuildName="platform\platformCommon"/>
+      <Project Name="platformDurango" RelativePath="durango\platformDurango\platformDurango.vcxproj" MSBuildName="platform\platformDurango"/>
+      <Project Name="platformOrbis" RelativePath="orbis\platformOrbis\platformOrbis.vcxproj" MSBuildName="platform\platformOrbis"/>
+      <Project Name="r4" RelativePath="games\r4\r4.vcxproj" MSBuildName="games\r4\r4"/>
+      <Project Name="r4Launcher" RelativePath="games\r4Launcher\r4Launcher.vcxproj" MSBuildName="games\r4\r4Launcher"/>
+      <Project Name="r6" RelativePath="games\r6\r6.vcxproj" MSBuildName="games\r6\r6"/>
+      <Project Name="r6game" RelativePath="win32\r6game\r6game.vcxproj" MSBuildName="games\r6\windows\r6game"/>
+      <Project Name="redContainers" RelativePath="common\redContainers\redContainers.vcxproj" MSBuildName="common\kernelFramework\redContainers"/>
+      <Project Name="redIO" RelativePath="common\redIO\redIO.vcxproj" MSBuildName="common\kernelFramework\redIO"/>
+      <Project Name="redMath" RelativePath="common\redMath\redMath.vcxproj" MSBuildName="common\kernelFramework\redMath"/>
+      <Project Name="redMemoryFramework" RelativePath="common\redMemoryFramework\redMemoryFramework.vcxproj" MSBuildName="common\kernelFramework\redMemoryFramework"/>
+      <Project Name="redSystem" RelativePath="common\redSystem\redSystem.vcxproj" MSBuildName="common\kernelFramework\redSystem"/>
+      <Project Name="redThreads" RelativePath="common\redThreads\redThreads.vcxproj" MSBuildName="common\kernelFramework\redThreads"/>
+      <Project Name="render" RelativePath="common\renderer\render.vcxproj" MSBuildName="common\renderFramework\render"/>
+      <Project Name="resf" RelativePath="resf\resf.vcxproj" MSBuildName="tools\resf"/>
+      <Project Name="scriptStudio" RelativePath="win32\scriptStudio\scriptStudio.vcxproj" MSBuildName="tools\scriptStudio"/>
+      <Project Name="scripts" RelativePath="common\scripts\scripts.vcxproj" MSBuildName="common\scripts"/>
+      <Project Name="unitTestsCore" RelativePath="tests\unitTestsCore\unitTestsCore.vcxproj" MSBuildName="tests\unitTestsCore"/>
+      <Project Name="unitTestsEngine" RelativePath="tests\unitTestsEngine\unitTestsEngine.vcxproj" MSBuildName="tests\unitTestsEngine"/>
+      <Project Name="unitTestsFramework" RelativePath="tests\unitTestsFramework\unitTestsFramework.vcxproj" MSBuildName="tests\unitTestsFramework"/>
+      <Project Name="unitTestsGame" RelativePath="tests\unitTestsGame\unitTestsGame.vcxproj" MSBuildName="tests\unitTestsGame"/>
+      <Project Name="unitTestsGpuApi" RelativePath="tests\unitTestsGpuApi\unitTestsGpuApi.vcxproj" MSBuildName="tests\unitTestsGpuApi"/>
+      <Project Name="unitTestsKernel" RelativePath="tests\unitTestsKernel\unitTestsKernel.vcxproj" MSBuildName="tests\unitTestsKernel"/>
+      <Project Name="versionControl" RelativePath="win32\versionControl\versionControl.vcxproj" MSBuildName="tools\versionControl"/>
+      <Project Name="wcc" RelativePath="win32\wcc\wcc.vcxproj" MSBuildName="tools\wcc"/>
+      <Project Name="wcc_lite" RelativePath="win32\wcc\wcc_lite.vcxproj" MSBuildName="tools\wcc_lite"/>
+    </Configuration>
+    <Configuration Name="Release|Durango">
+      <Project Name="RedNetwork" RelativePath="common\redNetwork\RedNetwork.vcxproj" MSBuildName="common\kernelFramework\RedNetwork"/>
+      <Project Name="bundlebuilder" RelativePath="win32\bundlebuilder\bundlebuilder.vcxproj" MSBuildName="tools\bundlebuilder"/>
+      <Project Name="core" RelativePath="common\core\core.vcxproj" MSBuildName="common\core"/>
+      <Project Name="dlcTool" RelativePath="win32\dlcTool\dlcTool.vcxproj" MSBuildName="tools\dlcTool"/>
+      <Project Name="editor" RelativePath="win32\editor\editor.vcxproj" MSBuildName="tools\editor"/>
+      <Project Name="engine" RelativePath="common\engine\engine.vcxproj" MSBuildName="common\engine"/>
+      <Project Name="game" RelativePath="common\game\game.vcxproj" MSBuildName="common\game"/>
+      <Project Name="gpuApiDX10" RelativePath="common\gpuApiDX10\gpuApiDX10.vcxproj" MSBuildName="common\renderFramework\gpuApiDX10"/>
+      <Project Name="gpuApiGnm" RelativePath="common\gpuApiGnm\gpuApiGnm.vcxproj" MSBuildName="common\renderFramework\gpuApiGnm"/>
+      <Project Name="gpuApiUtils" RelativePath="common\gpuApiUtils\gpuApiUtils.vcxproj" MSBuildName="common\renderFramework\gpuApiUtils"/>
+      <Project Name="importer" RelativePath="win32\importer\importer.vcxproj" MSBuildName="tools\importer"/>
+      <Project Name="matcompiler" RelativePath="common\matcompiler\matcompiler.vcxproj" MSBuildName="tools\matcompiler"/>
+      <Project Name="nullrender" RelativePath="common\nullrender\nullrender.vcxproj" MSBuildName="common\renderFramework\nullrender"/>
+      <Project Name="platform" RelativePath="win32\platform\platform.vcxproj" MSBuildName="platform\platform"/>
+      <Project Name="platformCommon" RelativePath="common\platformCommon\platformCommon.vcxproj" MSBuildName="platform\platformCommon"/>
+      <Project Name="platformDurango" RelativePath="durango\platformDurango\platformDurango.vcxproj" MSBuildName="platform\platformDurango"/>
+      <Project Name="platformOrbis" RelativePath="orbis\platformOrbis\platformOrbis.vcxproj" MSBuildName="platform\platformOrbis"/>
+      <Project Name="r4" RelativePath="games\r4\r4.vcxproj" MSBuildName="games\r4\r4"/>
+      <Project Name="r4Launcher" RelativePath="games\r4Launcher\r4Launcher.vcxproj" MSBuildName="games\r4\r4Launcher"/>
+      <Project Name="r6" RelativePath="games\r6\r6.vcxproj" MSBuildName="games\r6\r6"/>
+      <Project Name="r6game" RelativePath="win32\r6game\r6game.vcxproj" MSBuildName="games\r6\windows\r6game"/>
+      <Project Name="redContainers" RelativePath="common\redContainers\redContainers.vcxproj" MSBuildName="common\kernelFramework\redContainers"/>
+      <Project Name="redIO" RelativePath="common\redIO\redIO.vcxproj" MSBuildName="common\kernelFramework\redIO"/>
+      <Project Name="redMath" RelativePath="common\redMath\redMath.vcxproj" MSBuildName="common\kernelFramework\redMath"/>
+      <Project Name="redMemoryFramework" RelativePath="common\redMemoryFramework\redMemoryFramework.vcxproj" MSBuildName="common\kernelFramework\redMemoryFramework"/>
+      <Project Name="redSystem" RelativePath="common\redSystem\redSystem.vcxproj" MSBuildName="common\kernelFramework\redSystem"/>
+      <Project Name="redThreads" RelativePath="common\redThreads\redThreads.vcxproj" MSBuildName="common\kernelFramework\redThreads"/>
+      <Project Name="render" RelativePath="common\renderer\render.vcxproj" MSBuildName="common\renderFramework\render"/>
+      <Project Name="resf" RelativePath="resf\resf.vcxproj" MSBuildName="tools\resf"/>
+      <Project Name="scriptStudio" RelativePath="win32\scriptStudio\scriptStudio.vcxproj" MSBuildName="tools\scriptStudio"/>
+      <Project Name="scripts" RelativePath="common\scripts\scripts.vcxproj" MSBuildName="common\scripts"/>
+      <Project Name="unitTestsCore" RelativePath="tests\unitTestsCore\unitTestsCore.vcxproj" MSBuildName="tests\unitTestsCore"/>
+      <Project Name="unitTestsEngine" RelativePath="tests\unitTestsEngine\unitTestsEngine.vcxproj" MSBuildName="tests\unitTestsEngine"/>
+      <Project Name="unitTestsFramework" RelativePath="tests\unitTestsFramework\unitTestsFramework.vcxproj" MSBuildName="tests\unitTestsFramework"/>
+      <Project Name="unitTestsGame" RelativePath="tests\unitTestsGame\unitTestsGame.vcxproj" MSBuildName="tests\unitTestsGame"/>
+      <Project Name="unitTestsGpuApi" RelativePath="tests\unitTestsGpuApi\unitTestsGpuApi.vcxproj" MSBuildName="tests\unitTestsGpuApi"/>
+      <Project Name="unitTestsKernel" RelativePath="tests\unitTestsKernel\unitTestsKernel.vcxproj" MSBuildName="tests\unitTestsKernel"/>
+      <Project Name="versionControl" RelativePath="win32\versionControl\versionControl.vcxproj" MSBuildName="tools\versionControl"/>
+      <Project Name="wcc" RelativePath="win32\wcc\wcc.vcxproj" MSBuildName="tools\wcc"/>
+      <Project Name="wcc_lite" RelativePath="win32\wcc\wcc_lite.vcxproj" MSBuildName="tools\wcc_lite"/>
+    </Configuration>
+    <Configuration Name="Release|ORBIS"/>
+    <Configuration Name="Release|Win32"/>
+    <Configuration Name="Release|x64">
+      <Project Name="RedNetwork" RelativePath="common\redNetwork\RedNetwork.vcxproj" MSBuildName="common\kernelFramework\RedNetwork"/>
+      <Project Name="bundlebuilder" RelativePath="win32\bundlebuilder\bundlebuilder.vcxproj" MSBuildName="tools\bundlebuilder"/>
+      <Project Name="core" RelativePath="common\core\core.vcxproj" MSBuildName="common\core"/>
+      <Project Name="dlcTool" RelativePath="win32\dlcTool\dlcTool.vcxproj" MSBuildName="tools\dlcTool"/>
+      <Project Name="editor" RelativePath="win32\editor\editor.vcxproj" MSBuildName="tools\editor"/>
+      <Project Name="engine" RelativePath="common\engine\engine.vcxproj" MSBuildName="common\engine"/>
+      <Project Name="game" RelativePath="common\game\game.vcxproj" MSBuildName="common\game"/>
+      <Project Name="gpuApiDX10" RelativePath="common\gpuApiDX10\gpuApiDX10.vcxproj" MSBuildName="common\renderFramework\gpuApiDX10"/>
+      <Project Name="gpuApiGnm" RelativePath="common\gpuApiGnm\gpuApiGnm.vcxproj" MSBuildName="common\renderFramework\gpuApiGnm"/>
+      <Project Name="gpuApiUtils" RelativePath="common\gpuApiUtils\gpuApiUtils.vcxproj" MSBuildName="common\renderFramework\gpuApiUtils"/>
+      <Project Name="importer" RelativePath="win32\importer\importer.vcxproj" MSBuildName="tools\importer"/>
+      <Project Name="matcompiler" RelativePath="common\matcompiler\matcompiler.vcxproj" MSBuildName="tools\matcompiler"/>
+      <Project Name="nullrender" RelativePath="common\nullrender\nullrender.vcxproj" MSBuildName="common\renderFramework\nullrender"/>
+      <Project Name="platform" RelativePath="win32\platform\platform.vcxproj" MSBuildName="platform\platform"/>
+      <Project Name="platformCommon" RelativePath="common\platformCommon\platformCommon.vcxproj" MSBuildName="platform\platformCommon"/>
+      <Project Name="platformDurango" RelativePath="durango\platformDurango\platformDurango.vcxproj" MSBuildName="platform\platformDurango"/>
+      <Project Name="platformOrbis" RelativePath="orbis\platformOrbis\platformOrbis.vcxproj" MSBuildName="platform\platformOrbis"/>
+      <Project Name="r4" RelativePath="games\r4\r4.vcxproj" MSBuildName="games\r4\r4"/>
+      <Project Name="r4Launcher" RelativePath="games\r4Launcher\r4Launcher.vcxproj" MSBuildName="games\r4\r4Launcher"/>
+      <Project Name="r6" RelativePath="games\r6\r6.vcxproj" MSBuildName="games\r6\r6"/>
+      <Project Name="r6game" RelativePath="win32\r6game\r6game.vcxproj" MSBuildName="games\r6\windows\r6game"/>
+      <Project Name="redContainers" RelativePath="common\redContainers\redContainers.vcxproj" MSBuildName="common\kernelFramework\redContainers"/>
+      <Project Name="redIO" RelativePath="common\redIO\redIO.vcxproj" MSBuildName="common\kernelFramework\redIO"/>
+      <Project Name="redMath" RelativePath="common\redMath\redMath.vcxproj" MSBuildName="common\kernelFramework\redMath"/>
+      <Project Name="redMemoryFramework" RelativePath="common\redMemoryFramework\redMemoryFramework.vcxproj" MSBuildName="common\kernelFramework\redMemoryFramework"/>
+      <Project Name="redSystem" RelativePath="common\redSystem\redSystem.vcxproj" MSBuildName="common\kernelFramework\redSystem"/>
+      <Project Name="redThreads" RelativePath="common\redThreads\redThreads.vcxproj" MSBuildName="common\kernelFramework\redThreads"/>
+      <Project Name="render" RelativePath="common\renderer\render.vcxproj" MSBuildName="common\renderFramework\render"/>
+      <Project Name="resf" RelativePath="resf\resf.vcxproj" MSBuildName="tools\resf"/>
+      <Project Name="scriptStudio" RelativePath="win32\scriptStudio\scriptStudio.vcxproj" MSBuildName="tools\scriptStudio"/>
+      <Project Name="scripts" RelativePath="common\scripts\scripts.vcxproj" MSBuildName="common\scripts"/>
+      <Project Name="unitTestsCore" RelativePath="tests\unitTestsCore\unitTestsCore.vcxproj" MSBuildName="tests\unitTestsCore"/>
+      <Project Name="unitTestsEngine" RelativePath="tests\unitTestsEngine\unitTestsEngine.vcxproj" MSBuildName="tests\unitTestsEngine"/>
+      <Project Name="unitTestsFramework" RelativePath="tests\unitTestsFramework\unitTestsFramework.vcxproj" MSBuildName="tests\unitTestsFramework"/>
+      <Project Name="unitTestsGame" RelativePath="tests\unitTestsGame\unitTestsGame.vcxproj" MSBuildName="tests\unitTestsGame"/>
+      <Project Name="unitTestsGpuApi" RelativePath="tests\unitTestsGpuApi\unitTestsGpuApi.vcxproj" MSBuildName="tests\unitTestsGpuApi"/>
+      <Project Name="unitTestsKernel" RelativePath="tests\unitTestsKernel\unitTestsKernel.vcxproj" MSBuildName="tests\unitTestsKernel"/>
+      <Project Name="versionControl" RelativePath="win32\versionControl\versionControl.vcxproj" MSBuildName="tools\versionControl"/>
+      <Project Name="wcc" RelativePath="win32\wcc\wcc.vcxproj" MSBuildName="tools\wcc"/>
+      <Project Name="wcc_lite" RelativePath="win32\wcc\wcc_lite.vcxproj" MSBuildName="tools\wcc_lite"/>
+    </Configuration>
+  </Preset>
+  <Preset Name="All_Orbis_Projects" FormatVersion="1">
+    <Configuration Name="Debug|Durango"/>
+    <Configuration Name="Debug|ORBIS">
+      <Project Name="RedNetwork" RelativePath="common\redNetwork\RedNetwork.vcxproj" MSBuildName="common\kernelFramework\RedNetwork"/>
+      <Project Name="bundlebuilder" RelativePath="win32\bundlebuilder\bundlebuilder.vcxproj" MSBuildName="tools\bundlebuilder"/>
+      <Project Name="core" RelativePath="common\core\core.vcxproj" MSBuildName="common\core"/>
+      <Project Name="dlcTool" RelativePath="win32\dlcTool\dlcTool.vcxproj" MSBuildName="tools\dlcTool"/>
+      <Project Name="editor" RelativePath="win32\editor\editor.vcxproj" MSBuildName="tools\editor"/>
+      <Project Name="engine" RelativePath="common\engine\engine.vcxproj" MSBuildName="common\engine"/>
+      <Project Name="game" RelativePath="common\game\game.vcxproj" MSBuildName="common\game"/>
+      <Project Name="gpuApiDX10" RelativePath="common\gpuApiDX10\gpuApiDX10.vcxproj" MSBuildName="common\renderFramework\gpuApiDX10"/>
+      <Project Name="gpuApiGnm" RelativePath="common\gpuApiGnm\gpuApiGnm.vcxproj" MSBuildName="common\renderFramework\gpuApiGnm"/>
+      <Project Name="gpuApiUtils" RelativePath="common\gpuApiUtils\gpuApiUtils.vcxproj" MSBuildName="common\renderFramework\gpuApiUtils"/>
+      <Project Name="importer" RelativePath="win32\importer\importer.vcxproj" MSBuildName="tools\importer"/>
+      <Project Name="matcompiler" RelativePath="common\matcompiler\matcompiler.vcxproj" MSBuildName="tools\matcompiler"/>
+      <Project Name="nullrender" RelativePath="common\nullrender\nullrender.vcxproj" MSBuildName="common\renderFramework\nullrender"/>
+      <Project Name="platform" RelativePath="win32\platform\platform.vcxproj" MSBuildName="platform\platform"/>
+      <Project Name="platformCommon" RelativePath="common\platformCommon\platformCommon.vcxproj" MSBuildName="platform\platformCommon"/>
+      <Project Name="platformDurango" RelativePath="durango\platformDurango\platformDurango.vcxproj" MSBuildName="platform\platformDurango"/>
+      <Project Name="platformOrbis" RelativePath="orbis\platformOrbis\platformOrbis.vcxproj" MSBuildName="platform\platformOrbis"/>
+      <Project Name="r4" RelativePath="games\r4\r4.vcxproj" MSBuildName="games\r4\r4"/>
+      <Project Name="r4Launcher" RelativePath="games\r4Launcher\r4Launcher.vcxproj" MSBuildName="games\r4\r4Launcher"/>
+      <Project Name="r6" RelativePath="games\r6\r6.vcxproj" MSBuildName="games\r6\r6"/>
+      <Project Name="r6game" RelativePath="win32\r6game\r6game.vcxproj" MSBuildName="games\r6\windows\r6game"/>
+      <Project Name="redContainers" RelativePath="common\redContainers\redContainers.vcxproj" MSBuildName="common\kernelFramework\redContainers"/>
+      <Project Name="redIO" RelativePath="common\redIO\redIO.vcxproj" MSBuildName="common\kernelFramework\redIO"/>
+      <Project Name="redMath" RelativePath="common\redMath\redMath.vcxproj" MSBuildName="common\kernelFramework\redMath"/>
+      <Project Name="redMemoryFramework" RelativePath="common\redMemoryFramework\redMemoryFramework.vcxproj" MSBuildName="common\kernelFramework\redMemoryFramework"/>
+      <Project Name="redSystem" RelativePath="common\redSystem\redSystem.vcxproj" MSBuildName="common\kernelFramework\redSystem"/>
+      <Project Name="redThreads" RelativePath="common\redThreads\redThreads.vcxproj" MSBuildName="common\kernelFramework\redThreads"/>
+      <Project Name="render" RelativePath="common\renderer\render.vcxproj" MSBuildName="common\renderFramework\render"/>
+      <Project Name="resf" RelativePath="resf\resf.vcxproj" MSBuildName="tools\resf"/>
+      <Project Name="scriptStudio" RelativePath="win32\scriptStudio\scriptStudio.vcxproj" MSBuildName="tools\scriptStudio"/>
+      <Project Name="scripts" RelativePath="common\scripts\scripts.vcxproj" MSBuildName="common\scripts"/>
+      <Project Name="unitTestsCore" RelativePath="tests\unitTestsCore\unitTestsCore.vcxproj" MSBuildName="tests\unitTestsCore"/>
+      <Project Name="unitTestsEngine" RelativePath="tests\unitTestsEngine\unitTestsEngine.vcxproj" MSBuildName="tests\unitTestsEngine"/>
+      <Project Name="unitTestsFramework" RelativePath="tests\unitTestsFramework\unitTestsFramework.vcxproj" MSBuildName="tests\unitTestsFramework"/>
+      <Project Name="unitTestsGame" RelativePath="tests\unitTestsGame\unitTestsGame.vcxproj" MSBuildName="tests\unitTestsGame"/>
+      <Project Name="unitTestsGpuApi" RelativePath="tests\unitTestsGpuApi\unitTestsGpuApi.vcxproj" MSBuildName="tests\unitTestsGpuApi"/>
+      <Project Name="unitTestsKernel" RelativePath="tests\unitTestsKernel\unitTestsKernel.vcxproj" MSBuildName="tests\unitTestsKernel"/>
+      <Project Name="versionControl" RelativePath="win32\versionControl\versionControl.vcxproj" MSBuildName="tools\versionControl"/>
+      <Project Name="wcc" RelativePath="win32\wcc\wcc.vcxproj" MSBuildName="tools\wcc"/>
+      <Project Name="wcc_lite" RelativePath="win32\wcc\wcc_lite.vcxproj" MSBuildName="tools\wcc_lite"/>
+    </Configuration>
+    <Configuration Name="Debug|Win32"/>
+    <Configuration Name="Debug|x64"/>
+    <Configuration Name="FinalWithLogging|ORBIS">
+      <Project Name="RedNetwork" RelativePath="common\redNetwork\RedNetwork.vcxproj" MSBuildName="common\kernelFramework\RedNetwork"/>
+      <Project Name="bundlebuilder" RelativePath="win32\bundlebuilder\bundlebuilder.vcxproj" MSBuildName="tools\bundlebuilder"/>
+      <Project Name="core" RelativePath="common\core\core.vcxproj" MSBuildName="common\core"/>
+      <Project Name="dlcTool" RelativePath="win32\dlcTool\dlcTool.vcxproj" MSBuildName="tools\dlcTool"/>
+      <Project Name="editor" RelativePath="win32\editor\editor.vcxproj" MSBuildName="tools\editor"/>
+      <Project Name="engine" RelativePath="common\engine\engine.vcxproj" MSBuildName="common\engine"/>
+      <Project Name="game" RelativePath="common\game\game.vcxproj" MSBuildName="common\game"/>
+      <Project Name="gpuApiDX10" RelativePath="common\gpuApiDX10\gpuApiDX10.vcxproj" MSBuildName="common\renderFramework\gpuApiDX10"/>
+      <Project Name="gpuApiGnm" RelativePath="common\gpuApiGnm\gpuApiGnm.vcxproj" MSBuildName="common\renderFramework\gpuApiGnm"/>
+      <Project Name="gpuApiUtils" RelativePath="common\gpuApiUtils\gpuApiUtils.vcxproj" MSBuildName="common\renderFramework\gpuApiUtils"/>
+      <Project Name="importer" RelativePath="win32\importer\importer.vcxproj" MSBuildName="tools\importer"/>
+      <Project Name="matcompiler" RelativePath="common\matcompiler\matcompiler.vcxproj" MSBuildName="tools\matcompiler"/>
+      <Project Name="nullrender" RelativePath="common\nullrender\nullrender.vcxproj" MSBuildName="common\renderFramework\nullrender"/>
+      <Project Name="platform" RelativePath="win32\platform\platform.vcxproj" MSBuildName="platform\platform"/>
+      <Project Name="platformCommon" RelativePath="common\platformCommon\platformCommon.vcxproj" MSBuildName="platform\platformCommon"/>
+      <Project Name="platformDurango" RelativePath="durango\platformDurango\platformDurango.vcxproj" MSBuildName="platform\platformDurango"/>
+      <Project Name="platformOrbis" RelativePath="orbis\platformOrbis\platformOrbis.vcxproj" MSBuildName="platform\platformOrbis"/>
+      <Project Name="r4" RelativePath="games\r4\r4.vcxproj" MSBuildName="games\r4\r4"/>
+      <Project Name="r4Launcher" RelativePath="games\r4Launcher\r4Launcher.vcxproj" MSBuildName="games\r4\r4Launcher"/>
+      <Project Name="r6" RelativePath="games\r6\r6.vcxproj" MSBuildName="games\r6\r6"/>
+      <Project Name="r6game" RelativePath="win32\r6game\r6game.vcxproj" MSBuildName="games\r6\windows\r6game"/>
+      <Project Name="redContainers" RelativePath="common\redContainers\redContainers.vcxproj" MSBuildName="common\kernelFramework\redContainers"/>
+      <Project Name="redIO" RelativePath="common\redIO\redIO.vcxproj" MSBuildName="common\kernelFramework\redIO"/>
+      <Project Name="redMath" RelativePath="common\redMath\redMath.vcxproj" MSBuildName="common\kernelFramework\redMath"/>
+      <Project Name="redMemoryFramework" RelativePath="common\redMemoryFramework\redMemoryFramework.vcxproj" MSBuildName="common\kernelFramework\redMemoryFramework"/>
+      <Project Name="redSystem" RelativePath="common\redSystem\redSystem.vcxproj" MSBuildName="common\kernelFramework\redSystem"/>
+      <Project Name="redThreads" RelativePath="common\redThreads\redThreads.vcxproj" MSBuildName="common\kernelFramework\redThreads"/>
+      <Project Name="render" RelativePath="common\renderer\render.vcxproj" MSBuildName="common\renderFramework\render"/>
+      <Project Name="resf" RelativePath="resf\resf.vcxproj" MSBuildName="tools\resf"/>
+      <Project Name="scriptStudio" RelativePath="win32\scriptStudio\scriptStudio.vcxproj" MSBuildName="tools\scriptStudio"/>
+      <Project Name="scripts" RelativePath="common\scripts\scripts.vcxproj" MSBuildName="common\scripts"/>
+      <Project Name="unitTestsCore" RelativePath="tests\unitTestsCore\unitTestsCore.vcxproj" MSBuildName="tests\unitTestsCore"/>
+      <Project Name="unitTestsEngine" RelativePath="tests\unitTestsEngine\unitTestsEngine.vcxproj" MSBuildName="tests\unitTestsEngine"/>
+      <Project Name="unitTestsFramework" RelativePath="tests\unitTestsFramework\unitTestsFramework.vcxproj" MSBuildName="tests\unitTestsFramework"/>
+      <Project Name="unitTestsGame" RelativePath="tests\unitTestsGame\unitTestsGame.vcxproj" MSBuildName="tests\unitTestsGame"/>
+      <Project Name="unitTestsGpuApi" RelativePath="tests\unitTestsGpuApi\unitTestsGpuApi.vcxproj" MSBuildName="tests\unitTestsGpuApi"/>
+      <Project Name="unitTestsKernel" RelativePath="tests\unitTestsKernel\unitTestsKernel.vcxproj" MSBuildName="tests\unitTestsKernel"/>
+      <Project Name="versionControl" RelativePath="win32\versionControl\versionControl.vcxproj" MSBuildName="tools\versionControl"/>
+      <Project Name="wcc" RelativePath="win32\wcc\wcc.vcxproj" MSBuildName="tools\wcc"/>
+      <Project Name="wcc_lite" RelativePath="win32\wcc\wcc_lite.vcxproj" MSBuildName="tools\wcc_lite"/>
+    </Configuration>
+    <Configuration Name="Final|Durango"/>
+    <Configuration Name="Final|ORBIS">
+      <Project Name="RedNetwork" RelativePath="common\redNetwork\RedNetwork.vcxproj" MSBuildName="common\kernelFramework\RedNetwork"/>
+      <Project Name="bundlebuilder" RelativePath="win32\bundlebuilder\bundlebuilder.vcxproj" MSBuildName="tools\bundlebuilder"/>
+      <Project Name="core" RelativePath="common\core\core.vcxproj" MSBuildName="common\core"/>
+      <Project Name="dlcTool" RelativePath="win32\dlcTool\dlcTool.vcxproj" MSBuildName="tools\dlcTool"/>
+      <Project Name="editor" RelativePath="win32\editor\editor.vcxproj" MSBuildName="tools\editor"/>
+      <Project Name="engine" RelativePath="common\engine\engine.vcxproj" MSBuildName="common\engine"/>
+      <Project Name="game" RelativePath="common\game\game.vcxproj" MSBuildName="common\game"/>
+      <Project Name="gpuApiDX10" RelativePath="common\gpuApiDX10\gpuApiDX10.vcxproj" MSBuildName="common\renderFramework\gpuApiDX10"/>
+      <Project Name="gpuApiGnm" RelativePath="common\gpuApiGnm\gpuApiGnm.vcxproj" MSBuildName="common\renderFramework\gpuApiGnm"/>
+      <Project Name="gpuApiUtils" RelativePath="common\gpuApiUtils\gpuApiUtils.vcxproj" MSBuildName="common\renderFramework\gpuApiUtils"/>
+      <Project Name="importer" RelativePath="win32\importer\importer.vcxproj" MSBuildName="tools\importer"/>
+      <Project Name="matcompiler" RelativePath="common\matcompiler\matcompiler.vcxproj" MSBuildName="tools\matcompiler"/>
+      <Project Name="nullrender" RelativePath="common\nullrender\nullrender.vcxproj" MSBuildName="common\renderFramework\nullrender"/>
+      <Project Name="platform" RelativePath="win32\platform\platform.vcxproj" MSBuildName="platform\platform"/>
+      <Project Name="platformCommon" RelativePath="common\platformCommon\platformCommon.vcxproj" MSBuildName="platform\platformCommon"/>
+      <Project Name="platformDurango" RelativePath="durango\platformDurango\platformDurango.vcxproj" MSBuildName="platform\platformDurango"/>
+      <Project Name="platformOrbis" RelativePath="orbis\platformOrbis\platformOrbis.vcxproj" MSBuildName="platform\platformOrbis"/>
+      <Project Name="r4" RelativePath="games\r4\r4.vcxproj" MSBuildName="games\r4\r4"/>
+      <Project Name="r4Launcher" RelativePath="games\r4Launcher\r4Launcher.vcxproj" MSBuildName="games\r4\r4Launcher"/>
+      <Project Name="r6" RelativePath="games\r6\r6.vcxproj" MSBuildName="games\r6\r6"/>
+      <Project Name="r6game" RelativePath="win32\r6game\r6game.vcxproj" MSBuildName="games\r6\windows\r6game"/>
+      <Project Name="redContainers" RelativePath="common\redContainers\redContainers.vcxproj" MSBuildName="common\kernelFramework\redContainers"/>
+      <Project Name="redIO" RelativePath="common\redIO\redIO.vcxproj" MSBuildName="common\kernelFramework\redIO"/>
+      <Project Name="redMath" RelativePath="common\redMath\redMath.vcxproj" MSBuildName="common\kernelFramework\redMath"/>
+      <Project Name="redMemoryFramework" RelativePath="common\redMemoryFramework\redMemoryFramework.vcxproj" MSBuildName="common\kernelFramework\redMemoryFramework"/>
+      <Project Name="redSystem" RelativePath="common\redSystem\redSystem.vcxproj" MSBuildName="common\kernelFramework\redSystem"/>
+      <Project Name="redThreads" RelativePath="common\redThreads\redThreads.vcxproj" MSBuildName="common\kernelFramework\redThreads"/>
+      <Project Name="render" RelativePath="common\renderer\render.vcxproj" MSBuildName="common\renderFramework\render"/>
+      <Project Name="resf" RelativePath="resf\resf.vcxproj" MSBuildName="tools\resf"/>
+      <Project Name="scriptStudio" RelativePath="win32\scriptStudio\scriptStudio.vcxproj" MSBuildName="tools\scriptStudio"/>
+      <Project Name="scripts" RelativePath="common\scripts\scripts.vcxproj" MSBuildName="common\scripts"/>
+      <Project Name="unitTestsCore" RelativePath="tests\unitTestsCore\unitTestsCore.vcxproj" MSBuildName="tests\unitTestsCore"/>
+      <Project Name="unitTestsEngine" RelativePath="tests\unitTestsEngine\unitTestsEngine.vcxproj" MSBuildName="tests\unitTestsEngine"/>
+      <Project Name="unitTestsFramework" RelativePath="tests\unitTestsFramework\unitTestsFramework.vcxproj" MSBuildName="tests\unitTestsFramework"/>
+      <Project Name="unitTestsGame" RelativePath="tests\unitTestsGame\unitTestsGame.vcxproj" MSBuildName="tests\unitTestsGame"/>
+      <Project Name="unitTestsGpuApi" RelativePath="tests\unitTestsGpuApi\unitTestsGpuApi.vcxproj" MSBuildName="tests\unitTestsGpuApi"/>
+      <Project Name="unitTestsKernel" RelativePath="tests\unitTestsKernel\unitTestsKernel.vcxproj" MSBuildName="tests\unitTestsKernel"/>
+      <Project Name="versionControl" RelativePath="win32\versionControl\versionControl.vcxproj" MSBuildName="tools\versionControl"/>
+      <Project Name="wcc" RelativePath="win32\wcc\wcc.vcxproj" MSBuildName="tools\wcc"/>
+      <Project Name="wcc_lite" RelativePath="win32\wcc\wcc_lite.vcxproj" MSBuildName="tools\wcc_lite"/>
+    </Configuration>
+    <Configuration Name="Final|Win32"/>
+    <Configuration Name="Final|x64"/>
+    <Configuration Name="No opts|Durango"/>
+    <Configuration Name="No opts|ORBIS">
+      <Project Name="RedNetwork" RelativePath="common\redNetwork\RedNetwork.vcxproj" MSBuildName="common\kernelFramework\RedNetwork"/>
+      <Project Name="bundlebuilder" RelativePath="win32\bundlebuilder\bundlebuilder.vcxproj" MSBuildName="tools\bundlebuilder"/>
+      <Project Name="core" RelativePath="common\core\core.vcxproj" MSBuildName="common\core"/>
+      <Project Name="dlcTool" RelativePath="win32\dlcTool\dlcTool.vcxproj" MSBuildName="tools\dlcTool"/>
+      <Project Name="editor" RelativePath="win32\editor\editor.vcxproj" MSBuildName="tools\editor"/>
+      <Project Name="engine" RelativePath="common\engine\engine.vcxproj" MSBuildName="common\engine"/>
+      <Project Name="game" RelativePath="common\game\game.vcxproj" MSBuildName="common\game"/>
+      <Project Name="gpuApiDX10" RelativePath="common\gpuApiDX10\gpuApiDX10.vcxproj" MSBuildName="common\renderFramework\gpuApiDX10"/>
+      <Project Name="gpuApiGnm" RelativePath="common\gpuApiGnm\gpuApiGnm.vcxproj" MSBuildName="common\renderFramework\gpuApiGnm"/>
+      <Project Name="gpuApiUtils" RelativePath="common\gpuApiUtils\gpuApiUtils.vcxproj" MSBuildName="common\renderFramework\gpuApiUtils"/>
+      <Project Name="importer" RelativePath="win32\importer\importer.vcxproj" MSBuildName="tools\importer"/>
+      <Project Name="matcompiler" RelativePath="common\matcompiler\matcompiler.vcxproj" MSBuildName="tools\matcompiler"/>
+      <Project Name="nullrender" RelativePath="common\nullrender\nullrender.vcxproj" MSBuildName="common\renderFramework\nullrender"/>
+      <Project Name="platform" RelativePath="win32\platform\platform.vcxproj" MSBuildName="platform\platform"/>
+      <Project Name="platformCommon" RelativePath="common\platformCommon\platformCommon.vcxproj" MSBuildName="platform\platformCommon"/>
+      <Project Name="platformDurango" RelativePath="durango\platformDurango\platformDurango.vcxproj" MSBuildName="platform\platformDurango"/>
+      <Project Name="platformOrbis" RelativePath="orbis\platformOrbis\platformOrbis.vcxproj" MSBuildName="platform\platformOrbis"/>
+      <Project Name="r4" RelativePath="games\r4\r4.vcxproj" MSBuildName="games\r4\r4"/>
+      <Project Name="r4Launcher" RelativePath="games\r4Launcher\r4Launcher.vcxproj" MSBuildName="games\r4\r4Launcher"/>
+      <Project Name="r6" RelativePath="games\r6\r6.vcxproj" MSBuildName="games\r6\r6"/>
+      <Project Name="r6game" RelativePath="win32\r6game\r6game.vcxproj" MSBuildName="games\r6\windows\r6game"/>
+      <Project Name="redContainers" RelativePath="common\redContainers\redContainers.vcxproj" MSBuildName="common\kernelFramework\redContainers"/>
+      <Project Name="redIO" RelativePath="common\redIO\redIO.vcxproj" MSBuildName="common\kernelFramework\redIO"/>
+      <Project Name="redMath" RelativePath="common\redMath\redMath.vcxproj" MSBuildName="common\kernelFramework\redMath"/>
+      <Project Name="redMemoryFramework" RelativePath="common\redMemoryFramework\redMemoryFramework.vcxproj" MSBuildName="common\kernelFramework\redMemoryFramework"/>
+      <Project Name="redSystem" RelativePath="common\redSystem\redSystem.vcxproj" MSBuildName="common\kernelFramework\redSystem"/>
+      <Project Name="redThreads" RelativePath="common\redThreads\redThreads.vcxproj" MSBuildName="common\kernelFramework\redThreads"/>
+      <Project Name="render" RelativePath="common\renderer\render.vcxproj" MSBuildName="common\renderFramework\render"/>
+      <Project Name="resf" RelativePath="resf\resf.vcxproj" MSBuildName="tools\resf"/>
+      <Project Name="scriptStudio" RelativePath="win32\scriptStudio\scriptStudio.vcxproj" MSBuildName="tools\scriptStudio"/>
+      <Project Name="scripts" RelativePath="common\scripts\scripts.vcxproj" MSBuildName="common\scripts"/>
+      <Project Name="unitTestsCore" RelativePath="tests\unitTestsCore\unitTestsCore.vcxproj" MSBuildName="tests\unitTestsCore"/>
+      <Project Name="unitTestsEngine" RelativePath="tests\unitTestsEngine\unitTestsEngine.vcxproj" MSBuildName="tests\unitTestsEngine"/>
+      <Project Name="unitTestsFramework" RelativePath="tests\unitTestsFramework\unitTestsFramework.vcxproj" MSBuildName="tests\unitTestsFramework"/>
+      <Project Name="unitTestsGame" RelativePath="tests\unitTestsGame\unitTestsGame.vcxproj" MSBuildName="tests\unitTestsGame"/>
+      <Project Name="unitTestsGpuApi" RelativePath="tests\unitTestsGpuApi\unitTestsGpuApi.vcxproj" MSBuildName="tests\unitTestsGpuApi"/>
+      <Project Name="unitTestsKernel" RelativePath="tests\unitTestsKernel\unitTestsKernel.vcxproj" MSBuildName="tests\unitTestsKernel"/>
+      <Project Name="versionControl" RelativePath="win32\versionControl\versionControl.vcxproj" MSBuildName="tools\versionControl"/>
+      <Project Name="wcc" RelativePath="win32\wcc\wcc.vcxproj" MSBuildName="tools\wcc"/>
+      <Project Name="wcc_lite" RelativePath="win32\wcc\wcc_lite.vcxproj" MSBuildName="tools\wcc_lite"/>
+    </Configuration>
+    <Configuration Name="No opts|Win32"/>
+    <Configuration Name="No opts|x64"/>
+    <Configuration Name="Profiling|ORBIS">
+      <Project Name="RedNetwork" RelativePath="common\redNetwork\RedNetwork.vcxproj" MSBuildName="common\kernelFramework\RedNetwork"/>
+      <Project Name="bundlebuilder" RelativePath="win32\bundlebuilder\bundlebuilder.vcxproj" MSBuildName="tools\bundlebuilder"/>
+      <Project Name="core" RelativePath="common\core\core.vcxproj" MSBuildName="common\core"/>
+      <Project Name="dlcTool" RelativePath="win32\dlcTool\dlcTool.vcxproj" MSBuildName="tools\dlcTool"/>
+      <Project Name="editor" RelativePath="win32\editor\editor.vcxproj" MSBuildName="tools\editor"/>
+      <Project Name="engine" RelativePath="common\engine\engine.vcxproj" MSBuildName="common\engine"/>
+      <Project Name="game" RelativePath="common\game\game.vcxproj" MSBuildName="common\game"/>
+      <Project Name="gpuApiDX10" RelativePath="common\gpuApiDX10\gpuApiDX10.vcxproj" MSBuildName="common\renderFramework\gpuApiDX10"/>
+      <Project Name="gpuApiGnm" RelativePath="common\gpuApiGnm\gpuApiGnm.vcxproj" MSBuildName="common\renderFramework\gpuApiGnm"/>
+      <Project Name="gpuApiUtils" RelativePath="common\gpuApiUtils\gpuApiUtils.vcxproj" MSBuildName="common\renderFramework\gpuApiUtils"/>
+      <Project Name="importer" RelativePath="win32\importer\importer.vcxproj" MSBuildName="tools\importer"/>
+      <Project Name="matcompiler" RelativePath="common\matcompiler\matcompiler.vcxproj" MSBuildName="tools\matcompiler"/>
+      <Project Name="nullrender" RelativePath="common\nullrender\nullrender.vcxproj" MSBuildName="common\renderFramework\nullrender"/>
+      <Project Name="platform" RelativePath="win32\platform\platform.vcxproj" MSBuildName="platform\platform"/>
+      <Project Name="platformCommon" RelativePath="common\platformCommon\platformCommon.vcxproj" MSBuildName="platform\platformCommon"/>
+      <Project Name="platformDurango" RelativePath="durango\platformDurango\platformDurango.vcxproj" MSBuildName="platform\platformDurango"/>
+      <Project Name="platformOrbis" RelativePath="orbis\platformOrbis\platformOrbis.vcxproj" MSBuildName="platform\platformOrbis"/>
+      <Project Name="r4" RelativePath="games\r4\r4.vcxproj" MSBuildName="games\r4\r4"/>
+      <Project Name="r4Launcher" RelativePath="games\r4Launcher\r4Launcher.vcxproj" MSBuildName="games\r4\r4Launcher"/>
+      <Project Name="r6" RelativePath="games\r6\r6.vcxproj" MSBuildName="games\r6\r6"/>
+      <Project Name="r6game" RelativePath="win32\r6game\r6game.vcxproj" MSBuildName="games\r6\windows\r6game"/>
+      <Project Name="redContainers" RelativePath="common\redContainers\redContainers.vcxproj" MSBuildName="common\kernelFramework\redContainers"/>
+      <Project Name="redIO" RelativePath="common\redIO\redIO.vcxproj" MSBuildName="common\kernelFramework\redIO"/>
+      <Project Name="redMath" RelativePath="common\redMath\redMath.vcxproj" MSBuildName="common\kernelFramework\redMath"/>
+      <Project Name="redMemoryFramework" RelativePath="common\redMemoryFramework\redMemoryFramework.vcxproj" MSBuildName="common\kernelFramework\redMemoryFramework"/>
+      <Project Name="redSystem" RelativePath="common\redSystem\redSystem.vcxproj" MSBuildName="common\kernelFramework\redSystem"/>
+      <Project Name="redThreads" RelativePath="common\redThreads\redThreads.vcxproj" MSBuildName="common\kernelFramework\redThreads"/>
+      <Project Name="render" RelativePath="common\renderer\render.vcxproj" MSBuildName="common\renderFramework\render"/>
+      <Project Name="resf" RelativePath="resf\resf.vcxproj" MSBuildName="tools\resf"/>
+      <Project Name="scriptStudio" RelativePath="win32\scriptStudio\scriptStudio.vcxproj" MSBuildName="tools\scriptStudio"/>
+      <Project Name="scripts" RelativePath="common\scripts\scripts.vcxproj" MSBuildName="common\scripts"/>
+      <Project Name="unitTestsCore" RelativePath="tests\unitTestsCore\unitTestsCore.vcxproj" MSBuildName="tests\unitTestsCore"/>
+      <Project Name="unitTestsEngine" RelativePath="tests\unitTestsEngine\unitTestsEngine.vcxproj" MSBuildName="tests\unitTestsEngine"/>
+      <Project Name="unitTestsFramework" RelativePath="tests\unitTestsFramework\unitTestsFramework.vcxproj" MSBuildName="tests\unitTestsFramework"/>
+      <Project Name="unitTestsGame" RelativePath="tests\unitTestsGame\unitTestsGame.vcxproj" MSBuildName="tests\unitTestsGame"/>
+      <Project Name="unitTestsGpuApi" RelativePath="tests\unitTestsGpuApi\unitTestsGpuApi.vcxproj" MSBuildName="tests\unitTestsGpuApi"/>
+      <Project Name="unitTestsKernel" RelativePath="tests\unitTestsKernel\unitTestsKernel.vcxproj" MSBuildName="tests\unitTestsKernel"/>
+      <Project Name="versionControl" RelativePath="win32\versionControl\versionControl.vcxproj" MSBuildName="tools\versionControl"/>
+      <Project Name="wcc" RelativePath="win32\wcc\wcc.vcxproj" MSBuildName="tools\wcc"/>
+      <Project Name="wcc_lite" RelativePath="win32\wcc\wcc_lite.vcxproj" MSBuildName="tools\wcc_lite"/>
+    </Configuration>
+    <Configuration Name="ReleaseGame|ORBIS">
+      <Project Name="RedNetwork" RelativePath="common\redNetwork\RedNetwork.vcxproj" MSBuildName="common\kernelFramework\RedNetwork"/>
+      <Project Name="bundlebuilder" RelativePath="win32\bundlebuilder\bundlebuilder.vcxproj" MSBuildName="tools\bundlebuilder"/>
+      <Project Name="core" RelativePath="common\core\core.vcxproj" MSBuildName="common\core"/>
+      <Project Name="dlcTool" RelativePath="win32\dlcTool\dlcTool.vcxproj" MSBuildName="tools\dlcTool"/>
+      <Project Name="editor" RelativePath="win32\editor\editor.vcxproj" MSBuildName="tools\editor"/>
+      <Project Name="engine" RelativePath="common\engine\engine.vcxproj" MSBuildName="common\engine"/>
+      <Project Name="game" RelativePath="common\game\game.vcxproj" MSBuildName="common\game"/>
+      <Project Name="gpuApiDX10" RelativePath="common\gpuApiDX10\gpuApiDX10.vcxproj" MSBuildName="common\renderFramework\gpuApiDX10"/>
+      <Project Name="gpuApiGnm" RelativePath="common\gpuApiGnm\gpuApiGnm.vcxproj" MSBuildName="common\renderFramework\gpuApiGnm"/>
+      <Project Name="gpuApiUtils" RelativePath="common\gpuApiUtils\gpuApiUtils.vcxproj" MSBuildName="common\renderFramework\gpuApiUtils"/>
+      <Project Name="importer" RelativePath="win32\importer\importer.vcxproj" MSBuildName="tools\importer"/>
+      <Project Name="matcompiler" RelativePath="common\matcompiler\matcompiler.vcxproj" MSBuildName="tools\matcompiler"/>
+      <Project Name="nullrender" RelativePath="common\nullrender\nullrender.vcxproj" MSBuildName="common\renderFramework\nullrender"/>
+      <Project Name="platform" RelativePath="win32\platform\platform.vcxproj" MSBuildName="platform\platform"/>
+      <Project Name="platformCommon" RelativePath="common\platformCommon\platformCommon.vcxproj" MSBuildName="platform\platformCommon"/>
+      <Project Name="platformDurango" RelativePath="durango\platformDurango\platformDurango.vcxproj" MSBuildName="platform\platformDurango"/>
+      <Project Name="platformOrbis" RelativePath="orbis\platformOrbis\platformOrbis.vcxproj" MSBuildName="platform\platformOrbis"/>
+      <Project Name="r4" RelativePath="games\r4\r4.vcxproj" MSBuildName="games\r4\r4"/>
+      <Project Name="r4Launcher" RelativePath="games\r4Launcher\r4Launcher.vcxproj" MSBuildName="games\r4\r4Launcher"/>
+      <Project Name="r6" RelativePath="games\r6\r6.vcxproj" MSBuildName="games\r6\r6"/>
+      <Project Name="r6game" RelativePath="win32\r6game\r6game.vcxproj" MSBuildName="games\r6\windows\r6game"/>
+      <Project Name="redContainers" RelativePath="common\redContainers\redContainers.vcxproj" MSBuildName="common\kernelFramework\redContainers"/>
+      <Project Name="redIO" RelativePath="common\redIO\redIO.vcxproj" MSBuildName="common\kernelFramework\redIO"/>
+      <Project Name="redMath" RelativePath="common\redMath\redMath.vcxproj" MSBuildName="common\kernelFramework\redMath"/>
+      <Project Name="redMemoryFramework" RelativePath="common\redMemoryFramework\redMemoryFramework.vcxproj" MSBuildName="common\kernelFramework\redMemoryFramework"/>
+      <Project Name="redSystem" RelativePath="common\redSystem\redSystem.vcxproj" MSBuildName="common\kernelFramework\redSystem"/>
+      <Project Name="redThreads" RelativePath="common\redThreads\redThreads.vcxproj" MSBuildName="common\kernelFramework\redThreads"/>
+      <Project Name="render" RelativePath="common\renderer\render.vcxproj" MSBuildName="common\renderFramework\render"/>
+      <Project Name="resf" RelativePath="resf\resf.vcxproj" MSBuildName="tools\resf"/>
+      <Project Name="scriptStudio" RelativePath="win32\scriptStudio\scriptStudio.vcxproj" MSBuildName="tools\scriptStudio"/>
+      <Project Name="scripts" RelativePath="common\scripts\scripts.vcxproj" MSBuildName="common\scripts"/>
+      <Project Name="unitTestsCore" RelativePath="tests\unitTestsCore\unitTestsCore.vcxproj" MSBuildName="tests\unitTestsCore"/>
+      <Project Name="unitTestsEngine" RelativePath="tests\unitTestsEngine\unitTestsEngine.vcxproj" MSBuildName="tests\unitTestsEngine"/>
+      <Project Name="unitTestsFramework" RelativePath="tests\unitTestsFramework\unitTestsFramework.vcxproj" MSBuildName="tests\unitTestsFramework"/>
+      <Project Name="unitTestsGame" RelativePath="tests\unitTestsGame\unitTestsGame.vcxproj" MSBuildName="tests\unitTestsGame"/>
+      <Project Name="unitTestsGpuApi" RelativePath="tests\unitTestsGpuApi\unitTestsGpuApi.vcxproj" MSBuildName="tests\unitTestsGpuApi"/>
+      <Project Name="unitTestsKernel" RelativePath="tests\unitTestsKernel\unitTestsKernel.vcxproj" MSBuildName="tests\unitTestsKernel"/>
+      <Project Name="versionControl" RelativePath="win32\versionControl\versionControl.vcxproj" MSBuildName="tools\versionControl"/>
+      <Project Name="wcc" RelativePath="win32\wcc\wcc.vcxproj" MSBuildName="tools\wcc"/>
+      <Project Name="wcc_lite" RelativePath="win32\wcc\wcc_lite.vcxproj" MSBuildName="tools\wcc_lite"/>
+    </Configuration>
+    <Configuration Name="Release|Durango"/>
+    <Configuration Name="Release|ORBIS">
+      <Project Name="RedNetwork" RelativePath="common\redNetwork\RedNetwork.vcxproj" MSBuildName="common\kernelFramework\RedNetwork"/>
+      <Project Name="bundlebuilder" RelativePath="win32\bundlebuilder\bundlebuilder.vcxproj" MSBuildName="tools\bundlebuilder"/>
+      <Project Name="core" RelativePath="common\core\core.vcxproj" MSBuildName="common\core"/>
+      <Project Name="dlcTool" RelativePath="win32\dlcTool\dlcTool.vcxproj" MSBuildName="tools\dlcTool"/>
+      <Project Name="editor" RelativePath="win32\editor\editor.vcxproj" MSBuildName="tools\editor"/>
+      <Project Name="engine" RelativePath="common\engine\engine.vcxproj" MSBuildName="common\engine"/>
+      <Project Name="game" RelativePath="common\game\game.vcxproj" MSBuildName="common\game"/>
+      <Project Name="gpuApiDX10" RelativePath="common\gpuApiDX10\gpuApiDX10.vcxproj" MSBuildName="common\renderFramework\gpuApiDX10"/>
+      <Project Name="gpuApiGnm" RelativePath="common\gpuApiGnm\gpuApiGnm.vcxproj" MSBuildName="common\renderFramework\gpuApiGnm"/>
+      <Project Name="gpuApiUtils" RelativePath="common\gpuApiUtils\gpuApiUtils.vcxproj" MSBuildName="common\renderFramework\gpuApiUtils"/>
+      <Project Name="importer" RelativePath="win32\importer\importer.vcxproj" MSBuildName="tools\importer"/>
+      <Project Name="matcompiler" RelativePath="common\matcompiler\matcompiler.vcxproj" MSBuildName="tools\matcompiler"/>
+      <Project Name="nullrender" RelativePath="common\nullrender\nullrender.vcxproj" MSBuildName="common\renderFramework\nullrender"/>
+      <Project Name="platform" RelativePath="win32\platform\platform.vcxproj" MSBuildName="platform\platform"/>
+      <Project Name="platformCommon" RelativePath="common\platformCommon\platformCommon.vcxproj" MSBuildName="platform\platformCommon"/>
+      <Project Name="platformDurango" RelativePath="durango\platformDurango\platformDurango.vcxproj" MSBuildName="platform\platformDurango"/>
+      <Project Name="platformOrbis" RelativePath="orbis\platformOrbis\platformOrbis.vcxproj" MSBuildName="platform\platformOrbis"/>
+      <Project Name="r4" RelativePath="games\r4\r4.vcxproj" MSBuildName="games\r4\r4"/>
+      <Project Name="r4Launcher" RelativePath="games\r4Launcher\r4Launcher.vcxproj" MSBuildName="games\r4\r4Launcher"/>
+      <Project Name="r6" RelativePath="games\r6\r6.vcxproj" MSBuildName="games\r6\r6"/>
+      <Project Name="r6game" RelativePath="win32\r6game\r6game.vcxproj" MSBuildName="games\r6\windows\r6game"/>
+      <Project Name="redContainers" RelativePath="common\redContainers\redContainers.vcxproj" MSBuildName="common\kernelFramework\redContainers"/>
+      <Project Name="redIO" RelativePath="common\redIO\redIO.vcxproj" MSBuildName="common\kernelFramework\redIO"/>
+      <Project Name="redMath" RelativePath="common\redMath\redMath.vcxproj" MSBuildName="common\kernelFramework\redMath"/>
+      <Project Name="redMemoryFramework" RelativePath="common\redMemoryFramework\redMemoryFramework.vcxproj" MSBuildName="common\kernelFramework\redMemoryFramework"/>
+      <Project Name="redSystem" RelativePath="common\redSystem\redSystem.vcxproj" MSBuildName="common\kernelFramework\redSystem"/>
+      <Project Name="redThreads" RelativePath="common\redThreads\redThreads.vcxproj" MSBuildName="common\kernelFramework\redThreads"/>
+      <Project Name="render" RelativePath="common\renderer\render.vcxproj" MSBuildName="common\renderFramework\render"/>
+      <Project Name="resf" RelativePath="resf\resf.vcxproj" MSBuildName="tools\resf"/>
+      <Project Name="scriptStudio" RelativePath="win32\scriptStudio\scriptStudio.vcxproj" MSBuildName="tools\scriptStudio"/>
+      <Project Name="scripts" RelativePath="common\scripts\scripts.vcxproj" MSBuildName="common\scripts"/>
+      <Project Name="unitTestsCore" RelativePath="tests\unitTestsCore\unitTestsCore.vcxproj" MSBuildName="tests\unitTestsCore"/>
+      <Project Name="unitTestsEngine" RelativePath="tests\unitTestsEngine\unitTestsEngine.vcxproj" MSBuildName="tests\unitTestsEngine"/>
+      <Project Name="unitTestsFramework" RelativePath="tests\unitTestsFramework\unitTestsFramework.vcxproj" MSBuildName="tests\unitTestsFramework"/>
+      <Project Name="unitTestsGame" RelativePath="tests\unitTestsGame\unitTestsGame.vcxproj" MSBuildName="tests\unitTestsGame"/>
+      <Project Name="unitTestsGpuApi" RelativePath="tests\unitTestsGpuApi\unitTestsGpuApi.vcxproj" MSBuildName="tests\unitTestsGpuApi"/>
+      <Project Name="unitTestsKernel" RelativePath="tests\unitTestsKernel\unitTestsKernel.vcxproj" MSBuildName="tests\unitTestsKernel"/>
+      <Project Name="versionControl" RelativePath="win32\versionControl\versionControl.vcxproj" MSBuildName="tools\versionControl"/>
+      <Project Name="wcc" RelativePath="win32\wcc\wcc.vcxproj" MSBuildName="tools\wcc"/>
+      <Project Name="wcc_lite" RelativePath="win32\wcc\wcc_lite.vcxproj" MSBuildName="tools\wcc_lite"/>
+    </Configuration>
+    <Configuration Name="Release|Win32"/>
+    <Configuration Name="Release|x64"/>
+  </Preset>
+  <Preset Name="All_Durango" FormatVersion="1">
+    <Configuration Name="Debug|Durango">
+      <Project Name="RedNetwork" RelativePath="common\redNetwork\RedNetwork.vcxproj" MSBuildName="common\kernelFramework\RedNetwork"/>
+      <Project Name="bundlebuilder" RelativePath="win32\bundlebuilder\bundlebuilder.vcxproj" MSBuildName="tools\bundlebuilder"/>
+      <Project Name="core" RelativePath="common\core\core.vcxproj" MSBuildName="common\core"/>
+      <Project Name="dlcTool" RelativePath="win32\dlcTool\dlcTool.vcxproj" MSBuildName="tools\dlcTool"/>
+      <Project Name="editor" RelativePath="win32\editor\editor.vcxproj" MSBuildName="tools\editor"/>
+      <Project Name="engine" RelativePath="common\engine\engine.vcxproj" MSBuildName="common\engine"/>
+      <Project Name="game" RelativePath="common\game\game.vcxproj" MSBuildName="common\game"/>
+      <Project Name="gpuApiDX10" RelativePath="common\gpuApiDX10\gpuApiDX10.vcxproj" MSBuildName="common\renderFramework\gpuApiDX10"/>
+      <Project Name="gpuApiGnm" RelativePath="common\gpuApiGnm\gpuApiGnm.vcxproj" MSBuildName="common\renderFramework\gpuApiGnm"/>
+      <Project Name="gpuApiUtils" RelativePath="common\gpuApiUtils\gpuApiUtils.vcxproj" MSBuildName="common\renderFramework\gpuApiUtils"/>
+      <Project Name="importer" RelativePath="win32\importer\importer.vcxproj" MSBuildName="tools\importer"/>
+      <Project Name="matcompiler" RelativePath="common\matcompiler\matcompiler.vcxproj" MSBuildName="tools\matcompiler"/>
+      <Project Name="nullrender" RelativePath="common\nullrender\nullrender.vcxproj" MSBuildName="common\renderFramework\nullrender"/>
+      <Project Name="platform" RelativePath="win32\platform\platform.vcxproj" MSBuildName="platform\platform"/>
+      <Project Name="platformCommon" RelativePath="common\platformCommon\platformCommon.vcxproj" MSBuildName="platform\platformCommon"/>
+      <Project Name="platformDurango" RelativePath="durango\platformDurango\platformDurango.vcxproj" MSBuildName="platform\platformDurango"/>
+      <Project Name="platformOrbis" RelativePath="orbis\platformOrbis\platformOrbis.vcxproj" MSBuildName="platform\platformOrbis"/>
+      <Project Name="r4" RelativePath="games\r4\r4.vcxproj" MSBuildName="games\r4\r4"/>
+      <Project Name="r4Launcher" RelativePath="games\r4Launcher\r4Launcher.vcxproj" MSBuildName="games\r4\r4Launcher"/>
+      <Project Name="r6" RelativePath="games\r6\r6.vcxproj" MSBuildName="games\r6\r6"/>
+      <Project Name="r6game" RelativePath="win32\r6game\r6game.vcxproj" MSBuildName="games\r6\windows\r6game"/>
+      <Project Name="redContainers" RelativePath="common\redContainers\redContainers.vcxproj" MSBuildName="common\kernelFramework\redContainers"/>
+      <Project Name="redIO" RelativePath="common\redIO\redIO.vcxproj" MSBuildName="common\kernelFramework\redIO"/>
+      <Project Name="redMath" RelativePath="common\redMath\redMath.vcxproj" MSBuildName="common\kernelFramework\redMath"/>
+      <Project Name="redMemoryFramework" RelativePath="common\redMemoryFramework\redMemoryFramework.vcxproj" MSBuildName="common\kernelFramework\redMemoryFramework"/>
+      <Project Name="redSystem" RelativePath="common\redSystem\redSystem.vcxproj" MSBuildName="common\kernelFramework\redSystem"/>
+      <Project Name="redThreads" RelativePath="common\redThreads\redThreads.vcxproj" MSBuildName="common\kernelFramework\redThreads"/>
+      <Project Name="render" RelativePath="common\renderer\render.vcxproj" MSBuildName="common\renderFramework\render"/>
+      <Project Name="resf" RelativePath="resf\resf.vcxproj" MSBuildName="tools\resf"/>
+      <Project Name="scriptStudio" RelativePath="win32\scriptStudio\scriptStudio.vcxproj" MSBuildName="tools\scriptStudio"/>
+      <Project Name="scripts" RelativePath="common\scripts\scripts.vcxproj" MSBuildName="common\scripts"/>
+      <Project Name="unitTestsCore" RelativePath="tests\unitTestsCore\unitTestsCore.vcxproj" MSBuildName="tests\unitTestsCore"/>
+      <Project Name="unitTestsEngine" RelativePath="tests\unitTestsEngine\unitTestsEngine.vcxproj" MSBuildName="tests\unitTestsEngine"/>
+      <Project Name="unitTestsFramework" RelativePath="tests\unitTestsFramework\unitTestsFramework.vcxproj" MSBuildName="tests\unitTestsFramework"/>
+      <Project Name="unitTestsGame" RelativePath="tests\unitTestsGame\unitTestsGame.vcxproj" MSBuildName="tests\unitTestsGame"/>
+      <Project Name="unitTestsGpuApi" RelativePath="tests\unitTestsGpuApi\unitTestsGpuApi.vcxproj" MSBuildName="tests\unitTestsGpuApi"/>
+      <Project Name="unitTestsKernel" RelativePath="tests\unitTestsKernel\unitTestsKernel.vcxproj" MSBuildName="tests\unitTestsKernel"/>
+      <Project Name="versionControl" RelativePath="win32\versionControl\versionControl.vcxproj" MSBuildName="tools\versionControl"/>
+      <Project Name="wcc" RelativePath="win32\wcc\wcc.vcxproj" MSBuildName="tools\wcc"/>
+      <Project Name="wcc_lite" RelativePath="win32\wcc\wcc_lite.vcxproj" MSBuildName="tools\wcc_lite"/>
+    </Configuration>
+    <Configuration Name="Debug|ORBIS"/>
+    <Configuration Name="Debug|Win32"/>
+    <Configuration Name="Debug|x64"/>
+    <Configuration Name="FinalWithLogging|Durango">
+      <Project Name="RedNetwork" RelativePath="common\redNetwork\RedNetwork.vcxproj" MSBuildName="common\kernelFramework\RedNetwork"/>
+      <Project Name="bundlebuilder" RelativePath="win32\bundlebuilder\bundlebuilder.vcxproj" MSBuildName="tools\bundlebuilder"/>
+      <Project Name="core" RelativePath="common\core\core.vcxproj" MSBuildName="common\core"/>
+      <Project Name="dlcTool" RelativePath="win32\dlcTool\dlcTool.vcxproj" MSBuildName="tools\dlcTool"/>
+      <Project Name="editor" RelativePath="win32\editor\editor.vcxproj" MSBuildName="tools\editor"/>
+      <Project Name="engine" RelativePath="common\engine\engine.vcxproj" MSBuildName="common\engine"/>
+      <Project Name="game" RelativePath="common\game\game.vcxproj" MSBuildName="common\game"/>
+      <Project Name="gpuApiDX10" RelativePath="common\gpuApiDX10\gpuApiDX10.vcxproj" MSBuildName="common\renderFramework\gpuApiDX10"/>
+      <Project Name="gpuApiGnm" RelativePath="common\gpuApiGnm\gpuApiGnm.vcxproj" MSBuildName="common\renderFramework\gpuApiGnm"/>
+      <Project Name="gpuApiUtils" RelativePath="common\gpuApiUtils\gpuApiUtils.vcxproj" MSBuildName="common\renderFramework\gpuApiUtils"/>
+      <Project Name="importer" RelativePath="win32\importer\importer.vcxproj" MSBuildName="tools\importer"/>
+      <Project Name="matcompiler" RelativePath="common\matcompiler\matcompiler.vcxproj" MSBuildName="tools\matcompiler"/>
+      <Project Name="nullrender" RelativePath="common\nullrender\nullrender.vcxproj" MSBuildName="common\renderFramework\nullrender"/>
+      <Project Name="platform" RelativePath="win32\platform\platform.vcxproj" MSBuildName="platform\platform"/>
+      <Project Name="platformCommon" RelativePath="common\platformCommon\platformCommon.vcxproj" MSBuildName="platform\platformCommon"/>
+      <Project Name="platformDurango" RelativePath="durango\platformDurango\platformDurango.vcxproj" MSBuildName="platform\platformDurango"/>
+      <Project Name="platformOrbis" RelativePath="orbis\platformOrbis\platformOrbis.vcxproj" MSBuildName="platform\platformOrbis"/>
+      <Project Name="r4" RelativePath="games\r4\r4.vcxproj" MSBuildName="games\r4\r4"/>
+      <Project Name="r4Launcher" RelativePath="games\r4Launcher\r4Launcher.vcxproj" MSBuildName="games\r4\r4Launcher"/>
+      <Project Name="r6" RelativePath="games\r6\r6.vcxproj" MSBuildName="games\r6\r6"/>
+      <Project Name="r6game" RelativePath="win32\r6game\r6game.vcxproj" MSBuildName="games\r6\windows\r6game"/>
+      <Project Name="redContainers" RelativePath="common\redContainers\redContainers.vcxproj" MSBuildName="common\kernelFramework\redContainers"/>
+      <Project Name="redIO" RelativePath="common\redIO\redIO.vcxproj" MSBuildName="common\kernelFramework\redIO"/>
+      <Project Name="redMath" RelativePath="common\redMath\redMath.vcxproj" MSBuildName="common\kernelFramework\redMath"/>
+      <Project Name="redMemoryFramework" RelativePath="common\redMemoryFramework\redMemoryFramework.vcxproj" MSBuildName="common\kernelFramework\redMemoryFramework"/>
+      <Project Name="redSystem" RelativePath="common\redSystem\redSystem.vcxproj" MSBuildName="common\kernelFramework\redSystem"/>
+      <Project Name="redThreads" RelativePath="common\redThreads\redThreads.vcxproj" MSBuildName="common\kernelFramework\redThreads"/>
+      <Project Name="render" RelativePath="common\renderer\render.vcxproj" MSBuildName="common\renderFramework\render"/>
+      <Project Name="resf" RelativePath="resf\resf.vcxproj" MSBuildName="tools\resf"/>
+      <Project Name="scriptStudio" RelativePath="win32\scriptStudio\scriptStudio.vcxproj" MSBuildName="tools\scriptStudio"/>
+      <Project Name="scripts" RelativePath="common\scripts\scripts.vcxproj" MSBuildName="common\scripts"/>
+      <Project Name="unitTestsCore" RelativePath="tests\unitTestsCore\unitTestsCore.vcxproj" MSBuildName="tests\unitTestsCore"/>
+      <Project Name="unitTestsEngine" RelativePath="tests\unitTestsEngine\unitTestsEngine.vcxproj" MSBuildName="tests\unitTestsEngine"/>
+      <Project Name="unitTestsFramework" RelativePath="tests\unitTestsFramework\unitTestsFramework.vcxproj" MSBuildName="tests\unitTestsFramework"/>
+      <Project Name="unitTestsGame" RelativePath="tests\unitTestsGame\unitTestsGame.vcxproj" MSBuildName="tests\unitTestsGame"/>
+      <Project Name="unitTestsGpuApi" RelativePath="tests\unitTestsGpuApi\unitTestsGpuApi.vcxproj" MSBuildName="tests\unitTestsGpuApi"/>
+      <Project Name="unitTestsKernel" RelativePath="tests\unitTestsKernel\unitTestsKernel.vcxproj" MSBuildName="tests\unitTestsKernel"/>
+      <Project Name="versionControl" RelativePath="win32\versionControl\versionControl.vcxproj" MSBuildName="tools\versionControl"/>
+      <Project Name="wcc" RelativePath="win32\wcc\wcc.vcxproj" MSBuildName="tools\wcc"/>
+      <Project Name="wcc_lite" RelativePath="win32\wcc\wcc_lite.vcxproj" MSBuildName="tools\wcc_lite"/>
+    </Configuration>
+    <Configuration Name="FinalWithLogging|x64"/>
+    <Configuration Name="Final|Durango">
+      <Project Name="RedNetwork" RelativePath="common\redNetwork\RedNetwork.vcxproj" MSBuildName="common\kernelFramework\RedNetwork"/>
+      <Project Name="bundlebuilder" RelativePath="win32\bundlebuilder\bundlebuilder.vcxproj" MSBuildName="tools\bundlebuilder"/>
+      <Project Name="core" RelativePath="common\core\core.vcxproj" MSBuildName="common\core"/>
+      <Project Name="dlcTool" RelativePath="win32\dlcTool\dlcTool.vcxproj" MSBuildName="tools\dlcTool"/>
+      <Project Name="editor" RelativePath="win32\editor\editor.vcxproj" MSBuildName="tools\editor"/>
+      <Project Name="engine" RelativePath="common\engine\engine.vcxproj" MSBuildName="common\engine"/>
+      <Project Name="game" RelativePath="common\game\game.vcxproj" MSBuildName="common\game"/>
+      <Project Name="gpuApiDX10" RelativePath="common\gpuApiDX10\gpuApiDX10.vcxproj" MSBuildName="common\renderFramework\gpuApiDX10"/>
+      <Project Name="gpuApiGnm" RelativePath="common\gpuApiGnm\gpuApiGnm.vcxproj" MSBuildName="common\renderFramework\gpuApiGnm"/>
+      <Project Name="gpuApiUtils" RelativePath="common\gpuApiUtils\gpuApiUtils.vcxproj" MSBuildName="common\renderFramework\gpuApiUtils"/>
+      <Project Name="importer" RelativePath="win32\importer\importer.vcxproj" MSBuildName="tools\importer"/>
+      <Project Name="matcompiler" RelativePath="common\matcompiler\matcompiler.vcxproj" MSBuildName="tools\matcompiler"/>
+      <Project Name="nullrender" RelativePath="common\nullrender\nullrender.vcxproj" MSBuildName="common\renderFramework\nullrender"/>
+      <Project Name="platform" RelativePath="win32\platform\platform.vcxproj" MSBuildName="platform\platform"/>
+      <Project Name="platformCommon" RelativePath="common\platformCommon\platformCommon.vcxproj" MSBuildName="platform\platformCommon"/>
+      <Project Name="platformDurango" RelativePath="durango\platformDurango\platformDurango.vcxproj" MSBuildName="platform\platformDurango"/>
+      <Project Name="platformOrbis" RelativePath="orbis\platformOrbis\platformOrbis.vcxproj" MSBuildName="platform\platformOrbis"/>
+      <Project Name="r4" RelativePath="games\r4\r4.vcxproj" MSBuildName="games\r4\r4"/>
+      <Project Name="r4Launcher" RelativePath="games\r4Launcher\r4Launcher.vcxproj" MSBuildName="games\r4\r4Launcher"/>
+      <Project Name="r6" RelativePath="games\r6\r6.vcxproj" MSBuildName="games\r6\r6"/>
+      <Project Name="r6game" RelativePath="win32\r6game\r6game.vcxproj" MSBuildName="games\r6\windows\r6game"/>
+      <Project Name="redContainers" RelativePath="common\redContainers\redContainers.vcxproj" MSBuildName="common\kernelFramework\redContainers"/>
+      <Project Name="redIO" RelativePath="common\redIO\redIO.vcxproj" MSBuildName="common\kernelFramework\redIO"/>
+      <Project Name="redMath" RelativePath="common\redMath\redMath.vcxproj" MSBuildName="common\kernelFramework\redMath"/>
+      <Project Name="redMemoryFramework" RelativePath="common\redMemoryFramework\redMemoryFramework.vcxproj" MSBuildName="common\kernelFramework\redMemoryFramework"/>
+      <Project Name="redSystem" RelativePath="common\redSystem\redSystem.vcxproj" MSBuildName="common\kernelFramework\redSystem"/>
+      <Project Name="redThreads" RelativePath="common\redThreads\redThreads.vcxproj" MSBuildName="common\kernelFramework\redThreads"/>
+      <Project Name="render" RelativePath="common\renderer\render.vcxproj" MSBuildName="common\renderFramework\render"/>
+      <Project Name="resf" RelativePath="resf\resf.vcxproj" MSBuildName="tools\resf"/>
+      <Project Name="scriptStudio" RelativePath="win32\scriptStudio\scriptStudio.vcxproj" MSBuildName="tools\scriptStudio"/>
+      <Project Name="scripts" RelativePath="common\scripts\scripts.vcxproj" MSBuildName="common\scripts"/>
+      <Project Name="unitTestsCore" RelativePath="tests\unitTestsCore\unitTestsCore.vcxproj" MSBuildName="tests\unitTestsCore"/>
+      <Project Name="unitTestsEngine" RelativePath="tests\unitTestsEngine\unitTestsEngine.vcxproj" MSBuildName="tests\unitTestsEngine"/>
+      <Project Name="unitTestsFramework" RelativePath="tests\unitTestsFramework\unitTestsFramework.vcxproj" MSBuildName="tests\unitTestsFramework"/>
+      <Project Name="unitTestsGame" RelativePath="tests\unitTestsGame\unitTestsGame.vcxproj" MSBuildName="tests\unitTestsGame"/>
+      <Project Name="unitTestsGpuApi" RelativePath="tests\unitTestsGpuApi\unitTestsGpuApi.vcxproj" MSBuildName="tests\unitTestsGpuApi"/>
+      <Project Name="unitTestsKernel" RelativePath="tests\unitTestsKernel\unitTestsKernel.vcxproj" MSBuildName="tests\unitTestsKernel"/>
+      <Project Name="versionControl" RelativePath="win32\versionControl\versionControl.vcxproj" MSBuildName="tools\versionControl"/>
+      <Project Name="wcc" RelativePath="win32\wcc\wcc.vcxproj" MSBuildName="tools\wcc"/>
+      <Project Name="wcc_lite" RelativePath="win32\wcc\wcc_lite.vcxproj" MSBuildName="tools\wcc_lite"/>
+    </Configuration>
+    <Configuration Name="Final|ORBIS"/>
+    <Configuration Name="Final|Win32"/>
+    <Configuration Name="Final|x64"/>
+    <Configuration Name="No opts|Durango">
+      <Project Name="RedNetwork" RelativePath="common\redNetwork\RedNetwork.vcxproj" MSBuildName="common\kernelFramework\RedNetwork"/>
+      <Project Name="bundlebuilder" RelativePath="win32\bundlebuilder\bundlebuilder.vcxproj" MSBuildName="tools\bundlebuilder"/>
+      <Project Name="core" RelativePath="common\core\core.vcxproj" MSBuildName="common\core"/>
+      <Project Name="dlcTool" RelativePath="win32\dlcTool\dlcTool.vcxproj" MSBuildName="tools\dlcTool"/>
+      <Project Name="editor" RelativePath="win32\editor\editor.vcxproj" MSBuildName="tools\editor"/>
+      <Project Name="engine" RelativePath="common\engine\engine.vcxproj" MSBuildName="common\engine"/>
+      <Project Name="game" RelativePath="common\game\game.vcxproj" MSBuildName="common\game"/>
+      <Project Name="gpuApiDX10" RelativePath="common\gpuApiDX10\gpuApiDX10.vcxproj" MSBuildName="common\renderFramework\gpuApiDX10"/>
+      <Project Name="gpuApiGnm" RelativePath="common\gpuApiGnm\gpuApiGnm.vcxproj" MSBuildName="common\renderFramework\gpuApiGnm"/>
+      <Project Name="gpuApiUtils" RelativePath="common\gpuApiUtils\gpuApiUtils.vcxproj" MSBuildName="common\renderFramework\gpuApiUtils"/>
+      <Project Name="importer" RelativePath="win32\importer\importer.vcxproj" MSBuildName="tools\importer"/>
+      <Project Name="matcompiler" RelativePath="common\matcompiler\matcompiler.vcxproj" MSBuildName="tools\matcompiler"/>
+      <Project Name="nullrender" RelativePath="common\nullrender\nullrender.vcxproj" MSBuildName="common\renderFramework\nullrender"/>
+      <Project Name="platform" RelativePath="win32\platform\platform.vcxproj" MSBuildName="platform\platform"/>
+      <Project Name="platformCommon" RelativePath="common\platformCommon\platformCommon.vcxproj" MSBuildName="platform\platformCommon"/>
+      <Project Name="platformDurango" RelativePath="durango\platformDurango\platformDurango.vcxproj" MSBuildName="platform\platformDurango"/>
+      <Project Name="platformOrbis" RelativePath="orbis\platformOrbis\platformOrbis.vcxproj" MSBuildName="platform\platformOrbis"/>
+      <Project Name="r4" RelativePath="games\r4\r4.vcxproj" MSBuildName="games\r4\r4"/>
+      <Project Name="r4Launcher" RelativePath="games\r4Launcher\r4Launcher.vcxproj" MSBuildName="games\r4\r4Launcher"/>
+      <Project Name="r6" RelativePath="games\r6\r6.vcxproj" MSBuildName="games\r6\r6"/>
+      <Project Name="r6game" RelativePath="win32\r6game\r6game.vcxproj" MSBuildName="games\r6\windows\r6game"/>
+      <Project Name="redContainers" RelativePath="common\redContainers\redContainers.vcxproj" MSBuildName="common\kernelFramework\redContainers"/>
+      <Project Name="redIO" RelativePath="common\redIO\redIO.vcxproj" MSBuildName="common\kernelFramework\redIO"/>
+      <Project Name="redMath" RelativePath="common\redMath\redMath.vcxproj" MSBuildName="common\kernelFramework\redMath"/>
+      <Project Name="redMemoryFramework" RelativePath="common\redMemoryFramework\redMemoryFramework.vcxproj" MSBuildName="common\kernelFramework\redMemoryFramework"/>
+      <Project Name="redSystem" RelativePath="common\redSystem\redSystem.vcxproj" MSBuildName="common\kernelFramework\redSystem"/>
+      <Project Name="redThreads" RelativePath="common\redThreads\redThreads.vcxproj" MSBuildName="common\kernelFramework\redThreads"/>
+      <Project Name="render" RelativePath="common\renderer\render.vcxproj" MSBuildName="common\renderFramework\render"/>
+      <Project Name="resf" RelativePath="resf\resf.vcxproj" MSBuildName="tools\resf"/>
+      <Project Name="scriptStudio" RelativePath="win32\scriptStudio\scriptStudio.vcxproj" MSBuildName="tools\scriptStudio"/>
+      <Project Name="scripts" RelativePath="common\scripts\scripts.vcxproj" MSBuildName="common\scripts"/>
+      <Project Name="unitTestsCore" RelativePath="tests\unitTestsCore\unitTestsCore.vcxproj" MSBuildName="tests\unitTestsCore"/>
+      <Project Name="unitTestsEngine" RelativePath="tests\unitTestsEngine\unitTestsEngine.vcxproj" MSBuildName="tests\unitTestsEngine"/>
+      <Project Name="unitTestsFramework" RelativePath="tests\unitTestsFramework\unitTestsFramework.vcxproj" MSBuildName="tests\unitTestsFramework"/>
+      <Project Name="unitTestsGame" RelativePath="tests\unitTestsGame\unitTestsGame.vcxproj" MSBuildName="tests\unitTestsGame"/>
+      <Project Name="unitTestsGpuApi" RelativePath="tests\unitTestsGpuApi\unitTestsGpuApi.vcxproj" MSBuildName="tests\unitTestsGpuApi"/>
+      <Project Name="unitTestsKernel" RelativePath="tests\unitTestsKernel\unitTestsKernel.vcxproj" MSBuildName="tests\unitTestsKernel"/>
+      <Project Name="versionControl" RelativePath="win32\versionControl\versionControl.vcxproj" MSBuildName="tools\versionControl"/>
+      <Project Name="wcc" RelativePath="win32\wcc\wcc.vcxproj" MSBuildName="tools\wcc"/>
+      <Project Name="wcc_lite" RelativePath="win32\wcc\wcc_lite.vcxproj" MSBuildName="tools\wcc_lite"/>
+    </Configuration>
+    <Configuration Name="No opts|ORBIS"/>
+    <Configuration Name="No opts|Win32"/>
+    <Configuration Name="No opts|x64"/>
+    <Configuration Name="Profiling|Durango">
+      <Project Name="RedNetwork" RelativePath="common\redNetwork\RedNetwork.vcxproj" MSBuildName="common\kernelFramework\RedNetwork"/>
+      <Project Name="bundlebuilder" RelativePath="win32\bundlebuilder\bundlebuilder.vcxproj" MSBuildName="tools\bundlebuilder"/>
+      <Project Name="core" RelativePath="common\core\core.vcxproj" MSBuildName="common\core"/>
+      <Project Name="dlcTool" RelativePath="win32\dlcTool\dlcTool.vcxproj" MSBuildName="tools\dlcTool"/>
+      <Project Name="editor" RelativePath="win32\editor\editor.vcxproj" MSBuildName="tools\editor"/>
+      <Project Name="engine" RelativePath="common\engine\engine.vcxproj" MSBuildName="common\engine"/>
+      <Project Name="game" RelativePath="common\game\game.vcxproj" MSBuildName="common\game"/>
+      <Project Name="gpuApiDX10" RelativePath="common\gpuApiDX10\gpuApiDX10.vcxproj" MSBuildName="common\renderFramework\gpuApiDX10"/>
+      <Project Name="gpuApiGnm" RelativePath="common\gpuApiGnm\gpuApiGnm.vcxproj" MSBuildName="common\renderFramework\gpuApiGnm"/>
+      <Project Name="gpuApiUtils" RelativePath="common\gpuApiUtils\gpuApiUtils.vcxproj" MSBuildName="common\renderFramework\gpuApiUtils"/>
+      <Project Name="importer" RelativePath="win32\importer\importer.vcxproj" MSBuildName="tools\importer"/>
+      <Project Name="matcompiler" RelativePath="common\matcompiler\matcompiler.vcxproj" MSBuildName="tools\matcompiler"/>
+      <Project Name="nullrender" RelativePath="common\nullrender\nullrender.vcxproj" MSBuildName="common\renderFramework\nullrender"/>
+      <Project Name="platform" RelativePath="win32\platform\platform.vcxproj" MSBuildName="platform\platform"/>
+      <Project Name="platformCommon" RelativePath="common\platformCommon\platformCommon.vcxproj" MSBuildName="platform\platformCommon"/>
+      <Project Name="platformDurango" RelativePath="durango\platformDurango\platformDurango.vcxproj" MSBuildName="platform\platformDurango"/>
+      <Project Name="platformOrbis" RelativePath="orbis\platformOrbis\platformOrbis.vcxproj" MSBuildName="platform\platformOrbis"/>
+      <Project Name="r4" RelativePath="games\r4\r4.vcxproj" MSBuildName="games\r4\r4"/>
+      <Project Name="r4Launcher" RelativePath="games\r4Launcher\r4Launcher.vcxproj" MSBuildName="games\r4\r4Launcher"/>
+      <Project Name="r6" RelativePath="games\r6\r6.vcxproj" MSBuildName="games\r6\r6"/>
+      <Project Name="r6game" RelativePath="win32\r6game\r6game.vcxproj" MSBuildName="games\r6\windows\r6game"/>
+      <Project Name="redContainers" RelativePath="common\redContainers\redContainers.vcxproj" MSBuildName="common\kernelFramework\redContainers"/>
+      <Project Name="redIO" RelativePath="common\redIO\redIO.vcxproj" MSBuildName="common\kernelFramework\redIO"/>
+      <Project Name="redMath" RelativePath="common\redMath\redMath.vcxproj" MSBuildName="common\kernelFramework\redMath"/>
+      <Project Name="redMemoryFramework" RelativePath="common\redMemoryFramework\redMemoryFramework.vcxproj" MSBuildName="common\kernelFramework\redMemoryFramework"/>
+      <Project Name="redSystem" RelativePath="common\redSystem\redSystem.vcxproj" MSBuildName="common\kernelFramework\redSystem"/>
+      <Project Name="redThreads" RelativePath="common\redThreads\redThreads.vcxproj" MSBuildName="common\kernelFramework\redThreads"/>
+      <Project Name="render" RelativePath="common\renderer\render.vcxproj" MSBuildName="common\renderFramework\render"/>
+      <Project Name="resf" RelativePath="resf\resf.vcxproj" MSBuildName="tools\resf"/>
+      <Project Name="scriptStudio" RelativePath="win32\scriptStudio\scriptStudio.vcxproj" MSBuildName="tools\scriptStudio"/>
+      <Project Name="scripts" RelativePath="common\scripts\scripts.vcxproj" MSBuildName="common\scripts"/>
+      <Project Name="unitTestsCore" RelativePath="tests\unitTestsCore\unitTestsCore.vcxproj" MSBuildName="tests\unitTestsCore"/>
+      <Project Name="unitTestsEngine" RelativePath="tests\unitTestsEngine\unitTestsEngine.vcxproj" MSBuildName="tests\unitTestsEngine"/>
+      <Project Name="unitTestsFramework" RelativePath="tests\unitTestsFramework\unitTestsFramework.vcxproj" MSBuildName="tests\unitTestsFramework"/>
+      <Project Name="unitTestsGame" RelativePath="tests\unitTestsGame\unitTestsGame.vcxproj" MSBuildName="tests\unitTestsGame"/>
+      <Project Name="unitTestsGpuApi" RelativePath="tests\unitTestsGpuApi\unitTestsGpuApi.vcxproj" MSBuildName="tests\unitTestsGpuApi"/>
+      <Project Name="unitTestsKernel" RelativePath="tests\unitTestsKernel\unitTestsKernel.vcxproj" MSBuildName="tests\unitTestsKernel"/>
+      <Project Name="versionControl" RelativePath="win32\versionControl\versionControl.vcxproj" MSBuildName="tools\versionControl"/>
+      <Project Name="wcc" RelativePath="win32\wcc\wcc.vcxproj" MSBuildName="tools\wcc"/>
+      <Project Name="wcc_lite" RelativePath="win32\wcc\wcc_lite.vcxproj" MSBuildName="tools\wcc_lite"/>
+    </Configuration>
+    <Configuration Name="Profiling|x64"/>
+    <Configuration Name="ReleaseGame|Durango">
+      <Project Name="RedNetwork" RelativePath="common\redNetwork\RedNetwork.vcxproj" MSBuildName="common\kernelFramework\RedNetwork"/>
+      <Project Name="bundlebuilder" RelativePath="win32\bundlebuilder\bundlebuilder.vcxproj" MSBuildName="tools\bundlebuilder"/>
+      <Project Name="core" RelativePath="common\core\core.vcxproj" MSBuildName="common\core"/>
+      <Project Name="dlcTool" RelativePath="win32\dlcTool\dlcTool.vcxproj" MSBuildName="tools\dlcTool"/>
+      <Project Name="editor" RelativePath="win32\editor\editor.vcxproj" MSBuildName="tools\editor"/>
+      <Project Name="engine" RelativePath="common\engine\engine.vcxproj" MSBuildName="common\engine"/>
+      <Project Name="game" RelativePath="common\game\game.vcxproj" MSBuildName="common\game"/>
+      <Project Name="gpuApiDX10" RelativePath="common\gpuApiDX10\gpuApiDX10.vcxproj" MSBuildName="common\renderFramework\gpuApiDX10"/>
+      <Project Name="gpuApiGnm" RelativePath="common\gpuApiGnm\gpuApiGnm.vcxproj" MSBuildName="common\renderFramework\gpuApiGnm"/>
+      <Project Name="gpuApiUtils" RelativePath="common\gpuApiUtils\gpuApiUtils.vcxproj" MSBuildName="common\renderFramework\gpuApiUtils"/>
+      <Project Name="importer" RelativePath="win32\importer\importer.vcxproj" MSBuildName="tools\importer"/>
+      <Project Name="matcompiler" RelativePath="common\matcompiler\matcompiler.vcxproj" MSBuildName="tools\matcompiler"/>
+      <Project Name="nullrender" RelativePath="common\nullrender\nullrender.vcxproj" MSBuildName="common\renderFramework\nullrender"/>
+      <Project Name="platform" RelativePath="win32\platform\platform.vcxproj" MSBuildName="platform\platform"/>
+      <Project Name="platformCommon" RelativePath="common\platformCommon\platformCommon.vcxproj" MSBuildName="platform\platformCommon"/>
+      <Project Name="platformDurango" RelativePath="durango\platformDurango\platformDurango.vcxproj" MSBuildName="platform\platformDurango"/>
+      <Project Name="platformOrbis" RelativePath="orbis\platformOrbis\platformOrbis.vcxproj" MSBuildName="platform\platformOrbis"/>
+      <Project Name="r4" RelativePath="games\r4\r4.vcxproj" MSBuildName="games\r4\r4"/>
+      <Project Name="r4Launcher" RelativePath="games\r4Launcher\r4Launcher.vcxproj" MSBuildName="games\r4\r4Launcher"/>
+      <Project Name="r6" RelativePath="games\r6\r6.vcxproj" MSBuildName="games\r6\r6"/>
+      <Project Name="r6game" RelativePath="win32\r6game\r6game.vcxproj" MSBuildName="games\r6\windows\r6game"/>
+      <Project Name="redContainers" RelativePath="common\redContainers\redContainers.vcxproj" MSBuildName="common\kernelFramework\redContainers"/>
+      <Project Name="redIO" RelativePath="common\redIO\redIO.vcxproj" MSBuildName="common\kernelFramework\redIO"/>
+      <Project Name="redMath" RelativePath="common\redMath\redMath.vcxproj" MSBuildName="common\kernelFramework\redMath"/>
+      <Project Name="redMemoryFramework" RelativePath="common\redMemoryFramework\redMemoryFramework.vcxproj" MSBuildName="common\kernelFramework\redMemoryFramework"/>
+      <Project Name="redSystem" RelativePath="common\redSystem\redSystem.vcxproj" MSBuildName="common\kernelFramework\redSystem"/>
+      <Project Name="redThreads" RelativePath="common\redThreads\redThreads.vcxproj" MSBuildName="common\kernelFramework\redThreads"/>
+      <Project Name="render" RelativePath="common\renderer\render.vcxproj" MSBuildName="common\renderFramework\render"/>
+      <Project Name="resf" RelativePath="resf\resf.vcxproj" MSBuildName="tools\resf"/>
+      <Project Name="scriptStudio" RelativePath="win32\scriptStudio\scriptStudio.vcxproj" MSBuildName="tools\scriptStudio"/>
+      <Project Name="scripts" RelativePath="common\scripts\scripts.vcxproj" MSBuildName="common\scripts"/>
+      <Project Name="unitTestsCore" RelativePath="tests\unitTestsCore\unitTestsCore.vcxproj" MSBuildName="tests\unitTestsCore"/>
+      <Project Name="unitTestsEngine" RelativePath="tests\unitTestsEngine\unitTestsEngine.vcxproj" MSBuildName="tests\unitTestsEngine"/>
+      <Project Name="unitTestsFramework" RelativePath="tests\unitTestsFramework\unitTestsFramework.vcxproj" MSBuildName="tests\unitTestsFramework"/>
+      <Project Name="unitTestsGame" RelativePath="tests\unitTestsGame\unitTestsGame.vcxproj" MSBuildName="tests\unitTestsGame"/>
+      <Project Name="unitTestsGpuApi" RelativePath="tests\unitTestsGpuApi\unitTestsGpuApi.vcxproj" MSBuildName="tests\unitTestsGpuApi"/>
+      <Project Name="unitTestsKernel" RelativePath="tests\unitTestsKernel\unitTestsKernel.vcxproj" MSBuildName="tests\unitTestsKernel"/>
+      <Project Name="versionControl" RelativePath="win32\versionControl\versionControl.vcxproj" MSBuildName="tools\versionControl"/>
+      <Project Name="wcc" RelativePath="win32\wcc\wcc.vcxproj" MSBuildName="tools\wcc"/>
+      <Project Name="wcc_lite" RelativePath="win32\wcc\wcc_lite.vcxproj" MSBuildName="tools\wcc_lite"/>
+    </Configuration>
+    <Configuration Name="ReleaseGame|Win32"/>
+    <Configuration Name="ReleaseGame|x64"/>
+    <Configuration Name="Release|Durango">
+      <Project Name="RedNetwork" RelativePath="common\redNetwork\RedNetwork.vcxproj" MSBuildName="common\kernelFramework\RedNetwork"/>
+      <Project Name="bundlebuilder" RelativePath="win32\bundlebuilder\bundlebuilder.vcxproj" MSBuildName="tools\bundlebuilder"/>
+      <Project Name="core" RelativePath="common\core\core.vcxproj" MSBuildName="common\core"/>
+      <Project Name="dlcTool" RelativePath="win32\dlcTool\dlcTool.vcxproj" MSBuildName="tools\dlcTool"/>
+      <Project Name="editor" RelativePath="win32\editor\editor.vcxproj" MSBuildName="tools\editor"/>
+      <Project Name="engine" RelativePath="common\engine\engine.vcxproj" MSBuildName="common\engine"/>
+      <Project Name="game" RelativePath="common\game\game.vcxproj" MSBuildName="common\game"/>
+      <Project Name="gpuApiDX10" RelativePath="common\gpuApiDX10\gpuApiDX10.vcxproj" MSBuildName="common\renderFramework\gpuApiDX10"/>
+      <Project Name="gpuApiGnm" RelativePath="common\gpuApiGnm\gpuApiGnm.vcxproj" MSBuildName="common\renderFramework\gpuApiGnm"/>
+      <Project Name="gpuApiUtils" RelativePath="common\gpuApiUtils\gpuApiUtils.vcxproj" MSBuildName="common\renderFramework\gpuApiUtils"/>
+      <Project Name="importer" RelativePath="win32\importer\importer.vcxproj" MSBuildName="tools\importer"/>
+      <Project Name="matcompiler" RelativePath="common\matcompiler\matcompiler.vcxproj" MSBuildName="tools\matcompiler"/>
+      <Project Name="nullrender" RelativePath="common\nullrender\nullrender.vcxproj" MSBuildName="common\renderFramework\nullrender"/>
+      <Project Name="platform" RelativePath="win32\platform\platform.vcxproj" MSBuildName="platform\platform"/>
+      <Project Name="platformCommon" RelativePath="common\platformCommon\platformCommon.vcxproj" MSBuildName="platform\platformCommon"/>
+      <Project Name="platformDurango" RelativePath="durango\platformDurango\platformDurango.vcxproj" MSBuildName="platform\platformDurango"/>
+      <Project Name="platformOrbis" RelativePath="orbis\platformOrbis\platformOrbis.vcxproj" MSBuildName="platform\platformOrbis"/>
+      <Project Name="r4" RelativePath="games\r4\r4.vcxproj" MSBuildName="games\r4\r4"/>
+      <Project Name="r4Launcher" RelativePath="games\r4Launcher\r4Launcher.vcxproj" MSBuildName="games\r4\r4Launcher"/>
+      <Project Name="r6" RelativePath="games\r6\r6.vcxproj" MSBuildName="games\r6\r6"/>
+      <Project Name="r6game" RelativePath="win32\r6game\r6game.vcxproj" MSBuildName="games\r6\windows\r6game"/>
+      <Project Name="redContainers" RelativePath="common\redContainers\redContainers.vcxproj" MSBuildName="common\kernelFramework\redContainers"/>
+      <Project Name="redIO" RelativePath="common\redIO\redIO.vcxproj" MSBuildName="common\kernelFramework\redIO"/>
+      <Project Name="redMath" RelativePath="common\redMath\redMath.vcxproj" MSBuildName="common\kernelFramework\redMath"/>
+      <Project Name="redMemoryFramework" RelativePath="common\redMemoryFramework\redMemoryFramework.vcxproj" MSBuildName="common\kernelFramework\redMemoryFramework"/>
+      <Project Name="redSystem" RelativePath="common\redSystem\redSystem.vcxproj" MSBuildName="common\kernelFramework\redSystem"/>
+      <Project Name="redThreads" RelativePath="common\redThreads\redThreads.vcxproj" MSBuildName="common\kernelFramework\redThreads"/>
+      <Project Name="render" RelativePath="common\renderer\render.vcxproj" MSBuildName="common\renderFramework\render"/>
+      <Project Name="resf" RelativePath="resf\resf.vcxproj" MSBuildName="tools\resf"/>
+      <Project Name="scriptStudio" RelativePath="win32\scriptStudio\scriptStudio.vcxproj" MSBuildName="tools\scriptStudio"/>
+      <Project Name="scripts" RelativePath="common\scripts\scripts.vcxproj" MSBuildName="common\scripts"/>
+      <Project Name="unitTestsCore" RelativePath="tests\unitTestsCore\unitTestsCore.vcxproj" MSBuildName="tests\unitTestsCore"/>
+      <Project Name="unitTestsEngine" RelativePath="tests\unitTestsEngine\unitTestsEngine.vcxproj" MSBuildName="tests\unitTestsEngine"/>
+      <Project Name="unitTestsFramework" RelativePath="tests\unitTestsFramework\unitTestsFramework.vcxproj" MSBuildName="tests\unitTestsFramework"/>
+      <Project Name="unitTestsGame" RelativePath="tests\unitTestsGame\unitTestsGame.vcxproj" MSBuildName="tests\unitTestsGame"/>
+      <Project Name="unitTestsGpuApi" RelativePath="tests\unitTestsGpuApi\unitTestsGpuApi.vcxproj" MSBuildName="tests\unitTestsGpuApi"/>
+      <Project Name="unitTestsKernel" RelativePath="tests\unitTestsKernel\unitTestsKernel.vcxproj" MSBuildName="tests\unitTestsKernel"/>
+      <Project Name="versionControl" RelativePath="win32\versionControl\versionControl.vcxproj" MSBuildName="tools\versionControl"/>
+      <Project Name="wcc" RelativePath="win32\wcc\wcc.vcxproj" MSBuildName="tools\wcc"/>
+      <Project Name="wcc_lite" RelativePath="win32\wcc\wcc_lite.vcxproj" MSBuildName="tools\wcc_lite"/>
+    </Configuration>
+    <Configuration Name="Release|ORBIS"/>
+    <Configuration Name="Release|Win32"/>
+    <Configuration Name="Release|x64"/>
+  </Preset>
+  <Preset Name="All_x64" FormatVersion="1">
+    <Configuration Name="Debug|Durango"/>
+    <Configuration Name="Debug|ORBIS"/>
+    <Configuration Name="Debug|Win32"/>
+    <Configuration Name="Debug|x64">
+      <Project Name="RedNetwork" RelativePath="common\redNetwork\RedNetwork.vcxproj" MSBuildName="common\kernelFramework\RedNetwork"/>
+      <Project Name="bundlebuilder" RelativePath="win32\bundlebuilder\bundlebuilder.vcxproj" MSBuildName="tools\bundlebuilder"/>
+      <Project Name="core" RelativePath="common\core\core.vcxproj" MSBuildName="common\core"/>
+      <Project Name="dlcTool" RelativePath="win32\dlcTool\dlcTool.vcxproj" MSBuildName="tools\dlcTool"/>
+      <Project Name="editor" RelativePath="win32\editor\editor.vcxproj" MSBuildName="tools\editor"/>
+      <Project Name="engine" RelativePath="common\engine\engine.vcxproj" MSBuildName="common\engine"/>
+      <Project Name="game" RelativePath="common\game\game.vcxproj" MSBuildName="common\game"/>
+      <Project Name="gpuApiDX10" RelativePath="common\gpuApiDX10\gpuApiDX10.vcxproj" MSBuildName="common\renderFramework\gpuApiDX10"/>
+      <Project Name="gpuApiGnm" RelativePath="common\gpuApiGnm\gpuApiGnm.vcxproj" MSBuildName="common\renderFramework\gpuApiGnm"/>
+      <Project Name="gpuApiUtils" RelativePath="common\gpuApiUtils\gpuApiUtils.vcxproj" MSBuildName="common\renderFramework\gpuApiUtils"/>
+      <Project Name="importer" RelativePath="win32\importer\importer.vcxproj" MSBuildName="tools\importer"/>
+      <Project Name="matcompiler" RelativePath="common\matcompiler\matcompiler.vcxproj" MSBuildName="tools\matcompiler"/>
+      <Project Name="nullrender" RelativePath="common\nullrender\nullrender.vcxproj" MSBuildName="common\renderFramework\nullrender"/>
+      <Project Name="platform" RelativePath="win32\platform\platform.vcxproj" MSBuildName="platform\platform"/>
+      <Project Name="platformCommon" RelativePath="common\platformCommon\platformCommon.vcxproj" MSBuildName="platform\platformCommon"/>
+      <Project Name="platformDurango" RelativePath="durango\platformDurango\platformDurango.vcxproj" MSBuildName="platform\platformDurango"/>
+      <Project Name="platformOrbis" RelativePath="orbis\platformOrbis\platformOrbis.vcxproj" MSBuildName="platform\platformOrbis"/>
+      <Project Name="r4" RelativePath="games\r4\r4.vcxproj" MSBuildName="games\r4\r4"/>
+      <Project Name="r4Launcher" RelativePath="games\r4Launcher\r4Launcher.vcxproj" MSBuildName="games\r4\r4Launcher"/>
+      <Project Name="r6" RelativePath="games\r6\r6.vcxproj" MSBuildName="games\r6\r6"/>
+      <Project Name="r6game" RelativePath="win32\r6game\r6game.vcxproj" MSBuildName="games\r6\windows\r6game"/>
+      <Project Name="redContainers" RelativePath="common\redContainers\redContainers.vcxproj" MSBuildName="common\kernelFramework\redContainers"/>
+      <Project Name="redIO" RelativePath="common\redIO\redIO.vcxproj" MSBuildName="common\kernelFramework\redIO"/>
+      <Project Name="redMath" RelativePath="common\redMath\redMath.vcxproj" MSBuildName="common\kernelFramework\redMath"/>
+      <Project Name="redMemoryFramework" RelativePath="common\redMemoryFramework\redMemoryFramework.vcxproj" MSBuildName="common\kernelFramework\redMemoryFramework"/>
+      <Project Name="redSystem" RelativePath="common\redSystem\redSystem.vcxproj" MSBuildName="common\kernelFramework\redSystem"/>
+      <Project Name="redThreads" RelativePath="common\redThreads\redThreads.vcxproj" MSBuildName="common\kernelFramework\redThreads"/>
+      <Project Name="render" RelativePath="common\renderer\render.vcxproj" MSBuildName="common\renderFramework\render"/>
+      <Project Name="resf" RelativePath="resf\resf.vcxproj" MSBuildName="tools\resf"/>
+      <Project Name="scriptStudio" RelativePath="win32\scriptStudio\scriptStudio.vcxproj" MSBuildName="tools\scriptStudio"/>
+      <Project Name="scripts" RelativePath="common\scripts\scripts.vcxproj" MSBuildName="common\scripts"/>
+      <Project Name="unitTestsCore" RelativePath="tests\unitTestsCore\unitTestsCore.vcxproj" MSBuildName="tests\unitTestsCore"/>
+      <Project Name="unitTestsEngine" RelativePath="tests\unitTestsEngine\unitTestsEngine.vcxproj" MSBuildName="tests\unitTestsEngine"/>
+      <Project Name="unitTestsFramework" RelativePath="tests\unitTestsFramework\unitTestsFramework.vcxproj" MSBuildName="tests\unitTestsFramework"/>
+      <Project Name="unitTestsGame" RelativePath="tests\unitTestsGame\unitTestsGame.vcxproj" MSBuildName="tests\unitTestsGame"/>
+      <Project Name="unitTestsGpuApi" RelativePath="tests\unitTestsGpuApi\unitTestsGpuApi.vcxproj" MSBuildName="tests\unitTestsGpuApi"/>
+      <Project Name="unitTestsKernel" RelativePath="tests\unitTestsKernel\unitTestsKernel.vcxproj" MSBuildName="tests\unitTestsKernel"/>
+      <Project Name="versionControl" RelativePath="win32\versionControl\versionControl.vcxproj" MSBuildName="tools\versionControl"/>
+      <Project Name="wcc" RelativePath="win32\wcc\wcc.vcxproj" MSBuildName="tools\wcc"/>
+      <Project Name="wcc_lite" RelativePath="win32\wcc\wcc_lite.vcxproj" MSBuildName="tools\wcc_lite"/>
+    </Configuration>
+    <Configuration Name="FinalWithLogging|Durango"/>
+    <Configuration Name="FinalWithLogging|x64">
+      <Project Name="RedNetwork" RelativePath="common\redNetwork\RedNetwork.vcxproj" MSBuildName="common\kernelFramework\RedNetwork"/>
+      <Project Name="bundlebuilder" RelativePath="win32\bundlebuilder\bundlebuilder.vcxproj" MSBuildName="tools\bundlebuilder"/>
+      <Project Name="core" RelativePath="common\core\core.vcxproj" MSBuildName="common\core"/>
+      <Project Name="dlcTool" RelativePath="win32\dlcTool\dlcTool.vcxproj" MSBuildName="tools\dlcTool"/>
+      <Project Name="editor" RelativePath="win32\editor\editor.vcxproj" MSBuildName="tools\editor"/>
+      <Project Name="engine" RelativePath="common\engine\engine.vcxproj" MSBuildName="common\engine"/>
+      <Project Name="game" RelativePath="common\game\game.vcxproj" MSBuildName="common\game"/>
+      <Project Name="gpuApiDX10" RelativePath="common\gpuApiDX10\gpuApiDX10.vcxproj" MSBuildName="common\renderFramework\gpuApiDX10"/>
+      <Project Name="gpuApiGnm" RelativePath="common\gpuApiGnm\gpuApiGnm.vcxproj" MSBuildName="common\renderFramework\gpuApiGnm"/>
+      <Project Name="gpuApiUtils" RelativePath="common\gpuApiUtils\gpuApiUtils.vcxproj" MSBuildName="common\renderFramework\gpuApiUtils"/>
+      <Project Name="importer" RelativePath="win32\importer\importer.vcxproj" MSBuildName="tools\importer"/>
+      <Project Name="matcompiler" RelativePath="common\matcompiler\matcompiler.vcxproj" MSBuildName="tools\matcompiler"/>
+      <Project Name="nullrender" RelativePath="common\nullrender\nullrender.vcxproj" MSBuildName="common\renderFramework\nullrender"/>
+      <Project Name="platform" RelativePath="win32\platform\platform.vcxproj" MSBuildName="platform\platform"/>
+      <Project Name="platformCommon" RelativePath="common\platformCommon\platformCommon.vcxproj" MSBuildName="platform\platformCommon"/>
+      <Project Name="platformDurango" RelativePath="durango\platformDurango\platformDurango.vcxproj" MSBuildName="platform\platformDurango"/>
+      <Project Name="platformOrbis" RelativePath="orbis\platformOrbis\platformOrbis.vcxproj" MSBuildName="platform\platformOrbis"/>
+      <Project Name="r4" RelativePath="games\r4\r4.vcxproj" MSBuildName="games\r4\r4"/>
+      <Project Name="r4Launcher" RelativePath="games\r4Launcher\r4Launcher.vcxproj" MSBuildName="games\r4\r4Launcher"/>
+      <Project Name="r6" RelativePath="games\r6\r6.vcxproj" MSBuildName="games\r6\r6"/>
+      <Project Name="r6game" RelativePath="win32\r6game\r6game.vcxproj" MSBuildName="games\r6\windows\r6game"/>
+      <Project Name="redContainers" RelativePath="common\redContainers\redContainers.vcxproj" MSBuildName="common\kernelFramework\redContainers"/>
+      <Project Name="redIO" RelativePath="common\redIO\redIO.vcxproj" MSBuildName="common\kernelFramework\redIO"/>
+      <Project Name="redMath" RelativePath="common\redMath\redMath.vcxproj" MSBuildName="common\kernelFramework\redMath"/>
+      <Project Name="redMemoryFramework" RelativePath="common\redMemoryFramework\redMemoryFramework.vcxproj" MSBuildName="common\kernelFramework\redMemoryFramework"/>
+      <Project Name="redSystem" RelativePath="common\redSystem\redSystem.vcxproj" MSBuildName="common\kernelFramework\redSystem"/>
+      <Project Name="redThreads" RelativePath="common\redThreads\redThreads.vcxproj" MSBuildName="common\kernelFramework\redThreads"/>
+      <Project Name="render" RelativePath="common\renderer\render.vcxproj" MSBuildName="common\renderFramework\render"/>
+      <Project Name="resf" RelativePath="resf\resf.vcxproj" MSBuildName="tools\resf"/>
+      <Project Name="scriptStudio" RelativePath="win32\scriptStudio\scriptStudio.vcxproj" MSBuildName="tools\scriptStudio"/>
+      <Project Name="scripts" RelativePath="common\scripts\scripts.vcxproj" MSBuildName="common\scripts"/>
+      <Project Name="unitTestsCore" RelativePath="tests\unitTestsCore\unitTestsCore.vcxproj" MSBuildName="tests\unitTestsCore"/>
+      <Project Name="unitTestsEngine" RelativePath="tests\unitTestsEngine\unitTestsEngine.vcxproj" MSBuildName="tests\unitTestsEngine"/>
+      <Project Name="unitTestsFramework" RelativePath="tests\unitTestsFramework\unitTestsFramework.vcxproj" MSBuildName="tests\unitTestsFramework"/>
+      <Project Name="unitTestsGame" RelativePath="tests\unitTestsGame\unitTestsGame.vcxproj" MSBuildName="tests\unitTestsGame"/>
+      <Project Name="unitTestsGpuApi" RelativePath="tests\unitTestsGpuApi\unitTestsGpuApi.vcxproj" MSBuildName="tests\unitTestsGpuApi"/>
+      <Project Name="unitTestsKernel" RelativePath="tests\unitTestsKernel\unitTestsKernel.vcxproj" MSBuildName="tests\unitTestsKernel"/>
+      <Project Name="versionControl" RelativePath="win32\versionControl\versionControl.vcxproj" MSBuildName="tools\versionControl"/>
+      <Project Name="wcc" RelativePath="win32\wcc\wcc.vcxproj" MSBuildName="tools\wcc"/>
+      <Project Name="wcc_lite" RelativePath="win32\wcc\wcc_lite.vcxproj" MSBuildName="tools\wcc_lite"/>
+    </Configuration>
+    <Configuration Name="Final|Durango"/>
+    <Configuration Name="Final|ORBIS"/>
+    <Configuration Name="Final|Win32"/>
+    <Configuration Name="Final|x64">
+      <Project Name="RedNetwork" RelativePath="common\redNetwork\RedNetwork.vcxproj" MSBuildName="common\kernelFramework\RedNetwork"/>
+      <Project Name="bundlebuilder" RelativePath="win32\bundlebuilder\bundlebuilder.vcxproj" MSBuildName="tools\bundlebuilder"/>
+      <Project Name="core" RelativePath="common\core\core.vcxproj" MSBuildName="common\core"/>
+      <Project Name="dlcTool" RelativePath="win32\dlcTool\dlcTool.vcxproj" MSBuildName="tools\dlcTool"/>
+      <Project Name="editor" RelativePath="win32\editor\editor.vcxproj" MSBuildName="tools\editor"/>
+      <Project Name="engine" RelativePath="common\engine\engine.vcxproj" MSBuildName="common\engine"/>
+      <Project Name="game" RelativePath="common\game\game.vcxproj" MSBuildName="common\game"/>
+      <Project Name="gpuApiDX10" RelativePath="common\gpuApiDX10\gpuApiDX10.vcxproj" MSBuildName="common\renderFramework\gpuApiDX10"/>
+      <Project Name="gpuApiGnm" RelativePath="common\gpuApiGnm\gpuApiGnm.vcxproj" MSBuildName="common\renderFramework\gpuApiGnm"/>
+      <Project Name="gpuApiUtils" RelativePath="common\gpuApiUtils\gpuApiUtils.vcxproj" MSBuildName="common\renderFramework\gpuApiUtils"/>
+      <Project Name="importer" RelativePath="win32\importer\importer.vcxproj" MSBuildName="tools\importer"/>
+      <Project Name="matcompiler" RelativePath="common\matcompiler\matcompiler.vcxproj" MSBuildName="tools\matcompiler"/>
+      <Project Name="nullrender" RelativePath="common\nullrender\nullrender.vcxproj" MSBuildName="common\renderFramework\nullrender"/>
+      <Project Name="platform" RelativePath="win32\platform\platform.vcxproj" MSBuildName="platform\platform"/>
+      <Project Name="platformCommon" RelativePath="common\platformCommon\platformCommon.vcxproj" MSBuildName="platform\platformCommon"/>
+      <Project Name="platformDurango" RelativePath="durango\platformDurango\platformDurango.vcxproj" MSBuildName="platform\platformDurango"/>
+      <Project Name="platformOrbis" RelativePath="orbis\platformOrbis\platformOrbis.vcxproj" MSBuildName="platform\platformOrbis"/>
+      <Project Name="r4" RelativePath="games\r4\r4.vcxproj" MSBuildName="games\r4\r4"/>
+      <Project Name="r4Launcher" RelativePath="games\r4Launcher\r4Launcher.vcxproj" MSBuildName="games\r4\r4Launcher"/>
+      <Project Name="r6" RelativePath="games\r6\r6.vcxproj" MSBuildName="games\r6\r6"/>
+      <Project Name="r6game" RelativePath="win32\r6game\r6game.vcxproj" MSBuildName="games\r6\windows\r6game"/>
+      <Project Name="redContainers" RelativePath="common\redContainers\redContainers.vcxproj" MSBuildName="common\kernelFramework\redContainers"/>
+      <Project Name="redIO" RelativePath="common\redIO\redIO.vcxproj" MSBuildName="common\kernelFramework\redIO"/>
+      <Project Name="redMath" RelativePath="common\redMath\redMath.vcxproj" MSBuildName="common\kernelFramework\redMath"/>
+      <Project Name="redMemoryFramework" RelativePath="common\redMemoryFramework\redMemoryFramework.vcxproj" MSBuildName="common\kernelFramework\redMemoryFramework"/>
+      <Project Name="redSystem" RelativePath="common\redSystem\redSystem.vcxproj" MSBuildName="common\kernelFramework\redSystem"/>
+      <Project Name="redThreads" RelativePath="common\redThreads\redThreads.vcxproj" MSBuildName="common\kernelFramework\redThreads"/>
+      <Project Name="render" RelativePath="common\renderer\render.vcxproj" MSBuildName="common\renderFramework\render"/>
+      <Project Name="resf" RelativePath="resf\resf.vcxproj" MSBuildName="tools\resf"/>
+      <Project Name="scriptStudio" RelativePath="win32\scriptStudio\scriptStudio.vcxproj" MSBuildName="tools\scriptStudio"/>
+      <Project Name="scripts" RelativePath="common\scripts\scripts.vcxproj" MSBuildName="common\scripts"/>
+      <Project Name="unitTestsCore" RelativePath="tests\unitTestsCore\unitTestsCore.vcxproj" MSBuildName="tests\unitTestsCore"/>
+      <Project Name="unitTestsEngine" RelativePath="tests\unitTestsEngine\unitTestsEngine.vcxproj" MSBuildName="tests\unitTestsEngine"/>
+      <Project Name="unitTestsFramework" RelativePath="tests\unitTestsFramework\unitTestsFramework.vcxproj" MSBuildName="tests\unitTestsFramework"/>
+      <Project Name="unitTestsGame" RelativePath="tests\unitTestsGame\unitTestsGame.vcxproj" MSBuildName="tests\unitTestsGame"/>
+      <Project Name="unitTestsGpuApi" RelativePath="tests\unitTestsGpuApi\unitTestsGpuApi.vcxproj" MSBuildName="tests\unitTestsGpuApi"/>
+      <Project Name="unitTestsKernel" RelativePath="tests\unitTestsKernel\unitTestsKernel.vcxproj" MSBuildName="tests\unitTestsKernel"/>
+      <Project Name="versionControl" RelativePath="win32\versionControl\versionControl.vcxproj" MSBuildName="tools\versionControl"/>
+      <Project Name="wcc" RelativePath="win32\wcc\wcc.vcxproj" MSBuildName="tools\wcc"/>
+      <Project Name="wcc_lite" RelativePath="win32\wcc\wcc_lite.vcxproj" MSBuildName="tools\wcc_lite"/>
+    </Configuration>
+    <Configuration Name="No opts|Durango"/>
+    <Configuration Name="No opts|ORBIS"/>
+    <Configuration Name="No opts|Win32"/>
+    <Configuration Name="No opts|x64">
+      <Project Name="RedNetwork" RelativePath="common\redNetwork\RedNetwork.vcxproj" MSBuildName="common\kernelFramework\RedNetwork"/>
+      <Project Name="bundlebuilder" RelativePath="win32\bundlebuilder\bundlebuilder.vcxproj" MSBuildName="tools\bundlebuilder"/>
+      <Project Name="core" RelativePath="common\core\core.vcxproj" MSBuildName="common\core"/>
+      <Project Name="dlcTool" RelativePath="win32\dlcTool\dlcTool.vcxproj" MSBuildName="tools\dlcTool"/>
+      <Project Name="editor" RelativePath="win32\editor\editor.vcxproj" MSBuildName="tools\editor"/>
+      <Project Name="engine" RelativePath="common\engine\engine.vcxproj" MSBuildName="common\engine"/>
+      <Project Name="game" RelativePath="common\game\game.vcxproj" MSBuildName="common\game"/>
+      <Project Name="gpuApiDX10" RelativePath="common\gpuApiDX10\gpuApiDX10.vcxproj" MSBuildName="common\renderFramework\gpuApiDX10"/>
+      <Project Name="gpuApiGnm" RelativePath="common\gpuApiGnm\gpuApiGnm.vcxproj" MSBuildName="common\renderFramework\gpuApiGnm"/>
+      <Project Name="gpuApiUtils" RelativePath="common\gpuApiUtils\gpuApiUtils.vcxproj" MSBuildName="common\renderFramework\gpuApiUtils"/>
+      <Project Name="importer" RelativePath="win32\importer\importer.vcxproj" MSBuildName="tools\importer"/>
+      <Project Name="matcompiler" RelativePath="common\matcompiler\matcompiler.vcxproj" MSBuildName="tools\matcompiler"/>
+      <Project Name="nullrender" RelativePath="common\nullrender\nullrender.vcxproj" MSBuildName="common\renderFramework\nullrender"/>
+      <Project Name="platform" RelativePath="win32\platform\platform.vcxproj" MSBuildName="platform\platform"/>
+      <Project Name="platformCommon" RelativePath="common\platformCommon\platformCommon.vcxproj" MSBuildName="platform\platformCommon"/>
+      <Project Name="platformDurango" RelativePath="durango\platformDurango\platformDurango.vcxproj" MSBuildName="platform\platformDurango"/>
+      <Project Name="platformOrbis" RelativePath="orbis\platformOrbis\platformOrbis.vcxproj" MSBuildName="platform\platformOrbis"/>
+      <Project Name="r4" RelativePath="games\r4\r4.vcxproj" MSBuildName="games\r4\r4"/>
+      <Project Name="r4Launcher" RelativePath="games\r4Launcher\r4Launcher.vcxproj" MSBuildName="games\r4\r4Launcher"/>
+      <Project Name="r6" RelativePath="games\r6\r6.vcxproj" MSBuildName="games\r6\r6"/>
+      <Project Name="r6game" RelativePath="win32\r6game\r6game.vcxproj" MSBuildName="games\r6\windows\r6game"/>
+      <Project Name="redContainers" RelativePath="common\redContainers\redContainers.vcxproj" MSBuildName="common\kernelFramework\redContainers"/>
+      <Project Name="redIO" RelativePath="common\redIO\redIO.vcxproj" MSBuildName="common\kernelFramework\redIO"/>
+      <Project Name="redMath" RelativePath="common\redMath\redMath.vcxproj" MSBuildName="common\kernelFramework\redMath"/>
+      <Project Name="redMemoryFramework" RelativePath="common\redMemoryFramework\redMemoryFramework.vcxproj" MSBuildName="common\kernelFramework\redMemoryFramework"/>
+      <Project Name="redSystem" RelativePath="common\redSystem\redSystem.vcxproj" MSBuildName="common\kernelFramework\redSystem"/>
+      <Project Name="redThreads" RelativePath="common\redThreads\redThreads.vcxproj" MSBuildName="common\kernelFramework\redThreads"/>
+      <Project Name="render" RelativePath="common\renderer\render.vcxproj" MSBuildName="common\renderFramework\render"/>
+      <Project Name="resf" RelativePath="resf\resf.vcxproj" MSBuildName="tools\resf"/>
+      <Project Name="scriptStudio" RelativePath="win32\scriptStudio\scriptStudio.vcxproj" MSBuildName="tools\scriptStudio"/>
+      <Project Name="scripts" RelativePath="common\scripts\scripts.vcxproj" MSBuildName="common\scripts"/>
+      <Project Name="unitTestsCore" RelativePath="tests\unitTestsCore\unitTestsCore.vcxproj" MSBuildName="tests\unitTestsCore"/>
+      <Project Name="unitTestsEngine" RelativePath="tests\unitTestsEngine\unitTestsEngine.vcxproj" MSBuildName="tests\unitTestsEngine"/>
+      <Project Name="unitTestsFramework" RelativePath="tests\unitTestsFramework\unitTestsFramework.vcxproj" MSBuildName="tests\unitTestsFramework"/>
+      <Project Name="unitTestsGame" RelativePath="tests\unitTestsGame\unitTestsGame.vcxproj" MSBuildName="tests\unitTestsGame"/>
+      <Project Name="unitTestsGpuApi" RelativePath="tests\unitTestsGpuApi\unitTestsGpuApi.vcxproj" MSBuildName="tests\unitTestsGpuApi"/>
+      <Project Name="unitTestsKernel" RelativePath="tests\unitTestsKernel\unitTestsKernel.vcxproj" MSBuildName="tests\unitTestsKernel"/>
+      <Project Name="versionControl" RelativePath="win32\versionControl\versionControl.vcxproj" MSBuildName="tools\versionControl"/>
+      <Project Name="wcc" RelativePath="win32\wcc\wcc.vcxproj" MSBuildName="tools\wcc"/>
+      <Project Name="wcc_lite" RelativePath="win32\wcc\wcc_lite.vcxproj" MSBuildName="tools\wcc_lite"/>
+    </Configuration>
+    <Configuration Name="Profiling|Durango"/>
+    <Configuration Name="Profiling|x64">
+      <Project Name="RedNetwork" RelativePath="common\redNetwork\RedNetwork.vcxproj" MSBuildName="common\kernelFramework\RedNetwork"/>
+      <Project Name="bundlebuilder" RelativePath="win32\bundlebuilder\bundlebuilder.vcxproj" MSBuildName="tools\bundlebuilder"/>
+      <Project Name="core" RelativePath="common\core\core.vcxproj" MSBuildName="common\core"/>
+      <Project Name="dlcTool" RelativePath="win32\dlcTool\dlcTool.vcxproj" MSBuildName="tools\dlcTool"/>
+      <Project Name="editor" RelativePath="win32\editor\editor.vcxproj" MSBuildName="tools\editor"/>
+      <Project Name="engine" RelativePath="common\engine\engine.vcxproj" MSBuildName="common\engine"/>
+      <Project Name="game" RelativePath="common\game\game.vcxproj" MSBuildName="common\game"/>
+      <Project Name="gpuApiDX10" RelativePath="common\gpuApiDX10\gpuApiDX10.vcxproj" MSBuildName="common\renderFramework\gpuApiDX10"/>
+      <Project Name="gpuApiGnm" RelativePath="common\gpuApiGnm\gpuApiGnm.vcxproj" MSBuildName="common\renderFramework\gpuApiGnm"/>
+      <Project Name="gpuApiUtils" RelativePath="common\gpuApiUtils\gpuApiUtils.vcxproj" MSBuildName="common\renderFramework\gpuApiUtils"/>
+      <Project Name="importer" RelativePath="win32\importer\importer.vcxproj" MSBuildName="tools\importer"/>
+      <Project Name="matcompiler" RelativePath="common\matcompiler\matcompiler.vcxproj" MSBuildName="tools\matcompiler"/>
+      <Project Name="nullrender" RelativePath="common\nullrender\nullrender.vcxproj" MSBuildName="common\renderFramework\nullrender"/>
+      <Project Name="platform" RelativePath="win32\platform\platform.vcxproj" MSBuildName="platform\platform"/>
+      <Project Name="platformCommon" RelativePath="common\platformCommon\platformCommon.vcxproj" MSBuildName="platform\platformCommon"/>
+      <Project Name="platformDurango" RelativePath="durango\platformDurango\platformDurango.vcxproj" MSBuildName="platform\platformDurango"/>
+      <Project Name="platformOrbis" RelativePath="orbis\platformOrbis\platformOrbis.vcxproj" MSBuildName="platform\platformOrbis"/>
+      <Project Name="r4" RelativePath="games\r4\r4.vcxproj" MSBuildName="games\r4\r4"/>
+      <Project Name="r4Launcher" RelativePath="games\r4Launcher\r4Launcher.vcxproj" MSBuildName="games\r4\r4Launcher"/>
+      <Project Name="r6" RelativePath="games\r6\r6.vcxproj" MSBuildName="games\r6\r6"/>
+      <Project Name="r6game" RelativePath="win32\r6game\r6game.vcxproj" MSBuildName="games\r6\windows\r6game"/>
+      <Project Name="redContainers" RelativePath="common\redContainers\redContainers.vcxproj" MSBuildName="common\kernelFramework\redContainers"/>
+      <Project Name="redIO" RelativePath="common\redIO\redIO.vcxproj" MSBuildName="common\kernelFramework\redIO"/>
+      <Project Name="redMath" RelativePath="common\redMath\redMath.vcxproj" MSBuildName="common\kernelFramework\redMath"/>
+      <Project Name="redMemoryFramework" RelativePath="common\redMemoryFramework\redMemoryFramework.vcxproj" MSBuildName="common\kernelFramework\redMemoryFramework"/>
+      <Project Name="redSystem" RelativePath="common\redSystem\redSystem.vcxproj" MSBuildName="common\kernelFramework\redSystem"/>
+      <Project Name="redThreads" RelativePath="common\redThreads\redThreads.vcxproj" MSBuildName="common\kernelFramework\redThreads"/>
+      <Project Name="render" RelativePath="common\renderer\render.vcxproj" MSBuildName="common\renderFramework\render"/>
+      <Project Name="resf" RelativePath="resf\resf.vcxproj" MSBuildName="tools\resf"/>
+      <Project Name="scriptStudio" RelativePath="win32\scriptStudio\scriptStudio.vcxproj" MSBuildName="tools\scriptStudio"/>
+      <Project Name="scripts" RelativePath="common\scripts\scripts.vcxproj" MSBuildName="common\scripts"/>
+      <Project Name="unitTestsCore" RelativePath="tests\unitTestsCore\unitTestsCore.vcxproj" MSBuildName="tests\unitTestsCore"/>
+      <Project Name="unitTestsEngine" RelativePath="tests\unitTestsEngine\unitTestsEngine.vcxproj" MSBuildName="tests\unitTestsEngine"/>
+      <Project Name="unitTestsFramework" RelativePath="tests\unitTestsFramework\unitTestsFramework.vcxproj" MSBuildName="tests\unitTestsFramework"/>
+      <Project Name="unitTestsGame" RelativePath="tests\unitTestsGame\unitTestsGame.vcxproj" MSBuildName="tests\unitTestsGame"/>
+      <Project Name="unitTestsGpuApi" RelativePath="tests\unitTestsGpuApi\unitTestsGpuApi.vcxproj" MSBuildName="tests\unitTestsGpuApi"/>
+      <Project Name="unitTestsKernel" RelativePath="tests\unitTestsKernel\unitTestsKernel.vcxproj" MSBuildName="tests\unitTestsKernel"/>
+      <Project Name="versionControl" RelativePath="win32\versionControl\versionControl.vcxproj" MSBuildName="tools\versionControl"/>
+      <Project Name="wcc" RelativePath="win32\wcc\wcc.vcxproj" MSBuildName="tools\wcc"/>
+      <Project Name="wcc_lite" RelativePath="win32\wcc\wcc_lite.vcxproj" MSBuildName="tools\wcc_lite"/>
+    </Configuration>
+    <Configuration Name="ReleaseGame|Durango"/>
+    <Configuration Name="ReleaseGame|Win32"/>
+    <Configuration Name="ReleaseGame|x64">
+      <Project Name="RedNetwork" RelativePath="common\redNetwork\RedNetwork.vcxproj" MSBuildName="common\kernelFramework\RedNetwork"/>
+      <Project Name="bundlebuilder" RelativePath="win32\bundlebuilder\bundlebuilder.vcxproj" MSBuildName="tools\bundlebuilder"/>
+      <Project Name="core" RelativePath="common\core\core.vcxproj" MSBuildName="common\core"/>
+      <Project Name="dlcTool" RelativePath="win32\dlcTool\dlcTool.vcxproj" MSBuildName="tools\dlcTool"/>
+      <Project Name="editor" RelativePath="win32\editor\editor.vcxproj" MSBuildName="tools\editor"/>
+      <Project Name="engine" RelativePath="common\engine\engine.vcxproj" MSBuildName="common\engine"/>
+      <Project Name="game" RelativePath="common\game\game.vcxproj" MSBuildName="common\game"/>
+      <Project Name="gpuApiDX10" RelativePath="common\gpuApiDX10\gpuApiDX10.vcxproj" MSBuildName="common\renderFramework\gpuApiDX10"/>
+      <Project Name="gpuApiGnm" RelativePath="common\gpuApiGnm\gpuApiGnm.vcxproj" MSBuildName="common\renderFramework\gpuApiGnm"/>
+      <Project Name="gpuApiUtils" RelativePath="common\gpuApiUtils\gpuApiUtils.vcxproj" MSBuildName="common\renderFramework\gpuApiUtils"/>
+      <Project Name="importer" RelativePath="win32\importer\importer.vcxproj" MSBuildName="tools\importer"/>
+      <Project Name="matcompiler" RelativePath="common\matcompiler\matcompiler.vcxproj" MSBuildName="tools\matcompiler"/>
+      <Project Name="nullrender" RelativePath="common\nullrender\nullrender.vcxproj" MSBuildName="common\renderFramework\nullrender"/>
+      <Project Name="platform" RelativePath="win32\platform\platform.vcxproj" MSBuildName="platform\platform"/>
+      <Project Name="platformCommon" RelativePath="common\platformCommon\platformCommon.vcxproj" MSBuildName="platform\platformCommon"/>
+      <Project Name="platformDurango" RelativePath="durango\platformDurango\platformDurango.vcxproj" MSBuildName="platform\platformDurango"/>
+      <Project Name="platformOrbis" RelativePath="orbis\platformOrbis\platformOrbis.vcxproj" MSBuildName="platform\platformOrbis"/>
+      <Project Name="r4" RelativePath="games\r4\r4.vcxproj" MSBuildName="games\r4\r4"/>
+      <Project Name="r4Launcher" RelativePath="games\r4Launcher\r4Launcher.vcxproj" MSBuildName="games\r4\r4Launcher"/>
+      <Project Name="r6" RelativePath="games\r6\r6.vcxproj" MSBuildName="games\r6\r6"/>
+      <Project Name="r6game" RelativePath="win32\r6game\r6game.vcxproj" MSBuildName="games\r6\windows\r6game"/>
+      <Project Name="redContainers" RelativePath="common\redContainers\redContainers.vcxproj" MSBuildName="common\kernelFramework\redContainers"/>
+      <Project Name="redIO" RelativePath="common\redIO\redIO.vcxproj" MSBuildName="common\kernelFramework\redIO"/>
+      <Project Name="redMath" RelativePath="common\redMath\redMath.vcxproj" MSBuildName="common\kernelFramework\redMath"/>
+      <Project Name="redMemoryFramework" RelativePath="common\redMemoryFramework\redMemoryFramework.vcxproj" MSBuildName="common\kernelFramework\redMemoryFramework"/>
+      <Project Name="redSystem" RelativePath="common\redSystem\redSystem.vcxproj" MSBuildName="common\kernelFramework\redSystem"/>
+      <Project Name="redThreads" RelativePath="common\redThreads\redThreads.vcxproj" MSBuildName="common\kernelFramework\redThreads"/>
+      <Project Name="render" RelativePath="common\renderer\render.vcxproj" MSBuildName="common\renderFramework\render"/>
+      <Project Name="resf" RelativePath="resf\resf.vcxproj" MSBuildName="tools\resf"/>
+      <Project Name="scriptStudio" RelativePath="win32\scriptStudio\scriptStudio.vcxproj" MSBuildName="tools\scriptStudio"/>
+      <Project Name="scripts" RelativePath="common\scripts\scripts.vcxproj" MSBuildName="common\scripts"/>
+      <Project Name="unitTestsCore" RelativePath="tests\unitTestsCore\unitTestsCore.vcxproj" MSBuildName="tests\unitTestsCore"/>
+      <Project Name="unitTestsEngine" RelativePath="tests\unitTestsEngine\unitTestsEngine.vcxproj" MSBuildName="tests\unitTestsEngine"/>
+      <Project Name="unitTestsFramework" RelativePath="tests\unitTestsFramework\unitTestsFramework.vcxproj" MSBuildName="tests\unitTestsFramework"/>
+      <Project Name="unitTestsGame" RelativePath="tests\unitTestsGame\unitTestsGame.vcxproj" MSBuildName="tests\unitTestsGame"/>
+      <Project Name="unitTestsGpuApi" RelativePath="tests\unitTestsGpuApi\unitTestsGpuApi.vcxproj" MSBuildName="tests\unitTestsGpuApi"/>
+      <Project Name="unitTestsKernel" RelativePath="tests\unitTestsKernel\unitTestsKernel.vcxproj" MSBuildName="tests\unitTestsKernel"/>
+      <Project Name="versionControl" RelativePath="win32\versionControl\versionControl.vcxproj" MSBuildName="tools\versionControl"/>
+      <Project Name="wcc" RelativePath="win32\wcc\wcc.vcxproj" MSBuildName="tools\wcc"/>
+      <Project Name="wcc_lite" RelativePath="win32\wcc\wcc_lite.vcxproj" MSBuildName="tools\wcc_lite"/>
+    </Configuration>
+    <Configuration Name="Release|Durango"/>
+    <Configuration Name="Release|ORBIS"/>
+    <Configuration Name="Release|Win32"/>
+    <Configuration Name="Release|x64">
+      <Project Name="RedNetwork" RelativePath="common\redNetwork\RedNetwork.vcxproj" MSBuildName="common\kernelFramework\RedNetwork"/>
+      <Project Name="bundlebuilder" RelativePath="win32\bundlebuilder\bundlebuilder.vcxproj" MSBuildName="tools\bundlebuilder"/>
+      <Project Name="core" RelativePath="common\core\core.vcxproj" MSBuildName="common\core"/>
+      <Project Name="dlcTool" RelativePath="win32\dlcTool\dlcTool.vcxproj" MSBuildName="tools\dlcTool"/>
+      <Project Name="editor" RelativePath="win32\editor\editor.vcxproj" MSBuildName="tools\editor"/>
+      <Project Name="engine" RelativePath="common\engine\engine.vcxproj" MSBuildName="common\engine"/>
+      <Project Name="game" RelativePath="common\game\game.vcxproj" MSBuildName="common\game"/>
+      <Project Name="gpuApiDX10" RelativePath="common\gpuApiDX10\gpuApiDX10.vcxproj" MSBuildName="common\renderFramework\gpuApiDX10"/>
+      <Project Name="gpuApiGnm" RelativePath="common\gpuApiGnm\gpuApiGnm.vcxproj" MSBuildName="common\renderFramework\gpuApiGnm"/>
+      <Project Name="gpuApiUtils" RelativePath="common\gpuApiUtils\gpuApiUtils.vcxproj" MSBuildName="common\renderFramework\gpuApiUtils"/>
+      <Project Name="importer" RelativePath="win32\importer\importer.vcxproj" MSBuildName="tools\importer"/>
+      <Project Name="matcompiler" RelativePath="common\matcompiler\matcompiler.vcxproj" MSBuildName="tools\matcompiler"/>
+      <Project Name="nullrender" RelativePath="common\nullrender\nullrender.vcxproj" MSBuildName="common\renderFramework\nullrender"/>
+      <Project Name="platform" RelativePath="win32\platform\platform.vcxproj" MSBuildName="platform\platform"/>
+      <Project Name="platformCommon" RelativePath="common\platformCommon\platformCommon.vcxproj" MSBuildName="platform\platformCommon"/>
+      <Project Name="platformDurango" RelativePath="durango\platformDurango\platformDurango.vcxproj" MSBuildName="platform\platformDurango"/>
+      <Project Name="platformOrbis" RelativePath="orbis\platformOrbis\platformOrbis.vcxproj" MSBuildName="platform\platformOrbis"/>
+      <Project Name="r4" RelativePath="games\r4\r4.vcxproj" MSBuildName="games\r4\r4"/>
+      <Project Name="r4Launcher" RelativePath="games\r4Launcher\r4Launcher.vcxproj" MSBuildName="games\r4\r4Launcher"/>
+      <Project Name="r6" RelativePath="games\r6\r6.vcxproj" MSBuildName="games\r6\r6"/>
+      <Project Name="r6game" RelativePath="win32\r6game\r6game.vcxproj" MSBuildName="games\r6\windows\r6game"/>
+      <Project Name="redContainers" RelativePath="common\redContainers\redContainers.vcxproj" MSBuildName="common\kernelFramework\redContainers"/>
+      <Project Name="redIO" RelativePath="common\redIO\redIO.vcxproj" MSBuildName="common\kernelFramework\redIO"/>
+      <Project Name="redMath" RelativePath="common\redMath\redMath.vcxproj" MSBuildName="common\kernelFramework\redMath"/>
+      <Project Name="redMemoryFramework" RelativePath="common\redMemoryFramework\redMemoryFramework.vcxproj" MSBuildName="common\kernelFramework\redMemoryFramework"/>
+      <Project Name="redSystem" RelativePath="common\redSystem\redSystem.vcxproj" MSBuildName="common\kernelFramework\redSystem"/>
+      <Project Name="redThreads" RelativePath="common\redThreads\redThreads.vcxproj" MSBuildName="common\kernelFramework\redThreads"/>
+      <Project Name="render" RelativePath="common\renderer\render.vcxproj" MSBuildName="common\renderFramework\render"/>
+      <Project Name="resf" RelativePath="resf\resf.vcxproj" MSBuildName="tools\resf"/>
+      <Project Name="scriptStudio" RelativePath="win32\scriptStudio\scriptStudio.vcxproj" MSBuildName="tools\scriptStudio"/>
+      <Project Name="scripts" RelativePath="common\scripts\scripts.vcxproj" MSBuildName="common\scripts"/>
+      <Project Name="unitTestsCore" RelativePath="tests\unitTestsCore\unitTestsCore.vcxproj" MSBuildName="tests\unitTestsCore"/>
+      <Project Name="unitTestsEngine" RelativePath="tests\unitTestsEngine\unitTestsEngine.vcxproj" MSBuildName="tests\unitTestsEngine"/>
+      <Project Name="unitTestsFramework" RelativePath="tests\unitTestsFramework\unitTestsFramework.vcxproj" MSBuildName="tests\unitTestsFramework"/>
+      <Project Name="unitTestsGame" RelativePath="tests\unitTestsGame\unitTestsGame.vcxproj" MSBuildName="tests\unitTestsGame"/>
+      <Project Name="unitTestsGpuApi" RelativePath="tests\unitTestsGpuApi\unitTestsGpuApi.vcxproj" MSBuildName="tests\unitTestsGpuApi"/>
+      <Project Name="unitTestsKernel" RelativePath="tests\unitTestsKernel\unitTestsKernel.vcxproj" MSBuildName="tests\unitTestsKernel"/>
+      <Project Name="versionControl" RelativePath="win32\versionControl\versionControl.vcxproj" MSBuildName="tools\versionControl"/>
+      <Project Name="wcc" RelativePath="win32\wcc\wcc.vcxproj" MSBuildName="tools\wcc"/>
+      <Project Name="wcc_lite" RelativePath="win32\wcc\wcc_lite.vcxproj" MSBuildName="tools\wcc_lite"/>
+    </Configuration>
+  </Preset>
+</Presets>

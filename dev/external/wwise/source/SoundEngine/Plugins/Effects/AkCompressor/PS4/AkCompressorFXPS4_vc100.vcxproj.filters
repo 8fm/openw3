@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<Filter Include="Win32">
+			<UniqueIdentifier>{BFEBFEA3-8CB3-E047-B2E4-7000838EDAA5}</UniqueIdentifier>
+		</Filter>
+	</ItemGroup>
+	<ItemGroup>
+		<ClInclude Include="..\Win32\AkCompressorFX.h">
+			<Filter>Win32</Filter>
+		</ClInclude>
+		<ClInclude Include="..\AkCompressorFXParams.h" />
+	</ItemGroup>
+	<ItemGroup>
+		<ClCompile Include="..\Win32\AkCompressorFX.cpp">
+			<Filter>Win32</Filter>
+		</ClCompile>
+		<ClCompile Include="..\AkCompressorFXParams.cpp" />
+	</ItemGroup>
+</Project>

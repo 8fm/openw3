@@ -1,0 +1,2671 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<resource xmlns="http://www.wxwindows.org/wxxrc" version="2.3.0.1">
+	<object class="wxPanel" name="GeneralPanel">
+		<style>wxFULL_REPAINT_ON_RESIZE|wxTAB_TRAVERSAL</style>
+		<object class="wxBoxSizer">
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxEXPAND | wxALL</flag>
+				<border>5</border>
+				<object class="wxNotebook" name="mainNotebook" />
+			</object>
+		</object>
+	</object>
+	<object class="wxPanel" name="FlagsListPanel">
+		<style>wxCLIP_CHILDREN|wxTAB_TRAVERSAL</style>
+		<object class="wxBoxSizer">
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxToolBar" name="m_reviewSystemToolbar">
+					<style>wxTB_HORIZONTAL</style>
+					<bitmapsize></bitmapsize>
+					<margins></margins>
+					<packing>1</packing>
+					<separation>5</separation>
+					<object class="tool" name="m_showFlag">
+						<label>Show</label>
+						<tooltip>Show information about flag</tooltip>
+						<longhelp></longhelp>
+						<bitmap>images/eye.png</bitmap>
+					</object>
+					<object class="tool" name="m_newFlag">
+						<label>New</label>
+						<tooltip>Add new flag</tooltip>
+						<longhelp></longhelp>
+						<bitmap>images/add.png</bitmap>
+					</object>
+					<object class="tool" name="m_editFlag">
+						<label>Edit</label>
+						<tooltip>Edit flag</tooltip>
+						<longhelp></longhelp>
+						<bitmap>images/properties.png</bitmap>
+					</object>
+					<object class="separator" />
+					<object class="separator" />
+					<object class="wxSpinCtrl" name="m_autoSyncTime">
+						<style>wxSP_ARROW_KEYS</style>
+						<size>50,-1</size>
+						<tooltip>Time (in minutes) between refresh</tooltip>
+						<value>5</value>
+						<min>0</min>
+						<max>60</max>
+					</object>
+					<object class="separator" />
+					<object class="wxCheckBox" name="m_autoSyncEnable">
+						<tooltip>Enable automatic refresh</tooltip>
+						<label>Auto sync</label>
+						<checked>0</checked>
+					</object>
+					<object class="tool" name="m_refreshFlags">
+						<label>Refresh</label>
+						<tooltip>Refresh flags</tooltip>
+						<longhelp></longhelp>
+						<bitmap>images/refresh.png</bitmap>
+					</object>
+					<object class="tool" name="m_filters">
+						<label>Filters button</label>
+						<tooltip>Options</tooltip>
+						<longhelp></longhelp>
+						<bitmap>images/filter.png</bitmap>
+						<toggle>1</toggle>
+					</object>
+					<object class="tool" name="m_advancedSettings">
+						<label>Advanced settings</label>
+						<tooltip></tooltip>
+						<longhelp></longhelp>
+						<bitmap>images/asterisk.png</bitmap>
+						<toggle>1</toggle>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxEXPAND | wxALL</flag>
+				<border>5</border>
+				<object class="wxPanel" name="m_connectionPanel">
+					<style>wxTAB_TRAVERSAL</style>
+					<hidden>1</hidden>
+					<object class="wxBoxSizer">
+						<orient>wxVERTICAL</orient>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxALIGN_BOTTOM|wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
+							<border>5</border>
+							<object class="wxStaticText" name="m_disconnectInformation">
+								<fg>#ff0000</fg>
+								<font>
+									<family>default</family>
+									<style>normal</style>
+									<weight>bold</weight>
+									<underlined>0</underlined>
+								</font>
+								<label>Connection with database has been lost.</label>
+								<wrap>-1</wrap>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxALIGN_CENTER_HORIZONTAL</flag>
+							<border>5</border>
+							<object class="wxStaticText" name="m_staticText731">
+								<fg>#ff0000</fg>
+								<font>
+									<family>default</family>
+									<style>normal</style>
+									<weight>bold</weight>
+									<underlined>0</underlined>
+								</font>
+								<label>Please restart editor.</label>
+								<wrap>-1</wrap>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxEXPAND|wxTOP</flag>
+				<border>5</border>
+				<object class="wxPanel" name="m_advancedSettingsPanel">
+					<style>wxTAB_TRAVERSAL</style>
+					<hidden>1</hidden>
+					<object class="wxStaticBoxSizer">
+						<orient>wxVERTICAL</orient>
+						<label>Advanced settings</label>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxALL</flag>
+							<border>5</border>
+							<object class="wxStaticText" name="m_staticText741">
+								<fg>#ff0000</fg>
+								<font>
+									<family>default</family>
+									<style>normal</style>
+									<weight>bold</weight>
+									<underlined>0</underlined>
+								</font>
+								<label>Do not modify unless you know exactly what you are doing!</label>
+								<wrap>-1</wrap>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>1</option>
+							<flag>wxEXPAND</flag>
+							<border>5</border>
+							<object class="wxBoxSizer">
+								<orient>wxHORIZONTAL</orient>
+								<object class="sizeritem">
+									<option>0</option>
+									<flag>wxALIGN_CENTER|wxALL</flag>
+									<border>5</border>
+									<object class="wxStaticText" name="m_staticText311">
+										<size>110,-1</size>
+										<font>
+											<family>default</family>
+											<style>normal</style>
+											<weight>normal</weight>
+											<underlined>0</underlined>
+										</font>
+										<label>TestTrack project:</label>
+										<wrap>-1</wrap>
+									</object>
+								</object>
+								<object class="sizeritem">
+									<option>1</option>
+									<flag>wxALIGN_CENTER_VERTICAL</flag>
+									<border>5</border>
+									<object class="wxChoice" name="m_projectsTTP">
+										<selection>0</selection>
+										<content />
+									</object>
+								</object>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>1</option>
+							<flag>wxEXPAND</flag>
+							<border>5</border>
+							<object class="wxBoxSizer">
+								<orient>wxHORIZONTAL</orient>
+								<object class="sizeritem">
+									<option>0</option>
+									<flag>wxALIGN_CENTER|wxALL</flag>
+									<border>5</border>
+									<object class="wxStaticText" name="m_staticText3111">
+										<size>110,-1</size>
+										<font>
+											<family>default</family>
+											<style>normal</style>
+											<weight>normal</weight>
+											<underlined>0</underlined>
+										</font>
+										<label>TestTrack milestone:</label>
+										<wrap>-1</wrap>
+									</object>
+								</object>
+								<object class="sizeritem">
+									<option>1</option>
+									<flag>wxALIGN_CENTER_VERTICAL</flag>
+									<border>5</border>
+									<object class="wxChoice" name="m_milestonesTTP">
+										<selection>0</selection>
+										<content />
+									</object>
+								</object>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxEXPAND | wxALL</flag>
+				<border>0</border>
+				<object class="wxPanel" name="m_filtersPanel">
+					<style>wxTAB_TRAVERSAL</style>
+					<bg>#ffffff</bg>
+					<hidden>1</hidden>
+					<object class="wxStaticBoxSizer">
+						<orient>wxVERTICAL</orient>
+						<label>Options</label>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxEXPAND</flag>
+							<border>5</border>
+							<object class="wxBoxSizer">
+								<orient>wxHORIZONTAL</orient>
+								<object class="sizeritem">
+									<option>0</option>
+									<flag>wxALL</flag>
+									<border>5</border>
+									<object class="wxCheckBox" name="m_filterShowOnMap">
+										<label>Show on map</label>
+										<checked>0</checked>
+									</object>
+								</object>
+								<object class="sizeritem">
+									<option>0</option>
+									<flag>wxALL</flag>
+									<border>5</border>
+									<object class="wxCheckBox" name="m_filterDownloadClosedFlags">
+										<label>Download closed flags</label>
+										<checked>0</checked>
+									</object>
+								</object>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>1</option>
+							<flag>wxEXPAND</flag>
+							<border>5</border>
+							<object class="wxStaticBoxSizer">
+								<orient>wxVERTICAL</orient>
+								<label>Filters</label>
+								<object class="sizeritem">
+									<option>1</option>
+									<flag>wxEXPAND</flag>
+									<border>5</border>
+									<object class="wxGridSizer">
+										<rows>1</rows>
+										<cols>2</cols>
+										<vgap>0</vgap>
+										<hgap>5</hgap>
+										<object class="sizeritem">
+											<option>1</option>
+											<flag>wxEXPAND</flag>
+											<border>5</border>
+											<object class="wxBoxSizer">
+												<orient>wxVERTICAL</orient>
+												<object class="sizeritem">
+													<option>1</option>
+													<flag>wxALIGN_CENTER_VERTICAL|wxALIGN_CENTER_HORIZONTAL|wxEXPAND</flag>
+													<border>5</border>
+													<object class="wxCheckListBox" name="m_filterStatesList">
+														<style>wxLB_ALWAYS_SB</style>
+														<content />
+													</object>
+												</object>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>1</option>
+											<flag>wxEXPAND</flag>
+											<border>5</border>
+											<object class="wxBoxSizer">
+												<orient>wxVERTICAL</orient>
+												<object class="sizeritem">
+													<option>1</option>
+													<flag>wxALIGN_CENTER_VERTICAL|wxALIGN_CENTER_HORIZONTAL|wxEXPAND</flag>
+													<border>5</border>
+													<object class="wxCheckListBox" name="m_filterTypesList">
+														<style>wxLB_ALWAYS_SB</style>
+														<content />
+													</object>
+												</object>
+											</object>
+										</object>
+									</object>
+								</object>
+								<object class="sizeritem">
+									<option>0</option>
+									<flag>wxEXPAND|wxTOP</flag>
+									<border>5</border>
+									<object class="wxBoxSizer">
+										<orient>wxHORIZONTAL</orient>
+										<object class="sizeritem">
+											<option>1</option>
+											<flag>wxEXPAND|wxRIGHT</flag>
+											<border>5</border>
+											<object class="wxButton" name="m_filterButton">
+												<label>Apply</label>
+												<default>0</default>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxEXPAND|wxLEFT</flag>
+											<border>5</border>
+											<object class="wxButton" name="m_filterReset">
+												<label>Reset</label>
+												<default>0</default>
+											</object>
+										</object>
+									</object>
+								</object>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
+				<border>0</border>
+				<object class="wxPanel" name="m_mainPanel">
+					<style>wxFULL_REPAINT_ON_RESIZE|wxTAB_TRAVERSAL</style>
+					<object class="wxStaticBoxSizer">
+						<orient>wxVERTICAL</orient>
+						<label>Markers</label>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxEXPAND</flag>
+							<border>5</border>
+							<object class="wxBoxSizer">
+								<orient>wxHORIZONTAL</orient>
+								<object class="sizeritem">
+									<option>0</option>
+									<flag>wxTOP|wxBOTTOM|wxRIGHT</flag>
+									<border>5</border>
+									<object class="wxChoice" name="m_searchCategory">
+										<selection>1</selection>
+										<content>
+											<item>None</item>
+											<item>Summary</item>
+											<item>TTP No.</item>
+										</content>
+									</object>
+								</object>
+								<object class="sizeritem">
+									<option>1</option>
+									<flag>wxTOP|wxBOTTOM</flag>
+									<border>5</border>
+									<object class="wxTextCtrl" name="m_searchLine">
+										<style>wxTE_PROCESS_ENTER</style>
+										<value></value>
+									</object>
+								</object>
+								<object class="sizeritem">
+									<option>0</option>
+									<flag>wxALIGN_CENTER_VERTICAL</flag>
+									<border>5</border>
+									<object class="wxButton" name="m_searchButton">
+										<label>Search</label>
+										<default>0</default>
+									</object>
+								</object>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>1</option>
+							<flag>wxEXPAND</flag>
+							<border>5</border>
+							<object class="wxBoxSizer">
+								<orient>wxVERTICAL</orient>
+								<object class="sizeritem">
+									<option>0</option>
+									<flag>wxEXPAND</flag>
+									<border>5</border>
+									<object class="wxPanel" name="m_panel19">
+										<style>wxTAB_TRAVERSAL</style>
+										<hidden>1</hidden>
+										<object class="wxBoxSizer">
+											<orient>wxHORIZONTAL</orient>
+											<object class="sizeritem">
+												<option>0</option>
+												<flag>wxALL</flag>
+												<border>5</border>
+												<object class="wxBitmapButton" name="m_openedMarkerIcon">
+													<style>wxBU_AUTODRAW</style>
+													<bitmap>images/markers\openedReviewMarker.png</bitmap>
+													<default>0</default>
+												</object>
+											</object>
+											<object class="sizeritem">
+												<option>0</option>
+												<flag>wxALL</flag>
+												<border>5</border>
+												<object class="wxBitmapButton" name="m_fixedMarkerIcon">
+													<style>wxBU_AUTODRAW</style>
+													<bitmap>images/markers\fixedReviewMarker.png</bitmap>
+													<default>0</default>
+												</object>
+											</object>
+											<object class="sizeritem">
+												<option>0</option>
+												<flag>wxALL</flag>
+												<border>5</border>
+												<object class="wxBitmapButton" name="m_closedMarkerIcon">
+													<style>wxBU_AUTODRAW</style>
+													<bitmap>images/markers\closedReviewMarker.png</bitmap>
+													<default>0</default>
+												</object>
+											</object>
+										</object>
+									</object>
+								</object>
+								<object class="sizeritem">
+									<option>1</option>
+									<flag>wxALL|wxEXPAND</flag>
+									<border>5</border>
+									<object class="wxListCtrl" name="m_flagList">
+										<style>wxLC_AUTOARRANGE|wxLC_REPORT|wxLC_SINGLE_SEL</style>
+									</object>
+								</object>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+	<object class="wxPanel" name="POIPanel">
+		<style>wxCLIP_CHILDREN|wxTAB_TRAVERSAL</style>
+		<object class="wxBoxSizer">
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxToolBar" name="m_poiSystemToolbar">
+					<style>wxTB_HORIZONTAL</style>
+					<bitmapsize></bitmapsize>
+					<margins></margins>
+					<packing>1</packing>
+					<separation>5</separation>
+					<object class="tool" name="m_editPOI">
+						<label>Edit</label>
+						<tooltip>Show point</tooltip>
+						<longhelp></longhelp>
+						<bitmap>images/eye.png</bitmap>
+					</object>
+					<object class="tool" name="m_newPOI">
+						<label>New</label>
+						<tooltip>Add new POI</tooltip>
+						<longhelp></longhelp>
+						<bitmap>images/add.png</bitmap>
+					</object>
+					<object class="tool" name="m_deletePOI">
+						<label>tool</label>
+						<tooltip>Remove POI</tooltip>
+						<longhelp></longhelp>
+						<bitmap>images/xenon.png</bitmap>
+					</object>
+					<object class="separator" />
+					<object class="separator" />
+					<object class="wxSpinCtrl" name="m_autoSyncTimeForPOI">
+						<style>wxSP_ARROW_KEYS</style>
+						<size>50,-1</size>
+						<tooltip>Time (in minutes) between refresh</tooltip>
+						<value>5</value>
+						<min>0</min>
+						<max>60</max>
+					</object>
+					<object class="separator" />
+					<object class="wxCheckBox" name="m_autoSyncEnableForPOI">
+						<tooltip>Enable automatic refresh</tooltip>
+						<label>Auto sync</label>
+						<checked>0</checked>
+					</object>
+					<object class="tool" name="m_refreshPOI">
+						<label>Refresh</label>
+						<tooltip>Refresh POI</tooltip>
+						<longhelp></longhelp>
+						<bitmap>images/refresh.png</bitmap>
+					</object>
+					<object class="tool" name="m_filtersForPOI">
+						<label>Filters button</label>
+						<tooltip>Filters</tooltip>
+						<longhelp></longhelp>
+						<bitmap>images/filter.png</bitmap>
+						<toggle>1</toggle>
+					</object>
+					<object class="tool" name="m_blackBox">
+						<label>tool</label>
+						<tooltip>Open BlackBox</tooltip>
+						<longhelp></longhelp>
+						<bitmap>images/markers/blackbox_icon.png</bitmap>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxEXPAND | wxALL</flag>
+				<border>5</border>
+				<object class="wxPanel" name="m_connectionPanelForPOI">
+					<style>wxTAB_TRAVERSAL</style>
+					<hidden>1</hidden>
+					<object class="wxBoxSizer">
+						<orient>wxVERTICAL</orient>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxALIGN_BOTTOM|wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
+							<border>5</border>
+							<object class="wxStaticText" name="m_disconnectInformation">
+								<fg>#ff0000</fg>
+								<font>
+									<family>default</family>
+									<style>normal</style>
+									<weight>bold</weight>
+									<underlined>0</underlined>
+								</font>
+								<label>Connection  with database has been lost</label>
+								<wrap>-1</wrap>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxPanel" name="m_filtersPanelForPOI">
+					<style>wxTAB_TRAVERSAL</style>
+					<hidden>1</hidden>
+					<object class="wxStaticBoxSizer">
+						<orient>wxVERTICAL</orient>
+						<label>Options</label>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxALL</flag>
+							<border>5</border>
+							<object class="wxCheckBox" name="m_filterShowPoiOnMap">
+								<label>Show on map</label>
+								<checked>0</checked>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>1</option>
+							<flag>wxEXPAND</flag>
+							<border>5</border>
+							<object class="wxStaticBoxSizer">
+								<orient>wxVERTICAL</orient>
+								<label>Filters</label>
+								<object class="sizeritem">
+									<option>0</option>
+									<flag>wxALL</flag>
+									<border>5</border>
+									<object class="wxCheckBox" name="m_selectAllFilters">
+										<label>Select all</label>
+										<checked>0</checked>
+									</object>
+								</object>
+								<object class="sizeritem">
+									<option>1</option>
+									<flag>wxEXPAND</flag>
+									<border>5</border>
+									<object class="wxCheckListBox" name="m_poiFilterStatesList">
+										<style>wxLB_ALWAYS_SB</style>
+										<size>125,63</size>
+										<content />
+									</object>
+								</object>
+								<object class="sizeritem">
+									<option>0</option>
+									<flag>wxEXPAND|wxTOP</flag>
+									<border>5</border>
+									<object class="wxButton" name="m_poiFilterButton">
+										<label>Apply</label>
+										<default>0</default>
+									</object>
+								</object>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxALL|wxEXPAND</flag>
+				<border>0</border>
+				<object class="wxPanel" name="m_mainPanelForPOI">
+					<style>wxTAB_TRAVERSAL</style>
+					<object class="wxStaticBoxSizer">
+						<orient>wxVERTICAL</orient>
+						<label>Markers</label>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxEXPAND|wxBOTTOM</flag>
+							<border>5</border>
+							<object class="wxBoxSizer">
+								<orient>wxHORIZONTAL</orient>
+								<object class="sizeritem">
+									<option>1</option>
+									<flag></flag>
+									<border>5</border>
+									<object class="wxTextCtrl" name="m_poiSearchLine">
+										<style>wxTE_PROCESS_ENTER</style>
+										<value></value>
+									</object>
+								</object>
+								<object class="sizeritem">
+									<option>0</option>
+									<flag>wxALIGN_CENTER_VERTICAL</flag>
+									<border>5</border>
+									<object class="wxButton" name="m_poiSearchButton">
+										<label>Search</label>
+										<default>0</default>
+									</object>
+								</object>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>1</option>
+							<flag>wxEXPAND</flag>
+							<border>5</border>
+							<object class="wxListCtrl" name="m_poiList">
+								<style>wxLC_AUTOARRANGE|wxLC_REPORT|wxLC_SINGLE_SEL</style>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+	<object class="wxPanel" name="StickersPanel">
+		<style>wxCLIP_CHILDREN|wxTAB_TRAVERSAL</style>
+		<object class="wxBoxSizer">
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxToolBar" name="m_stickersSystemToolbar">
+					<style>wxTB_HORIZONTAL</style>
+					<bitmapsize></bitmapsize>
+					<margins></margins>
+					<packing>1</packing>
+					<separation>5</separation>
+					<object class="tool" name="m_editSticker">
+						<label>Edit</label>
+						<tooltip>Show point</tooltip>
+						<longhelp></longhelp>
+						<bitmap>images/eye.png</bitmap>
+					</object>
+					<object class="tool" name="m_newSticker">
+						<label>New</label>
+						<tooltip>Add new POI</tooltip>
+						<longhelp></longhelp>
+						<bitmap>images/add.png</bitmap>
+					</object>
+					<object class="tool" name="m_deleteSticker">
+						<label>tool</label>
+						<tooltip>Remove POI</tooltip>
+						<longhelp></longhelp>
+						<bitmap>images/xenon.png</bitmap>
+					</object>
+					<object class="separator" />
+					<object class="separator" />
+					<object class="wxSpinCtrl" name="m_autoSyncTimeForSticker">
+						<style>wxSP_ARROW_KEYS</style>
+						<size>50,-1</size>
+						<tooltip>Time (in minutes) between refresh</tooltip>
+						<value>5</value>
+						<min>0</min>
+						<max>60</max>
+					</object>
+					<object class="separator" />
+					<object class="wxCheckBox" name="m_autoSyncEnableForSticker">
+						<tooltip>Enable automatic refresh</tooltip>
+						<label>Auto sync</label>
+						<checked>0</checked>
+					</object>
+					<object class="tool" name="m_refreshSticker">
+						<label>Refresh</label>
+						<tooltip>Refresh POI</tooltip>
+						<longhelp></longhelp>
+						<bitmap>images/refresh.png</bitmap>
+					</object>
+					<object class="tool" name="m_filtersForSticker">
+						<label>Filters button</label>
+						<tooltip>Filters</tooltip>
+						<longhelp></longhelp>
+						<bitmap>images/filter.png</bitmap>
+						<toggle>1</toggle>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxALL|wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxPanel" name="m_connectionPanelForStickers">
+					<style>wxTAB_TRAVERSAL</style>
+					<hidden>1</hidden>
+					<object class="wxBoxSizer">
+						<orient>wxVERTICAL</orient>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxALIGN_BOTTOM|wxALIGN_CENTER_HORIZONTAL|wxTOP</flag>
+							<border>5</border>
+							<object class="wxStaticText" name="m_disconnectInformation2">
+								<fg>#ff0000</fg>
+								<font>
+									<family>default</family>
+									<style>normal</style>
+									<weight>bold</weight>
+									<underlined>0</underlined>
+								</font>
+								<label>Connection with database has been lost.</label>
+								<wrap>-1</wrap>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxALIGN_CENTER_HORIZONTAL|wxBOTTOM</flag>
+							<border>5</border>
+							<object class="wxStaticText" name="m_staticText731">
+								<fg>#ff0000</fg>
+								<font>
+									<family>default</family>
+									<style>normal</style>
+									<weight>bold</weight>
+									<underlined>0</underlined>
+								</font>
+								<label>Please restart editor.</label>
+								<wrap>-1</wrap>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxPanel" name="m_filtersForSticker">
+					<style>wxTAB_TRAVERSAL</style>
+					<hidden>1</hidden>
+					<object class="wxStaticBoxSizer">
+						<orient>wxVERTICAL</orient>
+						<label>Options</label>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxEXPAND</flag>
+							<border>5</border>
+							<object class="wxBoxSizer">
+								<orient>wxHORIZONTAL</orient>
+								<object class="sizeritem">
+									<option>0</option>
+									<flag>wxALL</flag>
+									<border>5</border>
+									<object class="wxCheckBox" name="m_filterShowStickerOnMap">
+										<label>Show on map</label>
+										<checked>0</checked>
+									</object>
+								</object>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>1</option>
+							<flag>wxEXPAND</flag>
+							<border>5</border>
+							<object class="wxStaticBoxSizer">
+								<orient>wxVERTICAL</orient>
+								<label>Filters</label>
+								<object class="sizeritem">
+									<option>0</option>
+									<flag>wxBOTTOM|wxRIGHT|wxLEFT</flag>
+									<border>5</border>
+									<object class="wxCheckBox" name="m_selectAllFilters">
+										<label>Select all</label>
+										<checked>0</checked>
+									</object>
+								</object>
+								<object class="sizeritem">
+									<option>1</option>
+									<flag>wxEXPAND</flag>
+									<border>5</border>
+									<object class="wxCheckListBox" name="m_stickerFilterStatesList">
+										<style>wxLB_ALWAYS_SB</style>
+										<size>125,63</size>
+										<content />
+									</object>
+								</object>
+								<object class="sizeritem">
+									<option>0</option>
+									<flag>wxEXPAND|wxTOP</flag>
+									<border>5</border>
+									<object class="wxButton" name="m_stickerFilterButton">
+										<label>Apply</label>
+										<default>0</default>
+									</object>
+								</object>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxALL|wxEXPAND</flag>
+				<border>0</border>
+				<object class="wxPanel" name="m_mainPanelForStickers">
+					<style>wxTAB_TRAVERSAL</style>
+					<object class="wxStaticBoxSizer">
+						<orient>wxVERTICAL</orient>
+						<label>Markers</label>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxEXPAND|wxBOTTOM</flag>
+							<border>5</border>
+							<object class="wxBoxSizer">
+								<orient>wxHORIZONTAL</orient>
+								<object class="sizeritem">
+									<option>1</option>
+									<flag></flag>
+									<border>5</border>
+									<object class="wxTextCtrl" name="m_stickerSearchLine">
+										<style>wxTE_PROCESS_ENTER</style>
+										<value></value>
+									</object>
+								</object>
+								<object class="sizeritem">
+									<option>0</option>
+									<flag>wxALIGN_CENTER_VERTICAL</flag>
+									<border>5</border>
+									<object class="wxButton" name="m_stickerSearchButton">
+										<label>Search</label>
+										<default>0</default>
+									</object>
+								</object>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>1</option>
+							<flag>wxEXPAND</flag>
+							<border>5</border>
+							<object class="wxListBox" name="m_stickersList">
+								<content />
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+	<object class="wxDialog" name="AddNewFlagWindow">
+		<style>wxCAPTION</style>
+		<size>500,500</size>
+		<title>Add new flag</title>
+		<centered>1</centered>
+		<object class="wxBoxSizer">
+			<minsize>500,400</minsize>
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxBoxSizer">
+					<orient>wxVERTICAL</orient>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxEXPAND|wxALL</flag>
+						<border>5</border>
+						<object class="wxFlexGridSizer">
+							<rows>5</rows>
+							<cols>2</cols>
+							<vgap>5</vgap>
+							<hgap>0</hgap>
+							<growablecols>1</growablecols>
+							<growablerows>0</growablerows>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALIGN_CENTER|wxRIGHT</flag>
+								<border>5</border>
+								<object class="wxStaticText" name="m_staticText3">
+									<font>
+										<family>default</family>
+										<style>normal</style>
+										<weight>bold</weight>
+										<underlined>0</underlined>
+									</font>
+									<label>Summary:</label>
+									<wrap>-1</wrap>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALIGN_CENTER|wxEXPAND</flag>
+								<border>5</border>
+								<object class="wxTextCtrl" name="m_newFlagSummary">
+									<value></value>
+									<maxlength>0</maxlength>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALIGN_CENTER|wxRIGHT</flag>
+								<border>5</border>
+								<object class="wxStaticText" name="m_staticText4">
+									<font>
+										<family>default</family>
+										<style>normal</style>
+										<weight>bold</weight>
+										<underlined>0</underlined>
+									</font>
+									<label>Priority:</label>
+									<wrap>-1</wrap>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALIGN_CENTER|wxEXPAND</flag>
+								<border>5</border>
+								<object class="wxChoice" name="m_newFlagPriority">
+									<selection>0</selection>
+									<content />
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALIGN_CENTER|wxRIGHT</flag>
+								<border>5</border>
+								<object class="wxStaticText" name="m_staticText6">
+									<font>
+										<family>default</family>
+										<style>normal</style>
+										<weight>bold</weight>
+										<underlined>0</underlined>
+									</font>
+									<label>Type:</label>
+									<wrap>-1</wrap>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALIGN_CENTER|wxEXPAND</flag>
+								<border>5</border>
+								<object class="wxChoice" name="m_newFlagType">
+									<selection>0</selection>
+									<content />
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALIGN_CENTER|wxRIGHT</flag>
+								<border>5</border>
+								<object class="wxStaticText" name="m_staticText7">
+									<font>
+										<family>default</family>
+										<style>normal</style>
+										<weight>bold</weight>
+										<underlined>0</underlined>
+									</font>
+									<label>Set marker:</label>
+									<wrap>-1</wrap>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxEXPAND</flag>
+								<border>5</border>
+								<object class="wxBoxSizer">
+									<orient>wxHORIZONTAL</orient>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALIGN_CENTER_VERTICAL</flag>
+										<border>5</border>
+										<object class="wxBitmapButton" name="m_newFlagPosition">
+											<style>wxBU_AUTODRAW</style>
+											<bitmap>images\pb_grab.png</bitmap>
+											<default>0</default>
+										</object>
+									</object>
+									<object class="spacer">
+										<option>0</option>
+										<flag>wxEXPAND</flag>
+										<border>5</border>
+										<size>20,0</size>
+									</object>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALIGN_CENTER|wxRIGHT|wxLEFT</flag>
+										<border>5</border>
+										<object class="wxStaticText" name="m_staticText35">
+											<pos>-1,-1</pos>
+											<font>
+												<size>8</size>
+												<family>default</family>
+												<style>italic</style>
+												<weight>light</weight>
+												<underlined>0</underlined>
+											</font>
+											<label>Drag and drop on map</label>
+											<wrap>-1</wrap>
+										</object>
+									</object>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALIGN_CENTER|wxRIGHT</flag>
+								<border>5</border>
+								<object class="wxStaticText" name="m_staticText31">
+									<font>
+										<family>default</family>
+										<style>normal</style>
+										<weight>bold</weight>
+										<underlined>0</underlined>
+									</font>
+									<label>Screen:</label>
+									<wrap>-1</wrap>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxLEFT</flag>
+								<border>5</border>
+								<object class="wxCheckBox" name="m_editNewScreenAfterAdding">
+									<label>Open after adding</label>
+									<checked>0</checked>
+								</object>
+							</object>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>1</option>
+						<flag>wxEXPAND|wxTOP</flag>
+						<border>5</border>
+						<object class="wxStaticBoxSizer">
+							<orient>wxVERTICAL</orient>
+							<label>Comment</label>
+							<object class="sizeritem">
+								<option>1</option>
+								<flag>wxEXPAND</flag>
+								<border>5</border>
+								<object class="wxTextCtrl" name="m_newFlagDescription">
+									<style>wxTE_CHARWRAP|wxTE_MULTILINE|wxTE_WORDWRAP</style>
+									<value></value>
+									<maxlength>0</maxlength>
+								</object>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxALIGN_CENTER</flag>
+				<border>5</border>
+				<object class="wxBoxSizer">
+					<orient>wxHORIZONTAL</orient>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="m_addFlagButton">
+							<label>Add flag</label>
+							<default>0</default>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="m_cancelButton">
+							<label>Cancel</label>
+							<default>0</default>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+	<object class="wxDialog" name="ModifyFlagWindow">
+		<style>wxCAPTION</style>
+		<size>500,400</size>
+		<title>Modify flag</title>
+		<centered>1</centered>
+		<object class="wxBoxSizer">
+			<minsize>500,400</minsize>
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxBoxSizer">
+					<orient>wxVERTICAL</orient>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxEXPAND|wxALL</flag>
+						<border>5</border>
+						<object class="wxFlexGridSizer">
+							<rows>3</rows>
+							<cols>2</cols>
+							<vgap>5</vgap>
+							<hgap>0</hgap>
+							<growablecols>1</growablecols>
+							<growablerows>0</growablerows>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALIGN_CENTER|wxRIGHT</flag>
+								<border>5</border>
+								<object class="wxStaticText" name="m_staticText6">
+									<font>
+										<family>default</family>
+										<style>normal</style>
+										<weight>bold</weight>
+										<underlined>0</underlined>
+									</font>
+									<label>State:</label>
+									<wrap>-1</wrap>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxEXPAND</flag>
+								<border>5</border>
+								<object class="wxBoxSizer">
+									<orient>wxHORIZONTAL</orient>
+									<object class="sizeritem">
+										<option>1</option>
+										<flag>wxALIGN_CENTER|wxRIGHT</flag>
+										<border>5</border>
+										<object class="wxChoice" name="m_modifyState">
+											<selection>0</selection>
+											<content />
+										</object>
+									</object>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALIGN_CENTER_VERTICAL|wxLEFT</flag>
+										<border>5</border>
+										<object class="wxCheckBox" name="m_keepState">
+											<label>Keep state</label>
+											<checked>1</checked>
+										</object>
+									</object>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALIGN_CENTER|wxRIGHT</flag>
+								<border>5</border>
+								<object class="wxStaticText" name="m_staticText4">
+									<font>
+										<family>default</family>
+										<style>normal</style>
+										<weight>bold</weight>
+										<underlined>0</underlined>
+									</font>
+									<label>Priority:</label>
+									<wrap>-1</wrap>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxEXPAND</flag>
+								<border>5</border>
+								<object class="wxBoxSizer">
+									<orient>wxHORIZONTAL</orient>
+									<object class="sizeritem">
+										<option>1</option>
+										<flag>wxALIGN_CENTER|wxRIGHT</flag>
+										<border>5</border>
+										<object class="wxChoice" name="m_modifyPriority">
+											<selection>0</selection>
+											<content />
+										</object>
+									</object>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALL</flag>
+										<border>5</border>
+										<object class="wxCheckBox" name="m_keepPriority">
+											<label>Keep priority</label>
+											<checked>1</checked>
+										</object>
+									</object>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALIGN_CENTER|wxRIGHT</flag>
+								<border>5</border>
+								<object class="wxStaticText" name="m_staticText31">
+									<font>
+										<family>default</family>
+										<style>normal</style>
+										<weight>bold</weight>
+										<underlined>0</underlined>
+									</font>
+									<label>Screen:</label>
+									<wrap>-1</wrap>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>1</option>
+								<flag>wxEXPAND</flag>
+								<border>5</border>
+								<object class="wxBoxSizer">
+									<orient>wxHORIZONTAL</orient>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALIGN_CENTER_VERTICAL|wxRIGHT</flag>
+										<border>5</border>
+										<object class="wxCheckBox" name="m_makeScreen">
+											<label>Make screen automatically</label>
+											<checked>0</checked>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALIGN_CENTER_VERTICAL|wxLEFT</flag>
+										<border>5</border>
+										<object class="wxCheckBox" name="m_editScreenAfterAdding">
+											<label>Open after adding</label>
+											<checked>0</checked>
+										</object>
+									</object>
+								</object>
+							</object>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>1</option>
+						<flag>wxEXPAND|wxTOP</flag>
+						<border>5</border>
+						<object class="wxStaticBoxSizer">
+							<orient>wxVERTICAL</orient>
+							<label>Comment</label>
+							<object class="sizeritem">
+								<option>1</option>
+								<flag>wxEXPAND</flag>
+								<border>5</border>
+								<object class="wxTextCtrl" name="m_modifyComment">
+									<style>wxTE_CHARWRAP|wxTE_MULTILINE|wxTE_WORDWRAP</style>
+									<value></value>
+									<maxlength>0</maxlength>
+								</object>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxALIGN_CENTER</flag>
+				<border>5</border>
+				<object class="wxBoxSizer">
+					<orient>wxHORIZONTAL</orient>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="m_modifyFlag">
+							<label>Modify flag</label>
+							<default>0</default>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="m_cancelModification">
+							<label>Cancel</label>
+							<default>0</default>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+	<object class="wxDialog" name="ShowFlagWindow">
+		<style>wxCAPTION</style>
+		<size>500,600</size>
+		<title>Information about flag</title>
+		<centered>1</centered>
+		<object class="wxBoxSizer">
+			<minsize>500,600</minsize>
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxBoxSizer">
+					<orient>wxVERTICAL</orient>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxEXPAND|wxRIGHT|wxLEFT</flag>
+						<border>5</border>
+						<object class="wxStaticBoxSizer">
+							<orient>wxVERTICAL</orient>
+							<label>Current info</label>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxEXPAND</flag>
+								<border>5</border>
+								<object class="wxBoxSizer">
+									<orient>wxHORIZONTAL</orient>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALIGN_CENTER|wxBOTTOM|wxRIGHT|wxLEFT</flag>
+										<border>5</border>
+										<object class="wxStaticText" name="m_staticText14">
+											<size>75,-1</size>
+											<font>
+												<family>default</family>
+												<style>normal</style>
+												<weight>bold</weight>
+												<underlined>0</underlined>
+											</font>
+											<label>Summary:</label>
+											<wrap>-1</wrap>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<option>1</option>
+										<flag>wxBOTTOM|wxRIGHT|wxLEFT</flag>
+										<border>5</border>
+										<object class="wxStaticText" name="m_showSummary">
+											<label></label>
+											<wrap>-1</wrap>
+										</object>
+									</object>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>1</option>
+								<flag>wxEXPAND</flag>
+								<border>5</border>
+								<object class="wxBoxSizer">
+									<orient>wxHORIZONTAL</orient>
+									<object class="sizeritem">
+										<option>1</option>
+										<flag></flag>
+										<border>5</border>
+										<object class="wxFlexGridSizer">
+											<rows>6</rows>
+											<cols>2</cols>
+											<vgap>0</vgap>
+											<hgap>0</hgap>
+											<growablecols></growablecols>
+											<growablerows></growablerows>
+											<object class="sizeritem">
+												<option>0</option>
+												<flag>wxBOTTOM|wxRIGHT|wxLEFT</flag>
+												<border>5</border>
+												<object class="wxStaticText" name="m_staticText18">
+													<pos>-1,-1</pos>
+													<size>100,-1</size>
+													<font>
+														<family>default</family>
+														<style>normal</style>
+														<weight>bold</weight>
+														<underlined>0</underlined>
+													</font>
+													<label>Created by:</label>
+													<wrap>-1</wrap>
+												</object>
+											</object>
+											<object class="sizeritem">
+												<option>1</option>
+												<flag>wxBOTTOM|wxRIGHT|wxLEFT</flag>
+												<border>5</border>
+												<object class="wxStaticText" name="m_showAuthor">
+													<label></label>
+													<wrap>-1</wrap>
+												</object>
+											</object>
+											<object class="sizeritem">
+												<option>0</option>
+												<flag>wxBOTTOM|wxRIGHT|wxLEFT</flag>
+												<border>5</border>
+												<object class="wxStaticText" name="m_staticText27">
+													<size>100,-1</size>
+													<font>
+														<family>default</family>
+														<style>normal</style>
+														<weight>bold</weight>
+														<underlined>0</underlined>
+													</font>
+													<label>Created date:</label>
+													<wrap>-1</wrap>
+												</object>
+											</object>
+											<object class="sizeritem">
+												<option>0</option>
+												<flag>wxBOTTOM|wxRIGHT|wxLEFT</flag>
+												<border>5</border>
+												<object class="wxStaticText" name="m_showCreatedDate">
+													<label></label>
+													<wrap>-1</wrap>
+												</object>
+											</object>
+											<object class="sizeritem">
+												<option>0</option>
+												<flag>wxBOTTOM|wxRIGHT|wxLEFT</flag>
+												<border>5</border>
+												<object class="wxStaticText" name="m_staticText331">
+													<size>100,-1</size>
+													<font>
+														<family>default</family>
+														<style>normal</style>
+														<weight>bold</weight>
+														<underlined>0</underlined>
+													</font>
+													<label>TTP number:</label>
+													<wrap>-1</wrap>
+												</object>
+											</object>
+											<object class="sizeritem">
+												<option>0</option>
+												<flag>wxBOTTOM|wxRIGHT|wxLEFT</flag>
+												<border>5</border>
+												<object class="wxStaticText" name="m_showTestTrackId">
+													<label></label>
+													<wrap>-1</wrap>
+												</object>
+											</object>
+											<object class="sizeritem">
+												<option>0</option>
+												<flag>wxBOTTOM|wxRIGHT|wxLEFT</flag>
+												<border>5</border>
+												<object class="wxStaticText" name="m_staticText21">
+													<size>100,-1</size>
+													<font>
+														<family>default</family>
+														<style>normal</style>
+														<weight>bold</weight>
+														<underlined>0</underlined>
+													</font>
+													<label>Type:</label>
+													<wrap>-1</wrap>
+												</object>
+											</object>
+											<object class="sizeritem">
+												<option>1</option>
+												<flag>wxBOTTOM|wxRIGHT|wxLEFT</flag>
+												<border>5</border>
+												<object class="wxStaticText" name="m_showType">
+													<label></label>
+													<wrap>-1</wrap>
+												</object>
+											</object>
+											<object class="sizeritem">
+												<option>0</option>
+												<flag>wxALIGN_CENTER|wxBOTTOM|wxRIGHT|wxLEFT</flag>
+												<border>5</border>
+												<object class="wxStaticText" name="m_staticText15">
+													<size>100,-1</size>
+													<font>
+														<family>default</family>
+														<style>normal</style>
+														<weight>bold</weight>
+														<underlined>0</underlined>
+													</font>
+													<label>Current priority:</label>
+													<wrap>-1</wrap>
+												</object>
+											</object>
+											<object class="sizeritem">
+												<option>1</option>
+												<flag>wxBOTTOM|wxRIGHT|wxLEFT</flag>
+												<border>5</border>
+												<object class="wxStaticText" name="m_showPriority">
+													<label></label>
+													<wrap>-1</wrap>
+												</object>
+											</object>
+											<object class="sizeritem">
+												<option>0</option>
+												<flag>wxBOTTOM|wxRIGHT|wxLEFT</flag>
+												<border>5</border>
+												<object class="wxStaticText" name="m_staticText19">
+													<size>100,-1</size>
+													<font>
+														<family>default</family>
+														<style>normal</style>
+														<weight>bold</weight>
+														<underlined>0</underlined>
+													</font>
+													<label>Current state:</label>
+													<wrap>-1</wrap>
+												</object>
+											</object>
+											<object class="sizeritem">
+												<option>1</option>
+												<flag>wxBOTTOM|wxRIGHT|wxLEFT</flag>
+												<border>5</border>
+												<object class="wxStaticText" name="m_showState">
+													<label></label>
+													<wrap>-1</wrap>
+												</object>
+											</object>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<option>1</option>
+										<flag>wxALIGN_CENTER|wxEXPAND</flag>
+										<border>5</border>
+										<object class="wxBitmapButton" name="m_showScreenButton">
+											<tooltip>Click on image to show it on full screen</tooltip>
+											<bitmap>images\imageNotAvailable.png</bitmap>
+											<default>0</default>
+										</object>
+									</object>
+								</object>
+							</object>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>1</option>
+						<flag>wxEXPAND|wxRIGHT|wxLEFT</flag>
+						<border>5</border>
+						<object class="wxStaticBoxSizer">
+							<orient>wxVERTICAL</orient>
+							<label>Modification history</label>
+							<object class="sizeritem">
+								<option>1</option>
+								<flag>wxEXPAND</flag>
+								<border>5</border>
+								<object class="wxBoxSizer">
+									<orient>wxHORIZONTAL</orient>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxEXPAND</flag>
+										<border>5</border>
+										<object class="wxBoxSizer">
+											<minsize>150,-1</minsize>
+											<orient>wxVERTICAL</orient>
+											<object class="sizeritem">
+												<option>1</option>
+												<flag>wxEXPAND|wxRIGHT</flag>
+												<border>5</border>
+												<object class="wxListBox" name="m_showCommentsList">
+													<style>wxLB_SINGLE</style>
+													<size>100,-1</size>
+													<content />
+												</object>
+											</object>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<option>1</option>
+										<flag>wxEXPAND</flag>
+										<border>5</border>
+										<object class="wxStaticBoxSizer">
+											<orient>wxVERTICAL</orient>
+											<label>Selected modification</label>
+											<object class="sizeritem">
+												<option>0</option>
+												<flag>wxEXPAND</flag>
+												<border>5</border>
+												<object class="wxFlexGridSizer">
+													<rows>3</rows>
+													<cols>2</cols>
+													<vgap>0</vgap>
+													<hgap>0</hgap>
+													<growablecols></growablecols>
+													<growablerows></growablerows>
+													<object class="sizeritem">
+														<option>0</option>
+														<flag>wxBOTTOM|wxRIGHT|wxLEFT</flag>
+														<border>5</border>
+														<object class="wxStaticText" name="m_staticText29">
+															<size>60,-1</size>
+															<font>
+																<family>default</family>
+																<style>normal</style>
+																<weight>bold</weight>
+																<underlined>0</underlined>
+															</font>
+															<label>Author:</label>
+															<wrap>-1</wrap>
+														</object>
+													</object>
+													<object class="sizeritem">
+														<option>0</option>
+														<flag>wxBOTTOM|wxRIGHT|wxLEFT</flag>
+														<border>5</border>
+														<object class="wxStaticText" name="m_showCommentAuthor">
+															<label></label>
+															<wrap>-1</wrap>
+														</object>
+													</object>
+													<object class="sizeritem">
+														<option>0</option>
+														<flag>wxBOTTOM|wxRIGHT|wxLEFT</flag>
+														<border>5</border>
+														<object class="wxStaticText" name="m_staticText31">
+															<size>60,-1</size>
+															<font>
+																<family>default</family>
+																<style>normal</style>
+																<weight>bold</weight>
+																<underlined>0</underlined>
+															</font>
+															<label>State:</label>
+															<wrap>-1</wrap>
+														</object>
+													</object>
+													<object class="sizeritem">
+														<option>0</option>
+														<flag>wxBOTTOM|wxRIGHT|wxLEFT</flag>
+														<border>5</border>
+														<object class="wxStaticText" name="m_showCommentState">
+															<label></label>
+															<wrap>-1</wrap>
+														</object>
+													</object>
+													<object class="sizeritem">
+														<option>0</option>
+														<flag>wxBOTTOM|wxRIGHT|wxLEFT</flag>
+														<border>5</border>
+														<object class="wxStaticText" name="m_staticText33">
+															<size>60,-1</size>
+															<font>
+																<family>default</family>
+																<style>normal</style>
+																<weight>bold</weight>
+																<underlined>0</underlined>
+															</font>
+															<label>Priority:</label>
+															<wrap>-1</wrap>
+														</object>
+													</object>
+													<object class="sizeritem">
+														<option>0</option>
+														<flag>wxBOTTOM|wxRIGHT|wxLEFT</flag>
+														<border>5</border>
+														<object class="wxStaticText" name="m_showCommentPriority">
+															<label></label>
+															<wrap>-1</wrap>
+														</object>
+													</object>
+												</object>
+											</object>
+											<object class="sizeritem">
+												<option>1</option>
+												<flag>wxEXPAND</flag>
+												<border>5</border>
+												<object class="wxTextCtrl" name="m_showCommentDescription">
+													<style>wxTE_CHARWRAP|wxTE_MULTILINE|wxTE_READONLY|wxTE_WORDWRAP</style>
+													<value></value>
+												</object>
+											</object>
+										</object>
+									</object>
+								</object>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxALIGN_CENTER</flag>
+				<border>5</border>
+				<object class="wxBoxSizer">
+					<orient>wxHORIZONTAL</orient>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="m_editFlag">
+							<label>Edit flag</label>
+							<default>0</default>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="m_closeShowWindow">
+							<label>Close</label>
+							<default>0</default>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+	<object class="wxDialog" name="ShowFullScreen">
+		<style>wxDIALOG_NO_PARENT|wxSTAY_ON_TOP|wxNO_BORDER</style>
+		<size>800,600</size>
+		<bg>#000000</bg>
+		<title></title>
+		<centered>1</centered>
+		<object class="wxBoxSizer">
+			<minsize>800,600</minsize>
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxALL|wxEXPAND</flag>
+				<border>0</border>
+				<object class="wxBitmapButton" name="m_fullScreenButton">
+					<style>wxBU_AUTODRAW|wxNO_BORDER</style>
+					<bg>#000000</bg>
+					<bitmap>images/eye_notloaded.png</bitmap>
+					<default>0</default>
+				</object>
+			</object>
+		</object>
+	</object>
+	<object class="wxDialog" name="AddNewPOIWindow">
+		<style>wxDEFAULT_DIALOG_STYLE</style>
+		<size>500,400</size>
+		<title>Add new point of interest</title>
+		<centered>1</centered>
+		<object class="wxBoxSizer">
+			<minsize>500,400</minsize>
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxBoxSizer">
+					<orient>wxHORIZONTAL</orient>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALIGN_CENTER|wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticText" name="m_staticText57">
+							<size>30,-1</size>
+							<font>
+								<family>default</family>
+								<style>normal</style>
+								<weight>bold</weight>
+								<underlined>0</underlined>
+							</font>
+							<label>Title:</label>
+							<wrap>-1</wrap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>1</option>
+						<flag>wxALL|wxEXPAND</flag>
+						<border>5</border>
+						<object class="wxTextCtrl" name="m_newPOITitle">
+							<value></value>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxEXPAND|wxRIGHT|wxLEFT</flag>
+				<border>5</border>
+				<object class="wxStaticBoxSizer">
+					<orient>wxVERTICAL</orient>
+					<label>Categories</label>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALIGN_CENTER_HORIZONTAL</flag>
+						<border>5</border>
+						<object class="wxStaticText" name="m_POIstaticText35">
+							<pos>-1,-1</pos>
+							<font>
+								<size>8</size>
+								<family>default</family>
+								<style>italic</style>
+								<weight>light</weight>
+								<underlined>0</underlined>
+							</font>
+							<label>Drag and drop on map</label>
+							<wrap>-1</wrap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>1</option>
+						<flag>wxEXPAND|wxRIGHT|wxLEFT</flag>
+						<border>5</border>
+						<object class="wxGridSizer">
+							<rows>3</rows>
+							<cols>4</cols>
+							<vgap>0</vgap>
+							<hgap>0</hgap>
+							<object class="sizeritem">
+								<option>1</option>
+								<flag>wxEXPAND</flag>
+								<border>5</border>
+								<object class="wxBoxSizer">
+									<orient>wxHORIZONTAL</orient>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+										<border>5</border>
+										<object class="wxBitmapButton" name="m_questMarker">
+											<style>wxBU_AUTODRAW</style>
+											<bitmap>images/markers/questMarker.png</bitmap>
+											<default>0</default>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+										<border>5</border>
+										<object class="wxStaticText" name="m_staticText65">
+											<label>Quest</label>
+											<wrap>-1</wrap>
+										</object>
+									</object>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>1</option>
+								<flag>wxEXPAND</flag>
+								<border>5</border>
+								<object class="wxBoxSizer">
+									<orient>wxHORIZONTAL</orient>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+										<border>5</border>
+										<object class="wxBitmapButton" name="m_sideQuestMark">
+											<style>wxBU_AUTODRAW</style>
+											<bitmap>images/markers/sideQuestMarker.png</bitmap>
+											<default>0</default>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+										<border>5</border>
+										<object class="wxStaticText" name="m_staticText66">
+											<label>Side quest</label>
+											<wrap>-1</wrap>
+										</object>
+									</object>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>1</option>
+								<flag>wxEXPAND</flag>
+								<border>5</border>
+								<object class="wxBoxSizer">
+									<orient>wxHORIZONTAL</orient>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+										<border>5</border>
+										<object class="wxBitmapButton" name="m_landmarkMarker">
+											<style>wxBU_AUTODRAW</style>
+											<bitmap>images/markers/landmarkMarker.png</bitmap>
+											<default>0</default>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+										<border>5</border>
+										<object class="wxStaticText" name="m_staticText67">
+											<label>Landmark</label>
+											<wrap>-1</wrap>
+										</object>
+									</object>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>1</option>
+								<flag>wxEXPAND</flag>
+								<border>5</border>
+								<object class="wxBoxSizer">
+									<orient>wxHORIZONTAL</orient>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+										<border>5</border>
+										<object class="wxBitmapButton" name="m_moodMarker">
+											<style>wxBU_AUTODRAW</style>
+											<bitmap>images/markers/moodMarker.png</bitmap>
+											<default>0</default>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+										<border>5</border>
+										<object class="wxStaticText" name="m_staticText68">
+											<label>Mood</label>
+											<wrap>-1</wrap>
+										</object>
+									</object>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>1</option>
+								<flag>wxEXPAND</flag>
+								<border>5</border>
+								<object class="wxBoxSizer">
+									<orient>wxHORIZONTAL</orient>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+										<border>5</border>
+										<object class="wxBitmapButton" name="m_interiorMarker">
+											<style>wxBU_AUTODRAW</style>
+											<bitmap>images/markers/interiorMarker.png</bitmap>
+											<default>0</default>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+										<border>5</border>
+										<object class="wxStaticText" name="m_staticText69">
+											<label>Interior</label>
+											<wrap>-1</wrap>
+										</object>
+									</object>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>1</option>
+								<flag>wxEXPAND</flag>
+								<border>5</border>
+								<object class="wxBoxSizer">
+									<orient>wxHORIZONTAL</orient>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+										<border>5</border>
+										<object class="wxBitmapButton" name="m_dungeonMarker">
+											<style>wxBU_AUTODRAW</style>
+											<bitmap>images/markers/dungeonMarker.png</bitmap>
+											<default>0</default>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+										<border>5</border>
+										<object class="wxStaticText" name="m_staticText70">
+											<label>Dungeon</label>
+											<wrap>-1</wrap>
+										</object>
+									</object>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>1</option>
+								<flag>wxEXPAND</flag>
+								<border>5</border>
+								<object class="wxBoxSizer">
+									<orient>wxHORIZONTAL</orient>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+										<border>5</border>
+										<object class="wxBitmapButton" name="m_gameplayMarker">
+											<style>wxBU_AUTODRAW</style>
+											<bitmap>images/markers/gameplayMarker.png</bitmap>
+											<default>0</default>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+										<border>5</border>
+										<object class="wxStaticText" name="m_staticText71">
+											<label>Gameplay</label>
+											<wrap>-1</wrap>
+										</object>
+									</object>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>1</option>
+								<flag>wxEXPAND</flag>
+								<border>5</border>
+								<object class="wxBoxSizer">
+									<orient>wxHORIZONTAL</orient>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+										<border>5</border>
+										<object class="wxBitmapButton" name="m_communityMarker">
+											<style>wxBU_AUTODRAW</style>
+											<bitmap>images/markers/communityMarker.png</bitmap>
+											<default>0</default>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+										<border>5</border>
+										<object class="wxStaticText" name="m_staticText72">
+											<label>Community</label>
+											<wrap>-1</wrap>
+										</object>
+									</object>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>1</option>
+								<flag>wxEXPAND</flag>
+								<border>5</border>
+								<object class="wxBoxSizer">
+									<orient>wxHORIZONTAL</orient>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+										<border>5</border>
+										<object class="wxBitmapButton" name="m_roadSignMarker">
+											<style>wxBU_AUTODRAW</style>
+											<bitmap>images/markers/roadSignMarker.png</bitmap>
+											<default>0</default>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+										<border>5</border>
+										<object class="wxStaticText" name="m_staticText73">
+											<label>Road sign</label>
+											<wrap>-1</wrap>
+										</object>
+									</object>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>1</option>
+								<flag>wxEXPAND</flag>
+								<border>5</border>
+								<object class="wxBoxSizer">
+									<orient>wxHORIZONTAL</orient>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+										<border>5</border>
+										<object class="wxBitmapButton" name="m_harborMarker">
+											<style>wxBU_AUTODRAW</style>
+											<bitmap>images/markers/harborMarker.png</bitmap>
+											<default>0</default>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+										<border>5</border>
+										<object class="wxStaticText" name="m_staticText74">
+											<label>Harbor</label>
+											<wrap>-1</wrap>
+										</object>
+									</object>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>1</option>
+								<flag>wxEXPAND</flag>
+								<border>5</border>
+								<object class="wxBoxSizer">
+									<orient>wxHORIZONTAL</orient>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+										<border>5</border>
+										<object class="wxBitmapButton" name="m_settlementMarker">
+											<style>wxBU_AUTODRAW</style>
+											<bitmap>images/markers/settlementMarker.png</bitmap>
+											<default>0</default>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+										<border>5</border>
+										<object class="wxStaticText" name="m_staticText75">
+											<label>Settlement</label>
+											<wrap>-1</wrap>
+										</object>
+									</object>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>1</option>
+								<flag>wxEXPAND</flag>
+								<border>5</border>
+								<object class="wxBoxSizer">
+									<orient>wxHORIZONTAL</orient>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+										<border>5</border>
+										<object class="wxBitmapButton" name="m_cutsceneMarker">
+											<style>wxBU_AUTODRAW</style>
+											<bitmap>images/markers\cutsceneMarker.png</bitmap>
+											<default>0</default>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALL|wxALIGN_CENTER_VERTICAL</flag>
+										<border>5</border>
+										<object class="wxStaticText" name="m_staticText55">
+											<label>Cutscene</label>
+											<wrap>-1</wrap>
+										</object>
+									</object>
+								</object>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxBoxSizer">
+					<orient>wxVERTICAL</orient>
+					<object class="sizeritem">
+						<option>1</option>
+						<flag>wxEXPAND</flag>
+						<border>5</border>
+						<object class="wxStaticBoxSizer">
+							<orient>wxVERTICAL</orient>
+							<label>Description</label>
+							<object class="sizeritem">
+								<option>1</option>
+								<flag>wxALIGN_CENTER|wxALL|wxEXPAND</flag>
+								<border>5</border>
+								<object class="wxTextCtrl" name="m_newPOIDescription">
+									<value></value>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag></flag>
+								<border>5</border>
+								<object class="wxCheckBox" name="m_snapToTerrain">
+									<label>Snap to terrain</label>
+									<checked>0</checked>
+								</object>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxALIGN_CENTER</flag>
+				<border>5</border>
+				<object class="wxBoxSizer">
+					<orient>wxHORIZONTAL</orient>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="m_addPOIButton">
+							<label>Add POI</label>
+							<default>0</default>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="m_cancelAddPOIButton">
+							<label>Cancel</label>
+							<default>0</default>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+	<object class="wxDialog" name="ShowPOIMarker">
+		<style>wxCAPTION</style>
+		<size>500,400</size>
+		<title>Show POI marker</title>
+		<centered>1</centered>
+		<object class="wxBoxSizer">
+			<minsize>500,400</minsize>
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxBoxSizer">
+					<orient>wxVERTICAL</orient>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxEXPAND|wxALL</flag>
+						<border>5</border>
+						<object class="wxFlexGridSizer">
+							<rows>2</rows>
+							<cols>2</cols>
+							<vgap>5</vgap>
+							<hgap>0</hgap>
+							<growablecols>1</growablecols>
+							<growablerows></growablerows>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALIGN_CENTER</flag>
+								<border>5</border>
+								<object class="wxStaticText" name="m_staticText4">
+									<size>70,-1</size>
+									<font>
+										<family>default</family>
+										<style>normal</style>
+										<weight>bold</weight>
+										<underlined>0</underlined>
+									</font>
+									<label>Title:</label>
+									<wrap>-1</wrap>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>1</option>
+								<flag>wxEXPAND</flag>
+								<border>5</border>
+								<object class="wxTextCtrl" name="m_modifyPOITitle">
+									<enabled>0</enabled>
+									<value></value>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALIGN_CENTER</flag>
+								<border>5</border>
+								<object class="wxStaticText" name="m_staticText6">
+									<size>70,-1</size>
+									<font>
+										<family>default</family>
+										<style>normal</style>
+										<weight>bold</weight>
+										<underlined>0</underlined>
+									</font>
+									<label>Category:</label>
+									<wrap>-1</wrap>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxEXPAND</flag>
+								<border>5</border>
+								<object class="wxBoxSizer">
+									<orient>wxHORIZONTAL</orient>
+									<object class="sizeritem">
+										<option>1</option>
+										<flag>wxEXPAND</flag>
+										<border>5</border>
+										<object class="wxChoice" name="m_modifyPOICategory">
+											<enabled>0</enabled>
+											<selection>0</selection>
+											<content />
+										</object>
+									</object>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALIGN_CENTER|wxLEFT</flag>
+										<border>5</border>
+										<object class="wxStaticBitmap" name="m_modifyPOICategoryIcon">
+											<bitmap>images/check_gray.png</bitmap>
+										</object>
+									</object>
+								</object>
+							</object>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>1</option>
+						<flag>wxEXPAND</flag>
+						<border>5</border>
+						<object class="wxStaticBoxSizer">
+							<orient>wxVERTICAL</orient>
+							<label>Description</label>
+							<object class="sizeritem">
+								<option>1</option>
+								<flag>wxEXPAND</flag>
+								<border>5</border>
+								<object class="wxTextCtrl" name="m_modifyPOIDescription">
+									<enabled>0</enabled>
+									<value></value>
+									<maxlength>0</maxlength>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag></flag>
+								<border>5</border>
+								<object class="wxCheckBox" name="m_modifySnapToTerrain">
+									<label>Snap to terrain</label>
+									<checked>0</checked>
+								</object>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxALIGN_CENTER</flag>
+				<border>5</border>
+				<object class="wxBoxSizer">
+					<orient>wxHORIZONTAL</orient>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="m_showInBlackBox">
+							<size>120,-1</size>
+							<label>Show in BlackBox</label>
+							<default>0</default>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="m_modifyPOI">
+							<size>120,-1</size>
+							<label>Modify POI</label>
+							<default>0</default>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="m_closePOI">
+							<size>120,-1</size>
+							<label>Close</label>
+							<default>0</default>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+	<object class="wxDialog" name="ShowSticker">
+		<style>wxCAPTION</style>
+		<size>500,400</size>
+		<title>Show sticker</title>
+		<centered>1</centered>
+		<object class="wxBoxSizer">
+			<minsize>500,400</minsize>
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxBoxSizer">
+					<orient>wxVERTICAL</orient>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxEXPAND|wxALL</flag>
+						<border>5</border>
+						<object class="wxFlexGridSizer">
+							<rows>2</rows>
+							<cols>2</cols>
+							<vgap>5</vgap>
+							<hgap>0</hgap>
+							<growablecols>1</growablecols>
+							<growablerows></growablerows>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALIGN_CENTER</flag>
+								<border>5</border>
+								<object class="wxStaticText" name="m_staticText4">
+									<size>70,-1</size>
+									<font>
+										<family>default</family>
+										<style>normal</style>
+										<weight>bold</weight>
+										<underlined>0</underlined>
+									</font>
+									<label>Title:</label>
+									<wrap>-1</wrap>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>1</option>
+								<flag>wxEXPAND</flag>
+								<border>5</border>
+								<object class="wxTextCtrl" name="m_modifyStickerTitle">
+									<enabled>0</enabled>
+									<value></value>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALIGN_CENTER</flag>
+								<border>5</border>
+								<object class="wxStaticText" name="m_staticText6">
+									<size>70,-1</size>
+									<font>
+										<family>default</family>
+										<style>normal</style>
+										<weight>bold</weight>
+										<underlined>0</underlined>
+									</font>
+									<label>Category:</label>
+									<wrap>-1</wrap>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxEXPAND</flag>
+								<border>5</border>
+								<object class="wxChoice" name="m_modifyStickerCategory">
+									<enabled>0</enabled>
+									<selection>0</selection>
+									<content />
+								</object>
+							</object>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>1</option>
+						<flag>wxEXPAND</flag>
+						<border>5</border>
+						<object class="wxStaticBoxSizer">
+							<orient>wxVERTICAL</orient>
+							<label>Description</label>
+							<object class="sizeritem">
+								<option>1</option>
+								<flag>wxEXPAND</flag>
+								<border>5</border>
+								<object class="wxTextCtrl" name="m_modifyStickerDescription">
+									<enabled>0</enabled>
+									<value></value>
+									<maxlength>0</maxlength>
+								</object>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxALIGN_CENTER</flag>
+				<border>5</border>
+				<object class="wxBoxSizer">
+					<orient>wxHORIZONTAL</orient>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="m_modifySticker">
+							<size>120,-1</size>
+							<label>Modify sticker</label>
+							<default>0</default>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="m_closeStickerWindow">
+							<size>120,-1</size>
+							<label>Close</label>
+							<default>0</default>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+	<object class="wxDialog" name="AddNewSticker">
+		<style>wxCAPTION</style>
+		<size>500,400</size>
+		<title>Add new sticker</title>
+		<centered>1</centered>
+		<object class="wxBoxSizer">
+			<minsize>500,400</minsize>
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxEXPAND|wxALL</flag>
+				<border>5</border>
+				<object class="wxFlexGridSizer">
+					<rows>3</rows>
+					<cols>2</cols>
+					<vgap>5</vgap>
+					<hgap>0</hgap>
+					<growablecols>1</growablecols>
+					<growablerows></growablerows>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALIGN_CENTER</flag>
+						<border>5</border>
+						<object class="wxStaticText" name="m_staticText4">
+							<size>70,-1</size>
+							<font>
+								<family>default</family>
+								<style>normal</style>
+								<weight>bold</weight>
+								<underlined>0</underlined>
+							</font>
+							<label>Title:</label>
+							<wrap>-1</wrap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxEXPAND</flag>
+						<border>5</border>
+						<object class="wxTextCtrl" name="m_stickerTitle">
+							<value></value>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALIGN_CENTER</flag>
+						<border>5</border>
+						<object class="wxStaticText" name="m_staticText6">
+							<size>70,-1</size>
+							<font>
+								<family>default</family>
+								<style>normal</style>
+								<weight>bold</weight>
+								<underlined>0</underlined>
+							</font>
+							<label>Category:</label>
+							<wrap>-1</wrap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxEXPAND</flag>
+						<border>5</border>
+						<object class="wxChoice" name="m_stickerCategory">
+							<selection>0</selection>
+							<content />
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALIGN_CENTER</flag>
+						<border>5</border>
+						<object class="wxStaticText" name="m_staticText7">
+							<size>80,-1</size>
+							<font>
+								<family>default</family>
+								<style>normal</style>
+								<weight>bold</weight>
+								<underlined>0</underlined>
+							</font>
+							<label>Set sticker:</label>
+							<wrap>-1</wrap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxEXPAND</flag>
+						<border>5</border>
+						<object class="wxBoxSizer">
+							<orient>wxHORIZONTAL</orient>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag></flag>
+								<border>5</border>
+								<object class="wxBitmapButton" name="m_setStickerPosition">
+									<style>wxBU_AUTODRAW</style>
+									<bitmap>images\pb_grab.png</bitmap>
+									<default>0</default>
+								</object>
+							</object>
+							<object class="spacer">
+								<option>0</option>
+								<flag>wxEXPAND</flag>
+								<border>5</border>
+								<size>20,0</size>
+							</object>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALIGN_CENTER|wxALL</flag>
+								<border>5</border>
+								<object class="wxStaticText" name="m_staticText35">
+									<pos>-1,-1</pos>
+									<font>
+										<size>8</size>
+										<family>default</family>
+										<style>italic</style>
+										<weight>light</weight>
+										<underlined>0</underlined>
+									</font>
+									<label>Drag and drop on map</label>
+									<wrap>-1</wrap>
+								</object>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxStaticBoxSizer">
+					<orient>wxVERTICAL</orient>
+					<label>Description</label>
+					<object class="sizeritem">
+						<option>1</option>
+						<flag>wxEXPAND</flag>
+						<border>5</border>
+						<object class="wxTextCtrl" name="m_stickerDescription">
+							<value></value>
+							<maxlength>0</maxlength>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxALIGN_CENTER</flag>
+				<border>5</border>
+				<object class="wxBoxSizer">
+					<orient>wxHORIZONTAL</orient>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="m_addNewSticker">
+							<size>120,-1</size>
+							<label>Add sticker</label>
+							<default>0</default>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="m_cancelNewStickerWindow">
+							<size>120,-1</size>
+							<label>Cancel</label>
+							<default>0</default>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+</resource>

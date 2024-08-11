@@ -1,0 +1,744 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="wccClasses.cpp">
+      <Filter>wcc common</Filter>
+    </ClCompile>
+    <ClCompile Include="wccEngine.cpp">
+      <Filter>wcc common</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>wcc common</Filter>
+    </ClCompile>
+    <ClCompile Include="stringCookerCommandlet.cpp">
+      <Filter>other commandlets</Filter>
+    </ClCompile>
+    <ClCompile Include="build.cpp">
+      <Filter>wcc common</Filter>
+    </ClCompile>
+    <ClCompile Include="testCommandlet.cpp">
+      <Filter>other commandlets</Filter>
+    </ClCompile>
+    <ClCompile Include="entityTemplateCooker.cpp">
+      <Filter>resource cookers</Filter>
+    </ClCompile>
+    <ClCompile Include="meshCooker.cpp">
+      <Filter>resource cookers</Filter>
+    </ClCompile>
+    <ClCompile Include="wccExternalReport.cpp">
+      <Filter>wcc common</Filter>
+    </ClCompile>
+    <ClCompile Include="voiceoverConversionCommandlet.cpp">
+      <Filter>other commandlets</Filter>
+    </ClCompile>
+    <ClCompile Include="wccDummyGame.cpp">
+      <Filter>wcc common</Filter>
+    </ClCompile>
+    <ClCompile Include="wccTTYWriter.cpp">
+      <Filter>wcc common</Filter>
+    </ClCompile>
+    <ClCompile Include="occlusionCommandlet.cpp">
+      <Filter>other commandlets</Filter>
+    </ClCompile>
+    <ClCompile Include="materialCookerCommandlet.cpp">
+      <Filter>other commandlets</Filter>
+    </ClCompile>
+    <ClCompile Include="cookerDependencyAnalyzer.cpp">
+      <Filter>cooker\common</Filter>
+    </ClCompile>
+    <ClCompile Include="pathlibCommandlet.cpp">
+      <Filter>other commandlets\pathlib</Filter>
+    </ClCompile>
+    <ClCompile Include="pathlibCooker.cpp">
+      <Filter>other commandlets\pathlib\cooker</Filter>
+    </ClCompile>
+    <ClCompile Include="pathlibTaskPool.cpp">
+      <Filter>other commandlets\pathlib\cooker</Filter>
+    </ClCompile>
+    <ClCompile Include="pathlibObstacleCooker.cpp">
+      <Filter>other commandlets\pathlib\cooker</Filter>
+    </ClCompile>
+    <ClCompile Include="resaveCommandlet.cpp">
+      <Filter>other commandlets</Filter>
+    </ClCompile>
+    <ClCompile Include="wccVersionControl.cpp">
+      <Filter>wcc common</Filter>
+    </ClCompile>
+    <ClCompile Include="flashCooker.cpp">
+      <Filter>resource cookers</Filter>
+    </ClCompile>
+    <ClCompile Include="cookerUtils.cpp">
+      <Filter>other commandlets</Filter>
+    </ClCompile>
+    <ClCompile Include="swfImportCommandlet.cpp">
+      <Filter>other commandlets</Filter>
+    </ClCompile>
+    <ClCompile Include="pathlibFoliageCooker.cpp">
+      <Filter>other commandlets\pathlib\cooker</Filter>
+    </ClCompile>
+    <ClCompile Include="cookerSpeedTreeSupport.cpp">
+      <Filter>cooker\common</Filter>
+    </ClCompile>
+    <ClCompile Include="soundCommandlet.cpp">
+      <Filter>other commandlets</Filter>
+    </ClCompile>
+    <ClCompile Include="cookCommandlet.cpp">
+      <Filter>cooker</Filter>
+    </ClCompile>
+    <ClCompile Include="cookDataBase.cpp">
+      <Filter>cooker</Filter>
+    </ClCompile>
+    <ClCompile Include="testMemCommandlet.cpp">
+      <Filter>other commandlets\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="cookSeedFile.cpp">
+      <Filter>cooker</Filter>
+    </ClCompile>
+    <ClCompile Include="cookDataBaseIO.cpp">
+      <Filter>cooker</Filter>
+    </ClCompile>
+    <ClCompile Include="analyzeCommandlet.cpp">
+      <Filter>cooker\analyzers</Filter>
+    </ClCompile>
+    <ClCompile Include="cacheBuilderCommandlet.cpp">
+      <Filter>cooker\caches</Filter>
+    </ClCompile>
+    <ClCompile Include="textureCacheBuilder.cpp">
+      <Filter>cooker\caches\textures</Filter>
+    </ClCompile>
+    <ClCompile Include="textureCookerNonResource.cpp">
+      <Filter>cooker\caches\textures</Filter>
+    </ClCompile>
+    <ClCompile Include="cookFramework.cpp">
+      <Filter>cooker</Filter>
+    </ClCompile>
+    <ClCompile Include="materialCookerGeneric.cpp">
+      <Filter>cooker\caches\shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="materialCookerStatic.cpp">
+      <Filter>cooker\caches\shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="shadersCacheBuilder.cpp">
+      <Filter>cooker\caches\shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="physicsCacheBuilder.cpp">
+      <Filter>cooker\caches\physics</Filter>
+    </ClCompile>
+    <ClCompile Include="resourceUsageDataBase.cpp">
+      <Filter>cooker\usage</Filter>
+    </ClCompile>
+    <ClCompile Include="baseCacheBuilder.cpp">
+      <Filter>cooker\caches</Filter>
+    </ClCompile>
+    <ClCompile Include="cookerTextEncoder.cpp">
+      <Filter>other commandlets\textEnc</Filter>
+    </ClCompile>
+    <ClCompile Include="resourceUsageCommandlet.cpp">
+      <Filter>cooker\usage</Filter>
+    </ClCompile>
+    <ClCompile Include="swfDumpCommandlet.cpp">
+      <Filter>other commandlets</Filter>
+    </ClCompile>
+    <ClCompile Include="worldFileAnalyzer.cpp">
+      <Filter>cooker\analyzers</Filter>
+    </ClCompile>
+    <ClCompile Include="fileVerCommandlet.cpp">
+      <Filter>other commandlets</Filter>
+    </ClCompile>
+    <ClCompile Include="textureCacheCooker.cpp">
+      <Filter>cooker\caches\textures</Filter>
+    </ClCompile>
+    <ClCompile Include="bundleMetadataStoreCommandlet.cpp">
+      <Filter>cooker\bundles</Filter>
+    </ClCompile>
+    <ClCompile Include="exportBundlesCommandlet.cpp">
+      <Filter>cooker\bundles</Filter>
+    </ClCompile>
+    <ClCompile Include="processRunner.cpp">
+      <Filter>wcc common</Filter>
+    </ClCompile>
+    <ClCompile Include="dependenciesCommandlet.cpp">
+      <Filter>other commandlets</Filter>
+    </ClCompile>
+    <ClCompile Include="reportWriter.cpp">
+      <Filter>other commandlets\report</Filter>
+    </ClCompile>
+    <ClCompile Include="streamingLodsCommandlet.cpp">
+      <Filter>other commandlets</Filter>
+    </ClCompile>
+    <ClCompile Include="packageBatchCommandWriterPS4.cpp">
+      <Filter>other commandlets\publishing\PS4</Filter>
+    </ClCompile>
+    <ClCompile Include="packageFileCollectorPS4.cpp">
+      <Filter>other commandlets\publishing\PS4</Filter>
+    </ClCompile>
+    <ClCompile Include="packageProjectBuilderPS4.cpp">
+      <Filter>other commandlets\publishing\PS4</Filter>
+    </ClCompile>
+    <ClCompile Include="packageToolPS4.cpp">
+      <Filter>other commandlets\publishing\PS4</Filter>
+    </ClCompile>
+    <ClCompile Include="packageMainPS4.cpp">
+      <Filter>other commandlets\publishing\PS4</Filter>
+    </ClCompile>
+    <ClCompile Include="packagePlayGoChunksBuilder.cpp">
+      <Filter>other commandlets\publishing\PS4</Filter>
+    </ClCompile>
+    <ClCompile Include="packageCommandlet.cpp">
+      <Filter>other commandlets\publishing</Filter>
+    </ClCompile>
+    <ClCompile Include="shaderCompiler.cpp">
+      <Filter>cooker\caches\shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="shaderCompilerOrbis.cpp">
+      <Filter>cooker\caches\shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="shaderCompilerDurango.cpp">
+      <Filter>cooker\caches\shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="shaderCompilerPC.cpp">
+      <Filter>cooker\caches\shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="dataValidatorCommandlet.cpp">
+      <Filter>other commandlets</Filter>
+    </ClCompile>
+    <ClCompile Include="testCollisionCacheCommandlet.cpp">
+      <Filter>other commandlets\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="cacheSplitterCommandlet.cpp">
+      <Filter>cooker\caches</Filter>
+    </ClCompile>
+    <ClCompile Include="physicsCacheSplitter.cpp">
+      <Filter>cooker\caches\physics</Filter>
+    </ClCompile>
+    <ClCompile Include="playgoHelper.cpp">
+      <Filter>cooker</Filter>
+    </ClCompile>
+    <ClCompile Include="chunkReportCommandlet.cpp">
+      <Filter>other commandlets</Filter>
+    </ClCompile>
+    <ClCompile Include="cookSplitList.cpp">
+      <Filter>cooker</Filter>
+    </ClCompile>
+    <ClCompile Include="stringSplitterCommandlet.cpp">
+      <Filter>other commandlets</Filter>
+    </ClCompile>
+    <ClCompile Include="splitFilesCommandlet.cpp">
+      <Filter>cooker\splitting</Filter>
+    </ClCompile>
+    <ClCompile Include="wccStats.cpp">
+      <Filter>wcc common</Filter>
+    </ClCompile>
+    <ClCompile Include="textureCacheSplitter.cpp">
+      <Filter>cooker\caches\textures</Filter>
+    </ClCompile>
+    <ClCompile Include="shaderCacheSplitter.cpp">
+      <Filter>cooker\caches\shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="subtitlesCooker.cpp">
+      <Filter>other commandlets</Filter>
+    </ClCompile>
+    <ClCompile Include="packageMainXboxOne.cpp">
+      <Filter>other commandlets\publishing\XboxOne</Filter>
+    </ClCompile>
+    <ClCompile Include="packageToolXboxOne.cpp">
+      <Filter>other commandlets\publishing\XboxOne</Filter>
+    </ClCompile>
+    <ClCompile Include="packageFileCollector.cpp">
+      <Filter>other commandlets\publishing</Filter>
+    </ClCompile>
+    <ClCompile Include="packageTool.cpp">
+      <Filter>other commandlets\publishing</Filter>
+    </ClCompile>
+    <ClCompile Include="packageMapFileBuilderXboxOne.cpp">
+      <Filter>other commandlets\publishing\XboxOne</Filter>
+    </ClCompile>
+    <ClCompile Include="packageFileCollectorXboxOne.cpp">
+      <Filter>other commandlets\publishing\XboxOne</Filter>
+    </ClCompile>
+    <ClCompile Include="packageXmlWriterXboxOne.cpp">
+      <Filter>other commandlets\publishing\XboxOne</Filter>
+    </ClCompile>
+    <ClCompile Include="questLayoutDumpCommandlet.cpp">
+      <Filter>other commandlets</Filter>
+    </ClCompile>
+    <ClCompile Include="worldSceneDependencyInfoFileCommandlet.cpp">
+      <Filter>other commandlets</Filter>
+    </ClCompile>
+    <ClCompile Include="fileDumpCommandlet.cpp">
+      <Filter>other commandlets</Filter>
+    </ClCompile>
+    <ClCompile Include="dialogSceneLinesCommandlet.cpp">
+      <Filter>other commandlets</Filter>
+    </ClCompile>
+    <ClCompile Include="cookFileWriter.cpp">
+      <Filter>cooker</Filter>
+    </ClCompile>
+    <ClCompile Include="soundCacheSplitter.cpp">
+      <Filter>cooker\caches\sounds</Filter>
+    </ClCompile>
+    <ClCompile Include="loadTestCommandlet.cpp">
+      <Filter>other commandlets</Filter>
+    </ClCompile>
+    <ClCompile Include="soundBankHelper.cpp">
+      <Filter>cooker\caches\sounds</Filter>
+    </ClCompile>
+    <ClCompile Include="dumpScriptsCommandlet.cpp">
+      <Filter>other commandlets</Filter>
+    </ClCompile>
+    <ClCompile Include="videoEncoderCommandlet.cpp">
+      <Filter>other commandlets</Filter>
+    </ClCompile>
+    <ClCompile Include="optimizeCollisionCacheCommandlet.cpp">
+      <Filter>other commandlets</Filter>
+    </ClCompile>
+    <ClCompile Include="unbundleCommandlet.cpp">
+      <Filter>other commandlets</Filter>
+    </ClCompile>
+    <ClCompile Include="glueFilesCommandlet.cpp">
+      <Filter>other commandlets</Filter>
+    </ClCompile>
+    <ClCompile Include="stringCharsetDumperCommandlet.cpp">
+      <Filter>other commandlets</Filter>
+    </ClCompile>
+    <ClCompile Include="r4extractCharactersCommandlet.cpp">
+      <Filter>other commandlets\r4</Filter>
+    </ClCompile>
+    <ClCompile Include="patchBuilder.cpp">
+      <Filter>other commandlets\patching</Filter>
+    </ClCompile>
+    <ClCompile Include="patchBundles.cpp">
+      <Filter>other commandlets\patching</Filter>
+    </ClCompile>
+    <ClCompile Include="patchCommandlet.cpp">
+      <Filter>other commandlets\patching</Filter>
+    </ClCompile>
+    <ClCompile Include="patchSounds.cpp">
+      <Filter>other commandlets\patching</Filter>
+    </ClCompile>
+    <ClCompile Include="patchSpecialCases.cpp">
+      <Filter>other commandlets\patching</Filter>
+    </ClCompile>
+    <ClCompile Include="patchTextureCache.cpp">
+      <Filter>other commandlets\patching</Filter>
+    </ClCompile>
+    <ClCompile Include="patchUtils.cpp">
+      <Filter>other commandlets\patching</Filter>
+    </ClCompile>
+    <ClCompile Include="textureCacheProcessing.cpp">
+      <Filter>other commandlets\patching</Filter>
+    </ClCompile>
+    <ClCompile Include="patchPhysics.cpp">
+      <Filter>other commandlets\patching</Filter>
+    </ClCompile>
+    <ClCompile Include="patchSpeeches.cpp">
+      <Filter>other commandlets\patching</Filter>
+    </ClCompile>
+    <ClCompile Include="patchStrings.cpp">
+      <Filter>other commandlets\patching</Filter>
+    </ClCompile>
+    <ClCompile Include="patchShaders.cpp">
+      <Filter>other commandlets\patching</Filter>
+    </ClCompile>
+    <ClCompile Include="materialCookerHairworks.cpp">
+      <Filter>cooker\caches\shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="sectorBuilderCommandlet.cpp">
+      <Filter>other commandlets\sectors</Filter>
+    </ClCompile>
+    <ClCompile Include="manualBundlesReader.cpp">
+      <Filter>other commandlets\sectors</Filter>
+    </ClCompile>
+    <ClCompile Include="uncookCommandlet.cpp">
+      <Filter>other commandlets</Filter>
+    </ClCompile>
+    <ClCompile Include="resourceGrid.cpp">
+      <Filter>other commandlets\sectors</Filter>
+    </ClCompile>
+    <ClCompile Include="resourceGridOptimizer.cpp">
+      <Filter>other commandlets\sectors</Filter>
+    </ClCompile>
+    <ClCompile Include="packCommandlet.cpp">
+      <Filter>other commandlets</Filter>
+    </ClCompile>
+    <ClCompile Include="importCommandlet.cpp">
+      <Filter>other commandlets</Filter>
+    </ClCompile>
+    <ClCompile Include="scriptsHashCommandlet.cpp">
+	  <Filter>other commandlets</Filter>
+	</ClCompile>
+    <ClCompile Include="cleanScriptsCommandlet.cpp">
+      <Filter>other commandlets</Filter>
+    </ClCompile>
+    <ClCompile Include="exportCommandlet.cpp" />
+    <ClCompile Include="scriptsHashCommandlet.cpp" />
+    <ClCompile Include="testNGPlusDefinitionsComandlet.cpp">
+      <Filter>other commandlets\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="extraDLCAnalzyer.cpp">
+      <Filter>cooker\analyzers</Filter>
+    </ClCompile>
+    <ClCompile Include="dumpBundleInfoCommandlet.cpp">
+      <Filter>other commandlets</Filter>
+    </ClCompile>
+    <ClCompile Include="animValidatorCommandlet.cpp">
+      <Filter>other commandlets</Filter>
+    </ClCompile>
+    <ClCompile Include="stringStripperCommandlet.cpp">
+      <Filter>other commandlets</Filter>
+    </ClCompile>
+    <ClCompile Include="useForShadowMeshCommandlet.cpp">
+      <Filter>other commandlets</Filter>
+    </ClCompile>
+    <ClCompile Include="markPerInstancePropertiesCommandlet.cpp">
+      <Filter>other commandlets</Filter>
+    </ClCompile>
+    <ClCompile Include="patchStreamingCacheCommandlet.cpp">
+      <Filter>other commandlets\patching</Filter>
+    </ClCompile>
+    <ClCompile Include="glueFilesDLCCommandlet.cpp">
+      <Filter>other commandlets</Filter>
+    </ClCompile>
+    <ClCompile Include="r4extractCharactersDLCCommandlet.cpp">
+      <Filter>other commandlets</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="wccTypeRegistry.h">
+      <Filter>wcc common</Filter>
+    </ClInclude>
+    <ClInclude Include="wccEngine.h">
+      <Filter>wcc common</Filter>
+    </ClInclude>
+    <ClInclude Include="build.h">
+      <Filter>wcc common</Filter>
+    </ClInclude>
+    <ClInclude Include="IPlatformUtils.h">
+      <Filter>wcc common</Filter>
+    </ClInclude>
+    <ClInclude Include="wccExternalReporter.h">
+      <Filter>wcc common</Filter>
+    </ClInclude>
+    <ClInclude Include="wccDummyGame.h">
+      <Filter>wcc common</Filter>
+    </ClInclude>
+    <ClInclude Include="wccTTYWriter.h">
+      <Filter>wcc common</Filter>
+    </ClInclude>
+    <ClInclude Include="cookerDependencyAnalyzer.h">
+      <Filter>cooker\common</Filter>
+    </ClInclude>
+    <ClInclude Include="pathlibCooker.h">
+      <Filter>other commandlets\pathlib\cooker</Filter>
+    </ClInclude>
+    <ClInclude Include="pathlibTaskPool.h">
+      <Filter>other commandlets\pathlib\cooker</Filter>
+    </ClInclude>
+    <ClInclude Include="pathlibObstacleCooker.h">
+      <Filter>other commandlets\pathlib\cooker</Filter>
+    </ClInclude>
+    <ClInclude Include="wccMemory.h">
+      <Filter>wcc common</Filter>
+    </ClInclude>
+    <ClInclude Include="wccVersionControl.h">
+      <Filter>wcc common</Filter>
+    </ClInclude>
+    <ClInclude Include="cookerUtils.h">
+      <Filter>other commandlets</Filter>
+    </ClInclude>
+    <ClInclude Include="bundleCommandlet.h">
+      <Filter>other commandlets</Filter>
+    </ClInclude>
+    <ClInclude Include="pathlibFoliageCooker.h">
+      <Filter>other commandlets\pathlib\cooker</Filter>
+    </ClInclude>
+    <ClInclude Include="cookerSpeedTreeSupport.h">
+      <Filter>cooker\common</Filter>
+    </ClInclude>
+    <ClInclude Include="cookCommandlet.h">
+      <Filter>cooker</Filter>
+    </ClInclude>
+    <ClInclude Include="cookDataBase.h">
+      <Filter>cooker</Filter>
+    </ClInclude>
+    <ClInclude Include="testMemCommandlet.h">
+      <Filter>other commandlets\tests</Filter>
+    </ClInclude>
+    <ClInclude Include="jsonFileHelper.h">
+      <Filter>cooker</Filter>
+    </ClInclude>
+    <ClInclude Include="cookSeedFile.h">
+      <Filter>cooker</Filter>
+    </ClInclude>
+    <ClInclude Include="cookDataBaseHelper.h">
+      <Filter>cooker</Filter>
+    </ClInclude>
+    <ClInclude Include="analyzeCommandlet.h">
+      <Filter>cooker\analyzers</Filter>
+    </ClInclude>
+    <ClInclude Include="cacheBuilderCommandlet.h">
+      <Filter>cooker\caches</Filter>
+    </ClInclude>
+    <ClInclude Include="textureCookerNonResource.h">
+      <Filter>cooker\caches\textures</Filter>
+    </ClInclude>
+    <ClInclude Include="cookFramework.h">
+      <Filter>cooker</Filter>
+    </ClInclude>
+    <ClInclude Include="materialCooker.h">
+      <Filter>cooker\caches\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="resourceUsageDataBase.h">
+      <Filter>cooker\usage</Filter>
+    </ClInclude>
+    <ClInclude Include="baseCacheBuilder.h">
+      <Filter>cooker\caches</Filter>
+    </ClInclude>
+    <ClInclude Include="cookerTextEncoder.h">
+      <Filter>other commandlets\textEnc</Filter>
+    </ClInclude>
+    <ClInclude Include="resourceUsageCommandlet.h">
+      <Filter>cooker\usage</Filter>
+    </ClInclude>
+    <ClInclude Include="worldFileAnalyzer.h">
+      <Filter>cooker\analyzers</Filter>
+    </ClInclude>
+    <ClInclude Include="textureCacheCooker.h">
+      <Filter>cooker\caches\textures</Filter>
+    </ClInclude>
+    <ClInclude Include="bundleMetadataStoreCommandlet.h">
+      <Filter>cooker\bundles</Filter>
+    </ClInclude>
+    <ClInclude Include="exportBundlesCommandlet.h">
+      <Filter>cooker\bundles</Filter>
+    </ClInclude>
+    <ClInclude Include="reportWriter.h">
+      <Filter>other commandlets\report</Filter>
+    </ClInclude>
+    <ClInclude Include="processRunner.h">
+      <Filter>wcc common</Filter>
+    </ClInclude>
+    <ClInclude Include="packageBatchCommandWriterPS4.h">
+      <Filter>other commandlets\publishing\PS4</Filter>
+    </ClInclude>
+    <ClInclude Include="packageFileCollectorPS4.h">
+      <Filter>other commandlets\publishing\PS4</Filter>
+    </ClInclude>
+    <ClInclude Include="packageProjectBuilderPS4.h">
+      <Filter>other commandlets\publishing\PS4</Filter>
+    </ClInclude>
+    <ClInclude Include="packageToolPS4.h">
+      <Filter>other commandlets\publishing\PS4</Filter>
+    </ClInclude>
+    <ClInclude Include="packageSkuPS4.h">
+      <Filter>other commandlets\publishing\PS4</Filter>
+    </ClInclude>
+    <ClInclude Include="packageLanguagesPS4.h">
+      <Filter>other commandlets\publishing\PS4</Filter>
+    </ClInclude>
+    <ClInclude Include="packageMainPS4.h">
+      <Filter>other commandlets\publishing\PS4</Filter>
+    </ClInclude>
+    <ClInclude Include="packagePlayGoChunksBuilder.h">
+      <Filter>other commandlets\publishing\PS4</Filter>
+    </ClInclude>
+    <ClInclude Include="shaderCompilerOrbis.h">
+      <Filter>cooker\caches\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="shaderCompiler.h">
+      <Filter>cooker\caches\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="shaderCompilerPC.h">
+      <Filter>cooker\caches\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="shaderCompilerDurango.h">
+      <Filter>cooker\caches\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="packageChunkLayerPairPS4.h">
+      <Filter>other commandlets\publishing\PS4</Filter>
+    </ClInclude>
+    <ClInclude Include="baseCacheSplitter.h">
+      <Filter>cooker\caches</Filter>
+    </ClInclude>
+    <ClInclude Include="cacheSplitterCommandlet.h">
+      <Filter>cooker\caches</Filter>
+    </ClInclude>
+    <ClInclude Include="playgoHelper.h">
+      <Filter>cooker</Filter>
+    </ClInclude>
+    <ClInclude Include="splitFilesCommandlet.h">
+      <Filter>cooker\splitting</Filter>
+    </ClInclude>
+    <ClInclude Include="cookSplitList.h">
+      <Filter>cooker</Filter>
+    </ClInclude>
+    <ClInclude Include="wccStats.h">
+      <Filter>wcc common</Filter>
+    </ClInclude>
+    <ClInclude Include="packageMainXboxOne.h">
+      <Filter>other commandlets\publishing\XboxOne</Filter>
+    </ClInclude>
+    <ClInclude Include="packageToolXboxOne.h">
+      <Filter>other commandlets\publishing\XboxOne</Filter>
+    </ClInclude>
+    <ClInclude Include="packageFileCollector.h">
+      <Filter>other commandlets\publishing</Filter>
+    </ClInclude>
+    <ClInclude Include="packageFiles.h">
+      <Filter>other commandlets\publishing</Filter>
+    </ClInclude>
+    <ClInclude Include="packageConstants.h">
+      <Filter>other commandlets\publishing</Filter>
+    </ClInclude>
+    <ClInclude Include="packageTool.h">
+      <Filter>other commandlets\publishing</Filter>
+    </ClInclude>
+    <ClInclude Include="packageMapFileBuilderXboxOne.h">
+      <Filter>other commandlets\publishing\XboxOne</Filter>
+    </ClInclude>
+    <ClInclude Include="packageFileCollectorXboxOne.h">
+      <Filter>other commandlets\publishing\XboxOne</Filter>
+    </ClInclude>
+    <ClInclude Include="packageXmlWriterXboxOne.h">
+      <Filter>other commandlets\publishing\XboxOne</Filter>
+    </ClInclude>
+    <ClInclude Include="packageSkuXboxOne.h">
+      <Filter>other commandlets\publishing\XboxOne</Filter>
+    </ClInclude>
+    <ClInclude Include="packageLanguagesXboxOne.h">
+      <Filter>other commandlets\publishing\XboxOne</Filter>
+    </ClInclude>
+    <ClInclude Include="cookFileWriter.h">
+      <Filter>cooker</Filter>
+    </ClInclude>
+    <ClInclude Include="soundBankHelper.h">
+      <Filter>cooker\caches\sounds</Filter>
+    </ClInclude>
+    <ClInclude Include="patchBuilder.h">
+      <Filter>other commandlets\patching</Filter>
+    </ClInclude>
+    <ClInclude Include="patchBundles.h">
+      <Filter>other commandlets\patching</Filter>
+    </ClInclude>
+    <ClInclude Include="patchCommandlet.h">
+      <Filter>other commandlets\patching</Filter>
+    </ClInclude>
+    <ClInclude Include="patchSounds.h">
+      <Filter>other commandlets\patching</Filter>
+    </ClInclude>
+    <ClInclude Include="patchSpecialCases.h">
+      <Filter>other commandlets\patching</Filter>
+    </ClInclude>
+    <ClInclude Include="patchTextureCache.h">
+      <Filter>other commandlets\patching</Filter>
+    </ClInclude>
+    <ClInclude Include="patchUtils.h">
+      <Filter>other commandlets\patching</Filter>
+    </ClInclude>
+    <ClInclude Include="textureCacheProcessing.h">
+      <Filter>other commandlets\patching</Filter>
+    </ClInclude>
+    <ClInclude Include="patchPhysics.h">
+      <Filter>other commandlets\patching</Filter>
+    </ClInclude>
+    <ClInclude Include="patchSpeeches.h">
+      <Filter>other commandlets\patching</Filter>
+    </ClInclude>
+    <ClInclude Include="patchStrings.h">
+      <Filter>other commandlets\patching</Filter>
+    </ClInclude>
+    <ClInclude Include="patchShaders.h">
+      <Filter>other commandlets\patching</Filter>
+    </ClInclude>
+    <ClInclude Include="sectorBuilderCommandlet.h">
+      <Filter>other commandlets\sectors</Filter>
+    </ClInclude>
+    <ClInclude Include="manualBundlesReader.h">
+      <Filter>other commandlets\sectors</Filter>
+    </ClInclude>
+    <ClInclude Include="resourceGrid.h">
+      <Filter>other commandlets\sectors</Filter>
+    </ClInclude>
+    <ClInclude Include="resourceGridOptimizer.h">
+      <Filter>other commandlets\sectors</Filter>
+    </ClInclude>
+    <ClInclude Include="uncookDDSUtils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="other commandlets">
+      <UniqueIdentifier>{de0c00aa-595d-410f-9ecc-a82ff18e69b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="wcc common">
+      <UniqueIdentifier>{b54fc4d8-e782-440a-a3d3-4f2ff4be4ac1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resource cookers">
+      <UniqueIdentifier>{ac2ab6ba-af48-4a5c-aa08-0c49de85a6c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="other commandlets\pathlib">
+      <UniqueIdentifier>{d94f8742-6f70-4a75-9684-af58cc5d66a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="other commandlets\pathlib\cooker">
+      <UniqueIdentifier>{d51095ea-b194-4a0b-ba12-23eddcd2487a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="other commandlets\tests">
+      <UniqueIdentifier>{29246f82-8c39-4b0a-9459-a129a2fa5c82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="other commandlets\textEnc">
+      <UniqueIdentifier>{634bb3b1-872c-4080-99b3-ad4a19f05f3e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cooker">
+      <UniqueIdentifier>{4828d234-7dc3-4bf4-b483-7feea0db175e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cooker\caches">
+      <UniqueIdentifier>{518d4fa2-4912-44fd-9d10-2fa3f6a87d49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cooker\caches\textures">
+      <UniqueIdentifier>{5236f03e-264b-4ae2-acdb-6fd43ee87f02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cooker\caches\shaders">
+      <UniqueIdentifier>{db9ffbd0-f4a0-4249-8190-073dbe78d2a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cooker\caches\physics">
+      <UniqueIdentifier>{f5e2d578-9f15-4729-a4a9-0eeb8dee36a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cooker\analyzers">
+      <UniqueIdentifier>{f5fcc63d-b215-4707-9912-9a9d6ffdc7c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cooker\usage">
+      <UniqueIdentifier>{0c3b617b-a216-4049-8e6b-b2211d5ee0d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cooker\bundles">
+      <UniqueIdentifier>{6af643cd-fae5-4a9f-95fc-f03166b85ea6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cooker\common">
+      <UniqueIdentifier>{c9f4f294-3362-44aa-b76a-9f6f7dcf1661}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="other commandlets\report">
+      <UniqueIdentifier>{7b336c0b-6389-43d5-be3d-9561889cb810}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="other commandlets\publishing">
+      <UniqueIdentifier>{797eb42a-17dd-49ae-b9d9-37890e06f7d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="other commandlets\publishing\PS4">
+      <UniqueIdentifier>{3a99b914-ed33-4274-9e94-e8487967b65b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cooker\splitting">
+      <UniqueIdentifier>{41502d0a-0643-4ff9-87c3-d3d692bc69a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="other commandlets\publishing\XboxOne">
+      <UniqueIdentifier>{dfb014d9-bac5-4e7f-88fa-55f03260ed86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cooker\caches\sounds">
+      <UniqueIdentifier>{60dd9bbb-c16f-4366-bfec-986d8016fbdf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="other commandlets\r4">
+      <UniqueIdentifier>{2577bd72-d57f-4306-be81-0425355c26e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="other commandlets\patching">
+      <UniqueIdentifier>{d5da219a-4a4e-4ef8-b201-ef706efb1c18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="other commandlets\sectors">
+      <UniqueIdentifier>{42487cf3-fa00-4454-b8ea-2701f8d4d3df}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

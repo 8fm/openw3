@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="utils">
+      <UniqueIdentifier>{E844CF3C-44EF-D84C-90BC-A1E063CFAB38}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils\statdump">
+      <UniqueIdentifier>{E7D1A3B5-CCC5-D543-BDDA-75C0B20F9277}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\utils\statdump\umbraStatDump.cpp">
+      <Filter>utils\statdump</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

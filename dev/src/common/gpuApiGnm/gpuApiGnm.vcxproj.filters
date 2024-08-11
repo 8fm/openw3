@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="gpuApi.h" />
+    <ClInclude Include="gpuApiBase.h" />
+    <ClInclude Include="gpuApiMapping.h" />
+    <ClInclude Include="gpuApiGamma.h" />
+    <ClInclude Include="gpuApiRenderState.h" />
+    <ClInclude Include="gpuApiDDSLoader.h" />
+    <ClInclude Include="gpuApi.inl" />
+    <ClInclude Include="..\..\..\external\redgnmx\redgnmx.h">
+      <Filter>redgnmx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\redgnmx\redgnmx\common.h">
+      <Filter>redgnmx\redgnmx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\redgnmx\redgnmx\computecontext.h">
+      <Filter>redgnmx\redgnmx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\redgnmx\redgnmx\computecontext_methods.h">
+      <Filter>redgnmx\redgnmx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\redgnmx\redgnmx\computequeue.h">
+      <Filter>redgnmx\redgnmx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\redgnmx\redgnmx\constantupdateengine.h">
+      <Filter>redgnmx\redgnmx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\redgnmx\redgnmx\cue.h">
+      <Filter>redgnmx\redgnmx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\redgnmx\redgnmx\cue-helper.h">
+      <Filter>redgnmx\redgnmx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\redgnmx\redgnmx\dispatchdraw.h">
+      <Filter>redgnmx\redgnmx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\redgnmx\redgnmx\error_gen.h">
+      <Filter>redgnmx\redgnmx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\redgnmx\redgnmx\fetchshaderhelper.h">
+      <Filter>redgnmx\redgnmx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\redgnmx\redgnmx\gfxcontext.h">
+      <Filter>redgnmx\redgnmx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\redgnmx\redgnmx\gfxcontext_methods.h">
+      <Filter>redgnmx\redgnmx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\redgnmx\redgnmx\helpers.h">
+      <Filter>redgnmx\redgnmx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\redgnmx\redgnmx\lwgfxcontext_methods.h">
+      <Filter>redgnmx\redgnmx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\redgnmx\redgnmx\shader_parser.h">
+      <Filter>redgnmx\redgnmx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\redgnmx\redgnmx\shaderbinary.h">
+      <Filter>redgnmx\redgnmx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\redgnmx\redgnmx\basegfxcontext.h">
+      <Filter>redgnmx\redgnmx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\redgnmx\redgnmx\config.h">
+      <Filter>redgnmx\redgnmx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\redgnmx\redgnmx\lwcue_base.h">
+      <Filter>redgnmx\redgnmx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\redgnmx\redgnmx\lwcue_compute.h">
+      <Filter>redgnmx\redgnmx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\redgnmx\redgnmx\lwcue_deprecated.h">
+      <Filter>redgnmx\redgnmx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\redgnmx\redgnmx\lwcue_graphics.h">
+      <Filter>redgnmx\redgnmx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\redgnmx\redgnmx\lwcue_validation.h">
+      <Filter>redgnmx\redgnmx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\redgnmx\redgnmx\lwgfxcontext.h">
+      <Filter>redgnmx\redgnmx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\redgnmx\redgnmx\lwgfxcontext_cuetolcue.h">
+      <Filter>redgnmx\redgnmx</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="gpuApiBuffer.cpp" />
+    <ClCompile Include="gpuApiTexture.cpp" />
+    <ClCompile Include="gpuApi.cpp" />
+    <ClCompile Include="gpuApiGamma.cpp" />
+    <ClCompile Include="gpuApiRenderState.cpp" />
+    <ClCompile Include="gpuApiDeviceState.cpp" />
+    <ClCompile Include="gpuApiRenderTarget.cpp" />
+    <ClCompile Include="gpuApiDevice.cpp" />
+    <ClCompile Include="gpuApiRender.cpp" />
+    <ClCompile Include="gpuApiShader.cpp" />
+    <ClCompile Include="gpuApiVertexLayouts.cpp" />
+    <ClCompile Include="gpuApiDrawContext.cpp" />
+    <ClCompile Include="gpuApiSamplerStates.cpp" />
+    <ClCompile Include="gpuApiQuery.cpp" />
+    <ClCompile Include="gpuApiDDSLoader.cpp" />
+    <ClCompile Include="..\..\..\external\redgnmx\src\computecontext.cpp">
+      <Filter>redgnmx\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\redgnmx\src\computequeue.cpp">
+      <Filter>redgnmx\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\redgnmx\src\constantupdateengine.cpp">
+      <Filter>redgnmx\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\redgnmx\src\cue.cpp">
+      <Filter>redgnmx\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\redgnmx\src\cue-deprecated.cpp">
+      <Filter>redgnmx\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\redgnmx\src\cue-dispatchdraw.cpp">
+      <Filter>redgnmx\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\redgnmx\src\cue-resource.cpp">
+      <Filter>redgnmx\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\redgnmx\src\cue-shader.cpp">
+      <Filter>redgnmx\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\redgnmx\src\cue-static.cpp">
+      <Filter>redgnmx\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\redgnmx\src\dispatchdraw.cpp">
+      <Filter>redgnmx\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\redgnmx\src\fetchshaderhelper.cpp">
+      <Filter>redgnmx\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\redgnmx\src\gfxcontext.cpp">
+      <Filter>redgnmx\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\redgnmx\src\helpers.cpp">
+      <Filter>redgnmx\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\redgnmx\src\shader_parser.cpp">
+      <Filter>redgnmx\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\redgnmx\src\basegfxcontext.cpp">
+      <Filter>redgnmx\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\redgnmx\src\lwcue_base.cpp">
+      <Filter>redgnmx\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\redgnmx\src\lwcue_compute.cpp">
+      <Filter>redgnmx\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\redgnmx\src\lwcue_graphics.cpp">
+      <Filter>redgnmx\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\redgnmx\src\lwcue_validation.cpp">
+      <Filter>redgnmx\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\redgnmx\src\lwgfxcontext.cpp">
+      <Filter>redgnmx\src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="redgnmx">
+      <UniqueIdentifier>{7ab57686-4022-4a6e-b659-a85acf1caf38}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="redgnmx\src">
+      <UniqueIdentifier>{a1d2a1a4-efa2-48e8-8ebc-2418585e892a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="redgnmx\redgnmx">
+      <UniqueIdentifier>{dd05725d-3098-4271-a0e7-2128c31130a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="util_shaders">
+      <UniqueIdentifier>{4cf81950-9964-4dce-b5bf-ac88cc452186}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile_PSSL_To_Header Include="util_shaders\cs_copyrawtexture1d_c.pssl">
+      <Filter>util_shaders</Filter>
+    </Compile_PSSL_To_Header>
+    <Compile_PSSL_To_Header Include="util_shaders\cs_copyrawtexture2d_c.pssl">
+      <Filter>util_shaders</Filter>
+    </Compile_PSSL_To_Header>
+    <Compile_PSSL_To_Header Include="util_shaders\cs_copyrawtexture3d_c.pssl">
+      <Filter>util_shaders</Filter>
+    </Compile_PSSL_To_Header>
+    <Compile_PSSL_To_Header Include="util_shaders\cs_copytexture1d_c.pssl">
+      <Filter>util_shaders</Filter>
+    </Compile_PSSL_To_Header>
+    <Compile_PSSL_To_Header Include="util_shaders\cs_copytexture2d_c.pssl">
+      <Filter>util_shaders</Filter>
+    </Compile_PSSL_To_Header>
+    <Compile_PSSL_To_Header Include="util_shaders\cs_copytexture3d_c.pssl">
+      <Filter>util_shaders</Filter>
+    </Compile_PSSL_To_Header>
+	<Compile_PSSL_To_Header Include="util_shaders\vex_clear_vv.pssl">
+      <Filter>util_shaders</Filter>
+    </Compile_PSSL_To_Header>
+    <Compile_PSSL_To_Header Include="util_shaders\cs_set_uint_c.pssl">
+      <Filter>util_shaders</Filter>
+    </Compile_PSSL_To_Header>
+    <Compile_PSSL_To_Header Include="util_shaders\cs_set_uint_fast_c.pssl">
+      <Filter>util_shaders</Filter>
+    </Compile_PSSL_To_Header>
+  </ItemGroup>
+</Project>

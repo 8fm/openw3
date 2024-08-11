@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
+	<Type Name="CName">
+		<DisplayString>{(((CNamesPool::SNameHolder **)((GDebuggerNamesPool)->m_indexedNameList).m_buf)[m_index])->m_name,su}</DisplayString>
+    <StringView>(((CNamesPool::SNameHolder **)((GDebuggerNamesPool)->m_indexedNameList).m_buf)[m_index])->m_name,su</StringView>
+	</Type>
+	<Type Name="Red::System::DateTime">
+		<DisplayString Condition="m_date == 0 &amp;&amp; m_time == 0">[Invalid]</DisplayString>
+		<DisplayString>{( ( m_date &amp; 0x00007C00 ) &gt;&gt; 10 ) + 1}/{( ( m_date &amp; 0x000F8000 ) &gt;&gt; 15) + 1}/{( m_date &amp; 0xFFF00000 ) &gt;&gt; 20} {( m_time &amp; 0x07C00000 ) &gt;&gt; 22}:{( m_time &amp; 0x03F0000 ) &gt;&gt; 16}:{( m_time &amp; 0x0000FC00 ) &gt;&gt; 10}.{( m_time &amp; 0x000003FF ) &gt;&gt; 0}</DisplayString>
+		<Expand>
+			<Synthetic Name="Year">
+			  <DisplayString>{( m_date &amp; 0xFFF00000 ) &gt;&gt; 20}</DisplayString>
+			</Synthetic>
+			<Synthetic Name="Month">
+			  <DisplayString>{( ( m_date &amp; 0x000F8000 ) &gt;&gt; 15) + 1}</DisplayString>
+			</Synthetic>
+			<Synthetic Name="Day">
+			  <DisplayString>{( ( m_date &amp; 0x00007C00 ) &gt;&gt; 10 ) + 1}</DisplayString>
+			</Synthetic>
+			<Synthetic Name="Hour">
+			  <DisplayString>{( m_time &amp; 0x07C00000 ) &gt;&gt; 22}</DisplayString>
+			</Synthetic>
+			<Synthetic Name="Minute">
+			  <DisplayString>{( m_time &amp; 0x03F0000 ) &gt;&gt; 16}</DisplayString>
+			</Synthetic>
+			<Synthetic Name="Second">
+			  <DisplayString>{( m_time &amp; 0x0000FC00 ) &gt;&gt; 10}</DisplayString>
+			</Synthetic>
+			<Synthetic Name="Milliseconds">
+			  <DisplayString>{( m_time &amp; 0x000003FF ) &gt;&gt; 0}</DisplayString>
+			</Synthetic>
+		</Expand>
+	</Type>
+</AutoVisualizer>

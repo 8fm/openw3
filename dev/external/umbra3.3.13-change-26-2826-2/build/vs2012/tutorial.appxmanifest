@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest"
+         xmlns:mx="http://schemas.microsoft.com/appx/2013/xbox/manifest"
+         IgnorableNamespaces="mx">
+  <Identity Name="tutorial" Publisher="CN=Publisher" Version="1.0.0.0"/>
+  <Properties>
+    <DisplayName>tutorial</DisplayName>
+    <PublisherDisplayName>PublisherDisplayName</PublisherDisplayName>
+    <Logo>StoreLogo.png</Logo>
+    <Description>tutorial</Description>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.2</OSMinVersion>
+    <OSMaxVersionTested>6.2</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="en-us"/>
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="tutorial.App">
+      <VisualElements
+        DisplayName="tutorial"
+        Logo="Logo.png"
+        SmallLogo="SmallLogo.png"
+        Description="tutorial"
+        ForegroundText="light"
+        BackgroundColor="#1A1915">
+        <SplashScreen Image="SplashScreen.png" />
+      </VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>
+

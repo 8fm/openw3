@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" TreatAsLocalProperty="OutDir;TargetName;IntDir;PlatformToolset">
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedConfigurationSetup.props))\SharedConfigurationSetup.props" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{CB12E47D-DB64-4466-9C54-59C3DA05E6BF}</ProjectGuid>
+    <RootNamespace>redIO</RootNamespace>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <UsePrecompiledHeaders>false</UsePrecompiledHeaders>
+  </PropertyGroup>
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.props))\Shared.props" />
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedItemGroups.props))\SharedItemGroups.props" />
+  <ItemGroup>
+    <ClCompile Include="redIO.cpp" />
+    <ClCompile Include="redIOAsyncFileHandleCache.cpp" />
+    <ClCompile Include="redIOAsyncIO.cpp" />
+    <ClCompile Include="redIOFile.cpp" />
+    <ClCompile Include="redIOFiosFileOrbisAPI.cpp" />
+    <ClCompile Include="redIOProactorGenericAPI.cpp" />
+    <ClCompile Include="redIOProactorOrbisAPI.cpp" />
+    <ClCompile Include="redIOSystemFileWinAPI.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="redIOAsyncFileHandleCache.h" />
+    <ClInclude Include="redIOAsyncIO.h" />
+    <ClInclude Include="redIOAsyncReadToken.h" />
+    <ClInclude Include="redIO.h" />
+    <ClInclude Include="redIOCommon.h" />
+    <ClInclude Include="redIOFile.h" />
+    <ClInclude Include="redIOFiosFileOrbisAPI.h" />
+    <ClInclude Include="redIOFiosFwd.h" />
+    <ClInclude Include="redIOProactorGenericAPI.h" />
+    <ClInclude Include="redIOProactorOrbisAPI.h" />
+    <ClInclude Include="redIOSystemFileWinAPI.h" />
+    <ClInclude Include="redIOPlatform.h" />
+    <ClInclude Include="redIOTempBitset.h" />
+    <ClInclude Include="redIOTypes.h" />
+  </ItemGroup>
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.targets))\Shared.targets" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+</Project>

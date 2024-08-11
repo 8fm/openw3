@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" TreatAsLocalProperty="OutDir;TargetName;IntDir;PlatformToolset">
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedConfigurationSetup.props))\SharedConfigurationSetup.props" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{6853D4A2-5828-4E2C-9A93-A083B88DEB80}</ProjectGuid>
+    <RootNamespace>platformOrbis</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <ProjectClDirs>$(SolutionDir)../external/gfx4/Src;$(SolutionDir)../external/gfx4/Include;</ProjectClDirs>
+  </PropertyGroup>
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.props))\Shared.props" />
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedItemGroups.props))\SharedItemGroups.props" />
+  <ItemGroup>
+    <ClInclude Include="build.h" />
+    <ClInclude Include="contentManagerOrbis.h" />
+    <ClInclude Include="dlcInstallerOrbis.h" />
+    <ClInclude Include="dlcInstallerOrbis_p.h" />
+    <ClInclude Include="gestureRecognizerOrbis.h" />
+    <ClInclude Include="inputDeviceGamepadOrbis.h" />
+    <ClInclude Include="inputDeviceKeyboardOrbisDebug.h" />
+    <ClInclude Include="inputDeviceManagerOrbis.h" />
+    <ClInclude Include="inputDeviceMouseOrbisDebug.h" />
+    <ClInclude Include="inputDevicePlatformDataOrbis.h" />
+    <ClInclude Include="orbisApiCall.h" />
+    <ClInclude Include="orbisSystemDialog.h" />
+    <ClInclude Include="streamingInstallerOrbis.h" />
+    <ClInclude Include="userProfileOrbis.h" />
+    <ClInclude Include="userProfileTasks.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="build.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <PrecompiledHeaderFile>build.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="contentManagerOrbis.cpp" />
+    <ClCompile Include="dlcInstallerOrbis.cpp" />
+    <ClCompile Include="gestureRecognizerOrbis.cpp" />
+    <ClCompile Include="inputDeviceGamepadOrbis.cpp" />
+    <ClCompile Include="inputDeviceKeyboardOrbisDebug.cpp" />
+    <ClCompile Include="inputDeviceManagerOrbis.cpp" />
+    <ClCompile Include="inputDeviceMouseOrbisDebug.cpp" />
+    <ClCompile Include="orbisSystemDialog.cpp" />
+    <ClCompile Include="streamingInstallerOrbis.cpp" />
+    <ClCompile Include="userProfileOrbis.cpp" />
+    <ClCompile Include="userProfileOrbisSaves.cpp" />
+    <ClCompile Include="userProfileTasks.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.targets))\Shared.targets" />
+  </ImportGroup>
+</Project>

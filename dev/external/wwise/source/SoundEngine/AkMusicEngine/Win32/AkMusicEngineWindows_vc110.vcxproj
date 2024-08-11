@@ -1,0 +1,664 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup Label="ProjectConfigurations">
+		<ProjectConfiguration Include="Debug|Win32">
+			<Configuration>Debug</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Debug|x64">
+			<Configuration>Debug</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Debug(StaticCRT)|Win32">
+			<Configuration>Debug(StaticCRT)</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Debug(StaticCRT)|x64">
+			<Configuration>Debug(StaticCRT)</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Profile|Win32">
+			<Configuration>Profile</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Profile|x64">
+			<Configuration>Profile</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Profile(StaticCRT)|Win32">
+			<Configuration>Profile(StaticCRT)</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Profile(StaticCRT)|x64">
+			<Configuration>Profile(StaticCRT)</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Release|Win32">
+			<Configuration>Release</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Release|x64">
+			<Configuration>Release</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Release(StaticCRT)|Win32">
+			<Configuration>Release(StaticCRT)</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Release(StaticCRT)|x64">
+			<Configuration>Release(StaticCRT)</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+	</ItemGroup>
+	<PropertyGroup Label="Globals">
+		<ProjectGuid>{B7764B22-77B0-B409-3006-0401F599915B}</ProjectGuid>
+		<RootNamespace>AkMusicEngine</RootNamespace>
+		<Keyword>Win32Proj</Keyword>
+		<ProjectName>AkMusicEngine</ProjectName>
+		<VCTargetsPath Condition="'$(VCTargetsPath11)' != '' and '$(VSVersion)' == '' and $(VisualStudioVersion) == ''">$(VCTargetsPath11)</VCTargetsPath>
+		<DefaultLanguage>en-US</DefaultLanguage>
+	</PropertyGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<UseDebugLibraries>true</UseDebugLibraries>
+		<PlatformToolset>v110</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<UseDebugLibraries>true</UseDebugLibraries>
+		<PlatformToolset>v110</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|Win32'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<UseDebugLibraries>true</UseDebugLibraries>
+		<PlatformToolset>v110</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|x64'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<UseDebugLibraries>true</UseDebugLibraries>
+		<PlatformToolset>v110</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<UseDebugLibraries>true</UseDebugLibraries>
+		<PlatformToolset>v110</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|x64'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<UseDebugLibraries>true</UseDebugLibraries>
+		<PlatformToolset>v110</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|Win32'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<UseDebugLibraries>true</UseDebugLibraries>
+		<PlatformToolset>v110</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|x64'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<UseDebugLibraries>true</UseDebugLibraries>
+		<PlatformToolset>v110</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<UseDebugLibraries>true</UseDebugLibraries>
+		<PlatformToolset>v110</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<UseDebugLibraries>true</UseDebugLibraries>
+		<PlatformToolset>v110</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|Win32'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<UseDebugLibraries>true</UseDebugLibraries>
+		<PlatformToolset>v110</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|x64'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<UseDebugLibraries>true</UseDebugLibraries>
+		<PlatformToolset>v110</PlatformToolset>
+	</PropertyGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+	<ImportGroup Label="ExtensionSettings">
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../Build/PropertySheets/Win32/Debug_vc110.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../Build/PropertySheets/Win32/Debug_vc110.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../Build/PropertySheets/Win32/Debug_StaticCRT_vc110.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|x64'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../Build/PropertySheets/Win32/Debug_StaticCRT_vc110.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../Build/PropertySheets/Win32/NDebug_vc110.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Profile|x64'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../Build/PropertySheets/Win32/NDebug_vc110.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../Build/PropertySheets/Win32/NDebug_StaticCRT_vc110.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|x64'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../Build/PropertySheets/Win32/NDebug_StaticCRT_vc110.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../Build/PropertySheets/Win32/NDebug_vc110.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../Build/PropertySheets/Win32/NDebug_vc110.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../Build/PropertySheets/Win32/NDebug_StaticCRT_vc110.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|x64'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../Build/PropertySheets/Win32/NDebug_StaticCRT_vc110.props" />
+	</ImportGroup>
+	<PropertyGroup Label="UserMacros" />
+	<PropertyGroup>
+		<_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\..\$(Platform)_vc110\$(Configuration)\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\..\$(Platform)_vc110\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AkMusicEngine</TargetName>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\..\$(Platform)_vc110\$(Configuration)\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\..\$(Platform)_vc110\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AkMusicEngine</TargetName>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|Win32'">..\..\..\..\$(Platform)_vc110\$(Configuration)\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|Win32'">..\..\..\..\$(Platform)_vc110\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|Win32'">AkMusicEngine</TargetName>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|x64'">..\..\..\..\$(Platform)_vc110\$(Configuration)\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|x64'">..\..\..\..\$(Platform)_vc110\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|x64'">AkMusicEngine</TargetName>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'">..\..\..\..\$(Platform)_vc110\$(Configuration)\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'">..\..\..\..\$(Platform)_vc110\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'">AkMusicEngine</TargetName>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">..\..\..\..\$(Platform)_vc110\$(Configuration)\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">..\..\..\..\$(Platform)_vc110\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">AkMusicEngine</TargetName>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|Win32'">..\..\..\..\$(Platform)_vc110\$(Configuration)\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|Win32'">..\..\..\..\$(Platform)_vc110\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|Win32'">AkMusicEngine</TargetName>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|x64'">..\..\..\..\$(Platform)_vc110\$(Configuration)\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|x64'">..\..\..\..\$(Platform)_vc110\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|x64'">AkMusicEngine</TargetName>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\..\$(Platform)_vc110\$(Configuration)\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\..\$(Platform)_vc110\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AkMusicEngine</TargetName>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\..\$(Platform)_vc110\$(Configuration)\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\..\$(Platform)_vc110\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AkMusicEngine</TargetName>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|Win32'">..\..\..\..\$(Platform)_vc110\$(Configuration)\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|Win32'">..\..\..\..\$(Platform)_vc110\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|Win32'">AkMusicEngine</TargetName>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|x64'">..\..\..\..\$(Platform)_vc110\$(Configuration)\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|x64'">..\..\..\..\$(Platform)_vc110\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|x64'">AkMusicEngine</TargetName>
+	</PropertyGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+		<ClCompile>
+			<AdditionalOptions>/wd4250 /wd4355 %(AdditionalOptions)</AdditionalOptions>
+			<AdditionalIncludeDirectories>..\Common;..\..\AkAudiolib\Win32;..\..\AkAudiolib\Common;..\..\..\..\include;..\..\SoundEngineProxy\Remote\CodeBase;..\..\SoundEngineProxy\Common;..\..\Communication\Remote\CodeBase;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>_DEBUG;WIN32;AUDIOKINETIC;AKSOUNDENGINE_EXPORTS;PROXYCENTRAL_CONNECTED;AKSOUNDENGINE_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+			<EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>_DEBUG;WIN32;AUDIOKINETIC;AKSOUNDENGINE_EXPORTS;PROXYCENTRAL_CONNECTED;AKSOUNDENGINE_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>..\Common;..\..\AkAudiolib\Win32;..\..\AkAudiolib\Common;..\..\..\..\include;..\..\SoundEngineProxy\Remote\CodeBase;..\..\SoundEngineProxy\Common;..\..\Communication\Remote\CodeBase;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)AkMusicEngine.lib</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+		<ClCompile>
+			<AdditionalOptions>/wd4250 /wd4355 %(AdditionalOptions)</AdditionalOptions>
+			<AdditionalIncludeDirectories>..\Common;..\..\AkAudiolib\Win32;..\..\AkAudiolib\Common;..\..\..\..\include;..\..\SoundEngineProxy\Remote\CodeBase;..\..\SoundEngineProxy\Common;..\..\Communication\Remote\CodeBase;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>_DEBUG;WIN64;AUDIOKINETIC;AKSOUNDENGINE_EXPORTS;PROXYCENTRAL_CONNECTED;AKSOUNDENGINE_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+			<EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>_DEBUG;WIN64;AUDIOKINETIC;AKSOUNDENGINE_EXPORTS;PROXYCENTRAL_CONNECTED;AKSOUNDENGINE_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>..\Common;..\..\AkAudiolib\Win32;..\..\AkAudiolib\Common;..\..\..\..\include;..\..\SoundEngineProxy\Remote\CodeBase;..\..\SoundEngineProxy\Common;..\..\Communication\Remote\CodeBase;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)AkMusicEngine.lib</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|Win32'">
+		<ClCompile>
+			<AdditionalOptions>/wd4250 /wd4355 %(AdditionalOptions)</AdditionalOptions>
+			<AdditionalIncludeDirectories>..\Common;..\..\AkAudiolib\Win32;..\..\AkAudiolib\Common;..\..\..\..\include;..\..\SoundEngineProxy\Remote\CodeBase;..\..\SoundEngineProxy\Common;..\..\Communication\Remote\CodeBase;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>_DEBUG;WIN32;AUDIOKINETIC;AKSOUNDENGINE_EXPORTS;PROXYCENTRAL_CONNECTED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+			<EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>_DEBUG;WIN32;AUDIOKINETIC;AKSOUNDENGINE_EXPORTS;PROXYCENTRAL_CONNECTED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>..\Common;..\..\AkAudiolib\Win32;..\..\AkAudiolib\Common;..\..\..\..\include;..\..\SoundEngineProxy\Remote\CodeBase;..\..\SoundEngineProxy\Common;..\..\Communication\Remote\CodeBase;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)AkMusicEngine.lib</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|x64'">
+		<ClCompile>
+			<AdditionalOptions>/wd4250 /wd4355 %(AdditionalOptions)</AdditionalOptions>
+			<AdditionalIncludeDirectories>..\Common;..\..\AkAudiolib\Win32;..\..\AkAudiolib\Common;..\..\..\..\include;..\..\SoundEngineProxy\Remote\CodeBase;..\..\SoundEngineProxy\Common;..\..\Communication\Remote\CodeBase;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>_DEBUG;WIN64;AUDIOKINETIC;AKSOUNDENGINE_EXPORTS;PROXYCENTRAL_CONNECTED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+			<EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>_DEBUG;WIN64;AUDIOKINETIC;AKSOUNDENGINE_EXPORTS;PROXYCENTRAL_CONNECTED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>..\Common;..\..\AkAudiolib\Win32;..\..\AkAudiolib\Common;..\..\..\..\include;..\..\SoundEngineProxy\Remote\CodeBase;..\..\SoundEngineProxy\Common;..\..\Communication\Remote\CodeBase;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)AkMusicEngine.lib</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'">
+		<ClCompile>
+			<AdditionalOptions>/wd4250 /wd4355 %(AdditionalOptions)</AdditionalOptions>
+			<AdditionalIncludeDirectories>..\Common;..\..\AkAudiolib\Win32;..\..\AkAudiolib\Common;..\..\..\..\include;..\..\SoundEngineProxy\Remote\CodeBase;..\..\SoundEngineProxy\Common;..\..\Communication\Remote\CodeBase;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>NDEBUG;WIN32;AUDIOKINETIC;AKSOUNDENGINE_EXPORTS;PROXYCENTRAL_CONNECTED;AKSOUNDENGINE_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+			<EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>NDEBUG;WIN32;AUDIOKINETIC;AKSOUNDENGINE_EXPORTS;PROXYCENTRAL_CONNECTED;AKSOUNDENGINE_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>..\Common;..\..\AkAudiolib\Win32;..\..\AkAudiolib\Common;..\..\..\..\include;..\..\SoundEngineProxy\Remote\CodeBase;..\..\SoundEngineProxy\Common;..\..\Communication\Remote\CodeBase;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)AkMusicEngine.lib</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">
+		<ClCompile>
+			<AdditionalOptions>/wd4250 /wd4355 %(AdditionalOptions)</AdditionalOptions>
+			<AdditionalIncludeDirectories>..\Common;..\..\AkAudiolib\Win32;..\..\AkAudiolib\Common;..\..\..\..\include;..\..\SoundEngineProxy\Remote\CodeBase;..\..\SoundEngineProxy\Common;..\..\Communication\Remote\CodeBase;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>NDEBUG;WIN64;AUDIOKINETIC;AKSOUNDENGINE_EXPORTS;PROXYCENTRAL_CONNECTED;AKSOUNDENGINE_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+			<EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>NDEBUG;WIN64;AUDIOKINETIC;AKSOUNDENGINE_EXPORTS;PROXYCENTRAL_CONNECTED;AKSOUNDENGINE_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>..\Common;..\..\AkAudiolib\Win32;..\..\AkAudiolib\Common;..\..\..\..\include;..\..\SoundEngineProxy\Remote\CodeBase;..\..\SoundEngineProxy\Common;..\..\Communication\Remote\CodeBase;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)AkMusicEngine.lib</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|Win32'">
+		<ClCompile>
+			<AdditionalOptions>/wd4250 /wd4355 %(AdditionalOptions)</AdditionalOptions>
+			<AdditionalIncludeDirectories>..\Common;..\..\AkAudiolib\Win32;..\..\AkAudiolib\Common;..\..\..\..\include;..\..\SoundEngineProxy\Remote\CodeBase;..\..\SoundEngineProxy\Common;..\..\Communication\Remote\CodeBase;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>NDEBUG;WIN32;AUDIOKINETIC;AKSOUNDENGINE_EXPORTS;PROXYCENTRAL_CONNECTED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+			<EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>NDEBUG;WIN32;AUDIOKINETIC;AKSOUNDENGINE_EXPORTS;PROXYCENTRAL_CONNECTED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>..\Common;..\..\AkAudiolib\Win32;..\..\AkAudiolib\Common;..\..\..\..\include;..\..\SoundEngineProxy\Remote\CodeBase;..\..\SoundEngineProxy\Common;..\..\Communication\Remote\CodeBase;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)AkMusicEngine.lib</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|x64'">
+		<ClCompile>
+			<AdditionalOptions>/wd4250 /wd4355 %(AdditionalOptions)</AdditionalOptions>
+			<AdditionalIncludeDirectories>..\Common;..\..\AkAudiolib\Win32;..\..\AkAudiolib\Common;..\..\..\..\include;..\..\SoundEngineProxy\Remote\CodeBase;..\..\SoundEngineProxy\Common;..\..\Communication\Remote\CodeBase;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>NDEBUG;WIN64;AUDIOKINETIC;AKSOUNDENGINE_EXPORTS;PROXYCENTRAL_CONNECTED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+			<EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>NDEBUG;WIN64;AUDIOKINETIC;AKSOUNDENGINE_EXPORTS;PROXYCENTRAL_CONNECTED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>..\Common;..\..\AkAudiolib\Win32;..\..\AkAudiolib\Common;..\..\..\..\include;..\..\SoundEngineProxy\Remote\CodeBase;..\..\SoundEngineProxy\Common;..\..\Communication\Remote\CodeBase;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)AkMusicEngine.lib</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+		<ClCompile>
+			<AdditionalOptions>/wd4250 /wd4355 %(AdditionalOptions)</AdditionalOptions>
+			<AdditionalIncludeDirectories>..\Common;..\..\AkAudiolib\Win32;..\..\AkAudiolib\Common;..\..\..\..\include;..\..\SoundEngineProxy\Remote\CodeBase;..\..\SoundEngineProxy\Common;..\..\Communication\Remote\CodeBase;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>NDEBUG;AK_OPTIMIZED;WIN32;AUDIOKINETIC;AKSOUNDENGINE_EXPORTS;PROXYCENTRAL_CONNECTED;AKSOUNDENGINE_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+			<EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>NDEBUG;AK_OPTIMIZED;WIN32;AUDIOKINETIC;AKSOUNDENGINE_EXPORTS;PROXYCENTRAL_CONNECTED;AKSOUNDENGINE_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>..\Common;..\..\AkAudiolib\Win32;..\..\AkAudiolib\Common;..\..\..\..\include;..\..\SoundEngineProxy\Remote\CodeBase;..\..\SoundEngineProxy\Common;..\..\Communication\Remote\CodeBase;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)AkMusicEngine.lib</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+		<ClCompile>
+			<AdditionalOptions>/wd4250 /wd4355 %(AdditionalOptions)</AdditionalOptions>
+			<AdditionalIncludeDirectories>..\Common;..\..\AkAudiolib\Win32;..\..\AkAudiolib\Common;..\..\..\..\include;..\..\SoundEngineProxy\Remote\CodeBase;..\..\SoundEngineProxy\Common;..\..\Communication\Remote\CodeBase;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>NDEBUG;AK_OPTIMIZED;WIN64;AUDIOKINETIC;AKSOUNDENGINE_EXPORTS;PROXYCENTRAL_CONNECTED;AKSOUNDENGINE_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+			<EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>NDEBUG;AK_OPTIMIZED;WIN64;AUDIOKINETIC;AKSOUNDENGINE_EXPORTS;PROXYCENTRAL_CONNECTED;AKSOUNDENGINE_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>..\Common;..\..\AkAudiolib\Win32;..\..\AkAudiolib\Common;..\..\..\..\include;..\..\SoundEngineProxy\Remote\CodeBase;..\..\SoundEngineProxy\Common;..\..\Communication\Remote\CodeBase;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)AkMusicEngine.lib</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|Win32'">
+		<ClCompile>
+			<AdditionalOptions>/wd4250 /wd4355 %(AdditionalOptions)</AdditionalOptions>
+			<AdditionalIncludeDirectories>..\Common;..\..\AkAudiolib\Win32;..\..\AkAudiolib\Common;..\..\..\..\include;..\..\SoundEngineProxy\Remote\CodeBase;..\..\SoundEngineProxy\Common;..\..\Communication\Remote\CodeBase;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>NDEBUG;AK_OPTIMIZED;WIN32;AUDIOKINETIC;AKSOUNDENGINE_EXPORTS;PROXYCENTRAL_CONNECTED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+			<EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>NDEBUG;AK_OPTIMIZED;WIN32;AUDIOKINETIC;AKSOUNDENGINE_EXPORTS;PROXYCENTRAL_CONNECTED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>..\Common;..\..\AkAudiolib\Win32;..\..\AkAudiolib\Common;..\..\..\..\include;..\..\SoundEngineProxy\Remote\CodeBase;..\..\SoundEngineProxy\Common;..\..\Communication\Remote\CodeBase;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)AkMusicEngine.lib</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|x64'">
+		<ClCompile>
+			<AdditionalOptions>/wd4250 /wd4355 %(AdditionalOptions)</AdditionalOptions>
+			<AdditionalIncludeDirectories>..\Common;..\..\AkAudiolib\Win32;..\..\AkAudiolib\Common;..\..\..\..\include;..\..\SoundEngineProxy\Remote\CodeBase;..\..\SoundEngineProxy\Common;..\..\Communication\Remote\CodeBase;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>NDEBUG;AK_OPTIMIZED;WIN64;AUDIOKINETIC;AKSOUNDENGINE_EXPORTS;PROXYCENTRAL_CONNECTED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+			<EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>NDEBUG;AK_OPTIMIZED;WIN64;AUDIOKINETIC;AKSOUNDENGINE_EXPORTS;PROXYCENTRAL_CONNECTED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>..\Common;..\..\AkAudiolib\Win32;..\..\AkAudiolib\Common;..\..\..\..\include;..\..\SoundEngineProxy\Remote\CodeBase;..\..\SoundEngineProxy\Common;..\..\Communication\Remote\CodeBase;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)AkMusicEngine.lib</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemGroup>
+		<ClInclude Include="..\..\AkAudiolib\Win32\stdafx.h" />
+		<ClInclude Include="..\..\..\..\include\AK\MusicEngine\Common\AkMusicEngine.h" />
+		<ClInclude Include="..\..\SoundEngineProxy\Common\ITrackProxy.h" />
+		<ClInclude Include="..\..\SoundEngineProxy\Common\TrackProxyLocal.h" />
+		<ClInclude Include="..\..\SoundEngineProxy\Remote\CodeBase\TrackProxyConnected.h" />
+		<ClInclude Include="..\..\SoundEngineProxy\Common\ISegmentProxy.h" />
+		<ClInclude Include="..\..\SoundEngineProxy\Common\SegmentProxyLocal.h" />
+		<ClInclude Include="..\..\SoundEngineProxy\Remote\CodeBase\SegmentProxyConnected.h" />
+		<ClInclude Include="..\..\SoundEngineProxy\Common\IMusicNodeProxy.h" />
+		<ClInclude Include="..\..\SoundEngineProxy\Common\IMusicRanSeqProxy.h" />
+		<ClInclude Include="..\..\SoundEngineProxy\Common\IMusicSwitchProxy.h" />
+		<ClInclude Include="..\..\SoundEngineProxy\Common\IMusicTransAwareProxy.h" />
+		<ClInclude Include="..\..\SoundEngineProxy\Common\MusicNodeProxyLocal.h" />
+		<ClInclude Include="..\..\SoundEngineProxy\Common\MusicRanSeqProxyLocal.h" />
+		<ClInclude Include="..\..\SoundEngineProxy\Common\MusicSwitchProxyLocal.h" />
+		<ClInclude Include="..\..\SoundEngineProxy\Common\MusicTransAwareProxyLocal.h" />
+		<ClInclude Include="..\..\SoundEngineProxy\Remote\CodeBase\MusicNodeProxyConnected.h" />
+		<ClInclude Include="..\..\SoundEngineProxy\Remote\CodeBase\MusicRanSeqProxyConnected.h" />
+		<ClInclude Include="..\..\SoundEngineProxy\Remote\CodeBase\MusicSwitchProxyConnected.h" />
+		<ClInclude Include="..\..\SoundEngineProxy\Remote\CodeBase\MusicTransAwareProxyConnected.h" />
+		<ClInclude Include="..\..\SoundEngineProxy\Remote\CodeBase\ProxyMusic.h" />
+		<ClInclude Include="..\Common\AkChildCtx.h" />
+		<ClInclude Include="..\Common\AkContextualMusicSequencer.h" />
+		<ClInclude Include="..\Common\AkMatrixAwareCtx.h" />
+		<ClInclude Include="..\Common\AkMatrixSequencer.h" />
+		<ClInclude Include="..\Common\AkMusicBank.h" />
+		<ClInclude Include="..\Common\AkMusicCtx.h" />
+		<ClInclude Include="..\Common\AkMusicNode.h" />
+		<ClInclude Include="..\Common\AkMusicPBI.h" />
+		<ClInclude Include="..\Common\AkMusicRanSeqCntr.h" />
+		<ClInclude Include="..\Common\AkMusicRenderer.h" />
+		<ClInclude Include="..\Common\AkMusicSegment.h" />
+		<ClInclude Include="..\Common\AkMusicStructs.h" />
+		<ClInclude Include="..\Common\AkMusicSwitchCntr.h" />
+		<ClInclude Include="..\Common\AkMusicSwitchCtx.h" />
+		<ClInclude Include="..\Common\AkMusicTrack.h" />
+		<ClInclude Include="..\Common\AkMusicTransAware.h" />
+		<ClInclude Include="..\Common\AkRSIterator.h" />
+		<ClInclude Include="..\Common\AkScheduleWindow.h" />
+		<ClInclude Include="..\Common\AkSegmentChain.h" />
+		<ClInclude Include="..\Common\AkSegmentCtx.h" />
+		<ClInclude Include="..\Common\AkSegmentInfoRepository.h" />
+		<ClInclude Include="..\Common\AkSequencableSegmentCtx.h" />
+		<ClInclude Include="..\Common\AkSequenceCtx.h" />
+	</ItemGroup>
+	<ItemGroup>
+		<ClCompile Include="..\..\AkAudiolib\Win32\stdafx.cpp">
+			<PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+			<PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+			<PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|Win32'">Create</PrecompiledHeader>
+			<PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|x64'">Create</PrecompiledHeader>
+			<PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'">Create</PrecompiledHeader>
+			<PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">Create</PrecompiledHeader>
+			<PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|Win32'">Create</PrecompiledHeader>
+			<PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|x64'">Create</PrecompiledHeader>
+			<PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+			<PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+			<PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|Win32'">Create</PrecompiledHeader>
+			<PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|x64'">Create</PrecompiledHeader>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Common\TrackProxyLocal.cpp">
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|Win32'">true</ExcludedFromBuild>
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|x64'">true</ExcludedFromBuild>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Remote\CodeBase\TrackProxyConnected.cpp">
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|Win32'">true</ExcludedFromBuild>
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|x64'">true</ExcludedFromBuild>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Common\SegmentProxyLocal.cpp">
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|Win32'">true</ExcludedFromBuild>
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|x64'">true</ExcludedFromBuild>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Remote\CodeBase\SegmentProxyConnected.cpp">
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|Win32'">true</ExcludedFromBuild>
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|x64'">true</ExcludedFromBuild>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Common\MusicNodeProxyLocal.cpp">
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|Win32'">true</ExcludedFromBuild>
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|x64'">true</ExcludedFromBuild>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Common\MusicRanSeqProxyLocal.cpp">
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|Win32'">true</ExcludedFromBuild>
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|x64'">true</ExcludedFromBuild>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Common\MusicSwitchProxyLocal.cpp">
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|Win32'">true</ExcludedFromBuild>
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|x64'">true</ExcludedFromBuild>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Common\MusicTransAwareProxyLocal.cpp">
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|Win32'">true</ExcludedFromBuild>
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|x64'">true</ExcludedFromBuild>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Remote\CodeBase\MusicNodeProxyConnected.cpp">
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|Win32'">true</ExcludedFromBuild>
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|x64'">true</ExcludedFromBuild>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Remote\CodeBase\MusicRanSeqProxyConnected.cpp">
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|Win32'">true</ExcludedFromBuild>
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|x64'">true</ExcludedFromBuild>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Remote\CodeBase\MusicSwitchProxyConnected.cpp">
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|Win32'">true</ExcludedFromBuild>
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|x64'">true</ExcludedFromBuild>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Remote\CodeBase\MusicTransAwareProxyConnected.cpp">
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|Win32'">true</ExcludedFromBuild>
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|x64'">true</ExcludedFromBuild>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Remote\CodeBase\ProxyMusic.cpp">
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|Win32'">true</ExcludedFromBuild>
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|x64'">true</ExcludedFromBuild>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkChildCtx.cpp">
+		</ClCompile>
+		<ClCompile Include="..\Common\AkContextualMusicSequencer.cpp">
+		</ClCompile>
+		<ClCompile Include="..\Common\AkMatrixAwareCtx.cpp">
+		</ClCompile>
+		<ClCompile Include="..\Common\AkMatrixSequencer.cpp">
+		</ClCompile>
+		<ClCompile Include="..\Common\AkMusicBank.cpp">
+		</ClCompile>
+		<ClCompile Include="..\Common\AkMusicCtx.cpp">
+		</ClCompile>
+		<ClCompile Include="..\Common\AkMusicNode.cpp">
+		</ClCompile>
+		<ClCompile Include="..\Common\AkMusicPBI.cpp">
+		</ClCompile>
+		<ClCompile Include="..\Common\AkMusicRanSeqCntr.cpp">
+		</ClCompile>
+		<ClCompile Include="..\Common\AkMusicRenderer.cpp">
+		</ClCompile>
+		<ClCompile Include="..\Common\AkMusicSegment.cpp">
+		</ClCompile>
+		<ClCompile Include="..\Common\AkMusicSwitchCntr.cpp">
+		</ClCompile>
+		<ClCompile Include="..\Common\AkMusicSwitchCtx.cpp">
+		</ClCompile>
+		<ClCompile Include="..\Common\AkMusicTrack.cpp">
+		</ClCompile>
+		<ClCompile Include="..\Common\AkMusicTransAware.cpp">
+		</ClCompile>
+		<ClCompile Include="..\Common\AkRSIterator.cpp">
+		</ClCompile>
+		<ClCompile Include="..\Common\AkScheduleWindow.cpp">
+		</ClCompile>
+		<ClCompile Include="..\Common\AkSegmentChain.cpp">
+		</ClCompile>
+		<ClCompile Include="..\Common\AkSegmentCtx.cpp">
+		</ClCompile>
+		<ClCompile Include="..\Common\AkSegmentInfoRepository.cpp">
+		</ClCompile>
+		<ClCompile Include="..\Common\AkSequencableSegmentCtx.cpp">
+		</ClCompile>
+		<ClCompile Include="..\Common\AkSequenceCtx.cpp">
+		</ClCompile>
+	</ItemGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+	<ImportGroup Label="ExtensionTargets">
+	</ImportGroup>
+</Project>

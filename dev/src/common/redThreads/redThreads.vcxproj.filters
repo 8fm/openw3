@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="redThreadsThreadWinAPI.h">
+      <Filter>_Private Implementation\WinAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="redThreadsThreadOrbisAPI.h">
+      <Filter>_Private Implementation\OrbisAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="redThreadsThread.h" />
+    <ClInclude Include="redThreadsAtomic.h" />
+    <ClInclude Include="redThreadsTypes.h">
+      <Filter>_Private Implementation</Filter>
+    </ClInclude>
+    <ClInclude Include="redThreadsPlatform.h">
+      <Filter>_Private Implementation</Filter>
+    </ClInclude>
+    <ClInclude Include="redThreadsRedSystem.h" />
+    <ClInclude Include="redThreadsCommon.h">
+      <Filter>_Private Implementation</Filter>
+    </ClInclude>
+    <ClInclude Include="readWriteSpinLock.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="_Private Implementation">
+      <UniqueIdentifier>{e2e3c22b-3c8a-4d71-b1db-fd4e3711c402}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Private Implementation\WinAPI">
+      <UniqueIdentifier>{e984184f-cce4-4f41-b642-9e31ede7f9d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Private Implementation\OrbisAPI">
+      <UniqueIdentifier>{6f0337df-7938-4635-82d6-df81b90f77c4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="redThreadsThreadWinAPI.inl">
+      <Filter>_Private Implementation\WinAPI</Filter>
+    </None>
+    <None Include="redThreadsThreadOrbisAPI.inl">
+      <Filter>_Private Implementation\OrbisAPI</Filter>
+    </None>
+    <None Include="redThreadsAtomicWinAPI.inl">
+      <Filter>_Private Implementation\WinAPI</Filter>
+    </None>
+    <None Include="redThreadsThread.inl" />
+    <None Include="redThreadsAtomic.inl" />
+    <None Include="redThreadsAtomicOrbisAPI.inl">
+      <Filter>_Private Implementation\OrbisAPI</Filter>
+    </None>
+    <None Include="readWriteSpinLock.inl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="redThreadsThreadWinAPI.cpp">
+      <Filter>_Private Implementation\WinAPI</Filter>
+    </ClCompile>
+    <ClCompile Include="redThreadsThreadOrbisAPI.cpp">
+      <Filter>_Private Implementation\OrbisAPI</Filter>
+    </ClCompile>
+    <ClCompile Include="redThreadsThread.cpp" />
+  </ItemGroup>
+</Project>

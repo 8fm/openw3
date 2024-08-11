@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:mx="http://schemas.microsoft.com/appx/2013/xbox/manifest" IgnorableNamespaces="mx">  
+  <Identity Name="SpeedTreeDurangoRefAppVC11"
+            Publisher="CN=Publisher"
+            Version="1.0.0.0" />
+  
+  <Properties>
+    <DisplayName>SpeedTreeDurangoRefAppVC11</DisplayName>
+    <PublisherDisplayName>PublisherDisplayName</PublisherDisplayName>
+    <Logo>StoreLogo.png</Logo>
+    <Description>SpeedTreeDurangoRefAppVC11</Description>
+  </Properties>
+  
+  <Prerequisites>
+    <OSMinVersion>6.2</OSMinVersion>
+    <OSMaxVersionTested>6.2</OSMaxVersionTested>
+  </Prerequisites>
+  
+  <Resources>
+    <Resource Language="en-us"/>
+  </Resources>
+  
+  <Applications>
+    <Application Id="SpeedTreeDurangoRefAppVC11.App" 
+        Executable="$targetnametoken$.exe" 
+        EntryPoint="SpeedTreeDurangoRefAppVC11.App">
+        <VisualElements 
+            DisplayName="SpeedTreeDurangoRefAppVC11"
+            Logo="Logo.png"
+            SmallLogo="SmallLogo.png"
+            Description="SpeedTreeDurangoRefAppVC11"
+            ForegroundText="light"
+            BackgroundColor="#6495ED">
+            <SplashScreen Image="SplashScreen.png" />
+        </VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>

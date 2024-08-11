@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="TTSOAPCGI">
+      <UniqueIdentifier>{73598609-fc1c-4b89-865c-9c88cad88559}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="TestTrackConnection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TTSOAPCGI\soapH.h">
+      <Filter>TTSOAPCGI</Filter>
+    </ClInclude>
+    <ClInclude Include="TTSOAPCGI\soapStub.h">
+      <Filter>TTSOAPCGI</Filter>
+    </ClInclude>
+    <ClInclude Include="TTSOAPCGI\soapttsoapcgiProxy.h">
+      <Filter>TTSOAPCGI</Filter>
+    </ClInclude>
+    <ClInclude Include="TTSOAPCGI\stdsoap2.h">
+      <Filter>TTSOAPCGI</Filter>
+    </ClInclude>
+    <ClInclude Include="TTSOAPCGI\ttsoapcgi.h">
+      <Filter>TTSOAPCGI</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="TestTrackConnection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TTSOAPCGI\soapC.cpp">
+      <Filter>TTSOAPCGI</Filter>
+    </ClCompile>
+    <ClCompile Include="TTSOAPCGI\soapClient.cpp">
+      <Filter>TTSOAPCGI</Filter>
+    </ClCompile>
+    <ClCompile Include="TTSOAPCGI\soapttsoapcgiProxy.cpp">
+      <Filter>TTSOAPCGI</Filter>
+    </ClCompile>
+    <ClCompile Include="TTSOAPCGI\stdsoap2.cpp">
+      <Filter>TTSOAPCGI</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TTSOAPCGI\ttsoapcgi.nsmap">
+      <Filter>TTSOAPCGI</Filter>
+    </None>
+  </ItemGroup>
+</Project>

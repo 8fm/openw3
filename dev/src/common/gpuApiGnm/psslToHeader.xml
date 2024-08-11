@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectSchemaDefinitions xmlns="clr-namespace:Microsoft.Build.Framework.XamlTypes;assembly=Microsoft.Build.Framework" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib" xmlns:transformCallback="Microsoft.Cpp.Dev10.ConvertPropertyCallback">
+
+  <!-- Compile PSSL Shader To C Style Header Build Rule -->
+  <Rule Name="Compile_PSSL_To_Header" PageTemplate="tool" DisplayName="Orbis PSSL Compiler, Encoded to C Header (PSSL)" Order="200">
+    <Rule.DataSource>
+      <DataSource Persistence="ProjectFile" ItemType="Compile_PSSL_To_Header" />
+    </Rule.DataSource>
+    <Rule.Categories>
+      <Category Name="General">
+        <Category.DisplayName>
+          <sys:String>General</sys:String>
+        </Category.DisplayName>
+      </Category>
+      <Category Name="Command Line" Subtype="CommandLine">
+        <Category.DisplayName>
+          <sys:String>Command Line</sys:String>
+        </Category.DisplayName>
+      </Category>
+    </Rule.Categories>
+    <StringListProperty Name="Inputs" Category="Command Line" IsRequired="true" Switch=" ">
+      <StringListProperty.DataSource>
+        <DataSource Persistence="ProjectFile" ItemType="Compile_PSSL_To_Header" SourceType="Item" />
+      </StringListProperty.DataSource>
+    </StringListProperty>
+    <StringProperty Name="CommandLineTemplate" DisplayName="Command Line" Visible="False" IncludeInCommandLine="False" />
+    <StringListProperty Name="Outputs" DisplayName="Outputs" Visible="False" IncludeInCommandLine="False" />
+    <StringProperty Name="ExecutionDescription" DisplayName="Execution Description" Visible="False" IncludeInCommandLine="False" />
+    <StringListProperty Name="AdditionalDependencies" DisplayName="Additional Dependencies" IncludeInCommandLine="False" Visible="false" />
+    <StringProperty Subtype="AdditionalOptions" Name="AdditionalOptions" Category="Command Line">
+      <StringProperty.DisplayName>
+        <sys:String>Additional Options</sys:String>
+      </StringProperty.DisplayName>
+      <StringProperty.Description>
+        <sys:String>Additional Options</sys:String>
+      </StringProperty.Description>
+    </StringProperty>
+  </Rule>
+  <ItemType Name="Compile_PSSL_To_Header" DisplayName="Orbis PSSL Compiler, Encoded to C Header (PSSL)" />
+  <FileExtension Name="*.pssl" ContentType="Compile_PSSL_To_Header" />
+  <ContentType Name="Compile_PSSL_To_Header" DisplayName="Orbis PSSL Compiler, Encoded to C Header (PSSL)" ItemType="Compile_PSSL_To_Header" />
+
+</ProjectSchemaDefinitions>

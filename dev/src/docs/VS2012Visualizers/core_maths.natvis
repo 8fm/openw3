@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
+	<Type Name="Vector">
+		<DisplayString>[{X}, {Y}, {Z}, {W}]</DisplayString>
+		<StringView>X, Y, Z, W</StringView>
+	</Type>
+	
+	<Type Name="EulerAngles">
+		<DisplayString>[{Roll}, {Pitch}, {Yaw}]</DisplayString>
+		<StringView>Roll, Pitch, Yaw</StringView>
+		<Expand>
+      <Item Name="Roll (Y)">Roll</Item>
+      <Item Name="Pitch (X)">Pitch</Item>
+      <Item Name="Yaw (Z)">Yaw</Item>
+    </Expand>
+	</Type>
+	
+	<Type Name="Matrix">
+		<Expand>
+			<Synthetic Name="X">
+				<DisplayString>{V[0]}</DisplayString>
+			</Synthetic>
+			<Synthetic Name="Y">
+				<DisplayString>{V[1]}</DisplayString>
+			</Synthetic>
+			<Synthetic Name="Z">
+				<DisplayString>{V[2]}</DisplayString>
+			</Synthetic>
+			<Synthetic Name="W">
+				<DisplayString>{V[3]}</DisplayString>
+			</Synthetic>
+		</Expand>
+	</Type>
+	
+	<Type Name="EngineTransform">
+		<DisplayString Condition="m_data">Position: {m_data-&gt;m_position}</DisplayString>
+		<DisplayString>Identity</DisplayString>
+		<Expand>
+			<Item Condition="m_data" Name="Position">m_data-&gt;m_position</Item>
+			<Item Condition="m_data" Name="Rotation">m_data-&gt;m_rotation</Item>
+			<Item Condition="m_data" Name="Scale">m_data-&gt;m_scale</Item>
+		</Expand>
+	</Type>
+</AutoVisualizer>

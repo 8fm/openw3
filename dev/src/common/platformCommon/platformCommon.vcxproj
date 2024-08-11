@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" TreatAsLocalProperty="OutDir;TargetName;IntDir;PlatformToolset">
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedConfigurationSetup.props))\SharedConfigurationSetup.props" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C30680E9-5CDA-4A71-89E6-0B195DFC8BFD}</ProjectGuid>
+    <RootNamespace>platformWindows</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <ProjectClDirs>$(SolutionDir)../external/gfx4/Src;$(SolutionDir)../external/gfx4/Include;</ProjectClDirs>
+    <UsePrecompiledHeaders Condition="'$(Platform)' == 'Durango'">false</UsePrecompiledHeaders>
+  </PropertyGroup>
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.props))\Shared.props" />
+  <PropertyGroup Label="Configuration">
+    <UseMinimalRebuild Condition="'$(Platform)' == 'Durango'">false</UseMinimalRebuild>
+  </PropertyGroup>
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedItemGroups.props))\SharedItemGroups.props" />
+  <ItemGroup>
+    <ClCompile Include="build.cpp">
+      <PrecompiledHeader Condition="'$(Platform)' != 'Durango'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="clipboardWin32.cpp">
+      <ExcludedFromBuild Condition="'$(Platform)'!='x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="platform.cpp" />
+    <ClCompile Include="platformDurango.cpp">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+      <CompileAsWinRT Condition="'$(Platform)'=='Durango'">true</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="platformOrbis.cpp">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Orbis'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="platformWindows.cpp">
+      <ExcludedFromBuild Condition="'$(Platform)'!='x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="secondScreenDevicePC.cpp">
+      <ExcludedFromBuild Condition="'$(Platform)'!='x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="secondScreenDeviceWatcherPC.cpp">
+      <ExcludedFromBuild Condition="'$(Platform)'!='x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="secondScreenManager.cpp" />
+    <ClCompile Include="win32Viewport.cpp">
+      <ExcludedFromBuild Condition="'$(Platform)'!='x64'">true</ExcludedFromBuild>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="assertResource.h" />
+    <ClInclude Include="build.h" />
+    <ClInclude Include="clipboardWin32.h" />
+    <ClInclude Include="platform.h" />
+    <ClInclude Include="platformFeature.h" />
+    <ClInclude Include="scriptErrorResource.h" />
+    <ClInclude Include="secondScreenDevice.h" />
+    <ClInclude Include="secondScreenDevicePC.h" />
+    <ClInclude Include="secondScreenDeviceWatcher.h" />
+    <ClInclude Include="secondScreenDeviceWatcherPC.h" />
+    <ClInclude Include="secondScreenManager.h" />
+    <ClInclude Include="win32Viewport.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assert.customrc" />
+    <None Include="scriptError.customrc" />
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="Xbox Services API, Version=8.0" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.targets))\Shared.targets" />
+  </ImportGroup>
+</Project>

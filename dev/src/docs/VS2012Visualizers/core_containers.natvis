@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
+
+	<Type Name="TString&lt;*&gt;">
+		<DisplayString Condition="m_size == 0">String [Empty]</DisplayString>
+		<DisplayString>{(($T1*)m_buf)}</DisplayString>
+		<StringView>($T1*)m_buf</StringView>
+		<Expand>
+			<Item Name="Length">m_size - 1</Item>
+		</Expand>
+	</Type>
+	
+	<Type Name="TDynArray&lt;*&gt;">
+		<DisplayString Condition="m_size == 0">Dynamic Array [Empty]</DisplayString>
+		<DisplayString>Dynamic Array [{m_size}]</DisplayString>
+		<Expand>
+			<Item Name="Size">m_size</Item>
+			<ArrayItems>
+				<Size>m_size</Size>
+				<ValuePointer>($T1*)m_buf</ValuePointer>
+			</ArrayItems>
+		</Expand>
+	</Type>
+	
+	<Type Name="TStaticArray&lt;*,*&gt;">
+		<DisplayString Condition="m_size == 0">Static Array [Empty]</DisplayString>
+		<DisplayString Condition="m_size &lt;= $T2">Static Array [{m_size}/{$T2}]</DisplayString>
+		<DisplayString>Static Array [Invalid]</DisplayString>
+		<Expand>
+			<Item Name="Size">m_size</Item>
+			<Item Name="Capacity">$T2</Item>
+			<ArrayItems> 
+				<Size>m_size</Size> 
+				<ValuePointer>($T1*)m_array</ValuePointer>
+			</ArrayItems> 
+		</Expand>
+	</Type>
+	
+	<Type Name="TPair&lt;*,*&gt;">
+		<DisplayString>{m_first} -&gt; {m_second}</DisplayString>
+		<Expand>
+			<Item Name="Key">m_first</Item>
+			<Item Name="Value">m_second</Item>
+		</Expand>
+	</Type>
+	
+	<Type Name="TSortedSet&lt;*&gt;">
+		<Expand>
+			<ExpandedItem>m_keyArray</ExpandedItem>
+		</Expand>
+	</Type>
+	
+	<Type Name="THashMap&lt;*,*&gt;">
+    <DisplayString Condition="m_size == 0">Hash map [Empty]</DisplayString>
+    <DisplayString Condition="m_size &lt;= m_capacity">Hash map [{m_size}/{m_capacity}]</DisplayString>
+		<Expand>
+			<Item Name="Size">m_size</Item>
+			<Item Name="Capacity">m_capacity</Item>
+			<ArrayItems>
+				<Size>m_size</Size>
+				<ValuePointer>m_pairs</ValuePointer>
+			</ArrayItems>
+		</Expand>
+	</Type>
+	
+	<Type Name="THashSet&lt;*,*&gt;">
+    <DisplayString Condition="m_size == 0">Hash set [Empty]</DisplayString>
+    <DisplayString Condition="m_size &lt;= m_capacity">Hash set [{m_size}/{m_capacity}]</DisplayString>
+		<Expand>
+			<Item Name="Size">m_size</Item>
+			<Item Name="Capacity">m_capacity</Item>
+			<ArrayItems>
+				<Size>m_size</Size>
+				<ValuePointer>m_keys</ValuePointer>
+			</ArrayItems>
+		</Expand>
+	</Type>
+	
+	<Type Name="TList&lt;*&gt;">
+		<DisplayString>List</DisplayString>
+		<Expand>
+			<LinkedListItems>
+				<HeadPointer>m_head</HeadPointer>
+				<NextPointer>m_next</NextPointer>
+				<ValueNode>m_key</ValueNode>
+			</LinkedListItems>
+		</Expand>
+	</Type>
+</AutoVisualizer>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<Filter Include="Common">
+			<UniqueIdentifier>{295BF642-A8A7-5844-9B79-3D5533B154AF}</UniqueIdentifier>
+		</Filter>
+	</ItemGroup>
+	<ItemGroup>
+		<ClInclude Include="..\AkTremoloFX.h" />
+		<ClInclude Include="..\AkTremoloFXInfo.h" />
+		<ClInclude Include="..\AkTremoloFXParams.h" />
+		<ClInclude Include="..\..\Common\LFO.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\Common\LFOMono.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\Common\LFOMultichannel.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\Common\LFOPolicies.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\Common\OnePoleFilter.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+	</ItemGroup>
+	<ItemGroup>
+		<ClCompile Include="..\AkTremoloFX.cpp" />
+		<ClCompile Include="..\AkTremoloFXParams.cpp" />
+		<ClCompile Include="..\..\Common\LFO.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\Common\OnePoleFilter.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+	</ItemGroup>
+</Project>

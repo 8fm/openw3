@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<resource xmlns="http://www.wxwindows.org/wxxrc" version="2.3.0.1">
+	<object class="wxFrame" name="MaterialEditor">
+		<style>wxDEFAULT_FRAME_STYLE|wxMAXIMIZE_BOX|wxMINIMIZE_BOX|wxRESIZE_BORDER|wxTAB_TRAVERSAL</style>
+		<size>991,624</size>
+		<title>Material Graph Editor</title>
+		<centered>1</centered>
+		<aui_managed>0</aui_managed>
+		<object class="wxSplitterWindow" name="Splitter1">
+			<style>wxSP_3D</style>
+			<sashpos>300</sashpos>
+			<gravity>0</gravity>
+			<minsize>0</minsize>
+			<orientation>vertical</orientation>
+			<object class="wxPanel" name="InnerPanel1">
+				<style>wxCLIP_CHILDREN</style>
+				<object class="wxBoxSizer">
+					<orient>wxVERTICAL</orient>
+					<object class="sizeritem">
+						<option>1</option>
+						<flag>wxEXPAND|wxFIXED_MINSIZE</flag>
+						<border>5</border>
+						<object class="wxSplitterWindow" name="Splitter2">
+							<style>wxSP_3D</style>
+							<sashpos>300</sashpos>
+							<gravity>0</gravity>
+							<minsize>100</minsize>
+							<orientation>horizontal</orientation>
+							<object class="wxPanel" name="PreviewPanel">
+								<style>wxCLIP_CHILDREN|wxSUNKEN_BORDER|wxTAB_TRAVERSAL</style>
+							</object>
+							<object class="wxPanel" name="PropertiesPanel">
+								<style>wxCLIP_CHILDREN|wxTAB_TRAVERSAL</style>
+							</object>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxEXPAND</flag>
+						<border>5</border>
+						<object class="wxBoxSizer">
+							<orient>wxHORIZONTAL</orient>
+							<object class="spacer">
+								<option>0</option>
+								<flag></flag>
+								<border>5</border>
+								<size>10,0</size>
+							</object>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALIGN_CENTER|wxALL</flag>
+								<border>5</border>
+								<object class="wxButton" name="btnUpdateProxies">
+									<label>Update Proxies</label>
+									<default>0</default>
+								</object>
+							</object>
+							<object class="spacer">
+								<option>1</option>
+								<flag>wxEXPAND</flag>
+								<border>5</border>
+								<size>0,0</size>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="wxPanel" name="InnerPanel">
+				<style>wxTAB_TRAVERSAL</style>
+				<object class="wxBoxSizer">
+					<orient>wxVERTICAL</orient>
+					<object class="sizeritem">
+						<option>1</option>
+						<flag>wxEXPAND</flag>
+						<border>5</border>
+						<object class="wxSplitterWindow" name="m_splitter3">
+							<style>wxSP_3D|wxSP_LIVE_UPDATE</style>
+							<sashpos>150</sashpos>
+							<gravity>0</gravity>
+							<minsize>150</minsize>
+							<orientation>horizontal</orientation>
+							<object class="wxPanel" name="CodeViewPanel">
+								<object class="wxBoxSizer">
+									<minsize>-1,130</minsize>
+									<orient>wxVERTICAL</orient>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxEXPAND | wxALL</flag>
+										<border>5</border>
+										<object class="wxPanel" name="m_panel12">
+											<style>wxTAB_TRAVERSAL</style>
+											<object class="wxBoxSizer">
+												<orient>wxVERTICAL</orient>
+												<object class="sizeritem">
+													<option>0</option>
+													<flag>wxALL</flag>
+													<border>5</border>
+													<object class="wxChoice" name="shaderPassChoice">
+														<selection>0</selection>
+														<content />
+													</object>
+												</object>
+											</object>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<option>1</option>
+										<flag>wxEXPAND | wxALL</flag>
+										<border>5</border>
+										<object class="wxPanel" name="m_panel11">
+											<style>wxTAB_TRAVERSAL</style>
+											<object class="wxBoxSizer">
+												<orient>wxHORIZONTAL</orient>
+												<object class="sizeritem">
+													<option>1</option>
+													<flag>wxEXPAND</flag>
+													<border>5</border>
+													<object class="wxNotebook" name="PixelShaderCodeViews">
+														<object class="notebookpage">
+															<label>Generated Code PS</label>
+															<selected>0</selected>
+															<object class="wxPanel" name="m_panel7">
+																<style>wxTAB_TRAVERSAL</style>
+																<object class="wxBoxSizer">
+																	<orient>wxVERTICAL</orient>
+																	<object class="sizeritem">
+																		<option>100</option>
+																		<flag>wxEXPAND</flag>
+																		<border>5</border>
+																		<object class="wxTextCtrl" name="PSCodeView1">
+																			<style>wxTE_MULTILINE|wxTE_READONLY</style>
+																			<value></value>
+																			<maxlength>0</maxlength>
+																		</object>
+																	</object>
+																</object>
+															</object>
+														</object>
+														<object class="notebookpage">
+															<label>Full Shader PS</label>
+															<selected>0</selected>
+															<object class="wxPanel" name="m_panel8">
+																<style>wxTAB_TRAVERSAL</style>
+																<object class="wxBoxSizer">
+																	<orient>wxVERTICAL</orient>
+																	<object class="sizeritem">
+																		<option>100</option>
+																		<flag>wxEXPAND</flag>
+																		<border>5</border>
+																		<object class="wxTextCtrl" name="PSCodeView2">
+																			<style>wxTE_MULTILINE|wxTE_READONLY</style>
+																			<value></value>
+																			<maxlength>0</maxlength>
+																		</object>
+																	</object>
+																</object>
+															</object>
+														</object>
+													</object>
+												</object>
+												<object class="sizeritem">
+													<option>1</option>
+													<flag>wxEXPAND</flag>
+													<border>5</border>
+													<object class="wxNotebook" name="VertexShaderCodeViews">
+														<object class="notebookpage">
+															<label>Generated Code VS</label>
+															<selected>0</selected>
+															<object class="wxPanel" name="m_panel71">
+																<style>wxTAB_TRAVERSAL</style>
+																<object class="wxBoxSizer">
+																	<orient>wxVERTICAL</orient>
+																	<object class="sizeritem">
+																		<option>100</option>
+																		<flag>wxEXPAND</flag>
+																		<border>5</border>
+																		<object class="wxTextCtrl" name="VSCodeView1">
+																			<style>wxTE_MULTILINE|wxTE_READONLY</style>
+																			<value></value>
+																			<maxlength>0</maxlength>
+																		</object>
+																	</object>
+																</object>
+															</object>
+														</object>
+														<object class="notebookpage">
+															<label>Full Shader VS</label>
+															<selected>0</selected>
+															<object class="wxPanel" name="m_panel81">
+																<style>wxTAB_TRAVERSAL</style>
+																<object class="wxBoxSizer">
+																	<orient>wxVERTICAL</orient>
+																	<object class="sizeritem">
+																		<option>100</option>
+																		<flag>wxEXPAND</flag>
+																		<border>5</border>
+																		<object class="wxTextCtrl" name="VSCodeView2">
+																			<style>wxTE_MULTILINE|wxTE_READONLY</style>
+																			<value></value>
+																			<maxlength>0</maxlength>
+																		</object>
+																	</object>
+																</object>
+															</object>
+														</object>
+													</object>
+												</object>
+											</object>
+										</object>
+									</object>
+								</object>
+							</object>
+							<object class="wxPanel" name="GraphPanel">
+								<style>wxSUNKEN_BORDER</style>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+		<object class="wxMenuBar" name="Menu">
+			<label>MyMenuBar</label>
+			<object class="wxMenu" name="menuMaterial">
+				<label>_File</label>
+				<object class="wxMenuItem" name="materialSave">
+					<label>_Save\tCtrl+S</label>
+					<help></help>
+				</object>
+				<object class="wxMenuItem" name="materialShaderView">
+					<label>Shader View</label>
+					<help></help>
+				</object>
+			</object>
+			<object class="wxMenu" name="menuEdit">
+				<label>_Edit</label>
+				<object class="wxMenuItem" name="editUndo">
+					<label>_Undo...\tCtrl+Z</label>
+					<help></help>
+				</object>
+				<object class="wxMenuItem" name="editRedo">
+					<label>_Redo...\tCtrl+Y</label>
+					<help></help>
+				</object>
+				<object class="separator" />
+				<object class="wxMenuItem" name="editCopy">
+					<label>_Copy\tCtrl+C</label>
+					<help></help>
+				</object>
+				<object class="wxMenuItem" name="editCut">
+					<label>Cu_t\tCtrl+X</label>
+					<help></help>
+				</object>
+				<object class="wxMenuItem" name="editPaste">
+					<label>_Paste\tCtrl+V</label>
+					<help></help>
+				</object>
+				<object class="wxMenuItem" name="editDelete">
+					<label>_Delete\tDel</label>
+					<help></help>
+				</object>
+			</object>
+			<object class="wxMenu" name="menuView">
+				<label>_View</label>
+				<object class="wxMenuItem" name="viewDock">
+					<label>Dock</label>
+					<help></help>
+					<checkable>1</checkable>
+				</object>
+			</object>
+		</object>
+	</object>
+</resource>

@@ -1,0 +1,1 @@
+// Make a timer that doesn't need to spill into float registers... just keep things like integrals and do sbetter delta checks

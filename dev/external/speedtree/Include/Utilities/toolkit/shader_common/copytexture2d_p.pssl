@@ -1,0 +1,12 @@
+/* SCE CONFIDENTIAL
+PlayStation(R)4 Programmer Tool Runtime Library Release 01.700.081
+* Copyright (C) 2013 Sony Computer Entertainment Inc.
+* All Rights Reserved.
+*/
+
+Texture2D<float4> texture;
+
+float4 main(float4 position : S_POSITION) : S_TARGET_OUTPUT
+{
+	return texture[(uint2)position.xy];
+}

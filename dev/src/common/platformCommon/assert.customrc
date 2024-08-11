@@ -1,0 +1,34 @@
+// I've given this file a custom extension so that visual studio doesn't feel compelled
+// to smash it to bits before rebuilding it in it's own image
+//
+#include "assertResource.h"
+
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ASSERTDLG DIALOGEX 0, 0, 427, 317
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST
+CAPTION "Red Engine - Assertion failed!"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Debug assertion failed!",IDC_STATIC,6,7,201,10
+    LTEXT           "Expression:",IDC_STATIC,6,23,38,8
+    PUSHBUTTON      "Report && Continue",IDC_CONTINUE,6,291,100,19
+    PUSHBUTTON      "Cont. Always [DEPRECATED]",IDC_CONTINUEALW,111,291,100,19
+    PUSHBUTTON      "Report && Close",IDC_CLOSE,320,291,100,19
+    EDITTEXT        IDC_CALLSTACK,6,126,414,157,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL
+    LTEXT           "Callstack:",IDC_STATIC,6,114,32,8
+    LTEXT           "File:",IDC_STATIC,6,37,14,8
+    LTEXT           "Line: ",IDC_STATIC,6,51,18,8
+    EDITTEXT        IDC_LINE,51,51,369,12,ES_READONLY | NOT WS_BORDER
+    EDITTEXT        IDC_FILE,51,37,369,12,ES_READONLY | NOT WS_BORDER
+    EDITTEXT        IDC_EXPRESSION,51,23,369,12,ES_READONLY | NOT WS_BORDER
+    EDITTEXT        IDC_MESSAGE,6,77,414,32,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL
+    LTEXT           "Message:",IDC_STATIC,6,65,32,8
+    PUSHBUTTON      "Debug",IDC_DEBUG,216,291,100,19
+END

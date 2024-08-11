@@ -1,0 +1,6 @@
+ConstantBuffer customps : register( b0 )
+{
+	float4 surfaceColor;
+}
+
+#include "simplePhong_p.pssl"

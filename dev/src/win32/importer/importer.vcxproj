@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" TreatAsLocalProperty="OutDir;TargetName;IntDir;PlatformToolset">
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedConfigurationSetup.props))\SharedConfigurationSetup.props" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3DC466A5-BFE1-477B-B09F-3DE227CD3F74}</ProjectGuid>
+    <RootNamespace>importer</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <ProjectClDirs>$(SolutionDir)../external/FBX_SDK_2016_1_2/include;$(SolutionDir)../external/gfx4/Src;$(SolutionDir)../external/gfx4/Include;$(SolutionDir)../external/speedtree_v5.1FULL/Include;$(SolutionDir)../external/hk650r1/Source;$(SolutionDir)../external/freetype/include;$(SolutionDir)../external/lib3ds/src;$(SolutionDir)../external/PhysX3/Include;$(SolutionDir)../external/PhysX3/Include/characterkinematic;$(SolutionDir)../external/PhysX3/Include/common;$(SolutionDir)../external/PhysX3/Include/cooking;$(SolutionDir)../external/PhysX3/Include/extensions;$(SolutionDir)../external/PhysX3/Include/foundation;$(SolutionDir)../external/PhysX3/Include/geometry;$(SolutionDir)../external/PhysX3/Include/gpu;$(SolutionDir)../external/PhysX3/Include/physxvisualdebuggersdk;$(SolutionDir)../external/PhysX3/Include/pxtask;$(SolutionDir)../external/PhysX3/Include/pvd;$(SolutionDir)../external/Apex/framework/public/PhysX3/;$(SolutionDir)../external/Apex/module/destructible/public;$(SolutionDir)../external/Apex/module/destructible_legacy/public;$(SolutionDir)../external/Apex/module/framework_legacy/public;$(SolutionDir)../external/Apex/NxParameterized/public;$(SolutionDir)../external/Apex/shared/external/include;$(SolutionDir)../external/Apex/module/clothing/public;$(SolutionDir)../external/Apex/module/clothing_legacy/public;$(SolutionDir)../external/Apex/framework/public/;$(SolutionDir)../external/Apex/public/;$(SolutionDir)../external/Apex/framework/public;$(SolutionDir)../external/Apex/nxparameterized/public;$(SolutionDir)../external/Apex/public;$(SolutionDir)../external/umbra3.3.13-change-26-2826-2/interface;$(SolutionDir)../internal/ReTech;</ProjectClDirs>
+  </PropertyGroup>
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.props))\Shared.props" />
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedItemGroups.props))\SharedItemGroups.props" />
+  <ItemGroup>
+    <ClCompile Include="ApexImporter.cpp" />
+    <ClCompile Include="CharacterEntityTemplateFactory.cpp" />
+    <ClCompile Include="CutsceneImporter.cpp" />
+    <ClCompile Include="DestructionImporter.cpp" />
+    <ClCompile Include="DlcDefinitionFactory.cpp" />
+    <ClCompile Include="dyngImporter.cpp" />
+    <ClCompile Include="environmentDefinitionFactory.cpp" />
+    <ClCompile Include="fbxCommon.cpp" />
+    <ClCompile Include="fbxEntityExporter.cpp" />
+    <ClCompile Include="fbxMeshBuilder.cpp" />
+    <ClCompile Include="fbxMeshExporter.cpp" />
+    <ClCompile Include="fbxMeshImporter.cpp" />
+    <ClCompile Include="FlashThumbnailGenerator.cpp" />
+    <ClCompile Include="GFxExporter.cpp" />
+    <ClCompile Include="HairWorksExporter.cpp" />
+    <ClCompile Include="HairWorksImporter.cpp" />
+    <ClCompile Include="meshExport.cpp" />
+    <ClCompile Include="ReFileHelpers.cpp" />
+    <ClCompile Include="SimplexTreeFactory.cpp" />
+    <ClCompile Include="FlashImporter.cpp" />
+    <ClCompile Include="ThumbnailGeneratorHelpers.cpp" />
+    <ClCompile Include="FbxImporter.cpp" />
+    <ClCompile Include="SpeedTreeThumbnailGenerator.cpp" />
+    <ClCompile Include="BitmapExporter.cpp" />
+    <ClCompile Include="BitmapImporter.cpp" />
+    <ClCompile Include="FACFormat.cpp" />
+    <ClCompile Include="FACImporter.cpp" />
+    <ClCompile Include="FACRigImporter.cpp" />
+    <ClCompile Include="Mesh3DSExporter.cpp" />
+    <ClCompile Include="REAAnimExporter.cpp" />
+    <ClCompile Include="REAAnimImporter.cpp" />
+    <ClCompile Include="REARigImporter.cpp" />
+    <ClCompile Include="RepXImporter.cpp" />
+    <ClCompile Include="RexMeshImporter.cpp" />
+    <ClCompile Include="TextureArrayFactory.cpp" />
+    <ClCompile Include="TTFFontImporter.cpp" />
+    <ClCompile Include="2dArrayFactory.cpp" />
+    <ClCompile Include="AnimSetFactory.cpp" />
+    <ClCompile Include="BehaviorGraphFactory.cpp" />
+    <ClCompile Include="CubeTextureFactory.cpp" />
+    <ClCompile Include="EntityTemplateFactory.cpp" />
+    <ClCompile Include="GenericMaterialFactory.cpp" />
+    <ClCompile Include="MaterialInstanceFactory.cpp" />
+    <ClCompile Include="ParticleSystemFactory.cpp" />
+    <ClCompile Include="WorldMapImporter.cpp" />
+    <ClCompile Include="BitmapThumbnailGenerator.cpp" />
+    <ClCompile Include="EntityTemplateThumbnailGenerator.cpp" />
+    <ClCompile Include="MaterialThumbnailGenerator.cpp" />
+    <ClCompile Include="MeshThumbnailGenerator.cpp" />
+    <ClCompile Include="build.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="FACFormat.h" />
+    <ClInclude Include="FACImporter.h" />
+    <ClInclude Include="fbxCommon.h" />
+    <ClInclude Include="fbxMeshBuilder.h" />
+    <ClInclude Include="GFxExporter.h" />
+    <ClInclude Include="meshExport.h" />
+    <ClInclude Include="ReFileHelpers.h" />
+    <ClInclude Include="ThumbnailGeneratorHelpers.h" />
+    <ClInclude Include="build.h" />
+    <ClInclude Include="importerExternalResources.h" />
+    <ClInclude Include="importerTypeRegistry.h" />
+    <ClInclude Include="REAAnimExporter.h" />
+    <ClInclude Include="REAAnimImporter.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.targets))\Shared.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

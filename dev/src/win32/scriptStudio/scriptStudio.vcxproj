@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" TreatAsLocalProperty="OutDir;TargetName;IntDir;PlatformToolset">
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedConfigurationSetup.props))\SharedConfigurationSetup.props" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B6EDDF17-2F52-48F6-87B5-989A73E8A8D1}</ProjectGuid>
+    <RootNamespace>scriptStudio</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.props))\Shared.props" />
+  <PropertyGroup>
+    <WXLibrariesRoot>$(SolutionDir)../external/recast/lib/Debug;$(SolutionDir)../external/wxwidgets-2.9.4/lib/vc_lib/$(Platform)</WXLibrariesRoot>
+    <WXLibrariesRoot Condition="$(PlatformToolset) == 'v110'">$(SolutionDir)../external/recast/lib/Debug;$(SolutionDir)../external/wxwidgets-2.9.4/lib/vc_lib/vc110/$(Platform)</WXLibrariesRoot>
+    <ProjectClDirs>$(SharedIncludePath);$(SolutionDir)../external/P4V/x64/include;$(SolutionDir)../external/wxWidgets-2.9.4\include;$(SolutionDir)../external/wxWidgets-2.9.4\include\msvc;$(SolutionDir)../external\wxWidgets-2.9.4\src\stc\scintilla\include;</ProjectClDirs>
+    <ProjectLiDirs>$(WXLibrariesRoot)</ProjectLiDirs>
+    <ProjectLiDeps>wxpngd.lib</ProjectLiDeps>
+    <ProjectLiDeps Condition="'$(Configuration)'=='Debug'">wxpngd.lib</ProjectLiDeps>
+  </PropertyGroup>
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedItemGroups.props))\SharedItemGroups.props" />
+  <PropertyGroup>
+    <IncludePath>$(ProjectDir)..\..\..\internal\;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemGroup>
+    <ClInclude Include="changesDetectedDialog.h" />
+    <ClInclude Include="checkInDialog.h" />
+    <ClInclude Include="CodeTooltip.h" />
+    <ClInclude Include="colourSelectionDialog.h" />
+    <ClInclude Include="commonBaseDialog.h" />
+    <ClInclude Include="compileModDialog.h" />
+    <ClInclude Include="createModDialog.h" />
+    <ClInclude Include="credentials.h" />
+    <ClInclude Include="debuggerHelper.h" />
+    <ClInclude Include="debuggerLocalsHelper.h" />
+    <ClInclude Include="editorCompilationHelper.h" />
+    <ClInclude Include="editorConnectionHelper.h" />
+    <ClInclude Include="events\eventbookmarks.h" />
+    <ClInclude Include="events\eventGoto.h" />
+    <ClInclude Include="events\eventCallstackFrameSelected.h" />
+    <ClInclude Include="events\eventLineMove.h" />
+    <ClInclude Include="events\eventbreakpoints.h" />
+    <ClInclude Include="events\eventmarkers.h" />
+    <ClInclude Include="events\eventNavigationGoto.h" />
+    <ClInclude Include="events\eventNavigationHistory.h" />
+    <ClInclude Include="events\eventOpcodeListing.h" />
+    <ClInclude Include="exporter.h" />
+    <ClInclude Include="installModDialog.h" />
+    <ClInclude Include="lexData.h" />
+    <ClInclude Include="lexer\context.h" />
+    <ClInclude Include="lexer\token.h" />
+    <ClInclude Include="lexer\tokenStream.h" />
+    <ClInclude Include="navigationHistory.h" />
+    <ClInclude Include="packetUtils.h" />
+    <ClInclude Include="pingHelper.h" />
+    <ClInclude Include="profilerHelper.h" />
+    <ClInclude Include="res\resource.h" />
+    <ClInclude Include="app.h" />
+    <ClInclude Include="documentView.h" />
+    <ClInclude Include="frame.h" />
+    <ClInclude Include="profiler.h" />
+    <ClInclude Include="solutionExplorer.h" />
+    <ClInclude Include="errorList.h" />
+    <ClInclude Include="solution\dir.h" />
+    <ClInclude Include="solution\file.h" />
+    <ClInclude Include="solution\rapidxml.hpp" />
+    <ClInclude Include="solution\rapidxml_print.hpp" />
+    <ClInclude Include="solution\slnBase.h" />
+    <ClInclude Include="solution\slnContainer.h" />
+    <ClInclude Include="solution\slnDeclarations.h" />
+    <ClInclude Include="solution\slnDummy.h" />
+    <ClInclude Include="solution\slnMod.h" />
+    <ClInclude Include="solution\slnStandard.h" />
+    <ClInclude Include="solution\slnDefinition.h" />
+    <ClInclude Include="stubDeclarations.h" />
+    <ClInclude Include="styledDocument.h" />
+    <ClInclude Include="styleManager.h" />
+    <ClInclude Include="searchDlg.h" />
+    <ClInclude Include="searchResults.h" />
+    <ClInclude Include="gotoDlg.h" />
+    <ClInclude Include="openSolutionFileDlg.h" />
+    <ClInclude Include="closeAllDialog.h" />
+    <ClInclude Include="breakpoints.h" />
+    <ClInclude Include="findSymbolDlg.h" />
+    <ClInclude Include="bookmarks.h" />
+    <ClInclude Include="fileLexer.h" />
+    <ClInclude Include="fileParser.h" />
+    <ClInclude Include="fileParserType.h" />
+    <ClInclude Include="fileStubs.h" />
+    <ClInclude Include="build.h" />
+    <ClInclude Include="widgets\debuggerTabs\base.h" />
+    <ClInclude Include="widgets\debuggerTabs\callstack.h" />
+    <ClInclude Include="widgets\debuggerTabs\locals.h" />
+    <ClInclude Include="widgets\debuggerTabs\variables.h" />
+    <ClInclude Include="widgets\debuggerTabs\watch.h" />
+    <ClInclude Include="widgets\checkedList.h" />
+    <ClInclude Include="widgets\markers.h" />
+    <ClInclude Include="wx\treelistctrl.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\scriptStudio.fbp" />
+    <None Include="res\scriptStudio.ico" />
+    <CustomBuild Include="res\scriptStudio.xrc">
+      <Command>
+        cd res
+        wxrc scriptStudio.xrc -v -c -o "$(Platform)\$(Configuration)\scriptStudioXRC.hpp"
+      </Command>
+      <Outputs>res\$(Platform)\$(Configuration)\scriptStudioXRC.hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <None Include="res\wxrc.exe" />
+    <BisonScripts Include="fileParser.bison" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="res\scriptStudio.rc">
+      <AdditionalIncludeDirectories>$(IntDir);$(SolutionDir)../external/wxWidgets-2.9.4/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="app.cpp" />
+    <ClCompile Include="changesDetectedDialog.cpp" />
+    <ClCompile Include="checkInDialog.cpp" />
+    <ClCompile Include="CodeTooltip.cpp" />
+    <ClCompile Include="colourSelectionDialog.cpp" />
+    <ClCompile Include="commonBaseDialog.cpp" />
+    <ClCompile Include="compileModDialog.cpp" />
+    <ClCompile Include="createModDialog.cpp" />
+    <ClCompile Include="credentials.cpp" />
+    <ClCompile Include="debuggerHelper.cpp" />
+    <ClCompile Include="debuggerLocalsHelper.cpp" />
+    <ClCompile Include="documentView.cpp" />
+    <ClCompile Include="editorCompilationHelper.cpp" />
+    <ClCompile Include="editorConnectionHelper.cpp" />
+    <ClCompile Include="events\eventbookmarks.cpp" />
+    <ClCompile Include="events\eventGoto.cpp" />
+    <ClCompile Include="events\eventCallstackFrameSelected.cpp" />
+    <ClCompile Include="events\eventLineMove.cpp" />
+    <ClCompile Include="events\eventbreakpoints.cpp" />
+    <ClCompile Include="events\eventmarkers.cpp" />
+    <ClCompile Include="events\eventNavigationGoto.cpp" />
+    <ClCompile Include="events\eventNavigationHistory.cpp" />
+    <ClCompile Include="events\eventOpcodeListing.cpp" />
+    <ClCompile Include="exporter.cpp" />
+    <ClCompile Include="installModDialog.cpp" />
+    <ClCompile Include="frame.cpp" />
+    <ClCompile Include="lexer\context.cpp" />
+    <ClCompile Include="lexer\token.cpp" />
+    <ClCompile Include="lexer\tokenStream.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="navigationHistory.cpp" />
+    <ClCompile Include="packetUtils.cpp" />
+    <ClCompile Include="pingHelper.cpp" />
+    <ClCompile Include="profiler.cpp" />
+    <ClCompile Include="profilerHelper.cpp" />
+    <ClCompile Include="solutionExplorer.cpp" />
+    <ClCompile Include="errorList.cpp" />
+    <ClCompile Include="solution\dir.cpp" />
+    <ClCompile Include="solution\file.cpp" />
+    <ClCompile Include="solution\slnBase.cpp" />
+    <ClCompile Include="solution\slnContainer.cpp" />
+    <ClCompile Include="solution\slnDummy.cpp" />
+    <ClCompile Include="solution\slnMod.cpp" />
+    <ClCompile Include="solution\slnStandard.cpp" />
+    <ClCompile Include="solution\slnDefinition.cpp" />
+    <ClCompile Include="styledDocument.cpp" />
+    <ClCompile Include="styleManager.cpp" />
+    <ClCompile Include="searchDlg.cpp" />
+    <ClCompile Include="searchResults.cpp" />
+    <ClCompile Include="gotoDlg.cpp" />
+    <ClCompile Include="openSolutionFileDlg.cpp" />
+    <ClCompile Include="closeAllDialog.cpp" />
+    <ClCompile Include="breakpoints.cpp" />
+    <ClCompile Include="findSymbolDlg.cpp" />
+    <ClCompile Include="bookmarks.cpp" />
+    <ClCompile Include="fileLexer.cpp" />
+    <ClCompile Include="fileParser.cpp" />
+    <ClCompile Include="fileStubs.cpp" />
+    <ClCompile Include="build.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="widgets\checkedList.cpp" />
+    <ClCompile Include="widgets\debuggerTabs\base.cpp" />
+    <ClCompile Include="widgets\debuggerTabs\callstack.cpp" />
+    <ClCompile Include="widgets\debuggerTabs\locals.cpp" />
+    <ClCompile Include="widgets\debuggerTabs\variables.cpp" />
+    <ClCompile Include="widgets\debuggerTabs\watch.cpp" />
+    <ClCompile Include="widgets\markers.cpp" />
+    <ClCompile Include="wx\treelistctrl.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\common\redNetwork\RedNetwork.vcxproj">
+      <Project>{99596beb-157a-4c15-94b4-25e3a580de22}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\redSystem\redSystem.vcxproj">
+      <Project>{9c1f2dbf-9ea5-41b9-8430-d869c8ac2189}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\redThreads\redThreads.vcxproj">
+      <Project>{50404845-5499-4116-911c-55a575807ef6}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\scripts\scripts.vcxproj">
+      <Project>{2bb69d9f-79fc-4a10-b998-c0ba982efbc6}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.targets))\Shared.targets" />
+</Project>

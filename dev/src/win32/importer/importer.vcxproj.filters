@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Importers">
+      <UniqueIdentifier>{40346e93-4949-4651-ad1b-d65308cdff4a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{cc6e5c79-c7f1-4a86-b09e-34e6fb975303}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Factories">
+      <UniqueIdentifier>{05b4c119-fd98-42ee-9736-75f43e98533a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Thumbnails">
+      <UniqueIdentifier>{0adad656-0fef-4929-bea1-1202738641bb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CutsceneImporter.cpp">
+      <Filter>Importers</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh3DSExporter.cpp">
+      <Filter>Importers</Filter>
+    </ClCompile>
+    <ClCompile Include="TTFFontImporter.cpp">
+      <Filter>Importers</Filter>
+    </ClCompile>
+    <ClCompile Include="2dArrayFactory.cpp">
+      <Filter>Factories</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimSetFactory.cpp">
+      <Filter>Factories</Filter>
+    </ClCompile>
+    <ClCompile Include="BehaviorGraphFactory.cpp">
+      <Filter>Factories</Filter>
+    </ClCompile>
+    <ClCompile Include="CubeTextureFactory.cpp">
+      <Filter>Factories</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityTemplateFactory.cpp">
+      <Filter>Factories</Filter>
+    </ClCompile>
+    <ClCompile Include="GenericMaterialFactory.cpp">
+      <Filter>Factories</Filter>
+    </ClCompile>
+    <ClCompile Include="MaterialInstanceFactory.cpp">
+      <Filter>Factories</Filter>
+    </ClCompile>
+    <ClCompile Include="ParticleSystemFactory.cpp">
+      <Filter>Factories</Filter>
+    </ClCompile>
+    <ClCompile Include="build.cpp" />
+    <ClCompile Include="RepXImporter.cpp">
+      <Filter>Importers</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureArrayFactory.cpp">
+      <Filter>Factories</Filter>
+    </ClCompile>
+    <ClCompile Include="REAAnimExporter.cpp">
+      <Filter>Importers</Filter>
+    </ClCompile>
+    <ClCompile Include="REAAnimImporter.cpp">
+      <Filter>Importers</Filter>
+    </ClCompile>
+    <ClCompile Include="FACRigImporter.cpp">
+      <Filter>Importers</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldMapImporter.cpp">
+      <Filter>Importers</Filter>
+    </ClCompile>
+    <ClCompile Include="CharacterEntityTemplateFactory.cpp">
+      <Filter>Factories</Filter>
+    </ClCompile>
+    <ClCompile Include="FACFormat.cpp">
+      <Filter>Importers</Filter>
+    </ClCompile>
+    <ClCompile Include="FACImporter.cpp">
+      <Filter>Importers</Filter>
+    </ClCompile>
+    <ClCompile Include="REARigImporter.cpp">
+      <Filter>Importers</Filter>
+    </ClCompile>
+    <ClCompile Include="ApexImporter.cpp">
+      <Filter>Importers</Filter>
+    </ClCompile>
+    <ClCompile Include="environmentDefinitionFactory.cpp">
+      <Filter>Factories</Filter>
+    </ClCompile>
+    <ClCompile Include="BitmapExporter.cpp">
+      <Filter>Importers</Filter>
+    </ClCompile>
+    <ClCompile Include="BitmapImporter.cpp">
+      <Filter>Importers</Filter>
+    </ClCompile>
+    <ClCompile Include="BitmapThumbnailGenerator.cpp">
+      <Filter>Thumbnails</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityTemplateThumbnailGenerator.cpp">
+      <Filter>Thumbnails</Filter>
+    </ClCompile>
+    <ClCompile Include="MaterialThumbnailGenerator.cpp">
+      <Filter>Thumbnails</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshThumbnailGenerator.cpp">
+      <Filter>Thumbnails</Filter>
+    </ClCompile>
+    <ClCompile Include="SpeedTreeThumbnailGenerator.cpp">
+      <Filter>Thumbnails</Filter>
+    </ClCompile>
+    <ClCompile Include="FbxImporter.cpp">
+      <Filter>Importers</Filter>
+    </ClCompile>
+    <ClCompile Include="dyngImporter.cpp">
+      <Filter>Importers</Filter>
+    </ClCompile>
+    <ClCompile Include="ThumbnailGeneratorHelpers.cpp">
+      <Filter>Thumbnails</Filter>
+    </ClCompile>
+    <ClCompile Include="HairWorksImporter.cpp">
+      <Filter>Importers</Filter>
+    </ClCompile>
+    <ClCompile Include="SimplexTreeFactory.cpp">
+      <Filter>Factories</Filter>
+    </ClCompile>
+    <ClCompile Include="FlashImporter.cpp">
+      <Filter>Importers</Filter>
+    </ClCompile>
+    <ClCompile Include="FlashThumbnailGenerator.cpp">
+      <Filter>Thumbnails</Filter>
+    </ClCompile>
+    <ClCompile Include="GFxExporter.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="HairWorksExporter.cpp">
+      <Filter>Importers</Filter>
+    </ClCompile>
+    <ClCompile Include="DlcDefinitionFactory.cpp">
+      <Filter>Factories</Filter>
+    </ClCompile>
+    <ClCompile Include="fbxMeshImporter.cpp">
+      <Filter>Importers</Filter>
+    </ClCompile>
+    <ClCompile Include="fbxMeshBuilder.cpp">
+      <Filter>Importers</Filter>
+    </ClCompile>
+    <ClCompile Include="DestructionImporter.cpp">
+      <Filter>Importers</Filter>
+    </ClCompile>
+    <ClCompile Include="fbxCommon.cpp">
+      <Filter>Importers</Filter>
+    </ClCompile>
+    <ClCompile Include="fbxMeshExporter.cpp">
+      <Filter>Importers</Filter>
+    </ClCompile>
+    <ClCompile Include="meshExport.cpp">
+      <Filter>Importers</Filter>
+    </ClCompile>
+    <ClCompile Include="RexMeshImporter.cpp">
+      <Filter>Importers</Filter>
+    </ClCompile>
+    <ClCompile Include="ReFileHelpers.cpp">
+      <Filter>Importers</Filter>
+    </ClCompile>
+    <ClCompile Include="fbxEntityExporter.cpp">
+      <Filter>Importers</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="build.h" />
+    <ClInclude Include="importerExternalResources.h" />
+    <ClInclude Include="importerTypeRegistry.h" />
+    <ClInclude Include="FACFormat.h">
+      <Filter>Importers</Filter>
+    </ClInclude>
+    <ClInclude Include="REAAnimExporter.h">
+      <Filter>Importers</Filter>
+    </ClInclude>
+    <ClInclude Include="REAAnimImporter.h">
+      <Filter>Importers</Filter>
+    </ClInclude>
+    <ClInclude Include="FACImporter.h">
+      <Filter>Importers</Filter>
+    </ClInclude>
+    <ClInclude Include="ThumbnailGeneratorHelpers.h">
+      <Filter>Thumbnails</Filter>
+    </ClInclude>
+    <ClInclude Include="GFxExporter.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="fbxMeshBuilder.h">
+      <Filter>Importers</Filter>
+    </ClInclude>
+    <ClInclude Include="fbxCommon.h">
+      <Filter>Importers</Filter>
+    </ClInclude>
+    <ClInclude Include="meshExport.h">
+      <Filter>Importers</Filter>
+    </ClInclude>
+    <ClInclude Include="ReFileHelpers.h">
+      <Filter>Importers</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

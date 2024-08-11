@@ -1,0 +1,39 @@
+ConstantBuffer cb0 : register( b0 )
+{
+	row_major float4x4 mWorldViewProj;
+	float fTime;
+};
+
+
+ConstantBuffer cb1 : register( b1 )
+{
+	float4 objectPos;
+};
+
+struct VSInput
+{
+	float3 Position : POSITION;
+};
+
+struct VS_OUTPUT
+{
+	float4 Position   : S_POSITION;
+	float4 Diffuse    : TEXCOORD0;
+};
+
+VS_OUTPUT main( VSInput input )
+{
+	VS_OUTPUT o = (VS_OUTPUT)0;
+
+	float fSin, fCos;
+	float x = length( input.Position ) * sin( fTime ) * 15.0f;
+
+	sincos( x, fSin, fCos );
+
+	float4 OutPos = mul( float4( input.Position.x, fSin * 0.1f, input.Position.y, 0.0f ) + float4(objectPos.xyz,1), mWorldViewProj );
+
+	o.Position = OutPos;
+	o.Diffuse = 0.5f - 0.5f * fCos;
+
+	return o;
+}

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="build.h" />
+    <ClInclude Include="gpuApi.h" />
+    <ClInclude Include="gpuApiBase.h" />
+    <ClInclude Include="gpuApiGamma.h" />
+    <ClInclude Include="gpuApiMapping.h" />
+    <ClInclude Include="gpuApiRenderState.h" />
+    <ClInclude Include="gpuApiDDSLoader.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="gpuApi.cpp" />
+    <ClCompile Include="gpuApiBuffer.cpp" />
+    <ClCompile Include="gpuApiDevice.cpp" />
+    <ClCompile Include="gpuApiDeviceState.cpp" />
+    <ClCompile Include="gpuApiDrawContext.cpp" />
+    <ClCompile Include="gpuApiGamma.cpp" />
+    <ClCompile Include="gpuApiQuery.cpp" />
+    <ClCompile Include="gpuApiRender.cpp" />
+    <ClCompile Include="gpuApiRenderTarget.cpp" />
+    <ClCompile Include="gpuApiSamplerStates.cpp" />
+    <ClCompile Include="gpuApiTexture.cpp" />
+    <ClCompile Include="gpuApiShader.cpp" />
+    <ClCompile Include="gpuApiRenderState.cpp" />
+    <ClCompile Include="gpuApiVertexLayouts.cpp" />
+    <ClCompile Include="gpuApiDDSLoader.cpp" />
+  </ItemGroup>
+</Project>

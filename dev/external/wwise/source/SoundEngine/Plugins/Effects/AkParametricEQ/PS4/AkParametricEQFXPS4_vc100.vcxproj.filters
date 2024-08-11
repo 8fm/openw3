@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<Filter Include="Win32">
+			<UniqueIdentifier>{8C9D84AE-B4DF-D74E-8BD2-5E2E51442F1E}</UniqueIdentifier>
+		</Filter>
+	</ItemGroup>
+	<ItemGroup>
+		<ClInclude Include="..\Win32\AkParametricEQFX.h">
+			<Filter>Win32</Filter>
+		</ClInclude>
+		<ClInclude Include="..\AkParametricEQFXCommon.h" />
+		<ClInclude Include="..\AkParametricEQFXParams.h" />
+	</ItemGroup>
+	<ItemGroup>
+		<ClCompile Include="..\Win32\AkParametricEQFX.cpp">
+			<Filter>Win32</Filter>
+		</ClCompile>
+		<ClCompile Include="..\AkParametricEQFXParams.cpp" />
+	</ItemGroup>
+</Project>

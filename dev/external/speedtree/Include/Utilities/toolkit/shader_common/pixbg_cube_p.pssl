@@ -1,0 +1,39 @@
+/* SCE CONFIDENTIAL
+PlayStation(R)4 Programmer Tool Runtime Library Release 01.700.081
+* Copyright (C) 2013 Sony Computer Entertainment Inc.
+* All Rights Reserved.
+*/
+
+#include "shader_base.h"
+#include "vsoutput_common.hs"
+
+TextureCube cubemapTex : register(t0);
+SamplerState cubemapSampler : register(s0);
+
+ConstantBuffer CubemapConstants : register(c0)
+{
+	Matrix4Unaligned g_projectionToView;
+	Matrix4Unaligned g_viewToWorld;
+};
+
+struct VSCLEAR_OUT
+{
+	float4 m_position : S_POSITION;
+};
+
+float4 ScreenToView( float4 screen )
+{
+  float4 result = mul( screen, g_projectionToView );
+  result.xyz /= result.w;
+  return result;
+}
+
+float4 main(VSCLEAR_OUT input) : S_TARGET_OUTPUT
+{
+    float4 view = ScreenToView(float4(input.m_position.x, input.m_position.y, 1, 1));
+	float4 begin = mul(float4(0,0,0,1), g_viewToWorld);
+	float4 end = mul(float4(view.xyz,1), g_viewToWorld);
+	float3 delta = end.xyz - begin.xyz;
+	float4 output = cubemapTex.Sample(cubemapSampler, delta);	
+	return output;
+}

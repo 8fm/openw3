@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="DXUT">
+      <UniqueIdentifier>{623f71f3-bee1-4fcb-bab7-0a0fa442b219}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{9445e747-aece-40a3-ba5f-57a6741ee5df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{a2879e4d-18e1-4842-ac01-36996f033355}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility">
+      <UniqueIdentifier>{f6367831-362b-4dcb-a463-269f7a38b766}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Grass">
+      <UniqueIdentifier>{2fde166c-10d9-4900-8ef6-d217001ba453}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Terrain">
+      <UniqueIdentifier>{98305401-8772-4c42-91b0-b51da9412630}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sky">
+      <UniqueIdentifier>{e464ed1b-0ec1-4ef5-b8a7-cef32cfe0717}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\DXUT\DXUT.cpp">
+      <Filter>DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\DXUT\DXUTDevice11.cpp">
+      <Filter>DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\DXUT\DXUTDevice9.cpp">
+      <Filter>DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\DXUT\DXUTmisc.cpp">
+      <Filter>DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonSource\MyApplication.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\MyMainDX11.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonSource\MyPopulate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonSource\MyRenderFunctions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonSource\MyShadowSystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonSource\MyCmdLineOptions.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonSource\MyConfigFile.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonSource\MyDebugRenderFunctions.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonSource\MyMouseNavigation.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonSource\MyNavigationBase.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonSource\MyParamAdjuster.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonSource\MyStatsReporter.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonSource\MyTgaLoader.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonSource\MyGrass.cpp">
+      <Filter>Grass</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonSource\MyTerrain.cpp">
+      <Filter>Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonSource\MyTerrainData.cpp">
+      <Filter>Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonSource\MySky.cpp">
+      <Filter>Sky</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonSource\MyFullscreenQuad.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonSource\MyOverlays.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonSource\MyRenderTargets.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Source\DXUT\DXUT.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\DXUT\DXUTDevice11.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\DXUT\DXUTDevice9.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\DXUT\DXUTmisc.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\resource.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyPopulate_inl.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyApplication.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyCustomAllocator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyFileSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyPopulate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyShadowSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MySpeedTreeRenderer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyCmdLineOptions.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyConfigFile.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyDebugRenderFunctions.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyMouseNavigation.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyNavigationBase.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyParamAdjuster.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyStatsReporter.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyTgaLoader.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyGrass.h">
+      <Filter>Grass</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyTerrain.h">
+      <Filter>Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyTerrain_inl.h">
+      <Filter>Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyTerrainData.h">
+      <Filter>Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyTerrainData_inl.h">
+      <Filter>Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MySky.h">
+      <Filter>Sky</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyFullscreenQuad.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyOverlays.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyRenderTargets.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\My2dInterpolator.h">
+      <Filter>Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\My2dInterpolator_inl.h">
+      <Filter>Terrain</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Source\SpeedTree_DirectX_App.rc">
+      <Filter>DXUT</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

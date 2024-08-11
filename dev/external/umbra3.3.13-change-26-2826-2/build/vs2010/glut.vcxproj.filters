@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="external">
+      <UniqueIdentifier>{65C94153-901A-9F42-B4B3-A17D4B1F1C0C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\glut">
+      <UniqueIdentifier>{7210A5D2-A3E6-2345-AD5B-0F46DE184F11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\glut\src">
+      <UniqueIdentifier>{A6846B94-48D4-A442-B864-704C374C7F1A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\glut\include">
+      <UniqueIdentifier>{4B301B66-F23E-094C-84C7-A388E24BADF9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\glut\include\GL">
+      <UniqueIdentifier>{80AC4397-700B-474E-93EC-2D50DE432162}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\opengl">
+      <UniqueIdentifier>{24450AD1-A429-E442-B8B6-4E4BF8469019}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\opengl\gl">
+      <UniqueIdentifier>{18BB910F-E48A-EC48-87DA-65F86D396806}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\external\glut\src\glutbitmap.h">
+      <Filter>external\glut\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\glut\src\glutint.h">
+      <Filter>external\glut\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\glut\src\glutstroke.h">
+      <Filter>external\glut\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\glut\src\glutwin32.h">
+      <Filter>external\glut\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\glut\src\layerutil.h">
+      <Filter>external\glut\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\glut\src\stroke.h">
+      <Filter>external\glut\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\glut\src\win32_glx.h">
+      <Filter>external\glut\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\glut\src\win32_x11.h">
+      <Filter>external\glut\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\glut\include\GL\glut.h">
+      <Filter>external\glut\include\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\glut\include\GL\glutf90.h">
+      <Filter>external\glut\include\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\opengl\gl\glext.h">
+      <Filter>external\opengl\gl</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\external\glut\src\glut_8x13.c">
+      <Filter>external\glut\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\glut\src\glut_9x15.c">
+      <Filter>external\glut\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\glut\src\glut_bitmap.c">
+      <Filter>external\glut\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\glut\src\glut_bwidth.c">
+      <Filter>external\glut\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\glut\src\glut_cindex.c">
+      <Filter>external\glut\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\glut\src\glut_cmap.c">
+      <Filter>external\glut\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\glut\src\glut_cursor.c">
+      <Filter>external\glut\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\glut\src\glut_dials.c">
+      <Filter>external\glut\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\glut\src\glut_dstr.c">
+      <Filter>external\glut\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\glut\src\glut_event.c">
+      <Filter>external\glut\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\glut\src\glut_ext.c">
+      <Filter>external\glut\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\glut\src\glut_fullscrn.c">
+      <Filter>external\glut\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\glut\src\glut_gamemode.c">
+      <Filter>external\glut\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\glut\src\glut_get.c">
+      <Filter>external\glut\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\glut\src\glut_hel10.c">
+      <Filter>external\glut\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\glut\src\glut_hel12.c">
+      <Filter>external\glut\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\glut\src\glut_hel18.c">
+      <Filter>external\glut\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\glut\src\glut_init.c">
+      <Filter>external\glut\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\glut\src\glut_input.c">
+      <Filter>external\glut\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\glut\src\glut_joy.c">
+      <Filter>external\glut\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\glut\src\glut_key.c">
+      <Filter>external\glut\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\glut\src\glut_keyctrl.c">
+      <Filter>external\glut\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\glut\src\glut_keyup.c">
+      <Filter>external\glut\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\glut\src\glut_mesa.c">
+      <Filter>external\glut\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\glut\src\glut_modifier.c">
+      <Filter>external\glut\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\glut\src\glut_mroman.c">
+      <Filter>external\glut\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\glut\src\glut_overlay.c">
+      <Filter>external\glut\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\glut\src\glut_roman.c">
+      <Filter>external\glut\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\glut\src\glut_shapes.c">
+      <Filter>external\glut\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\glut\src\glut_space.c">
+      <Filter>external\glut\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\glut\src\glut_stroke.c">
+      <Filter>external\glut\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\glut\src\glut_swap.c">
+      <Filter>external\glut\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\glut\src\glut_swidth.c">
+      <Filter>external\glut\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\glut\src\glut_tablet.c">
+      <Filter>external\glut\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\glut\src\glut_teapot.c">
+      <Filter>external\glut\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\glut\src\glut_tr10.c">
+      <Filter>external\glut\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\glut\src\glut_tr24.c">
+      <Filter>external\glut\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\glut\src\glut_util.c">
+      <Filter>external\glut\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\glut\src\glut_vidresize.c">
+      <Filter>external\glut\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\glut\src\glut_warp.c">
+      <Filter>external\glut\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\glut\src\glut_win.c">
+      <Filter>external\glut\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\glut\src\glut_winmisc.c">
+      <Filter>external\glut\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\glut\src\win32_glx.c">
+      <Filter>external\glut\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\glut\src\win32_menu.c">
+      <Filter>external\glut\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\glut\src\win32_util.c">
+      <Filter>external\glut\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\glut\src\win32_winproc.c">
+      <Filter>external\glut\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\glut\src\win32_x11.c">
+      <Filter>external\glut\src</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

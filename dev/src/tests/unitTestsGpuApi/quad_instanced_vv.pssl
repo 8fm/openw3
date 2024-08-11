@@ -1,0 +1,41 @@
+//SamplerState samp0 : register(s0);
+//Texture2D colorMap : register(t0);
+
+//ConstantBuffer ShaderConstants
+//{
+//	column_major matrix m_worldViewProj;
+//};
+
+#include "quad_vsoutput.pssl"
+
+struct VS_INPUT
+{
+	float3 Position				: POSITION0;
+	float2 UV					: TEXCOORD0;
+	float4 Normal				: NORMAL;
+	float4 Tangent				: TANGENT;
+	float4 Binormal				: BINORMAL;
+	float4 LocalToWorld0		: INSTANCE_TRANSFORM0;
+	float4 LocalToWorld1		: INSTANCE_TRANSFORM1;
+	float4 LocalToWorld2		: INSTANCE_TRANSFORM2;
+	float4 DetailLevelParams	: INSTANCE_LOD_PARAMS;
+};
+
+VS_OUTPUT main( VS_INPUT Input )
+{
+	VS_OUTPUT Output;
+	
+	float4x4 fullLocalToWorld;
+	fullLocalToWorld._m00_m10_m20_m30 = Input.LocalToWorld0;
+	fullLocalToWorld._m01_m11_m21_m31 = Input.LocalToWorld1;
+	fullLocalToWorld._m02_m12_m22_m32 = Input.LocalToWorld2;
+	fullLocalToWorld._m03_m13_m23_m33 = float4( 0.0f, 0.0f, 0.0f, 1.0f );
+	
+	Output.Position = mul( float4( Input.Position.xyz, 1 ), fullLocalToWorld );
+	
+//	Output.Position = float4( Input.Position.x + Input.LocalToWorld0.x, Input.Position.y + Input.LocalToWorld0.w, Input.Position.z, 1 );
+	Output.Color = Input.Normal + Input.Tangent + Input.Binormal;
+	Output.UV = Input.UV;
+
+	return Output;
+}

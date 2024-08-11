@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="samples">
+      <UniqueIdentifier>{1E3537B0-FCFC-0A46-A96F-23EF734733A9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="samples\resources">
+      <UniqueIdentifier>{8FDC046C-D4FC-3941-95F7-D3CE65C9D29D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils">
+      <UniqueIdentifier>{B8778008-734C-1348-B2E0-9E39AC7CFF8A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils\debugger">
+      <UniqueIdentifier>{974725EF-14A3-1F47-8B2B-0A665042A6CD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils\debugger\qt">
+      <UniqueIdentifier>{A2A3D340-B401-1C44-AE37-213E4FF30108}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\samples\resources\testkey.pfx">
+      <Filter>samples\resources</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\samples\resources\Logo.png">
+      <Filter>samples\resources</Filter>
+    </Image>
+    <Image Include="..\..\samples\resources\SmallLogo.png">
+      <Filter>samples\resources</Filter>
+    </Image>
+    <Image Include="..\..\samples\resources\SplashScreen.png">
+      <Filter>samples\resources</Filter>
+    </Image>
+    <Image Include="..\..\samples\resources\StoreLogo.png">
+      <Filter>samples\resources</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\utils\debugger\qt\WinResource.h">
+      <Filter>utils\debugger\qt</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\utils\debugger\launcher.cpp">
+      <Filter>utils\debugger</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\utils\debugger\qt\WinResource.rc">
+      <Filter>utils\debugger\qt</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

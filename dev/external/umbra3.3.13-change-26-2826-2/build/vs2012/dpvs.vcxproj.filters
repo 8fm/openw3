@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="samples">
+      <UniqueIdentifier>{9FEE8EF9-76C6-8040-B22B-EA35E06108AC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="samples\resources">
+      <UniqueIdentifier>{341E0394-ACCA-E44C-80A2-A23C6F52836F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils">
+      <UniqueIdentifier>{E1F057F4-BBEC-B046-A598-2BEB9406F46D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils\dpvs">
+      <UniqueIdentifier>{8177CC8E-E5C8-A341-8D40-F6E7C3E5D675}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\samples\resources\testkey.pfx">
+      <Filter>samples\resources</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\samples\resources\Logo.png">
+      <Filter>samples\resources</Filter>
+    </Image>
+    <Image Include="..\..\samples\resources\SmallLogo.png">
+      <Filter>samples\resources</Filter>
+    </Image>
+    <Image Include="..\..\samples\resources\SplashScreen.png">
+      <Filter>samples\resources</Filter>
+    </Image>
+    <Image Include="..\..\samples\resources\StoreLogo.png">
+      <Filter>samples\resources</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\utils\dpvs\umbraDPVSValidator.hpp">
+      <Filter>utils\dpvs</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\utils\dpvs\umbraDPVSCommandLineTool.cpp">
+      <Filter>utils\dpvs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\utils\dpvs\umbraDPVSValidator.cpp">
+      <Filter>utils\dpvs</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

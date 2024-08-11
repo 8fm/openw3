@@ -1,0 +1,1772 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{26fddc0f-4ba5-4d9a-8fbc-5c565e072287}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ApexRenderInterface">
+      <UniqueIdentifier>{fe8ee9f4-7301-4705-8c48-667b20af4711}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SpeedTree">
+      <UniqueIdentifier>{8fc2ff86-839a-43c3-b917-0130d4ba4d4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SpeedTree\RenderInterface">
+      <UniqueIdentifier>{d14b798e-1ad9-428e-b44a-8708a55108b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering">
+      <UniqueIdentifier>{565cc7ad-2d02-4a50-832e-76157adb126e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering\PostProcess">
+      <UniqueIdentifier>{efff2db2-3de9-4b53-9528-25f46dc9658f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering\Batchers">
+      <UniqueIdentifier>{8c65fedf-f787-41da-bded-645e84d8f844}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering\Scene">
+      <UniqueIdentifier>{ca54430a-01dd-46d3-8a0d-b54e4c105ecb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering\Scene\Elements">
+      <UniqueIdentifier>{0a642f79-55c7-4d7a-b72c-4bd67cfcc49b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering\Scene\Proxies">
+      <UniqueIdentifier>{ccc1e1c0-bb9d-4c14-b3d9-4a135ff879f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering\Scene\Proxies\Lights">
+      <UniqueIdentifier>{3c23020d-5f8f-4ed3-a0bd-2e32872d6d6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering\Debug">
+      <UniqueIdentifier>{61ef640e-c8dc-42fc-b515-dff4177a5494}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering\Shadows">
+      <UniqueIdentifier>{d40e3974-d815-454d-933b-9e88cbf06d4e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering\Shadows\TextureAllocators">
+      <UniqueIdentifier>{81cc674a-e4b5-49e5-a516-9348bf1298a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering\Shadows\Terrain">
+      <UniqueIdentifier>{e2cdee46-72fb-4b12-b77d-4cac41999812}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering\Effects">
+      <UniqueIdentifier>{1b9ea3e2-951a-4085-aeea-7942dcbd9226}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering\ParticleSystem">
+      <UniqueIdentifier>{0d6f6dad-f742-4eb7-ae38-4c1a3dd781a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering\Shaders">
+      <UniqueIdentifier>{d140d376-5bf5-4ea1-822c-9ae1cbf5ee75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering\Textures">
+      <UniqueIdentifier>{5b69975a-ae68-48e3-b222-859dc8b808af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering\Movies">
+      <UniqueIdentifier>{aeb4aa14-8c9e-45db-a060-c916ea83b587}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering\Movies\AVI">
+      <UniqueIdentifier>{2e79100c-d48a-47f4-a32f-5404e88d06ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering\Meshes">
+      <UniqueIdentifier>{89128a1b-4cfe-4126-b5a4-db175c2cb606}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering\Skinning">
+      <UniqueIdentifier>{6022241f-9ba7-4df5-9dd7-98b06ef6a07e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering\Materials">
+      <UniqueIdentifier>{42966df2-93ad-4ecb-ab43-79c8ef9b6321}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering\Viewport">
+      <UniqueIdentifier>{b0bba251-2128-4f65-89dd-5c8c78a5a694}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering\Queries">
+      <UniqueIdentifier>{4c2ebe18-c843-41dc-97d9-1398354ec7e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering\Terrain">
+      <UniqueIdentifier>{5fb6b547-69b1-4a1e-b5ea-29f91b46f9c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering\Shaders\Common">
+      <UniqueIdentifier>{c487ef14-fcde-4a87-9ede-fb2d281bcdbf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering\Shaders\External">
+      <UniqueIdentifier>{0f5fad69-5c34-49e3-8d2a-226315cde679}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering\Shaders\Gameplay">
+      <UniqueIdentifier>{cdc7a7b7-db61-44f7-86bc-11b1f8db9757}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering\Shaders\VertexFactory">
+      <UniqueIdentifier>{6f83b8f6-3bf2-4200-831f-80561d72e0b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering\Shaders\VertexFactory\Includes">
+      <UniqueIdentifier>{44552524-8c9f-4891-8cc0-87280a0286d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering\Shaders\Terrain">
+      <UniqueIdentifier>{0d8c0e94-50ff-46a0-b1c9-7117f9f3b10b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering\EnvProbe">
+      <UniqueIdentifier>{8f4b10d0-ee5f-48e3-a0f9-37435c15ff1c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering\Shaders\Decal">
+      <UniqueIdentifier>{d76c0f92-a7c6-45aa-a300-2e89ea69015e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering\Scene\DynamicDecals">
+      <UniqueIdentifier>{8f3a0ab5-e295-4477-9673-fca96edccf48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering\Debug\DebugWindows">
+      <UniqueIdentifier>{d5ca8025-93b5-4fdb-886d-8ce009f814eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering\Simulation">
+      <UniqueIdentifier>{a9540f23-0541-41bc-bd42-06c5496980af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scaleform">
+      <UniqueIdentifier>{d6252b30-a187-4f4e-a368-416cf22838d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering\Visibility">
+      <UniqueIdentifier>{b0e5d8b9-ae8a-4b31-9344-bdec7e51a322}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SpeedTree\ExternalRenderInterface">
+      <UniqueIdentifier>{a6af2fa9-7987-487f-9684-e0b5e6b6c527}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering\Swarms">
+      <UniqueIdentifier>{0995cfe6-e41d-48ef-872e-3a8167223ce2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering\Loading Screen">
+      <UniqueIdentifier>{8ddcbca0-3414-4d5f-b6b9-a3abeadfa12b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering\Video">
+      <UniqueIdentifier>{ec9f91b3-f084-4042-af1c-d5e0c402daac}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="renderCommands.cpp">
+      <Filter>Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="renderCounter.cpp">
+      <Filter>Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="renderDeferred.cpp">
+      <Filter>Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="renderDrawer.cpp">
+      <Filter>Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="renderFragments.cpp">
+      <Filter>Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="renderRenderFrame.cpp">
+      <Filter>Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="renderStateManager.cpp">
+      <Filter>Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="renderThread.cpp">
+      <Filter>Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="renderPostProcess.cpp">
+      <Filter>Rendering\PostProcess</Filter>
+    </ClCompile>
+    <ClCompile Include="renderBrushFaceBatcher.cpp">
+      <Filter>Rendering\Batchers</Filter>
+    </ClCompile>
+    <ClCompile Include="renderFlaresBatcher.cpp">
+      <Filter>Rendering\Batchers</Filter>
+    </ClCompile>
+    <ClCompile Include="renderMeshBatcher.cpp">
+      <Filter>Rendering\Batchers</Filter>
+    </ClCompile>
+    <ClCompile Include="renderParticleBatcher.cpp">
+      <Filter>Rendering\Batchers</Filter>
+    </ClCompile>
+    <ClCompile Include="renderTerrainLogicMap.cpp">
+      <Filter>Rendering\Batchers</Filter>
+    </ClCompile>
+    <ClCompile Include="renderDistantLightBatcher.cpp">
+      <Filter>Rendering\Batchers</Filter>
+    </ClCompile>
+    <ClCompile Include="renderCollector.cpp">
+      <Filter>Rendering\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="renderOcclusion.cpp">
+      <Filter>Rendering\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="renderScene.cpp">
+      <Filter>Rendering\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="renderSequenceGrabber.cpp">
+      <Filter>Rendering\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="renderElement.cpp">
+      <Filter>Rendering\Scene\Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="renderElementBrushFace.cpp">
+      <Filter>Rendering\Scene\Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="renderElementMeshChunk.cpp">
+      <Filter>Rendering\Scene\Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="renderElementParticleEmitter.cpp">
+      <Filter>Rendering\Scene\Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="renderProxy.cpp">
+      <Filter>Rendering\Scene\Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="renderProxyBrushFace.cpp">
+      <Filter>Rendering\Scene\Proxies</Filter>
+    </ClCompile>
+    <ClCompile Include="renderProxyDrawable.cpp">
+      <Filter>Rendering\Scene\Proxies</Filter>
+    </ClCompile>
+    <ClCompile Include="renderProxyFlare.cpp">
+      <Filter>Rendering\Scene\Proxies</Filter>
+    </ClCompile>
+    <ClCompile Include="renderProxyMesh.cpp">
+      <Filter>Rendering\Scene\Proxies</Filter>
+    </ClCompile>
+    <ClCompile Include="renderProxyParticles.cpp">
+      <Filter>Rendering\Scene\Proxies</Filter>
+    </ClCompile>
+    <ClCompile Include="aviutils.cpp">
+      <Filter>Rendering\Movies\AVI</Filter>
+    </ClCompile>
+    <ClCompile Include="debugPageMeshTextures.cpp">
+      <Filter>Rendering\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="debugPageResources.cpp">
+      <Filter>Rendering\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="debugPageTextures.cpp">
+      <Filter>Rendering\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="renderDebugMacros.cpp">
+      <Filter>Rendering\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="gameplayFx.cpp">
+      <Filter>Rendering\Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="renderRenderSurfaces.cpp">
+      <Filter>Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="renderShaderPair.cpp">
+      <Filter>Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="build.cpp" />
+    <ClCompile Include="renderParticleData.cpp">
+      <Filter>Rendering\ParticleSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="subframeInterpolation.cpp">
+      <Filter>Rendering\ParticleSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="renderParticleEmitter.cpp">
+      <Filter>Rendering\ParticleSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="renderParticleBuffer.cpp">
+      <Filter>Rendering\ParticleSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="particleVertexBuffer.cpp">
+      <Filter>Rendering\ParticleSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="particleModification.cpp">
+      <Filter>Rendering\ParticleSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="particleInitialization.cpp">
+      <Filter>Rendering\ParticleSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="particleGenerateVertex.cpp">
+      <Filter>Rendering\ParticleSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="renderLodBudgetSystem.cpp">
+      <Filter>Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="debugPageCharacterLods.cpp">
+      <Filter>Rendering\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="renderProxySpeedTree.cpp">
+      <Filter>Rendering\Scene\Proxies</Filter>
+    </ClCompile>
+    <ClCompile Include="renderSpeedTreeResource.cpp">
+      <Filter>Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="renderProxyTerrain.cpp">
+      <Filter>Rendering\Scene\Proxies</Filter>
+    </ClCompile>
+    <ClCompile Include="renderTerrainUpdateData.cpp">
+      <Filter>Rendering\Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="renderProxyLight.cpp">
+      <Filter>Rendering\Scene\Proxies\Lights</Filter>
+    </ClCompile>
+    <ClCompile Include="renderProxyPointLight.cpp">
+      <Filter>Rendering\Scene\Proxies\Lights</Filter>
+    </ClCompile>
+    <ClCompile Include="renderProxySpotLight.cpp">
+      <Filter>Rendering\Scene\Proxies\Lights</Filter>
+    </ClCompile>
+    <ClCompile Include="tiledDeferred.cpp">
+      <Filter>Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="apexRenderInterface.cpp">
+      <Filter>ApexRenderInterface</Filter>
+    </ClCompile>
+    <ClCompile Include="renderProxyApex.cpp">
+      <Filter>Rendering\Scene\Proxies</Filter>
+    </ClCompile>
+    <ClCompile Include="renderProxyWater.cpp">
+      <Filter>Rendering\Scene\Proxies</Filter>
+    </ClCompile>
+    <ClCompile Include="debugPageDynamicTextures.cpp">
+      <Filter>Rendering\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="renderProxyDecal.cpp">
+      <Filter>Rendering\Scene\Proxies</Filter>
+    </ClCompile>
+    <ClCompile Include="renderScaleformHal.cpp">
+      <Filter>Scaleform</Filter>
+    </ClCompile>
+    <ClCompile Include="renderScaleformMeshCache.cpp">
+      <Filter>Scaleform</Filter>
+    </ClCompile>
+    <ClCompile Include="renderScaleformShader.cpp">
+      <Filter>Scaleform</Filter>
+    </ClCompile>
+    <ClCompile Include="renderScaleformTempD3D11.cpp">
+      <Filter>Scaleform</Filter>
+    </ClCompile>
+    <ClCompile Include="renderScaleformTexture.cpp">
+      <Filter>Scaleform</Filter>
+    </ClCompile>
+    <ClCompile Include="guiRenderSystemScaleform.cpp">
+      <Filter>Scaleform</Filter>
+    </ClCompile>
+    <ClCompile Include="renderShadowManager.cpp">
+      <Filter>Rendering\Shadows</Filter>
+    </ClCompile>
+    <ClCompile Include="renderShadowRegions.cpp">
+      <Filter>Rendering\Shadows</Filter>
+    </ClCompile>
+    <ClCompile Include="renderShadowDynamicAllocator.cpp">
+      <Filter>Rendering\Shadows\TextureAllocators</Filter>
+    </ClCompile>
+    <ClCompile Include="renderShadowStaticAllocator.cpp">
+      <Filter>Rendering\Shadows\TextureAllocators</Filter>
+    </ClCompile>
+    <ClCompile Include="renderTextureAllocator.cpp">
+      <Filter>Rendering\Shadows\TextureAllocators</Filter>
+    </ClCompile>
+    <ClCompile Include="renderTerrainShadows.cpp">
+      <Filter>Rendering\Shadows\Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="renderEntityGroup.cpp">
+      <Filter>Rendering\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="renderInterface.cpp">
+      <Filter>Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="renderConstantBufferShared.cpp">
+      <Filter>Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="geometryBuffer.cpp">
+      <Filter>SpeedTree\RenderInterface</Filter>
+    </ClCompile>
+    <ClCompile Include="shaders.cpp">
+      <Filter>SpeedTree\RenderInterface</Filter>
+    </ClCompile>
+    <ClCompile Include="speedTreeRenderInterface.cpp">
+      <Filter>SpeedTree\RenderInterface</Filter>
+    </ClCompile>
+    <ClCompile Include="stateBlock.cpp">
+      <Filter>SpeedTree\RenderInterface</Filter>
+    </ClCompile>
+    <ClCompile Include="texture.cpp">
+      <Filter>SpeedTree\RenderInterface</Filter>
+    </ClCompile>
+    <ClCompile Include="renderElementApex.cpp">
+      <Filter>Rendering\Scene\Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="renderApexBatcher.cpp">
+      <Filter>Rendering\Batchers</Filter>
+    </ClCompile>
+    <ClCompile Include="renderProxyFur.cpp">
+      <Filter>Rendering\Scene\Proxies</Filter>
+    </ClCompile>
+    <ClCompile Include="renderTextureStreaming.cpp">
+      <Filter>Rendering\Textures</Filter>
+    </ClCompile>
+    <ClCompile Include="renderBinkVideo.cpp">
+      <Filter>Rendering\Movies</Filter>
+    </ClCompile>
+    <ClCompile Include="renderVideo.cpp">
+      <Filter>Rendering\Movies</Filter>
+    </ClCompile>
+    <ClCompile Include="renderWMVVideo.cpp">
+      <Filter>Rendering\Movies</Filter>
+    </ClCompile>
+    <ClCompile Include="renderSkinningData.cpp">
+      <Filter>Rendering\Skinning</Filter>
+    </ClCompile>
+    <ClCompile Include="renderDynamicResource.cxx">
+      <Filter>Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="renderStaticResource.cxx">
+      <Filter>Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="renderHelpers.cpp">
+      <Filter>Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="renderFence.cpp">
+      <Filter>Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="renderTextureArray.cxx">
+      <Filter>Rendering\Textures</Filter>
+    </ClCompile>
+    <ClCompile Include="renderTexture.cxx">
+      <Filter>Rendering\Textures</Filter>
+    </ClCompile>
+    <ClCompile Include="renderCube.cxx">
+      <Filter>Rendering\Textures</Filter>
+    </ClCompile>
+    <ClCompile Include="renderSkinManager.cxx">
+      <Filter>Rendering\Skinning</Filter>
+    </ClCompile>
+    <ClCompile Include="renderViewportWindow.cxx">
+      <Filter>Rendering\Viewport</Filter>
+    </ClCompile>
+    <ClCompile Include="renderViewport.cxx">
+      <Filter>Rendering\Viewport</Filter>
+    </ClCompile>
+    <ClCompile Include="renderQuery.cpp">
+      <Filter>Rendering\Queries</Filter>
+    </ClCompile>
+    <ClCompile Include="renderShader.cxx">
+      <Filter>Rendering\Materials</Filter>
+    </ClCompile>
+    <ClCompile Include="renderMaterial.cxx">
+      <Filter>Rendering\Materials</Filter>
+    </ClCompile>
+    <ClCompile Include="renderMesh.cxx">
+      <Filter>Rendering\Meshes</Filter>
+    </ClCompile>
+    <ClCompile Include="renderDynamicVertexBuffer.cxx">
+      <Filter>Rendering\Meshes</Filter>
+    </ClCompile>
+    <ClCompile Include="renderDynamicIndexBuffer.cxx">
+      <Filter>Rendering\Meshes</Filter>
+    </ClCompile>
+    <ClCompile Include="renderDebugMesh.cxx">
+      <Filter>Rendering\Meshes</Filter>
+    </ClCompile>
+    <ClCompile Include="renderEnvProbeManager.cpp">
+      <Filter>Rendering\EnvProbe</Filter>
+    </ClCompile>
+    <ClCompile Include="renderEnvProbe.cxx">
+      <Filter>Rendering\EnvProbe</Filter>
+    </ClCompile>
+    <ClCompile Include="renderEnvProbeLoading.cpp">
+      <Filter>Rendering\EnvProbe</Filter>
+    </ClCompile>
+    <ClCompile Include="renderEnvProbeRendering.cpp">
+      <Filter>Rendering\EnvProbe</Filter>
+    </ClCompile>
+    <ClCompile Include="renderProxyDimmer.cpp">
+      <Filter>Rendering\Scene\Proxies</Filter>
+    </ClCompile>
+    <ClCompile Include="shadowCascade.cpp">
+      <Filter>Rendering\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="renderProxyMorphedMesh.cpp">
+      <Filter>Rendering\Scene\Proxies</Filter>
+    </ClCompile>
+    <ClCompile Include="rendererNames.cpp" />
+    <ClCompile Include="renderGrassUpdateData.cpp">
+      <Filter>Rendering\Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="renderElementMap.cpp">
+      <Filter>Rendering\Scene\Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="renderDynamicDecal.cpp">
+      <Filter>Rendering\Scene\DynamicDecals</Filter>
+    </ClCompile>
+    <ClCompile Include="renderDynamicDecalTarget.cpp">
+      <Filter>Rendering\Scene\DynamicDecals</Filter>
+    </ClCompile>
+    <ClCompile Include="renderProxyStripe.cpp">
+      <Filter>Rendering\Scene\Proxies</Filter>
+    </ClCompile>
+    <ClCompile Include="renderDynamicDecalChunk.cpp">
+      <Filter>Rendering\Scene\DynamicDecals</Filter>
+    </ClCompile>
+    <ClCompile Include="renderDynamicDecalChunk_Mesh.cpp">
+      <Filter>Rendering\Scene\DynamicDecals</Filter>
+    </ClCompile>
+    <ClCompile Include="renderDynamicDecalChunk_Apex.cpp">
+      <Filter>Rendering\Scene\DynamicDecals</Filter>
+    </ClCompile>
+    <ClCompile Include="renderDynamicDecalBatcher.cpp">
+      <Filter>Rendering\Batchers</Filter>
+    </ClCompile>
+    <ClCompile Include="renderScaleformTempOrbis.cpp">
+      <Filter>Scaleform</Filter>
+    </ClCompile>
+    <ClCompile Include="renderViewportWindowRoot.cpp">
+      <Filter>Rendering\Viewport</Filter>
+    </ClCompile>
+    <ClCompile Include="rendererDebugWindows.cpp">
+      <Filter>Rendering\Debug\DebugWindows</Filter>
+    </ClCompile>
+    <ClCompile Include="debugWindowDynamicTextures.cpp">
+      <Filter>Rendering\Debug\DebugWindows</Filter>
+    </ClCompile>
+    <ClCompile Include="debugWindowRenderResources.cpp">
+      <Filter>Rendering\Debug\DebugWindows</Filter>
+    </ClCompile>
+    <ClCompile Include="speedTreeDensityDebugger.cpp">
+      <Filter>SpeedTree\RenderInterface</Filter>
+    </ClCompile>
+    <ClCompile Include="renderSkybox.cpp">
+      <Filter>Rendering\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="renderTextureBase.cpp">
+      <Filter>Rendering\Textures</Filter>
+    </ClCompile>
+    <ClCompile Include="renderSimWaterFFT.cpp">
+      <Filter>Rendering\Simulation</Filter>
+    </ClCompile>
+    <ClCompile Include="renderSimDynamicWater.cpp">
+      <Filter>Rendering\Simulation</Filter>
+    </ClCompile>
+    <ClCompile Include="renderSimDiffusion2D.cpp">
+      <Filter>Rendering\Simulation</Filter>
+    </ClCompile>
+    <ClCompile Include="renderScaleformCommands.cpp">
+      <Filter>Scaleform</Filter>
+    </ClCompile>
+    <ClCompile Include="renderScaleformCommands.cpp" />
+    <ClCompile Include="renderPostFxHBSSAO.cpp">
+      <Filter>Rendering\PostProcess</Filter>
+    </ClCompile>
+    <ClCompile Include="debugWindowGpuResourceUse.cpp">
+      <Filter>Rendering\Debug\DebugWindows</Filter>
+    </ClCompile>
+    <ClCompile Include="renderVisibilityQuery.cpp">
+      <Filter>Rendering\Visibility</Filter>
+    </ClCompile>
+    <ClCompile Include="renderVisibilityQueryManager.cpp">
+      <Filter>Rendering\Visibility</Filter>
+    </ClCompile>
+    <ClCompile Include="renderProxySwarm.cpp">
+      <Filter>Rendering\Swarms</Filter>
+    </ClCompile>
+    <ClCompile Include="renderSwarmAnimationManager.cpp">
+      <Filter>Rendering\Swarms</Filter>
+    </ClCompile>
+    <ClCompile Include="renderSwarmBatcher.cpp">
+      <Filter>Rendering\Swarms</Filter>
+    </ClCompile>
+    <ClCompile Include="renderSwarmData.cpp">
+      <Filter>Rendering\Swarms</Filter>
+    </ClCompile>
+    <ClCompile Include="renderLoadingScreen.cpp">
+      <Filter>Rendering\Loading Screen</Filter>
+    </ClCompile>
+    <ClCompile Include="renderLoadingScreenFence.cpp">
+      <Filter>Rendering\Loading Screen</Filter>
+    </ClCompile>
+    <ClCompile Include="debugWindowTextureStreaming.cpp">
+      <Filter>Rendering\Debug\DebugWindows</Filter>
+    </ClCompile>
+    <ClCompile Include="renderVideoPlayer.cpp">
+      <Filter>Rendering\Video</Filter>
+    </ClCompile>
+    <ClCompile Include="renderLoadingOverlay.cpp">
+      <Filter>Rendering\Loading Screen</Filter>
+    </ClCompile>
+    <ClCompile Include="renderLoadingBlur.cpp">
+      <Filter>Rendering\Loading Screen</Filter>
+    </ClCompile>
+    <ClCompile Include="renderInitialFrame.cpp">
+      <Filter>Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="renderTextureStreamingNonCooked.cpp">
+      <Filter>Rendering\Textures</Filter>
+    </ClCompile>
+    <ClCompile Include="renderTextureStreamingCooked.cpp">
+      <Filter>Rendering\Textures</Filter>
+    </ClCompile>
+    <ClCompile Include="renderGameplayRenderTarget.cpp" />
+    <ClCompile Include="gameplayFxCatView.cpp">
+      <Filter>Rendering\Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="gameplayFxSurface.cpp">
+      <Filter>Rendering\Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="gameplayFxDrunk.cpp">
+      <Filter>Rendering\Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="gameplayFxSepia.cpp">
+      <Filter>Rendering\Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="renderTextureStreamRequest.cpp">
+      <Filter>Rendering\Textures</Filter>
+    </ClCompile>
+    <ClCompile Include="gameplayFxOutline.cpp">
+      <Filter>Rendering\Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="gameplayFxFocusMode.cpp">
+      <Filter>Rendering\Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="renderPostFxMicrosoftSSAO.cpp">
+      <Filter>Rendering\PostProcess</Filter>
+    </ClCompile>
+    <ClCompile Include="renderGameplayRenderTarget.cpp">
+      <Filter>Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="renderMeshStreaming.cpp">
+      <Filter>Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="renderFramePrefetch.cpp">
+      <Filter>Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="renderVisibilityExclusionMap.cpp">
+      <Filter>Rendering\Visibility</Filter>
+    </ClCompile>
+    <ClCompile Include="renderDissolve.cpp">
+      <Filter>Rendering\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="renderMorphedMesh.cpp">
+      <Filter>Rendering\Meshes</Filter>
+    </ClCompile>
+    <ClCompile Include="renderDecalMesh.cpp">
+      <Filter>Rendering\Scene\DynamicDecals</Filter>
+    </ClCompile>
+    <ClCompile Include="renderDefragHelper.cpp">
+      <Filter>Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="renderProxyFadeable.cpp" />
+    <ClCompile Include="renderProxyDissolvable.cpp" />
+    <ClCompile Include="renderCollectorTickList.cpp" />
+    <ClCompile Include="renderFrameTracker.cpp" />
+    <ClCompile Include="renderFurMesh.cpp">
+      <Filter>Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="renderNvOptimus.cpp" />
+    <ClCompile Include="renderDestructionMesh.cxx">
+      <Filter>Rendering\Meshes</Filter>
+    </ClCompile>
+    <ClCompile Include="renderProxyDestructionMesh.cpp">
+      <Filter>Rendering\Scene\Proxies</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="renderCounter.h">
+      <Filter>Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="renderDrawer.h">
+      <Filter>Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="renderInterface.h">
+      <Filter>Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="renderStateManager.h">
+      <Filter>Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="renderThread.h">
+      <Filter>Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="renderPostFx.h">
+      <Filter>Rendering\PostProcess</Filter>
+    </ClInclude>
+    <ClInclude Include="renderPostFXBlur.h">
+      <Filter>Rendering\PostProcess</Filter>
+    </ClInclude>
+    <ClInclude Include="renderPostFxBlurGauss.h">
+      <Filter>Rendering\PostProcess</Filter>
+    </ClInclude>
+    <ClInclude Include="renderPostFxCopy.h">
+      <Filter>Rendering\PostProcess</Filter>
+    </ClInclude>
+    <ClInclude Include="renderPostFxDepthOfField.h">
+      <Filter>Rendering\PostProcess</Filter>
+    </ClInclude>
+    <ClInclude Include="renderPostFxFlare.h">
+      <Filter>Rendering\PostProcess</Filter>
+    </ClInclude>
+    <ClInclude Include="renderPostFxPresent.h">
+      <Filter>Rendering\PostProcess</Filter>
+    </ClInclude>
+    <ClInclude Include="renderPostFxToneMapping.h">
+      <Filter>Rendering\PostProcess</Filter>
+    </ClInclude>
+    <ClInclude Include="renderPostProcess.h">
+      <Filter>Rendering\PostProcess</Filter>
+    </ClInclude>
+    <ClInclude Include="renderBrushFaceBatcher.h">
+      <Filter>Rendering\Batchers</Filter>
+    </ClInclude>
+    <ClInclude Include="renderFlaresBatcher.h">
+      <Filter>Rendering\Batchers</Filter>
+    </ClInclude>
+    <ClInclude Include="renderMeshBatcher.h">
+      <Filter>Rendering\Batchers</Filter>
+    </ClInclude>
+    <ClInclude Include="renderParticleBatcher.h">
+      <Filter>Rendering\Batchers</Filter>
+    </ClInclude>
+    <ClInclude Include="renderTerrainLogicMap.h">
+      <Filter>Rendering\Batchers</Filter>
+    </ClInclude>
+    <ClInclude Include="renderDistantLightBatcher.h">
+      <Filter>Rendering\Batchers</Filter>
+    </ClInclude>
+    <ClInclude Include="renderCollector.h">
+      <Filter>Rendering\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="renderOcclusion.h">
+      <Filter>Rendering\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="renderScene.h">
+      <Filter>Rendering\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="renderSceneBatchers.h">
+      <Filter>Rendering\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="renderSequenceGrabber.h">
+      <Filter>Rendering\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="renderElement.h">
+      <Filter>Rendering\Scene\Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="renderElementBrushFace.h">
+      <Filter>Rendering\Scene\Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="renderElementMeshChunk.h">
+      <Filter>Rendering\Scene\Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="renderElementParticleEmitter.h">
+      <Filter>Rendering\Scene\Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="renderProxy.h">
+      <Filter>Rendering\Scene\Proxies</Filter>
+    </ClInclude>
+    <ClInclude Include="renderProxyBrushFace.h">
+      <Filter>Rendering\Scene\Proxies</Filter>
+    </ClInclude>
+    <ClInclude Include="renderProxyDrawable.h">
+      <Filter>Rendering\Scene\Proxies</Filter>
+    </ClInclude>
+    <ClInclude Include="renderProxyFlare.h">
+      <Filter>Rendering\Scene\Proxies</Filter>
+    </ClInclude>
+    <ClInclude Include="renderProxyMesh.h">
+      <Filter>Rendering\Scene\Proxies</Filter>
+    </ClInclude>
+    <ClInclude Include="renderProxyParticles.h">
+      <Filter>Rendering\Scene\Proxies</Filter>
+    </ClInclude>
+    <ClInclude Include="aviutils.h">
+      <Filter>Rendering\Movies\AVI</Filter>
+    </ClInclude>
+    <ClInclude Include="renderDebugMacros.h">
+      <Filter>Rendering\Debug</Filter>
+    </ClInclude>
+    <ClInclude Include="gameplayFx.h">
+      <Filter>Rendering\Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="renderRenderSurfaces.h">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="renderShaderPair.h">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="build.h" />
+    <ClInclude Include="renderPostFxHBSSAO.h">
+      <Filter>Rendering\PostProcess</Filter>
+    </ClInclude>
+    <ClInclude Include="renderPostFxMotionBlur.h">
+      <Filter>Rendering\PostProcess</Filter>
+    </ClInclude>
+    <ClInclude Include="renderParticleData.h">
+      <Filter>Rendering\ParticleSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="subframeInterpolation.h">
+      <Filter>Rendering\ParticleSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="renderParticleEmitter.h">
+      <Filter>Rendering\ParticleSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="renderParticleBuffer.h">
+      <Filter>Rendering\ParticleSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="particleVertexBuffer.h">
+      <Filter>Rendering\ParticleSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="particleLayouts.h">
+      <Filter>Rendering\ParticleSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="renderLodBudgetSystem.h">
+      <Filter>Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="renderProxySpeedTree.h">
+      <Filter>Rendering\Scene\Proxies</Filter>
+    </ClInclude>
+    <ClInclude Include="renderSpeedTreeResource.h">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="renderProxyTerrain.h">
+      <Filter>Rendering\Scene\Proxies</Filter>
+    </ClInclude>
+    <ClInclude Include="renderTerrainUpdateData.h">
+      <Filter>Rendering\Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="renderProxyLight.h">
+      <Filter>Rendering\Scene\Proxies\Lights</Filter>
+    </ClInclude>
+    <ClInclude Include="renderProxyPointLight.h">
+      <Filter>Rendering\Scene\Proxies\Lights</Filter>
+    </ClInclude>
+    <ClInclude Include="renderProxySpotLight.h">
+      <Filter>Rendering\Scene\Proxies\Lights</Filter>
+    </ClInclude>
+    <ClInclude Include="apexRenderInterface.h">
+      <Filter>ApexRenderInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="renderProxyWater.h">
+      <Filter>Rendering\Scene\Proxies</Filter>
+    </ClInclude>
+    <ClInclude Include="renderProxyApex.h">
+      <Filter>Rendering\Scene\Proxies</Filter>
+    </ClInclude>
+    <ClInclude Include="renderProxyWater.h">
+      <Filter>Rendering\Scene\Proxies</Filter>
+    </ClInclude>
+    <ClInclude Include="renderProxyDecal.h">
+      <Filter>Rendering\Scene\Proxies</Filter>
+    </ClInclude>
+    <ClInclude Include="renderScaleformHal.h">
+      <Filter>Scaleform</Filter>
+    </ClInclude>
+    <ClInclude Include="renderScaleformMeshCache.h">
+      <Filter>Scaleform</Filter>
+    </ClInclude>
+    <ClInclude Include="renderScaleformShader.h">
+      <Filter>Scaleform</Filter>
+    </ClInclude>
+    <ClInclude Include="renderScaleformTempD3D11.h">
+      <Filter>Scaleform</Filter>
+    </ClInclude>
+    <ClInclude Include="renderScaleformTexture.h">
+      <Filter>Scaleform</Filter>
+    </ClInclude>
+    <ClInclude Include="guiRenderSystemScaleform.h">
+      <Filter>Scaleform</Filter>
+    </ClInclude>
+    <ClInclude Include="renderShadowManager.h">
+      <Filter>Rendering\Shadows</Filter>
+    </ClInclude>
+    <ClInclude Include="renderShadowRegions.h">
+      <Filter>Rendering\Shadows</Filter>
+    </ClInclude>
+    <ClInclude Include="renderShadowDynamicAllocator.h">
+      <Filter>Rendering\Shadows\TextureAllocators</Filter>
+    </ClInclude>
+    <ClInclude Include="renderShadowStaticAllocator.h">
+      <Filter>Rendering\Shadows\TextureAllocators</Filter>
+    </ClInclude>
+    <ClInclude Include="renderTextureAllocator.h">
+      <Filter>Rendering\Shadows\TextureAllocators</Filter>
+    </ClInclude>
+    <ClInclude Include="renderTerrainShadows.h">
+      <Filter>Rendering\Shadows\Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="renderEntityGroup.h">
+      <Filter>Rendering\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="renderScaleformIncludes.h">
+      <Filter>Scaleform</Filter>
+    </ClInclude>
+    <ClInclude Include="renderPostFxDebug.h">
+      <Filter>Rendering\PostProcess</Filter>
+    </ClInclude>
+    <ClInclude Include="texture_inl.h">
+      <Filter>SpeedTree\RenderInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="geometryBuffer_inl.h">
+      <Filter>SpeedTree\RenderInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="instancingManager_inl.h">
+      <Filter>SpeedTree\RenderInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="shaders_inl.h">
+      <Filter>SpeedTree\RenderInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="speedTreeRenderInterface.h">
+      <Filter>SpeedTree\RenderInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="renderElementApex.h">
+      <Filter>Rendering\Scene\Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="renderApexBatcher.h">
+      <Filter>Rendering\Batchers</Filter>
+    </ClInclude>
+    <ClInclude Include="renderResourceIterator.h">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="renderProxyFur.h">
+      <Filter>Rendering\Scene\Proxies</Filter>
+    </ClInclude>
+    <ClInclude Include="renderBinkVideo.h">
+      <Filter>Rendering\Movies</Filter>
+    </ClInclude>
+    <ClInclude Include="renderVideo.h">
+      <Filter>Rendering\Movies</Filter>
+    </ClInclude>
+    <ClInclude Include="renderWMVVideo.h">
+      <Filter>Rendering\Movies</Filter>
+    </ClInclude>
+    <ClInclude Include="renderSkinningData.h">
+      <Filter>Rendering\Skinning</Filter>
+    </ClInclude>
+    <ClInclude Include="renderDynamicResource.h">
+      <Filter>Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="renderStaticResource.h">
+      <Filter>Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="renderHelpers.h">
+      <Filter>Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="renderFence.h">
+      <Filter>Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="renderTextureArray.h">
+      <Filter>Rendering\Textures</Filter>
+    </ClInclude>
+    <ClInclude Include="renderTexture.h">
+      <Filter>Rendering\Textures</Filter>
+    </ClInclude>
+    <ClInclude Include="renderCube.h">
+      <Filter>Rendering\Textures</Filter>
+    </ClInclude>
+    <ClInclude Include="renderSkinManager.h">
+      <Filter>Rendering\Skinning</Filter>
+    </ClInclude>
+    <ClInclude Include="renderViewportWindow.h">
+      <Filter>Rendering\Viewport</Filter>
+    </ClInclude>
+    <ClInclude Include="renderViewport.h">
+      <Filter>Rendering\Viewport</Filter>
+    </ClInclude>
+    <ClInclude Include="renderQuery.h">
+      <Filter>Rendering\Queries</Filter>
+    </ClInclude>
+    <ClInclude Include="renderShader.h">
+      <Filter>Rendering\Materials</Filter>
+    </ClInclude>
+    <ClInclude Include="renderMaterial.h">
+      <Filter>Rendering\Materials</Filter>
+    </ClInclude>
+    <ClInclude Include="renderMesh.h">
+      <Filter>Rendering\Meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="renderDynamicVertexBuffer.h">
+      <Filter>Rendering\Meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="renderDynamicIndexBuffer.h">
+      <Filter>Rendering\Meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="renderDebugMesh.h">
+      <Filter>Rendering\Meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="renderEnvProbeManager.h">
+      <Filter>Rendering\EnvProbe</Filter>
+    </ClInclude>
+    <ClInclude Include="renderEnvProbe.h">
+      <Filter>Rendering\EnvProbe</Filter>
+    </ClInclude>
+    <ClInclude Include="renderProxyDimmer.h">
+      <Filter>Rendering\Scene\Proxies</Filter>
+    </ClInclude>
+    <ClInclude Include="renderEnvProbeDynamicData.h">
+      <Filter>Rendering\EnvProbe</Filter>
+    </ClInclude>
+    <ClInclude Include="renderEnvProbeCollector.h">
+      <Filter>Rendering\EnvProbe</Filter>
+    </ClInclude>
+    <ClInclude Include="shadowCascade.h">
+      <Filter>Rendering\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="renderProxyMorphedMesh.h">
+      <Filter>Rendering\Scene\Proxies</Filter>
+    </ClInclude>
+    <ClInclude Include="rendererNamesRegistry.h" />
+    <ClInclude Include="renderGrassUpdateData.h">
+      <Filter>Rendering\Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="renderPostFxUnderwater.h">
+      <Filter>Rendering\PostProcess</Filter>
+    </ClInclude>
+    <ClInclude Include="renderElementMap.h">
+      <Filter>Rendering\Scene\Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="renderPostFxSurfaceFlow.h">
+      <Filter>Rendering\PostProcess</Filter>
+    </ClInclude>
+    <ClInclude Include="renderDynamicDecal.h">
+      <Filter>Rendering\Scene\DynamicDecals</Filter>
+    </ClInclude>
+    <ClInclude Include="renderDynamicDecalTarget.h">
+      <Filter>Rendering\Scene\DynamicDecals</Filter>
+    </ClInclude>
+    <ClInclude Include="renderDynamicDecalChunk.h">
+      <Filter>Rendering\Scene\DynamicDecals</Filter>
+    </ClInclude>
+    <ClInclude Include="renderProxyStripe.h">
+      <Filter>Rendering\Scene\Proxies</Filter>
+    </ClInclude>
+    <ClInclude Include="renderDynamicDecalChunk_Mesh.h">
+      <Filter>Rendering\Scene\DynamicDecals</Filter>
+    </ClInclude>
+    <ClInclude Include="renderDynamicDecalChunk_Apex.h">
+      <Filter>Rendering\Scene\DynamicDecals</Filter>
+    </ClInclude>
+    <ClInclude Include="renderDynamicDecalBatcher.h">
+      <Filter>Rendering\Batchers</Filter>
+    </ClInclude>
+    <ClInclude Include="renderViewportWindowRoot.h">
+      <Filter>Rendering\Viewport</Filter>
+    </ClInclude>
+    <ClInclude Include="debugWindowDynamicTextures.h">
+      <Filter>Rendering\Debug\DebugWindows</Filter>
+    </ClInclude>
+    <ClInclude Include="debugWindowRenderResources.h">
+      <Filter>Rendering\Debug\DebugWindows</Filter>
+    </ClInclude>
+    <ClInclude Include="renderScaleformTempOrbis.h">
+      <Filter>Scaleform</Filter>
+    </ClInclude>
+    <ClInclude Include="renderScaleformTemp.h">
+      <Filter>Scaleform</Filter>
+    </ClInclude>
+    <ClInclude Include="speedTreeDensityDebugger.h">
+      <Filter>SpeedTree\RenderInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="speedTreeDensityDebugger.inl">
+      <Filter>SpeedTree\RenderInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="renderSkybox.h">
+      <Filter>Rendering\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="renderTextureBase.h">
+      <Filter>Rendering\Textures</Filter>
+    </ClInclude>
+    <ClInclude Include="renderSimWaterFFT.h">
+      <Filter>Rendering\Simulation</Filter>
+    </ClInclude>
+    <ClInclude Include="renderSimDynamicWater.h">
+      <Filter>Rendering\Simulation</Filter>
+    </ClInclude>
+    <ClInclude Include="renderPostFxBokehDof.h">
+      <Filter>Rendering\PostProcess</Filter>
+    </ClInclude>
+    <ClInclude Include="renderMeshBufferWriter.h">
+      <Filter>Rendering\Meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="renderSimDiffusion2D.h">
+      <Filter>Rendering\Simulation</Filter>
+    </ClInclude>
+    <ClInclude Include="renderTextureStreaming.h">
+      <Filter>Rendering\Textures</Filter>
+    </ClInclude>
+    <ClInclude Include="speedTreeDefines.h">
+      <Filter>SpeedTree</Filter>
+    </ClInclude>
+    <ClInclude Include="debugWindowGpuResourceUse.h">
+      <Filter>Rendering\Debug\DebugWindows</Filter>
+    </ClInclude>
+    <ClInclude Include="renderVisibilityQuery.h">
+      <Filter>Rendering\Visibility</Filter>
+    </ClInclude>
+    <ClInclude Include="renderVisibilityQueryManager.h">
+      <Filter>Rendering\Visibility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\speedtree\Include\RenderInterface\ForestRI.h">
+      <Filter>SpeedTree\ExternalRenderInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\speedtree\Include\RenderInterface\ForestRI_inl.h">
+      <Filter>SpeedTree\ExternalRenderInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\speedtree\Include\RenderInterface\GeometryBufferRI_inl.h">
+      <Filter>SpeedTree\ExternalRenderInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\speedtree\Include\RenderInterface\GraphicsApiAbstractionRI.h">
+      <Filter>SpeedTree\ExternalRenderInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\speedtree\Include\RenderInterface\InstancingManagerRI_inl.h">
+      <Filter>SpeedTree\ExternalRenderInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\speedtree\Include\RenderInterface\MiscRI_inl.h">
+      <Filter>SpeedTree\ExternalRenderInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\speedtree\Include\RenderInterface\RenderStateRI_inl.h">
+      <Filter>SpeedTree\ExternalRenderInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\speedtree\Include\RenderInterface\RenderStats_inl.h">
+      <Filter>SpeedTree\ExternalRenderInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\speedtree\Include\RenderInterface\RenderTargetRI_inl.h">
+      <Filter>SpeedTree\ExternalRenderInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\speedtree\Include\RenderInterface\ResourceCache_inl.h">
+      <Filter>SpeedTree\ExternalRenderInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\speedtree\Include\RenderInterface\ShaderConstantBuffers.h">
+      <Filter>SpeedTree\ExternalRenderInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\speedtree\Include\RenderInterface\ShaderConstants.h">
+      <Filter>SpeedTree\ExternalRenderInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\speedtree\Include\RenderInterface\ShaderRI_inl.h">
+      <Filter>SpeedTree\ExternalRenderInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\speedtree\Include\RenderInterface\SkyRI.h">
+      <Filter>SpeedTree\ExternalRenderInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\speedtree\Include\RenderInterface\SkyRI_inl.h">
+      <Filter>SpeedTree\ExternalRenderInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\speedtree\Include\RenderInterface\StateBlockRI_inl.h">
+      <Filter>SpeedTree\ExternalRenderInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\speedtree\Include\RenderInterface\TemplateTypedefs.h">
+      <Filter>SpeedTree\ExternalRenderInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\speedtree\Include\RenderInterface\TerrainRI.h">
+      <Filter>SpeedTree\ExternalRenderInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\speedtree\Include\RenderInterface\TerrainRI_inl.h">
+      <Filter>SpeedTree\ExternalRenderInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\speedtree\Include\RenderInterface\TextureRI_inl.h">
+      <Filter>SpeedTree\ExternalRenderInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\speedtree\Include\RenderInterface\TreeRI_inl.h">
+      <Filter>SpeedTree\ExternalRenderInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\speedtree\Include\RenderInterface\VisibleInstancesRI_inl.h">
+      <Filter>SpeedTree\ExternalRenderInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="renderProxySwarm.h">
+      <Filter>Rendering\Swarms</Filter>
+    </ClInclude>
+    <ClInclude Include="renderSwarmAnimationManager.h">
+      <Filter>Rendering\Swarms</Filter>
+    </ClInclude>
+    <ClInclude Include="renderSwarmBatcher.h">
+      <Filter>Rendering\Swarms</Filter>
+    </ClInclude>
+    <ClInclude Include="renderSwarmData.h">
+      <Filter>Rendering\Swarms</Filter>
+    </ClInclude>
+    <ClInclude Include="speedTreeLinkage.h" />
+    <ClInclude Include="renderLoadingScreen.h">
+      <Filter>Rendering\Loading Screen</Filter>
+    </ClInclude>
+    <ClInclude Include="renderLoadingScreenFence.h">
+      <Filter>Rendering\Loading Screen</Filter>
+    </ClInclude>
+    <ClInclude Include="renderVideoPlayer.h">
+      <Filter>Rendering\Video</Filter>
+    </ClInclude>
+    <ClInclude Include="debugWindowTextureStreaming.h">
+      <Filter>Rendering\Debug\DebugWindows</Filter>
+    </ClInclude>
+    <ClInclude Include="renderLoadingOverlay.h">
+      <Filter>Rendering\Loading Screen</Filter>
+    </ClInclude>
+    <ClInclude Include="renderLoadingBlur.h">
+      <Filter>Rendering\Loading Screen</Filter>
+    </ClInclude>
+    <ClInclude Include="renderTextureStreamingNonCooked.h">
+      <Filter>Rendering\Textures</Filter>
+    </ClInclude>
+    <ClInclude Include="renderTextureStreamingCooked.h">
+      <Filter>Rendering\Textures</Filter>
+    </ClInclude>
+    <ClInclude Include="renderGameplayRenderTarget.h" />
+    <ClInclude Include="gameplayFXCatView.h">
+      <Filter>Rendering\Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="renderTextureStreamRequest.h">
+      <Filter>Rendering\Textures</Filter>
+    </ClInclude>
+    <ClInclude Include="gameplayFxSurface.h">
+      <Filter>Rendering\Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="gameplayFxFocusMode.h">
+      <Filter>Rendering\Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="gameplayFxDrunk.h">
+      <Filter>Rendering\Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="gameplayFxSepia.h">
+      <Filter>Rendering\Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="renderPostFxMicrosoftSSAO.h">
+      <Filter>Rendering\PostProcess</Filter>
+    </ClInclude>
+    <ClInclude Include="gameplayFxOutline.h">
+      <Filter>Rendering\Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="renderGameplayRenderTarget.h">
+      <Filter>Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="meshDrawingStats.h">
+      <Filter>Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="renderPostFxStateGrabber.h">
+      <Filter>Rendering\PostProcess</Filter>
+    </ClInclude>
+    <ClInclude Include="renderMeshStreaming.h">
+      <Filter>Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="renderFramePrefetch.h">
+      <Filter>Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="renderVisibilityExclusionMap.h">
+      <Filter>Rendering\Visibility</Filter>
+    </ClInclude>
+    <ClInclude Include="renderDissolve.h">
+      <Filter>Rendering\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="renderMorphedMesh.h">
+      <Filter>Rendering\Meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="renderDecalMesh.h">
+      <Filter>Rendering\Scene\DynamicDecals</Filter>
+    </ClInclude>
+    <ClInclude Include="renderDefragHelper.h">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="renderProxyFadeable.h" />
+    <ClInclude Include="renderProxyDissolvable.h" />
+    <ClInclude Include="renderCollectorTickList.h" />
+    <ClInclude Include="renderFrameTracker.h" />
+    <ClInclude Include="renderFurMesh.h">
+      <Filter>Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="renderDestructionMesh.h">
+      <Filter>Rendering\Meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="renderProxyDestructionMesh.h">
+      <Filter>Rendering\Scene\Proxies</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\..\bin\shaders\include\adaptiveTessellation.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\blitAccumRefraction.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\cameraInteriorFactor.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\debugAlpha.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\debugColor.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\debugHitProxy.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\debugSingleColor.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\debugTexture.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\debugTexturePreview.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\deferredLight.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\dualParaboloidGen.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\esmFilterGauss.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\globalOcean.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\histogram.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\lights_compute.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\lights_cull.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\occlusionTest.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\postfx_bloomDownscale.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\postfx_bloomGaussCombine.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\postfx_bloomShafts.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\postfx_blur.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\postfx_blurGauss.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\postfx_blurGaussNice.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\postfx_blurGaussStrong.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\postfx_clear.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\postfx_clearDepth.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\include\postfx_common.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\postfx_copy.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\postfx_copyScale.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\postfx_copyWithBalanceMap.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\postfx_debug.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\postfx_deprojectDepth.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\postfx_dofBlur.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\postfx_dofBlurCS.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\postfx_dofMergeCS.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\postfx_finalize.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\postfx_flareApply.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\postfx_flareFilter.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\postfx_flareGrab.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\postfx_motionBlur.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\postfx_paintEffect.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\postfx_present.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\postfx_temporalAA.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\postfx_toneMappingAdapt.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\postfx_toneMappingApply.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\rlr_apply.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\rlr_calculate.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\rlr_downsampleSource.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\textNormal.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\textOutline.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\interior_combine.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\interior_compute.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\msaaResolveColor.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\msaaResolveDepth.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\msaaMarkStencil.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\globalShadow.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\msaaResolveStencil.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\include\common.fx">
+      <Filter>Rendering\Shaders\Common</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\include\commonPS.fx">
+      <Filter>Rendering\Shaders\Common</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\include\commonCS.fx">
+      <Filter>Rendering\Shaders\Common</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\include\commonVS.fx">
+      <Filter>Rendering\Shaders\Common</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\include\globalConstants.fx">
+      <Filter>Rendering\Shaders\Common</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\include\globalConstantsPS.fx">
+      <Filter>Rendering\Shaders\Common</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\include\globalConstantsVS.fx">
+      <Filter>Rendering\Shaders\Common</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\include\include_utilities.fx">
+      <Filter>Rendering\Shaders\Common</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\include\include_constants.fx">
+      <Filter>Rendering\Shaders\Common</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\include\hiResShadows.fx">
+      <Filter>Rendering\Shaders\Common</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\include\include_globalFog.fx">
+      <Filter>Rendering\Shaders\Common</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\include\include_localReflection.fx">
+      <Filter>Rendering\Shaders\Common</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\include\include_msaa.fx">
+      <Filter>Rendering\Shaders\Common</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\include\include_pcf.fx">
+      <Filter>Rendering\Shaders\Common</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\include\include_pigment.fx">
+      <Filter>Rendering\Shaders\Common</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\include\include_sharedConsts.fx">
+      <Filter>Rendering\Shaders\Common</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\include\inc_bestfitnormals.fx">
+      <Filter>Rendering\Shaders\Common</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\include\inc_nvidiaAA.fx">
+      <Filter>Rendering\Shaders\External</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\hair.fx">
+      <Filter>Rendering\Shaders\External</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\hairGbuffer.fx">
+      <Filter>Rendering\Shaders\External</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\hairShadow.fx">
+      <Filter>Rendering\Shaders\External</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\gameplayPostFXSepia.fx">
+      <Filter>Rendering\Shaders\Gameplay</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\gameplayPostFXSurface.fx">
+      <Filter>Rendering\Shaders\Gameplay</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\gameplayCharacterOutline.fx">
+      <Filter>Rendering\Shaders\Gameplay</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\gameplayPostFXFocus.fx">
+      <Filter>Rendering\Shaders\Gameplay</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\include\vertexFactory.fx">
+      <Filter>Rendering\Shaders\VertexFactory</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\include\vertexFactoryApexSkinned.fx">
+      <Filter>Rendering\Shaders\VertexFactory</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\include\vertexFactoryApexStatic.fx">
+      <Filter>Rendering\Shaders\VertexFactory</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\include\vertexFactoryMeshSkinned.fx">
+      <Filter>Rendering\Shaders\VertexFactory</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\include\vertexFactoryMeshStatic.fx">
+      <Filter>Rendering\Shaders\VertexFactory</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\include\vertexFactoryParticleBeam.fx">
+      <Filter>Rendering\Shaders\VertexFactory</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\include\vertexFactoryParticleBillboards.fx">
+      <Filter>Rendering\Shaders\VertexFactory</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\include\vertexFactoryParticleBillboardsRain.fx">
+      <Filter>Rendering\Shaders\VertexFactory</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\include\vertexFactoryParticleEmitterOrientation.fx">
+      <Filter>Rendering\Shaders\VertexFactory</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\include\vertexFactoryParticleFacingTrail.fx">
+      <Filter>Rendering\Shaders\VertexFactory</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\include\vertexFactoryParticleMotionBlur.fx">
+      <Filter>Rendering\Shaders\VertexFactory</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\include\vertexFactoryParticleScreen.fx">
+      <Filter>Rendering\Shaders\VertexFactory</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\include\vertexFactoryParticleSphereAligned.fx">
+      <Filter>Rendering\Shaders\VertexFactory</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\include\vertexFactoryParticleTrail.fx">
+      <Filter>Rendering\Shaders\VertexFactory</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\include\vertexFactoryParticleVerticalFixed.fx">
+      <Filter>Rendering\Shaders\VertexFactory</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\instancing.fx">
+      <Filter>Rendering\Shaders\VertexFactory\Includes</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\instancingVertexDecl.fx">
+      <Filter>Rendering\Shaders\VertexFactory\Includes</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\include\terrainMaterialDX11.fx">
+      <Filter>Rendering\Shaders\Terrain</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\terrainPigmentGenerate.fx">
+      <Filter>Rendering\Shaders\Terrain</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\terrainShadowsCalc.fx">
+      <Filter>Rendering\Shaders\Terrain</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\terrainShadowsPatch.fx">
+      <Filter>Rendering\Shaders\Terrain</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\include\terrainUtilities.fx">
+      <Filter>Rendering\Shaders\Terrain</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\tesselatedVertexFactoryTerrain.fx">
+      <Filter>Rendering\Shaders\Terrain</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\vertexFactoryTerrainSkirt.fx">
+      <Filter>Rendering\Shaders\Terrain</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\skyColor.fx">
+      <Filter>Rendering\Shaders\External</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\debugCubeTexture.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\include\terrainConstants.fx">
+      <Filter>Rendering\Shaders\Terrain</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\tesselationBlocksErrorsGenerate.fx">
+      <Filter>Rendering\Shaders\Terrain</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\postfx_copyDepth.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\envProbeShadowmask.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\envProbeUnwrap.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\terrainNormalsCalc.fx">
+      <Filter>Rendering\Shaders\Terrain</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\envProbeFilterAmbientMerge.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\envProbeFilterBlur.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\envProbeFilterCopy.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\envProbeFilterDownscale.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\envProbeFilterFillCubeFace.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\envProbeFilterMerge.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\envProbeFilterReflectionMerge.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\envProbeFilterUnpack.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\debugEnvProbe.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\include\include_envProbe.fx">
+      <Filter>Rendering\Shaders\Common</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\fft.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\dynamicWater.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\morphedMeshGen.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\include\include_dimmers.fx">
+      <Filter>Rendering\Shaders\Common</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\include\globalOceanConstants.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\postfx_underwater.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\postfx_surfaceFlow.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\postfx_sharpen.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\gbuffPostProc.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\simpleClear.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\simpleCopy.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\globalOceanIntersectionRtt.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\dynamicDecalGen.fx">
+      <Filter>Rendering\Shaders\Decal</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\dynamicDecal.fx">
+      <Filter>Rendering\Shaders\Decal</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\screenSpaceDecal.fx">
+      <Filter>Rendering\Shaders\Decal</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\postfx_copyDecode.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\stripe.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\summedAreaTableFetch.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\summedAreaTableGen.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\postfx_bokehdof.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\postfx_bokehdof_2pass.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\postfx_circleOfConfusion.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\grassMapGenerate.fx">
+      <Filter>Rendering\Shaders\Terrain</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\diffusion2D.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\distantLight.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\globalFog.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\postfx_bokehdof_colorDownsample.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\postfx_circleOfConfusionBlur.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\simpleCopyAlpha.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\postfx_loadingBlur.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\simpleCopyAlpha.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\gameplayPostFXCatViewObjects.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\simpleCopyAlpha.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\aoblurandupsamplecs.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\aolinearizedepthcs.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\aopreparedepthbuffers1cs.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\gameplayPostFXDrunk.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\postfx_loadingBlur.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\aopreparedepthbuffers2cs.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\aorendercs.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\include\globalConstantBuffers.fx">
+      <Filter>Rendering\Shaders\Common</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\simpleCopyKeyMasking.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\gameplayPostFXCatView.fx" />
+    <None Include="screenshotWatermark.inl">
+      <Filter>Resources</Filter>
+    </None>
+    <None Include="ngPlusWatermark.inl">
+      <Filter>Resources</Filter>
+    </None>
+    <None Include="..\..\..\..\bin\shaders\include\vertexFactoryDestructionSkinned.fx">
+      <Filter>Rendering\Shaders\VertexFactory</Filter>
+	</None>
+    <None Include="..\..\..\..\bin\shaders\morphedMeshGenCS.fx">
+      <Filter>Rendering\Shaders</Filter>
+    </None>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,27 @@
+/**
+ * Copyright © 2013 CD Projekt Red. All Rights Reserved.
+ */
+#pragma once
+
+#ifdef USE_SCALEFORM
+
+#include "flashValueStorage.h"
+
+//////////////////////////////////////////////////////////////////////////
+// CFlashMovieScaleform
+//////////////////////////////////////////////////////////////////////////
+class CFlashMovieScaleform;
+
+//////////////////////////////////////////////////////////////////////////
+// CFlashValueStorageScaleform
+//////////////////////////////////////////////////////////////////////////
+class CFlashValueStorageScaleform : public CFlashValueStorage
+{
+public:
+	CFlashValueStorageScaleform( CFlashMovieScaleform* flashMovie );
+	~CFlashValueStorageScaleform();
+
+private:
+};
+
+#endif // USE_SCALEFORM

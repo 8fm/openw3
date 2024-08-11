@@ -1,0 +1,508 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="HLSL">
+      <UniqueIdentifier>{d82a8429-db0a-47dd-82b5-c298524a3054}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Blocks">
+      <UniqueIdentifier>{661a972b-e45a-425f-b085-8c81d95d803b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Blocks\Streams">
+      <UniqueIdentifier>{940b8530-ee43-494e-9e81-3a5d614189a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Blocks\Lighting">
+      <UniqueIdentifier>{7dc351f4-41bd-4bc6-a256-d355eb2e9dd5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Blocks\Math">
+      <UniqueIdentifier>{5d99b094-8b52-4ccd-b143-da9132dc0193}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Blocks\Samplers">
+      <UniqueIdentifier>{cd7fc45a-0074-4398-9229-365ca437b414}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Blocks\Misc">
+      <UniqueIdentifier>{be3b96d6-0f39-4ca6-86c1-8ddedba8f72d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Blocks\Special">
+      <UniqueIdentifier>{cf6d82bc-ed6c-4d69-a6bd-b2fb8687a66d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="materialCompiler.cpp">
+      <Filter>HLSL</Filter>
+    </ClCompile>
+    <ClCompile Include="materialPixelShaderCompiler.cpp">
+      <Filter>HLSL</Filter>
+    </ClCompile>
+    <ClCompile Include="materialShaderCompiler.cpp">
+      <Filter>HLSL</Filter>
+    </ClCompile>
+    <ClCompile Include="materialVertexShaderCompiler.cpp">
+      <Filter>HLSL</Filter>
+    </ClCompile>
+    <ClCompile Include="legacyBlocks.cpp">
+      <Filter>Blocks</Filter>
+    </ClCompile>
+    <ClCompile Include="mbStreamingBlendRatio.cpp">
+      <Filter>Blocks\Streams</Filter>
+    </ClCompile>
+    <ClCompile Include="mbTexCoords.cpp">
+      <Filter>Blocks\Streams</Filter>
+    </ClCompile>
+    <ClCompile Include="mbVertexColor.cpp">
+      <Filter>Blocks\Streams</Filter>
+    </ClCompile>
+    <ClCompile Include="mbVertexFrame.cpp">
+      <Filter>Blocks\Streams</Filter>
+    </ClCompile>
+    <ClCompile Include="mbVertexMotionBlend.cpp">
+      <Filter>Blocks\Streams</Filter>
+    </ClCompile>
+    <ClCompile Include="mbVertexNormal.cpp">
+      <Filter>Blocks\Streams</Filter>
+    </ClCompile>
+    <ClCompile Include="mbVertexPosition.cpp">
+      <Filter>Blocks\Streams</Filter>
+    </ClCompile>
+    <ClCompile Include="mbViewVector.cpp">
+      <Filter>Blocks\Streams</Filter>
+    </ClCompile>
+    <ClCompile Include="mbWorldBinormal.cpp">
+      <Filter>Blocks\Streams</Filter>
+    </ClCompile>
+    <ClCompile Include="mbWorldNormal.cpp">
+      <Filter>Blocks\Streams</Filter>
+    </ClCompile>
+    <ClCompile Include="mbWorldPosition.cpp">
+      <Filter>Blocks\Streams</Filter>
+    </ClCompile>
+    <ClCompile Include="mbWorldTangent.cpp">
+      <Filter>Blocks\Streams</Filter>
+    </ClCompile>
+    <ClCompile Include="mbWorldBasis.cpp">
+      <Filter>Blocks\Streams</Filter>
+    </ClCompile>
+    <ClCompile Include="mbLightingBase.cpp">
+      <Filter>Blocks\Lighting</Filter>
+    </ClCompile>
+    <ClCompile Include="mbLightingPhong.cpp">
+      <Filter>Blocks\Lighting</Filter>
+    </ClCompile>
+    <ClCompile Include="mbMathAbs.cpp">
+      <Filter>Blocks\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mbMathAdd.cpp">
+      <Filter>Blocks\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mbMathClamp.cpp">
+      <Filter>Blocks\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mbMathCos.cpp">
+      <Filter>Blocks\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mbMathDerivativeToNormal.cpp">
+      <Filter>Blocks\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mbMathDesaturate.cpp">
+      <Filter>Blocks\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mbMathDiv.cpp">
+      <Filter>Blocks\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mbMathDot3.cpp">
+      <Filter>Blocks\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mbMathCross.cpp">
+      <Filter>Blocks\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mbMathFloor.cpp">
+      <Filter>Blocks\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mbMathFrac.cpp">
+      <Filter>Blocks\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mbMathFresnel.cpp">
+      <Filter>Blocks\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mbMathInterpolate.cpp">
+      <Filter>Blocks\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mbMathInvert.cpp">
+      <Filter>Blocks\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mbMathMax.cpp">
+      <Filter>Blocks\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mbMathMin.cpp">
+      <Filter>Blocks\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mbMathMultiply.cpp">
+      <Filter>Blocks\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mbMathNegate.cpp">
+      <Filter>Blocks\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mbMathNormalize.cpp">
+      <Filter>Blocks\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mbMathNormalToDerivative.cpp">
+      <Filter>Blocks\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mbMathPower.cpp">
+      <Filter>Blocks\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mbMathReflection.cpp">
+      <Filter>Blocks\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mbMathSaturate.cpp">
+      <Filter>Blocks\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mbMathSin.cpp">
+      <Filter>Blocks\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mbMathSubtract.cpp">
+      <Filter>Blocks\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mbMathTangentToWorld.cpp">
+      <Filter>Blocks\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mbMathWorldTangentRecalculation.cpp">
+      <Filter>Blocks\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mbMathWorldViewRecalculation.cpp">
+      <Filter>Blocks\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mbMathTime.cpp">
+      <Filter>Blocks\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mbWorldToTangent.cpp">
+      <Filter>Blocks\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mbSamplerCube.cpp">
+      <Filter>Blocks\Samplers</Filter>
+    </ClCompile>
+    <ClCompile Include="mbSamplerHeightmap2Normal.cpp">
+      <Filter>Blocks\Samplers</Filter>
+    </ClCompile>
+    <ClCompile Include="mbSamplerNormal.cpp">
+      <Filter>Blocks\Samplers</Filter>
+    </ClCompile>
+    <ClCompile Include="mbSamplerNormalDetail.cpp">
+      <Filter>Blocks\Samplers</Filter>
+    </ClCompile>
+    <ClCompile Include="mbSamplerTexture.cpp">
+      <Filter>Blocks\Samplers</Filter>
+    </ClCompile>
+    <ClCompile Include="mbSamplerTextureDetail.cpp">
+      <Filter>Blocks\Samplers</Filter>
+    </ClCompile>
+    <ClCompile Include="mbBlendByDistance.cpp">
+      <Filter>Blocks\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="mbColorShift.cpp">
+      <Filter>Blocks\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="mbCombineNormals.cpp">
+      <Filter>Blocks\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="mbDithering.cpp">
+      <Filter>Blocks\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="mbNormalmapBlend.cpp">
+      <Filter>Blocks\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="mbOutputColor.cpp">
+      <Filter>Blocks\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="mbOutputColorDecalBlended.cpp">
+      <Filter>Blocks\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="mbOutputColorDecalModulative.cpp">
+      <Filter>Blocks\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="mbOutputColorDeferred.cpp">
+      <Filter>Blocks\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="mbOutputColorHair.cpp">
+      <Filter>Blocks\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="mbRenderFeedbackDataFetch.cpp">
+      <Filter>Blocks\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="mbSoftTransparencyAlpha.cpp">
+      <Filter>Blocks\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="mbTexCoordMad.cpp">
+      <Filter>Blocks\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="mbConvertGammaToLinear.cpp">
+      <Filter>Blocks\Special</Filter>
+    </ClCompile>
+    <ClCompile Include="mbConvertLinearToGamma.cpp">
+      <Filter>Blocks\Special</Filter>
+    </ClCompile>
+    <ClCompile Include="mbDerivativeNormal.cpp">
+      <Filter>Blocks\Special</Filter>
+    </ClCompile>
+    <ClCompile Include="mbEnvTransparencyColorFilter.cpp">
+      <Filter>Blocks\Special</Filter>
+    </ClCompile>
+    <ClCompile Include="mbTerrainMaterialSampler.cpp">
+      <Filter>Blocks\Special</Filter>
+    </ClCompile>
+    <ClCompile Include="build.cpp" />
+    <ClCompile Include="materialDefaults.cpp" />
+    <ClCompile Include="mbViewZ.cpp">
+      <Filter>Blocks\Streams</Filter>
+    </ClCompile>
+    <ClCompile Include="mbViewPosition.cpp">
+      <Filter>Blocks\Streams</Filter>
+    </ClCompile>
+    <ClCompile Include="mbShadowSample.cpp">
+      <Filter>Blocks\Special</Filter>
+    </ClCompile>
+    <ClCompile Include="mbShadowSurfaceDepth.cpp">
+      <Filter>Blocks\Special</Filter>
+    </ClCompile>
+    <ClCompile Include="mbSamplerDetail.cpp">
+      <Filter>Blocks\Samplers</Filter>
+    </ClCompile>
+    <ClCompile Include="mbMathSH.cpp">
+      <Filter>Blocks\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mbSamplerTextureArray.cpp">
+      <Filter>Blocks\Samplers</Filter>
+    </ClCompile>
+    <ClCompile Include="mbForwardLight.cpp">
+      <Filter>Blocks\Special</Filter>
+    </ClCompile>
+    <ClCompile Include="mbForwardLightCustom.cpp">
+      <Filter>Blocks\Special</Filter>
+    </ClCompile>
+    <ClCompile Include="mbOutputColorSkin.cpp">
+      <Filter>Blocks\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="mbCustomFunction.cpp">
+      <Filter>Blocks\Special</Filter>
+    </ClCompile>
+    <ClCompile Include="mbOutputVertexModifiers.cpp">
+      <Filter>Blocks\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="mbTerrainMaterialBlending.cpp">
+      <Filter>Blocks\Special</Filter>
+    </ClCompile>
+    <ClCompile Include="mbVFace.cpp">
+      <Filter>Blocks\Streams</Filter>
+    </ClCompile>
+    <ClCompile Include="matClasses.cpp" />
+    <ClCompile Include="mbGlobalFog.cpp">
+      <Filter>Blocks\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="mbLocalReflection.cpp">
+      <Filter>Blocks\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="mbColorShiftRB.cpp">
+      <Filter>Blocks\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="mbOutputColorEnhanced.cpp">
+      <Filter>Blocks\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="mbSamplerNormalArray.cpp">
+      <Filter>Blocks\Samplers</Filter>
+    </ClCompile>
+    <ClCompile Include="mbGlossinessPack.cpp">
+      <Filter>Blocks\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="mbAmbientLight.cpp">
+      <Filter>Blocks\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="mbCoarseReflection.cpp">
+      <Filter>Blocks\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="mbOutputColorEye.cpp">
+      <Filter>Blocks\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="matNames.cpp" />
+    <ClCompile Include="mbOutputColorEyeOverlay.cpp">
+      <Filter>Blocks\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="mbOutputVolume.cpp">
+      <Filter>Blocks\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="mbVolumeBlend.cpp">
+      <Filter>Blocks\Special</Filter>
+    </ClCompile>
+    <ClCompile Include="mbMathSplitVector.cpp">
+      <Filter>Blocks\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mbMathAppendVector.cpp">
+      <Filter>Blocks\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mbMathSplitAppendVector.cpp">
+      <Filter>Blocks\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mbNoise.cpp">
+      <Filter>Blocks\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="mbMathMapValue.cpp">
+      <Filter>Blocks\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mbPackNormal.cpp">
+      <Filter>Blocks\Special</Filter>
+    </ClCompile>
+    <ClCompile Include="mbGammaCorrection.cpp">
+      <Filter>Blocks\Special</Filter>
+    </ClCompile>
+    <ClCompile Include="mbNoise2D.cpp">
+      <Filter>Blocks\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="mbVertexLight.cpp">
+      <Filter>Blocks\Streams</Filter>
+    </ClCompile>
+    <ClCompile Include="mbGradient.cpp">
+      <Filter>Blocks\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="mbWetness.cpp">
+      <Filter>Blocks\Misc</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="materialCompiler.h">
+      <Filter>HLSL</Filter>
+    </ClInclude>
+    <ClInclude Include="materialPixelShaderCompiler.h">
+      <Filter>HLSL</Filter>
+    </ClInclude>
+    <ClInclude Include="materialShaderCompiler.h">
+      <Filter>HLSL</Filter>
+    </ClInclude>
+    <ClInclude Include="materialShaderConstants.h">
+      <Filter>HLSL</Filter>
+    </ClInclude>
+    <ClInclude Include="materialVertexShaderCompiler.h">
+      <Filter>HLSL</Filter>
+    </ClInclude>
+    <ClInclude Include="mbStreamingBlendRatio.h">
+      <Filter>Blocks\Streams</Filter>
+    </ClInclude>
+    <ClInclude Include="mbTexCoords.h">
+      <Filter>Blocks\Streams</Filter>
+    </ClInclude>
+    <ClInclude Include="mbLighitngBase.h">
+      <Filter>Blocks\Lighting</Filter>
+    </ClInclude>
+    <ClInclude Include="mbSamplerCube.h">
+      <Filter>Blocks\Samplers</Filter>
+    </ClInclude>
+    <ClInclude Include="mbSamplerHeightmap2Normal.h">
+      <Filter>Blocks\Samplers</Filter>
+    </ClInclude>
+    <ClInclude Include="mbSamplerNormal.h">
+      <Filter>Blocks\Samplers</Filter>
+    </ClInclude>
+    <ClInclude Include="mbWorldBasis.h">
+      <Filter>Blocks\Streams</Filter>
+    </ClInclude>
+    <ClInclude Include="mbDerivativeNormal.h">
+      <Filter>Blocks\Special</Filter>
+    </ClInclude>
+    <ClInclude Include="mbMathWorldTangentRecalculation.h">
+      <Filter>Blocks\Samplers</Filter>
+    </ClInclude>
+    <ClInclude Include="mbMathWorldViewRecalculation.h">
+      <Filter>Blocks\Samplers</Filter>
+    </ClInclude>
+    <ClInclude Include="mbMathSplitAppendVector.h">
+      <Filter>Blocks\Samplers</Filter>
+    </ClInclude>
+    <ClInclude Include="mbSamplerNormalDetail.h">
+      <Filter>Blocks\Samplers</Filter>
+    </ClInclude>
+    <ClInclude Include="mbSamplerTexture.h">
+      <Filter>Blocks\Samplers</Filter>
+    </ClInclude>
+    <ClInclude Include="mbSamplerTextureDetail.h">
+      <Filter>Blocks\Samplers</Filter>
+    </ClInclude>
+    <ClInclude Include="mbOutputColor.h">
+      <Filter>Blocks\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="mbOutputColorDecalBlended.h">
+      <Filter>Blocks\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="mbOutputColorDecalModulative.h">
+      <Filter>Blocks\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="mbOutputColorDeferred.h">
+      <Filter>Blocks\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="mbOutputColorHair.h">
+      <Filter>Blocks\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="build.h" />
+    <ClInclude Include="matcompiler.h" />
+    <ClInclude Include="materialDefaults.h" />
+    <ClInclude Include="stringPrinter.h" />
+    <ClInclude Include="mbSamplerDetail.h">
+      <Filter>Blocks\Samplers</Filter>
+    </ClInclude>
+    <ClInclude Include="mbSamplerTextureArray.h">
+      <Filter>Blocks\Samplers</Filter>
+    </ClInclude>
+    <ClInclude Include="mbOutputColorSkin.h">
+      <Filter>Blocks\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="mbOutputVertexModifiers.h">
+      <Filter>Blocks\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="matTypeRegistry.h" />
+    <ClInclude Include="mbOutputColorEnhanced.h">
+      <Filter>Blocks\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="mbSamplerNormalArray.h">
+      <Filter>Blocks\Samplers</Filter>
+    </ClInclude>
+    <ClInclude Include="mbOutputColorEye.h">
+      <Filter>Blocks\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="matNamesRegistry.h" />
+    <ClInclude Include="mbOutputColorEyeOverlay.h">
+      <Filter>Blocks\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="mbPackNormal.h">
+      <Filter>Blocks\Special</Filter>
+    </ClInclude>
+    <ClInclude Include="mbGammaCorrection.h">
+      <Filter>Blocks\Special</Filter>
+    </ClInclude>
+    <ClInclude Include="mbNoise.h">
+      <Filter>Blocks\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="mbMathMultiply.h">
+      <Filter>Blocks\Samplers</Filter>
+    </ClInclude>
+    <ClInclude Include="mbMathAdd.h">
+      <Filter>Blocks\Samplers</Filter>
+    </ClInclude>
+    <ClInclude Include="mbMathInterpolate.h">
+      <Filter>Blocks\Samplers</Filter>
+    </ClInclude>
+    <ClInclude Include="mbGradient.h">
+      <Filter>Blocks\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="mbWetness.h">
+      <Filter>Blocks\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="mbOutputVolume.h">
+      <Filter>Blocks\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="mbVertexLight.h">
+      <Filter>Blocks\Streams</Filter>
+    </ClInclude>
+    <ClInclude Include="mbForwardLightCustom.h">
+      <Filter>Blocks\Special</Filter>
+    </ClInclude>
+    <ClInclude Include="mbTerrainMaterialBlending.h">
+      <Filter>Blocks\Special</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

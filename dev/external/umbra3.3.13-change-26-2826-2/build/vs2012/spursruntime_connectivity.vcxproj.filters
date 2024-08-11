@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="samples">
+      <UniqueIdentifier>{F5755CCB-6088-094F-BB4F-6ED6F6036FA6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="samples\resources">
+      <UniqueIdentifier>{71EA7FBC-7311-9F42-BB61-9CC7EC6BA045}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source">
+      <UniqueIdentifier>{C321BA3C-D624-3548-AEDD-BD700484AF1F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\runtime">
+      <UniqueIdentifier>{E7E842F2-9255-E843-A420-D0C20D174C8E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\runtime\ps3">
+      <UniqueIdentifier>{29E7D1C6-4209-944D-8CD3-C863EEE14014}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\samples\resources\testkey.pfx">
+      <Filter>samples\resources</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\samples\resources\Logo.png">
+      <Filter>samples\resources</Filter>
+    </Image>
+    <Image Include="..\..\samples\resources\SmallLogo.png">
+      <Filter>samples\resources</Filter>
+    </Image>
+    <Image Include="..\..\samples\resources\SplashScreen.png">
+      <Filter>samples\resources</Filter>
+    </Image>
+    <Image Include="..\..\samples\resources\StoreLogo.png">
+      <Filter>samples\resources</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\source\runtime\ps3\umbraQueryJob.hpp">
+      <Filter>source\runtime\ps3</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\source\runtime\ps3\umbraspursruntime_connectivity.cpp">
+      <Filter>source\runtime\ps3</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

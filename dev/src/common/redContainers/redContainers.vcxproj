@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" TreatAsLocalProperty="OutDir;TargetName;IntDir;PlatformToolset">
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedConfigurationSetup.props))\SharedConfigurationSetup.props" />
+
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{25561DE7-62AD-4028-B040-528EE1FC8800}</ProjectGuid>
+    <RootNamespace>redContainers</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <UsePrecompiledHeaders>false</UsePrecompiledHeaders>
+  </PropertyGroup>
+  
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.props))\Shared.props" />
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedItemGroups.props))\SharedItemGroups.props" />
+
+  <ItemGroup>
+    <ClInclude Include="algorithms.h" />
+    <ClInclude Include="array.h" />
+    <ClInclude Include="arrayComparisonPolicy.h" />
+    <ClInclude Include="arrayMultiMap.h" />
+    <ClInclude Include="arraySet.h" />
+    <ClInclude Include="bitField.h" />
+    <ClInclude Include="bufferAllocatorDynamic.h" />
+    <ClInclude Include="bufferAllocatorNull.h" />
+    <ClInclude Include="bufferAllocatorStatic.h" />
+    <ClInclude Include="arrayCopyPolicy.h" />
+    <ClInclude Include="arrayInitPolicy.h" />
+    <ClInclude Include="containersCommon.h" />
+    <ClInclude Include="doubleList.h" />
+    <ClInclude Include="heap.h" />
+    <ClInclude Include="list.h" />
+    <ClInclude Include="pair.h" />
+    <ClInclude Include="queue.h" />
+    <ClInclude Include="sortedArray.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="array.inl" />
+    <None Include="arrayMultiMap.inl" />
+    <None Include="arraySet.inl" />
+    <None Include="bitField.inl" />
+    <None Include="bufferAllocatorDynamic.inl" />
+    <None Include="doubleList.inl" />
+    <None Include="heap.inl" />
+    <None Include="list.inl" />
+    <None Include="queue.inl" />
+    <None Include="sortedArray.inl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.targets))\Shared.targets" />
+</Project>

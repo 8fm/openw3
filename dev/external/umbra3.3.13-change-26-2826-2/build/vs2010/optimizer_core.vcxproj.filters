@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="source">
+      <UniqueIdentifier>{DE509EF0-3594-BB4C-823F-79CF583DBC2F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\optimizer">
+      <UniqueIdentifier>{8153C8A2-3D0C-594D-91FE-8143610817BA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="interface">
+      <UniqueIdentifier>{F3EE57B7-56E4-0D4A-99E1-97FE577E967A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="interface\optimizer">
+      <UniqueIdentifier>{34DB6A7C-FBD6-8C48-A79D-7C7F7AA57187}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\source\optimizer\DebugCollector.hpp">
+      <Filter>source\optimizer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\optimizer\GraphicsContainer.hpp">
+      <Filter>source\optimizer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\optimizer\umbraAABBDatabase.hpp">
+      <Filter>source\optimizer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\optimizer\umbraBuildContext.hpp">
+      <Filter>source\optimizer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\optimizer\umbraBulkAllocator.hpp">
+      <Filter>source\optimizer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\optimizer\umbraCellGenerator.hpp">
+      <Filter>source\optimizer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\optimizer\umbraCellGraph.hpp">
+      <Filter>source\optimizer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\optimizer\umbraClipPolygon.hpp">
+      <Filter>source\optimizer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\optimizer\umbraComputationArgs.hpp">
+      <Filter>source\optimizer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\optimizer\umbraComputationTile.hpp">
+      <Filter>source\optimizer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\optimizer\umbraDeque.hpp">
+      <Filter>source\optimizer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\optimizer\umbraExtCellGraph.hpp">
+      <Filter>source\optimizer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\optimizer\umbraGeometryBlock.hpp">
+      <Filter>source\optimizer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\optimizer\umbraImpScene.hpp">
+      <Filter>source\optimizer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\optimizer\umbraImpTask.hpp">
+      <Filter>source\optimizer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\optimizer\umbraIndexListCombiner.hpp">
+      <Filter>source\optimizer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\optimizer\umbraIntersectExact.hpp">
+      <Filter>source\optimizer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\optimizer\umbraLicense.hpp">
+      <Filter>source\optimizer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\optimizer\umbraList.hpp">
+      <Filter>source\optimizer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\optimizer\umbraOptimizerTextCommand.hpp">
+      <Filter>source\optimizer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\optimizer\umbraPortalGrouper.hpp">
+      <Filter>source\optimizer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\optimizer\umbraProcessDataCopy.hpp">
+      <Filter>source\optimizer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\optimizer\umbraReachabilityAnalysis.hpp">
+      <Filter>source\optimizer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\optimizer\umbraRectGrouper.hpp">
+      <Filter>source\optimizer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\optimizer\umbraRemoteTask.hpp">
+      <Filter>source\optimizer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\optimizer\umbraRT.hpp">
+      <Filter>source\optimizer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\optimizer\umbraSubdivisionTree.hpp">
+      <Filter>source\optimizer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\optimizer\umbraTileGrid.hpp">
+      <Filter>source\optimizer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\optimizer\umbraTileProcessor.hpp">
+      <Filter>source\optimizer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\optimizer\umbraTomeGenerator.hpp">
+      <Filter>source\optimizer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\optimizer\umbraVolumetricQuery.hpp">
+      <Filter>source\optimizer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\optimizer\umbraVoxelTree.hpp">
+      <Filter>source\optimizer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\optimizer\umbraWeightedSampler.hpp">
+      <Filter>source\optimizer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\optimizer\VisualizeHelper.hpp">
+      <Filter>source\optimizer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\interface\optimizer\umbraBuilder.hpp">
+      <Filter>interface\optimizer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\interface\optimizer\umbraCloudComputation.hpp">
+      <Filter>interface\optimizer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\interface\optimizer\umbraComputation.hpp">
+      <Filter>interface\optimizer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\interface\optimizer\umbraComputationParams.hpp">
+      <Filter>interface\optimizer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\interface\optimizer\umbraDPVSBuilder.hpp">
+      <Filter>interface\optimizer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\interface\optimizer\umbraLocalComputation.hpp">
+      <Filter>interface\optimizer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\interface\optimizer\umbraObjectGrouper.hpp">
+      <Filter>interface\optimizer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\interface\optimizer\umbraScene.hpp">
+      <Filter>interface\optimizer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\interface\optimizer\umbraTask.hpp">
+      <Filter>interface\optimizer</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\source\optimizer\DebugCollector.cpp">
+      <Filter>source\optimizer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\optimizer\GraphicsContainer.cpp">
+      <Filter>source\optimizer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\optimizer\umbraBuildContext.cpp">
+      <Filter>source\optimizer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\optimizer\umbraCellGenerator.cpp">
+      <Filter>source\optimizer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\optimizer\umbraCellGraph.cpp">
+      <Filter>source\optimizer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\optimizer\umbraClipPolygon.cpp">
+      <Filter>source\optimizer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\optimizer\umbraComputationTile.cpp">
+      <Filter>source\optimizer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\optimizer\umbraGeometryBlock.cpp">
+      <Filter>source\optimizer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\optimizer\umbraIntersectExact.cpp">
+      <Filter>source\optimizer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\optimizer\umbraPortalGrouper.cpp">
+      <Filter>source\optimizer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\optimizer\umbraProcessDataCopy.cpp">
+      <Filter>source\optimizer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\optimizer\umbraReachabilityAnalysis.cpp">
+      <Filter>source\optimizer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\optimizer\umbraRectGrouper.cpp">
+      <Filter>source\optimizer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\optimizer\umbraRemoteTask.cpp">
+      <Filter>source\optimizer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\optimizer\umbraRT.cpp">
+      <Filter>source\optimizer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\optimizer\umbraSubdivisionTree.cpp">
+      <Filter>source\optimizer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\optimizer\umbraTileGrid.cpp">
+      <Filter>source\optimizer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\optimizer\umbraTileProcessor.cpp">
+      <Filter>source\optimizer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\optimizer\umbraTomeGenerator.cpp">
+      <Filter>source\optimizer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\optimizer\umbraVolumetricQuery.cpp">
+      <Filter>source\optimizer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\optimizer\umbraWeightedSampler.cpp">
+      <Filter>source\optimizer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\optimizer\VisualizeHelper.cpp">
+      <Filter>source\optimizer</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

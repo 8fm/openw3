@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<Filter Include="AkAudiolib">
+			<UniqueIdentifier>{F19BEDA1-65FF-4C4C-B58E-10A2ABCC05CC}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="AkAudiolib\PS4">
+			<UniqueIdentifier>{46FCFF41-E5B5-1F47-966D-F35E730A1707}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="SoundEngineProxy">
+			<UniqueIdentifier>{078B1CA6-4A7D-F345-9ACB-82CBC1DFDC4B}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="SoundEngineProxy\Common">
+			<UniqueIdentifier>{716828A8-E968-E64F-B43F-622758401514}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="SoundEngineProxy\Remote">
+			<UniqueIdentifier>{D5C2AA00-F7E4-8A42-9A84-79DEB7AEACB3}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="SoundEngineProxy\Remote\CodeBase">
+			<UniqueIdentifier>{38019FE3-06D1-8A42-9F1A-B423B69EDA07}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Common">
+			<UniqueIdentifier>{0DCD6172-4260-034C-A1AB-217DA75FC279}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="include">
+			<UniqueIdentifier>{BCFC3518-B14F-934D-98D2-CF584EA34499}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="include\AK">
+			<UniqueIdentifier>{FB35425E-5760-EA4D-95C3-38DC76EBE601}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="include\AK\MusicEngine">
+			<UniqueIdentifier>{C0488B74-A745-384B-B4D4-68862EB00674}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="include\AK\MusicEngine\Common">
+			<UniqueIdentifier>{4FDD45D1-5674-6D4C-AE48-DEAF5D854709}</UniqueIdentifier>
+		</Filter>
+	</ItemGroup>
+	<ItemGroup>
+		<ClInclude Include="..\..\AkAudiolib\PS4\stdafx.h">
+			<Filter>AkAudiolib\PS4</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\include\AK\MusicEngine\Common\AkMusicEngine.h">
+			<Filter>include\AK\MusicEngine\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\ITrackProxy.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\TrackProxyLocal.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Remote\CodeBase\TrackProxyConnected.h">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\ISegmentProxy.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\SegmentProxyLocal.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Remote\CodeBase\SegmentProxyConnected.h">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\IMusicNodeProxy.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\IMusicRanSeqProxy.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\IMusicSwitchProxy.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\IMusicTransAwareProxy.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\MusicNodeProxyLocal.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\MusicRanSeqProxyLocal.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\MusicSwitchProxyLocal.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Common\MusicTransAwareProxyLocal.h">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Remote\CodeBase\MusicNodeProxyConnected.h">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Remote\CodeBase\MusicRanSeqProxyConnected.h">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Remote\CodeBase\MusicSwitchProxyConnected.h">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Remote\CodeBase\MusicTransAwareProxyConnected.h">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\SoundEngineProxy\Remote\CodeBase\ProxyMusic.h">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkChildCtx.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkContextualMusicSequencer.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkMatrixAwareCtx.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkMatrixSequencer.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkMusicBank.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkMusicCtx.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkMusicNode.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkMusicPBI.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkMusicRanSeqCntr.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkMusicRenderer.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkMusicSegment.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkMusicStructs.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkMusicSwitchCntr.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkMusicSwitchCtx.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkMusicTrack.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkMusicTransAware.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkRSIterator.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkScheduleWindow.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkSegmentChain.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkSegmentCtx.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkSegmentInfoRepository.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkSequencableSegmentCtx.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkSequenceCtx.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+	</ItemGroup>
+	<ItemGroup>
+		<ClCompile Include="..\..\AkAudiolib\PS4\stdafx.cpp">
+			<Filter>AkAudiolib\PS4</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Common\TrackProxyLocal.cpp">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Remote\CodeBase\TrackProxyConnected.cpp">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Common\SegmentProxyLocal.cpp">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Remote\CodeBase\SegmentProxyConnected.cpp">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Common\MusicNodeProxyLocal.cpp">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Common\MusicRanSeqProxyLocal.cpp">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Common\MusicSwitchProxyLocal.cpp">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Common\MusicTransAwareProxyLocal.cpp">
+			<Filter>SoundEngineProxy\Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Remote\CodeBase\MusicNodeProxyConnected.cpp">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Remote\CodeBase\MusicRanSeqProxyConnected.cpp">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Remote\CodeBase\MusicSwitchProxyConnected.cpp">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Remote\CodeBase\MusicTransAwareProxyConnected.cpp">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\SoundEngineProxy\Remote\CodeBase\ProxyMusic.cpp">
+			<Filter>SoundEngineProxy\Remote\CodeBase</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkChildCtx.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkContextualMusicSequencer.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkMatrixAwareCtx.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkMatrixSequencer.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkMusicBank.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkMusicCtx.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkMusicNode.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkMusicPBI.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkMusicRanSeqCntr.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkMusicRenderer.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkMusicSegment.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkMusicSwitchCntr.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkMusicSwitchCtx.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkMusicTrack.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkMusicTransAware.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkRSIterator.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkScheduleWindow.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkSegmentChain.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkSegmentCtx.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkSegmentInfoRepository.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkSequencableSegmentCtx.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkSequenceCtx.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+	</ItemGroup>
+</Project>

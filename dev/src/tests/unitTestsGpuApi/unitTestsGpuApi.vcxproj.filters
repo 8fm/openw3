@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="utility.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="build.cpp" />
+    <ClCompile Include="testEngine.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="gatTTYWriter.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="meshGenerator.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="effectInterface.cpp">
+      <Filter>common\effects</Filter>
+    </ClCompile>
+    <ClCompile Include="drawsTestUtils.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="operatorNewDelete_orbis.cpp">
+      <Filter>orbis</Filter>
+    </ClCompile>
+    <ClCompile Include="mainDurango.cpp">
+      <Filter>durango</Filter>
+    </ClCompile>
+    <ClCompile Include="fenceManagerTest.cpp">
+      <Filter>tests</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="common">
+      <UniqueIdentifier>{915bcdf0-1be5-4efd-b886-6ac03fad1373}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tests">
+      <UniqueIdentifier>{5ef70b6d-04d6-4cf3-9db2-c2213e148b97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tests\shaders">
+      <UniqueIdentifier>{9341abc6-345b-49f5-a0c5-fa20382c7e4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\effects">
+      <UniqueIdentifier>{257ec0dd-35bb-49af-af33-064dcf510059}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tests\shaders\hlsl">
+      <UniqueIdentifier>{98293b2e-f093-4e27-9d29-ebf84320b11c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tests\shaders\pssl">
+      <UniqueIdentifier>{6b0cff9e-9a74-4477-806e-5a3ff9535c62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tests\references">
+      <UniqueIdentifier>{18da5d19-b710-43b0-b829-15f40fbe5820}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="orbis">
+      <UniqueIdentifier>{16926feb-c0f6-4794-a244-9ac9d7fb5bcd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="durango">
+      <UniqueIdentifier>{eb6f6410-ebda-47c5-809a-04651739fde7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="win">
+      <UniqueIdentifier>{b0febae4-dd33-4e7d-8f47-4c675c7d7f1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tests\shaders\glsl">
+      <UniqueIdentifier>{cf432f6d-44fd-4274-8ce3-89bc3b87ff4c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="opticalIllusion.hlsl">
+      <Filter>tests\shaders\hlsl</Filter>
+    </None>
+    <None Include="simpleTriangle.hlsl">
+      <Filter>tests\shaders\hlsl</Filter>
+    </None>
+    <None Include="simplePhong_vv.pssl">
+      <Filter>tests\shaders\pssl</Filter>
+    </None>
+    <None Include="simplePhong_p.pssl">
+      <Filter>tests\shaders\pssl</Filter>
+    </None>
+    <None Include="simplePhongRaw.hlsl">
+      <Filter>tests\shaders\hlsl</Filter>
+    </None>
+    <None Include="simpleTriangleInstanced.hlsl">
+      <Filter>tests\shaders\hlsl</Filter>
+    </None>
+    <None Include="samplerTex.hlsl">
+      <Filter>tests\shaders\hlsl</Filter>
+    </None>
+    <None Include="instanced.hlsl">
+      <Filter>tests\shaders\hlsl</Filter>
+    </None>
+    <None Include="simpleCull.hlsl">
+      <Filter>tests\shaders\hlsl</Filter>
+    </None>
+    <None Include="simpleDraw.hlsl">
+      <Filter>tests\shaders\hlsl</Filter>
+    </None>
+    <None Include="coloredTriangleGrid.hlsl">
+      <Filter>tests\shaders\hlsl</Filter>
+    </None>
+    <None Include="simplePhongGlobal.hlsl">
+      <Filter>tests\shaders\hlsl</Filter>
+    </None>
+    <None Include="instanced.frag">
+      <Filter>tests\shaders\glsl</Filter>
+    </None>
+    <None Include="opticalIllusion.frag">
+      <Filter>tests\shaders\glsl</Filter>
+    </None>
+    <None Include="samplerTex.frag">
+      <Filter>tests\shaders\glsl</Filter>
+    </None>
+    <None Include="simplePhongGlobal.frag">
+      <Filter>tests\shaders\glsl</Filter>
+    </None>
+    <None Include="simplePhongRaw.frag">
+      <Filter>tests\shaders\glsl</Filter>
+    </None>
+    <None Include="simpleTriangle.frag">
+      <Filter>tests\shaders\glsl</Filter>
+    </None>
+    <None Include="simpleTriangleInstanced.frag">
+      <Filter>tests\shaders\glsl</Filter>
+    </None>
+    <None Include="instanced.vert">
+      <Filter>tests\shaders\glsl</Filter>
+    </None>
+    <None Include="opticalIllusion.vert">
+      <Filter>tests\shaders\glsl</Filter>
+    </None>
+    <None Include="samplerTex.vert">
+      <Filter>tests\shaders\glsl</Filter>
+    </None>
+    <None Include="simplePhongGlobal.vert">
+      <Filter>tests\shaders\glsl</Filter>
+    </None>
+    <None Include="simplePhongRaw.vert">
+      <Filter>tests\shaders\glsl</Filter>
+    </None>
+    <None Include="simpleTriangle.vert">
+      <Filter>tests\shaders\glsl</Filter>
+    </None>
+    <None Include="simpleTriangleInstanced.vert">
+      <Filter>tests\shaders\glsl</Filter>
+    </None>
+    <None Include="coloredTriangleGrid.frag">
+      <Filter>tests\shaders\glsl</Filter>
+    </None>
+    <None Include="coloredTriangleGrid.vert">
+      <Filter>tests\shaders\glsl</Filter>
+    </None>
+    <None Include="simpleDraw.vert">
+      <Filter>tests\shaders\glsl</Filter>
+    </None>
+    <None Include="simpleDraw.frag">
+      <Filter>tests\shaders\glsl</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="build.h" />
+    <ClInclude Include="utility.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="testEngine.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="runtimeTest.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="gatTTYWriter.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="meshGenerator.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="constantBuffersTest.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="effectInterface.h">
+      <Filter>common\effects</Filter>
+    </ClInclude>
+    <ClInclude Include="viewportTest.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="drawsInstancedTest.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="drawIndexedPrimitiveTest.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="drawPrimitiveTest.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="drawPrimitiveRawTest.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="drawIndexedPrimitiveRawTest.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="drawSystemPrimitiveTest.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="drawsInstancedNoBuffersTest.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="samplerTest.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="drawsTestUtils.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="memoryInitiaizationOrbis.h">
+      <Filter>orbis</Filter>
+    </ClInclude>
+    <ClInclude Include="memoryInitializationWin.h">
+      <Filter>win</Filter>
+    </ClInclude>
+    <ClInclude Include="memoryInitializationDurango.h">
+      <Filter>durango</Filter>
+    </ClInclude>
+    <ClInclude Include="inputInitializationOrbis.h">
+      <Filter>orbis</Filter>
+    </ClInclude>
+    <ClInclude Include="inputInitializationDurango.h">
+      <Filter>durango</Filter>
+    </ClInclude>
+    <ClInclude Include="vertexPixelEffect.h">
+      <Filter>common\effects</Filter>
+    </ClInclude>
+    <ClInclude Include="computeEffect.h">
+      <Filter>common\effects</Filter>
+    </ClInclude>
+    <ClInclude Include="simpleCullTest.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="fenceManagerTest.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="blendStateTest.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="rasterizerStateTest.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="bufferUpdatesTest.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="opticalIllusion_p.pssl">
+      <Filter>tests\shaders\pssl</Filter>
+    </CustomBuild>
+    <CustomBuild Include="opticalIllusion_vv.pssl">
+      <Filter>tests\shaders\pssl</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simpleTriangle_vv.pssl">
+      <Filter>tests\shaders\pssl</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simpleTriangle_p.pssl">
+      <Filter>tests\shaders\pssl</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simplePhongRaw_p.pssl">
+      <Filter>tests\shaders\pssl</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simplePhongGlobal_p.pssl">
+      <Filter>tests\shaders\pssl</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simplePhongGlobal_vv.pssl">
+      <Filter>tests\shaders\pssl</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simplePhongRaw_vv.pssl">
+      <Filter>tests\shaders\pssl</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simpleTriangleInstanced_vv.pssl">
+      <Filter>tests\shaders\pssl</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simpleTriangleInstanced_p.pssl">
+      <Filter>tests\shaders\pssl</Filter>
+    </CustomBuild>
+    <CustomBuild Include="samplerTex_vv.pssl">
+      <Filter>tests\shaders\pssl</Filter>
+    </CustomBuild>
+    <CustomBuild Include="samplerTex_p.pssl">
+      <Filter>tests\shaders\pssl</Filter>
+    </CustomBuild>
+    <CustomBuild Include="instanced_vv.pssl">
+      <Filter>tests\shaders\pssl</Filter>
+    </CustomBuild>
+    <CustomBuild Include="instanced_p.pssl">
+      <Filter>tests\shaders\pssl</Filter>
+    </CustomBuild>
+    <CustomBuild Include="coloredTriangleGrid_vv.pssl">
+      <Filter>tests\shaders\pssl</Filter>
+    </CustomBuild>
+    <CustomBuild Include="coloredTriangleGrid_p.pssl">
+      <Filter>tests\shaders\pssl</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simpleDraw_p.pssl">
+      <Filter>tests\shaders\pssl</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simpleDraw_vv.pssl">
+      <Filter>tests\shaders\pssl</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Usage.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="CONSTANT_BUFFERS.dds">
+      <Filter>tests\references</Filter>
+    </Image>
+    <Image Include="DRAW_INDEXED_PRIMITIVE.dds">
+      <Filter>tests\references</Filter>
+    </Image>
+    <Image Include="DRAW_INDEXED_PRIMITIVE_RAW.dds">
+      <Filter>tests\references</Filter>
+    </Image>
+    <Image Include="DRAW_INSTANCED.dds">
+      <Filter>tests\references</Filter>
+    </Image>
+    <Image Include="DRAW_INSTANCED_NO_BUFFER.dds">
+      <Filter>tests\references</Filter>
+    </Image>
+    <Image Include="DRAW_PRIMITIVE.dds">
+      <Filter>tests\references</Filter>
+    </Image>
+    <Image Include="DRAW_PRIMITIVE_RAW.dds">
+      <Filter>tests\references</Filter>
+    </Image>
+    <Image Include="DRAW_SYSTEM_PRIMITIVE.dds">
+      <Filter>tests\references</Filter>
+    </Image>
+    <Image Include="FLICKERING_ILLUSION.dds">
+      <Filter>tests\references</Filter>
+    </Image>
+    <Image Include="PS4_FENCE_MANAGER.dds">
+      <Filter>tests\references</Filter>
+    </Image>
+    <Image Include="RASTERIZER_STATE.dds">
+      <Filter>tests\references</Filter>
+    </Image>
+    <Image Include="SAMPLER_TEXTURE.dds">
+      <Filter>tests\references</Filter>
+    </Image>
+    <Image Include="TILES.dds">
+      <Filter>tests\references</Filter>
+    </Image>
+    <Image Include="VIEWPORTS.dds">
+      <Filter>tests\references</Filter>
+    </Image>
+    <Image Include="StoreLogo.png">
+      <Filter>durango</Filter>
+    </Image>
+    <Image Include="SplashScreen.png">
+      <Filter>durango</Filter>
+    </Image>
+    <Image Include="SmallLogo.png">
+      <Filter>durango</Filter>
+    </Image>
+    <Image Include="Logo.png">
+      <Filter>durango</Filter>
+    </Image>
+    <Image Include="BLEND_STATE.dds">
+      <Filter>tests\references</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <Filter>durango</Filter>
+    </AppxManifest>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,1853 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="build.cpp" />
+    <ClCompile Include="r4QuestSystem.cpp">
+      <Filter>systems\quest</Filter>
+    </ClCompile>
+    <ClCompile Include="r4Game.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="damageData.cpp">
+      <Filter>combat</Filter>
+    </ClCompile>
+    <ClCompile Include="questBehaviorCtrlBlock.cpp">
+      <Filter>systems\quest\blocks\behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="questBehaviorEventBlock.cpp">
+      <Filter>systems\quest\blocks\behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="questBehaviorNotificationBlock.cpp">
+      <Filter>systems\quest\blocks\behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="questControlledNPC.cpp">
+      <Filter>systems\quest\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="questBehaviorSocket.cpp">
+      <Filter>systems\quest\blocks</Filter>
+    </ClCompile>
+    <ClCompile Include="comboAspect.cpp">
+      <Filter>combat\combos</Filter>
+    </ClCompile>
+    <ClCompile Include="comboDefinition.cpp">
+      <Filter>combat\combos</Filter>
+    </ClCompile>
+    <ClCompile Include="comboPlayer.cpp">
+      <Filter>combat\combos</Filter>
+    </ClCompile>
+    <ClCompile Include="comboString.cpp">
+      <Filter>combat\combos</Filter>
+    </ClCompile>
+    <ClCompile Include="focusModeController.cpp">
+      <Filter>systems\focusMode\gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="animAttackEvent.cpp">
+      <Filter>combat\events</Filter>
+    </ClCompile>
+    <ClCompile Include="r4GameResource.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="witcherSword.cpp">
+      <Filter>combat\item</Filter>
+    </ClCompile>
+    <ClCompile Include="playerStateUseVehicle.cpp">
+      <Filter>player\state</Filter>
+    </ClCompile>
+    <ClCompile Include="r4Player.cpp">
+      <Filter>player</Filter>
+    </ClCompile>
+    <ClCompile Include="mapPinData.cpp">
+      <Filter>systems\map</Filter>
+    </ClCompile>
+    <ClCompile Include="worldMap.cpp">
+      <Filter>systems\map</Filter>
+    </ClCompile>
+    <ClCompile Include="GameplayFXMedalion.cpp">
+      <Filter>effects</Filter>
+    </ClCompile>
+    <ClCompile Include="gameplayFXSurfacePost.cpp">
+      <Filter>effects</Filter>
+    </ClCompile>
+    <ClCompile Include="horseAnimNode.cpp">
+      <Filter>vehicle\horse</Filter>
+    </ClCompile>
+    <ClCompile Include="vitalSpot.cpp">
+      <Filter>systems\focusMode\combat</Filter>
+    </ClCompile>
+    <ClCompile Include="preAttackEvent.cpp">
+      <Filter>animations</Filter>
+    </ClCompile>
+    <ClCompile Include="buffImmunity.cpp">
+      <Filter>entities</Filter>
+    </ClCompile>
+    <ClCompile Include="gameplayEffectExecutor.cpp">
+      <Filter>systems\gameplayEffects</Filter>
+    </ClCompile>
+    <ClCompile Include="encounterImpl.cpp">
+      <Filter>systems\encounter</Filter>
+    </ClCompile>
+    <ClCompile Include="alchemy.cpp">
+      <Filter>systems\alchemy</Filter>
+    </ClCompile>
+    <ClCompile Include="r4BoidSpecies.cpp">
+      <Filter>ai\Swarms</Filter>
+    </ClCompile>
+    <ClCompile Include="combatDataComponent.cpp">
+      <Filter>ai\behTree\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeVitalSpotActive.cpp">
+      <Filter>ai\behTree\nodes\combat</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeStrafing.cpp">
+      <Filter>ai\behTree\nodes\combat</Filter>
+    </ClCompile>
+    <ClCompile Include="r4BehTreeInstance.cpp">
+      <Filter>ai\behTree</Filter>
+    </ClCompile>
+    <ClCompile Include="enemiesCachedData.cpp">
+      <Filter>combat</Filter>
+    </ClCompile>
+    <ClCompile Include="r4PlayerControlAction.cpp">
+      <Filter>player\movement</Filter>
+    </ClCompile>
+    <ClCompile Include="r4PlayerController.cpp">
+      <Filter>player\movement</Filter>
+    </ClCompile>
+    <ClCompile Include="r4PlayerLocomotionSegment.cpp">
+      <Filter>player\movement</Filter>
+    </ClCompile>
+    <ClCompile Include="customCameraControllers.cpp">
+      <Filter>cameras\customCamera</Filter>
+    </ClCompile>
+    <ClCompile Include="customCamera.cpp">
+      <Filter>cameras\customCamera</Filter>
+    </ClCompile>
+    <ClCompile Include="encounterMountedEntry.cpp">
+      <Filter>systems\encounter</Filter>
+    </ClCompile>
+    <ClCompile Include="customCameraCollision.cpp">
+      <Filter>cameras\customCamera</Filter>
+    </ClCompile>
+    <ClCompile Include="stepClipAnimationParam.cpp">
+      <Filter>animations\stepPlayer</Filter>
+    </ClCompile>
+    <ClCompile Include="humbleCritterAlgorithmData.cpp">
+      <Filter>ai\Swarms\humbleCritters</Filter>
+    </ClCompile>
+    <ClCompile Include="humbleCrittersAI.cpp">
+      <Filter>ai\Swarms\humbleCritters</Filter>
+    </ClCompile>
+    <ClCompile Include="humbleCrittersLairEntity.cpp">
+      <Filter>ai\Swarms\humbleCritters</Filter>
+    </ClCompile>
+    <ClCompile Include="humbleCritterSound.cpp">
+      <Filter>ai\Swarms\humbleCritters</Filter>
+    </ClCompile>
+    <ClCompile Include="humbleCritterUpdateJob.cpp">
+      <Filter>ai\Swarms\humbleCritters</Filter>
+    </ClCompile>
+    <ClCompile Include="flyingCritterAlgorithmData.cpp">
+      <Filter>ai\Swarms\FlyingCritters</Filter>
+    </ClCompile>
+    <ClCompile Include="flyingCrittersAI.cpp">
+      <Filter>ai\Swarms\FlyingCritters</Filter>
+    </ClCompile>
+    <ClCompile Include="flyingCrittersLairEntity.cpp">
+      <Filter>ai\Swarms\FlyingCritters</Filter>
+    </ClCompile>
+    <ClCompile Include="flyingCrittersParams.cpp">
+      <Filter>ai\Swarms\FlyingCritters</Filter>
+    </ClCompile>
+    <ClCompile Include="flyingCritterUpdateJob.cpp">
+      <Filter>ai\Swarms\FlyingCritters</Filter>
+    </ClCompile>
+    <ClCompile Include="flyingCrittersLairEntityScript.cpp">
+      <Filter>ai\Swarms\FlyingCritters</Filter>
+    </ClCompile>
+    <ClCompile Include="flyingSwarmGroup.cpp">
+      <Filter>ai\Swarms\FlyingCritters</Filter>
+    </ClCompile>
+    <ClCompile Include="flyingPoiConfig.cpp">
+      <Filter>ai\Swarms\FlyingCritters</Filter>
+    </ClCompile>
+    <ClCompile Include="monsterParam.cpp">
+      <Filter>entities</Filter>
+    </ClCompile>
+    <ClCompile Include="r4SwarmUtils.cpp">
+      <Filter>ai\Swarms</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeStrafingAlgorithm.cpp">
+      <Filter>ai\behTree\nodes\combat</Filter>
+    </ClCompile>
+    <ClCompile Include="r4SwarmSound.cpp">
+      <Filter>ai\Swarms\Sounds</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeConditionIsEnemyAround.cpp">
+      <Filter>ai\behTree\nodes\decorators</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeDecoratorSetBehaviourVariable.cpp">
+      <Filter>ai\behTree\nodes\decorators</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeConditionIsDead.cpp">
+      <Filter>ai\behTree\nodes\decorators</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityMappinsResource.cpp">
+      <Filter>systems\map</Filter>
+    </ClCompile>
+    <ClCompile Include="r4LootDefinitions.cpp">
+      <Filter>systems\loot</Filter>
+    </ClCompile>
+    <ClCompile Include="questUsedFastTravelCondition.cpp">
+      <Filter>systems\quest\conditions</Filter>
+    </ClCompile>
+    <ClCompile Include="questManageFastTravelBlock.cpp">
+      <Filter>systems\quest\blocks\map</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeAtomicForgetCombatTarget.cpp">
+      <Filter>ai\behTree\nodes\atomic</Filter>
+    </ClCompile>
+    <ClCompile Include="r4Classes.cpp" />
+    <ClCompile Include="applySteeringToPlayer.cpp">
+      <Filter>movement\steering</Filter>
+    </ClCompile>
+    <ClCompile Include="steeringStrafing.cpp">
+      <Filter>movement\steering</Filter>
+    </ClCompile>
+    <ClCompile Include="fastSurround.cpp">
+      <Filter>movement\steering</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeTicketManager.cpp">
+      <Filter>ai\behTree\nodes\combat\ticket</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeScriptTicketAlgorithm.cpp">
+      <Filter>ai\behTree\nodes\combat\ticket</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeTicketAlgorithm.cpp">
+      <Filter>ai\behTree\nodes\combat\ticket</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeTicketData.cpp">
+      <Filter>ai\behTree\nodes\combat\ticket</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeTicketDecoratorBase.cpp">
+      <Filter>ai\behTree\nodes\combat\ticket</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeTicketHas.cpp">
+      <Filter>ai\behTree\nodes\combat\ticket</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeTicketRequest.cpp">
+      <Filter>ai\behTree\nodes\combat\ticket</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeTicketRelease.cpp">
+      <Filter>ai\behTree\nodes\combat\ticket</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeTicketLock.cpp">
+      <Filter>ai\behTree\nodes\combat\ticket</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeTicketGet.cpp">
+      <Filter>ai\behTree\nodes\combat\ticket</Filter>
+    </ClCompile>
+    <ClCompile Include="questChangeWorldBlock.cpp">
+      <Filter>systems\quest\blocks\map</Filter>
+    </ClCompile>
+    <ClCompile Include="manageSwitchBlock.cpp">
+      <Filter>systems\gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeConditionAttackersCount.cpp">
+      <Filter>ai\behTree\nodes\decorators</Filter>
+    </ClCompile>
+    <ClCompile Include="r4Telemetry.cpp">
+      <Filter>telemetry</Filter>
+    </ClCompile>
+    <ClCompile Include="r4TelemetryScriptProxy.cpp">
+      <Filter>telemetry</Filter>
+    </ClCompile>
+    <ClCompile Include="gameEngine.cpp">
+      <Filter>engine</Filter>
+    </ClCompile>
+    <ClCompile Include="gameStartupDebugPage.cpp">
+      <Filter>engine</Filter>
+    </ClCompile>
+    <ClCompile Include="gameDebugMenu.cpp">
+      <Filter>engine</Filter>
+    </ClCompile>
+    <ClCompile Include="journalCharacter.cpp">
+      <Filter>systems\Journal</Filter>
+    </ClCompile>
+    <ClCompile Include="journalCreature.cpp">
+      <Filter>systems\Journal</Filter>
+    </ClCompile>
+    <ClCompile Include="journalEvents.cpp">
+      <Filter>systems\Journal</Filter>
+    </ClCompile>
+    <ClCompile Include="journalGlossary.cpp">
+      <Filter>systems\Journal</Filter>
+    </ClCompile>
+    <ClCompile Include="journalItems.cpp">
+      <Filter>systems\Journal</Filter>
+    </ClCompile>
+    <ClCompile Include="journalQuest.cpp">
+      <Filter>systems\Journal</Filter>
+    </ClCompile>
+    <ClCompile Include="journalQuestBlock.cpp">
+      <Filter>systems\Journal</Filter>
+    </ClCompile>
+    <ClCompile Include="journalQuestHuntingBlock.cpp">
+      <Filter>systems\Journal</Filter>
+    </ClCompile>
+    <ClCompile Include="journalQuestMappinStateBlock.cpp">
+      <Filter>systems\Journal</Filter>
+    </ClCompile>
+    <ClCompile Include="journalQuestObjectiveCounterGraphBlock.cpp">
+      <Filter>systems\Journal</Filter>
+    </ClCompile>
+    <ClCompile Include="journalStoryBook.cpp">
+      <Filter>systems\Journal</Filter>
+    </ClCompile>
+    <ClCompile Include="journalTutorial.cpp">
+      <Filter>systems\Journal</Filter>
+    </ClCompile>
+    <ClCompile Include="r4JournalManager.cpp">
+      <Filter>systems\Journal</Filter>
+    </ClCompile>
+    <ClCompile Include="questUICondition.cpp">
+      <Filter>systems\quest\conditions</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeRidingManager.cpp">
+      <Filter>ai\behTree\nodes\decorators</Filter>
+    </ClCompile>
+    <ClCompile Include="w3GenericVehicle.cpp">
+      <Filter>vehicle</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeRiderIdleRoot.cpp">
+      <Filter>ai\behTree\nodes\community</Filter>
+    </ClCompile>
+    <ClCompile Include="questRiderScriptedActionsBlock.cpp">
+      <Filter>systems\quest\blocks\scriptedActions</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeRiderForced.cpp">
+      <Filter>ai\behTree\nodes\structurals</Filter>
+    </ClCompile>
+    <ClCompile Include="r4AiParameters.cpp">
+      <Filter>ai\behTree\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeRiderSpecific.cpp">
+      <Filter>ai\behTree\nodes\atomic</Filter>
+    </ClCompile>
+    <ClCompile Include="horsePrediction.cpp">
+      <Filter>vehicle\horse</Filter>
+    </ClCompile>
+    <ClCompile Include="r4GuiManager.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="r4HudModule.cpp">
+      <Filter>gui\hud</Filter>
+    </ClCompile>
+    <ClCompile Include="r4Hud.cpp">
+      <Filter>gui\hud</Filter>
+    </ClCompile>
+    <ClCompile Include="r4Menu.cpp">
+      <Filter>gui\menu</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeDecoratorChangeBehaviorGraph.cpp">
+      <Filter>ai\behTree\nodes\decorators</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeVitalSpotActive.cpp">
+      <Filter>ai\behTree\nodes\decorators</Filter>
+    </ClCompile>
+    <ClCompile Include="r4Names.cpp" />
+    <ClCompile Include="behTreeDecoratorRiderWaitHorseScriptedAction.cpp">
+      <Filter>ai\behTree\nodes\decorators</Filter>
+    </ClCompile>
+    <ClCompile Include="questPlayAnimationBlock.cpp">
+      <Filter>systems\quest\blocks</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeDecoratorCluePath.cpp">
+      <Filter>ai\behTree\nodes\decorators</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeCluePathData.cpp">
+      <Filter>ai\behTree\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="dynamicClueStorage.cpp">
+      <Filter>systems\focusMode\gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="volumePathManager.cpp">
+      <Filter>ai\volumePath</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeCombatTargetSelection.cpp">
+      <Filter>ai\behTree\nodes\combat</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeClosestNonFriendlyTargetSelection.cpp">
+      <Filter>ai\behTree\nodes\combat</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeNodePredefinedPathRubberBand.cpp">
+      <Filter>ai\behTree\nodes\movement</Filter>
+    </ClCompile>
+    <ClCompile Include="horseSteering.cpp">
+      <Filter>movement\steering</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeDecoratorHorseSpeedManager.cpp">
+      <Filter>ai\behTree\nodes\movement</Filter>
+    </ClCompile>
+    <ClCompile Include="r4BehTreeVarEnums.cpp">
+      <Filter>ai\behTree\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="r4DebugDataService.cpp">
+      <Filter>telemetry</Filter>
+    </ClCompile>
+    <ClCompile Include="commonMapManager.cpp">
+      <Filter>systems\map</Filter>
+    </ClCompile>
+    <ClCompile Include="r4DebugDataServiceLogOutputDevice.cpp">
+      <Filter>telemetry</Filter>
+    </ClCompile>
+    <ClCompile Include="areaMappinsResource.cpp">
+      <Filter>systems\map</Filter>
+    </ClCompile>
+    <ClCompile Include="instantMountPartySpawnOrganizer.cpp">
+      <Filter>systems\encounter</Filter>
+    </ClCompile>
+    <ClCompile Include="profilerConsoleCommands.cpp">
+      <Filter>profiler</Filter>
+    </ClCompile>
+    <ClCompile Include="r4CameraDirector.cpp">
+      <Filter>cameras</Filter>
+    </ClCompile>
+    <ClCompile Include="r4LootManager.cpp">
+      <Filter>systems\loot</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeDecoratorHLCombat.cpp">
+      <Filter>ai\behTree\nodes\combat</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeHLCombatLock.cpp">
+      <Filter>ai\behTree\nodes\combat</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeFlee.cpp">
+      <Filter>ai\behTree\nodes\combat</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeDecoratorRiderHorseReachability.cpp">
+      <Filter>ai\behTree\nodes\decorators</Filter>
+    </ClCompile>
+    <ClCompile Include="ticketSourceProvider.cpp">
+      <Filter>ai\behTree\utils\tickets</Filter>
+    </ClCompile>
+    <ClCompile Include="ticketSystem.cpp">
+      <Filter>ai\behTree\utils\tickets</Filter>
+    </ClCompile>
+    <ClCompile Include="ticketSystemConfiguration.cpp">
+      <Filter>ai\behTree\utils\tickets</Filter>
+    </ClCompile>
+    <ClCompile Include="ticketGlobalSource.cpp">
+      <Filter>ai\behTree\utils\tickets</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeSailorFollowPath.cpp">
+      <Filter>ai\behTree\nodes\movement</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeSailorMoveTo.cpp">
+      <Filter>ai\behTree\nodes\movement</Filter>
+    </ClCompile>
+    <ClCompile Include="customSceneEvents.cpp" />
+    <ClCompile Include="customCSEvents.cpp" />
+    <ClCompile Include="swarmCellMap.cpp">
+      <Filter>ai\Swarms</Filter>
+    </ClCompile>
+    <ClCompile Include="cityLightManager.cpp">
+      <Filter>systems\lights</Filter>
+    </ClCompile>
+    <ClCompile Include="gameplayLightComponent.cpp">
+      <Filter>systems\lights</Filter>
+    </ClCompile>
+    <ClCompile Include="r4GlobalEventsScriptsDispatcher.cpp">
+      <Filter>systems\gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="carryableItemsRegistry.cpp">
+      <Filter>ai\caryingItems</Filter>
+    </ClCompile>
+    <ClCompile Include="carryableItemsStorePoint.cpp">
+      <Filter>ai\caryingItems</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeCarryingItemData.cpp">
+      <Filter>ai\behTree\nodes\community\carryingItems</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeFindSourceItemStoreDecorator.cpp">
+      <Filter>ai\behTree\nodes\community\carryingItems</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeFindDestinyItemStoreDecorator.cpp">
+      <Filter>ai\behTree\nodes\community\carryingItems</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeCarryingItemPick.cpp">
+      <Filter>ai\behTree\nodes\community\carryingItems</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeCarryingItemDrop.cpp">
+      <Filter>ai\behTree\nodes\community\carryingItems</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeCarryingItemBaseNode.cpp">
+      <Filter>ai\behTree\nodes\community\carryingItems</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeCarryingItemBaseDecorator.cpp">
+      <Filter>ai\behTree\nodes\community\carryingItems</Filter>
+    </ClCompile>
+    <ClCompile Include="fistfightMinigame.cpp" />
+    <ClCompile Include="gwintMinigame.cpp">
+      <Filter>systems\Minigames</Filter>
+    </ClCompile>
+    <ClCompile Include="mainMenuController.cpp" />
+    <ClCompile Include="r4BehTreeRtti.cpp">
+      <Filter>ai\behTree</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeVitalSpotActive.cpp">
+      <Filter>ai\behTree\nodes\combat</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeNodePCReleaseControl.cpp">
+      <Filter>ai\behTree\nodes\pc</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeNodePCLockControl.cpp">
+      <Filter>ai\behTree\nodes\pc</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeConditionShouldPursueCombatTarget.cpp">
+      <Filter>ai\behTree\nodes\combat</Filter>
+    </ClCompile>
+    <ClCompile Include="r4SecondScreenManagerScriptProxy.cpp">
+      <Filter>secondscreen</Filter>
+    </ClCompile>
+    <ClCompile Include="r4CreateEntityManager.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="riderSpawnTreeInitializers.cpp">
+      <Filter>systems\encounter\initializers</Filter>
+    </ClCompile>
+    <ClCompile Include="questCombatManagerBlock.cpp">
+      <Filter>systems\quest\blocks\scriptedActions</Filter>
+    </ClCompile>
+    <ClCompile Include="r4SecondScreenManager.cpp">
+      <Filter>secondscreen</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeDynamicCombatStyle.cpp">
+      <Filter>ai\behTree\nodes\combat</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeAtomicFlight.cpp">
+      <Filter>ai\behTree\nodes\flight</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeAtomicFlyAround.cpp">
+      <Filter>ai\behTree\nodes\flight</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeAtomicFlyTo.cpp">
+      <Filter>ai\behTree\nodes\flight</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeFlightData.cpp">
+      <Filter>ai\behTree\nodes\flight</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeDecoratorGlide.cpp">
+      <Filter>ai\behTree\nodes\flight</Filter>
+    </ClCompile>
+    <ClCompile Include="r4ActionPointSelector.cpp">
+      <Filter>ai\behTree\community</Filter>
+    </ClCompile>
+    <ClCompile Include="w2saveImporter.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="journalPlace.cpp">
+      <Filter>systems\Journal</Filter>
+    </ClCompile>
+    <ClCompile Include="r4journalPlaceEntity.cpp">
+      <Filter>systems\gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="r4interiorAreaComponent.cpp">
+      <Filter>systems\map</Filter>
+    </ClCompile>
+    <ClCompile Include="questSpawnVehicleBlock.cpp">
+      <Filter>systems\quest\blocks</Filter>
+    </ClCompile>
+    <ClCompile Include="menuEvents.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="r4Kinect.cpp">
+      <Filter>kinect</Filter>
+    </ClCompile>
+    <ClCompile Include="r4GameAnalyzer.cpp">
+      <Filter>analyzer</Filter>
+    </ClCompile>
+    <ClCompile Include="r4ItemAnalyzer.cpp">
+      <Filter>analyzer</Filter>
+    </ClCompile>
+    <ClCompile Include="r4ResourceAnalyzer.cpp">
+      <Filter>analyzer</Filter>
+    </ClCompile>
+    <ClCompile Include="mapFastTravel.cpp">
+      <Filter>systems\map</Filter>
+    </ClCompile>
+    <ClCompile Include="r4CommonAnalyzer.cpp">
+      <Filter>analyzer</Filter>
+    </ClCompile>
+    <ClCompile Include="r4StartupAnalyzer.cpp">
+      <Filter>analyzer</Filter>
+    </ClCompile>
+    <ClCompile Include="r4GameDebuggerPlugin.cpp">
+      <Filter>debuggers</Filter>
+    </ClCompile>
+    <ClCompile Include="r4GameDebuggerCommands.cpp">
+      <Filter>debuggers</Filter>
+    </ClCompile>
+    <ClCompile Include="r4GuiAnalyzer.cpp">
+      <Filter>analyzer</Filter>
+    </ClCompile>
+    <ClCompile Include="r4MapPinEntity.cpp" />
+    <ClCompile Include="r4MemoryBudgets.cpp" />
+    <ClCompile Include="r4ReactionManager.cpp">
+      <Filter>systems\reactions</Filter>
+    </ClCompile>
+    <ClCompile Include="swarmEnvironment.cpp">
+      <Filter>ai\Swarms\humbleCritters</Filter>
+    </ClCompile>
+    <ClCompile Include="journalQuestTrackBlock.cpp">
+      <Filter>systems\Journal</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeSelectTargetOrMountByTag.cpp">
+      <Filter>ai\behTree\nodes\decorators</Filter>
+    </ClCompile>
+    <ClCompile Include="r4BehTreeNodePredefinedPath.cpp">
+      <Filter>ai\behTree\nodes\movement</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeMetanodeSetupReachability.cpp">
+      <Filter>ai\behTree\nodes\combat</Filter>
+    </ClCompile>
+    <ClCompile Include="ridingAiStorage.cpp">
+      <Filter>ai\behTree\utils\RidingAIStorage</Filter>
+    </ClCompile>
+    <ClCompile Include="getRiderOrMountHelper.cpp">
+      <Filter>ai\behTree\utils\RidingAIStorage</Filter>
+    </ClCompile>
+    <ClCompile Include="questGraphWalker.cpp">
+      <Filter>analyzer\helper</Filter>
+    </ClCompile>
+    <ClCompile Include="rainActionPointSelector.cpp">
+      <Filter>ai</Filter>
+    </ClCompile>
+    <ClCompile Include="journalQuestMonsterKnownGraphBlock.cpp">
+      <Filter>systems\Journal</Filter>
+    </ClCompile>
+    <ClCompile Include="r4popup.cpp" />
+    <ClCompile Include="moveOnRoadSteering.cpp">
+      <Filter>movement\steering</Filter>
+    </ClCompile>
+    <ClCompile Include="tutorial.cpp">
+      <Filter>systems\tutorial</Filter>
+    </ClCompile>
+    <ClCompile Include="w3Boat.cpp">
+      <Filter>vehicle</Filter>
+    </ClCompile>
+    <ClCompile Include="questSpawnNotStreamedBoatBlock.cpp">
+      <Filter>systems\quest\blocks</Filter>
+    </ClCompile>
+    <ClCompile Include="r4GwintManager.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeBroadcastReactionScene.cpp">
+      <Filter>ai\behTree\nodes\community\reactions</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeConditionSpeech.cpp">
+      <Filter>ai\behTree\nodes\community\reactions</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeSpeech.cpp">
+      <Filter>ai\behTree\nodes\community\reactions</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeDisableTalkInteraction.cpp">
+      <Filter>ai\behTree\nodes\community</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeConditionIsTargetThePlayer.cpp">
+      <Filter>ai\behTree\nodes\combat</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeConditionIsInInterior.cpp">
+      <Filter>ai\behTree\nodes\decorators</Filter>
+    </ClCompile>
+    <ClCompile Include="minimapManager.cpp" />
+    <ClCompile Include="commonMapStructs.cpp" />
+    <ClCompile Include="beehive.cpp">
+      <Filter>combat</Filter>
+    </ClCompile>
+    <ClCompile Include="toxicCloud.cpp">
+      <Filter>combat</Filter>
+    </ClCompile>
+    <ClCompile Include="r4HumanoidCombatComponent.cpp">
+      <Filter>combat</Filter>
+    </ClCompile>
+    <ClCompile Include="questResetScriptedActionsBlock.cpp">
+      <Filter>systems\quest\blocks\scriptedActions</Filter>
+    </ClCompile>
+    <ClCompile Include="spawnTreeInitializerFlight.cpp">
+      <Filter>systems\encounter\initializers</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeDynamicFlightIdle.cpp">
+      <Filter>ai\behTree\nodes\flight\idle</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeGreetingReactionScene.cpp">
+      <Filter>ai\behTree\nodes\community</Filter>
+    </ClCompile>
+    <ClCompile Include="r4DLCDefinitionsEntitieTemplatesMounter.cpp">
+      <Filter>dlc</Filter>
+    </ClCompile>
+    <ClCompile Include="r4DLCDefinitionsMounter.cpp">
+      <Filter>dlc</Filter>
+    </ClCompile>
+    <ClCompile Include="boatSpawner.cpp">
+      <Filter>vehicle</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeDecoratorHLCombatWildHorse.cpp">
+      <Filter>ai\behTree\nodes\combat</Filter>
+    </ClCompile>
+    <ClCompile Include="effectComponent.cpp">
+      <Filter>systems\gameplayEffects</Filter>
+    </ClCompile>
+    <ClCompile Include="questMapPinsResource.cpp" />
+    <ClCompile Include="dynamicTagsContainer.cpp">
+      <Filter>ai\dynamicTags</Filter>
+    </ClCompile>
+    <ClCompile Include="r4DLCJournalMounter.cpp">
+      <Filter>dlc</Filter>
+    </ClCompile>
+    <ClCompile Include="r4DLCRewardsMounter.cpp">
+      <Filter>dlc</Filter>
+    </ClCompile>
+    <ClCompile Include="r4DLCScaleformContentMounter.cpp">
+      <Filter>dlc</Filter>
+    </ClCompile>
+    <ClCompile Include="r4PlayerTargeting.cpp">
+      <Filter>player</Filter>
+    </ClCompile>
+    <ClCompile Include="r4PlayerTypes.cpp">
+      <Filter>player</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeDecoratorFindLandingSpot.cpp">
+      <Filter>ai\behTree\nodes\flight</Filter>
+    </ClCompile>
+    <ClCompile Include="abilityManager.cpp">
+      <Filter>rpg</Filter>
+    </ClCompile>
+    <ClCompile Include="gameParams.cpp">
+      <Filter>rpg</Filter>
+    </ClCompile>
+    <ClCompile Include="r4Enums.cpp">
+      <Filter>rpg</Filter>
+    </ClCompile>
+    <ClCompile Include="r4MapTracking.cpp">
+      <Filter>systems\map</Filter>
+    </ClCompile>
+    <ClCompile Include="r4DLCAttitudesMounter.cpp">
+      <Filter>dlc</Filter>
+    </ClCompile>
+    <ClCompile Include="r4DLCEntityTemplateParamMounter.cpp">
+      <Filter>dlc</Filter>
+    </ClCompile>
+    <ClCompile Include="r4DLCActionPointCategoriesMounter.cpp">
+      <Filter>dlc</Filter>
+    </ClCompile>
+    <ClCompile Include="r4DLCFinishersMounter.cpp">
+      <Filter>dlc</Filter>
+    </ClCompile>
+    <ClCompile Include="r4DLCAnimationsCategoriesMounter.cpp">
+      <Filter>dlc</Filter>
+    </ClCompile>
+    <ClCompile Include="r4DLCSceneAnimationsMounter.cpp">
+      <Filter>dlc</Filter>
+    </ClCompile>
+    <ClCompile Include="r4DLCAppearanceMounter.cpp">
+      <Filter>dlc</Filter>
+    </ClCompile>
+    <ClCompile Include="cameraTools.cpp">
+      <Filter>cameras\customCamera\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="r4DLCDropPhysicsSetupMounter.cpp">
+      <Filter>dlc</Filter>
+    </ClCompile>
+    <ClCompile Include="r4DLCEntityTemplateSlotMounter.cpp">
+      <Filter>dlc</Filter>
+    </ClCompile>
+    <ClCompile Include="r4DLCVoicetagMounter.cpp">
+      <Filter>dlc</Filter>
+    </ClCompile>
+    <ClCompile Include="r4DLCResourceDefinitionsMounter.cpp">
+      <Filter>dlc</Filter>
+    </ClCompile>
+    <ClCompile Include="r4DLCWorldMounter.cpp">
+      <Filter>dlc</Filter>
+    </ClCompile>
+    <ClCompile Include="rangedWeapon.cpp">
+      <Filter>entities</Filter>
+    </ClCompile>
+    <ClCompile Include="dlcQuestMounter.cpp">
+      <Filter>dlc</Filter>
+    </ClCompile>
+    <ClCompile Include="r4DLCDefinitionsNGPlusMounter.cpp">
+      <Filter>dlc</Filter>
+    </ClCompile>
+    <ClCompile Include="r4DLCJournalEntriesMounter.cpp">
+      <Filter>dlc</Filter>
+    </ClCompile>
+    <ClCompile Include="r4DLCMappinsMounter.cpp">
+      <Filter>dlc</Filter>
+    </ClCompile>
+    <ClCompile Include="r4DLCVideoMounter.cpp">
+      <Filter>dlc</Filter>
+    </ClCompile>
+    <ClCompile Include="r4DLCAnalyzer.cpp">
+      <Filter>dlc</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeRequestItems.cpp">
+      <Filter>ai\behTree\nodes\combat</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeMetanodeOnCombatstyle.cpp">
+      <Filter>ai\behTree\nodes\combat</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeConditionHasAbility.cpp">
+      <Filter>ai\behTree\nodes\combat</Filter>
+    </ClCompile>
+    <ClCompile Include="behTreeNodeDecoratorBruxaDeath.cpp">
+      <Filter>ai\behTree\nodes\combat</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="build.h" />
+    <ClInclude Include="r4.h" />
+    <ClInclude Include="r4TypeRegistry.h" />
+    <ClInclude Include="r4QuestSystem.h">
+      <Filter>systems\quest</Filter>
+    </ClInclude>
+    <ClInclude Include="r4Game.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="damageData.h">
+      <Filter>combat</Filter>
+    </ClInclude>
+    <ClInclude Include="questBehaviorCtrlBlock.h">
+      <Filter>systems\quest\blocks\behavior</Filter>
+    </ClInclude>
+    <ClInclude Include="questBehaviorEventBlock.h">
+      <Filter>systems\quest\blocks\behavior</Filter>
+    </ClInclude>
+    <ClInclude Include="questBehaviorNotificationBlock.h">
+      <Filter>systems\quest\blocks\behavior</Filter>
+    </ClInclude>
+    <ClInclude Include="questControlledNPC.h">
+      <Filter>systems\quest\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="questBehaviorSocket.h">
+      <Filter>systems\quest\blocks</Filter>
+    </ClInclude>
+    <ClInclude Include="comboAspect.h">
+      <Filter>combat\combos</Filter>
+    </ClInclude>
+    <ClInclude Include="comboDefinition.h">
+      <Filter>combat\combos</Filter>
+    </ClInclude>
+    <ClInclude Include="comboPlayer.h">
+      <Filter>combat\combos</Filter>
+    </ClInclude>
+    <ClInclude Include="comboString.h">
+      <Filter>combat\combos</Filter>
+    </ClInclude>
+    <ClInclude Include="r4SystemOrder.h">
+      <Filter>systems</Filter>
+    </ClInclude>
+    <ClInclude Include="focusModeController.h">
+      <Filter>systems\focusMode\gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="animAttackEvent.h">
+      <Filter>combat\events</Filter>
+    </ClInclude>
+    <ClInclude Include="r4GameResource.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="witcherSword.h">
+      <Filter>combat\item</Filter>
+    </ClInclude>
+    <ClInclude Include="playerStateUseVehicle.h">
+      <Filter>player\state</Filter>
+    </ClInclude>
+    <ClInclude Include="r4Player.h">
+      <Filter>player</Filter>
+    </ClInclude>
+    <ClInclude Include="mapPinData.h">
+      <Filter>systems\map</Filter>
+    </ClInclude>
+    <ClInclude Include="worldMap.h">
+      <Filter>systems\map</Filter>
+    </ClInclude>
+    <ClInclude Include="GameplayFXMedalion.h">
+      <Filter>effects</Filter>
+    </ClInclude>
+    <ClInclude Include="gameplayFXSurfacePost.h">
+      <Filter>effects</Filter>
+    </ClInclude>
+    <ClInclude Include="horseAnimNode.h">
+      <Filter>vehicle\horse</Filter>
+    </ClInclude>
+    <ClInclude Include="vitalSpot.h">
+      <Filter>systems\focusMode\combat</Filter>
+    </ClInclude>
+    <ClInclude Include="preAttackEvent.h">
+      <Filter>animations</Filter>
+    </ClInclude>
+    <ClInclude Include="buffImmunity.h">
+      <Filter>entities</Filter>
+    </ClInclude>
+    <ClInclude Include="gameplayEffectExecutor.h">
+      <Filter>systems\gameplayEffects</Filter>
+    </ClInclude>
+    <ClInclude Include="encounterImpl.h">
+      <Filter>systems\encounter</Filter>
+    </ClInclude>
+    <ClInclude Include="alchemy.h">
+      <Filter>systems\alchemy</Filter>
+    </ClInclude>
+    <ClInclude Include="r4BoidSpecies.h">
+      <Filter>ai\Swarms</Filter>
+    </ClInclude>
+    <ClInclude Include="combatDataComponent.h">
+      <Filter>ai\behTree\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeVitalSpotActive.h">
+      <Filter>ai\behTree\nodes\combat</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeStrafing.h">
+      <Filter>ai\behTree\nodes\combat</Filter>
+    </ClInclude>
+    <ClInclude Include="r4BehTreeInstance.h">
+      <Filter>ai\behTree</Filter>
+    </ClInclude>
+    <ClInclude Include="enemiesCachedData.h">
+      <Filter>combat</Filter>
+    </ClInclude>
+    <ClInclude Include="r4NamesRegistry.h" />
+    <ClInclude Include="r4PlayerControlAction.h">
+      <Filter>player\movement</Filter>
+    </ClInclude>
+    <ClInclude Include="r4PlayerController.h">
+      <Filter>player\movement</Filter>
+    </ClInclude>
+    <ClInclude Include="r4PlayerLocomotionSegment.h">
+      <Filter>player\movement</Filter>
+    </ClInclude>
+    <ClInclude Include="customCamera.h">
+      <Filter>cameras\customCamera</Filter>
+    </ClInclude>
+    <ClInclude Include="customCameraControllers.h">
+      <Filter>cameras\customCamera</Filter>
+    </ClInclude>
+    <ClInclude Include="encounterMountedEntry.h">
+      <Filter>systems\encounter</Filter>
+    </ClInclude>
+    <ClInclude Include="customCameraCollision.h">
+      <Filter>cameras\customCamera</Filter>
+    </ClInclude>
+    <ClInclude Include="humbleCritterUpdateJob.h">
+      <Filter>ai\Swarms\humbleCritters</Filter>
+    </ClInclude>
+    <ClInclude Include="humbleCritterAlgorithmData.h">
+      <Filter>ai\Swarms\humbleCritters</Filter>
+    </ClInclude>
+    <ClInclude Include="humbleCrittersAI.h">
+      <Filter>ai\Swarms\humbleCritters</Filter>
+    </ClInclude>
+    <ClInclude Include="humbleCrittersLairEntity.h">
+      <Filter>ai\Swarms\humbleCritters</Filter>
+    </ClInclude>
+    <ClInclude Include="humbleCritterSound.h">
+      <Filter>ai\Swarms\humbleCritters</Filter>
+    </ClInclude>
+    <ClInclude Include="stepClipAnimationParam.h">
+      <Filter>animations\stepPlayer</Filter>
+    </ClInclude>
+    <ClInclude Include="flyingCritterAlgorithmData.h">
+      <Filter>ai\Swarms\FlyingCritters</Filter>
+    </ClInclude>
+    <ClInclude Include="flyingCrittersAI.h">
+      <Filter>ai\Swarms\FlyingCritters</Filter>
+    </ClInclude>
+    <ClInclude Include="flyingCrittersLairEntity.h">
+      <Filter>ai\Swarms\FlyingCritters</Filter>
+    </ClInclude>
+    <ClInclude Include="flyingCrittersParams.h">
+      <Filter>ai\Swarms\FlyingCritters</Filter>
+    </ClInclude>
+    <ClInclude Include="flyingCritterUpdateJob.h">
+      <Filter>ai\Swarms\FlyingCritters</Filter>
+    </ClInclude>
+    <ClInclude Include="flyingCrittersLairEntityScript.h">
+      <Filter>ai\Swarms\FlyingCritters</Filter>
+    </ClInclude>
+    <ClInclude Include="flyingSwarmGroup.h">
+      <Filter>ai\Swarms\FlyingCritters</Filter>
+    </ClInclude>
+    <ClInclude Include="flyingPoiConfig.h">
+      <Filter>ai\Swarms\FlyingCritters</Filter>
+    </ClInclude>
+    <ClInclude Include="monsterParam.h">
+      <Filter>entities</Filter>
+    </ClInclude>
+    <ClInclude Include="r4SwarmUtils.h">
+      <Filter>ai\Swarms</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeStrafingAlgorithm.h">
+      <Filter>ai\behTree\nodes\combat</Filter>
+    </ClInclude>
+    <ClInclude Include="r4SwarmSound.h">
+      <Filter>ai\Swarms\Sounds</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeConditionIsEnemyAround.h">
+      <Filter>ai\behTree\nodes\decorators</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeDecoratorSetBehaviourVariable.h">
+      <Filter>ai\behTree\nodes\decorators</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeConditionIsDead.h">
+      <Filter>ai\behTree\nodes\decorators</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityMappinsResource.h">
+      <Filter>systems\map</Filter>
+    </ClInclude>
+    <ClInclude Include="r4LootDefinitions.h">
+      <Filter>systems\loot</Filter>
+    </ClInclude>
+    <ClInclude Include="questUsedFastTravelCondition.h">
+      <Filter>systems\quest\conditions</Filter>
+    </ClInclude>
+    <ClInclude Include="questManageFastTravelBlock.h">
+      <Filter>systems\quest\blocks\map</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeAtomicForgetCombatTarget.h">
+      <Filter>ai\behTree\nodes\atomic</Filter>
+    </ClInclude>
+    <ClInclude Include="applySteeringToPlayer.h">
+      <Filter>movement\steering</Filter>
+    </ClInclude>
+    <ClInclude Include="steeringStrafing.h">
+      <Filter>movement\steering</Filter>
+    </ClInclude>
+    <ClInclude Include="fastSurround.h">
+      <Filter>movement\steering</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeTicketManager.h">
+      <Filter>ai\behTree\nodes\combat\ticket</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeScriptTicketAlgorithm.h">
+      <Filter>ai\behTree\nodes\combat\ticket</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeTicketAlgorithm.h">
+      <Filter>ai\behTree\nodes\combat\ticket</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeTicketData.h">
+      <Filter>ai\behTree\nodes\combat\ticket</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeTicketDecoratorBase.h">
+      <Filter>ai\behTree\nodes\combat\ticket</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeTicketHas.h">
+      <Filter>ai\behTree\nodes\combat\ticket</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeTicketRequest.h">
+      <Filter>ai\behTree\nodes\combat\ticket</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeTicketRelease.h">
+      <Filter>ai\behTree\nodes\combat\ticket</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeTicketLock.h">
+      <Filter>ai\behTree\nodes\combat\ticket</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeTicketGet.h">
+      <Filter>ai\behTree\nodes\combat\ticket</Filter>
+    </ClInclude>
+    <ClInclude Include="questChangeWorldBlock.h">
+      <Filter>systems\quest\blocks\map</Filter>
+    </ClInclude>
+    <ClInclude Include="manageSwitchBlock.h">
+      <Filter>systems\gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeConditionAttackersCount.h">
+      <Filter>ai\behTree\nodes\decorators</Filter>
+    </ClInclude>
+    <ClInclude Include="r4Telemetry.h">
+      <Filter>telemetry</Filter>
+    </ClInclude>
+    <ClInclude Include="r4TelemetryScriptProxy.h">
+      <Filter>telemetry</Filter>
+    </ClInclude>
+    <ClInclude Include="gameEngine.h">
+      <Filter>engine</Filter>
+    </ClInclude>
+    <ClInclude Include="gameDebugMenu.h">
+      <Filter>engine</Filter>
+    </ClInclude>
+    <ClInclude Include="journal.h">
+      <Filter>systems\Journal</Filter>
+    </ClInclude>
+    <ClInclude Include="journalCharacter.h">
+      <Filter>systems\Journal</Filter>
+    </ClInclude>
+    <ClInclude Include="journalCreature.h">
+      <Filter>systems\Journal</Filter>
+    </ClInclude>
+    <ClInclude Include="journalEvents.h">
+      <Filter>systems\Journal</Filter>
+    </ClInclude>
+    <ClInclude Include="journalGlossary.h">
+      <Filter>systems\Journal</Filter>
+    </ClInclude>
+    <ClInclude Include="journalItems.h">
+      <Filter>systems\Journal</Filter>
+    </ClInclude>
+    <ClInclude Include="journalQuest.h">
+      <Filter>systems\Journal</Filter>
+    </ClInclude>
+    <ClInclude Include="journalQuestBlock.h">
+      <Filter>systems\Journal</Filter>
+    </ClInclude>
+    <ClInclude Include="journalQuestHuntingBlock.h">
+      <Filter>systems\Journal</Filter>
+    </ClInclude>
+    <ClInclude Include="journalQuestMappinStateBlock.h">
+      <Filter>systems\Journal</Filter>
+    </ClInclude>
+    <ClInclude Include="journalQuestObjectiveCounterGraphBlock.h">
+      <Filter>systems\Journal</Filter>
+    </ClInclude>
+    <ClInclude Include="journalStoryBook.h">
+      <Filter>systems\Journal</Filter>
+    </ClInclude>
+    <ClInclude Include="journalTutorial.h">
+      <Filter>systems\Journal</Filter>
+    </ClInclude>
+    <ClInclude Include="r4JournalManager.h">
+      <Filter>systems\Journal</Filter>
+    </ClInclude>
+    <ClInclude Include="questUICondition.h">
+      <Filter>systems\quest\conditions</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeRidingManager.h">
+      <Filter>ai\behTree\nodes\decorators</Filter>
+    </ClInclude>
+    <ClInclude Include="w3GenericVehicle.h">
+      <Filter>vehicle</Filter>
+    </ClInclude>
+    <ClInclude Include="horsePrediction.h">
+      <Filter>vehicle\horse</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeRiderIdleRoot.h">
+      <Filter>ai\behTree\nodes\community</Filter>
+    </ClInclude>
+    <ClInclude Include="questRiderScriptedActionsBlock.h">
+      <Filter>systems\quest\blocks\scriptedActions</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeRiderForced.h">
+      <Filter>ai\behTree\nodes\structurals</Filter>
+    </ClInclude>
+    <ClInclude Include="r4AiParameters.h">
+      <Filter>ai\behTree\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeRiderSpecific.h">
+      <Filter>ai\behTree\nodes\atomic</Filter>
+    </ClInclude>
+    <ClInclude Include="r4GuiManager.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="r4Menu.h">
+      <Filter>gui\menu</Filter>
+    </ClInclude>
+    <ClInclude Include="r4Hud.h">
+      <Filter>gui\hud</Filter>
+    </ClInclude>
+    <ClInclude Include="r4HudModule.h">
+      <Filter>gui\hud</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeDecoratorChangeBehaviorGraph.h">
+      <Filter>ai\behTree\nodes\decorators</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeVitalSpotActive.h">
+      <Filter>ai\behTree\nodes\decorators</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeDecoratorRiderWaitHorseScriptedAction.h">
+      <Filter>ai\behTree\nodes\decorators</Filter>
+    </ClInclude>
+    <ClInclude Include="questPlayAnimationBlock.h">
+      <Filter>systems\quest\blocks</Filter>
+    </ClInclude>
+    <ClInclude Include="volumePathManager.h">
+      <Filter>ai\volumePath</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeDecoratorCluePath.h">
+      <Filter>ai\behTree\nodes\decorators</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeCluePathData.h">
+      <Filter>ai\behTree\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="dynamicClueStorage.h">
+      <Filter>systems\focusMode\gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeCombatTargetSelection.h">
+      <Filter>ai\behTree\nodes\combat</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeCombatTargetSelectionBase.h">
+      <Filter>ai\behTree\nodes\combat</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeClosestNonFriendlyTargetSelection.h">
+      <Filter>ai\behTree\nodes\combat</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeNodePredefinedPathRubberBand.h">
+      <Filter>ai\behTree\nodes\movement</Filter>
+    </ClInclude>
+    <ClInclude Include="horseSteering.h">
+      <Filter>movement\steering</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeDecoratorHorseSpeedManager.h">
+      <Filter>ai\behTree\nodes\movement</Filter>
+    </ClInclude>
+    <ClInclude Include="r4BehTreeVarEnums.h">
+      <Filter>ai\behTree\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="r4DebugDataService.h">
+      <Filter>telemetry</Filter>
+    </ClInclude>
+    <ClInclude Include="commonMapManager.h">
+      <Filter>systems\map</Filter>
+    </ClInclude>
+    <ClInclude Include="r4DebugDataServiceLogOutputDevice.h">
+      <Filter>telemetry</Filter>
+    </ClInclude>
+    <ClInclude Include="areaMappinsResource.h">
+      <Filter>systems\map</Filter>
+    </ClInclude>
+    <ClInclude Include="instantMountPartySpawnOrganizer.h">
+      <Filter>systems\encounter</Filter>
+    </ClInclude>
+    <ClInclude Include="profilerConsoleCommands.h">
+      <Filter>profiler</Filter>
+    </ClInclude>
+    <ClInclude Include="r4CameraDirector.h">
+      <Filter>cameras</Filter>
+    </ClInclude>
+    <ClInclude Include="r4LootManager.h">
+      <Filter>systems\loot</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeDecoratorHLCombat.h">
+      <Filter>ai\behTree\nodes\combat</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeHLCombatLock.h">
+      <Filter>ai\behTree\nodes\combat</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeFlee.h">
+      <Filter>ai\behTree\nodes\combat</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeDecoratorRiderHorseReachability.h">
+      <Filter>ai\behTree\nodes\decorators</Filter>
+    </ClInclude>
+    <ClInclude Include="ticketSourceProvider.h">
+      <Filter>ai\behTree\utils\tickets</Filter>
+    </ClInclude>
+    <ClInclude Include="ticketSystem.h">
+      <Filter>ai\behTree\utils\tickets</Filter>
+    </ClInclude>
+    <ClInclude Include="ticketSystemConfiguration.h">
+      <Filter>ai\behTree\utils\tickets</Filter>
+    </ClInclude>
+    <ClInclude Include="ticketGlobalSource.h">
+      <Filter>ai\behTree\utils\tickets</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeSailorFollowPath.h">
+      <Filter>ai\behTree\nodes\movement</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeSailorMoveTo.h">
+      <Filter>ai\behTree\nodes\movement</Filter>
+    </ClInclude>
+    <ClInclude Include="customSceneEvents.h" />
+    <ClInclude Include="customCSEvents.h" />
+    <ClInclude Include="swarmCellMap.h">
+      <Filter>ai\Swarms</Filter>
+    </ClInclude>
+    <ClInclude Include="cityLightManager.h">
+      <Filter>systems\lights</Filter>
+    </ClInclude>
+    <ClInclude Include="gameplayLightComponent.h">
+      <Filter>systems\lights</Filter>
+    </ClInclude>
+    <ClInclude Include="r4GlobalEventsScriptsDispatcher.h">
+      <Filter>systems\gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="carryableItemsRegistry.h">
+      <Filter>ai\caryingItems</Filter>
+    </ClInclude>
+    <ClInclude Include="carryableItemsStorePoint.h">
+      <Filter>ai\caryingItems</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeCarryingItemData.h">
+      <Filter>ai\behTree\nodes\community\carryingItems</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeFindSourceItemStoreDecorator.h">
+      <Filter>ai\behTree\nodes\community\carryingItems</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeFindDestinyItemStoreDecorator.h">
+      <Filter>ai\behTree\nodes\community\carryingItems</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeCarryingItemPick.h">
+      <Filter>ai\behTree\nodes\community\carryingItems</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeCarryingItemDrop.h">
+      <Filter>ai\behTree\nodes\community\carryingItems</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeCarryingItemBaseNode.h">
+      <Filter>ai\behTree\nodes\community\carryingItems</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeCarryingItemBaseDecorator.h">
+      <Filter>ai\behTree\nodes\community\carryingItems</Filter>
+    </ClInclude>
+    <ClInclude Include="fistfightMinigame.h" />
+    <ClInclude Include="gwintMinigame.h">
+      <Filter>systems\Minigames</Filter>
+    </ClInclude>
+    <ClInclude Include="mainMenuController.h" />
+    <ClInclude Include="behTreeNodeVitalSpotActive.h">
+      <Filter>ai\behTree\nodes\combat</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeNodePCReleaseControl.h">
+      <Filter>ai\behTree\nodes\pc</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeNodePCLockControl.h">
+      <Filter>ai\behTree\nodes\pc</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeConditionShouldPursueCombatTarget.h">
+      <Filter>ai\behTree\nodes\combat</Filter>
+    </ClInclude>
+    <ClInclude Include="r4CreateEntityManager.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="riderSpawnTreeInitializers.h">
+      <Filter>systems\encounter\initializers</Filter>
+    </ClInclude>
+    <ClInclude Include="questCombatManagerBlock.h">
+      <Filter>systems\quest\blocks\scriptedActions</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeDynamicCombatStyle.h">
+      <Filter>ai\behTree\nodes\combat</Filter>
+    </ClInclude>
+    <ClInclude Include="r4SecondScreenManagerScriptProxy.h">
+      <Filter>secondscreen</Filter>
+    </ClInclude>
+    <ClInclude Include="r4SecondScreenManager.h">
+      <Filter>secondscreen</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeAtomicFlight.h">
+      <Filter>ai\behTree\nodes\flight</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeAtomicFlyAround.h">
+      <Filter>ai\behTree\nodes\flight</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeAtomicFlyTo.h">
+      <Filter>ai\behTree\nodes\flight</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeFlightData.h">
+      <Filter>ai\behTree\nodes\flight</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeDecoratorFlight.h">
+      <Filter>ai\behTree\nodes\flight</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeDecoratorGlide.h">
+      <Filter>ai\behTree\nodes\flight</Filter>
+    </ClInclude>
+    <ClInclude Include="r4ActionPointSelector.h">
+      <Filter>ai\behTree\community</Filter>
+    </ClInclude>
+    <ClInclude Include="w2saveImporter.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="journalPlace.h">
+      <Filter>systems\Journal</Filter>
+    </ClInclude>
+    <ClInclude Include="r4journalPlaceEntity.h">
+      <Filter>systems\gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="r4interiorAreaComponent.h">
+      <Filter>systems\map</Filter>
+    </ClInclude>
+    <ClInclude Include="questSpawnVehicleBlock.h">
+      <Filter>systems\quest\blocks</Filter>
+    </ClInclude>
+    <ClInclude Include="menuEvents.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="r4Kinect.h">
+      <Filter>kinect</Filter>
+    </ClInclude>
+    <ClInclude Include="mapFastTravel.h">
+      <Filter>systems\map</Filter>
+    </ClInclude>
+    <ClInclude Include="r4GameDebuggerPlugin.h">
+      <Filter>debuggers</Filter>
+    </ClInclude>
+    <ClInclude Include="r4GameDebuggerCommands.h">
+      <Filter>debuggers</Filter>
+    </ClInclude>
+    <ClInclude Include="r4MapPinEntity.h" />
+    <ClInclude Include="r4MemoryBudgets.h" />
+    <ClInclude Include="r4ReactionManager.h">
+      <Filter>systems\reactions</Filter>
+    </ClInclude>
+    <ClInclude Include="swarmEnvironment.h">
+      <Filter>ai\Swarms\humbleCritters</Filter>
+    </ClInclude>
+    <ClInclude Include="journalQuestTrackBlock.h">
+      <Filter>systems\Journal</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeSelectTargetOrMountByTag.h">
+      <Filter>ai\behTree\nodes\decorators</Filter>
+    </ClInclude>
+    <ClInclude Include="r4BehTreeNodePredefinedPath.h">
+      <Filter>ai\behTree\nodes\movement</Filter>
+    </ClInclude>
+    <ClInclude Include="ridingAiStorage.h">
+      <Filter>ai\behTree\utils\RidingAIStorage</Filter>
+    </ClInclude>
+    <ClInclude Include="getRiderOrMountHelper.h">
+      <Filter>ai\behTree\utils\RidingAIStorage</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeMetanodeSetupReachability.h">
+      <Filter>ai\behTree\nodes\combat</Filter>
+    </ClInclude>
+    <ClInclude Include="questGraphWalker.h">
+      <Filter>analyzer\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="rainActionPointSelector.h">
+      <Filter>ai</Filter>
+    </ClInclude>
+    <ClInclude Include="journalQuestMonsterKnownGraphBlock.h">
+      <Filter>systems\Journal</Filter>
+    </ClInclude>
+    <ClInclude Include="r4popup.h" />
+    <ClInclude Include="moveOnRoadSteering.h">
+      <Filter>movement\steering</Filter>
+    </ClInclude>
+    <ClInclude Include="tutorial.h">
+      <Filter>systems\tutorial</Filter>
+    </ClInclude>
+    <ClInclude Include="w3Boat.h">
+      <Filter>vehicle</Filter>
+    </ClInclude>
+    <ClInclude Include="questSpawnNotStreamedBoatBlock.h">
+      <Filter>systems\quest\blocks</Filter>
+    </ClInclude>
+    <ClInclude Include="r4GwintManager.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeBroadcastReactionScene.h">
+      <Filter>ai\behTree\nodes\community\reactions</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeConditionSpeech.h">
+      <Filter>ai\behTree\nodes\community\reactions</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeSpeech.h">
+      <Filter>ai\behTree\nodes\community\reactions</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeDisableTalkInteraction.h">
+      <Filter>ai\behTree\nodes\community</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeConditionIsTargetThePlayer.h">
+      <Filter>ai\behTree\nodes\combat</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeConditionIsInInterior.h">
+      <Filter>ai\behTree\nodes\decorators</Filter>
+    </ClInclude>
+    <ClInclude Include="minimapManager.h" />
+    <ClInclude Include="commonMapStructs.h" />
+    <ClInclude Include="beehive.h">
+      <Filter>combat</Filter>
+    </ClInclude>
+    <ClInclude Include="toxicCloud.h">
+      <Filter>combat</Filter>
+    </ClInclude>
+    <ClInclude Include="r4HumanoidCombatComponent.h">
+      <Filter>combat</Filter>
+    </ClInclude>
+    <ClInclude Include="questResetScriptedActionsBlock.h">
+      <Filter>systems\quest\blocks\scriptedActions</Filter>
+    </ClInclude>
+    <ClInclude Include="spawnTreeInitializerFlight.h">
+      <Filter>systems\encounter\initializers</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeDynamicFlightIdle.h">
+      <Filter>ai\behTree\nodes\flight\idle</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeGreetingReactionScene.h">
+      <Filter>ai\behTree\nodes\community</Filter>
+    </ClInclude>
+    <ClInclude Include="r4DLCDefinitionsEntitieTemplatesMounter.h">
+      <Filter>dlc</Filter>
+    </ClInclude>
+    <ClInclude Include="r4DLCDefinitionsMounter.h">
+      <Filter>dlc</Filter>
+    </ClInclude>
+    <ClInclude Include="boatSpawner.h">
+      <Filter>vehicle</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeDecoratorHLCombatWildHorse.h">
+      <Filter>ai\behTree\nodes\combat</Filter>
+    </ClInclude>
+    <ClInclude Include="effectComponent.h">
+      <Filter>systems\gameplayEffects</Filter>
+    </ClInclude>
+    <ClInclude Include="questMapPinsResource.h" />
+    <ClInclude Include="dynamicTagsContainer.h">
+      <Filter>ai\dynamicTags</Filter>
+    </ClInclude>
+    <ClInclude Include="r4DLCJournalMounter.h">
+      <Filter>dlc</Filter>
+    </ClInclude>
+    <ClInclude Include="r4DLCRewardsMounter.h">
+      <Filter>dlc</Filter>
+    </ClInclude>
+    <ClInclude Include="r4DLCScaleformContentMounter.h">
+      <Filter>dlc</Filter>
+    </ClInclude>
+    <ClInclude Include="r4PlayerTargeting.h">
+      <Filter>player</Filter>
+    </ClInclude>
+    <ClInclude Include="r4PlayerTypes.h">
+      <Filter>player</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeDecoratorFindLandingSpot.h">
+      <Filter>ai\behTree\nodes\flight</Filter>
+    </ClInclude>
+    <ClInclude Include="abilityManager.h">
+      <Filter>rpg</Filter>
+    </ClInclude>
+    <ClInclude Include="gameParams.h">
+      <Filter>rpg</Filter>
+    </ClInclude>
+    <ClInclude Include="r4MapTracking.h">
+      <Filter>systems\map</Filter>
+    </ClInclude>
+    <ClInclude Include="r4Enums.h">
+      <Filter>rpg</Filter>
+    </ClInclude>
+    <ClInclude Include="r4DLCAttitudesMounter.h">
+      <Filter>dlc</Filter>
+    </ClInclude>
+    <ClInclude Include="r4DLCActionPointCategoriesMounter.h">
+      <Filter>dlc</Filter>
+    </ClInclude>
+    <ClInclude Include="r4DLCEntityTemplateParamMounter.h">
+      <Filter>dlc</Filter>
+    </ClInclude>
+    <ClInclude Include="r4DLCFinishersMounter.h">
+      <Filter>dlc</Filter>
+    </ClInclude>
+    <ClInclude Include="r4DLCAnimationsCategoriesMounter.h">
+      <Filter>dlc</Filter>
+    </ClInclude>
+    <ClInclude Include="r4DLCSceneAnimationsMounter.h">
+      <Filter>dlc</Filter>
+    </ClInclude>
+    <ClInclude Include="r4DLCAppearanceMounter.h">
+      <Filter>dlc</Filter>
+    </ClInclude>
+    <ClInclude Include="cameraTools.h">
+      <Filter>cameras\customCamera\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="r4DLCDropPhysicsSetupMounter.h">
+      <Filter>dlc</Filter>
+    </ClInclude>
+    <ClInclude Include="r4DLCEntityTemplateSlotMounter.h">
+      <Filter>dlc</Filter>
+    </ClInclude>
+    <ClInclude Include="r4DLCVoicetagMounter.h">
+      <Filter>dlc</Filter>
+    </ClInclude>
+    <ClInclude Include="r4DLCResourceDefinitionsMounter.h">
+      <Filter>dlc</Filter>
+    </ClInclude>
+    <ClInclude Include="dlcQuestMounter.h">
+      <Filter>dlc</Filter>
+    </ClInclude>
+    <ClInclude Include="r4DLCWorldMounter.h">
+      <Filter>dlc</Filter>
+    </ClInclude>
+    <ClInclude Include="rangedWeapon.h">
+      <Filter>entities</Filter>
+    </ClInclude>
+    <ClInclude Include="r4DLCDefinitionsNGPlusMounter.h">
+      <Filter>dlc</Filter>
+    </ClInclude>
+    <ClInclude Include="r4DLCJournalEntriesMounter.h">
+      <Filter>dlc</Filter>
+    </ClInclude>
+    <ClInclude Include="r4DLCMappinsMounter.h">
+      <Filter>dlc</Filter>
+    </ClInclude>
+    <ClInclude Include="r4DLCVideoMounter.h">
+      <Filter>dlc</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeRequestItems.h">
+      <Filter>ai\behTree\nodes\combat</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeMetanodeOnCombatstyle.h">
+      <Filter>ai\behTree\nodes\combat</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeConditionHasAbility.h">
+      <Filter>ai\behTree\nodes\combat</Filter>
+    </ClInclude>
+    <ClInclude Include="behTreeNodeDecoratorBruxaDeath.h">
+      <Filter>ai\behTree\nodes\combat</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="systems">
+      <UniqueIdentifier>{796dacfd-f3f8-4132-91ee-018df5ae236b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="npc">
+      <UniqueIdentifier>{ff31fbda-3f87-4330-9411-74a183f9879a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="player">
+      <UniqueIdentifier>{938a158d-93fc-4013-b320-2f8c28cfe425}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ai">
+      <UniqueIdentifier>{a5b42e04-7bc7-486f-983b-66d8e0258b61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\Minigames">
+      <UniqueIdentifier>{8adb5b13-cc64-45cf-9bfc-aa05237b69c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\Journal">
+      <UniqueIdentifier>{b893041c-c4d4-4fe1-8c37-bd488cd7c3b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\quest">
+      <UniqueIdentifier>{09e5e2e6-040b-4811-8688-7dacbed2b1f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game">
+      <UniqueIdentifier>{8c6fd4e7-26e1-449c-96b9-9617c048cd75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="combat">
+      <UniqueIdentifier>{fb979f85-7f13-4b04-b05a-40db0ca80d42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\quest\blocks">
+      <UniqueIdentifier>{f8eb6443-e4e3-4f8d-8319-586965edfa11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\quest\blocks\behavior">
+      <UniqueIdentifier>{9d97c788-6ca7-4457-a304-fda4522f376f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\quest\utils">
+      <UniqueIdentifier>{6188430b-e91f-4c6f-939c-d95dc4a50992}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\quest\blocks\map">
+      <UniqueIdentifier>{735fb903-95c5-4e1f-a2d2-6531a9ffc1bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\quest\conditions">
+      <UniqueIdentifier>{5588b544-b031-45a5-9dad-6a71782947ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\encounter">
+      <UniqueIdentifier>{3911ef53-8793-4fdb-a877-247b548056ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="combat\combos">
+      <UniqueIdentifier>{0d041b4f-b538-488d-9ea5-467cdbfc2751}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\map">
+      <UniqueIdentifier>{f2f8875b-0709-4460-a657-344583077566}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cameras">
+      <UniqueIdentifier>{1c23a43a-3102-473c-904e-3323d8b70a72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\focusMode">
+      <UniqueIdentifier>{7c845536-319e-4b11-8785-35952f28b9dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\focusMode\gameplay">
+      <UniqueIdentifier>{d37ebe61-b31b-4e26-a750-ee73f6ae9602}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\focusMode\combat">
+      <UniqueIdentifier>{ce9933de-1f2c-4971-b785-253515bff833}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="combat\events">
+      <UniqueIdentifier>{f0fdf90b-07e4-49eb-9f2c-4f8599fa50f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gui">
+      <UniqueIdentifier>{469d4554-f378-4088-94a7-6e2f6f900c24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="combat\item">
+      <UniqueIdentifier>{62faef31-14bc-457f-8e52-5f8960df4128}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="player\state">
+      <UniqueIdentifier>{ceae1025-b995-4132-a667-1f64e91ac3d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="animations">
+      <UniqueIdentifier>{490a749b-2e6a-4a02-a7ea-7d59837d8739}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="effects">
+      <UniqueIdentifier>{5a5430a9-cf51-4798-8d16-814cd2fc38e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vehicle">
+      <UniqueIdentifier>{3c455fda-7602-4967-a25a-2d96abc01c87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vehicle\horse">
+      <UniqueIdentifier>{d2db3654-49cc-442e-abe9-cb194d4d0a33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="entities">
+      <UniqueIdentifier>{c4da4d8d-0afa-44b8-bf02-cf8c7626ea67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\gameplayEffects">
+      <UniqueIdentifier>{f5551e06-c272-4895-bb2f-58734c79ea83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\alchemy">
+      <UniqueIdentifier>{08be1d95-8243-4793-afcb-1ffdb5379bf3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="player\movement">
+      <UniqueIdentifier>{0f7adfc2-553b-4be0-8288-f486b923c224}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ai\behTree">
+      <UniqueIdentifier>{ff0edf63-2dbd-4322-8f70-18c6adc831e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ai\behTree\nodes">
+      <UniqueIdentifier>{1a003026-9682-4363-96c9-32d0a95cefe4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ai\behTree\utils">
+      <UniqueIdentifier>{dfc5385a-3cdd-4990-a8bf-e65e16499cbf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ai\behTree\nodes\combat">
+      <UniqueIdentifier>{e536efed-c62b-4f8f-9065-f72d07d433a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cameras\customCamera">
+      <UniqueIdentifier>{3eb2baf3-9abc-4238-a3a1-a174a12e2a33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ai\Swarms">
+      <UniqueIdentifier>{91745325-9cb1-429b-8634-66c375188870}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ai\Swarms\humbleCritters">
+      <UniqueIdentifier>{cc80c93a-e1ad-49ba-ad68-ddafc1e624c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ai\Swarms\FlyingCritters">
+      <UniqueIdentifier>{b29b1821-a77e-4240-b190-1c155879f00d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="animations\stepPlayer">
+      <UniqueIdentifier>{a60ddd46-640c-4160-8a12-a8cb737af0ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ai\Swarms\Sounds">
+      <UniqueIdentifier>{87c332e9-0e88-4a0f-85eb-fdeaf26c58b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ai\behTree\nodes\decorators">
+      <UniqueIdentifier>{6a74c4d0-e3df-450c-883e-bac4e07ee3b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ai\behTree\nodes\community">
+      <UniqueIdentifier>{ace3b930-3a6e-4f02-90b0-96cd3ee1e623}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\loot">
+      <UniqueIdentifier>{e0c64706-60ac-4a49-a01d-dededccb58d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ai\behTree\nodes\atomic">
+      <UniqueIdentifier>{bff13878-a99b-4f68-8a6a-4517eb54ad0a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="movement">
+      <UniqueIdentifier>{8e38d784-9564-47af-b8f4-e4a2b4b4379f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="movement\steering">
+      <UniqueIdentifier>{3153e8ac-b6f5-43fa-84bf-34dbe3f18feb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ai\behTree\nodes\combat\ticket">
+      <UniqueIdentifier>{2612f633-8f54-4be3-8f2c-0140e541a58d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\gameplay">
+      <UniqueIdentifier>{89508379-c423-4751-a993-390845a12b62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="telemetry">
+      <UniqueIdentifier>{1baba25a-080e-49ea-a246-94f96b16c326}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="engine">
+      <UniqueIdentifier>{93ada0e2-d9d7-404b-be6e-f0bbb01c1141}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\quest\blocks\scriptedActions">
+      <UniqueIdentifier>{faf8f4ef-cb54-48e8-a51a-7e97ea98b282}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ai\behTree\nodes\structurals">
+      <UniqueIdentifier>{58907fe8-21a8-46a9-8a34-6b061388aade}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\encounter\initializers">
+      <UniqueIdentifier>{51e2bf3b-78f2-4342-a2f6-a4b98d2e7fc9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gui\hud">
+      <UniqueIdentifier>{fe2205c9-7128-4c13-80df-e19358ceb1cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gui\menu">
+      <UniqueIdentifier>{501f1d0f-962f-48b0-89eb-c175d702d09d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ai\behTree\nodes\movement">
+      <UniqueIdentifier>{88aa5c15-ecc0-4a96-8f1f-006489d0fafa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ai\volumePath">
+      <UniqueIdentifier>{26bb0498-8c18-4a01-9d9b-e4fea8c102a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="profiler">
+      <UniqueIdentifier>{a054e90c-1de0-466c-9d6c-c62742af7a3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ai\behTree\utils\tickets">
+      <UniqueIdentifier>{d1b6eadc-6f52-4a38-840e-f31115de9e8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\lights">
+      <UniqueIdentifier>{cae04318-98d2-4d05-b65c-d35c681ce35a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ai\caryingItems">
+      <UniqueIdentifier>{147cb740-2709-41a0-8e4e-ccbe6eb0ac1c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="secondscreen">
+      <UniqueIdentifier>{3b09ab47-a583-4d7a-99c3-4a13042fc8d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ai\behTree\nodes\pc">
+      <UniqueIdentifier>{c16eca89-461f-4f4c-8cdf-9f9dcc3b08d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ai\behTree\community">
+      <UniqueIdentifier>{48e4096a-e094-44e5-abf4-dc19f0920c57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ai\behTree\nodes\community\carryingItems">
+      <UniqueIdentifier>{30ff2980-a20e-4985-a698-e605d806d496}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="kinect">
+      <UniqueIdentifier>{112a8d3d-d45b-4b6d-9c4d-48fd8cb379d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="analyzer">
+      <UniqueIdentifier>{5a73b5c4-d15c-4873-a14f-0b71be357abe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="debuggers">
+      <UniqueIdentifier>{89aea97b-0864-4323-a64c-0dc83e7803be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\reactions">
+      <UniqueIdentifier>{c31096bd-25db-4d7e-b625-2c2e611281f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ai\behTree\utils\RidingAIStorage">
+      <UniqueIdentifier>{34f72826-70d6-4cab-bec9-c7745a42a29d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="analyzer\helper">
+      <UniqueIdentifier>{ef8a66ff-2346-4356-be96-016d4e075cbb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\tutorial">
+      <UniqueIdentifier>{24d6b9da-bcc3-4df8-85ac-fb33a55c29b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ai\behTree\nodes\community\reactions">
+      <UniqueIdentifier>{6fb1c8e1-0157-4cae-9433-082f2ebd3473}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dlc">
+      <UniqueIdentifier>{405eed15-971b-496f-9c0b-b201491dae22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ai\behTree\nodes\flight">
+      <UniqueIdentifier>{877dc8b0-88ee-4df0-9185-14d9cf4b69ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ai\behTree\nodes\flight\idle">
+      <UniqueIdentifier>{15ebd7b9-b97e-4cbf-88b3-410417b21d07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ai\dynamicTags">
+      <UniqueIdentifier>{07d0af1c-9902-47ff-9d12-c506bebe0108}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="rpg">
+      <UniqueIdentifier>{d8c35f65-6907-499a-ad58-792386493612}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cameras\customCamera\Tools">
+      <UniqueIdentifier>{76d7f97c-a326-4329-aec3-f23f6b05439d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="r4Events.enum">
+      <Filter>telemetry</Filter>
+    </None>
+    <None Include="r4CommonStats.enum">
+      <Filter>telemetry</Filter>
+    </None>
+  </ItemGroup>
+</Project>

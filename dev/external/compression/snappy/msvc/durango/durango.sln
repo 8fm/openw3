@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "durango", "durango.vcxproj", "{68BB351E-AC62-4F83-8A4A-934D76AF68EA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Durango = Debug|Durango
+		No opts|Durango = No opts|Durango
+		Profile|Durango = Profile|Durango
+		Release|Durango = Release|Durango
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{68BB351E-AC62-4F83-8A4A-934D76AF68EA}.Debug|Durango.ActiveCfg = Debug|Durango
+		{68BB351E-AC62-4F83-8A4A-934D76AF68EA}.Debug|Durango.Build.0 = Debug|Durango
+		{68BB351E-AC62-4F83-8A4A-934D76AF68EA}.No opts|Durango.ActiveCfg = No opts|Durango
+		{68BB351E-AC62-4F83-8A4A-934D76AF68EA}.No opts|Durango.Build.0 = No opts|Durango
+		{68BB351E-AC62-4F83-8A4A-934D76AF68EA}.Profile|Durango.ActiveCfg = Profile|Durango
+		{68BB351E-AC62-4F83-8A4A-934D76AF68EA}.Profile|Durango.Build.0 = Profile|Durango
+		{68BB351E-AC62-4F83-8A4A-934D76AF68EA}.Release|Durango.ActiveCfg = Release|Durango
+		{68BB351E-AC62-4F83-8A4A-934D76AF68EA}.Release|Durango.Build.0 = Release|Durango
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

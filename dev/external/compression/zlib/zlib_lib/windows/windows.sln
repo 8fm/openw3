@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "windows", "windows.vcxproj", "{2AE89C2B-D011-405A-A94C-A4CABDA3A7B7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Final|Win32 = Final|Win32
+		Final|x64 = Final|x64
+		No opts|Win32 = No opts|Win32
+		No opts|x64 = No opts|x64
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2AE89C2B-D011-405A-A94C-A4CABDA3A7B7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2AE89C2B-D011-405A-A94C-A4CABDA3A7B7}.Debug|Win32.Build.0 = Debug|Win32
+		{2AE89C2B-D011-405A-A94C-A4CABDA3A7B7}.Debug|x64.ActiveCfg = Debug|x64
+		{2AE89C2B-D011-405A-A94C-A4CABDA3A7B7}.Debug|x64.Build.0 = Debug|x64
+		{2AE89C2B-D011-405A-A94C-A4CABDA3A7B7}.Final|Win32.ActiveCfg = Final|Win32
+		{2AE89C2B-D011-405A-A94C-A4CABDA3A7B7}.Final|Win32.Build.0 = Final|Win32
+		{2AE89C2B-D011-405A-A94C-A4CABDA3A7B7}.Final|x64.ActiveCfg = Final|x64
+		{2AE89C2B-D011-405A-A94C-A4CABDA3A7B7}.Final|x64.Build.0 = Final|x64
+		{2AE89C2B-D011-405A-A94C-A4CABDA3A7B7}.No opts|Win32.ActiveCfg = No opts|Win32
+		{2AE89C2B-D011-405A-A94C-A4CABDA3A7B7}.No opts|Win32.Build.0 = No opts|Win32
+		{2AE89C2B-D011-405A-A94C-A4CABDA3A7B7}.No opts|x64.ActiveCfg = No opts|x64
+		{2AE89C2B-D011-405A-A94C-A4CABDA3A7B7}.No opts|x64.Build.0 = No opts|x64
+		{2AE89C2B-D011-405A-A94C-A4CABDA3A7B7}.Release|Win32.ActiveCfg = Release|Win32
+		{2AE89C2B-D011-405A-A94C-A4CABDA3A7B7}.Release|Win32.Build.0 = Release|Win32
+		{2AE89C2B-D011-405A-A94C-A4CABDA3A7B7}.Release|x64.ActiveCfg = Release|x64
+		{2AE89C2B-D011-405A-A94C-A4CABDA3A7B7}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

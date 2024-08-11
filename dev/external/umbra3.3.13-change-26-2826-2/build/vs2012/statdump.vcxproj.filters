@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="samples">
+      <UniqueIdentifier>{98366AF0-66FF-3C41-B5B6-B031CBD51FDE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="samples\resources">
+      <UniqueIdentifier>{23E8A07A-A861-9B45-A0BF-B7146E0C7652}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils">
+      <UniqueIdentifier>{3F753E4A-DC7F-B747-8FAE-3CBF6DF26866}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils\statdump">
+      <UniqueIdentifier>{5418213D-1424-5C46-99EE-E002BBA98BB5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\samples\resources\testkey.pfx">
+      <Filter>samples\resources</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\samples\resources\Logo.png">
+      <Filter>samples\resources</Filter>
+    </Image>
+    <Image Include="..\..\samples\resources\SmallLogo.png">
+      <Filter>samples\resources</Filter>
+    </Image>
+    <Image Include="..\..\samples\resources\SplashScreen.png">
+      <Filter>samples\resources</Filter>
+    </Image>
+    <Image Include="..\..\samples\resources\StoreLogo.png">
+      <Filter>samples\resources</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\utils\statdump\umbraStatDump.cpp">
+      <Filter>utils\statdump</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

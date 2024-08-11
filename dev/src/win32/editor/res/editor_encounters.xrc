@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<resource xmlns="http://www.wxwindows.org/wxxrc" version="2.3.0.1">
+	<object class="wxFrame" name="EncounterEditor">
+		<style>wxDEFAULT_FRAME_STYLE|wxCLIP_CHILDREN|wxTAB_TRAVERSAL</style>
+		<size>749,471</size>
+		<title>Encounter Editor</title>
+		<centered>1</centered>
+		<aui_managed>0</aui_managed>
+		<object class="wxMenuBar" name="m_menubar1">
+			<label>MyMenuBar</label>
+			<object class="wxMenu" name="m_menu2">
+				<label>_File</label>
+				<object class="wxMenuItem" name="fileSave">
+					<label>_Save\tCtrl+S</label>
+					<help></help>
+				</object>
+			</object>
+			<object class="wxMenu" name="m_menu1">
+				<label>_Edit</label>
+				<object class="wxMenuItem" name="editUndo">
+					<label>Undo\tCtrl+Z</label>
+					<help></help>
+				</object>
+				<object class="wxMenuItem" name="editRedo">
+					<label>Redo\tCtrl+Y</label>
+					<help></help>
+				</object>
+				<object class="wxMenuItem" name="editDelete">
+					<label>Remove selection\tDel</label>
+					<help></help>
+				</object>
+			</object>
+			<object class="wxMenu" name="m_menu3">
+				<label>_View</label>
+				<object class="wxMenuItem" name="viewAutoLayout">
+					<label>_Auto layout\tCtrl+Space</label>
+					<help></help>
+				</object>
+				<object class="wxMenuItem" name="viewZoomExtents">
+					<label>_Zoom extents\tF5</label>
+					<help></help>
+				</object>
+			</object>
+		</object>
+		<object class="wxSplitterWindow" name="propsSplitter">
+			<style>wxSP_3D|wxSP_LIVE_UPDATE</style>
+			<sashpos>300</sashpos>
+			<gravity>0</gravity>
+			<minsize>100</minsize>
+			<orientation>vertical</orientation>
+			<object class="wxPanel" name="propertiesPanel">
+				<style>wxTAB_TRAVERSAL</style>
+			</object>
+			<object class="wxPanel" name="treePanel">
+				<style>wxTAB_TRAVERSAL</style>
+			</object>
+		</object>
+	</object>
+</resource>

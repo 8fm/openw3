@@ -1,0 +1,2640 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" TreatAsLocalProperty="OutDir;TargetName;IntDir;PlatformToolset">
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedConfigurationSetup.props))\SharedConfigurationSetup.props" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{61B04D76-FC60-4662-9917-CE2CCD6C6B25}</ProjectGuid>
+    <RootNamespace>engine</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+    <ProjectClDirs>$(SolutionDir)../external/recast/Recast/Include;$(SolutionDir)../external/dxsdk(June2010)/Include;$(SolutionDir)../external/gfx4/Src;$(SolutionDir)../external/gfx4/Include;$(SolutionDir)../external/hk650r1/Source;$(SolutionDir)../external/wwise/include;$(SolutionDir)../external/freetype/include;$(SolutionDir)../external/PhysX3/Include;$(SolutionDir)../external/PhysX3/Include/characterkinematic;$(SolutionDir)../external/PhysX3/Include/common;$(SolutionDir)../external/PhysX3/Include/cooking;$(SolutionDir)../external/PhysX3/Include/extensions;$(SolutionDir)../external/PhysX3/Include/foundation;$(SolutionDir)../external/PhysX3/Include/geometry;$(SolutionDir)../external/PhysX3/Include/gpu;$(SolutionDir)../external/PhysX3/Include/physxvisualdebuggersdk;$(SolutionDir)../external/PhysX3/Include/pxtask;$(SolutionDir)../external/PhysX3/Include/pvd$(SolutionDir)../external/Apex/public;$(SolutionDir)../external/Apex/framework/public/;$(SolutionDir)../external/Apex/framework/public/PhysX3/;$(SolutionDir)../external/Apex/module/destructible/public;$(SolutionDir)../external/Apex/NxParameterized/public;$(SolutionDir)../external/Apex/shared/external/include;$(SolutionDir)../external/Apex/public;$(SolutionDir)../external/Apex/module/clothing/public;$(SolutionDir)../external/umbra3.3.13-change-26-2826-2/interface;$(SolutionDir)../external/PhysX3/Source;$(SolutionDir)../external/PhysX3/Source/foundation/include;$(SolutionDir)../external/PhysX3/Source/common/src;$(SolutionDir)../external/Apex/module/legacy/public;$(SolutionDir)../external/speedtree/Include;$(SolutionDir)../external/Ansel/include;</ProjectClDirs>
+  </PropertyGroup>
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.props))\Shared.props" />
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedItemGroups.props))\SharedItemGroups.props" />
+  <ItemGroup>
+    <ClCompile Include="abstractMarkerSystem.cpp" />
+    <ClCompile Include="abstractPathRater.cpp" />
+    <ClCompile Include="allocatedBehaviorGraphOutput.cpp" />
+    <ClCompile Include="apexDebugVisualizer.cpp" />
+    <ClCompile Include="appearanceComponentModifier.cpp" />
+    <ClCompile Include="attachmentUtils.cpp" />
+    <ClCompile Include="baseEngineInit.cpp" />
+    <ClCompile Include="behaviorNodeParentChild.cpp" />
+    <ClCompile Include="behaviorGraphIk2BakerNode.cpp" />
+    <ClCompile Include="behaviorGraphMimicsBoneAnimationNode.cpp" />
+    <ClCompile Include="Behavior\SharedHeaders\enumSide.cpp" />
+    <ClCompile Include="cameraFadeoutHelper.cpp" />
+    <ClCompile Include="cameraOrientedComponent.cpp" />
+    <ClCompile Include="collisionCacheBuilder.cpp" />
+    <ClCompile Include="collisionCacheAsyncReader.cpp" />
+    <ClCompile Include="collisionCacheDataFormat.cpp" />
+    <ClCompile Include="collisionCacheOptimizer.cpp" />
+    <ClCompile Include="collisionCachePreloadedData.cpp" />
+    <ClCompile Include="collisionCacheReadOnly.cpp" />
+    <ClCompile Include="commonConfigs.cpp" />
+    <ClCompile Include="componentTickManager.cpp" />
+    <ClCompile Include="containerManager.cpp" />
+    <ClCompile Include="cookedMeshEntity.cpp" />
+    <ClCompile Include="cookedSpeeches.cpp" />
+    <ClCompile Include="cookedStrings.cpp" />
+    <ClCompile Include="curveEntitySpawner.cpp" />
+    <ClCompile Include="debugPageTriggers2.cpp" />
+    <ClCompile Include="debugPageWorld.cpp" />
+    <ClCompile Include="debugServerInternalCommands.cpp" />
+    <ClCompile Include="debugServerManager.cpp" />
+    <ClCompile Include="debugServerInternalPlugin.cpp" />
+    <ClCompile Include="dependencyLoaderSwf.cpp" />
+    <ClCompile Include="destructionComponent.cpp" />
+    <ClCompile Include="dropPhysicsComponentModifier.cpp" />
+    <ClCompile Include="hwCursorManager.cpp" />
+    <ClCompile Include="hairworksHelpers.cpp" />
+    <ClCompile Include="inGameConfigBasicImplementation.cpp" />
+    <ClCompile Include="inGameConfigGroupBasic.cpp" />
+    <ClCompile Include="ingameConfigParser.cpp" />
+    <ClCompile Include="inGameConfigVarBasic.cpp" />
+    <ClCompile Include="inputMappingInGameConfig.cpp" />
+    <ClCompile Include="inputMappingSaver.cpp" />
+    <ClCompile Include="entityExternalAppearance.cpp" />
+    <ClCompile Include="memoryMetricsUsageControlWalker.cpp" />
+    <ClCompile Include="MusicSystem.cpp" />
+    <ClCompile Include="pathlibMetalinkComponent.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="pathlibLinksBuffer.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="NewFX\Tracks\fxTrackItemSetDissolve.cpp" />
+    <ClCompile Include="pathlibNode.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="entityTemplateModifier.cpp" />
+    <ClCompile Include="physicsDestructionResource.cpp" />
+    <ClCompile Include="physicsDestructionWrapper.cpp" />
+    <ClCompile Include="physicsDataProviders.cpp" />
+    <ClCompile Include="physicsTileWrapper.cpp" />
+    <ClCompile Include="scaleformMemoryDebug.cpp" />
+    <ClCompile Include="sectorPrefetchDataLoader.cpp" />
+    <ClCompile Include="sectorPrefetchGrid.cpp" />
+    <ClCompile Include="sectorPrefetchMemoryBuffer.cpp" />
+    <ClCompile Include="sectorPrefetchQuery.cpp" />
+    <ClCompile Include="sectorPrefetchRuntimeCache.cpp" />
+    <ClCompile Include="soundAmbientAreaGenerators.cpp" />
+    <ClCompile Include="soundWallaSystem.cpp" />
+    <ClCompile Include="triggerAreaEnvironmentVisibilityComponent.cpp" />
+    <ClCompile Include="traceTool.cpp" />
+    <ClCompile Include="triggerAreaExpansionPackComponent.cpp" />
+    <ClCompile Include="videoDebugHud.cpp" />
+    <ClCompile Include="debugWindowFileLoadingStats.cpp" />
+    <ClCompile Include="debugWindowFrameStats.cpp" />
+    <ClCompile Include="debugWindowInGameConfig.cpp" />
+    <ClCompile Include="debugWindowMemoryBudgets.cpp" />
+    <ClCompile Include="debugWindowMemoryClassPanel.cpp" />
+    <ClCompile Include="debugWindowMemoryHistogram.cpp" />
+    <ClCompile Include="debugWindowMemoryHistoryViewer.cpp" />
+    <ClCompile Include="debugWindowPhysicsArea.cpp" />
+    <ClCompile Include="debugWindowStreamingInstaller.cpp" />
+    <ClCompile Include="debugWindowProfilerSettings.cpp" />
+    <ClCompile Include="debugWindowTelemetryTags.cpp" />
+    <ClCompile Include="debugWindowMemoryObjects.cpp" />
+    <ClCompile Include="debugWindowTerrain.cpp" />
+    <ClCompile Include="debugWindowWorldStreaming.cpp" />
+    <ClCompile Include="decalEmitter.cpp" />
+    <ClCompile Include="dynamicFoliageComponent.cpp" />
+    <ClCompile Include="entityDismemberment.cpp" />
+    <ClCompile Include="entityStreaming.cpp" />
+    <ClCompile Include="entityStreamingProxy.cpp" />
+    <ClCompile Include="entityTemplateCookedEffect.cpp" />
+    <ClCompile Include="entityTemplatePreloadedEffects.cpp" />
+    <ClCompile Include="entityTickManager.cpp" />
+    <ClCompile Include="envProbeComponentCooking.cpp" />
+    <ClCompile Include="flashFontConfig.cpp" />
+    <ClCompile Include="flashRenderTarget.cpp" />
+    <ClCompile Include="flashRenderTargetScaleform.cpp" />
+    <ClCompile Include="foliageCellIterator.cpp" />
+    <ClCompile Include="foliageDynamicInstanceService.cpp" />
+    <ClCompile Include="foliageInstance.cpp" />
+    <ClCompile Include="fxTrackItemFlare.cpp" />
+    <ClCompile Include="gameSaveFileNoSeeks.cpp" />
+    <ClCompile Include="gameStreaming.cpp" />
+    <ClCompile Include="globalVisibilityId.cpp" />
+    <ClCompile Include="inGameConfig.cpp" />
+    <ClCompile Include="inGameConfigRefreshEvent.cpp" />
+    <ClCompile Include="inGameConfigSpecialization.cpp" />
+    <ClCompile Include="inputDeviceManager.cpp" />
+    <ClCompile Include="jobEffectPreloading.cpp" />
+    <ClCompile Include="grassCellMask.cpp" />
+    <ClCompile Include="grassOccurrenceMap.cpp" />
+    <ClCompile Include="layersEntityCompatibilityChecker.cpp" />
+    <ClCompile Include="loadingOverlay.cpp" />
+    <ClCompile Include="loadingScreen.cpp" />
+    <ClCompile Include="manualStreamingHelper.cpp" />
+    <ClCompile Include="materialCompiler.cpp" />
+    <ClCompile Include="mbParamEnvColorGroup.cpp" />
+    <ClCompile Include="memoryBudgetStorage.cpp" />
+    <ClCompile Include="memoryClassDebugColourPalette.cpp" />
+    <ClCompile Include="mergedMeshBuilder.cpp" />
+    <ClCompile Include="mergedMeshComponent.cpp" />
+    <ClCompile Include="mergedShadowMeshComponent.cpp" />
+    <ClCompile Include="mergedWorldGeometry.cpp" />
+    <ClCompile Include="mergedWorldGeometryBuilder.cpp" />
+    <ClCompile Include="mergedWorldGeometryEntity.cpp" />
+    <ClCompile Include="mergedWorldGeometryShadowData.cpp" />
+    <ClCompile Include="meshDataBuilder.cpp" />
+    <ClCompile Include="meshPacking.cpp" />
+    <ClCompile Include="meshSkeletonMappingCache.cpp" />
+    <ClCompile Include="nodeHelpers.cpp" />
+    <ClCompile Include="occlusionSystem.cpp" />
+    <ClCompile Include="overrideStreamingDistanceComponent.cpp" />
+    <ClCompile Include="particleModificatorAlphaByDistance.cpp" />
+    <ClCompile Include="pathlibCentralNodeFinder.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="pathlibCollectCollisionPointsSpatialQuery.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="pathlibConnectorsBin.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="pathlibCookerData.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="pathlibDetailedSurfaceData.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="pathlibHLGraphBase.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="pathlibHLNode.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="pathlibHLSubGraph.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="pathlibNavmeshAreaProcessing.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="pathlibNodeFinder.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="pathlibHLGraph.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="pathlibNodeSetRequestsList.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="pathlibObstacleDetour.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="pathlibObstaclesGroup.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="pathlibObstacleSimplificationProcessing.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="pathlibReachabilityQueryTask.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="pathlibRoughtTerrainComponent.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="pathlibRoughTerrainMap.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="pathlibSearchData.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="pathlibSettings.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="pathlibSpecialZoneMap.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="pathlibTaskImmediateObstacle.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="pathlibTaskLayersVisibilityProcessing.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="pathlibTaskManager.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="pathlibTerrainHeight.cpp" />
+    <ClCompile Include="pathlibWalkableSpotQueryTask.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="pathlibTaskObstacleProcessing.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="pathlibTaskPlotPath.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="pathlibTaskPostStreaming.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="pathlibWalkableSpotQueryRequest.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="pathlibWorldLayersMapping.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="physicsBatchQueryManager.cpp" />
+    <ClCompile Include="poseBlock.cpp" />
+    <ClCompile Include="poseHandle.cpp" />
+    <ClCompile Include="poseProvider.cpp" />
+    <ClCompile Include="poseProviderFactory.cpp" />
+    <ClCompile Include="poseProviderRepository.cpp" />
+    <ClCompile Include="redGuiEmbeddedResources.cpp" />
+    <ClCompile Include="pathlibTaskUnloadStreamingItems.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="redGuiGraphBase.cpp" />
+    <ClCompile Include="redGuiClipmapVisualizer.cpp" />
+    <ClCompile Include="redGuiHistogram.cpp" />
+    <ClCompile Include="redGuiLoginBox.cpp" />
+    <ClCompile Include="redGuiModalWindow.cpp" />
+    <ClCompile Include="remoteConnection.cpp" />
+    <ClCompile Include="renderGameplayRenderTargetInterface.cpp" />
+    <ClCompile Include="renderVisibilityExclusion.cpp" />
+    <ClCompile Include="renderScaleformCommands.cpp" />
+    <ClCompile Include="renderTextureStreamRequest.cpp" />
+    <ClCompile Include="saveServer.cpp" />
+    <ClCompile Include="scaleformExternalInterface.cpp" />
+    <ClCompile Include="scaleformFile.cpp" />
+    <ClCompile Include="scaleformLoader.cpp" />
+    <ClCompile Include="scaleformLog.cpp" />
+    <ClCompile Include="scaleformMemory.cpp" />
+    <ClCompile Include="scaleformTaskManager.cpp" />
+    <ClCompile Include="scaleformTextureCacheQuee.cpp" />
+    <ClCompile Include="scaleformTranslator.cpp" />
+    <ClCompile Include="scaleformUserEvent.cpp" />
+    <ClCompile Include="scriptInvoker.cpp" />
+    <ClCompile Include="scaleable.cpp" />
+    <ClCompile Include="minimapGenerator.cpp" />
+    <ClCompile Include="sectorData.cpp" />
+    <ClCompile Include="sectorDataBuilder.cpp" />
+    <ClCompile Include="sectorDataEntityPool.cpp" />
+    <ClCompile Include="sectorDataGenericRuntime.cpp" />
+    <ClCompile Include="sectorDataMerged.cpp" />
+    <ClCompile Include="sectorDataObjects.cpp" />
+    <ClCompile Include="sectorDataParticlesRuntime.cpp" />
+    <ClCompile Include="sectorDataResourceLoader.cpp" />
+    <ClCompile Include="sectorDataRigidMeshRuntime.cpp" />
+    <ClCompile Include="sectorDataStreaming.cpp" />
+    <ClCompile Include="sectorDataStreamingContext.cpp" />
+    <ClCompile Include="sectorDataStreamingThread.cpp" />
+    <ClCompile Include="shaderCacheBuilder.cpp" />
+    <ClCompile Include="shaderCacheData.cpp" />
+    <ClCompile Include="shaderCacheManager.cpp" />
+    <ClCompile Include="shaderCacheReadonly.cpp" />
+    <ClCompile Include="shadowMeshGenerator.cpp" />
+    <ClCompile Include="simpleBuoyancyComponent.cpp" />
+    <ClCompile Include="skeletonSkeletonMappingCache.cpp" />
+    <ClCompile Include="soundCacheDataFormat.cpp" />
+    <ClCompile Include="soundSettings.cpp" />
+    <ClCompile Include="animatedComponentAnimatedAttachement.cpp" />
+    <ClCompile Include="animatedComponentAnimInterface.cpp" />
+    <ClCompile Include="animatedComponentMovement.cpp" />
+    <ClCompile Include="animatedComponentMulti.cpp" />
+    <ClCompile Include="animatedComponentScripts.cpp" />
+    <ClCompile Include="animatedEntity.cpp" />
+    <ClCompile Include="animationBuffer.cpp" />
+    <ClCompile Include="animationBufferBitwiseCompressed.cpp" />
+    <ClCompile Include="animationBufferMultipart.cpp" />
+    <ClCompile Include="animationBufferUncompressed.cpp" />
+    <ClCompile Include="animationTrajectoryPlayer_Blend2.cpp" />
+    <ClCompile Include="animationCache2.cpp" />
+    <ClCompile Include="animationCacheCooker.cpp" />
+    <ClCompile Include="animationCompression.cpp" />
+    <ClCompile Include="animationController.cpp" />
+    <ClCompile Include="animationEngine.cpp" />
+    <ClCompile Include="animationGameParams.cpp" />
+    <ClCompile Include="animationJobs.cpp" />
+    <ClCompile Include="animationLogger.cpp" />
+    <ClCompile Include="animationManager.cpp" />
+    <ClCompile Include="animationSelectors.cpp" />
+    <ClCompile Include="animationStreamingJob.cpp" />
+    <ClCompile Include="animationTrajectory.cpp" />
+    <ClCompile Include="animationTrajectoryPlayer.cpp" />
+    <ClCompile Include="animationPlayerTimeController.cpp" />
+    <ClCompile Include="animationTrajectoryPlayer_Trajectory.cpp" />
+    <ClCompile Include="animationTrajectorySync.cpp" />
+    <ClCompile Include="animationTrajectoryTrackParam.cpp" />
+    <ClCompile Include="animationTrajectoryVisualizer.cpp" />
+    <ClCompile Include="animBehaviorsAndSetsParam.cpp" />
+    <ClCompile Include="animDangleBufferComponent.cpp" />
+    <ClCompile Include="animDangleComponent.cpp" />
+    <ClCompile Include="animHingeConstraint.cpp" />
+    <ClCompile Include="animPointCloudLookAtParam.cpp" />
+    <ClCompile Include="animPoseConstraint.cpp" />
+    <ClCompile Include="animSkeletalDangleConstraint.cpp" />
+    <ClCompile Include="animSkeletalMultiDangleConstraint.cpp" />
+    <ClCompile Include="animSkeletalMultiDangleConstraint_painter.cpp" />
+    <ClCompile Include="animSlotsParam.cpp" />
+    <ClCompile Include="apexClothResource.cpp" />
+    <ClCompile Include="apexClothWrapper.cpp" />
+    <ClCompile Include="apexDestructionResource.cpp" />
+    <ClCompile Include="apexDestructionWrapper.cpp" />
+    <ClCompile Include="apexResource.cpp" />
+    <ClCompile Include="apexWrapperBase.cpp" />
+    <ClCompile Include="appearanceComponent.cpp" />
+    <ClCompile Include="areaTestComponent.cpp" />
+    <ClCompile Include="asyncAnimTickManager.cpp" />
+    <ClCompile Include="baseTree.cpp" />
+    <ClCompile Include="behaviorGraph2DVariableNode.cpp" />
+    <ClCompile Include="behaviorGraphAlignToGroundNode.cpp" />
+    <ClCompile Include="behaviorGraphAnimationAdditiveSlot.cpp" />
+    <ClCompile Include="behaviorGraphAnimationEventNode.cpp" />
+    <ClCompile Include="behaviorGraphAnimationExtNode.cpp" />
+    <ClCompile Include="behaviorGraphAnimationLipsyncSlot.cpp" />
+    <ClCompile Include="behaviorGraphAnimationManualSlot.cpp" />
+    <ClCompile Include="behaviorGraphAnimationMixerSlot.cpp" />
+    <ClCompile Include="behaviorGraphBlend3Node.cpp" />
+    <ClCompile Include="behaviorGraphChooseRecoverFromRagdollAnimNode.cpp" />
+    <ClCompile Include="behaviorGraphFootLockNode.cpp" />
+    <ClCompile Include="behaviorGraphInternalVariableNode.cpp" />
+    <ClCompile Include="behaviorGraphInternalVectorVariableNode.cpp" />
+    <ClCompile Include="behaviorGraphJoinNode.cpp" />
+    <ClCompile Include="behaviorGraphLookAtUsingAnimationsNode.cpp" />
+    <ClCompile Include="behaviorGraphSynchronizeAnimationsNode.cpp" />
+    <ClCompile Include="behaviorGraphMimicLipsync.cpp" />
+    <ClCompile Include="behaviorGraphMimicManualSlot.cpp" />
+    <ClCompile Include="behaviorGraphMimicPoseNodes.cpp" />
+    <ClCompile Include="behaviorGraphNodeControlRig.cpp" />
+    <ClCompile Include="behaviorGraphPointCloudLookAtNode.cpp" />
+    <ClCompile Include="behaviorGraphPointerStateNode.cpp" />
+    <ClCompile Include="behaviorGraphRecentlyUsedAnimsStateNode.cpp" />
+    <ClCompile Include="behaviorGraphRetargetCharacterNode.cpp" />
+    <ClCompile Include="behaviorGraphSetInternalVariableFloatInOutNode.cpp" />
+    <ClCompile Include="behaviorGraphSetInternalVariableNode.cpp" />
+    <ClCompile Include="behaviorGraphSimplePlaybackUtils.cpp" />
+    <ClCompile Include="behaviorGraphSyncOverride.cpp" />
+    <ClCompile Include="behaviorGraphTransitionMatchToPose.cpp" />
+    <ClCompile Include="behaviorGraphVariableBaseNode.cpp" />
+    <ClCompile Include="behaviorGraphVectorVariableBaseNode.cpp" />
+    <ClCompile Include="behaviorIkApplyRotation.cpp" />
+    <ClCompile Include="behaviorIkTwoBones.cpp" />
+    <ClCompile Include="bezierComponent.cpp" />
+    <ClCompile Include="Bezier_Polynomials.cpp" />
+    <ClCompile Include="breastConstraint.cpp" />
+    <ClCompile Include="cameraAttractor.cpp" />
+    <ClCompile Include="cameraDirector.cpp" />
+    <ClCompile Include="cameraPredictor.cpp" />
+    <ClCompile Include="behaviorConstraintNodeBoneInterpolate.cpp" />
+    <ClCompile Include="characterControllerManager.cpp" />
+    <ClCompile Include="characterControllerParam.cpp">
+      <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='No opts|x64'">false</ShowIncludes>
+    </ClCompile>
+    <ClCompile Include="characterEntityTemplate.cpp" />
+    <ClCompile Include="clipMap.cpp" />
+    <ClCompile Include="clothAttachment.cpp" />
+    <ClCompile Include="clothComponent.cpp" />
+    <ClCompile Include="collarConstraint.cpp" />
+    <ClCompile Include="collisionShapeBox.cpp" />
+    <ClCompile Include="collisionShapeBuilder.cpp" />
+    <ClCompile Include="collisionShapeCapsule.cpp" />
+    <ClCompile Include="collisionShapeSphere.cpp" />
+    <ClCompile Include="commentGraphBlock.cpp" />
+    <ClCompile Include="compressedRotation.cpp" />
+    <ClCompile Include="compressedTranslation.cpp" />
+    <ClCompile Include="controlRig.cpp" />
+    <ClCompile Include="controlRigAlgorithms.cpp" />
+    <ClCompile Include="controlRigBehaviorNodeController.cpp" />
+    <ClCompile Include="controlRigDefinition.cpp" />
+    <ClCompile Include="controlRigPropertySet.cpp" />
+    <ClCompile Include="controlRigSolver.cpp" />
+    <ClCompile Include="controlRigUtils.cpp" />
+    <ClCompile Include="curveControlPointEntity.cpp" />
+    <ClCompile Include="curveEntity.cpp" />
+    <ClCompile Include="curveTangentControlPointEntity.cpp" />
+    <ClCompile Include="cutsceneEntity.cpp" />
+    <ClCompile Include="dangleComponent.cpp" />
+    <ClCompile Include="animDangleConstraint.cpp" />
+    <ClCompile Include="debugCommandBox.cpp" />
+    <ClCompile Include="debugChoice.cpp" />
+    <ClCompile Include="debugPageBgObjects.cpp" />
+    <ClCompile Include="debugPageDynamicAttributes.cpp" />
+    <ClCompile Include="debugPageEffects.cpp" />
+    <ClCompile Include="debugPageGameFrameBudget.cpp" />
+    <ClCompile Include="debugPageLoadedResources.cpp" />
+    <ClCompile Include="debugPageManagerBase.cpp" />
+    <ClCompile Include="debugPageManagerTabbed.cpp" />
+    <ClCompile Include="debugPagePhysics.cpp" />
+    <ClCompile Include="debugPageTaskManager.cpp" />
+    <ClCompile Include="debugPageVegetation.cpp" />
+    <ClCompile Include="debugPageVideos.cpp" />
+    <ClCompile Include="debugPageStartPage.cpp" />
+    <ClCompile Include="debugWindowAnimations.cpp" />
+    <ClCompile Include="debugWindowArrayMemory.cpp" />
+    <ClCompile Include="debugWindowCallstackProfiler.cpp" />
+    <ClCompile Include="debugWindowEnvironment.cpp" />
+    <ClCompile Include="debugWindowGameFrame.cpp" />
+    <ClCompile Include="debugWindowJobManager.cpp" />
+    <ClCompile Include="debugWindowLoadedResources.cpp" />
+    <ClCompile Include="debugWindowMemoryMetrics.cpp" />
+    <ClCompile Include="debugWindowPerformanceLog.cpp" />
+    <ClCompile Include="debugWindowPhysics.cpp" />
+    <ClCompile Include="debugWindowRenderingFlags.cpp" />
+    <ClCompile Include="debugWindowReviewMarkers.cpp" />
+    <ClCompile Include="debugWindowReviewMarkersAddMarker.cpp" />
+    <ClCompile Include="debugWindowReviewMarkersEditMarker.cpp" />
+    <ClCompile Include="debugWindowReviewMarkersFilterMarker.cpp" />
+    <ClCompile Include="debugWindowReviewMarkersShowMarker.cpp" />
+    <ClCompile Include="debugWindowScriptThreads.cpp" />
+    <ClCompile Include="debugWindowsManager.cpp" />
+    <ClCompile Include="debugWindowSound.cpp" />
+    <ClCompile Include="debugWindowTaskManager.cpp" />
+    <ClCompile Include="debugWindowTickManager.cpp" />
+    <ClCompile Include="debugWindowVegetation.cpp" />
+    <ClCompile Include="debugWindowUmbra.cpp" />
+    <ClCompile Include="decalComponent.cpp" />
+    <ClCompile Include="dependencyAttachment.cpp" />
+    <ClCompile Include="dismembermentComponent.cpp" />
+    <ClCompile Include="dressConstraint.cpp" />
+    <ClCompile Include="dropPhysicsComponent.cpp" />
+    <ClCompile Include="dynamicColliderComponent.cpp" />
+    <ClCompile Include="dyngConstraint.cpp" />
+    <ClCompile Include="dyngResource.cpp" />
+    <ClCompile Include="dyngSimulator.cpp" />
+    <ClCompile Include="dynamicDecal.cpp" />
+    <ClCompile Include="earingConstraint.cpp" />
+    <ClCompile Include="easingFunctions.cpp" />
+    <ClCompile Include="engineNames.cpp" />
+    <ClCompile Include="envProbeParams.cpp" />
+    <ClCompile Include="extAnimCutsceneEvent.cpp" />
+    <ClCompile Include="extAnimMorphEvent.cpp" />
+    <ClCompile Include="extAnimRaiseEventEvent.cpp" />
+    <ClCompile Include="flareParameters.cpp" />
+    <ClCompile Include="floatDamper.cpp" />
+    <ClCompile Include="foliageBroker.cpp" />
+    <ClCompile Include="foliageCell.cpp" />
+    <ClCompile Include="foliageCollisionHandler.cpp" />
+    <ClCompile Include="foliageEditionController.cpp" />
+    <ClCompile Include="foliageGrid.cpp" />
+    <ClCompile Include="foliageRenderCommandDispatcher.cpp" />
+    <ClCompile Include="foliageResource.cpp" />
+    <ClCompile Include="foliageResourceHandler.cpp" />
+    <ClCompile Include="foliageResourceLoader.cpp" />
+    <ClCompile Include="foliageScene.cpp" />
+    <ClCompile Include="fxSimpleSpawner.cpp" />
+    <ClCompile Include="gameplayEffectsComponent.cpp" />
+    <ClCompile Include="dimmerComponent.cpp" />
+    <ClCompile Include="gameUniverseStorage.cpp" />
+    <ClCompile Include="gestureSystem.cpp" />
+    <ClCompile Include="globalEventsManager.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="gpuDataBuffer.cpp" />
+    <ClCompile Include="grassMask.cpp" />
+    <ClCompile Include="helpTextComponent.cpp" />
+    <ClCompile Include="hoodConstraint.cpp" />
+    <ClCompile Include="inputDeviceCommandBacklight.cpp" />
+    <ClCompile Include="inputDeviceCommandRumble.cpp" />
+    <ClCompile Include="inputDeviceCommandsManager.cpp" />
+    <ClCompile Include="integerVector.cpp" />
+    <ClCompile Include="lensFlareSetupParameters.cpp" />
+    <ClCompile Include="memoryMetricsMemoryUsageControl.cpp" />
+    <ClCompile Include="meshChunk.cpp" />
+    <ClCompile Include="meshGcProxy.cpp" />
+    <ClCompile Include="meshTypeComponent.cpp" />
+    <ClCompile Include="meshVertex.cpp" />
+    <ClCompile Include="multiCurve.cpp" />
+    <ClCompile Include="particleInitializerCollisionSpawn.cpp" />
+    <ClCompile Include="pathlibAreaNavgraphs.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="pathlibAreaProcessingJob.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="pathlibAreaRes.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="pathlibBundler.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="pathlibComponent.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="pathlibConfiguration.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="pathlibMetalink.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="pathlibNavmeshBorderAreaComponent.cpp" />
+    <ClCompile Include="pathlibNavmeshLegacy.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="pathlibKDTree.cpp" />
+    <ClCompile Include="pathlibNavNode.cpp" />
+    <ClCompile Include="pathlibObstacleShape.cpp" />
+    <ClCompile Include="pathlibObstaclesMap.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="pathlibResPtr.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="pathlibStreamingItem.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="pathlibStreamingJob.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="pathlibTerrainFoliage.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="pathlibTerrainSurfaceProcessing.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="pathlibGenerationManagerBase.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="performableAction.cpp" />
+    <ClCompile Include="physicsCharacterVirtualController.cpp" />
+    <ClCompile Include="propertyAnimationSet.cpp" />
+    <ClCompile Include="memoryMetricsPoolAreaControl.cpp" />
+    <ClCompile Include="randomGenerators.cpp" />
+    <ClCompile Include="redGuiAdvancedSlider.cpp" />
+    <ClCompile Include="redGuiAreaChart.cpp" />
+    <ClCompile Include="redGuiButton.cpp" />
+    <ClCompile Include="redGuiCheckBox.cpp" />
+    <ClCompile Include="redGuiComboBox.cpp" />
+    <ClCompile Include="redGuiControl.cpp" />
+    <ClCompile Include="redGuiControlInput.cpp" />
+    <ClCompile Include="redGuiControlSkin.cpp" />
+    <ClCompile Include="redGuiDefaultTheme.cpp" />
+    <ClCompile Include="redGuiDesktop.cpp" />
+    <ClCompile Include="redGuiEventPackage.cpp" />
+    <ClCompile Include="redGuiFontManager.cpp" />
+    <ClCompile Include="redGuiGeneralLayer.cpp" />
+    <ClCompile Include="redGuiGradientTheme.cpp" />
+    <ClCompile Include="redGuiGraphicContext.cpp" />
+    <ClCompile Include="redGuiGridLayout.cpp" />
+    <ClCompile Include="redGuiGroupBox.cpp" />
+    <ClCompile Include="redGuiImage.cpp" />
+    <ClCompile Include="redGuiInputManager.cpp" />
+    <ClCompile Include="redGuiLabel.cpp" />
+    <ClCompile Include="redGuiLayerItem.cpp" />
+    <ClCompile Include="redGuiLayerManager.cpp" />
+    <ClCompile Include="redGuiList.cpp" />
+    <ClCompile Include="redGuiListItem.cpp" />
+    <ClCompile Include="redGuiManager.cpp" />
+    <ClCompile Include="redGuiMenu.cpp" />
+    <ClCompile Include="redGuiMenuBar.cpp" />
+    <ClCompile Include="redGuiMenuItem.cpp" />
+    <ClCompile Include="redGuiMessageBox.cpp" />
+    <ClCompile Include="redGuiOccupancyChart.cpp" />
+    <ClCompile Include="redGuiOpenFileDialog.cpp" />
+    <ClCompile Include="redGuiPanel.cpp" />
+    <ClCompile Include="redGuiProgressBar.cpp" />
+    <ClCompile Include="redGuiRenderManager.cpp" />
+    <ClCompile Include="redGuiSaveFileDialog.cpp" />
+    <ClCompile Include="redGuiScrollBar.cpp" />
+    <ClCompile Include="redGuiScrollPanel.cpp" />
+    <ClCompile Include="redGuiSeparator.cpp" />
+    <ClCompile Include="redGuiSlider.cpp" />
+    <ClCompile Include="redGuiSpin.cpp" />
+    <ClCompile Include="redGuiTab.cpp" />
+    <ClCompile Include="redGuiTextBox.cpp" />
+    <ClCompile Include="redGuiThemeManager.cpp" />
+    <ClCompile Include="redGuiTimeline.cpp" />
+    <ClCompile Include="redGuiTimelineChart.cpp" />
+    <ClCompile Include="redGuiTimelineEvent.cpp" />
+    <ClCompile Include="redGuiToolTipManager.cpp" />
+    <ClCompile Include="redGuiTreeNode.cpp" />
+    <ClCompile Include="redGuiTreeView.cpp" />
+    <ClCompile Include="redGuiUserData.cpp" />
+    <ClCompile Include="redGuiProgressBox.cpp" />
+    <ClCompile Include="redGuiWindow.cpp" />
+    <ClCompile Include="renderCommandInterface.cpp" />
+    <ClCompile Include="renderGameplayEffects.cpp" />
+    <ClCompile Include="scaleformTextureCacheImage.cpp" />
+    <ClCompile Include="scriptCompilationHelper.cpp" />
+    <ClCompile Include="negativeAreaComponent.cpp" />
+    <ClCompile Include="polygonTriangulation.cpp" />
+    <ClCompile Include="morphedMeshComponent.cpp" />
+    <ClCompile Include="morphedMeshManagerComponent.cpp" />
+    <ClCompile Include="shortestPathRater.cpp" />
+    <ClCompile Include="deniedAreaComponent.cpp" />
+    <ClCompile Include="dependencyLoaderSRT.cpp" />
+    <ClCompile Include="debugTextBox.cpp" />
+    <ClCompile Include="descriptionGraphBlock.cpp" />
+    <ClCompile Include="compressedFile.cpp" />
+    <ClCompile Include="EngineBezierTools.cpp" />
+    <ClCompile Include="entityMotion.cpp" />
+    <ClCompile Include="environmentDefinition.cpp" />
+    <ClCompile Include="envProbeComponent.cpp" />
+    <ClCompile Include="extAnimScriptEvent.cpp" />
+    <ClCompile Include="flashFunction.cpp" />
+    <ClCompile Include="flashFunctionScaleform.cpp" />
+    <ClCompile Include="flashMovie.cpp" />
+    <ClCompile Include="flashMovieScaleform.cpp" />
+    <ClCompile Include="flashPlayerScaleformInput.cpp" />
+    <ClCompile Include="flashPlayerScaleformViewport.cpp" />
+    <ClCompile Include="flashValueNull.cpp" />
+    <ClCompile Include="flashValueObject.cpp" />
+    <ClCompile Include="flashValueObjectScaleform.cpp" />
+    <ClCompile Include="flashValueScaleform.cpp" />
+    <ClCompile Include="flashValueStorage.cpp" />
+    <ClCompile Include="flashValueStorageScaleform.cpp" />
+    <ClCompile Include="furComponent.cpp" />
+    <ClCompile Include="furMeshResource.cpp" />
+    <ClCompile Include="fxPhysicalForce.cpp" />
+    <ClCompile Include="fxTrackItemEnvironmentModifier.cpp" />
+    <ClCompile Include="fxTrackItemForceFeedback.cpp" />
+    <ClCompile Include="fxTrackItemGlobalSpacePhysicalForce.cpp" />
+    <ClCompile Include="gameResource.cpp" />
+    <ClCompile Include="globalWater.cpp" />
+    <ClCompile Include="globalWaterUpdateParams.cpp" />
+    <ClCompile Include="graphHelperBlock.cpp" />
+    <ClCompile Include="flashPlayer.cpp" />
+    <ClCompile Include="inputListener.cpp" />
+    <ClCompile Include="inputUserConfig.cpp" />
+    <ClCompile Include="markersSystem.cpp" />
+    <ClCompile Include="materialSampler.cpp" />
+    <ClCompile Include="mimicComponent.cpp" />
+    <ClCompile Include="navigationObstacle.cpp" />
+    <ClCompile Include="networkedLogOutputDevice.cpp" />
+    <ClCompile Include="normalBlendAttachment.cpp" />
+    <ClCompile Include="normalBlendComponent.cpp" />
+    <ClCompile Include="normalBlendDataSource.cpp" />
+    <ClCompile Include="pathlibNodeSet.cpp" />
+    <ClCompile Include="poiDatabaseConnector.cpp" />
+    <ClCompile Include="poiSystem.cpp" />
+    <ClCompile Include="pathlibObstacleAsyncProcessing.cpp" />
+    <ClCompile Include="pathlibObstacleSpawnContext.cpp" />
+    <ClCompile Include="pathlibStreamingManager.cpp" />
+    <ClCompile Include="phantomAttachment.cpp" />
+    <ClCompile Include="pathlibNavmeshBinTree.cpp" />
+    <ClCompile Include="pathlibNavmeshGeneration.cpp" />
+    <ClCompile Include="flashPlayerScaleform.cpp" />
+    <ClCompile Include="heightmapUtils.cpp" />
+    <ClCompile Include="inputRecorder.cpp" />
+    <ClCompile Include="mbEncapsulatedGraph.cpp" />
+    <ClCompile Include="mbInput.cpp" />
+    <ClCompile Include="mbInterpolator.cpp" />
+    <ClCompile Include="mbOutput.cpp" />
+    <ClCompile Include="mbParamTextureArray.cpp" />
+    <ClCompile Include="meshCache.cpp" />
+    <ClCompile Include="meshCacheCooker.cpp" />
+    <ClCompile Include="meshTypeResource.cpp" />
+    <ClCompile Include="mimicFac.cpp" />
+    <ClCompile Include="pathlib.cpp" />
+    <ClCompile Include="pathlibAgent.cpp" />
+    <ClCompile Include="pathlibAreaDescription.cpp" />
+    <ClCompile Include="pathlibGraph.cpp" />
+    <ClCompile Include="pathlibInstanceMap.cpp" />
+    <ClCompile Include="pathlibNavgraph.cpp" />
+    <ClCompile Include="pathlibNavmesh.cpp" />
+    <ClCompile Include="pathlibNavmeshArea.cpp" />
+    <ClCompile Include="pathlibNavmeshComponent.cpp" />
+    <ClCompile Include="pathlibObstacle.cpp" />
+    <ClCompile Include="pathlibObstacleMapper.cpp" />
+    <ClCompile Include="pathlibSearchEngine.cpp" />
+    <ClCompile Include="pathlibGenerationManager.cpp" />
+    <ClCompile Include="pathlibTerrain.cpp" />
+    <ClCompile Include="pathlibTerrainInfo.cpp" />
+    <ClCompile Include="pathlibVisualizer.cpp" />
+    <ClCompile Include="pathlibWorld.cpp" />
+    <ClCompile Include="physicsCharacterWrapper.cpp">
+      <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='No opts|x64'">false</ShowIncludes>
+    </ClCompile>
+    <ClCompile Include="poseBBoxGenerator.cpp" />
+    <ClCompile Include="animConstraintsParam.cpp" />
+    <ClCompile Include="animGlobalParam.cpp" />
+    <ClCompile Include="animMimicParam.cpp" />
+    <ClCompile Include="behaviorAnimationMultiplyEntity.cpp" />
+    <ClCompile Include="behaviorGraphSelfActStateMachine.cpp" />
+    <ClCompile Include="behaviorGraphStackSnapshot.cpp" />
+    <ClCompile Include="behaviorPoseConstraintNode.cpp" />
+    <ClCompile Include="bitmapTexture.cpp" />
+    <ClCompile Include="bitmapTextureHelpers.cpp" />
+    <ClCompile Include="boxComponent.cpp" />
+    <ClCompile Include="cacheBehaviorGraphOutput.cpp" />
+    <ClCompile Include="cubeTexture.cpp" />
+    <ClCompile Include="cutsceneActor.cpp" />
+    <ClCompile Include="cutsceneModifier.cpp" />
+    <ClCompile Include="debugAnimation.cpp" />
+    <ClCompile Include="debugPageGameplayConfig.cpp" />
+    <ClCompile Include="debugPageHavokMemory.cpp" />
+    <ClCompile Include="debugPageLanguagePacks.cpp" />
+    <ClCompile Include="debugPageActiveIslands.cpp" />
+    <ClCompile Include="debugPageTickManager.cpp" />
+    <ClCompile Include="debugPageUpdateTransform.cpp" />
+    <ClCompile Include="debugSlider.cpp" />
+    <ClCompile Include="debugStat.cpp" />
+    <ClCompile Include="dressMeshComponent.cpp" />
+    <ClCompile Include="effectDummyComponent.cpp" />
+    <ClCompile Include="effectEntity.cpp" />
+    <ClCompile Include="entityTemplate.cpp" />
+    <ClCompile Include="entityTemplateCook.cpp" />
+    <ClCompile Include="entityTemplateMerge.cpp" />
+    <ClCompile Include="entityTemplateParams.cpp" />
+    <ClCompile Include="extAnimCutsceneSoundEvent.cpp" />
+    <ClCompile Include="footstepData.cpp" />
+    <ClCompile Include="fxTrackItemDynamicLight.cpp" />
+    <ClCompile Include="fxWaterSpawner.cpp" />
+    <ClCompile Include="gameplayConfig.cpp" />
+    <ClCompile Include="gameSaveFile.cpp" />
+    <ClCompile Include="havokAnimationUtils.cpp" />
+    <ClCompile Include="immediateJobsCollector.cpp" />
+    <ClCompile Include="languagePack.cpp" />
+    <ClCompile Include="localizationCache.cpp" />
+    <ClCompile Include="motionExtraction.cpp" />
+    <ClCompile Include="motionExtractionCompression.cpp" />
+    <ClCompile Include="particleModificatorCollision.cpp" />
+    <ClCompile Include="persistentReference.cpp" />
+    <ClCompile Include="pose.cpp" />
+    <ClCompile Include="poseCompression.cpp" />
+    <ClCompile Include="posePool.cpp" />
+    <ClCompile Include="cookedAnimatedProp.cpp" />
+    <ClCompile Include="QuadraticBezier2.cpp" />
+    <ClCompile Include="QuadraticBezier_Segment2.cpp" />
+    <ClCompile Include="ragdollPhysX.cpp" />
+    <ClCompile Include="rawInputManager.cpp" />
+    <ClCompile Include="registryAccess.cpp" />
+    <ClCompile Include="renderVisibilityQuery.cpp" />
+    <ClCompile Include="reviewDatabaseConnector.cpp" />
+    <ClCompile Include="reviewSystem.cpp" />
+    <ClCompile Include="reviewTestTrackConnector.cpp" />
+    <ClCompile Include="scaleformSystem.cpp" />
+    <ClCompile Include="screenshotSystem.cpp" />
+    <ClCompile Include="scriptedDestroyableComponent.cpp" />
+    <ClCompile Include="scriptEngineAnimationNatives.cpp" />
+    <ClCompile Include="simplexTreeResource.cpp" />
+    <ClCompile Include="simplygonHelpers.cpp" />
+    <ClCompile Include="skeletalAnimatedComponent.cpp" />
+    <ClCompile Include="skeletalAnimationEntry.cpp" />
+    <ClCompile Include="skeletalAnimationImport.cpp" />
+    <ClCompile Include="skeletalAnimationStreaming.cpp" />
+    <ClCompile Include="skeletonProvider.cpp" />
+    <ClCompile Include="skeletonUtils.cpp" />
+    <ClCompile Include="skyboxSetupParameters.cpp" />
+    <ClCompile Include="softTriggerAreaComponent.cpp" />
+    <ClCompile Include="soundAdditionalListener.cpp" />
+    <ClCompile Include="soundEmitter.cpp" />
+    <ClCompile Include="soundEntityParam.cpp" />
+    <ClCompile Include="soundFileLoader.cpp" />
+    <ClCompile Include="soundListener.cpp" />
+    <ClCompile Include="sourceTextureData.cpp" />
+    <ClCompile Include="speedConfig.cpp" />
+    <ClCompile Include="staticShaderCache.cpp" />
+    <ClCompile Include="stickerDatabaseConnector.cpp" />
+    <ClCompile Include="stickersSystem.cpp" />
+    <ClCompile Include="streamingAreaComponent.cpp" />
+    <ClCompile Include="stripeComponent.cpp" />
+    <ClCompile Include="swarmRenderComponent.cpp" />
+    <ClCompile Include="swfResource.cpp" />
+    <ClCompile Include="swfTexture.cpp" />
+    <ClCompile Include="switchableFoliageComponent.cpp" />
+    <ClCompile Include="teleportDetectorData.cpp" />
+    <ClCompile Include="teleportDetector.cpp" />
+    <ClCompile Include="terrainTile.cpp" />
+    <ClCompile Include="terrainUtils.cpp" />
+    <ClCompile Include="testFramework.cpp" />
+    <ClCompile Include="texture.cpp" />
+    <ClCompile Include="textureArray.cpp" />
+    <ClCompile Include="textureBaker.cpp" />
+    <ClCompile Include="textureCache.cpp" />
+    <ClCompile Include="bitmapDataBuffer.cpp" />
+    <ClCompile Include="havokDataBuffer.cpp" />
+    <ClCompile Include="havokDataBufferParser.cpp" />
+    <ClCompile Include="mesh.cpp" />
+    <ClCompile Include="meshExtra.cpp" />
+    <ClCompile Include="collisionMesh.cpp" />
+    <ClCompile Include="collisionShape.cpp" />
+    <ClCompile Include="collisionShapeConvex.cpp" />
+    <ClCompile Include="collisionShapeTriMesh.cpp" />
+    <ClCompile Include="collisionCache.cpp" />
+    <ClCompile Include="dynamicLayer.cpp" />
+    <ClCompile Include="dynamicCollisionCollector.cpp" />
+    <ClCompile Include="entityHandle.cpp" />
+    <ClCompile Include="layer.cpp" />
+    <ClCompile Include="layerGroup.cpp" />
+    <ClCompile Include="layerInfo.cpp" />
+    <ClCompile Include="layerStorage.cpp" />
+    <ClCompile Include="persistentEntity.cpp" />
+    <ClCompile Include="timerKeyword.cpp" />
+    <ClCompile Include="timerManager.cpp" />
+    <ClCompile Include="umbraJobs.cpp" />
+    <ClCompile Include="umbraQuery.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="umbraScene.cpp" />
+    <ClCompile Include="umbraStructures.cpp" />
+    <ClCompile Include="umbraTile.cpp" />
+    <ClCompile Include="areaConvex.cpp" />
+    <ClCompile Include="areaShapeBuilder.cpp" />
+    <ClCompile Include="triggerActivatorComponent.cpp" />
+    <ClCompile Include="triggerManagerImpl.cpp" />
+    <ClCompile Include="triggerMaskBuffer.cpp" />
+    <ClCompile Include="userProfile.cpp" />
+    <ClCompile Include="utils.cpp" />
+    <ClCompile Include="vectorDamper.cpp" />
+    <ClCompile Include="vegetationBrush.cpp" />
+    <ClCompile Include="videoPlayerBink.cpp" />
+    <ClCompile Include="videoSoundSystemDX8.cpp" />
+    <ClCompile Include="videoSoundSystemPS4.cpp" />
+    <ClCompile Include="videoSoundSystemXA2.cpp" />
+    <ClCompile Include="videoSubtitles.cpp" />
+    <ClCompile Include="virtualAnimation.cpp" />
+    <ClCompile Include="virtualAnimationMixer.cpp" />
+    <ClCompile Include="virtualSkeletalAnimation.cpp" />
+    <ClCompile Include="waterComponent.cpp" />
+    <ClCompile Include="springDampers.cpp" />
+    <ClCompile Include="weatherManager.cpp" />
+    <ClCompile Include="wetnessComponent.cpp" />
+    <ClCompile Include="windAreaComponent.cpp" />
+    <ClCompile Include="world.cpp" />
+    <ClCompile Include="worldDelayed.cpp" />
+    <ClCompile Include="worldLookup.cpp" />
+    <ClCompile Include="worldSceneDependencyInfo.cpp" />
+    <ClCompile Include="worldShowFlags.cpp" />
+    <ClCompile Include="worldStreaming.cpp" />
+    <ClCompile Include="streamingSectorData.cpp" />
+    <ClCompile Include="worldTick.cpp" />
+    <ClCompile Include="updateTransformManager.cpp" />
+    <ClCompile Include="selectionManager.cpp" />
+    <ClCompile Include="tickManager.cpp" />
+    <ClCompile Include="tagManager.cpp" />
+    <ClCompile Include="windParameters.cpp" />
+    <ClCompile Include="renderCamera.cpp" />
+    <ClCompile Include="renderCommandBuffer.cpp" />
+    <ClCompile Include="renderCommands.cpp" />
+    <ClCompile Include="renderer.cpp" />
+    <ClCompile Include="renderFence.cpp" />
+    <ClCompile Include="renderFragment.cpp" />
+    <ClCompile Include="renderFrame.cpp" />
+    <ClCompile Include="renderFrameInfo.cpp" />
+    <ClCompile Include="renderMemoryPages.cpp" />
+    <ClCompile Include="renderMemoryPool.cpp" />
+    <ClCompile Include="renderObject.cpp" />
+    <ClCompile Include="renderProxy.cpp" />
+    <ClCompile Include="renderResource.cpp" />
+    <ClCompile Include="renderSettings.cpp" />
+    <ClCompile Include="renderShadow.cpp" />
+    <ClCompile Include="renderTerrainModPreview.cpp" />
+    <ClCompile Include="renderThread.cpp" />
+    <ClCompile Include="textureGroup.cpp" />
+    <ClCompile Include="videoPlayer.cpp" />
+    <ClCompile Include="viewport.cpp" />
+    <ClCompile Include="viewportHook.cpp" />
+    <ClCompile Include="visualDebug.cpp" />
+    <ClCompile Include="phantomComponent.cpp" />
+    <ClCompile Include="rigidMeshComponent.cpp" />
+    <ClCompile Include="staticMeshComponent.cpp" />
+    <ClCompile Include="componentIterator.cpp" />
+    <ClCompile Include="entity.cpp" />
+    <ClCompile Include="entityAppearance.cpp" />
+    <ClCompile Include="entityColorVariant.cpp" />
+    <ClCompile Include="entityEffects.cpp" />
+    <ClCompile Include="entityGroup.cpp" />
+    <ClCompile Include="externalProxy.cpp" />
+    <ClCompile Include="jobSpawnEntity.cpp" />
+    <ClCompile Include="node.cpp" />
+    <ClCompile Include="boundedComponent.cpp" />
+    <ClCompile Include="component.cpp" />
+    <ClCompile Include="drawableComponent.cpp" />
+    <ClCompile Include="dummyComponent.cpp" />
+    <ClCompile Include="flareComponent.cpp" />
+    <ClCompile Include="meshComponent.cpp" />
+    <ClCompile Include="windowComponent.cpp" />
+    <ClCompile Include="slot.cpp" />
+    <ClCompile Include="lightComponent.cpp" />
+    <ClCompile Include="pointLightComponent.cpp" />
+    <ClCompile Include="spotLightComponent.cpp" />
+    <ClCompile Include="areaComponent.cpp" />
+    <ClCompile Include="pathComponent.cpp" />
+    <ClCompile Include="planarShapeComponent.cpp" />
+    <ClCompile Include="spriteComponent.cpp" />
+    <ClCompile Include="stickerComponent.cpp" />
+    <ClCompile Include="areaBSP.cpp" />
+    <ClCompile Include="animatedAttachment.cpp" />
+    <ClCompile Include="attachment.cpp" />
+    <ClCompile Include="hardAttachment.cpp" />
+    <ClCompile Include="meshSkinningAttachment.cpp" />
+    <ClCompile Include="skinningAttachment.cpp" />
+    <ClCompile Include="hitProxyId.cpp" />
+    <ClCompile Include="hitProxyMap.cpp" />
+    <ClCompile Include="hitProxyObject.cpp" />
+    <ClCompile Include="camera.cpp" />
+    <ClCompile Include="freeCamera.cpp" />
+    <ClCompile Include="staticCamera.cpp" />
+    <ClCompile Include="destructionSystemComponent.cpp" />
+    <ClCompile Include="animatedSkeleton.cpp" />
+    <ClCompile Include="animationEvent.cpp" />
+    <ClCompile Include="playedAnimation.cpp" />
+    <ClCompile Include="skeletalAnimation.cpp" />
+    <ClCompile Include="skeletalAnimationContainer.cpp" />
+    <ClCompile Include="skeletalAnimationSet.cpp" />
+    <ClCompile Include="skeleton.cpp" />
+    <ClCompile Include="skeletonMapper.cpp" />
+    <ClCompile Include="animatedComponent.cpp" />
+    <ClCompile Include="slotComponent.cpp" />
+    <ClCompile Include="skeletonBoneSlot.cpp" />
+    <ClCompile Include="extAnimBehaviorEvents.cpp" />
+    <ClCompile Include="extAnimDurationEvent.cpp" />
+    <ClCompile Include="extAnimEvent.cpp" />
+    <ClCompile Include="extAnimEventsFile.cpp" />
+    <ClCompile Include="extAnimExplorationEvent.cpp" />
+    <ClCompile Include="massSpringSolver.cpp" />
+    <ClCompile Include="animationsCache.cpp" />
+    <ClCompile Include="mimicFaces.cpp" />
+    <ClCompile Include="material.cpp" />
+    <ClCompile Include="materialDefinition.cpp" />
+    <ClCompile Include="materialCompilerDefines.cpp" />
+    <ClCompile Include="materialBlock.cpp" />
+    <ClCompile Include="materialBlockCompiler.cpp" />
+    <ClCompile Include="materialGraph.cpp" />
+    <ClCompile Include="materialInputBoolSocket.cpp" />
+    <ClCompile Include="materialInputCubeSocket.cpp" />
+    <ClCompile Include="materialInputSocket.cpp" />
+    <ClCompile Include="materialInputTextureSocket.cpp" />
+    <ClCompile Include="materialInstance.cpp" />
+    <ClCompile Include="materialOutputBoolSocket.cpp" />
+    <ClCompile Include="materialOutputCubeSocket.cpp" />
+    <ClCompile Include="materialOutputSocket.cpp" />
+    <ClCompile Include="materialOutputTextureSocket.cpp" />
+    <ClCompile Include="materialParameter.cpp" />
+    <ClCompile Include="materialParameterInstance.cpp" />
+    <ClCompile Include="materialRootBlock.cpp" />
+    <ClCompile Include="materialRootDecalBlock.cpp" />
+    <ClCompile Include="materialRootMultiPassLightingBlock.cpp" />
+    <ClCompile Include="mbParamColor.cpp" />
+    <ClCompile Include="mbParamCube.cpp" />
+    <ClCompile Include="mbParamEngineValue.cpp" />
+    <ClCompile Include="mbParamScalar.cpp" />
+    <ClCompile Include="mbParamTexture.cpp" />
+    <ClCompile Include="mbParamVector.cpp" />
+    <ClCompile Include="materialOverrideAttachment.cpp" />
+    <ClCompile Include="materialOverrideComponent.cpp" />
+    <ClCompile Include="materialOverrideProvider.cpp" />
+    <ClCompile Include="shaderCache.cpp" />
+    <ClCompile Include="fonts.cpp" />
+    <ClCompile Include="graphBaseItem.cpp" />
+    <ClCompile Include="graphBaseSocket.cpp" />
+    <ClCompile Include="graphBlock.cpp" />
+    <ClCompile Include="graphConnection.cpp" />
+    <ClCompile Include="graphConnectionClipboard.cpp" />
+    <ClCompile Include="graphConnectionRebuilder.cpp" />
+    <ClCompile Include="graphContainer.cpp" />
+    <ClCompile Include="graphSocket.cpp" />
+    <ClCompile Include="profilerOutput.cpp" />
+    <ClCompile Include="sceneBeamTree.cpp" />
+    <ClCompile Include="sceneGrid.cpp" />
+    <ClCompile Include="triggerAreaComponent.cpp" />
+    <ClCompile Include="decalSpawner.cpp" />
+    <ClCompile Include="particleComponent.cpp" />
+    <ClCompile Include="particleEmitter.cpp" />
+    <ClCompile Include="particleInitializer.cpp" />
+    <ClCompile Include="particleModificator.cpp" />
+    <ClCompile Include="particleModule.cpp" />
+    <ClCompile Include="particlePool.cpp" />
+    <ClCompile Include="particleSystem.cpp" />
+    <ClCompile Include="particleInitializerAlpha.cpp" />
+    <ClCompile Include="particleInitializerColor.cpp" />
+    <ClCompile Include="particleInitializerLifeTime.cpp" />
+    <ClCompile Include="particleInitializerPosition.cpp" />
+    <ClCompile Include="particleInitializerRandomFlip.cpp" />
+    <ClCompile Include="particleInitializerRotation.cpp" />
+    <ClCompile Include="particleInitializerRotation3D.cpp" />
+    <ClCompile Include="particleInitializerRotationRate.cpp" />
+    <ClCompile Include="particleInitializerRotationRate3D.cpp" />
+    <ClCompile Include="particleInitializerSize.cpp" />
+    <ClCompile Include="particleInitializerSize3D.cpp" />
+    <ClCompile Include="particleInitializerSpawnBox.cpp" />
+    <ClCompile Include="particleInitializerSpawnCircle.cpp" />
+    <ClCompile Include="particleInitializerSpawnSphere.cpp" />
+    <ClCompile Include="particleInitializerVelocity.cpp" />
+    <ClCompile Include="particleInitializerVelocityInherit.cpp" />
+    <ClCompile Include="particleInitializerVelocitySpread.cpp" />
+    <ClCompile Include="particleDrawer.cpp" />
+    <ClCompile Include="particleDrawerBeam.cpp" />
+    <ClCompile Include="particleDrawerFacingTrail.cpp" />
+    <ClCompile Include="particleDrawerMesh.cpp" />
+    <ClCompile Include="particleDrawerScreen.cpp" />
+    <ClCompile Include="particleDrawerTrail.cpp" />
+    <ClCompile Include="particleModificatorAcceleration.cpp" />
+    <ClCompile Include="particleModificatorAlphaOverEmitterLife.cpp" />
+    <ClCompile Include="particleModificatorAlphaOverLife.cpp" />
+    <ClCompile Include="particleModificatorColorOverLife.cpp" />
+    <ClCompile Include="particleModificatorRotation3DOverLive.cpp" />
+    <ClCompile Include="particleModificatorRotationOverLife.cpp" />
+    <ClCompile Include="particleModificatorRotationRate3DOverLife.cpp" />
+    <ClCompile Include="particleModificatorRotationRateOverLife.cpp" />
+    <ClCompile Include="particleModificatorSize3DOverLife.cpp" />
+    <ClCompile Include="particleModificatorSizeOverLife.cpp" />
+    <ClCompile Include="particleModificatorTarget.cpp" />
+    <ClCompile Include="particleModificatorTargetNode.cpp" />
+    <ClCompile Include="particleModificatorTextureAnimation.cpp" />
+    <ClCompile Include="particleModificatorVelocityOverLife.cpp" />
+    <ClCompile Include="particleModificatorVelocityTurbulize.cpp" />
+    <ClCompile Include="curve.cpp" />
+    <ClCompile Include="curveApproximator.cpp" />
+    <ClCompile Include="brushBuilder.cpp" />
+    <ClCompile Include="brushCompiledData.cpp" />
+    <ClCompile Include="brushComponent.cpp" />
+    <ClCompile Include="brushFace.cpp" />
+    <ClCompile Include="brushRenderData.cpp" />
+    <ClCompile Include="brushCSG.cpp" />
+    <ClCompile Include="localBSP.cpp" />
+    <ClCompile Include="soundAmbientManager.cpp" />
+    <ClCompile Include="soundSystem.cpp" />
+    <ClCompile Include="speechBuffer.cpp" />
+    <ClCompile Include="scriptSoundSystem.cpp" />
+    <ClCompile Include="soundAmbientAreaComponent.cpp" />
+    <ClCompile Include="soundAmbientEmitter.cpp" />
+    <ClCompile Include="inputKeys.cpp" />
+    <ClCompile Include="inputManager.cpp" />
+    <ClCompile Include="cameraComponent.cpp" />
+    <ClCompile Include="game.cpp" />
+    <ClCompile Include="gameSaveManager.cpp" />
+    <ClCompile Include="gameStartStop.cpp" />
+    <ClCompile Include="idTag.cpp" />
+    <ClCompile Include="idTagManager.cpp" />
+    <ClCompile Include="gameTime.cpp" />
+    <ClCompile Include="gameTimeInterval.cpp" />
+    <ClCompile Include="gameTimeManager.cpp" />
+    <ClCompile Include="scriptTimeEvent.cpp" />
+    <ClCompile Include="gameSession.cpp" />
+    <ClCompile Include="cutscene.cpp" />
+    <ClCompile Include="cutsceneInstance.cpp" />
+    <ClCompile Include="extAnimCutsceneActorEffect.cpp" />
+    <ClCompile Include="extAnimCutsceneBodyPartEvent.cpp" />
+    <ClCompile Include="extAnimCutsceneDialogEvent.cpp" />
+    <ClCompile Include="extAnimCutsceneEffectEvent.cpp" />
+    <ClCompile Include="extAnimCutsceneEnvironmentEvent.cpp" />
+    <ClCompile Include="extAnimCutsceneFadeEvent.cpp" />
+    <ClCompile Include="evaluator.cpp" />
+    <ClCompile Include="evaluatorColor.cpp" />
+    <ClCompile Include="evaluatorFloat.cpp" />
+    <ClCompile Include="evaluatorVector.cpp" />
+    <ClCompile Include="debugConsole.cpp" />
+    <ClCompile Include="debugMessage.cpp" />
+    <ClCompile Include="fxBase.cpp" />
+    <ClCompile Include="fxDefinition.cpp" />
+    <ClCompile Include="fxState.cpp" />
+    <ClCompile Include="fxTrack.cpp" />
+    <ClCompile Include="fxTrackGroup.cpp" />
+    <ClCompile Include="fxTrackItem.cpp" />
+    <ClCompile Include="fxTrackItemBrightnessTint.cpp" />
+    <ClCompile Include="fxTrackItemCameraShake.cpp" />
+    <ClCompile Include="fxTrackItemCurveBase.cpp" />
+    <ClCompile Include="fxTrackItemDisableHDRAdaptation.cpp" />
+    <ClCompile Include="fxTrackItemFullscreenBlur.cpp" />
+    <ClCompile Include="fxTrackItemMaterialOverride.cpp" />
+    <ClCompile Include="fxTrackItemMovement.cpp" />
+    <ClCompile Include="fxTrackItemParameterColor.cpp" />
+    <ClCompile Include="fxTrackItemParameterFloat.cpp" />
+    <ClCompile Include="fxTrackItemParticles.cpp" />
+    <ClCompile Include="fxTrackItemPause.cpp" />
+    <ClCompile Include="fxTrackItemRadialBlur.cpp" />
+    <ClCompile Include="fxTrackItemSoundEvent.cpp" />
+    <ClCompile Include="effectDummyPoint.cpp" />
+    <ClCompile Include="fxSpawner.cpp" />
+    <ClCompile Include="fxSpawnerComponent.cpp" />
+    <ClCompile Include="behaviorEvent.cpp" />
+    <ClCompile Include="behaviorGraph.cpp" />
+    <ClCompile Include="behaviorGraphContainerNode.cpp" />
+    <ClCompile Include="behaviorGraphContext.cpp" />
+    <ClCompile Include="behaviorGraphInstance.cpp" />
+    <ClCompile Include="behaviorGraphNode.cpp" />
+    <ClCompile Include="behaviorGraphNotifier.cpp" />
+    <ClCompile Include="behaviorGraphOutput.cpp" />
+    <ClCompile Include="behaviorGraphSocket.cpp" />
+    <ClCompile Include="behaviorGraphStack.cpp" />
+    <ClCompile Include="behaviorGraphValueNode.cpp" />
+    <ClCompile Include="behaviorIncludes.cpp" />
+    <ClCompile Include="behaviorVariable.cpp" />
+    <ClCompile Include="behaviorGraphAdjustDirectionNode.cpp" />
+    <ClCompile Include="behaviorGraphAnimationNode.cpp" />
+    <ClCompile Include="behaviorGraphAnimationSwitchNode.cpp" />
+    <ClCompile Include="behaviorGraphAnimEventTrackNode.cpp" />
+    <ClCompile Include="behaviorGraphBlendAdditive.cpp" />
+    <ClCompile Include="behaviorGraphBlendMultipleNode.cpp" />
+    <ClCompile Include="behaviorGraphBlendNode.cpp" />
+    <ClCompile Include="behaviorGraphBlendOverride.cpp" />
+    <ClCompile Include="behaviorGraphBlockEventNode.cpp" />
+    <ClCompile Include="behaviorGraphCameraCollisionsNode.cpp" />
+    <ClCompile Include="behaviorGraphCameraControllerNode.cpp" />
+    <ClCompile Include="behaviorGraphCharacterRotationNode.cpp" />
+    <ClCompile Include="behaviorGraphComparatorNode.cpp" />
+    <ClCompile Include="behaviorGraphCurveDampValueNode.cpp" />
+    <ClCompile Include="behaviorGraphCutsceneNode.cpp" />
+    <ClCompile Include="behaviorGraphDampValueNode.cpp" />
+    <ClCompile Include="behaviorGraphDampVectorValueNode.cpp" />
+    <ClCompile Include="behaviorGraphEngineValueNode.cpp" />
+    <ClCompile Include="behaviorGraphFilterNode.cpp" />
+    <ClCompile Include="behaviorGraphGetBoneTransformNode.cpp" />
+    <ClCompile Include="behaviorGraphGetCustomTrackNode.cpp" />
+    <ClCompile Include="behaviorGraphHeadingNode.cpp" />
+    <ClCompile Include="behaviorGraphMath.cpp" />
+    <ClCompile Include="behaviorGraphMemoryNode.cpp" />
+    <ClCompile Include="behaviorGraphMotionExBlend.cpp" />
+    <ClCompile Include="behaviorGraphParentInputNode.cpp" />
+    <ClCompile Include="behaviorGraphParentValueInputNode.cpp" />
+    <ClCompile Include="behaviorGraphParentVectorValueInputNode.cpp" />
+    <ClCompile Include="behaviorGraphPivotRotationNode.cpp" />
+    <ClCompile Include="behaviorGraphRandomNode.cpp" />
+    <ClCompile Include="behaviorGraphRandomSelectNode.cpp" />
+    <ClCompile Include="behaviorGraphRotateBone.cpp" />
+    <ClCompile Include="behaviorGraphRotationController.cpp" />
+    <ClCompile Include="behaviorGraphScriptNode.cpp" />
+    <ClCompile Include="behaviorGraphSpeedModulationNode.cpp" />
+    <ClCompile Include="behaviorGraphStage.cpp" />
+    <ClCompile Include="behaviorGraphTopLevelNode.cpp" />
+    <ClCompile Include="behaviorGraphTranslateBone.cpp" />
+    <ClCompile Include="behaviorGraphTranslationController.cpp" />
+    <ClCompile Include="behaviorGraphVariableNode.cpp" />
+    <ClCompile Include="behaviorGraphVectorVariableNode.cpp" />
+    <ClCompile Include="behaviorGraphComboNode.cpp" />
+    <ClCompile Include="behaviorGraphFrozenStateNode.cpp" />
+    <ClCompile Include="behaviorGraphStartingStateNode.cpp" />
+    <ClCompile Include="behaviorGraphStateMachine.cpp" />
+    <ClCompile Include="behaviorGraphStateNode.cpp" />
+    <ClCompile Include="behaviorGraphTransitionBlend.cpp" />
+    <ClCompile Include="behaviorGraphTransitionForce.cpp" />
+    <ClCompile Include="behaviorGraphTransitionNode.cpp" />
+    <ClCompile Include="behaviorGraphMimicConverter.cpp" />
+    <ClCompile Include="behaviorGraphMimicNodes.cpp" />
+    <ClCompile Include="behaviorGraphMimicsAnimationNode.cpp" />
+    <ClCompile Include="behaviorGraphAnimationBlendSlotNode.cpp" />
+    <ClCompile Include="behaviorGraphAnimationSlotNode.cpp" />
+    <ClCompile Include="behaviorGraphPoseSlotNode.cpp" />
+    <ClCompile Include="behaviorGraphFlowNode.cpp" />
+    <ClCompile Include="behaviorGraphOutputNode.cpp" />
+    <ClCompile Include="behaviorConstraintCameraDialog.cpp" />
+    <ClCompile Include="behaviorConstraintCameraFocus.cpp" />
+    <ClCompile Include="behaviorConstraintNode.cpp" />
+    <ClCompile Include="behaviorConstraintNodeCameraLookat.cpp" />
+    <ClCompile Include="behaviorConstraintNodeChain.cpp" />
+    <ClCompile Include="behaviorConstraintNodeLookAt.cpp" />
+    <ClCompile Include="behaviorConstraintObject.cpp" />
+    <ClCompile Include="behaviorConstraintParentAlignNode.cpp" />
+    <ClCompile Include="behaviorGraphLookAtSystemNode.cpp" />
+    <ClCompile Include="behaviorConstraintNodeRoll.cpp" />
+    <ClCompile Include="behaviorIkSolverChain.cpp" />
+    <ClCompile Include="behaviorIkSolverLookAt.cpp" />
+    <ClCompile Include="behaviorIkSolverMimicLookAt.cpp" />
+    <ClCompile Include="behaviorGraphActorTilt.cpp" />
+    <ClCompile Include="characterConstraint.cpp" />
+    <ClCompile Include="areaTree.cpp" />
+    <ClCompile Include="environmentManager.cpp" />
+    <ClCompile Include="globalLightingTrajectory.cpp" />
+    <ClCompile Include="environmentAreaParams.cpp" />
+    <ClCompile Include="environmentGameParams.cpp" />
+    <ClCompile Include="environmentComponentArea.cpp" />
+    <ClCompile Include="daycycleGraphicsEntity.cpp" />
+    <ClCompile Include="skyTransformComponent.cpp" />
+    <ClCompile Include="skyTransformEntity.cpp" />
+    <ClCompile Include="localizationManager.cpp" />
+    <ClCompile Include="localizedContent.cpp" />
+    <ClCompile Include="localizedStringsWithKeysCache.cpp" />
+    <ClCompile Include="cookedbinStringDBDataAccess.cpp" />
+    <ClCompile Include="sqlStringDBDataAccess.cpp" />
+    <ClCompile Include="debugCheckBox.cpp" />
+    <ClCompile Include="debugCounter.cpp" />
+    <ClCompile Include="debugPage.cpp" />
+    <ClCompile Include="debugPageAnimations.cpp" />
+    <ClCompile Include="debugPageAsyncLoader.cpp" />
+    <ClCompile Include="debugPageBudget.cpp" />
+    <ClCompile Include="debugPageEnvironments.cpp" />
+    <ClCompile Include="debugPageJobManager.cpp" />
+    <ClCompile Include="debugPagePerformanceLog.cpp" />
+    <ClCompile Include="debugPageProfilers.cpp" />
+    <ClCompile Include="debugPageScriptThreads.cpp" />
+    <ClCompile Include="debugPageShowFlags.cpp" />
+    <ClCompile Include="baseEngine.cpp" />
+    <ClCompile Include="build.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="engineClasses.cpp" />
+    <ClCompile Include="envParameters.cpp" />
+    <ClCompile Include="meshImpostor.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="abstractMarkerSystem.h" />
+    <ClInclude Include="abstractPathRater.h" />
+    <ClInclude Include="actorLod.h" />
+    <ClInclude Include="allocatedBehaviorGraphOutput.h" />
+    <ClInclude Include="anselIncludes.h" />
+    <ClInclude Include="anselIntegration.h" />
+    <ClInclude Include="apexDebugVisualizer.h" />
+    <ClInclude Include="appearanceComponentModifier.h" />
+    <ClInclude Include="attachmentUtils.h" />
+    <ClInclude Include="behaviorNodeParentChild.h" />
+    <ClInclude Include="behaviorGraphIk2BakerNode.h" />
+    <ClInclude Include="behaviorGraphMimicsBoneAnimationNode.h" />
+    <ClInclude Include="Behavior\SharedHeaders\build.h" />
+    <ClInclude Include="Behavior\SharedHeaders\enumSide.h" />
+    <ClInclude Include="Behavior\Tools\bitTools.h" />
+    <ClInclude Include="Behavior\Tools\common.h" />
+    <ClInclude Include="Behavior\Tools\stackAllocator.h" />
+    <ClInclude Include="boolExpression.h" />
+    <ClInclude Include="budgetedContainer.h" />
+    <ClInclude Include="budgetedTickContainer.h" />
+    <ClInclude Include="cameraFadeoutHelper.h" />
+    <ClInclude Include="cameraOrientedComponent.h" />
+    <ClInclude Include="collisionCacheAsyncReader.h" />
+    <ClInclude Include="collisionCacheBuilder.h" />
+    <ClInclude Include="collisionCacheDataFormat.h" />
+    <ClInclude Include="collisionCacheFakeIO.h" />
+    <ClInclude Include="collisionCacheOptimizer.h" />
+    <ClInclude Include="collisionCachePreloadedData.h" />
+    <ClInclude Include="collisionCacheReadOnly.h" />
+    <ClInclude Include="commonConfigs.h" />
+    <ClInclude Include="componentTickManager.h" />
+    <ClInclude Include="containerManager.h" />
+    <ClInclude Include="cookedLocaleKeys.h" />
+    <ClInclude Include="cookedMeshEntity.h" />
+    <ClInclude Include="cookedSpeeches.h" />
+    <ClInclude Include="cookedSpeechesAdapter_Legacy.h" />
+    <ClInclude Include="cookedStrings.h" />
+    <ClInclude Include="cookedStringsAdapter_Legacy.h" />
+    <ClInclude Include="curveEntitySpawner.h" />
+    <ClInclude Include="customIntrusiveList.h" />
+    <ClInclude Include="debugServerPlugin.h" />
+    <ClInclude Include="debugServerInternalCommands.h" />
+    <ClInclude Include="debugServerHelpers.h" />
+    <ClInclude Include="debugServerManager.h" />
+    <ClInclude Include="debugServerInternalPlugin.h" />
+    <ClInclude Include="dependencyLoaderSwf.h" />
+    <ClInclude Include="destructionComponent.h" />
+    <ClInclude Include="dropPhysicsComponentModifier.h" />
+    <ClInclude Include="engineMetalinkFactories.inl">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="hwCursorManager.h" />
+    <ClInclude Include="hairworksHelpers.h" />
+    <ClInclude Include="inGameConfigBasicImplementation.h" />
+    <ClInclude Include="inGameConfigGroupBasic.h" />
+    <ClInclude Include="inGameConfigParser.h" />
+    <ClInclude Include="inGameConfigVarBasic.h" />
+    <ClInclude Include="inputMappingInGameConfig.h" />
+    <ClInclude Include="inputMappingSaver.h" />
+    <ClInclude Include="entityExternalAppearance.h" />
+    <ClInclude Include="memoryMetricsUsageControlWalker.h" />
+    <ClInclude Include="interactionPriority.h" />
+    <ClInclude Include="MusicSystem.h" />
+    <ClInclude Include="pathlibUtils.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="engineMetalinkTypes.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="pathlibMetalinkComponent.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="gameDataStorage.h" />
+    <ClInclude Include="NewFX\Tracks\build.h" />
+    <ClInclude Include="NewFX\Tracks\fxTrackItemSetDissolve.h" />
+    <ClInclude Include="pathlibLinksBuffer.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="pathlibNode.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="entityTemplateModifier.h" />
+    <ClInclude Include="physicsDestructionResource.h" />
+    <ClInclude Include="physicsDestructionWrapper.h" />
+    <ClInclude Include="physicsDataProviders.h" />
+    <ClInclude Include="physicsTileWrapper.h" />
+    <ClInclude Include="scaleformMemoryDebug.h" />
+    <ClInclude Include="scriptsHash.h" />
+    <ClInclude Include="sectorDataPreload.h" />
+    <ClInclude Include="sectorPrefetchDataLoader.h" />
+    <ClInclude Include="sectorPrefetchGrid.h" />
+    <ClInclude Include="sectorPrefetchMemoryBuffer.h" />
+    <ClInclude Include="sectorPrefetchQuery.h" />
+    <ClInclude Include="sectorPrefetchRuntimeCache.h" />
+    <ClInclude Include="soundWallaSystem.h" />
+    <ClInclude Include="triggerAreaEnvironmentVisibilityComponent.h" />
+    <ClInclude Include="soundContactListener.h" />
+    <ClInclude Include="traceTool.h" />
+    <ClInclude Include="triggerAreaExpansionPackComponent.h" />
+    <ClInclude Include="videoDebugHud.h" />
+    <ClInclude Include="debugWindowFileLoadingStats.h" />
+    <ClInclude Include="debugWindowFrameStats.h" />
+    <ClInclude Include="debugWindowInGameConfig.h" />
+    <ClInclude Include="debugWindowMemoryBudgets.h" />
+    <ClInclude Include="debugWindowMemoryClassPanel.h" />
+    <ClInclude Include="debugWindowMemoryHistogram.h" />
+    <ClInclude Include="debugWindowMemoryHistoryViewer.h" />
+    <ClCompile Include="debugWindowResourceMonitor.cpp" />
+    <ClInclude Include="debugWindowPhysicsArea.h" />
+    <ClInclude Include="debugWindowProfilerSettings.h" />
+    <ClInclude Include="debugWindowResourceMonitor.h" />
+    <ClInclude Include="debugWindowStreamingInstaller.h" />
+    <ClInclude Include="debugWindowTelemetryTags.h" />
+    <ClInclude Include="debugWindowMemoryObjects.h" />
+    <ClInclude Include="debugWindowTerrain.h" />
+    <ClInclude Include="debugWindowWorldStreaming.h" />
+    <ClInclude Include="decalEmitter.h" />
+    <ClInclude Include="easyMeshBuilder.h" />
+    <ClInclude Include="dynamicFoliageComponent.h" />
+    <ClInclude Include="editorNodeMovementHook.h" />
+    <ClInclude Include="engineSettings.h" />
+    <ClInclude Include="entityDismemberment.h" />
+    <ClInclude Include="entityStreamingProxy.h" />
+    <ClInclude Include="entityTemplateCookedEffect.h" />
+    <ClInclude Include="entityTemplatePreloadedEffects.h" />
+    <ClInclude Include="entityTickManager.h" />
+    <ClInclude Include="flashFontConfig.h" />
+    <ClInclude Include="flashRenderTarget.h" />
+    <ClInclude Include="flashRenderSceneProvider.h" />
+    <ClInclude Include="flashRenderTargetScaleform.h" />
+    <ClInclude Include="foliageCellIterator.h" />
+    <ClInclude Include="foliageDynamicInstanceService.h" />
+    <ClInclude Include="foliageLodSetting.h" />
+    <ClInclude Include="foliageRenderSettings.h" />
+    <ClInclude Include="fxTrackItemFlare.h" />
+    <ClInclude Include="gameSaveFileNoSeeks.h" />
+    <ClInclude Include="gestureEvent.h" />
+    <ClInclude Include="globalVisibilityId.h" />
+    <ClInclude Include="inGameConfig.h" />
+    <ClInclude Include="inGameConfigInterface.h" />
+    <ClInclude Include="inGameConfigListingFunction.h" />
+    <ClInclude Include="inGameConfigRefreshEvent.h" />
+    <ClInclude Include="inGameConfigSpecialization.h" />
+    <ClInclude Include="jobEffectPreloading.h" />
+    <ClInclude Include="grassCellMask.h" />
+    <ClInclude Include="grassOccurrenceMap.h" />
+    <ClInclude Include="layersEntityCompatibilityChecker.h" />
+    <ClInclude Include="loadingOverlay.h" />
+    <ClInclude Include="loadingScreen.h" />
+    <ClInclude Include="manualStreamingHelper.h" />
+    <ClInclude Include="mergedMeshBuilder.h" />
+    <ClInclude Include="mergedMeshComponent.h" />
+    <ClInclude Include="mergedShadowMeshComponent.h" />
+    <ClInclude Include="mergedWorldGeometryShadowData.h" />
+    <ClInclude Include="mergedWorldGeometry.h" />
+    <ClInclude Include="mergedWorldGeometryEntity.h" />
+    <ClInclude Include="meshPacking.h" />
+    <ClInclude Include="meshSkeletonMappingCache.h" />
+    <ClInclude Include="meshDataBuilder.h" />
+    <ClInclude Include="nodeHelpers.h" />
+    <ClInclude Include="notifier.h" />
+    <ClInclude Include="mbParamEnvColorGroup.h" />
+    <ClInclude Include="memoryBudgetStorage.h" />
+    <ClInclude Include="memoryClassDebugColourPalette.h" />
+    <ClInclude Include="meshRenderSettings.h" />
+    <ClInclude Include="meshEnum.h" />
+    <ClInclude Include="occlusionSystem.h" />
+    <ClInclude Include="overrideStreamingDistanceComponent.h" />
+    <ClInclude Include="pathlibCentralNodeFinder.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="pathlibCollectCollisionPointsSpatialQuery.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="pathlibConnectorsBin.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="pathlibCookerData.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="pathlibDetailedSurfaceData.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="pathlibGraphBase.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="pathlibHLGraphBase.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="pathlibHLNode.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="pathlibHLSubGraph.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="pathlibNavgraphHelper.inl">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="pathlibNavmeshAreaProcessing.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="pathlibNodeFinder.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="pathlibActiveNodesQueue.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="pathlibHLGraph.h" />
+    <ClInclude Include="pathlibNodeFinderFunctors.inl">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="pathlibNodeSetRequestsList.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="pathlibObstacleDetour.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="pathlibObstaclesGroup.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="pathlibObstacleSimplificationProcessing.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="pathlibReachabilityQueryTask.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="pathlibRoughTerrainMap.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="pathlibRoughtTerrainComponent.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="pathlibSearchData.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="pathlibSettings.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="pathlibSpecialZoneMap.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="pathlibTaskImmediateObstacle.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="pathlibTaskLayersVisibilityProcessing.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="pathlibTerrainHeight.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="pathlibWalkableSpotQueryImplementation.inl">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="pathlibWalkableSpotQueryTask.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="pathlibTaskPostStreaming.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="pathlibTaskManager.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="pathlibTaskObstacleProcessing.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="pathlibTaskPlotPath.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="pathlibTaskUnloadStreamingItems.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="pathlibWalkableSpotQueryRequest.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="pathlibWorldLayersMapping.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="physicsBatchQueryManager.h" />
+    <ClInclude Include="poseBlock.h" />
+    <ClInclude Include="poseHandle.h" />
+    <ClInclude Include="poseProvider.h" />
+    <ClInclude Include="poseProviderFactory.h" />
+    <ClInclude Include="poseProviderRepository.h" />
+    <ClInclude Include="poseProviderStats.h" />
+    <ClInclude Include="poseTypes.h" />
+    <ClInclude Include="redGuiEmbeddedResources.h" />
+    <ClInclude Include="redGuiGraphBase.h" />
+    <ClInclude Include="redGuiClipmapVisualizer.h" />
+    <ClInclude Include="redGuiHistogram.h" />
+    <ClInclude Include="redGuiLoginBox.h" />
+    <ClInclude Include="redGuiModalWindow.h" />
+    <ClInclude Include="remoteConnection.h" />
+    <ClInclude Include="renderFramePrefetch.h" />
+    <ClInclude Include="renderGameplayRenderTargetInterface.h" />
+    <ClInclude Include="renderVisibilityExclusion.h" />
+    <ClInclude Include="renderSwarmData.h" />
+    <ClInclude Include="renderTextureStreamRequest.h" />
+    <ClInclude Include="saveServer.h" />
+    <ClInclude Include="scaleformExternalInterface.h" />
+    <ClInclude Include="scaleformFile.h" />
+    <ClInclude Include="scaleformLibs.h" />
+    <ClInclude Include="scaleformLoader.h" />
+    <ClInclude Include="scaleformLog.h" />
+    <ClInclude Include="scaleformMemory.h" />
+    <ClInclude Include="scaleformPlayer.h" />
+    <ClInclude Include="scaleformTaskManager.h" />
+    <ClInclude Include="scaleformTextureCacheQuee.h" />
+    <ClInclude Include="scaleformTranslator.h" />
+    <ClInclude Include="scaleformUserEvent.h" />
+    <ClInclude Include="scriptInvoker.h" />
+    <ClInclude Include="scaleable.h" />
+    <ClInclude Include="minimapGenerator.h" />
+    <ClInclude Include="sectorData.h" />
+    <ClInclude Include="sectorDataBuilder.h" />
+    <ClInclude Include="sectorDataEntityPool.h" />
+    <ClInclude Include="sectorDataGenericRuntime.h" />
+    <ClInclude Include="sectorDataGlobals.h" />
+    <ClInclude Include="sectorDataMerged.h" />
+    <ClInclude Include="sectorDataObjects.h" />
+    <ClInclude Include="sectorDataRawData.h" />
+    <ClInclude Include="sectorDataParticlesRuntime.h" />
+    <ClInclude Include="sectorDataResourceLoader.h" />
+    <ClInclude Include="sectorDataRigidMeshRuntime.h" />
+    <ClInclude Include="sectorDataStreaming.h" />
+    <ClInclude Include="sectorDataStreamingContext.h" />
+    <ClInclude Include="sectorDataStreamingThread.h" />
+    <ClInclude Include="shaderCacheBuilder.h" />
+    <ClInclude Include="shaderCacheData.h" />
+    <ClInclude Include="shaderCacheManager.h" />
+    <ClInclude Include="shaderCacheReadonly.h" />
+    <ClInclude Include="shadowMeshGenerator.h" />
+    <ClInclude Include="simpleBuoyancyComponent.h" />
+    <ClInclude Include="renderScaleform.h" />
+    <ClInclude Include="renderScaleformCommands.h" />
+    <ClInclude Include="skeletonSkeletonMappingCache.h" />
+    <ClInclude Include="soundCacheDataFormat.h" />
+    <ClInclude Include="soundSettings.h" />
+    <ClInclude Include="animatedComponentScripts.h" />
+    <ClInclude Include="animatedEntity.h" />
+    <ClInclude Include="animationBuffer.h" />
+    <ClInclude Include="animationBufferBitwiseCompressed.h" />
+    <ClInclude Include="animationBufferBitwiseCompressedStructs.h" />
+    <ClInclude Include="animationBufferMultipart.h" />
+    <ClInclude Include="animationBufferUncompressed.h" />
+    <ClInclude Include="animationTrajectoryPlayer_Blend2.h" />
+    <ClInclude Include="animationCache2.h" />
+    <ClInclude Include="animationCacheCooker.h" />
+    <ClInclude Include="animationCacheDepotSaver.h" />
+    <ClInclude Include="animationCompression.h" />
+    <ClInclude Include="animationController.h" />
+    <ClInclude Include="animationEngine.h" />
+    <ClInclude Include="animationGameParams.h" />
+    <ClInclude Include="animationIterator.h" />
+    <ClInclude Include="animationJobs.h" />
+    <ClInclude Include="animationLogger.h" />
+    <ClInclude Include="animationManager.h" />
+    <ClInclude Include="animationSelectors.h" />
+    <ClInclude Include="animationStreamingJob.h" />
+    <ClInclude Include="animationTrajectory.h" />
+    <ClInclude Include="animationTrajectoryPlayer.h" />
+    <ClInclude Include="animationPlayerTimeController.h" />
+    <ClInclude Include="animationTrajectoryPlayer_State.h" />
+    <ClInclude Include="animationTrajectoryPlayer_Trajectory.h" />
+    <ClInclude Include="animationTrajectoryTrackParam.h" />
+    <ClInclude Include="animationTrajectoryVisualizer.h" />
+    <ClInclude Include="animBehaviorsAndSetsParam.h" />
+    <ClInclude Include="animDangleBufferComponent.h" />
+    <ClInclude Include="animDangleComponent.h" />
+    <ClInclude Include="animHingeConstraint.h" />
+    <ClInclude Include="animMath.h" />
+    <ClInclude Include="animPointCloudLookAtParam.h" />
+    <ClInclude Include="animPoseConstraint.h" />
+    <ClInclude Include="animSkeletalDangleConstraint.h" />
+    <ClInclude Include="animSkeletalMultiDangleConstraint.h" />
+    <ClInclude Include="animSkeletalMultiDangleConstraint_painter.h" />
+    <ClInclude Include="animSlotsParam.h" />
+    <ClInclude Include="animSyncInfo.h" />
+    <ClInclude Include="animTickableInterface.h" />
+    <ClInclude Include="animationTrajectorySync.h" />
+    <ClInclude Include="apexClothResource.h" />
+    <ClInclude Include="apexClothWrapper.h" />
+    <ClInclude Include="apexDestructionResource.h" />
+    <ClInclude Include="apexDestructionWrapper.h" />
+    <ClInclude Include="apexMaterialMapping.h" />
+    <ClInclude Include="apexResource.h" />
+    <ClInclude Include="apexWrapperBase.h" />
+    <ClInclude Include="appearanceComponent.h" />
+    <ClInclude Include="areaTestComponent.h" />
+    <ClInclude Include="asyncAnimBucketJob.h" />
+    <ClInclude Include="asyncAnimTickManager.h" />
+    <ClInclude Include="baseTree.h" />
+    <ClInclude Include="behaviorGraph2DVariableNode.h" />
+    <ClInclude Include="behaviorGraphAlignToGroundNode.h" />
+    <ClInclude Include="behaviorGraphAnimationAdditiveSlot.h" />
+    <ClInclude Include="behaviorGraphAnimationEventNode.h" />
+    <ClInclude Include="behaviorGraphAnimationExtNode.h" />
+    <ClInclude Include="behaviorGraphAnimationLipsyncSlot.h" />
+    <ClInclude Include="behaviorGraphAnimationManualSlot.h" />
+    <ClInclude Include="behaviorGraphAnimationMixerSlot.h" />
+    <ClInclude Include="behaviorGraphBlend3Node.h" />
+    <ClInclude Include="behaviorGraphChooseRecoverFromRagdollAnimNode.h" />
+    <ClInclude Include="behaviorGraphFootLockNode.h" />
+    <ClInclude Include="behaviorGraphInternalVariableNode.h" />
+    <ClInclude Include="behaviorGraphInternalVectorVariableNode.h" />
+    <ClInclude Include="behaviorGraphJoinNode.h" />
+    <ClInclude Include="behaviorGraphLookAtUsingAnimationsNode.h" />
+    <ClInclude Include="behaviorGraphSynchronizeAnimationsNode.h" />
+    <ClInclude Include="behaviorGraphMimicLipsync.h" />
+    <ClInclude Include="behaviorGraphMimicManualSlot.h" />
+    <ClInclude Include="behaviorGraphMimicPoseNodes.h" />
+    <ClInclude Include="behaviorGraphNodeControlRig.h" />
+    <ClInclude Include="behaviorGraphPointCloudLookAtNode.h" />
+    <ClInclude Include="behaviorGraphPointerStateNode.h" />
+    <ClInclude Include="behaviorGraphRecentlyUsedAnimsStateNode.h" />
+    <ClInclude Include="behaviorGraphRetargetCharacterNode.h" />
+    <ClInclude Include="behaviorGraphSetInternalVariableFloatInOutNode.h" />
+    <ClInclude Include="behaviorGraphSetInternalVariableNode.h" />
+    <ClInclude Include="behaviorGraphSimplePlaybackUtils.h" />
+    <ClInclude Include="behaviorGraphSyncOverride.h" />
+    <ClInclude Include="behaviorGraphTransitionMatchToPose.h" />
+    <ClInclude Include="behaviorGraphVariableBaseNode.h" />
+    <ClInclude Include="behaviorGraphVectorVariableBaseNode.h" />
+    <ClInclude Include="behaviorIkApplyRotation.h" />
+    <ClInclude Include="behaviorIkTwoBones.h" />
+    <ClInclude Include="behaviorProfiler.h" />
+    <ClInclude Include="bezierComponent.h" />
+    <ClInclude Include="Bezier_Polynomials.h" />
+    <ClInclude Include="breastConstraint.h" />
+    <ClInclude Include="breastConstraintPresets.h" />
+    <ClInclude Include="cameraAttractor.h" />
+    <ClInclude Include="cameraDirector.h" />
+    <ClInclude Include="cameraPredictor.h" />
+    <ClInclude Include="behaviorConstraintNodeBoneInterpolate.h" />
+    <ClInclude Include="characterControllerManager.h" />
+    <ClInclude Include="characterControllerParam.h" />
+    <ClInclude Include="characterEntityTemplate.h" />
+    <ClInclude Include="clipMap.h" />
+    <ClInclude Include="clothAttachment.h" />
+    <ClInclude Include="clothComponent.h" />
+    <ClInclude Include="collarConstraint.h" />
+    <ClInclude Include="collisionShapeBuilder.h" />
+    <ClInclude Include="commentGraphBlock.h" />
+    <ClInclude Include="compressedBuffers.h" />
+    <ClInclude Include="compressedRotation.h" />
+    <ClInclude Include="compressedTranslation.h" />
+    <ClInclude Include="controlRig.h" />
+    <ClInclude Include="controlRigAlgorithms.h" />
+    <ClInclude Include="controlRigBehaviorNodeController.h" />
+    <ClInclude Include="controlRigDefinition.h" />
+    <ClInclude Include="controlRigIncludes.h" />
+    <ClInclude Include="controlRigPropertySet.h" />
+    <ClInclude Include="controlRigSolver.h" />
+    <ClInclude Include="controlRigUtils.h" />
+    <ClInclude Include="curveControlPointEntity.h" />
+    <ClInclude Include="curveEntity.h" />
+    <ClInclude Include="curveTangentControlPointEntity.h" />
+    <ClInclude Include="cutsceneDebug.h" />
+    <ClInclude Include="cutsceneEntity.h" />
+    <ClInclude Include="dangleComponent.h" />
+    <ClInclude Include="animDangleConstraint.h" />
+    <ClInclude Include="debugCommandBox.h" />
+    <ClInclude Include="debugChoice.h" />
+    <ClInclude Include="debugPageManagerBase.h" />
+    <ClInclude Include="debugPageManagerTabbed.h" />
+    <ClInclude Include="debugWindowAnimations.h" />
+    <ClInclude Include="debugWindowArrayMemory.h" />
+    <ClInclude Include="debugWindowCallstackProfiler.h" />
+    <ClInclude Include="debugWindowEnvironment.h" />
+    <ClInclude Include="debugWindowGameFrame.h" />
+    <ClInclude Include="debugWindowJobManager.h" />
+    <ClInclude Include="debugWindowLoadedResources.h" />
+    <ClInclude Include="debugWindowMemoryMetrics.h" />
+    <ClInclude Include="debugWindowPerformanceLog.h" />
+    <ClInclude Include="debugWindowPhysics.h" />
+    <ClInclude Include="debugWindowRenderingFlags.h" />
+    <ClInclude Include="debugWindowReviewMarkers.h" />
+    <ClInclude Include="debugWindowReviewMarkersAddMarker.h" />
+    <ClInclude Include="debugWindowReviewMarkersEditMarker.h" />
+    <ClInclude Include="debugWindowReviewMarkersFilterMarker.h" />
+    <ClInclude Include="debugWindowReviewMarkersShowMarker.h" />
+    <ClInclude Include="debugWindowScriptThreads.h" />
+    <ClInclude Include="debugWindowsManager.h" />
+    <ClInclude Include="debugWindowSound.h" />
+    <ClInclude Include="debugWindowTaskManager.h" />
+    <ClInclude Include="debugWindowVegetation.h" />
+    <ClInclude Include="debugWindowUmbra.h" />
+    <ClInclude Include="decalComponent.h" />
+    <ClInclude Include="dependencyAttachment.h" />
+    <ClInclude Include="dismembermentComponent.h" />
+    <ClInclude Include="destructionSystemComponentPresets.h" />
+    <ClInclude Include="dressConstraint.h" />
+    <ClInclude Include="dropPhysicsComponent.h" />
+    <ClInclude Include="dynamicCollisionCollector.h" />
+    <ClInclude Include="dynamicColliderComponent.h" />
+    <ClInclude Include="dyngConstraint.h" />
+    <ClInclude Include="dyngResource.h" />
+    <ClInclude Include="dyngSimulator.h" />
+    <ClInclude Include="dynamicDecal.h" />
+    <ClInclude Include="earingConstraint.h" />
+    <ClInclude Include="easingFunctions.h" />
+    <ClInclude Include="engineInternal.h" />
+    <ClInclude Include="engineNamesRegistry.h" />
+    <ClInclude Include="envProbeParams.h" />
+    <ClInclude Include="extAnimCutsceneEvent.h" />
+    <ClInclude Include="extAnimMorphEvent.h" />
+    <ClInclude Include="extAnimRaiseEventEvent.h" />
+    <ClInclude Include="flareParameters.h" />
+    <ClInclude Include="floatDamper.h" />
+    <ClInclude Include="foliageBroker.h" />
+    <ClInclude Include="foliageCell.h" />
+    <ClInclude Include="foliageCollisionHandler.h" />
+    <ClInclude Include="foliageEditionController.h" />
+    <ClInclude Include="foliageForward.h" />
+    <ClInclude Include="foliageGrid.h" />
+    <ClInclude Include="foliageInstance.h" />
+    <ClInclude Include="foliageRenderCommandDispatcher.h" />
+    <ClInclude Include="foliageResource.h" />
+    <ClInclude Include="foliageResourceHandler.h" />
+    <ClInclude Include="foliageResourceLoader.h" />
+    <ClInclude Include="foliageScene.h" />
+    <ClInclude Include="fxSimpleSpawner.h" />
+    <ClInclude Include="gameUniverseStorage.h" />
+    <ClInclude Include="gestureListener.h" />
+    <ClInclude Include="gestureSystem.h" />
+    <ClInclude Include="gpuDataBuffer.h" />
+    <ClInclude Include="grassMask.h" />
+    <ClInclude Include="helpTextComponent.h" />
+    <ClInclude Include="hoodConstraint.h" />
+    <ClInclude Include="inputDeviceCommand.h" />
+    <ClInclude Include="inputDeviceCommandBacklight.h" />
+    <ClInclude Include="inputDeviceCommandRumble.h" />
+    <ClInclude Include="inputDeviceCommandsManager.h" />
+    <ClInclude Include="inputKeyToDeviceMapping.h" />
+    <ClInclude Include="interfaceDefinitions.h" />
+    <ClInclude Include="lensFlareSetupParameters.h" />
+    <ClInclude Include="inputBufferedInputEvent.h" />
+    <ClInclude Include="inputDevice.h" />
+    <ClInclude Include="inputDeviceGamepad.h" />
+    <ClInclude Include="inputDeviceKeyboard.h" />
+    <ClInclude Include="inputDeviceManager.h" />
+    <ClInclude Include="inputDeviceTablet.h" />
+    <ClInclude Include="inputEditorInterface.h" />
+    <ClInclude Include="inputDeviceMouse.h" />
+    <ClInclude Include="inputGameInputModeListener.h" />
+    <ClInclude Include="memoryMetricsMemoryUsageControl.h" />
+    <ClInclude Include="meshChunk.h" />
+    <ClInclude Include="meshGcProxy.h" />
+    <ClInclude Include="meshLODGenerator.h" />
+    <ClInclude Include="meshVertex.h" />
+    <ClInclude Include="multiCurve.h" />
+    <ClInclude Include="particleInitializerCollisionSpawn.h" />
+    <ClInclude Include="particleInitializerLifeTime.h" />
+    <ClInclude Include="particleModificatorCollision.h" />
+    <ClInclude Include="pathlibAreaNavgraphs.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="pathlibAreaProcessingJob.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="pathlibAreaRes.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="pathlibBundler.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="pathlibComponent.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="pathlibConfiguration.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="pathlibMetalink.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="pathlibNavmeshBorderAreaComponent.h" />
+    <ClInclude Include="pathlibNavmeshLegacy.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="pathlibNavNode.h" />
+    <ClInclude Include="pathlibObstacleShape.h" />
+    <ClInclude Include="pathlibObstaclesMap.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="pathlibResPtr.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="pathlibSimpleBuffers.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="pathlibStreamingItem.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="pathlibStreamingJob.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="pathlibTerrainFoliage.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="pathlibTerrainSurfaceProcessing.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="pathlibGenerationManagerBase.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="performableAction.h" />
+    <ClInclude Include="physicsCharacterVirtualController.h" />
+    <ClInclude Include="integerVector.h" />
+    <ClInclude Include="platformViewport.h" />
+    <ClInclude Include="propertyAnimationSet.h" />
+    <ClInclude Include="memoryMetricsPoolAreaControl.h" />
+    <ClInclude Include="globalEventsManager.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="redGuiAdvancedSlider.h" />
+    <ClInclude Include="redGuiAnchor.h" />
+    <ClInclude Include="redGuiAreaChart.h" />
+    <ClInclude Include="redGuiButton.h" />
+    <ClInclude Include="redGuiCheckBox.h" />
+    <ClInclude Include="redGuiComboBox.h" />
+    <ClInclude Include="redGuiControl.h" />
+    <ClInclude Include="redGuiControlInput.h" />
+    <ClInclude Include="redGuiControlSkin.h" />
+    <ClInclude Include="redGuiCroppedRect.h" />
+    <ClInclude Include="redGuiDefaultTheme.h" />
+    <ClInclude Include="redGuiDelegate1.h" />
+    <ClInclude Include="redGuiDelegate2.h" />
+    <ClInclude Include="redGuiDelegate3.h" />
+    <ClInclude Include="redGuiDelegate4.h" />
+    <ClInclude Include="redGuiDelegate5.h" />
+    <ClInclude Include="redGuiDelegates.h" />
+    <ClInclude Include="redGuiDesktop.h" />
+    <ClInclude Include="redGuiDock.h" />
+    <ClInclude Include="redGuiEnumerates.h" />
+    <ClInclude Include="redGuiEventPackage.h" />
+    <ClInclude Include="redGuiFontManager.h" />
+    <ClInclude Include="redGuiForwardDeclarations.h" />
+    <ClInclude Include="redGuiGeneralLayer.h" />
+    <ClInclude Include="redGuiGradientTheme.h" />
+    <ClInclude Include="redGuiGraphicContext.h" />
+    <ClInclude Include="redGuiGridLayout.h" />
+    <ClInclude Include="redGuiGroupBox.h" />
+    <ClInclude Include="redGuiImage.h" />
+    <ClInclude Include="redGuiInputManager.h" />
+    <ClInclude Include="redGuiLabel.h" />
+    <ClInclude Include="redGuiLayer.h" />
+    <ClInclude Include="redGuiLayerItem.h" />
+    <ClInclude Include="redGuiLayerManager.h" />
+    <ClInclude Include="redGuiList.h" />
+    <ClInclude Include="redGuiListItem.h" />
+    <ClInclude Include="redGuiManager.h" />
+    <ClInclude Include="redGuiMenu.h" />
+    <ClInclude Include="redGuiMenuBar.h" />
+    <ClInclude Include="redGuiMenuItem.h" />
+    <ClInclude Include="redGuiMessageBox.h" />
+    <ClInclude Include="redGuiOccupancyChart.h" />
+    <ClInclude Include="redGuiOpenFileDialog.h" />
+    <ClInclude Include="redGuiPanel.h" />
+    <ClInclude Include="redGuiProgressBar.h" />
+    <ClInclude Include="redGuiRenderManager.h" />
+    <ClInclude Include="redGuiSaveFileDialog.h" />
+    <ClInclude Include="redGuiScrollBar.h" />
+    <ClInclude Include="redGuiScrollPanel.h" />
+    <ClInclude Include="redGuiSeparator.h" />
+    <ClInclude Include="redGuiSlider.h" />
+    <ClInclude Include="redGuiSpin.h" />
+    <ClInclude Include="redGuiTab.h" />
+    <ClInclude Include="redGuiTextBox.h" />
+    <ClInclude Include="redGuiTheme.h" />
+    <ClInclude Include="redGuiThemeManager.h" />
+    <ClInclude Include="redGuiTimeline.h" />
+    <ClInclude Include="redGuiTimelineChart.h" />
+    <ClInclude Include="redGuiTimelineEvent.h" />
+    <ClInclude Include="redGuiToolTipManager.h" />
+    <ClInclude Include="redGuiTreeNode.h" />
+    <ClInclude Include="redGuiTreeView.h" />
+    <ClInclude Include="redGuiTypes.h" />
+    <ClInclude Include="redGuiUserData.h" />
+    <ClInclude Include="redGuiProgressBox.h" />
+    <ClInclude Include="redGuiWindow.h" />
+    <ClInclude Include="renderCommandInterface.h" />
+    <ClInclude Include="renderObjectPtr.h" />
+    <ClInclude Include="scaleformTextureCacheImage.h" />
+    <ClInclude Include="showFlags.h" />
+    <ClInclude Include="simplexTreeResource.h" />
+    <ClInclude Include="simplygonHelpers.h" />
+    <ClInclude Include="skyboxSetupParameters.h" />
+    <ClInclude Include="softTriggerAreaComponent.h" />
+    <ClInclude Include="soundListener.h" />
+    <ClInclude Include="speedConfig.h" />
+    <ClInclude Include="staticShaderCache.h" />
+    <ClInclude Include="streamingAreaComponent.h" />
+    <ClInclude Include="swarmRenderComponent.h" />
+    <ClInclude Include="swfTexture.h" />
+    <ClInclude Include="switchableFoliageComponent.h" />
+    <ClInclude Include="teleportDetector.h" />
+    <ClInclude Include="teleportDetectorData.h" />
+    <ClInclude Include="terrainStructs.h" />
+    <ClInclude Include="stripeComponent.h" />
+    <ClInclude Include="terrainTypes.h" />
+    <ClInclude Include="tickStats.h" />
+    <ClInclude Include="timerManager.h" />
+    <ClInclude Include="triggerActivatorComponent.h" />
+    <ClInclude Include="triggerEventBuffer.h" />
+    <ClInclude Include="triggerMaskBuffer.h" />
+    <ClInclude Include="nodeAllocator.h" />
+    <ClInclude Include="meshTypeComponent.h" />
+    <ClInclude Include="renderGameplayEffects.h" />
+    <ClInclude Include="scriptCompilationHelper.h" />
+    <ClInclude Include="gameplayEffectsComponent.h" />
+    <ClInclude Include="dimmerComponent.h" />
+    <ClInclude Include="negativeAreaComponent.h" />
+    <ClInclude Include="polygonTriangulation.h" />
+    <ClInclude Include="morphedMeshComponent.h" />
+    <ClInclude Include="morphedMeshManagerComponent.h" />
+    <ClInclude Include="shortestPathRater.h" />
+    <ClInclude Include="deniedAreaComponent.h" />
+    <ClInclude Include="dependencyLoaderSRT.h" />
+    <ClInclude Include="debugPageDynamicAttributes.h" />
+    <ClInclude Include="debugTextBox.h" />
+    <ClInclude Include="descriptionGraphBlock.h" />
+    <ClInclude Include="compressedFile.h" />
+    <ClInclude Include="EngineBezierTools.h" />
+    <ClInclude Include="entityMotion.h" />
+    <ClInclude Include="environmentDefinition.h" />
+    <ClInclude Include="envProbeComponent.h" />
+    <ClInclude Include="extAnimScriptEvent.h" />
+    <ClInclude Include="flashFunction.h" />
+    <ClInclude Include="flashFunctionScaleform.h" />
+    <ClInclude Include="flashMovie.h" />
+    <ClInclude Include="flashMovieScaleform.h" />
+    <ClInclude Include="scaleformConfig.h" />
+    <ClInclude Include="flashReference.h" />
+    <ClInclude Include="flashValue.h" />
+    <ClInclude Include="flashValueObject.h" />
+    <ClInclude Include="flashValueObjectScaleform.h" />
+    <ClInclude Include="flashValueStorage.h" />
+    <ClInclude Include="flashValueStorageScaleform.h" />
+    <ClInclude Include="furComponent.h" />
+    <ClInclude Include="furMeshResource.h" />
+    <ClInclude Include="fxTrackItemEnvironmentModifier.h" />
+    <ClInclude Include="inputListener.h" />
+    <ClInclude Include="inputUserConfig.h" />
+    <ClInclude Include="navigationObstacle.h" />
+    <ClInclude Include="networkedLogOutputDevice.h" />
+    <ClInclude Include="pathlibNodeSet.h" />
+    <ClInclude Include="pathlibObstacleAsyncProcessing.h" />
+    <ClInclude Include="pathlibObstacleSpawnContext.h" />
+    <ClInclude Include="materialSampler.h" />
+    <ClInclude Include="renderVisibilityQuery.h" />
+    <ClInclude Include="scaleformSystem.h" />
+    <ClInclude Include="screenshotSystem.h" />
+    <ClInclude Include="skeletonConsumer.h" />
+    <ClInclude Include="flashPlayerScaleformInput.h" />
+    <ClInclude Include="swfResource.h" />
+    <ClInclude Include="fxPhysicalForce.h" />
+    <ClInclude Include="fxTrackItemForceFeedback.h" />
+    <ClInclude Include="fxTrackItemGlobalSpacePhysicalForce.h" />
+    <ClInclude Include="gameResource.h" />
+    <ClInclude Include="globalWater.h" />
+    <ClInclude Include="globalWaterUpdateParams.h" />
+    <ClInclude Include="graphHelperBlock.h" />
+    <ClInclude Include="guiGlobals.h" />
+    <ClInclude Include="markersSystem.h" />
+    <ClInclude Include="mimicComponent.h" />
+    <ClInclude Include="normalBlendAttachment.h" />
+    <ClInclude Include="normalBlendComponent.h" />
+    <ClInclude Include="normalBlendDataSource.h" />
+    <ClInclude Include="poiDatabaseConnector.h" />
+    <ClInclude Include="poiSystem.h" />
+    <ClInclude Include="pathlibStreamingManager.h" />
+    <ClInclude Include="phantomAttachment.h" />
+    <ClInclude Include="pathlibNavmeshBinTree.h" />
+    <ClInclude Include="pathlibNavmeshGeneration.h" />
+    <ClInclude Include="scaleformHacks.h" />
+    <ClInclude Include="scaleformIncludes.h" />
+    <ClInclude Include="scaleformTypes.h" />
+    <ClInclude Include="scaleformUtils.inl" />
+    <ClInclude Include="flashPlayer.h" />
+    <ClInclude Include="flashPlayerScaleform.h" />
+    <ClInclude Include="heightmapUtils.h" />
+    <ClInclude Include="IBezierOwner.h" />
+    <ClInclude Include="inputRecorder.h" />
+    <ClInclude Include="mbEncapsulatedGraph.h" />
+    <ClInclude Include="mbInput.h" />
+    <ClInclude Include="mbInterpolator.h" />
+    <ClInclude Include="mbOutput.h" />
+    <ClInclude Include="mbParamTextureArray.h" />
+    <ClInclude Include="meshCache.h" />
+    <ClInclude Include="meshCacheCooker.h" />
+    <ClInclude Include="cookedAnimatedProp.h" />
+    <ClInclude Include="meshTypeResource.h" />
+    <ClInclude Include="mimicFac.h" />
+    <ClInclude Include="pathlib.h" />
+    <ClInclude Include="pathlibAgent.h" />
+    <ClInclude Include="pathlibAreaDescription.h" />
+    <ClInclude Include="pathlibBinTree.h" />
+    <ClInclude Include="pathlibConst.h" />
+    <ClInclude Include="pathlibGraph.h" />
+    <ClInclude Include="pathlibInstanceMap.h" />
+    <ClInclude Include="pathlibKDTree.h" />
+    <ClInclude Include="pathlibNavgraph.h" />
+    <ClInclude Include="pathlibNavmesh.h" />
+    <ClInclude Include="pathlibNavmeshArea.h" />
+    <ClInclude Include="pathlibNavmeshComponent.h" />
+    <ClInclude Include="pathlibObstacle.h" />
+    <ClInclude Include="pathlibObstacleMapper.h" />
+    <ClInclude Include="pathlibSearchEngine.h" />
+    <ClInclude Include="pathlibSpatialQuery.h" />
+    <ClInclude Include="pathlibGenerationManager.h" />
+    <ClInclude Include="pathlibTerrain.h" />
+    <ClInclude Include="pathlibTerrainInfo.h" />
+    <ClInclude Include="pathlibVisualizer.h" />
+    <ClInclude Include="pathlibWorld.h" />
+    <ClInclude Include="physicsCharacterWrapper.h" />
+    <ClInclude Include="QuadBezier_Math2.h" />
+    <ClInclude Include="QuadraticBezier2.h" />
+    <ClInclude Include="QuadraticBezier_Curve.h" />
+    <ClInclude Include="QuadraticBezier_Knots.h" />
+    <ClInclude Include="QuadraticBezier_Segment.h" />
+    <ClInclude Include="QuadraticBezier_Segment2.h" />
+    <ClInclude Include="ragdollPhysX.h" />
+    <ClInclude Include="randomGenerators.h" />
+    <ClInclude Include="poseBBoxGenerator.h" />
+    <ClInclude Include="animBuffer.h" />
+    <ClInclude Include="animCacheEntry.h" />
+    <ClInclude Include="animConstraintsParam.h" />
+    <ClInclude Include="animGlobalParam.h" />
+    <ClInclude Include="animMemStats.h" />
+    <ClInclude Include="animMimicParam.h" />
+    <ClInclude Include="behaviorAnimationMultiplyEntity.h" />
+    <ClInclude Include="behaviorGraphNodeIterator.h" />
+    <ClInclude Include="behaviorGraphPoseSlotListener.h" />
+    <ClInclude Include="behaviorGraphSelfActStateMachine.h" />
+    <ClInclude Include="behaviorGraphStackSnapshot.h" />
+    <ClInclude Include="behaviorPoseConstraintNode.h" />
+    <ClInclude Include="bitmapLocker.h" />
+    <ClInclude Include="bitmapTexture.h" />
+    <ClInclude Include="boxComponent.h" />
+    <ClInclude Include="cacheBehaviorGraphOutput.h" />
+    <ClInclude Include="comprUtilsDataBuffer.h" />
+    <ClInclude Include="comprUtilsLine.h" />
+    <ClInclude Include="cubeTexture.h" />
+    <ClInclude Include="cutsceneActor.h" />
+    <ClInclude Include="cutsceneModifier.h" />
+    <ClInclude Include="debugAnimation.h" />
+    <ClInclude Include="debugPageParam.h" />
+    <ClInclude Include="debugSlider.h" />
+    <ClInclude Include="debugStat.h" />
+    <ClInclude Include="dressMeshComponent.h" />
+    <ClInclude Include="effectDummyComponent.h" />
+    <ClInclude Include="effectEntity.h" />
+    <ClInclude Include="entityTemplate.h" />
+    <ClInclude Include="entityTemplateIterator.h" />
+    <ClInclude Include="entityTemplateParams.h" />
+    <ClInclude Include="extAnimCutsceneSoundEvent.h" />
+    <ClInclude Include="footstepData.h" />
+    <ClInclude Include="fxTrackItemDynamicLight.h" />
+    <ClInclude Include="fxWaterSpawner.h" />
+    <ClInclude Include="gameplayConfig.h" />
+    <ClInclude Include="gameSaveFile.h" />
+    <ClInclude Include="havokAnimationUtils.h" />
+    <ClInclude Include="havokResource.h" />
+    <ClInclude Include="immediateJobsCollector.h" />
+    <ClInclude Include="languagePack.h" />
+    <ClInclude Include="localizationCache.h" />
+    <ClInclude Include="motionExtraction.h" />
+    <ClInclude Include="motionExtractionCompression.h" />
+    <ClInclude Include="persistentReference.h" />
+    <ClInclude Include="pose.h" />
+    <ClInclude Include="poseCompression.h" />
+    <ClInclude Include="posePool.h" />
+    <ClInclude Include="rawInputManager.h" />
+    <ClInclude Include="registryAccess.h" />
+    <ClInclude Include="renderProxyFoliage.h" />
+    <ClInclude Include="renderShaders.h" />
+    <ClInclude Include="renderSkinningData.h" />
+    <ClInclude Include="reviewDatabaseConnector.h" />
+    <ClInclude Include="reviewSystem.h" />
+    <ClInclude Include="reviewTestTrackConnector.h" />
+    <ClInclude Include="scriptedDestroyableComponent.h" />
+    <ClInclude Include="scriptEngineAnimationNatives.h" />
+    <ClInclude Include="skeletalAnimatedComponent.h" />
+    <ClInclude Include="skeletalAnimationEntry.h" />
+    <ClInclude Include="skeletonUtils.h" />
+    <ClInclude Include="soundAdditionalListener.h" />
+    <ClInclude Include="soundEmitter.h" />
+    <ClInclude Include="soundEntityParam.h" />
+    <ClInclude Include="soundFileLoader.h" />
+    <ClInclude Include="soundStartData.h" />
+    <ClInclude Include="dynamicObstacle.h" />
+    <ClInclude Include="stickerDatabaseConnector.h" />
+    <ClInclude Include="stickersSystem.h" />
+    <ClInclude Include="terrainTile.h" />
+    <ClInclude Include="terrainUtils.h" />
+    <ClInclude Include="testFramework.h" />
+    <ClInclude Include="texture.h" />
+    <ClInclude Include="textureArray.h" />
+    <ClInclude Include="textureCache.h" />
+    <ClInclude Include="bitmapDataBuffer.h" />
+    <ClInclude Include="havokDataBuffer.h" />
+    <ClInclude Include="havokDataBufferParser.h" />
+    <ClInclude Include="mesh.h" />
+    <ClInclude Include="collisionColoring.h" />
+    <ClInclude Include="collisionMesh.h" />
+    <ClInclude Include="collisionShape.h" />
+    <ClInclude Include="collisionCache.h" />
+    <ClInclude Include="dynamicLayer.h" />
+    <ClInclude Include="entityHandle.h" />
+    <ClInclude Include="layer.h" />
+    <ClInclude Include="layerGroup.h" />
+    <ClInclude Include="layerInfo.h" />
+    <ClInclude Include="layerStorage.h" />
+    <ClInclude Include="persistentEntity.h" />
+    <ClInclude Include="tickThread.h" />
+    <ClInclude Include="timerKeyword.h" />
+    <ClInclude Include="umbraIncludes.h" />
+    <ClInclude Include="umbraJobs.h" />
+    <ClInclude Include="umbraQuery.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="umbraScene.h" />
+    <ClInclude Include="umbraStructures.h" />
+    <ClInclude Include="umbraTile.h" />
+    <ClInclude Include="areaConvex.h" />
+    <ClInclude Include="triggerManager.h" />
+    <ClInclude Include="triggerManagerImpl.h" />
+    <ClInclude Include="areaShapeBuilder.h" />
+    <ClInclude Include="globalSpatialTree.h" />
+    <ClInclude Include="userProfile.h" />
+    <ClInclude Include="userProfileMock.h" />
+    <ClInclude Include="utils.h" />
+    <ClInclude Include="vectorDamper.h" />
+    <ClInclude Include="vegetationBrush.h" />
+    <ClInclude Include="videoPlayerBink.h" />
+    <ClInclude Include="videoSoundSystemDX8.h" />
+    <ClInclude Include="videoSoundSystemPS4.h" />
+    <ClInclude Include="videoSoundSystemXA2.h" />
+    <ClInclude Include="videoSubtitles.h" />
+    <ClInclude Include="viewportWindowMode.h" />
+    <ClInclude Include="virtualAnimation.h" />
+    <ClInclude Include="virtualAnimationMixer.h" />
+    <ClInclude Include="virtualSkeletalAnimation.h" />
+    <ClInclude Include="waterComponent.h" />
+    <ClInclude Include="springDampers.h" />
+    <ClInclude Include="weatherManager.h" />
+    <ClInclude Include="wetnessComponent.h" />
+    <ClInclude Include="windAreaComponent.h" />
+    <ClInclude Include="world.h" />
+    <ClInclude Include="worldLookup.h" />
+    <ClInclude Include="worldIterators.h" />
+    <ClInclude Include="worldSceneDependencyInfo.h" />
+    <ClInclude Include="worldShowFlags.h" />
+    <ClInclude Include="streamingSectorData.h" />
+    <ClInclude Include="worldStreaming.h" />
+    <ClInclude Include="worldTick.h" />
+    <ClInclude Include="updateTransformManager.h" />
+    <ClInclude Include="selectionManager.h" />
+    <ClInclude Include="tickManager.h" />
+    <ClInclude Include="tagManager.h" />
+    <ClInclude Include="windParameters.h" />
+    <ClInclude Include="renderCamera.h" />
+    <ClInclude Include="renderCommandBuffer.h" />
+    <ClInclude Include="renderCommands.h" />
+    <ClInclude Include="renderer.h" />
+    <ClInclude Include="renderFence.h" />
+    <ClInclude Include="renderFragment.h" />
+    <ClInclude Include="renderFrame.h" />
+    <ClInclude Include="renderFrameInfo.h" />
+    <ClInclude Include="renderMemoryPages.h" />
+    <ClInclude Include="renderMemoryPool.h" />
+    <ClInclude Include="renderMovie.h" />
+    <ClInclude Include="renderObject.h" />
+    <ClInclude Include="renderParticles.h" />
+    <ClInclude Include="renderProxy.h" />
+    <ClInclude Include="renderProxyInterface.h" />
+    <ClInclude Include="renderProxyIterator.h" />
+    <ClInclude Include="renderResource.h" />
+    <ClInclude Include="renderSettings.h" />
+    <ClInclude Include="renderShadow.h" />
+    <ClInclude Include="renderTerrainModPreview.h" />
+    <ClInclude Include="renderThread.h" />
+    <ClInclude Include="renderVertices.h" />
+    <ClInclude Include="textureAllocator.h" />
+    <ClInclude Include="textureGroup.h" />
+    <ClInclude Include="videoPlayer.h" />
+    <ClInclude Include="viewport.h" />
+    <ClInclude Include="viewportHook.h" />
+    <ClInclude Include="visualDebug.h" />
+    <ClInclude Include="phantomComponent.h" />
+    <ClInclude Include="rigidMeshComponent.h" />
+    <ClInclude Include="staticMeshComponent.h" />
+    <ClInclude Include="actorInterface.h" />
+    <ClInclude Include="componentIterator.h" />
+    <ClInclude Include="entity.h" />
+    <ClInclude Include="entityAppearance.h" />
+    <ClInclude Include="entityColorVariant.h" />
+    <ClInclude Include="entityGroup.h" />
+    <ClInclude Include="entityOnLayerReference.h" />
+    <ClInclude Include="externalProxy.h" />
+    <ClInclude Include="jobSpawnEntity.h" />
+    <ClInclude Include="node.h" />
+    <ClInclude Include="nodeEvent.h" />
+    <ClInclude Include="boundedComponent.h" />
+    <ClInclude Include="component.h" />
+    <ClInclude Include="drawableComponent.h" />
+    <ClInclude Include="dummyComponent.h" />
+    <ClInclude Include="flareComponent.h" />
+    <ClInclude Include="meshComponent.h" />
+    <ClInclude Include="windowComponent.h" />
+    <ClInclude Include="slot.h" />
+    <ClInclude Include="slotProvider.h" />
+    <ClInclude Include="lightComponent.h" />
+    <ClInclude Include="pointLightComponent.h" />
+    <ClInclude Include="spotLightComponent.h" />
+    <ClInclude Include="areaComponent.h" />
+    <ClInclude Include="pathComponent.h" />
+    <ClInclude Include="planarShapeComponent.h" />
+    <ClInclude Include="spriteComponent.h" />
+    <ClInclude Include="stickerComponent.h" />
+    <ClInclude Include="areaBSP.h" />
+    <ClInclude Include="animatedAttachment.h" />
+    <ClInclude Include="attachment.h" />
+    <ClInclude Include="hardAttachment.h" />
+    <ClInclude Include="meshSkinningAttachment.h" />
+    <ClInclude Include="skinningAttachment.h" />
+    <ClInclude Include="hitProxyId.h" />
+    <ClInclude Include="hitProxyMap.h" />
+    <ClInclude Include="hitProxyObject.h" />
+    <ClInclude Include="camera.h" />
+    <ClInclude Include="freeCamera.h" />
+    <ClInclude Include="staticCamera.h" />
+    <ClInclude Include="destructionSystemComponent.h" />
+    <ClInclude Include="animatedIterators.h" />
+    <ClInclude Include="animatedObjectInterface.h" />
+    <ClInclude Include="animatedSkeleton.h" />
+    <ClInclude Include="animationEvent.h" />
+    <ClInclude Include="playedAnimation.h" />
+    <ClInclude Include="skeletalAnimation.h" />
+    <ClInclude Include="skeletalAnimationContainer.h" />
+    <ClInclude Include="skeletalAnimationSet.h" />
+    <ClInclude Include="skeleton.h" />
+    <ClInclude Include="skeletonMapper.h" />
+    <ClInclude Include="skeletonProvider.h" />
+    <ClInclude Include="animatedComponent.h" />
+    <ClInclude Include="slotComponent.h" />
+    <ClInclude Include="skeletonBoneSlot.h" />
+    <ClInclude Include="extAnimBehaviorEvents.h" />
+    <ClInclude Include="extAnimDurationEvent.h" />
+    <ClInclude Include="extAnimEvent.h" />
+    <ClInclude Include="extAnimEventsFile.h" />
+    <ClInclude Include="extAnimExplorationEvent.h" />
+    <ClInclude Include="massSpringSolver.h" />
+    <ClInclude Include="animationsCache.h" />
+    <ClInclude Include="mimicFaces.h" />
+    <ClInclude Include="material.h" />
+    <ClInclude Include="materialDefinition.h" />
+    <ClInclude Include="materialCompiler.h" />
+    <ClInclude Include="materialCompilerDefines.h" />
+    <ClInclude Include="materialBlock.h" />
+    <ClInclude Include="materialBlockCompiler.h" />
+    <ClInclude Include="materialGraph.h" />
+    <ClInclude Include="materialInputBoolSocket.h" />
+    <ClInclude Include="materialInputCubeSocket.h" />
+    <ClInclude Include="materialInputSocket.h" />
+    <ClInclude Include="materialInputTextureSocket.h" />
+    <ClInclude Include="materialInstance.h" />
+    <ClInclude Include="materialOutputBoolSocket.h" />
+    <ClInclude Include="materialOutputCubeSocket.h" />
+    <ClInclude Include="materialOutputSocket.h" />
+    <ClInclude Include="materialOutputTextureSocket.h" />
+    <ClInclude Include="materialParameter.h" />
+    <ClInclude Include="materialParameterInstance.h" />
+    <ClInclude Include="materialRootBlock.h" />
+    <ClInclude Include="materialRootDecalBlock.h" />
+    <ClInclude Include="materialRootMultiPassLightingBlock.h" />
+    <ClInclude Include="mbParamColor.h" />
+    <ClInclude Include="mbParamCube.h" />
+    <ClInclude Include="mbParamEngineValue.h" />
+    <ClInclude Include="mbParamScalar.h" />
+    <ClInclude Include="mbParamTexture.h" />
+    <ClInclude Include="mbParamVector.h" />
+    <ClInclude Include="materialOverrideAttachment.h" />
+    <ClInclude Include="materialOverrideComponent.h" />
+    <ClInclude Include="materialOverrideProvider.h" />
+    <ClInclude Include="shaderCache.h" />
+    <ClInclude Include="fonts.h" />
+    <ClInclude Include="graphBaseItem.h" />
+    <ClInclude Include="graphBaseSocket.h" />
+    <ClInclude Include="graphBlock.h" />
+    <ClInclude Include="graphConnection.h" />
+    <ClInclude Include="graphConnectionClipboard.h" />
+    <ClInclude Include="graphConnectionRebuilder.h" />
+    <ClInclude Include="graphContainer.h" />
+    <ClInclude Include="graphSocket.h" />
+    <ClInclude Include="profilerOutput.h" />
+    <ClInclude Include="sceneBeamTree.h" />
+    <ClInclude Include="sceneGrid.h" />
+    <ClInclude Include="triggerAreaComponent.h" />
+    <ClInclude Include="decalSpawner.h" />
+    <ClInclude Include="particleComponent.h" />
+    <ClInclude Include="particleEmitter.h" />
+    <ClInclude Include="particleInitializer.h" />
+    <ClInclude Include="particleModificator.h" />
+    <ClInclude Include="particleModule.h" />
+    <ClInclude Include="particlePool.h" />
+    <ClInclude Include="particleSystem.h" />
+    <ClInclude Include="particleDrawer.h" />
+    <ClInclude Include="curve.h" />
+    <ClInclude Include="curveApproximator.h" />
+    <ClInclude Include="brushBuilder.h" />
+    <ClInclude Include="brushCompiledData.h" />
+    <ClInclude Include="brushComponent.h" />
+    <ClInclude Include="brushFace.h" />
+    <ClInclude Include="brushRenderData.h" />
+    <ClInclude Include="brushVertex.h" />
+    <ClInclude Include="brushCSG.h" />
+    <ClInclude Include="localBSP.h" />
+    <ClInclude Include="polygon.h" />
+    <ClInclude Include="soundAmbientManager.h" />
+    <ClInclude Include="soundSystem.h" />
+    <ClInclude Include="speechBuffer.h" />
+    <ClInclude Include="scriptSoundSystem.h" />
+    <ClInclude Include="soundAmbientAreaComponent.h" />
+    <ClInclude Include="soundAmbientEmitter.h" />
+    <ClInclude Include="inputKeys.h" />
+    <ClInclude Include="inputManager.h" />
+    <ClInclude Include="cameraComponent.h" />
+    <ClInclude Include="game.h" />
+    <ClInclude Include="gameSaveManager.h" />
+    <ClInclude Include="idTag.h" />
+    <ClInclude Include="idTagManager.h" />
+    <ClInclude Include="gameTime.h" />
+    <ClInclude Include="gameTimeInterval.h" />
+    <ClInclude Include="gameTimeManager.h" />
+    <ClInclude Include="gameSession.h" />
+    <ClInclude Include="cutscene.h" />
+    <ClInclude Include="cutsceneInstance.h" />
+    <ClInclude Include="extAnimCutsceneActorEffect.h" />
+    <ClInclude Include="extAnimCutsceneBodyPartEvent.h" />
+    <ClInclude Include="extAnimCutsceneDialogEvent.h" />
+    <ClInclude Include="extAnimCutsceneEffectEvent.h" />
+    <ClInclude Include="extAnimCutsceneEnvironmentEvent.h" />
+    <ClInclude Include="extAnimCutsceneFadeEvent.h" />
+    <ClInclude Include="evaluator.h" />
+    <ClInclude Include="evaluatorColor.h" />
+    <ClInclude Include="evaluatorFloat.h" />
+    <ClInclude Include="evaluatorVector.h" />
+    <ClInclude Include="debugConsole.h" />
+    <ClInclude Include="debugMessage.h" />
+    <ClInclude Include="fxBase.h" />
+    <ClInclude Include="fxDefinition.h" />
+    <ClInclude Include="fxState.h" />
+    <ClInclude Include="fxSystem.h" />
+    <ClInclude Include="fxTrack.h" />
+    <ClInclude Include="fxTrackGroup.h" />
+    <ClInclude Include="fxTrackItem.h" />
+    <ClInclude Include="fxTrackItemBrightnessTint.h" />
+    <ClInclude Include="fxTrackItemCameraShake.h" />
+    <ClInclude Include="fxTrackItemCurveBase.h" />
+    <ClInclude Include="fxTrackItemDisableHDRAdaptation.h" />
+    <ClInclude Include="fxTrackItemFullscreenBlur.h" />
+    <ClInclude Include="fxTrackItemMaterialOverride.h" />
+    <ClInclude Include="fxTrackItemMovement.h" />
+    <ClInclude Include="fxTrackItemParameterColor.h" />
+    <ClInclude Include="fxTrackItemParameterFloat.h" />
+    <ClInclude Include="fxTrackItemParticles.h" />
+    <ClInclude Include="fxTrackItemPause.h" />
+    <ClInclude Include="fxTrackItemRadialBlur.h" />
+    <ClInclude Include="fxTrackItemSoundEvent.h" />
+    <ClInclude Include="effectDummyPoint.h" />
+    <ClInclude Include="fxSpawner.h" />
+    <ClInclude Include="fxSpawnerComponent.h" />
+    <ClInclude Include="behaviorEvent.h" />
+    <ClInclude Include="behaviorGraph.h" />
+    <ClInclude Include="behaviorGraphContainerNode.h" />
+    <ClInclude Include="behaviorGraphContext.h" />
+    <ClInclude Include="behaviorGraphInstance.h" />
+    <ClInclude Include="behaviorGraphNode.h" />
+    <ClInclude Include="behaviorGraphNotifier.h" />
+    <ClInclude Include="behaviorGraphOutput.h" />
+    <ClInclude Include="behaviorGraphSocket.h" />
+    <ClInclude Include="behaviorGraphStack.h" />
+    <ClInclude Include="behaviorGraphValueNode.h" />
+    <ClInclude Include="behaviorIncludes.h" />
+    <ClInclude Include="behaviorVariable.h" />
+    <ClInclude Include="behaviorGraphAdjustDirectionNode.h" />
+    <ClInclude Include="behaviorGraphAnimationNode.h" />
+    <ClInclude Include="behaviorGraphAnimationSwitchNode.h" />
+    <ClInclude Include="behaviorGraphAnimEventTrackNode.h" />
+    <ClInclude Include="behaviorGraphBlendAdditive.h" />
+    <ClInclude Include="behaviorGraphBlendMultipleNode.h" />
+    <ClInclude Include="behaviorGraphBlendNode.h" />
+    <ClInclude Include="behaviorGraphBlendOverride.h" />
+    <ClInclude Include="behaviorGraphBlockEventNode.h" />
+    <ClInclude Include="behaviorGraphCameraCollisionsNode.h" />
+    <ClInclude Include="behaviorGraphCameraControllerNode.h" />
+    <ClInclude Include="behaviorGraphCharacterRotationNode.h" />
+    <ClInclude Include="behaviorGraphComparatorNode.h" />
+    <ClInclude Include="behaviorGraphCurveDampValueNode.h" />
+    <ClInclude Include="behaviorGraphCutsceneNode.h" />
+    <ClInclude Include="behaviorGraphDampValueNode.h" />
+    <ClInclude Include="behaviorGraphDampVectorValueNode.h" />
+    <ClInclude Include="behaviorGraphEngineValueNode.h" />
+    <ClInclude Include="behaviorGraphFilterNode.h" />
+    <ClInclude Include="behaviorGraphGetBoneTransformNode.h" />
+    <ClInclude Include="behaviorGraphGetCustomTrackNode.h" />
+    <ClInclude Include="behaviorGraphHeadingNode.h" />
+    <ClInclude Include="behaviorGraphMath.h" />
+    <ClInclude Include="behaviorGraphMemoryNode.h" />
+    <ClInclude Include="behaviorGraphMotionExBlend.h" />
+    <ClInclude Include="behaviorGraphParentInputNode.h" />
+    <ClInclude Include="behaviorGraphParentValueInputNode.h" />
+    <ClInclude Include="behaviorGraphParentVectorValueInputNode.h" />
+    <ClInclude Include="behaviorGraphPivotRotationNode.h" />
+    <ClInclude Include="behaviorGraphRandomNode.h" />
+    <ClInclude Include="behaviorGraphRandomSelectNode.h" />
+    <ClInclude Include="behaviorGraphRotateBone.h" />
+    <ClInclude Include="behaviorGraphRotationController.h" />
+    <ClInclude Include="behaviorGraphScriptNode.h" />
+    <ClInclude Include="behaviorGraphSpeedModulationNode.h" />
+    <ClInclude Include="behaviorGraphStage.h" />
+    <ClInclude Include="behaviorGraphTopLevelNode.h" />
+    <ClInclude Include="behaviorGraphTranslateBone.h" />
+    <ClInclude Include="behaviorGraphTranslationController.h" />
+    <ClInclude Include="behaviorGraphVariableNode.h" />
+    <ClInclude Include="behaviorGraphVectorVariableNode.h" />
+    <ClInclude Include="slotAnimationShiftingInterval.h" />
+    <ClInclude Include="behaviorGraphComboNode.h" />
+    <ClInclude Include="behaviorGraphFrozenStateNode.h" />
+    <ClInclude Include="behaviorGraphStartingStateNode.h" />
+    <ClInclude Include="behaviorGraphStateMachine.h" />
+    <ClInclude Include="behaviorGraphStateNode.h" />
+    <ClInclude Include="behaviorGraphTransitionBlend.h" />
+    <ClInclude Include="behaviorGraphTransitionForce.h" />
+    <ClInclude Include="behaviorGraphTransitionNode.h" />
+    <ClInclude Include="behaviorGraphMimicConverter.h" />
+    <ClInclude Include="behaviorGraphMimicNodes.h" />
+    <ClInclude Include="behaviorGraphMimicsAnimationNode.h" />
+    <ClInclude Include="behaviorGraphAnimationBlendSlotNode.h" />
+    <ClInclude Include="behaviorGraphAnimationSlotNode.h" />
+    <ClInclude Include="behaviorGraphPoseSlotNode.h" />
+    <ClInclude Include="behaviorGraphFlowNode.h" />
+    <ClInclude Include="behaviorGraphOutputNode.h" />
+    <ClInclude Include="behaviorConstraintCameraDialog.h" />
+    <ClInclude Include="behaviorConstraintCameraFocus.h" />
+    <ClInclude Include="behaviorConstraintNode.h" />
+    <ClInclude Include="behaviorConstraintNodeCameraLookat.h" />
+    <ClInclude Include="behaviorConstraintNodeChain.h" />
+    <ClInclude Include="behaviorConstraintNodeLookAt.h" />
+    <ClInclude Include="behaviorConstraintObject.h" />
+    <ClInclude Include="behaviorConstraintParentAlignNode.h" />
+    <ClInclude Include="behaviorGraphLookAtSystemNode.h" />
+    <ClInclude Include="behaviorConstraintNodeRoll.h" />
+    <ClInclude Include="behaviorIkSolverChain.h" />
+    <ClInclude Include="behaviorIkSolverLookAt.h" />
+    <ClInclude Include="behaviorIkSolverMimicLookAt.h" />
+    <ClInclude Include="behaviorGraphActorTilt.h" />
+    <ClInclude Include="characterConstraint.h" />
+    <ClInclude Include="areaTree.h" />
+    <ClInclude Include="environmentManager.h" />
+    <ClInclude Include="globalLightingTrajectory.h" />
+    <ClInclude Include="environmentAreaParams.h" />
+    <ClInclude Include="environmentGameParams.h" />
+    <ClInclude Include="environmentComponentArea.h" />
+    <ClInclude Include="daycycleGraphicsEntity.h" />
+    <ClInclude Include="skyTransformComponent.h" />
+    <ClInclude Include="skyTransformEntity.h" />
+    <ClInclude Include="localizableObject.h" />
+    <ClInclude Include="localizationManager.h" />
+    <ClInclude Include="localizedContent.h" />
+    <ClInclude Include="localizedStringsWithKeysCache.h" />
+    <ClInclude Include="cookedbinStringDBDataAccess.h" />
+    <ClInclude Include="nullStringDBDataAccess.h" />
+    <ClInclude Include="sqlStringDBDataAccess.h" />
+    <ClInclude Include="stringDBDataAccess.h" />
+    <ClInclude Include="debugCheckBox.h" />
+    <ClInclude Include="debugCounter.h" />
+    <ClInclude Include="debugPage.h" />
+    <ClInclude Include="baseEngine.h" />
+    <ClInclude Include="build.h" />
+    <ClInclude Include="engine.h" />
+    <ClInclude Include="engineTypeRegistry.h" />
+    <ClInclude Include="envParameters.h" />
+    <ClInclude Include="havokCompatVersions.h" />
+    <ClInclude Include="meshImpostor.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="animationTrajectory.inl" />
+    <None Include="behaviorGraph.inl" />
+    <None Include="behaviorGraphInstance.inl" />
+    <None Include="behaviorGraphUtils.inl" />
+    <None Include="entity.inl" />
+    <None Include="entityTemplate.inl" />
+    <None Include="extAnimEventsFile.inl" />
+    <None Include="flashPlayerScaleformInput.inl" />
+    <None Include="flashValueScaleform.inl" />
+    <None Include="foliageInstance.inl" />
+    <None Include="inputUtils.inl" />
+    <None Include="mergedWorldGeometryBuilder.h" />
+    <None Include="pathlibActiveNodesQueue.inl" />
+    <None Include="pathlibGraphBase.inl" />
+    <None Include="pathlibKDTree.inl" />
+    <None Include="poseBlock.inl" />
+    <None Include="poseHandle.inl" />
+    <None Include="renderObjectPtr.inl" />
+    <None Include="skeletalAnimationSet.inl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.targets))\Shared.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

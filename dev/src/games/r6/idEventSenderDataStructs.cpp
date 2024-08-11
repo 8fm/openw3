@@ -1,0 +1,15 @@
+#include "build.h"
+#include "idEventSenderDataStructs.h"
+
+IMPLEMENT_ENGINE_CLASS( SGeneralEventData )
+IMPLEMENT_ENGINE_CLASS( SInterlocutorEventData )
+IMPLEMENT_ENGINE_CLASS( SAnimationEventData )
+IMPLEMENT_ENGINE_CLASS( SAIEventData )
+IMPLEMENT_ENGINE_CLASS( SEncounterPhaseData )
+IMPLEMENT_ENGINE_CLASS( SIDSoundEventParams )
+IMPLEMENT_RTTI_ENUM( EEncounterEventMode )
+
+IMPLEMENT_ENGINE_CLASS( IIDAIEventParam )
+IMPLEMENT_ENGINE_CLASS( CIDAIEventParamInt )
+IMPLEMENT_ENGINE_CLASS( CIDAIEventParamFloat )
+IMPLEMENT_ENGINE_CLASS( CIDAIEventParamName )

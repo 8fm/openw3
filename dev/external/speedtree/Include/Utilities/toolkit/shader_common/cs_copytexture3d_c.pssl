@@ -1,0 +1,17 @@
+/* SCE CONFIDENTIAL
+PlayStation(R)4 Programmer Tool Runtime Library Release 01.700.081
+* Copyright (C) 2013 Sony Computer Entertainment Inc.
+* All Rights Reserved.
+*/
+
+#include "shader_base.h"
+
+RW_Texture3D<float4> DestTex : register(u0);
+Texture3D<float4> SourceTex : register(t0);
+
+[NUM_THREADS(4,4,4)]
+void main( uint3 position : S_DISPATCH_THREAD_ID )
+{
+	DestTex[position] = SourceTex.Load(int4(position.x, position.y, position.z, 0));
+}
+

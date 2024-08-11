@@ -1,0 +1,18 @@
+/* SCE CONFIDENTIAL
+PlayStation(R)4 Programmer Tool Runtime Library Release 01.700.081
+* Copyright (C) 2013 Sony Computer Entertainment Inc.
+* All Rights Reserved.
+*/
+
+#include "shader_base.h"
+#include "vsoutput_common.hs"
+
+Texture2D bg_tex;
+SamplerState g_Sampler;
+
+float4 main(VS_OUTPUT_BG input) : S_TARGET_OUTPUT
+{
+	float4 output = bg_tex.Sample(g_Sampler, input.vTexST);
+	
+	return output;
+}

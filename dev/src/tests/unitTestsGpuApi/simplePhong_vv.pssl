@@ -1,0 +1,29 @@
+struct VSInput
+{
+	float3 pos : POSITION;
+	float3 norm : NORMAL;
+};
+
+struct PSInput
+{
+	float4 pos : S_POSITION;
+	float3 norm : NORMAL;
+	float3 viewVec : TEXCOORD0;
+	float3 lightVec0 : TEXCOORD1;
+};
+
+PSInput main(VSInput i)
+{
+	PSInput o = (PSInput)0;
+	row_major float4x4 worldView = mul(worldMatrix, viewMatrix);
+	float4 viewPos = float4(i.pos, 1.0f);
+	viewPos = mul(viewPos, worldView);
+	o.pos = mul(viewPos, projMatrix);
+
+	o.norm = mul(float4(i.norm, 0.0f), worldMatrix).xyz;
+	o.norm = normalize(o.norm);
+	
+	o.viewVec = normalize(-viewPos.xyz);
+	o.lightVec0 = normalize((mul(lightPos, viewMatrix) - viewPos).xyz);
+	return o;
+}

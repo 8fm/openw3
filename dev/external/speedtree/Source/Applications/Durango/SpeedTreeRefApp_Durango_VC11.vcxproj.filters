@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Terrain">
+      <UniqueIdentifier>{22e3083e-95b6-457b-9c88-85f4f4c22efa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility">
+      <UniqueIdentifier>{ce3e9039-a4ae-43e6-82e0-b5c3bfe26619}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sky">
+      <UniqueIdentifier>{9aee16c0-8fe2-484e-9b18-06701a024e38}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Grass">
+      <UniqueIdentifier>{b11c7f33-8942-45eb-8d42-1d2b9a51f910}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Durango Game AppWizard Output">
+      <UniqueIdentifier>{54f484c6-f381-4ac6-be4b-d036572f9d0b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Deployment Assist">
+      <UniqueIdentifier>{fc605a7d-b6fb-461b-a827-d561f5fc748a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\CommonSource\MyGrass.h">
+      <Filter>Grass</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyApplication.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyCustomAllocator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyFileSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyFullscreenQuad.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyOverlays.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyPopulate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyRenderTargets.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyShadowSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MySpeedTreeRenderer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MySky.h">
+      <Filter>Sky</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyCmdLineOptions.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyConfigFile.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyDebugRenderFunctions.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyMouseNavigation.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyNavigationBase.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyParamAdjuster.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyStatsReporter.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyTgaLoader.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\My2dInterpolator.h">
+      <Filter>Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\My2dInterpolator_inl.h">
+      <Filter>Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyTerrain.h">
+      <Filter>Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyTerrain_inl.h">
+      <Filter>Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyTerrainData.h">
+      <Filter>Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonSource\MyTerrainData_inl.h">
+      <Filter>Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="AppWizardSource\ApplicationView.h">
+      <Filter>Durango Game AppWizard Output</Filter>
+    </ClInclude>
+    <ClInclude Include="AppWizardSource\BasicTimer.h">
+      <Filter>Durango Game AppWizard Output</Filter>
+    </ClInclude>
+    <ClInclude Include="AppWizardSource\Game.h">
+      <Filter>Durango Game AppWizard Output</Filter>
+    </ClInclude>
+    <ClInclude Include="AppWizardSource\pch.h">
+      <Filter>Durango Game AppWizard Output</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\CommonSource\MyGrass.cpp">
+      <Filter>Grass</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonSource\MySky.cpp">
+      <Filter>Sky</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonSource\MyCmdLineOptions.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonSource\MyConfigFile.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonSource\MyDebugRenderFunctions.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonSource\MyMouseNavigation.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonSource\MyNavigationBase.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonSource\MyParamAdjuster.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonSource\MyStatsReporter.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonSource\MyTgaLoader.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonSource\MyTerrain.cpp">
+      <Filter>Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonSource\MyTerrainData.cpp">
+      <Filter>Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonSource\MyApplication.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonSource\MyFullscreenQuad.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonSource\MyOverlays.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonSource\MyPopulate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonSource\MyRenderFunctions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonSource\MyRenderTargets.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonSource\MyShadowSystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AppWizardSource\ApplicationView.cpp">
+      <Filter>Durango Game AppWizard Output</Filter>
+    </ClCompile>
+    <ClCompile Include="AppWizardSource\Game.cpp">
+      <Filter>Durango Game AppWizard Output</Filter>
+    </ClCompile>
+    <ClCompile Include="AppWizardSource\pch.cpp">
+      <Filter>Durango Game AppWizard Output</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Logo.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="SmallLogo.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="SplashScreen.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="StoreLogo.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CopyForestToLayoutForDeployment.bat">
+      <Filter>Deployment Assist</Filter>
+    </None>
+  </ItemGroup>
+</Project>

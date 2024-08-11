@@ -1,0 +1,10 @@
+If you're using VIM to edit WitcherScript files, copy the file ws.vim
+in the syntax directory (f.e. c:\program files\vim\vimfiles\syntax)
+and add the following lines in the _vimrc file (ignore the augroup
+lines if there are already such lines, f.e. if you have hlsl syntax
+highlighting)
+
+  augroup filetypedetect
+    au! BufNewFile,BufWrite,BufRead *.ws	set filetype=ws
+  augroup END
+

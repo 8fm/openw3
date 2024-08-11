@@ -1,0 +1,953 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" TreatAsLocalProperty="OutDir;TargetName;IntDir;PlatformToolset">
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedConfigurationSetup.props))\SharedConfigurationSetup.props" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{BEC313E8-15BC-4693-930F-D5FE597ADAB0}</ProjectGuid>
+    <RootNamespace>core</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.props))\Shared.props" />
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedItemGroups.props))\SharedItemGroups.props" />
+  <ItemGroup>
+    <ClCompile Include="analyzer.cpp" />
+    <ClCompile Include="asyncFileAccess.cpp" />
+    <ClCompile Include="asyncIO.cpp" />
+    <ClCompile Include="asyncLoadToken.cpp" />
+    <ClCompile Include="basicDataBlob.cpp" />
+    <ClCompile Include="basicTextBuilder.cpp" />
+    <ClCompile Include="basicURL.cpp" />
+    <ClCompile Include="bezier2d.cpp" />
+    <ClCompile Include="bezier2dHandle.cpp" />
+    <ClCompile Include="bezierUtils.cpp" />
+    <ClCompile Include="bitset.cpp" />
+    <ClCompile Include="bufferedTempFile.cpp" />
+    <ClCompile Include="bufferSpan.cpp" />
+    <ClCompile Include="bundleBufferToFilesInterchange.cpp" />
+    <ClCompile Include="bundleDataCache.cpp" />
+    <ClCompile Include="bundleDataHandleReader.cpp" />
+    <ClCompile Include="bundledefinition.cpp" />
+    <ClCompile Include="bundleDepotPopulator.cpp" />
+    <ClCompile Include="bundleFileReaderDecompression.cpp" />
+    <ClCompile Include="chunkedLZ4File.cpp" />
+    <ClCompile Include="commandLineParser.cpp" />
+    <ClCompile Include="configVarLegacyWrapper.cpp" />
+    <ClCompile Include="configVar.cpp" />
+    <ClCompile Include="configVarHierarchy.cpp" />
+    <ClCompile Include="configVarRegistry.cpp" />
+    <ClCompile Include="contentManifestParser.cpp" />
+    <ClCompile Include="cpuRecognizer.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='No opts|Durango'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Profiling|Durango'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Final|Durango'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Durango'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='FinalWithLogging|Durango'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseGame|Durango'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Durango'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='No opts|ORBIS'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Profiling|ORBIS'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Final|ORBIS'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ORBIS'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='FinalWithLogging|ORBIS'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseGame|ORBIS'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ORBIS'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="crypto.cpp" />
+    <ClCompile Include="debugPageBundles.cpp" />
+    <ClCompile Include="debugPageDepot.cpp" />
+    <ClCompile Include="debugPageFileHandleCache.cpp" />
+    <ClCompile Include="debugPageFios2.cpp" />
+    <ClCompile Include="debugPageHandler.cpp" />
+    <ClCompile Include="debugPageHTMLDoc.cpp" />
+    <ClCompile Include="debugPageMemory.cpp" />
+    <ClCompile Include="debugPageResource.cpp" />
+    <ClCompile Include="deferredDataBufferOOMQueue.cpp" />
+    <ClCompile Include="dependencyFileGluer.cpp" />
+    <ClCompile Include="dependencyFileUnpacker.cpp" />
+    <ClCompile Include="diskBundleCache.cpp" />
+    <ClCompile Include="diskBundleCacheEntry.cpp" />
+    <ClCompile Include="diskInstrumentationPC.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='No opts|Durango'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Profiling|Durango'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Final|Durango'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Durango'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='FinalWithLogging|Durango'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseGame|Durango'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Durango'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='No opts|ORBIS'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Profiling|ORBIS'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Final|ORBIS'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ORBIS'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='FinalWithLogging|ORBIS'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseGame|ORBIS'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ORBIS'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="htmlDocument.cpp" />
+    <ClCompile Include="httpHeader.cpp" />
+    <ClCompile Include="httpRequestParser.cpp" />
+    <ClCompile Include="httpResponseData.cpp" />
+    <ClCompile Include="httpResponseSender.cpp" />
+    <ClCompile Include="httpServer.cpp" />
+    <ClCompile Include="debugPageServer.cpp" />
+    <ClCompile Include="deferredDataBufferAsync.cpp" />
+    <ClCompile Include="deferredDataBufferKickoff.cpp" />
+    <ClCompile Include="deferredDataBufferLoaders.cpp" />
+    <ClCompile Include="diskBundleContent.cpp" />
+    <ClCompile Include="diskBundlePreloader.cpp" />
+    <ClCompile Include="fileDecompression.cpp" />
+    <ClCompile Include="fileDecompressionAsyncFileWrapper.cpp" />
+    <ClCompile Include="fileDecompressionImpl.cpp" />
+    <ClCompile Include="fileShadowWriter.cpp" />
+    <ClCompile Include="fileSystemProfiler.cpp" />
+    <ClCompile Include="fileSystemProfilerWrapper.cpp" />
+    <ClCompile Include="idAllocator.cpp" />
+    <ClCompile Include="indexed2dArray.cpp" />
+    <ClCompile Include="ioTagResolver.cpp" />
+    <ClCompile Include="keyboardRecognizer.cpp" />
+    <ClCompile Include="memoryAdapter.cpp" />
+    <ClCompile Include="memoryHelpers.cpp" />
+    <ClCompile Include="messagePump.cpp" />
+    <ClCompile Include="namesReporter.cpp" />
+    <ClCompile Include="objectAllocationTracer.cpp" />
+    <ClCompile Include="debugPageObjects.cpp" />
+    <ClCompile Include="objectGCLock.cpp" />
+    <ClCompile Include="pagedMemoryWriter.cpp" />
+    <ClCompile Include="profilerBlockFileWriter.cpp" />
+    <ClCompile Include="profilerFileWriter.cpp" />
+    <ClCompile Include="redTelemetryServiceDDI.cpp" />
+    <ClCompile Include="remoteConfig.cpp" />
+    <ClCompile Include="configVarStorage.cpp" />
+    <ClCompile Include="configVarSystem.cpp" />
+    <ClCompile Include="contentManager.cpp" />
+    <ClCompile Include="contentManifest.cpp" />
+    <ClCompile Include="contentManifestAsyncLoader.cpp" />
+    <ClCompile Include="datetime.cpp" />
+    <ClCompile Include="deferredDataBuffer.cpp" />
+    <ClCompile Include="deferredDataBufferExtractor.cpp" />
+    <ClCompile Include="dependencyFileTables.cpp" />
+    <ClCompile Include="dependencyFileTablesBuilder.cpp" />
+    <ClCompile Include="depotBundles.cpp" />
+    <ClCompile Include="directory.sourcecontrol.cpp" />
+    <ClCompile Include="directoryEntries.cpp" />
+    <ClCompile Include="diskBundle.cpp" />
+    <ClCompile Include="diskBundleIOCache.cpp" />
+    <ClCompile Include="fileHandleCache.cpp" />
+    <ClCompile Include="fileHandleReader.cpp" />
+    <ClCompile Include="bundleMetadataStore.cpp" />
+    <ClCompile Include="bundlePreambleParser.cpp" />
+    <ClCompile Include="debugBundleHeaderParser.cpp" />
+    <ClCompile Include="decompresstask.cpp" />
+    <ClCompile Include="dependencyCache.cpp" />
+    <ClCompile Include="bundleMetadataStoreBuilder.cpp" />
+    <ClCompile Include="fileStringReader.cpp" />
+    <ClCompile Include="genericFence.cpp" />
+    <ClCompile Include="intelProfilerTool.cpp" />
+    <ClCompile Include="ioBufferAcquireContext.cpp" />
+    <ClCompile Include="loadingJob.cpp" />
+    <ClCompile Include="loadingJobManager.cpp" />
+    <ClCompile Include="loadingJobThread.cpp" />
+    <ClCompile Include="loadingProfiler.cpp" />
+    <ClCompile Include="newRedProfilerTool.cpp" />
+    <ClCompile Include="nullFile.cpp" />
+    <ClCompile Include="nvidiaProfilerTool.cpp" />
+    <ClCompile Include="objectDiscardList.cpp" />
+    <ClCompile Include="objectGC.cpp" />
+    <ClCompile Include="objectGC_Legacy.cpp" />
+    <ClCompile Include="objectGC_MarkAndSweep.cpp" />
+    <ClCompile Include="objectIterator.cpp" />
+    <ClCompile Include="objectMap.cpp" />
+    <ClCompile Include="objectReachability.cpp" />
+    <ClCompile Include="objectRootSet.cpp" />
+    <ClCompile Include="pixProfilerTool.cpp" />
+    <ClCompile Include="playGoPackage.cpp" />
+    <ClCompile Include="pool.cpp" />
+    <ClCompile Include="profilerChannels.cpp" />
+    <ClCompile Include="profilerManager.cpp" />
+    <ClCompile Include="profilerToolPool.cpp" />
+    <ClCompile Include="profiler\newRedProfiler.cpp" />
+    <ClCompile Include="profiler\profilerFile.cpp" />
+    <ClCompile Include="razorProfilerTool.cpp" />
+    <ClCompile Include="redProfiler.cpp" />
+    <ClCompile Include="redProfilerTool.cpp" />
+    <ClCompile Include="referencable.cpp" />
+    <ClCompile Include="clipboardBase.cpp" />
+    <ClCompile Include="compressedNumSerializer.cpp" />
+    <ClCompile Include="compression\chainedzlib.cpp" />
+    <ClCompile Include="compression\compression.cpp" />
+    <ClCompile Include="compression\doboz.cpp" />
+    <ClCompile Include="compression\lz4.cpp" />
+    <ClCompile Include="compression\lz4hc.cpp" />
+    <ClCompile Include="compression\snappy.cpp" />
+    <ClCompile Include="compression\zlib.cpp" />
+    <ClCompile Include="coreClasses.cpp" />
+    <ClCompile Include="coreNames.cpp" />
+    <ClCompile Include="coreNatives.cpp" />
+    <ClCompile Include="curve3DData.cpp" />
+    <ClCompile Include="curveBase.cpp" />
+    <ClCompile Include="curveData.cpp" />
+    <ClCompile Include="curveSimple.cpp" />
+    <ClCompile Include="dataError.cpp" />
+    <ClCompile Include="explatformos.cpp" />
+    <ClCompile Include="file.cpp" />
+    <ClCompile Include="fileFormat.cpp" />
+    <ClCompile Include="filePath.cpp" />
+    <ClCompile Include="fileSys.cpp" />
+    <ClCompile Include="gameApplication.cpp" />
+    <ClCompile Include="gameConfiguration.cpp" />
+    <ClCompile Include="kdTree.cpp" />
+    <ClCompile Include="kdTreeSearchUtils.cpp" />
+    <ClCompile Include="kdTreeSplitter.cpp" />
+    <ClCompile Include="kdTreeUtils.cpp" />
+    <ClCompile Include="memory.cpp" />
+    <ClCompile Include="memoryFileAnalizer.cpp" />
+    <ClCompile Include="memoryFileReader.cpp" />
+    <ClCompile Include="memoryFileWriter.cpp" />
+    <ClCompile Include="dataBuffer.cpp" />
+    <ClCompile Include="latentDataBuffer.cpp" />
+    <ClCompile Include="bitField.cpp" />
+    <ClCompile Include="class.cpp" />
+    <ClCompile Include="defaultValue.cpp" />
+    <ClCompile Include="enum.cpp" />
+    <ClCompile Include="function.cpp" />
+    <ClCompile Include="functionBuilder.cpp" />
+    <ClCompile Include="functionCalling.cpp" />
+    <ClCompile Include="pointer.cpp" />
+    <ClCompile Include="resourcedatabasegraphgeneration.cpp" />
+    <ClCompile Include="sha256.cpp" />
+    <ClCompile Include="sharedDataBuffer.cpp" />
+    <ClCompile Include="sharedDataBufferImpl.cpp" />
+    <ClCompile Include="streamingInstaller.cpp" />
+    <ClCompile Include="xvcPackage.cpp" />
+    <ClInclude Include="allocArray.h" />
+    <ClInclude Include="analyzer.h" />
+    <ClInclude Include="asyncFileAccess.h" />
+    <ClInclude Include="asyncIO.h" />
+    <ClInclude Include="asyncLoadToken.h" />
+    <ClInclude Include="atomicSharedPtr.h" />
+    <ClInclude Include="atomicWeakPtr.h" />
+    <ClInclude Include="basicDataBlob.h" />
+    <ClInclude Include="cacheFilenames.h" />
+    <ClInclude Include="chunkedLZ4File.h" />
+    <ClInclude Include="commandLineParams.h" />
+    <ClInclude Include="contentManifestParser.h" />
+    <ClInclude Include="contentVersion.h" />
+    <ClInclude Include="cpuRecognizer.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='No opts|Durango'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Profiling|Durango'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Final|Durango'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Durango'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='FinalWithLogging|Durango'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseGame|Durango'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Durango'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='No opts|ORBIS'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Profiling|ORBIS'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Final|ORBIS'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ORBIS'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='FinalWithLogging|ORBIS'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseGame|ORBIS'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ORBIS'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="crypto.h" />
+    <ClInclude Include="debugPageHTMLDoc.h" />
+    <ClInclude Include="deferredDataBufferOOMQueue.h" />
+    <ClInclude Include="dependencyFileGluer.h" />
+    <ClInclude Include="dependencyFileUnpacker.h" />
+    <ClInclude Include="diskBundleCache.h" />
+    <ClInclude Include="diskBundleCacheEntry.h" />
+    <ClInclude Include="diskInstrumentationPC.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='No opts|Durango'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Profiling|Durango'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Final|Durango'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Durango'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='FinalWithLogging|Durango'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseGame|Durango'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Durango'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='No opts|ORBIS'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Profiling|ORBIS'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Final|ORBIS'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ORBIS'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='FinalWithLogging|ORBIS'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseGame|ORBIS'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ORBIS'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="dlcManifest.h" />
+    <ClInclude Include="htmlDocument.h" />
+    <ClInclude Include="httpHeader.h" />
+    <ClInclude Include="httpRequestHandler.h" />
+    <ClInclude Include="httpRequestParser.h" />
+    <ClInclude Include="basicURL.h" />
+    <ClInclude Include="bezier2d.h" />
+    <ClInclude Include="bezier2dHandle.h" />
+    <ClInclude Include="bezierUtils.h" />
+    <ClInclude Include="bufferedTempFile.h" />
+    <ClInclude Include="bufferFileInterchangeEntry.h" />
+    <ClInclude Include="bufferSpan.h" />
+    <ClInclude Include="bundleBufferToFilesInterchange.h" />
+    <ClInclude Include="bundleDataBuffer.h" />
+    <ClInclude Include="bundleDataCache.h" />
+    <ClInclude Include="bundleDataHandle.h" />
+    <ClInclude Include="bundleDataHandleReader.h" />
+    <ClInclude Include="bundleDepotPopulator.h" />
+    <ClInclude Include="diskBundleContent.h" />
+    <ClInclude Include="httpResponseData.h" />
+    <ClInclude Include="httpResponseSender.h" />
+    <ClInclude Include="httpServer.h" />
+    <ClInclude Include="debugPageHandler.h" />
+    <ClInclude Include="debugPageServer.h" />
+    <ClInclude Include="diskBundlePreloader.h" />
+    <ClInclude Include="bundleFileReaderDecompression.h" />
+    <ClInclude Include="bundleheader.h" />
+    <ClInclude Include="bundlePreamble.h" />
+    <ClInclude Include="commandLineParser.h" />
+    <ClInclude Include="configVarHierarchy.h" />
+    <ClInclude Include="configVar.h" />
+    <ClInclude Include="configVarLegacyWrapper.h" />
+    <ClInclude Include="configVarRegistry.h" />
+    <ClInclude Include="contentType.h" />
+    <ClInclude Include="deferredDataBufferAsync.h" />
+    <ClInclude Include="deferredDataBufferKickoff.h" />
+    <ClInclude Include="deferredDataBufferLoaders.h" />
+    <ClInclude Include="fileDecompression.h" />
+    <ClInclude Include="fileDecompressionAsyncFileWrapper.h" />
+    <ClInclude Include="fileDecompressionImpl.h" />
+    <ClInclude Include="fileProxy.h" />
+    <ClInclude Include="fileShadowWriter.h" />
+    <ClInclude Include="fileSystemProfiler.h" />
+    <ClInclude Include="fileSystemProfilerWrapper.h" />
+    <ClInclude Include="indexed2dArray.h" />
+    <ClInclude Include="installer.h" />
+    <ClInclude Include="ioTagResolver.h" />
+    <ClInclude Include="ioTags.h" />
+    <ClInclude Include="keyboardRecognizer.h" />
+    <ClInclude Include="memoryHelpers.hpp" />
+    <ClInclude Include="memoryHelpers.h" />
+    <ClInclude Include="memoryAdapter.h" />
+    <ClInclude Include="messagePump.h" />
+    <ClInclude Include="multiAllocatorCreationHelper.h" />
+    <ClInclude Include="namesReporter.h" />
+    <ClInclude Include="objectAllocationTracer.h" />
+    <ClInclude Include="intrusivePriorityQueue.h" />
+    <ClInclude Include="basicTextBuilder.h" />
+    <ClInclude Include="objectGCLock.h" />
+    <ClInclude Include="pagedMemoryWriter.h" />
+    <ClInclude Include="profilerBlockFileWriter.h" />
+    <ClInclude Include="profilerFileWriter.h" />
+    <ClInclude Include="redMemoryPools.h" />
+    <ClInclude Include="redTelemetryServiceDDI.h" />
+    <ClInclude Include="remoteConfig.h" />
+    <ClInclude Include="configVarStorage.h" />
+    <ClInclude Include="configVarSystem.h" />
+    <ClInclude Include="contentListener.h" />
+    <ClInclude Include="contentManager.h" />
+    <ClInclude Include="contentManifest.h" />
+    <ClInclude Include="contentManifestAsyncLoader.h" />
+    <ClInclude Include="datetime.h" />
+    <ClInclude Include="deferredDataBuffer.h" />
+    <ClInclude Include="deferredDataBufferExtractor.h" />
+    <ClInclude Include="dependencyFileTables.h" />
+    <ClInclude Include="dependencyFileTablesBuilder.h" />
+    <ClInclude Include="dependencyFileTables_AdapterLegacy.h" />
+    <ClInclude Include="depotBundles.h" />
+    <ClInclude Include="directoryEntries.h" />
+    <ClInclude Include="diskBundle.h" />
+    <ClInclude Include="diskBundleIOCache.h" />
+    <ClInclude Include="fileHandleCache.h" />
+    <ClInclude Include="bundleMetadataStoreEntry.h" />
+    <ClInclude Include="bundleParser.h" />
+    <ClInclude Include="bundleMetadataStore.h" />
+    <ClInclude Include="bundlePreambleParser.h" />
+    <ClInclude Include="compression\build.h" />
+    <ClInclude Include="compression\chainedzlib.h" />
+    <ClInclude Include="compression\compression.h" />
+    <ClInclude Include="compression\doboz.h" />
+    <ClInclude Include="compression\lz4.h" />
+    <ClInclude Include="compression\lz4hc.h" />
+    <ClInclude Include="compression\snappy.h" />
+    <ClInclude Include="compression\zlib.h" />
+    <ClInclude Include="coreInternal.h" />
+    <ClInclude Include="debugBundleHeaderParser.h" />
+    <ClInclude Include="decompresstask.h" />
+    <ClCompile Include="resourceLoading.cpp" />
+    <ClCompile Include="resourcepaths.cpp" />
+    <ClCompile Include="resourceUnloading.cpp" />
+    <ClCompile Include="ringAllocator.cpp" />
+    <ClCompile Include="scriptable.cpp" />
+    <ClCompile Include="scriptableState.cpp" />
+    <ClCompile Include="scriptableStateMachine.cpp" />
+    <ClCompile Include="scriptCodeNodeCompilationPool.cpp" />
+    <ClCompile Include="scriptsOpcodeExaminer.cpp" />
+    <ClCompile Include="serializable.cpp" />
+    <ClCompile Include="redTelemetryService.cpp" />
+    <ClCompile Include="redTelemetryServiceInterface.cpp" />
+    <ClCompile Include="redTelemetryServicesManager.cpp" />
+    <ClInclude Include="defaultDeleter.h" />
+    <ClInclude Include="dependencyCache.h" />
+    <ClInclude Include="fileStringReader.h" />
+    <ClInclude Include="fileStringWriter.h" />
+    <ClInclude Include="garbageCollector.h" />
+    <ClInclude Include="genericFence.h" />
+    <ClInclude Include="hashmap.h" />
+    <ClInclude Include="idAllocator.h" />
+    <ClInclude Include="intelProfilerTool.h" />
+    <ClInclude Include="intrusivePtr.h" />
+    <ClInclude Include="bundleMetadataStoreBuilder.h" />
+    <ClInclude Include="ioBufferAcquireContext.h" />
+    <ClInclude Include="jsonAllocator.h" />
+    <ClInclude Include="jsonArray.h" />
+    <ClInclude Include="jsonBasic.h" />
+    <ClInclude Include="jsonDocument.h" />
+    <ClInclude Include="jsonFilePrettyWriter.h" />
+    <ClInclude Include="jsonFileReader.h" />
+    <ClInclude Include="jsonFileSimpleWriter.h" />
+    <ClInclude Include="jsonObject.h" />
+    <ClInclude Include="jsonPrettyWriter.h" />
+    <ClInclude Include="jsonReader.h" />
+    <ClInclude Include="jsonSimpleWriter.h" />
+    <ClInclude Include="jsonValue.h" />
+    <ClInclude Include="jsonWriter.h" />
+    <ClInclude Include="loadingJob.h" />
+    <ClInclude Include="loadingJobManager.h" />
+    <ClInclude Include="loadingJobMonitor.h" />
+    <ClInclude Include="loadingJobThread.h" />
+    <ClInclude Include="loadingProfiler.h" />
+    <ClInclude Include="objectGC_Legacy.h" />
+    <ClInclude Include="objectGC_MarkAndSweep.h" />
+    <ClInclude Include="ringAllocator.h" />
+    <ClInclude Include="memoryHooks.h" />
+    <ClInclude Include="fileHandleReader.h" />
+    <ClInclude Include="newRedProfilerTool.h" />
+    <ClInclude Include="nullFile.h" />
+    <ClInclude Include="nvidiaProfilerTool.h" />
+    <ClInclude Include="objectDiscardList.h" />
+    <ClInclude Include="objectGC.h" />
+    <ClCompile Include="namesPool.cpp" />
+    <ClCompile Include="packageManager.cpp" />
+    <ClCompile Include="property.cpp" />
+    <ClCompile Include="propertyBuilder.cpp" />
+    <ClCompile Include="dependencygraph.cpp" />
+    <ClCompile Include="resourcedatabase.cpp" />
+    <ClCompile Include="resourcedatabasepool.cpp" />
+    <ClCompile Include="rttiSerializer.cpp" />
+    <ClCompile Include="rttiSystem.cpp" />
+    <ClCompile Include="rttiType.cpp" />
+    <ClCompile Include="serializationDispatchJob.cpp" />
+    <ClCompile Include="serializationStreamBuilder.cpp" />
+    <ClCompile Include="serializationStreamParser.cpp" />
+    <ClCompile Include="simplexTree.cpp" />
+    <ClCompile Include="softHandle.cpp" />
+    <ClCompile Include="codeParser.cpp" />
+    <ClCompile Include="softHandleProcessor.cpp" />
+    <ClCompile Include="streamingGrid.cpp" />
+    <ClCompile Include="streamingGridHelpers.cpp" />
+    <ClCompile Include="stringConversion.cpp" />
+    <ClCompile Include="stringLocale.cpp" />
+    <ClCompile Include="systemOrbis.cpp" />
+    <ClCompile Include="tagList.cpp" />
+    <ClCompile Include="task.cpp" />
+    <ClCompile Include="taskAllocator.cpp" />
+    <ClCompile Include="taskDebug.cpp" />
+    <ClCompile Include="taskDeque.cpp" />
+    <ClCompile Include="taskDispatcher.cpp" />
+    <ClCompile Include="taskManager.cpp" />
+    <ClCompile Include="taskRunner.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Final|ORBIS'">-Wundef %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="taskSchedList.cpp" />
+    <ClCompile Include="taskSchedNode.cpp" />
+    <ClCompile Include="taskSchedTimer.cpp" />
+    <ClCompile Include="taskScheduler.cpp" />
+    <ClCompile Include="taskBatch.cpp" />
+    <ClCompile Include="taskThread.cpp" />
+    <ClCompile Include="redTelemetryServiceConfig.cpp" />
+    <ClCompile Include="redTelemetryServiceImplWin32.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='No opts|ORBIS'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ORBIS'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseGame|ORBIS'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ORBIS'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Final|ORBIS'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="telemetryTool.cpp" />
+    <ClCompile Include="variant.cpp" />
+    <ClCompile Include="variantArray.cpp" />
+    <ClCompile Include="object.cpp" />
+    <ClCompile Include="objectNatives.cpp" />
+    <ClCompile Include="objectUtils.cpp" />
+    <ClCompile Include="crt.cpp" />
+    <ClCompile Include="events.cpp" />
+    <ClCompile Include="os.cpp" />
+    <ClCompile Include="sync.cpp" />
+    <ClCompile Include="systemWin32.cpp">
+      <ObjectFileName>$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <XMLDocumentationFileName>$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
+    </ClCompile>
+    <ClCompile Include="profiler.cpp" />
+    <ClCompile Include="versionControl.cpp" />
+    <ClCompile Include="feedback.cpp" />
+    <ClCompile Include="jobGenericJobs.cpp" />
+    <ClCompile Include="math.cpp" />
+    <ClCompile Include="mathUtils.cpp" />
+    <ClCompile Include="randomSystem.cpp" />
+    <ClCompile Include="frustum.cpp" />
+    <ClCompile Include="engineQsTransform.cpp" />
+    <ClCompile Include="engineTransform.cpp" />
+    <ClCompile Include="engineTime.cpp" />
+    <ClCompile Include="string.cpp" />
+    <ClCompile Include="tokenizer.cpp" />
+    <ClCompile Include="wildcard.cpp" />
+    <ClCompile Include="dynarray.cpp" />
+    <ClCompile Include="longBitField.cpp" />
+    <ClCompile Include="2darray.cpp" />
+    <ClCompile Include="cooker.cpp" />
+    <ClCompile Include="depot.cpp" />
+    <ClCompile Include="directory.cpp" />
+    <ClCompile Include="diskFile.cpp" />
+    <ClCompile Include="diskPackage.cpp" />
+    <ClCompile Include="exporter.cpp" />
+    <ClCompile Include="factory.cpp" />
+    <ClCompile Include="gatheredResource.cpp" />
+    <ClCompile Include="importer.cpp" />
+    <ClCompile Include="resource.cpp" />
+    <ClCompile Include="resourceDefManager.cpp" />
+    <ClCompile Include="resourcePath.cpp" />
+    <ClCompile Include="thumbnail.cpp" />
+    <ClCompile Include="dependencyLinker.cpp" />
+    <ClCompile Include="dependencyLinkerFactory.cpp" />
+    <ClCompile Include="dependencyLoader.cpp" />
+    <ClCompile Include="dependencyLoader2dArray.cpp" />
+    <ClCompile Include="dependencyMapper.cpp" />
+    <ClCompile Include="dependencySaver.cpp" />
+    <ClCompile Include="dependencySaver2dArray.cpp" />
+    <ClCompile Include="fileLoadingStats.cpp" />
+    <ClCompile Include="xmlFile.cpp" />
+    <ClCompile Include="xmlFileReader.cpp" />
+    <ClCompile Include="xmlFileWriter.cpp" />
+    <ClCompile Include="xmlReader.cpp" />
+    <ClCompile Include="xmlWriter.cpp" />
+    <ClCompile Include="instanceBuffer.cpp" />
+    <ClCompile Include="instanceDataLayout.cpp" />
+    <ClCompile Include="instanceDataLayoutCompiler.cpp" />
+    <ClCompile Include="instanceVar.cpp" />
+    <ClCompile Include="handleMap.cpp" />
+    <ClCompile Include="scriptingSystem.cpp" />
+    <ClCompile Include="scriptCompiledCode.cpp" />
+    <ClCompile Include="scriptDebugger.cpp" />
+    <ClCompile Include="scriptDebuggerLocals.cpp" />
+    <ClCompile Include="scriptNativeFunctionMap.cpp" />
+    <ClCompile Include="scriptSnapshot.cpp" />
+    <ClCompile Include="scriptStackFrame.cpp" />
+    <ClCompile Include="scriptThread.cpp" />
+    <ClCompile Include="scriptThreadSerializer.cpp" />
+    <ClCompile Include="scriptCompiler.cpp" />
+    <ClCompile Include="scriptDefaultValue.cpp" />
+    <ClCompile Include="scriptFieldStubs.cpp" />
+    <ClCompile Include="scriptFunctionCompiler.cpp" />
+    <ClCompile Include="scriptLexer.cpp" />
+    <ClCompile Include="scriptTokenStream.cpp" />
+    <ClCompile Include="scriptTypeInfo.cpp" />
+    <ClCompile Include="scriptFileParser.cpp">
+      <ObjectFileName>$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <XMLDocumentationFileName>$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
+    </ClCompile>
+    <ClCompile Include="scriptFunctionParser.cpp" />
+    <ClCompile Include="scriptCodeGenerator.cpp" />
+    <ClCompile Include="scriptCodeNode.cpp" />
+    <ClCompile Include="scriptSyntaxNode.cpp" />
+    <ClCompile Include="scriptSyntaxNodeChecking.cpp" />
+    <ClCompile Include="scriptSyntaxNodeCodeGeneration.cpp" />
+    <ClCompile Include="scriptSyntaxNodeFunctions.cpp" />
+    <ClCompile Include="scriptSyntaxNodeTypes.cpp" />
+    <ClCompile Include="scriptCoreMath.cpp" />
+    <ClCompile Include="scriptCoreNatives.cpp" />
+    <ClCompile Include="scriptCoreOpcodes.cpp" />
+    <ClCompile Include="scriptCoreOperators.cpp" />
+    <ClCompile Include="scriptCoreString.cpp" />
+    <ClCompile Include="configFileManager.cpp" />
+    <ClCompile Include="runnable.cpp" />
+    <ClCompile Include="commandlet.cpp" />
+    <ClCompile Include="names.cpp" />
+    <ClCompile Include="build.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="singleton.cpp" />
+    <ClInclude Include="objectMap.h" />
+    <ClInclude Include="objectReachability.h" />
+    <ClInclude Include="objectRootSet.h" />
+    <ClInclude Include="parallelFor.h" />
+    <ClInclude Include="pixProfilerTool.h" />
+    <ClInclude Include="playGoPackage.h" />
+    <ClInclude Include="pool.h" />
+    <ClInclude Include="profilerChannels.h" />
+    <ClInclude Include="profilerConfiguration.h" />
+    <ClInclude Include="profilerManager.h" />
+    <ClInclude Include="profilerToolPool.h" />
+    <ClInclude Include="profilerTypes.h" />
+    <ClInclude Include="profiler\instrumentedFunction.h" />
+    <ClInclude Include="profiler\newRedProfiler.h" />
+    <ClInclude Include="profiler\profilerFile.h" />
+    <ClInclude Include="rapidjson\document.h" />
+    <ClInclude Include="rapidjson\filestream.h" />
+    <ClInclude Include="rapidjson\internal\pow10.h" />
+    <ClInclude Include="rapidjson\internal\stack.h" />
+    <ClInclude Include="rapidjson\internal\strfunc.h" />
+    <ClInclude Include="rapidjson\prettywriter.h" />
+    <ClInclude Include="rapidjson\rapidjson.h" />
+    <ClInclude Include="rapidjson\reader.h" />
+    <ClInclude Include="rapidjson\stringbuffer.h" />
+    <ClInclude Include="rapidjson\writer.h" />
+    <ClInclude Include="razorProfilerTool.h" />
+    <ClInclude Include="redProfiler.h" />
+    <ClInclude Include="redProfilerTool.h" />
+    <ClInclude Include="refCountPointer.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="referencable.h" />
+    <ClInclude Include="pointer.h" />
+    <ClInclude Include="resourcedatabasegraphgeneration.h" />
+    <ClInclude Include="resourceid.h" />
+    <ClInclude Include="resourceLoading.h" />
+    <ClInclude Include="resourcepaths.h" />
+    <ClInclude Include="resourceUnloading.h" />
+    <ClInclude Include="resourceUsage.h" />
+    <ClInclude Include="scopedPtr.h" />
+    <ClInclude Include="scriptable.h" />
+    <ClInclude Include="scriptable.inl.h" />
+    <ClInclude Include="scriptableState.h" />
+    <ClInclude Include="scriptableStateMachine.h" />
+    <ClInclude Include="scriptCodeNodeCompilationPool.h" />
+    <ClInclude Include="scriptsOpcodeExaminer.h" />
+    <ClInclude Include="serializable.h" />
+    <ClInclude Include="redTelemetryService.h" />
+    <ClInclude Include="redTelemetryServicesManager.h" />
+    <ClInclude Include="sha256.h" />
+    <ClInclude Include="sharedDataBuffer.h" />
+    <ClInclude Include="sharedDataBufferImpl.h" />
+    <ClInclude Include="standardSettings.h" />
+    <ClInclude Include="streamingInstaller.h" />
+    <ClInclude Include="taskGroup.h" />
+    <ClInclude Include="xvcPackage.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="bundledefinition.h" />
+    <ClInclude Include="container_util.h" />
+    <ClInclude Include="changelist.h" />
+    <ClInclude Include="clipboardBase.h" />
+    <ClInclude Include="curve3DData.h" />
+    <ClInclude Include="curveBase.h" />
+    <ClInclude Include="curveData.h" />
+    <ClInclude Include="curveSimple.h" />
+    <ClInclude Include="cycleList.h" />
+    <ClInclude Include="dataError.h" />
+    <ClInclude Include="dynarray_new.h" />
+    <ClInclude Include="explatformos.h" />
+    <ClInclude Include="functor.h" />
+    <ClInclude Include="gameApplication.h" />
+    <ClInclude Include="gameConfiguration.h" />
+    <ClInclude Include="grid.h" />
+    <ClInclude Include="heap.h" />
+    <ClInclude Include="intrusiveList.h" />
+    <ClInclude Include="iterator.h" />
+    <ClInclude Include="kdTree.h" />
+    <ClInclude Include="kdTreeBuilder.h" />
+    <ClInclude Include="kdTreeMediator.h" />
+    <ClInclude Include="kdTreeNNCollector.h" />
+    <ClInclude Include="kdTreeNnItem.h" />
+    <ClInclude Include="kdTreePointSet.h" />
+    <ClInclude Include="kdTreePrinter.h" />
+    <ClInclude Include="kdTreeSearchUtils.h" />
+    <ClInclude Include="kdTreeSplitter.h" />
+    <ClInclude Include="kdTreeTypes.h" />
+    <ClInclude Include="kdTreeUtils.h" />
+    <ClInclude Include="memoryClasses.h" />
+    <ClInclude Include="memoryFileAnalizer.h" />
+    <ClInclude Include="memoryMacros.h" />
+    <ClInclude Include="memoryPools.h" />
+    <ClInclude Include="memoryPoolsDurango.h" />
+    <ClInclude Include="memoryPoolsWindows.h" />
+    <ClInclude Include="memoryPoolsOrbis.h" />
+    <ClInclude Include="namesPool.h" />
+    <ClInclude Include="osTypesOrbis.h" />
+    <ClInclude Include="packageManager.h" />
+    <ClInclude Include="intsBitField.h" />
+    <ClInclude Include="dependencygraph.h" />
+    <ClInclude Include="resourcedatabase.h" />
+    <ClInclude Include="resourcedatabasepool.h" />
+    <ClInclude Include="resourcedatabasepooleddata.h" />
+    <ClInclude Include="resourcedatabasepoolentry.h" />
+    <ClInclude Include="resourcedatabaserecord.h" />
+    <ClInclude Include="resourcedatabaseshareddata.h" />
+    <ClInclude Include="codeParser.h" />
+    <ClInclude Include="serializationDispatchJob.h" />
+    <ClInclude Include="serializationStreamBuilder.h" />
+    <ClInclude Include="serializationStreamData.h" />
+    <ClInclude Include="serializationStreamOpcodes.h" />
+    <ClInclude Include="serializationStreamParser.h" />
+    <ClInclude Include="sharedPtr.h" />
+    <ClInclude Include="softHandleProcessor.h" />
+    <ClInclude Include="sortedmap.h" />
+    <ClInclude Include="simplexTree.h" />
+    <ClInclude Include="speechCollector.h" />
+    <ClInclude Include="staticarray_new.h" />
+    <ClInclude Include="streamingGrid.h" />
+    <ClInclude Include="streamingGridHelpers.h" />
+    <ClInclude Include="stringConversion.h" />
+    <ClInclude Include="stringLocale.h" />
+    <ClInclude Include="task.h" />
+    <ClInclude Include="taskAllocator.h" />
+    <ClInclude Include="taskDebug.h" />
+    <ClInclude Include="taskDeque.h" />
+    <ClInclude Include="taskDispatcher.h" />
+    <ClInclude Include="taskManager.h" />
+    <ClInclude Include="taskRunner.h" />
+    <ClInclude Include="taskSched.h" />
+    <ClInclude Include="taskSchedList.h" />
+    <ClInclude Include="taskSchedNode.h" />
+    <ClInclude Include="taskSchedTimer.h" />
+    <ClInclude Include="taskScheduler.h" />
+    <ClInclude Include="taskBatch.h" />
+    <ClInclude Include="taskThread.h" />
+    <ClInclude Include="redTelemetryServiceConfig.h" />
+    <ClInclude Include="redTelemetryServiceImplWin32.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='No opts|ORBIS'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ORBIS'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseGame|ORBIS'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ORBIS'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Final|ORBIS'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="redTelemetryServiceInterface.h" />
+    <ClInclude Include="redTelemetryServiceUpdateJob.h" />
+    <ClInclude Include="telemetryTool.h" />
+    <ClInclude Include="threadSafeNodeList.h" />
+    <ClInclude Include="bufferedReader.h" />
+    <ClInclude Include="bufferedWriter.h" />
+    <ClInclude Include="compressedNumSerializer.h" />
+    <ClInclude Include="file.h" />
+    <ClInclude Include="fileFormat.h" />
+    <ClInclude Include="filePath.h" />
+    <ClInclude Include="fileSkipableBlock.h" />
+    <ClInclude Include="fileSys.h" />
+    <ClInclude Include="memoryFileReader.h" />
+    <ClInclude Include="memoryFileWriter.h" />
+    <ClInclude Include="rawFileReader.h" />
+    <ClInclude Include="rawFileSearcher.h" />
+    <ClInclude Include="rawFileWriter.h" />
+    <ClInclude Include="fileLatentLoadingToken.h" />
+    <ClInclude Include="latentLoader.h" />
+    <ClInclude Include="dataBuffer.h" />
+    <ClInclude Include="latentDataBuffer.h" />
+    <ClInclude Include="bitField.h" />
+    <ClInclude Include="bitFieldBuilder.h" />
+    <ClInclude Include="class.h" />
+    <ClInclude Include="classBuilder.h" />
+    <ClInclude Include="coreTypeRegistry.h" />
+    <ClInclude Include="defaultValue.h" />
+    <ClInclude Include="enum.h" />
+    <ClInclude Include="enumBuilder.h" />
+    <ClInclude Include="function.h" />
+    <ClInclude Include="functionBuilder.h" />
+    <ClInclude Include="functionCalling.h" />
+    <ClInclude Include="functionFlags.h" />
+    <ClInclude Include="property.h" />
+    <ClInclude Include="propertyBuilder.h" />
+    <ClInclude Include="rc4generator.h" />
+    <ClInclude Include="rttiSerializer.h" />
+    <ClInclude Include="rttiSystem.h" />
+    <ClInclude Include="rttiType.h" />
+    <ClInclude Include="softHandle.h" />
+    <ClInclude Include="tagList.h" />
+    <ClInclude Include="typedClass.h" />
+    <ClInclude Include="typeName.h" />
+    <ClInclude Include="types.h" />
+    <ClInclude Include="uniPointer.h" />
+    <ClInclude Include="uniqueBuffer.h" />
+    <ClInclude Include="uniquePtr.h" />
+    <ClInclude Include="variant.h" />
+    <ClInclude Include="variantArray.h" />
+    <ClInclude Include="object.h" />
+    <ClInclude Include="objectIterator.h" />
+    <ClInclude Include="crt.h" />
+    <ClInclude Include="events.h" />
+    <ClInclude Include="sync.h" />
+    <ClInclude Include="system.h" />
+    <ClInclude Include="osTypesWin32.h" />
+    <ClInclude Include="profiler.h" />
+    <ClInclude Include="versionControl.h" />
+    <ClInclude Include="feedback.h" />
+    <ClInclude Include="jobGenericJobs.h" />
+    <ClInclude Include="math.h" />
+    <ClInclude Include="mathConversions.h" />
+    <ClInclude Include="mathForward.h" />
+    <ClInclude Include="mathUtils.h" />
+    <ClInclude Include="numericLimits.h" />
+    <ClInclude Include="randomSystem.h" />
+    <ClInclude Include="frustum.h" />
+    <ClInclude Include="engineQsTransform.h" />
+    <ClInclude Include="engineTransform.h" />
+    <ClInclude Include="engineTime.h" />
+    <ClInclude Include="util.h" />
+    <ClInclude Include="string.h" />
+    <ClInclude Include="tokenizer.h" />
+    <ClInclude Include="lazyCacheChain.h" />
+    <ClInclude Include="weakPtr.h" />
+    <ClInclude Include="wildcard.h" />
+    <ClInclude Include="dynarray.h" />
+    <ClInclude Include="sortedarray.h" />
+    <ClInclude Include="staticarray.h" />
+    <ClInclude Include="bitset.h" />
+    <ClInclude Include="hashset.h" />
+    <ClInclude Include="hashset2.h" />
+    <ClInclude Include="set.h" />
+    <ClInclude Include="sortedset.h" />
+    <ClInclude Include="doubleList.h" />
+    <ClInclude Include="list.h" />
+    <ClInclude Include="priqueue.h" />
+    <ClInclude Include="queue.h" />
+    <ClInclude Include="fragPool.h" />
+    <ClInclude Include="longBitField.h" />
+    <ClInclude Include="2darray.h" />
+    <ClInclude Include="cooker.h" />
+    <ClInclude Include="depot.h" />
+    <ClInclude Include="directory.h" />
+    <ClInclude Include="diskFile.h" />
+    <ClInclude Include="diskPackage.h" />
+    <ClInclude Include="exporter.h" />
+    <ClInclude Include="factory.h" />
+    <ClInclude Include="gatheredResource.h" />
+    <ClInclude Include="importer.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="resourceDefManager.h" />
+    <ClInclude Include="resourcePath.h" />
+    <ClInclude Include="thumbnail.h" />
+    <ClInclude Include="dependencyLinker.h" />
+    <ClInclude Include="dependencyLinkerFactory.h" />
+    <ClInclude Include="dependencyLoader.h" />
+    <ClInclude Include="dependencyLoader2dArray.h" />
+    <ClInclude Include="dependencyLoaderFactory.h" />
+    <ClInclude Include="dependencyMapper.h" />
+    <ClInclude Include="dependencySaver.h" />
+    <ClInclude Include="dependencySaver2dArray.h" />
+    <ClInclude Include="dependencySaverFactory.h" />
+    <ClInclude Include="fileLoadingStats.h" />
+    <ClInclude Include="fileVersionList.h" />
+    <ClInclude Include="xmlFile.h" />
+    <ClInclude Include="xmlFileReader.h" />
+    <ClInclude Include="xmlFileWriter.h" />
+    <ClInclude Include="xmlReader.h" />
+    <ClInclude Include="xmlWriter.h" />
+    <ClInclude Include="rapidxml.hpp" />
+    <ClInclude Include="rapidxml_iterators.hpp" />
+    <ClInclude Include="rapidxml_print.hpp" />
+    <ClInclude Include="rapidxml_utils.hpp" />
+    <ClInclude Include="memory.h" />
+    <ClInclude Include="algorithms.h" />
+    <ClInclude Include="compare.h" />
+    <ClInclude Include="countedBool.h" />
+    <ClInclude Include="hash.h" />
+    <ClInclude Include="instanceBuffer.h" />
+    <ClInclude Include="instanceDataLayout.h" />
+    <ClInclude Include="instanceDataLayoutCompiler.h" />
+    <ClInclude Include="instanceVar.h" />
+    <ClInclude Include="handleMap.h" />
+    <ClInclude Include="scriptingSystem.h" />
+    <ClInclude Include="scriptCompiledCode.h" />
+    <ClInclude Include="scriptDebugger.h" />
+    <ClInclude Include="scriptNativeFunctionMap.h" />
+    <ClInclude Include="scriptSnapshot.h" />
+    <ClInclude Include="scriptStackFrame.h" />
+    <ClInclude Include="scriptThread.h" />
+    <ClInclude Include="scriptThreadSerializer.h" />
+    <ClInclude Include="scriptCompiler.h" />
+    <ClInclude Include="scriptDefaultValue.h" />
+    <ClInclude Include="scriptFieldStubs.h" />
+    <ClInclude Include="scriptFileContext.h" />
+    <ClInclude Include="scriptFunctionCompiler.h" />
+    <ClInclude Include="scriptLexer.h" />
+    <ClInclude Include="scriptToken.h" />
+    <ClInclude Include="scriptTokenStream.h" />
+    <ClInclude Include="scriptTypeInfo.h" />
+    <ClInclude Include="scriptFileParser.h" />
+    <ClInclude Include="scriptFunctionParser.h" />
+    <ClInclude Include="scriptCodeGenerator.h" />
+    <ClInclude Include="scriptCodeNode.h" />
+    <ClInclude Include="scriptSyntaxNode.h" />
+    <ClInclude Include="configFileManager.h" />
+    <ClInclude Include="commandlet.h" />
+    <ClInclude Include="names.h" />
+    <ClInclude Include="genericSettings.h" />
+    <ClInclude Include="settings.h" />
+    <ClInclude Include="gameSave.h" />
+    <ClInclude Include="build.h" />
+    <ClInclude Include="core.h" />
+    <ClInclude Include="listener.h" />
+    <ClInclude Include="namesRegistry.h" />
+    <ClInclude Include="singleton.h" />
+    <ClInclude Include="version.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="atomicSharedPtr.inl" />
+    <None Include="atomicWeakPtr.inl" />
+    <None Include="bufferFileInterchangeEntry.inl" />
+    <None Include="bundleBufferToFilesInterchange.inl" />
+    <None Include="bundleDataBuffer.inl" />
+    <None Include="bundleDataHandle.inl" />
+    <None Include="bundleMetadataStore.inl" />
+    <None Include="cycleList.inl" />
+    <None Include="deferredDataBuffer.inl" />
+    <None Include="directory.inl" />
+    <None Include="filePath.inl" />
+    <None Include="fileSystemProfiler.inl" />
+    <None Include="handleMap.h.inl" />
+    <None Include="idAllocator.inl" />
+    <None Include="intrusiveList.inl" />
+    <None Include="intrusivePtr.inl" />
+    <None Include="kdTree.inl" />
+    <None Include="longBitField.inl" />
+    <None Include="mathCapsuleFPU.inl" />
+    <None Include="object.inl" />
+    <None Include="math.inl" />
+    <None Include="mathBoxFPU.inl" />
+    <None Include="mathColorFPU.inl" />
+    <None Include="mathEulerAnglesFPU.inl" />
+    <None Include="mathFPU.inl" />
+    <None Include="mathFuncsFPU.inl" />
+    <None Include="mathMatrixFPU.inl" />
+    <None Include="mathPlaneFPU.inl" />
+    <None Include="mathRectFPU.inl" />
+    <None Include="mathSphereFPU.inl" />
+    <None Include="mathTypesFPU.inl" />
+    <None Include="mathVectorFPU.inl" />
+    <None Include="mathSSE.inl" />
+    <None Include="mathTypesSSE.inl" />
+    <None Include="mathAltiVec.inl" />
+    <None Include="mathTypesAltiVec.inl" />
+    <BisonScripts Include="scriptFileParser.bison" />
+    <BisonScripts Include="scriptFunctionParser.bison">
+      <AdditionalArguments>-pyyfunc_</AdditionalArguments>
+    </BisonScripts>
+    <None Include="listener.inl" />
+    <None Include="operatorNewDelete.inl" />
+    <None Include="pointer.inl" />
+    <None Include="profiler.inl" />
+    <None Include="dependencygraph.inl" />
+    <None Include="resourcedatabasepool.inl" />
+    <None Include="resourcedatabasepooleddata.inl" />
+    <None Include="resourcedatabasepoolentry.inl" />
+    <None Include="resourcedatabaserecord.inl" />
+    <None Include="resourcedatabaseshareddata.inl" />
+    <None Include="scopedPtr.inl" />
+    <None Include="sharedPtr.inl" />
+    <None Include="uniqueBuffer.inl" />
+    <None Include="uniquePtr.inl" />
+    <None Include="weakPtr.inl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\redMemory\redMemory.vcxproj">
+      <Project>{0328983f-0fb2-42f1-953a-2caec84c7c90}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.targets))\Shared.targets" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+</Project>

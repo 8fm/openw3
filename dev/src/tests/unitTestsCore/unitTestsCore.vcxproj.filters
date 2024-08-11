@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="bitopsTests.cpp" />
+    <ClCompile Include="build.cpp" />
+    <ClCompile Include="namesTest.cpp" />
+    <ClCompile Include="ptrdiffTest.cpp" />
+    <ClCompile Include="rectTest.cpp" />
+    <ClCompile Include="taskDequeTest.cpp" />
+    <ClCompile Include="..\unitTestsFramework\testRunnerDurango.cpp">
+      <Filter>durango</Filter>
+    </ClCompile>
+    <ClCompile Include="gameConfigurationTest.cpp" />
+    <ClCompile Include="scopedPtrTests.cpp" />
+    <ClCompile Include="sharedPtrTests.cpp" />
+    <ClCompile Include="uniquePtrTests.cpp" />
+    <ClCompile Include="weakPtrTests.cpp" />
+    <ClCompile Include="externDefinition.cpp" />
+    <ClCompile Include="filePathTest.cpp" />
+    <ClCompile Include="deferredBufferTests.cpp" />
+    <ClCompile Include="commandLineParserTest.cpp" />
+    <ClCompile Include="uniqueBufferTests.cpp" />
+    <ClCompile Include="bundlePreambleParserTest.cpp">
+      <Filter>Bundles</Filter>
+    </ClCompile>
+    <ClCompile Include="debugBundleHeaderParserTest.cpp">
+      <Filter>Bundles</Filter>
+    </ClCompile>
+    <ClCompile Include="testBundleData.cpp">
+      <Filter>Bundles</Filter>
+    </ClCompile>
+    <ClCompile Include="objectsTest.cpp" />
+    <ClCompile Include="jsonTest.cpp" />
+    <ClCompile Include="stringTest.cpp">
+      <Filter>Containers</Filter>
+    </ClCompile>
+    <ClCompile Include="operatorNewDelete_orbis.cpp" />
+    <ClCompile Include="idAllocatorTests.cpp" />
+    <ClCompile Include="mapTest.cpp">
+      <Filter>Containers</Filter>
+    </ClCompile>
+    <ClCompile Include="bundleDataCacheTests.cpp">
+      <Filter>Bundles</Filter>
+    </ClCompile>
+    <ClCompile Include="streamingGridTest.cpp" />
+    <ClCompile Include="..\unitTestsFramework\testRunner.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="build.h" />
+    <ClInclude Include="bundleTestMocks.h">
+      <Filter>Bundles</Filter>
+    </ClInclude>
+    <ClInclude Include="testBundleData.h">
+      <Filter>Bundles</Filter>
+    </ClInclude>
+    <ClInclude Include="hashmap_old.h">
+      <Filter>Containers</Filter>
+    </ClInclude>
+    <ClInclude Include="hashmap_W2.h">
+      <Filter>Containers</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="durango">
+      <UniqueIdentifier>{74d3bb0d-0a76-4776-9de0-b27e081e58a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Bundles">
+      <UniqueIdentifier>{538bf804-393d-43a8-a34e-42bed3cc52fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Containers">
+      <UniqueIdentifier>{eb380ea6-7b61-4836-8b96-ed0277d317d7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="unitTestsCore.appxmanifest">
+      <Filter>durango</Filter>
+    </AppxManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\unitTestsFramework\Logo.png">
+      <Filter>durango</Filter>
+    </Image>
+    <Image Include="..\unitTestsFramework\SmallLogo.png">
+      <Filter>durango</Filter>
+    </Image>
+    <Image Include="..\unitTestsFramework\SplashScreen.png">
+      <Filter>durango</Filter>
+    </Image>
+    <Image Include="..\unitTestsFramework\StoreLogo.png">
+      <Filter>durango</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

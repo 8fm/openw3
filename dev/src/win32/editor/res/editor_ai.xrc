@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<resource xmlns="http://www.wxwindows.org/wxxrc" version="2.3.0.1">
+	<object class="wxFrame" name="GoalCurvesEditor">
+		<style>wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL</style>
+		<size>738,697</size>
+		<title>GoalCurvesEditor</title>
+		<aui_managed>0</aui_managed>
+		<object class="wxSplitterWindow" name="m_splitter1">
+			<style>wxSP_3D</style>
+			<sashpos>210</sashpos>
+			<gravity>0</gravity>
+			<minsize>260</minsize>
+			<orientation>vertical</orientation>
+			<object class="wxPanel" name="ListPanel">
+				<style>wxTAB_TRAVERSAL</style>
+				<object class="wxBoxSizer">
+					<orient>wxVERTICAL</orient>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticText" name="m_staticText2">
+							<label>Sets</label>
+							<wrap>-1</wrap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>1</option>
+						<flag>wxALL|wxEXPAND</flag>
+						<border>5</border>
+						<object class="wxListBox" name="SetListBox">
+							<size>200,-1</size>
+							<content />
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticText" name="m_staticText1">
+							<label>Curves</label>
+							<wrap>-1</wrap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>1</option>
+						<flag>wxALL|wxEXPAND</flag>
+						<border>5</border>
+						<object class="wxListCtrl" name="CurveListCtrl">
+							<style>wxLC_AUTOARRANGE|wxLC_REPORT|wxLC_SINGLE_SEL</style>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxEXPAND</flag>
+						<border>5</border>
+						<object class="wxBoxSizer">
+							<orient>wxHORIZONTAL</orient>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALL</flag>
+								<border>5</border>
+								<object class="wxButton" name="AddCurveBtn">
+									<label>Add curve</label>
+									<default>0</default>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALL</flag>
+								<border>5</border>
+								<object class="wxButton" name="DeleteCurveBtn">
+									<label>Delete curve</label>
+									<default>0</default>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALL</flag>
+								<border>5</border>
+								<object class="wxButton" name="SetRangeBtn">
+									<label>Set range</label>
+									<default>0</default>
+								</object>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="wxPanel" name="CurvePanel">
+				<style>wxSUNKEN_BORDER|wxTAB_TRAVERSAL</style>
+			</object>
+		</object>
+		<object class="wxMenuBar" name="m_menubar1">
+			<label>MyMenuBar</label>
+			<object class="wxMenu" name="menuFile">
+				<label>_File</label>
+				<object class="wxMenuItem" name="fileSave">
+					<label>_Save</label>
+					<help></help>
+				</object>
+			</object>
+			<object class="wxMenu" name="menuView">
+				<label>_View</label>
+				<object class="wxMenuItem" name="viewZoomAll">
+					<label>_Zoom All</label>
+					<help></help>
+				</object>
+			</object>
+		</object>
+	</object>
+	<object class="wxDialog" name="GoalCurvesRangeDialog">
+		<style>wxDEFAULT_DIALOG_STYLE</style>
+		<size>295,94</size>
+		<title>Set range</title>
+		<object class="wxBoxSizer">
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxALL|wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxBoxSizer">
+					<orient>wxHORIZONTAL</orient>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticText" name="LabelMin">
+							<label>Min:</label>
+							<wrap>-1</wrap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxTextCtrl" name="MinRangeTextCtrl">
+							<value></value>
+							<maxlength>0</maxlength>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticText" name="LabelMax">
+							<label>Max:</label>
+							<wrap>-1</wrap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxTextCtrl" name="MaxRangeTextCtrl">
+							<value></value>
+							<maxlength>0</maxlength>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
+				<border>5</border>
+				<object class="wxStdDialogButtonSizer">
+					<object class="button">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="wxID_OK">
+							<label>&amp;OK</label>
+						</object>
+					</object>
+					<object class="button">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="wxID_CANCEL">
+							<label>&amp;Cancel</label>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+	<object class="wxFrame" name="AttitudeEditor">
+		<style>wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL</style>
+		<size>609,300</size>
+		<title>Attitude editor</title>
+		<aui_managed>0</aui_managed>
+		<object class="wxMenuBar" name="menuBar">
+			<label>MyMenuBar</label>
+			<object class="wxMenu" name="menuFile">
+				<label>File</label>
+				<object class="wxMenuItem" name="menuItemTargetDLC">
+					<label>Select Target DLC</label>
+					<help></help>
+				</object>
+				<object class="wxMenuItem" name="menuItemSave">
+					<label>Save\tCTRL+S</label>
+					<help></help>
+				</object>
+				<object class="wxMenuItem" name="menuItemSubmit">
+					<label>Save and Submit</label>
+					<help></help>
+				</object>
+				<object class="wxMenuItem" name="menuItemExit">
+					<label>Exit</label>
+					<help>Closes editor without saving</help>
+				</object>
+			</object>
+		</object>
+		<object class="wxPanel" name="panelGlobal">
+			<style>wxTAB_TRAVERSAL</style>
+			<object class="wxBoxSizer">
+				<orient>wxVERTICAL</orient>
+				<object class="sizeritem">
+					<option>0</option>
+					<flag>wxEXPAND</flag>
+					<border>5</border>
+					<object class="wxBoxSizer">
+						<orient>wxHORIZONTAL</orient>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxALL|wxEXPAND</flag>
+							<border>5</border>
+							<object class="wxToolBar" name="toolBarSave">
+								<style>wxTB_FLAT|wxTB_HORIZONTAL|wxTB_NODIVIDER</style>
+								<bitmapsize></bitmapsize>
+								<margins></margins>
+								<packing>1</packing>
+								<separation>5</separation>
+								<object class="tool" name="toolSave">
+									<label>toolSave</label>
+									<tooltip>Save</tooltip>
+									<longhelp></longhelp>
+									<bitmap>images/save16.png</bitmap>
+								</object>
+								<object class="tool" name="toolSubmit">
+									<label>tool</label>
+									<tooltip>Save and submit</tooltip>
+									<longhelp></longhelp>
+									<bitmap>images/checked_in.png</bitmap>
+								</object>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+							<border>5</border>
+							<object class="wxStaticText" name="textGroups">
+								<label>Current group </label>
+								<wrap>-1</wrap>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxALL</flag>
+							<border>5</border>
+							<object class="wxComboBox" name="comboGroups">
+								<style>wxCB_READONLY</style>
+								<value>Combo!</value>
+								<content />
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxALL|wxEXPAND</flag>
+							<border>5</border>
+							<object class="wxToolBar" name="toolBarDebug">
+								<style>wxTB_FLAT|wxTB_HORIZONTAL|wxTB_NODIVIDER</style>
+								<bitmapsize></bitmapsize>
+								<margins></margins>
+								<packing>1</packing>
+								<separation>5</separation>
+								<object class="tool" name="toolRefresh">
+									<label>Refresh attitudes</label>
+									<tooltip>Refresh attitudes</tooltip>
+									<longhelp></longhelp>
+									<bitmap>images/refresh.png</bitmap>
+								</object>
+								<object class="tool" name="toolDebugMode">
+									<label>Connect debugger to running game</label>
+									<tooltip>Connect debugger to running game</tooltip>
+									<longhelp></longhelp>
+									<bitmap>images/bug.png</bitmap>
+									<toggle>1</toggle>
+								</object>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+							<border>5</border>
+							<object class="wxStaticText" name="textDebugMode">
+								<label>Not connected to game</label>
+								<wrap>-1</wrap>
+							</object>
+						</object>
+					</object>
+				</object>
+				<object class="sizeritem">
+					<option>0</option>
+					<flag>wxEXPAND</flag>
+					<border>5</border>
+					<object class="wxBoxSizer">
+						<orient>wxHORIZONTAL</orient>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+							<border>5</border>
+							<object class="wxStaticText" name="textParent">
+								<label>Parent </label>
+								<wrap>-1</wrap>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxALL</flag>
+							<border>5</border>
+							<object class="wxComboBox" name="comboParent">
+								<style>wxCB_READONLY</style>
+								<value>Combo!</value>
+								<content />
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxALL|wxEXPAND</flag>
+							<border>5</border>
+							<object class="wxToolBar" name="toolBarLocal">
+								<style>wxTB_FLAT|wxTB_HORIZONTAL|wxTB_NODIVIDER</style>
+								<bitmapsize></bitmapsize>
+								<margins></margins>
+								<packing>1</packing>
+								<separation>5</separation>
+								<object class="wxStaticText" name="textFilter">
+									<label>Filter </label>
+									<wrap>-1</wrap>
+								</object>
+								<object class="wxTextCtrl" name="textCtrlFilter">
+									<size>150,-1</size>
+									<tooltip>Filter</tooltip>
+									<value></value>
+									<maxlength>30</maxlength>
+								</object>
+								<object class="tool" name="toolFilter">
+									<label>Enable/disable filter</label>
+									<tooltip>Filter switch</tooltip>
+									<longhelp></longhelp>
+									<bitmap>images/pb_find.png</bitmap>
+									<toggle>1</toggle>
+								</object>
+								<object class="separator" />
+								<object class="tool" name="toolHideNeutral">
+									<label>Hide neutral attitudes</label>
+									<tooltip>Hide neutral attitudes</tooltip>
+									<longhelp></longhelp>
+									<bitmap>images/eye_closed.png</bitmap>
+									<toggle>1</toggle>
+								</object>
+								<object class="separator" />
+								<object class="tool" name="toolHideNonCustom">
+									<label>tool</label>
+									<tooltip>Hide non-custom attitudes</tooltip>
+									<longhelp></longhelp>
+									<bitmap>images/arrow_up.png</bitmap>
+									<toggle>1</toggle>
+								</object>
+							</object>
+						</object>
+					</object>
+				</object>
+				<object class="sizeritem">
+					<option>1</option>
+					<flag>wxEXPAND | wxALL</flag>
+					<border>5</border>
+					<object class="wxPanel" name="panelMain">
+						<style>wxTAB_TRAVERSAL</style>
+						<object class="wxBoxSizer">
+							<orient>wxHORIZONTAL</orient>
+							<object class="sizeritem">
+								<option>1</option>
+								<flag>wxALL|wxEXPAND</flag>
+								<border>5</border>
+								<object class="wxGrid" name="gridMain">
+									<tooltip>Ctrl + click to jump to the selected group\n</tooltip>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxEXPAND</flag>
+								<border>5</border>
+								<object class="wxBoxSizer">
+									<orient>wxVERTICAL</orient>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALL</flag>
+										<border>5</border>
+										<object class="wxStaticText" name="m_staticText14">
+											<label>All parents</label>
+											<wrap>-1</wrap>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALL</flag>
+										<border>5</border>
+										<object class="wxListBox" name="listParents">
+											<content />
+										</object>
+									</object>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALL</flag>
+										<border>5</border>
+										<object class="wxStaticText" name="m_staticText15">
+											<label>All Children</label>
+											<wrap>-1</wrap>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALL</flag>
+										<border>5</border>
+										<object class="wxListBox" name="listChildren">
+											<content />
+										</object>
+									</object>
+								</object>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+	<object class="wxFrame" name="SteeringEditor">
+		<style>wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL</style>
+		<size>698,551</size>
+		<title></title>
+		<aui_managed>0</aui_managed>
+		<object class="wxMenuBar" name="m_menubar3">
+			<label>MyMenuBar</label>
+			<object class="wxMenu" name="menuFile">
+				<label>_File</label>
+				<object class="wxMenuItem" name="templateSave">
+					<label>_Save\tCtrl+S</label>
+					<help></help>
+				</object>
+			</object>
+			<object class="wxMenu" name="menuEdit">
+				<label>_Edit</label>
+				<object class="wxMenuItem" name="editDelete">
+					<label>_Delete\tDel</label>
+					<help></help>
+				</object>
+			</object>
+			<object class="wxMenu" name="menuView">
+				<label>_View</label>
+				<object class="wxMenuItem" name="viewDock">
+					<label>Dock</label>
+					<help></help>
+				</object>
+				<object class="wxMenuItem" name="viewZoomAll">
+					<label>Zoom All</label>
+					<help></help>
+				</object>
+			</object>
+		</object>
+		<object class="wxToolBar" name="toolBar">
+			<style>wxTB_HORIZONTAL</style>
+			<bitmapsize>16,16</bitmapsize>
+			<margins></margins>
+			<packing>1</packing>
+			<separation>5</separation>
+			<object class="tool" name="learn">
+				<label>tool</label>
+				<tooltip></tooltip>
+				<longhelp></longhelp>
+				<bitmap>images/asterisk.png</bitmap>
+			</object>
+		</object>
+		<object class="wxSplitterWindow" name="MainSplitter">
+			<style>wxSP_3D</style>
+			<sashpos>0</sashpos>
+			<gravity>0</gravity>
+			<minsize>0</minsize>
+			<orientation>vertical</orientation>
+			<object class="wxPanel" name="PropertiesPanel">
+				<style>wxTAB_TRAVERSAL</style>
+			</object>
+			<object class="wxPanel" name="GraphPanel">
+				<style>wxTAB_TRAVERSAL</style>
+			</object>
+		</object>
+	</object>
+	<object class="wxFrame" name="ReactionsDebugger">
+		<style>wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL</style>
+		<size>649,536</size>
+		<bg>#f0f0f0</bg>
+		<title>Reactions Debugger</title>
+		<aui_managed>0</aui_managed>
+		<object class="wxMenuBar" name="m_menubar5">
+			<label>MyMenuBar</label>
+			<object class="wxMenu" name="menuView">
+				<label>_View</label>
+			</object>
+		</object>
+		<object class="wxBoxSizer">
+			<orient>wxHORIZONTAL</orient>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxEXPAND | wxALL</flag>
+				<border>5</border>
+				<object class="wxPanel" name="m_panel9">
+					<style>wxTAB_TRAVERSAL</style>
+					<object class="wxBoxSizer">
+						<orient>wxVERTICAL</orient>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxALL</flag>
+							<border>5</border>
+							<object class="wxStaticText" name="m_staticText101">
+								<font>
+									<family>default</family>
+									<style>normal</style>
+									<weight>bold</weight>
+									<underlined>0</underlined>
+								</font>
+								<label>Manager</label>
+								<wrap>-1</wrap>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxALL</flag>
+							<border>5</border>
+							<object class="wxStaticText" name="m_staticText10">
+								<label>Instances</label>
+								<wrap>-1</wrap>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>1</option>
+							<flag>wxALL|wxEXPAND</flag>
+							<border>5</border>
+							<object class="wxListCtrl" name="managerInstancesList">
+								<style>wxLC_REPORT</style>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxEXPAND | wxALL</flag>
+				<border>5</border>
+				<object class="wxPanel" name="m_panel10">
+					<style>wxTAB_TRAVERSAL</style>
+					<object class="wxBoxSizer">
+						<orient>wxVERTICAL</orient>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxALL</flag>
+							<border>5</border>
+							<object class="wxStaticText" name="npcNameStaticText">
+								<font>
+									<family>default</family>
+									<style>normal</style>
+									<weight>bold</weight>
+									<underlined>0</underlined>
+								</font>
+								<label>NPC__NAME</label>
+								<wrap>-1</wrap>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxALL</flag>
+							<border>5</border>
+							<object class="wxStaticText" name="npcRainTimeStaticText">
+								<label>RAIN__TIME</label>
+								<wrap>-1</wrap>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxALL</flag>
+							<border>5</border>
+							<object class="wxStaticText" name="m_staticText9">
+								<label>Delayed</label>
+								<wrap>-1</wrap>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>1</option>
+							<flag>wxALL|wxEXPAND</flag>
+							<border>5</border>
+							<object class="wxListCtrl" name="npcDelayedList">
+								<style>wxLC_REPORT</style>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxALL</flag>
+							<border>5</border>
+							<object class="wxStaticText" name="m_staticText8">
+								<label>Affecting</label>
+								<wrap>-1</wrap>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>1</option>
+							<flag>wxALL|wxEXPAND</flag>
+							<border>5</border>
+							<object class="wxListCtrl" name="npcAffectingList">
+								<style>wxLC_REPORT</style>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+	<object class="wxFrame" name="CrowdDebugger">
+		<style>wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL</style>
+		<size>649,536</size>
+		<bg>#f0f0f0</bg>
+		<title>Crowd Debugger</title>
+		<aui_managed>0</aui_managed>
+		<object class="wxMenuBar" name="m_menubar5">
+			<label>MyMenuBar</label>
+			<object class="wxMenu" name="m_menu11">
+				<label>File</label>
+				<object class="wxMenuItem" name="m_menuExit">
+					<label>Exit</label>
+					<help></help>
+				</object>
+			</object>
+		</object>
+		<object class="wxPanel" name="m_panelCanvas">
+			<style>wxTAB_TRAVERSAL</style>
+		</object>
+	</object>
+</resource>

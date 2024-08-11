@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="external">
+      <UniqueIdentifier>{968C27CD-7586-A64F-8B67-63ECAC19EE6D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\squirrel">
+      <UniqueIdentifier>{ABA20F5F-FCAF-B54F-A759-FBA180598C80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\squirrel\sqstdlib">
+      <UniqueIdentifier>{302EB0A0-6BA0-3A44-BC01-3B26C54D3F59}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\external\squirrel\sqstdlib\sqstdblobimpl.h">
+      <Filter>external\squirrel\sqstdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\squirrel\sqstdlib\sqstdstream.h">
+      <Filter>external\squirrel\sqstdlib</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\external\squirrel\sqstdlib\sqstdaux.cpp">
+      <Filter>external\squirrel\sqstdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\squirrel\sqstdlib\sqstdblob.cpp">
+      <Filter>external\squirrel\sqstdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\squirrel\sqstdlib\sqstdio.cpp">
+      <Filter>external\squirrel\sqstdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\squirrel\sqstdlib\sqstdmath.cpp">
+      <Filter>external\squirrel\sqstdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\squirrel\sqstdlib\sqstdrex.cpp">
+      <Filter>external\squirrel\sqstdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\squirrel\sqstdlib\sqstdstream.cpp">
+      <Filter>external\squirrel\sqstdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\squirrel\sqstdlib\sqstdstring.cpp">
+      <Filter>external\squirrel\sqstdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\squirrel\sqstdlib\sqstdsystem.cpp">
+      <Filter>external\squirrel\sqstdlib</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

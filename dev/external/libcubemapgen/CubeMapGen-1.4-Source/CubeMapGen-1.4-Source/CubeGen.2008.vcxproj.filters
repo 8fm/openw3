@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="LocalD3D">
+      <UniqueIdentifier>{c4d7144a-4141-4a6d-a5a1-76bc10060da7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{ad5c7df7-fd7b-4d3f-8054-e8b2b81edcdd}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{8214949a-ced1-4160-896c-1de880538a7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Effects">
+      <UniqueIdentifier>{ff47af69-b680-4d53-bb79-b3e4091766ea}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="LocalDXUT\dxstdafx.cpp">
+      <Filter>LocalD3D</Filter>
+    </ClCompile>
+    <ClCompile Include="LocalDXUT\DXUT.cpp">
+      <Filter>LocalD3D</Filter>
+    </ClCompile>
+    <ClCompile Include="LocalDXUT\DXUTenum.cpp">
+      <Filter>LocalD3D</Filter>
+    </ClCompile>
+    <ClCompile Include="LocalDXUT\DXUTgui.cpp">
+      <Filter>LocalD3D</Filter>
+    </ClCompile>
+    <ClCompile Include="LocalDXUT\DXUTMesh.cpp">
+      <Filter>LocalD3D</Filter>
+    </ClCompile>
+    <ClCompile Include="LocalDXUT\DXUTmisc.cpp">
+      <Filter>LocalD3D</Filter>
+    </ClCompile>
+    <ClCompile Include="LocalDXUT\DXUTSettingsDlg.cpp">
+      <Filter>LocalD3D</Filter>
+    </ClCompile>
+    <ClCompile Include="CBBoxInt32.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="CCubeGenApp.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="CCubeMapProcessor.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="CEffectList.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="CFrustum.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="CGeom.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="CImageSurface.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="CTexture.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="ErrorMsg.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="HDRWrite.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjReader.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="UIElements.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="UIRegionManager.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="LocalDXUT\dxstdafx.h">
+      <Filter>LocalD3D</Filter>
+    </ClInclude>
+    <ClInclude Include="LocalDXUT\DXUT.h">
+      <Filter>LocalD3D</Filter>
+    </ClInclude>
+    <ClInclude Include="LocalDXUT\DXUTenum.h">
+      <Filter>LocalD3D</Filter>
+    </ClInclude>
+    <ClInclude Include="LocalDXUT\DXUTgui.h">
+      <Filter>LocalD3D</Filter>
+    </ClInclude>
+    <ClInclude Include="LocalDXUT\DXUTMesh.h">
+      <Filter>LocalD3D</Filter>
+    </ClInclude>
+    <ClInclude Include="LocalDXUT\DXUTmisc.h">
+      <Filter>LocalD3D</Filter>
+    </ClInclude>
+    <ClInclude Include="LocalDXUT\DXUTSettingsDlg.h">
+      <Filter>LocalD3D</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CBBoxInt32.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="CCubeGenApp.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="CCubeMapProcessor.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="CEffectList.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="CFrustum.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="CGeom.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="CImageSurface.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="CTexture.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="ErrorMsg.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="HDRWrite.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjReader.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Types.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="UIRegionManager.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="VectorMacros.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Version.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="effectfi.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Effects\CubeGenRender.fx">
+      <Filter>Effects</Filter>
+    </None>
+    <None Include="Effects\CubeGenRender_Resource.fx">
+      <Filter>Effects</Filter>
+    </None>
+    <None Include="Ui\dxutcontrols.dds" />
+    <None Include="Effects\DXUTShared_Resource.fx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resource.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

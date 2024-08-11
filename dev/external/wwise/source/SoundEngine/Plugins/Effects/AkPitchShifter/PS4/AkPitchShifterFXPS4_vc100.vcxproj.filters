@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<Filter Include="Common">
+			<UniqueIdentifier>{81ED350D-32E6-654E-BC74-4D492F4C2249}</UniqueIdentifier>
+		</Filter>
+	</ItemGroup>
+	<ItemGroup>
+		<ClInclude Include="..\AkPitchShifterDSPProcess.h" />
+		<ClInclude Include="..\AkPitchShifterFX.h" />
+		<ClInclude Include="..\AkPitchShifterFXInfo.h" />
+		<ClInclude Include="..\AkPitchShifterFXParams.h" />
+		<ClInclude Include="..\..\..\Common\MultiChannelBiquadFilter.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\Common\AkDelayPitchShift.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\Common\DelayLineLight.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\Common\Mix2Interp.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+	</ItemGroup>
+	<ItemGroup>
+		<ClCompile Include="..\AkPitchShifterDSPProcess.cpp" />
+		<ClCompile Include="..\AkPitchShifterFX.cpp" />
+		<ClCompile Include="..\AkPitchShifterFXParams.cpp" />
+		<ClCompile Include="..\..\..\Common\AkDelayPitchShift.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\Common\DelayLineLight.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\Common\Mix2Interp.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+	</ItemGroup>
+</Project>

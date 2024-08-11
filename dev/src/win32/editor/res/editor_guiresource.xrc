@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<resource xmlns="http://www.wxwindows.org/wxxrc" version="2.3.0.1">
+	<object class="wxFrame" name="GUIEditorDebug">
+		<style>wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL|wxVSCROLL</style>
+		<size>400,400</size>
+		<title>GUI Editor (just a debug file selector for now)</title>
+		<aui_managed>0</aui_managed>
+		<object class="wxBoxSizer">
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxALL</flag>
+				<border>5</border>
+				<object class="wxStaticText" name="staticText">
+					<label>data/globals/gui/*.swf</label>
+					<wrap>-1</wrap>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxALL|wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxListBox" name="fileList">
+					<content />
+				</object>
+			</object>
+		</object>
+		<object class="wxStatusBar" name="statusBar">
+			<style>wxST_SIZEGRIP</style>
+			<fields>1</fields>
+		</object>
+	</object>
+	<object class="wxFrame" name="GUIEditor">
+		<style>wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL</style>
+		<size>500,300</size>
+		<title></title>
+		<centered>1</centered>
+		<aui_managed>0</aui_managed>
+		<object class="wxMenuBar" name="m_menubar1">
+			<label>MyMenuBar</label>
+			<object class="wxMenu" name="m_menuFile">
+				<label>_File</label>
+				<object class="wxMenuItem" name="menuItemSave">
+					<label>Save</label>
+					<help></help>
+				</object>
+			</object>
+		</object>
+		<object class="wxSplitterWindow" name="m_splitter1">
+			<style>wxSP_3D|wxSP_3DBORDER|wxSP_3DSASH|wxSP_LIVE_UPDATE|wxSP_NO_XP_THEME</style>
+			<sashpos>300</sashpos>
+			<gravity>0.5</gravity>
+			<minsize>30</minsize>
+			<orientation>vertical</orientation>
+			<object class="wxPanel" name="GraphPanel">
+				<style>wxTAB_TRAVERSAL</style>
+				<object class="wxBoxSizer">
+					<orient>wxVERTICAL</orient>
+				</object>
+			</object>
+			<object class="wxPanel" name="PropertiesPanel">
+				<style>wxTAB_TRAVERSAL</style>
+				<object class="wxBoxSizer">
+					<orient>wxVERTICAL</orient>
+				</object>
+			</object>
+		</object>
+	</object>
+</resource>

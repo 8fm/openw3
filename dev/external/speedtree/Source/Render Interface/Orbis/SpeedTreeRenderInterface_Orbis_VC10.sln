@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SpeedTreeRenderInterface_Orbis_VC10", "SpeedTreeRenderInterface_Orbis_VC10.vcxproj", "{D3AD851A-3C4B-4729-B6F4-8581F38C2C26}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ORBIS = Debug|ORBIS
+		Release|ORBIS = Release|ORBIS
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D3AD851A-3C4B-4729-B6F4-8581F38C2C26}.Debug|ORBIS.ActiveCfg = Debug|ORBIS
+		{D3AD851A-3C4B-4729-B6F4-8581F38C2C26}.Debug|ORBIS.Build.0 = Debug|ORBIS
+		{D3AD851A-3C4B-4729-B6F4-8581F38C2C26}.Release|ORBIS.ActiveCfg = Release|ORBIS
+		{D3AD851A-3C4B-4729-B6F4-8581F38C2C26}.Release|ORBIS.Build.0 = Release|ORBIS
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

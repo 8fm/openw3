@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<Filter Include="Common">
+			<UniqueIdentifier>{3D8BDBBC-D1F1-D448-9510-55C4CD6A3A61}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="include">
+			<UniqueIdentifier>{C75B04B6-F3A8-6B46-8C62-B16D7F0EEDDE}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="include\AK">
+			<UniqueIdentifier>{C62763D0-D782-4B49-967C-01A09C7FE1CD}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="include\AK\DSP">
+			<UniqueIdentifier>{E537E278-C271-D449-86C6-EA94E3E8D0B6}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="include\AK\Plugin">
+			<UniqueIdentifier>{100AC1A9-8FA6-4242-A144-6AC301CC1341}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="include\AK\Plugin\PluginServices">
+			<UniqueIdentifier>{720F9263-E671-7948-97A6-2D88E8F647AC}</UniqueIdentifier>
+		</Filter>
+	</ItemGroup>
+	<ItemGroup>
+		<ClInclude Include="..\AkStereoDelayDSPProcess.h" />
+		<ClInclude Include="..\AkStereoDelayFX.h" />
+		<ClInclude Include="..\AkStereoDelayFXInfo.h" />
+		<ClInclude Include="..\AkStereoDelayFXParams.h" />
+		<ClInclude Include="..\AkStereoDelayLine.h" />
+		<ClInclude Include="..\..\..\..\..\..\include\AK\DSP\AkDelayLineMemory.h">
+			<Filter>include\AK\DSP</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\..\include\AK\Plugin\PluginServices\AkFXParameterChangeHandler.h">
+			<Filter>include\AK\Plugin\PluginServices</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\..\include\AK\Plugin\PluginServices\AkFXTailHandler.h">
+			<Filter>include\AK\Plugin\PluginServices</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\..\include\AK\Plugin\PluginServices\AkVectorValueRamp.h">
+			<Filter>include\AK\Plugin\PluginServices</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\Common\Mix2Interp.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\Common\Mix3Interp.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+	</ItemGroup>
+	<ItemGroup>
+		<ClCompile Include="..\AkStereoDelayDSPProcess.cpp" />
+		<ClCompile Include="..\AkStereoDelayFX.cpp" />
+		<ClCompile Include="..\AkStereoDelayFXParams.cpp" />
+		<ClCompile Include="..\AkStereoDelayLine.cpp" />
+		<ClCompile Include="..\..\Common\Mix2Interp.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\Common\Mix3Interp.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+	</ItemGroup>
+</Project>

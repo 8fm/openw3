@@ -1,0 +1,7 @@
+; CommunicationCentral.def : Declares the module parameters for the DLL.
+
+LIBRARY      "CommunicationCentral"
+
+EXPORTS
+    ; Explicit exports can go here
+	AkCreateCommunicationCentral

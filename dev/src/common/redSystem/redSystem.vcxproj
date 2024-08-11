@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" TreatAsLocalProperty="OutDir;TargetName;IntDir;PlatformToolset">
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedConfigurationSetup.props))\SharedConfigurationSetup.props" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9C1F2DBF-9EA5-41B9-8430-D869C8AC2189}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>redSystem</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <UsePrecompiledHeaders>false</UsePrecompiledHeaders>
+  </PropertyGroup>
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.props))\Shared.props" />
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedItemGroups.props))\SharedItemGroups.props" />
+  <ItemGroup>
+    <ClInclude Include="architecture.h" />
+    <ClInclude Include="bitUtils.h" />
+    <ClInclude Include="compilerExtensions.h" />
+    <ClInclude Include="cpuid.h" />
+    <ClInclude Include="crashReportDataBuffer.h" />
+    <ClInclude Include="crashReportDataBufferOrbis.h" />
+    <ClInclude Include="crashReportDataBufferWindows.h" />
+    <ClInclude Include="crc.h" />
+    <ClInclude Include="crt.h" />
+    <ClInclude Include="crtOrbis.h" />
+    <ClInclude Include="crtWindows.h" />
+    <ClInclude Include="error.h" />
+    <ClInclude Include="errorOrbis.h" />
+    <ClInclude Include="errorWindows.h" />
+    <ClInclude Include="errorDurango.h" />
+    <ClInclude Include="formatMacros.h" />
+    <ClInclude Include="guid.h" />
+    <ClInclude Include="logCommonOutputDevice.h" />
+    <ClInclude Include="logFile.h" />
+    <ClInclude Include="nameHash.h" />
+    <ClInclude Include="stringWriter.h" />
+    <ClInclude Include="ttyWriter.h" />
+    <ClInclude Include="settings.h" />
+    <ClInclude Include="threads.h" />
+    <ClInclude Include="numericalLimits.h" />
+    <ClInclude Include="timerOrbis.h" />
+    <ClInclude Include="typetraits.h" />
+    <ClInclude Include="unitTestMode.h" />
+    <ClInclude Include="utilityTimers.h" />
+    <ClInclude Include="windowsDebuggerWriter.h" />
+    <ClInclude Include="hash.h" />
+    <ClInclude Include="log.h" />
+    <ClInclude Include="os.h" />
+    <ClInclude Include="timer.h" />
+    <ClInclude Include="timerWindows.h" />
+    <ClInclude Include="clock.h" />
+    <ClInclude Include="types.h" />
+    <ClInclude Include="utility.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="clock.cpp" />
+    <ClCompile Include="cpuid.cpp" />
+    <ClCompile Include="crashReportDataBufferOrbis.cpp">
+      <ExcludedFromBuild Condition="'$(Platform)'!='ORBIS'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Platform)'=='Durango'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="crashReportDataBufferWindows.cpp">
+      <ExcludedFromBuild Condition="'$(Platform)'=='ORBIS'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Platform)'=='Durango'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="crc.cpp" />
+    <ClCompile Include="crtOrbis.cpp">
+      <ExcludedFromBuild Condition="'$(Platform)'!='ORBIS'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="crtWindows.cpp">
+      <ExcludedFromBuild Condition="'$(Platform)'=='ORBIS'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="error.cpp" />
+    <ClCompile Include="errorOrbis.cpp">
+      <ExcludedFromBuild Condition="'$(Platform)'!='ORBIS'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="errorWindows.cpp">
+      <ExcludedFromBuild Condition="'$(Platform)'=='ORBIS'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Platform)'=='Durango'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="errorDurango.cpp">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="guid.cpp" />
+    <ClCompile Include="logCommonOutputDevice.cpp" />
+    <ClCompile Include="logFile.cpp" />
+    <ClCompile Include="nameHash.cpp" />
+    <ClCompile Include="ttyWriter.cpp" />
+    <ClCompile Include="timerOrbis.cpp">
+      <ExcludedFromBuild Condition="'$(Platform)'!='ORBIS'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="unitTestMode.cpp" />
+    <ClCompile Include="windowsDebuggerWriter.cpp">
+      <ExcludedFromBuild Condition="'$(Platform)'=='ORBIS'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="log.cpp" />
+    <ClCompile Include="timerWindows.cpp">
+      <ExcludedFromBuild Condition="'$(Platform)'=='ORBIS'">true</ExcludedFromBuild>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="stringWriter.inl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.targets))\Shared.targets" />
+  </ImportGroup>
+</Project>

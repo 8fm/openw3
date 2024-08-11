@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Test|Win32">
+      <Configuration>Test</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Test|x64">
+      <Configuration>Test</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D93534B8-4803-744D-AFE1-0D85226C7E3D}</ProjectGuid>
+    <RootNamespace>debugger_core</RootNamespace>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <ApplicationEnvironment>title</ApplicationEnvironment>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Test|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Test|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Test|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Test|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\..\lib\win32\</OutDir>
+    <IntDir>..\..\intermediates\debugger_core\x32\Debug\</IntDir>
+    <TargetName>umbradebugger_core32_d</TargetName>
+    <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>..\..\lib\win64\</OutDir>
+    <IntDir>..\..\intermediates\debugger_core\x64\Debug\</IntDir>
+    <TargetName>umbradebugger_core64_d</TargetName>
+    <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Test|Win32'">
+    <OutDir>..\..\lib\win32\</OutDir>
+    <IntDir>..\..\intermediates\debugger_core\x32\Test\</IntDir>
+    <TargetName>umbradebugger_core32_t</TargetName>
+    <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Test|x64'">
+    <OutDir>..\..\lib\win64\</OutDir>
+    <IntDir>..\..\intermediates\debugger_core\x64\Test\</IntDir>
+    <TargetName>umbradebugger_core64_t</TargetName>
+    <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>..\..\lib\win32\</OutDir>
+    <IntDir>..\..\intermediates\debugger_core\x32\Release\</IntDir>
+    <TargetName>umbradebugger_core32</TargetName>
+    <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>..\..\lib\win64\</OutDir>
+    <IntDir>..\..\intermediates\debugger_core\x64\Release\</IntDir>
+    <TargetName>umbradebugger_core64</TargetName>
+    <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;..\..\source\common;..\..\utils\debugger;..\..\utils\tools;..\..\external\glfw\include;..\..\external\glew\include;..\..\external\squirrel\include;..\..\external\sqrat\include;..\..\external\opengl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>DEBUG;_DEBUG;UMBRA_BUILD_ID=0;UMBRA_DEBUG;_CRT_SECURE_NO_WARNINGS;_WIN32_WINNT=0x0501;GLEW_STATIC;GLEW_MX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <SmallerTypeCheck>true</SmallerTypeCheck>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>DEBUG;_DEBUG;UMBRA_BUILD_ID=0;UMBRA_DEBUG;_CRT_SECURE_NO_WARNINGS;_WIN32_WINNT=0x0501;GLEW_STATIC;GLEW_MX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;..\..\source\common;..\..\utils\debugger;..\..\utils\tools;..\..\external\glfw\include;..\..\external\glew\include;..\..\external\squirrel\include;..\..\external\sqrat\include;..\..\external\opengl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>$(OutDir)umbradebugger_core32_d.lib</OutputFile>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Lib>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;..\..\source\common;..\..\utils\debugger;..\..\utils\tools;..\..\external\glfw\include;..\..\external\glew\include;..\..\external\squirrel\include;..\..\external\sqrat\include;..\..\external\opengl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>DEBUG;_DEBUG;UMBRA_BUILD_ID=0;UMBRA_DEBUG;_CRT_SECURE_NO_WARNINGS;_WIN32_WINNT=0x0501;GLEW_STATIC;GLEW_MX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <SmallerTypeCheck>true</SmallerTypeCheck>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>DEBUG;_DEBUG;UMBRA_BUILD_ID=0;UMBRA_DEBUG;_CRT_SECURE_NO_WARNINGS;_WIN32_WINNT=0x0501;GLEW_STATIC;GLEW_MX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;..\..\source\common;..\..\utils\debugger;..\..\utils\tools;..\..\external\glfw\include;..\..\external\glew\include;..\..\external\squirrel\include;..\..\external\sqrat\include;..\..\external\opengl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>$(OutDir)umbradebugger_core64_d.lib</OutputFile>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Lib>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Test|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;..\..\source\common;..\..\utils\debugger;..\..\utils\tools;..\..\external\glfw\include;..\..\external\glew\include;..\..\external\squirrel\include;..\..\external\sqrat\include;..\..\external\opengl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>UMBRA_BUILD_ID=0;UMBRA_DEBUG;_CRT_SECURE_NO_WARNINGS;_WIN32_WINNT=0x0501;GLEW_STATIC;GLEW_MX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>UMBRA_BUILD_ID=0;UMBRA_DEBUG;_CRT_SECURE_NO_WARNINGS;_WIN32_WINNT=0x0501;GLEW_STATIC;GLEW_MX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;..\..\source\common;..\..\utils\debugger;..\..\utils\tools;..\..\external\glfw\include;..\..\external\glew\include;..\..\external\squirrel\include;..\..\external\sqrat\include;..\..\external\opengl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>$(OutDir)umbradebugger_core32_t.lib</OutputFile>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Lib>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Test|x64'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;..\..\source\common;..\..\utils\debugger;..\..\utils\tools;..\..\external\glfw\include;..\..\external\glew\include;..\..\external\squirrel\include;..\..\external\sqrat\include;..\..\external\opengl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>UMBRA_BUILD_ID=0;UMBRA_DEBUG;_CRT_SECURE_NO_WARNINGS;_WIN32_WINNT=0x0501;GLEW_STATIC;GLEW_MX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>UMBRA_BUILD_ID=0;UMBRA_DEBUG;_CRT_SECURE_NO_WARNINGS;_WIN32_WINNT=0x0501;GLEW_STATIC;GLEW_MX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;..\..\source\common;..\..\utils\debugger;..\..\utils\tools;..\..\external\glfw\include;..\..\external\glew\include;..\..\external\squirrel\include;..\..\external\sqrat\include;..\..\external\opengl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>$(OutDir)umbradebugger_core64_t.lib</OutputFile>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Lib>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;..\..\source\common;..\..\utils\debugger;..\..\utils\tools;..\..\external\glfw\include;..\..\external\glew\include;..\..\external\squirrel\include;..\..\external\sqrat\include;..\..\external\opengl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;UMBRA_BUILD_ID=0;_CRT_SECURE_NO_WARNINGS;_WIN32_WINNT=0x0501;GLEW_STATIC;GLEW_MX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;UMBRA_BUILD_ID=0;_CRT_SECURE_NO_WARNINGS;_WIN32_WINNT=0x0501;GLEW_STATIC;GLEW_MX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;..\..\source\common;..\..\utils\debugger;..\..\utils\tools;..\..\external\glfw\include;..\..\external\glew\include;..\..\external\squirrel\include;..\..\external\sqrat\include;..\..\external\opengl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>$(OutDir)umbradebugger_core32.lib</OutputFile>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Lib>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;..\..\source\common;..\..\utils\debugger;..\..\utils\tools;..\..\external\glfw\include;..\..\external\glew\include;..\..\external\squirrel\include;..\..\external\sqrat\include;..\..\external\opengl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;UMBRA_BUILD_ID=0;_CRT_SECURE_NO_WARNINGS;_WIN32_WINNT=0x0501;GLEW_STATIC;GLEW_MX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;UMBRA_BUILD_ID=0;_CRT_SECURE_NO_WARNINGS;_WIN32_WINNT=0x0501;GLEW_STATIC;GLEW_MX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;..\..\source\common;..\..\utils\debugger;..\..\utils\tools;..\..\external\glfw\include;..\..\external\glew\include;..\..\external\squirrel\include;..\..\external\sqrat\include;..\..\external\opengl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>$(OutDir)umbradebugger_core64.lib</OutputFile>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Lib>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\utils\debugger\engine\AspectRatio.hpp" />
+    <ClInclude Include="..\..\utils\debugger\engine\Callbacks.hpp" />
+    <ClInclude Include="..\..\utils\debugger\engine\Camera.hpp" />
+    <ClInclude Include="..\..\utils\debugger\engine\CameraManager.hpp" />
+    <ClInclude Include="..\..\utils\debugger\engine\DebuggerModule.hpp" />
+    <ClInclude Include="..\..\utils\debugger\engine\DebuggerModuleEvents.hpp" />
+    <ClInclude Include="..\..\utils\debugger\engine\DebuggerScene.hpp" />
+    <ClInclude Include="..\..\utils\debugger\engine\Engine.hpp" />
+    <ClInclude Include="..\..\utils\debugger\engine\Input.hpp" />
+    <ClInclude Include="..\..\utils\debugger\engine\InputEnum.hpp" />
+    <ClInclude Include="..\..\utils\debugger\engine\Loggers.hpp" />
+    <ClInclude Include="..\..\utils\debugger\engine\SearchPath.hpp" />
+    <ClInclude Include="..\..\utils\debugger\engine\Serializer.hpp" />
+    <ClInclude Include="..\..\utils\debugger\engine\Signals.hpp" />
+    <ClInclude Include="..\..\utils\debugger\engine\TestingManager.hpp" />
+    <ClInclude Include="..\..\utils\debugger\engine\TomeManager.hpp" />
+    <ClInclude Include="..\..\utils\debugger\engine\Viewport.hpp" />
+    <ClInclude Include="..\..\utils\debugger\engine\ViewportVisualizations.hpp" />
+    <ClInclude Include="..\..\utils\debugger\engine\Visualization.hpp" />
+    <ClInclude Include="..\..\utils\debugger\renderer\defaultfont.hpp" />
+    <ClInclude Include="..\..\utils\debugger\renderer\defaultskin.hpp" />
+    <ClInclude Include="..\..\utils\debugger\renderer\Glew.hpp" />
+    <ClInclude Include="..\..\utils\debugger\renderer\Renderer.hpp" />
+    <ClInclude Include="..\..\utils\debugger\renderer\opengl\GlfwInput.hpp" />
+    <ClInclude Include="..\..\utils\debugger\renderer\opengl\ShaderCache.hpp" />
+    <ClInclude Include="..\..\utils\debugger\scripter\Scripter.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\utils\debugger\engine\AspectRatio.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\engine\Camera.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\engine\CameraManager.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\engine\DebuggerModule.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\engine\DebuggerScene.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\engine\Engine.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\engine\HighlightVisualizations.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\engine\Input.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\engine\Loggers.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\engine\Serializer.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\engine\TestingManager.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\engine\TomeManager.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\engine\Viewport.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\engine\Visualization.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\renderer\Glew.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\renderer\Renderer.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\renderer\opengl\GlfwInput.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\renderer\opengl\OpenGLGwenRenderer.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\renderer\opengl\OpenGLSceneRenderer.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\renderer\opengl\OpenGLWindow.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\renderer\opengl\ShaderCache.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\scripter\squirrel\bind.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\utils\debugger\scripter\squirrel\SquirrelScripter.cpp">
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\utils\debugger\squirrel\DebuggerModule.nut" />
+    <None Include="..\..\utils\debugger\squirrel\fpsCamera.nut" />
+    <None Include="..\..\utils\debugger\squirrel\freeCamera.nut" />
+    <None Include="..\..\utils\debugger\squirrel\view.nut" />
+    <None Include="..\..\utils\debugger\renderer\opengl\glsl\gui.vert" />
+    <None Include="..\..\utils\debugger\renderer\opengl\glsl\scene.vert" />
+    <None Include="..\..\utils\debugger\renderer\opengl\glsl\ssao.vert" />
+    <None Include="..\..\utils\debugger\renderer\opengl\glsl\gui.frag" />
+    <None Include="..\..\utils\debugger\renderer\opengl\glsl\scene.frag" />
+    <None Include="..\..\utils\debugger\renderer\opengl\glsl\ssao.frag" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

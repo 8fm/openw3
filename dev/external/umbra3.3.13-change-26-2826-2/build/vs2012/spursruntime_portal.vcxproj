@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|PS3">
+      <Configuration>Debug</Configuration>
+      <Platform>PS3</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Test|PS3">
+      <Configuration>Test</Configuration>
+      <Platform>PS3</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|PS3">
+      <Configuration>Release</Configuration>
+      <Platform>PS3</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3F504EDA-3F6C-C640-A4CD-94595C7142AA}</ProjectGuid>
+    <RootNamespace>spursruntime_portal</RootNamespace>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <ApplicationEnvironment>title</ApplicationEnvironment>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|PS3'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>SPU</PlatformToolset>
+    <SpursUsage>SpursInit</SpursUsage>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Test|PS3'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>SPU</PlatformToolset>
+    <SpursUsage>SpursInit</SpursUsage>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|PS3'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>SPU</PlatformToolset>
+    <SpursUsage>SpursInit</SpursUsage>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|PS3'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Test|PS3'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|PS3'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|PS3'">
+    <OutDir>..\..\lib\ps3\</OutDir>
+    <IntDir>..\..\intermediates\spursruntime_portal\PS3\Debug\</IntDir>
+    <TargetName>umbraspursruntime_portal_d</TargetName>
+    <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    <LinkIncremental>false</LinkIncremental>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Test|PS3'">
+    <OutDir>..\..\lib\ps3\</OutDir>
+    <IntDir>..\..\intermediates\spursruntime_portal\PS3\Test\</IntDir>
+    <TargetName>umbraspursruntime_portal_t</TargetName>
+    <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    <LinkIncremental>false</LinkIncremental>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|PS3'">
+    <OutDir>..\..\lib\ps3\</OutDir>
+    <IntDir>..\..\intermediates\spursruntime_portal\PS3\Release\</IntDir>
+    <TargetName>umbraspursruntime_portal</TargetName>
+    <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    <LinkIncremental>false</LinkIncremental>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|PS3'">
+    <ClCompile>
+      <AdditionalOptions>-fpic %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <OptimizationLevel>Level0</OptimizationLevel>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;$(SN_PS3_PATH)\spu\include\sn;..\..\interface\runtime;..\..\source\runtime;..\..\source\runtime\ps3;..\..\source\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>DEBUG;_DEBUG;UMBRA_BUILD_ID=0;UMBRA_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <SmallerTypeCheck>true</SmallerTypeCheck>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Warnings>MoreWarnings</Warnings>
+      <WarningsAsErrors>true</WarningsAsErrors>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <FunctionSections>true</FunctionSections>
+      <DataSections>true</DataSections>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>DEBUG;_DEBUG;UMBRA_BUILD_ID=0;UMBRA_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;$(SN_PS3_PATH)\spu\include\sn;..\..\interface\runtime;..\..\source\runtime;..\..\source\runtime\ps3;..\..\source\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+      <AdditionalDependencies>$(SCE_PS3_ROOT)\target\spu\lib\pic\libdma.a;$(SCE_PS3_ROOT)\target\spu\lib\pic\libm.a;$(SCE_PS3_ROOT)\target\spu\lib\libatomic.a;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)umbraspursruntime_portal_d.elf</OutputFile>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
+      <GarbageCollection>true</GarbageCollection>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+    <SpuElfConversion>
+      <EmbedFormat>JobBin2</EmbedFormat>
+    </SpuElfConversion>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Test|PS3'">
+    <ClCompile>
+      <AdditionalOptions>-fpic %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <OptimizationLevel>Level2</OptimizationLevel>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;$(SN_PS3_PATH)\spu\include\sn;..\..\interface\runtime;..\..\source\runtime;..\..\source\runtime\ps3;..\..\source\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>UMBRA_BUILD_ID=0;UMBRA_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Warnings>MoreWarnings</Warnings>
+      <WarningsAsErrors>true</WarningsAsErrors>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <FunctionSections>true</FunctionSections>
+      <DataSections>true</DataSections>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>UMBRA_BUILD_ID=0;UMBRA_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;$(SN_PS3_PATH)\spu\include\sn;..\..\interface\runtime;..\..\source\runtime;..\..\source\runtime\ps3;..\..\source\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>$(SCE_PS3_ROOT)\target\spu\lib\pic\libdma.a;$(SCE_PS3_ROOT)\target\spu\lib\pic\libm.a;$(SCE_PS3_ROOT)\target\spu\lib\libatomic.a;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)umbraspursruntime_portal_t.elf</OutputFile>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
+      <GarbageCollection>true</GarbageCollection>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+    <SpuElfConversion>
+      <EmbedFormat>JobBin2</EmbedFormat>
+    </SpuElfConversion>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|PS3'">
+    <ClCompile>
+      <AdditionalOptions>-fpic %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <OptimizationLevel>Level2</OptimizationLevel>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;$(SN_PS3_PATH)\spu\include\sn;..\..\interface\runtime;..\..\source\runtime;..\..\source\runtime\ps3;..\..\source\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;UMBRA_BUILD_ID=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Warnings>MoreWarnings</Warnings>
+      <WarningsAsErrors>true</WarningsAsErrors>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <FunctionSections>true</FunctionSections>
+      <DataSections>true</DataSections>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;UMBRA_BUILD_ID=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;$(SN_PS3_PATH)\spu\include\sn;..\..\interface\runtime;..\..\source\runtime;..\..\source\runtime\ps3;..\..\source\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>$(SCE_PS3_ROOT)\target\spu\lib\pic\libdma.a;$(SCE_PS3_ROOT)\target\spu\lib\pic\libm.a;$(SCE_PS3_ROOT)\target\spu\lib\libatomic.a;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)umbraspursruntime_portal.elf</OutputFile>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
+      <GarbageCollection>true</GarbageCollection>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+    <SpuElfConversion>
+      <EmbedFormat>JobBin2</EmbedFormat>
+    </SpuElfConversion>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\source\runtime\ps3\umbraQueryJob.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\source\runtime\ps3\umbraspursruntime_portal.cpp">
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\samples\resources\Logo.png" />
+    <Image Include="..\..\samples\resources\SmallLogo.png" />
+    <Image Include="..\..\samples\resources\SplashScreen.png" />
+    <Image Include="..\..\samples\resources\StoreLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\samples\resources\testkey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="spuruntime.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Debug|PS3'">
+      <Project>{BDD7C37E-7E70-774E-9D22-99B77A5EF8D7}</Project>
+    </ProjectReference>
+    <ProjectReference Include="spuruntime.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Test|PS3'">
+      <Project>{BDD7C37E-7E70-774E-9D22-99B77A5EF8D7}</Project>
+    </ProjectReference>
+    <ProjectReference Include="spuruntime.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Release|PS3'">
+      <Project>{BDD7C37E-7E70-774E-9D22-99B77A5EF8D7}</Project>
+    </ProjectReference>
+    <ProjectReference Include="spucommon.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Debug|PS3'">
+      <Project>{D45112BC-6DAF-EE4E-B626-368C7F411C79}</Project>
+    </ProjectReference>
+    <ProjectReference Include="spucommon.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Test|PS3'">
+      <Project>{D45112BC-6DAF-EE4E-B626-368C7F411C79}</Project>
+    </ProjectReference>
+    <ProjectReference Include="spucommon.vcxproj" Condition="'$(Configuration)|$(Platform)'=='Release|PS3'">
+      <Project>{D45112BC-6DAF-EE4E-B626-368C7F411C79}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

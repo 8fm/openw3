@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|PS3">
+      <Configuration>Debug</Configuration>
+      <Platform>PS3</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Test|PS3">
+      <Configuration>Test</Configuration>
+      <Platform>PS3</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|PS3">
+      <Configuration>Release</Configuration>
+      <Platform>PS3</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2138FB9E-4A1D-6944-B38C-21C373841041}</ProjectGuid>
+    <RootNamespace>spucommon</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|PS3'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>SPU</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Test|PS3'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>SPU</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|PS3'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>SPU</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|PS3'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Test|PS3'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|PS3'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|PS3'">
+    <OutDir>..\..\lib\ps3\</OutDir>
+    <IntDir>..\..\intermediates\spucommon\PS3\Debug\</IntDir>
+    <TargetName>libumbraspucommon_d</TargetName>
+    <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Test|PS3'">
+    <OutDir>..\..\lib\ps3\</OutDir>
+    <IntDir>..\..\intermediates\spucommon\PS3\Test\</IntDir>
+    <TargetName>libumbraspucommon_t</TargetName>
+    <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|PS3'">
+    <OutDir>..\..\lib\ps3\</OutDir>
+    <IntDir>..\..\intermediates\spucommon\PS3\Release\</IntDir>
+    <TargetName>libumbraspucommon</TargetName>
+    <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|PS3'">
+    <ClCompile>
+      <AdditionalOptions>-fpic %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <OptimizationLevel>Level2</OptimizationLevel>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;$(SN_PS3_PATH)\spu\include\sn;..\..\source\common;..\..\source\common\cell;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>DEBUG;_DEBUG;UMBRA_BUILD_ID=0;UMBRA_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Warnings>MoreWarnings</Warnings>
+      <WarningsAsErrors>true</WarningsAsErrors>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <FunctionSections>true</FunctionSections>
+      <DataSections>true</DataSections>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>DEBUG;_DEBUG;UMBRA_BUILD_ID=0;UMBRA_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;$(SN_PS3_PATH)\spu\include\sn;..\..\source\common;..\..\source\common\cell;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>$(OutDir)libumbraspucommon_d.a</OutputFile>
+    </Lib>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Test|PS3'">
+    <ClCompile>
+      <AdditionalOptions>-fpic %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <OptimizationLevel>Level2</OptimizationLevel>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;$(SN_PS3_PATH)\spu\include\sn;..\..\source\common;..\..\source\common\cell;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>UMBRA_BUILD_ID=0;UMBRA_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Warnings>MoreWarnings</Warnings>
+      <WarningsAsErrors>true</WarningsAsErrors>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <FunctionSections>true</FunctionSections>
+      <DataSections>true</DataSections>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>UMBRA_BUILD_ID=0;UMBRA_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;$(SN_PS3_PATH)\spu\include\sn;..\..\source\common;..\..\source\common\cell;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>$(OutDir)libumbraspucommon_t.a</OutputFile>
+    </Lib>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|PS3'">
+    <ClCompile>
+      <AdditionalOptions>-fpic %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <OptimizationLevel>Level2</OptimizationLevel>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;$(SN_PS3_PATH)\spu\include\sn;..\..\source\common;..\..\source\common\cell;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;UMBRA_BUILD_ID=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Warnings>MoreWarnings</Warnings>
+      <WarningsAsErrors>true</WarningsAsErrors>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <FunctionSections>true</FunctionSections>
+      <DataSections>true</DataSections>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;UMBRA_BUILD_ID=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\source;$(SN_PS3_PATH)\spu\include\sn;..\..\source\common;..\..\source\common\cell;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>$(OutDir)libumbraspucommon.a</OutputFile>
+    </Lib>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\source\common\umbraAABB.hpp" />
+    <ClInclude Include="..\..\source\common\umbraArray.hpp" />
+    <ClInclude Include="..\..\source\common\umbraBinStream.hpp" />
+    <ClInclude Include="..\..\source\common\umbraBitMath.hpp" />
+    <ClInclude Include="..\..\source\common\umbraBitOps.hpp" />
+    <ClInclude Include="..\..\source\common\umbraChecksum.hpp" />
+    <ClInclude Include="..\..\source\common\umbraCmdlineApp.hpp" />
+    <ClInclude Include="..\..\source\common\umbraConvexHull.hpp" />
+    <ClInclude Include="..\..\source\common\umbraCRCStream.hpp" />
+    <ClInclude Include="..\..\source\common\umbraDirScan.hpp" />
+    <ClInclude Include="..\..\source\common\umbraDouble.hpp" />
+    <ClInclude Include="..\..\source\common\umbraDPVSShared.hpp" />
+    <ClInclude Include="..\..\source\common\umbraFile.hpp" />
+    <ClInclude Include="..\..\source\common\umbraFileStream.hpp" />
+    <ClInclude Include="..\..\source\common\umbraFloat.hpp" />
+    <ClInclude Include="..\..\source\common\umbraFPUControl.hpp" />
+    <ClInclude Include="..\..\source\common\umbraHash.hpp" />
+    <ClInclude Include="..\..\source\common\umbraHeap.hpp" />
+    <ClInclude Include="..\..\source\common\umbraHttp.hpp" />
+    <ClInclude Include="..\..\source\common\umbraIntersect.hpp" />
+    <ClInclude Include="..\..\source\common\umbraJson.hpp" />
+    <ClInclude Include="..\..\source\common\umbraLogger.hpp" />
+    <ClInclude Include="..\..\source\common\umbraMath.hpp" />
+    <ClInclude Include="..\..\source\common\umbraMatrix.hpp" />
+    <ClInclude Include="..\..\source\common\umbraMemory.hpp" />
+    <ClInclude Include="..\..\source\common\umbraObjectPool.hpp" />
+    <ClInclude Include="..\..\source\common\umbraOs.hpp" />
+    <ClInclude Include="..\..\source\common\umbraPair.hpp" />
+    <ClInclude Include="..\..\source\common\umbraPatcher.hpp" />
+    <ClInclude Include="..\..\source\common\umbraPoolAllocator.hpp" />
+    <ClInclude Include="..\..\source\common\umbraPrimitives.hpp" />
+    <ClInclude Include="..\..\source\common\umbraPrivateDefs.hpp" />
+    <ClInclude Include="..\..\source\common\umbraPrivateVersion.hpp" />
+    <ClInclude Include="..\..\source\common\umbraProcess.hpp" />
+    <ClInclude Include="..\..\source\common\umbraProgress.hpp" />
+    <ClInclude Include="..\..\source\common\umbraPropertyFile.hpp" />
+    <ClInclude Include="..\..\source\common\umbraRandom.hpp" />
+    <ClInclude Include="..\..\source\common\umbraRect.hpp" />
+    <ClInclude Include="..\..\source\common\umbraSerializer.hpp" />
+    <ClInclude Include="..\..\source\common\umbraSet.hpp" />
+    <ClInclude Include="..\..\source\common\umbraSort.hpp" />
+    <ClInclude Include="..\..\source\common\umbraStaticHeap.hpp" />
+    <ClInclude Include="..\..\source\common\umbraStats.hpp" />
+    <ClInclude Include="..\..\source\common\umbraStatsHeap.hpp" />
+    <ClInclude Include="..\..\source\common\umbraString.hpp" />
+    <ClInclude Include="..\..\source\common\umbraStructBuilder.hpp" />
+    <ClInclude Include="..\..\source\common\umbraThread.hpp" />
+    <ClInclude Include="..\..\source\common\umbraTimer.hpp" />
+    <ClInclude Include="..\..\source\common\umbraUnionFind.hpp" />
+    <ClInclude Include="..\..\source\common\umbraUUID.hpp" />
+    <ClInclude Include="..\..\source\common\umbraVector.hpp" />
+    <ClInclude Include="..\..\source\common\umbraVectorT.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\source\common\umbraAABB.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\umbraBinStream.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\umbraBitMath.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\umbraBitOps.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\umbraChecksum.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\umbraCmdlineApp.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\umbraCRCStream.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\umbraDirScan.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\umbraDouble.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\umbraDPVSShared.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\umbraFileStream.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\umbraFile_ansic.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\umbraFloat.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\umbraHttp.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\umbraIntersect.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\umbraJson.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\umbraLogger.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\umbraMatrix.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\umbraMemory.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\umbraPatcher.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\umbraPoolAllocator.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\umbraPrivateVersion.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\umbraPropertyFile.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\umbraRandom.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\umbraSerializer.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\umbraStatsHeap.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\umbraString.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\umbraThread.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\umbraTimer.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\cell\umbraOsCell.cpp">
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\source\common\umbraProcess.inl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

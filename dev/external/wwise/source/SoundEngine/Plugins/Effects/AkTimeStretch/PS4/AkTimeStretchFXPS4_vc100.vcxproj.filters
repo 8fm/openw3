@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<Filter Include="Common">
+			<UniqueIdentifier>{E2D7D0F3-0714-A64C-A591-62AE1EADB710}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="AkAudiolib">
+			<UniqueIdentifier>{F553D745-1ED2-D74B-97BB-232ECB8216E1}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="AkAudiolib\Common">
+			<UniqueIdentifier>{CDFFCE33-0B24-0B4F-81C4-ED32E4232E33}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="AkAudiolib\Common\ak_fft">
+			<UniqueIdentifier>{E5F8B1E4-52B1-6D4D-B9CB-30831FEA130E}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="AkAudiolib\Common\ak_fft\tools">
+			<UniqueIdentifier>{07FFFB68-76FD-8146-A815-969A14C0C689}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="include">
+			<UniqueIdentifier>{5C572C7B-BFD3-D745-97F9-38CE4F6432BA}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="include\AK">
+			<UniqueIdentifier>{1E6EE18E-C209-7C4D-A416-F7278C33445A}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="include\AK\DSP">
+			<UniqueIdentifier>{24C5FA76-DFB1-EA4E-8379-ECF598A3B3BB}</UniqueIdentifier>
+		</Filter>
+	</ItemGroup>
+	<ItemGroup>
+		<ClInclude Include="..\AkTimeStretchFX.h" />
+		<ClInclude Include="..\AkTimeStretchFXInfo.h" />
+		<ClInclude Include="..\AkTimeStretchFXParams.h" />
+		<ClInclude Include="..\..\..\..\..\..\include\AK\DSP\AkApplyGain.h">
+			<Filter>include\AK\DSP</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\Common\AkPhaseVocoder.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\Common\CircularBuffer.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\Common\FreqWindow.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\Common\LinearResampler.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\Common\OLACircularBuffer.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\Common\TimeWindow.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\AkAudiolib\Common\ak_fft\_ak_fft_guts.h">
+			<Filter>AkAudiolib\Common\ak_fft</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\AkAudiolib\Common\ak_fft\ak_fft.h">
+			<Filter>AkAudiolib\Common\ak_fft</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\AkAudiolib\Common\ak_fft\tools\ak_fftr.h">
+			<Filter>AkAudiolib\Common\ak_fft\tools</Filter>
+		</ClInclude>
+	</ItemGroup>
+	<ItemGroup>
+		<ClCompile Include="..\AkTimeStretchFX.cpp" />
+		<ClCompile Include="..\AkTimeStretchFXParams.cpp" />
+		<ClCompile Include="..\..\..\Common\AkPhaseVocoder.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\Common\CircularBuffer.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\Common\FreqWindow.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\Common\LinearResampler.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\Common\OLACircularBuffer.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\Common\TimeWindow.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\..\AkAudiolib\Common\ak_fft\ak_fft.cpp">
+			<Filter>AkAudiolib\Common\ak_fft</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\..\AkAudiolib\Common\ak_fft\tools\ak_fftr.cpp">
+			<Filter>AkAudiolib\Common\ak_fft\tools</Filter>
+		</ClCompile>
+	</ItemGroup>
+</Project>

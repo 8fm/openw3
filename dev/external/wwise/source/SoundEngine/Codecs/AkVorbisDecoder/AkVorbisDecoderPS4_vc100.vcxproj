@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup Label="ProjectConfigurations">
+		<ProjectConfiguration Include="Debug|ORBIS">
+			<Configuration>Debug</Configuration>
+			<Platform>ORBIS</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Profile|ORBIS">
+			<Configuration>Profile</Configuration>
+			<Platform>ORBIS</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Release|ORBIS">
+			<Configuration>Release</Configuration>
+			<Platform>ORBIS</Platform>
+		</ProjectConfiguration>
+	</ItemGroup>
+	<PropertyGroup Label="Globals">
+		<ProjectGuid>{74AB92DF-B069-B245-6C0D-BCB51142F99B}</ProjectGuid>
+		<RootNamespace>AkVorbisDecoder</RootNamespace>
+		<Keyword>Win32Proj</Keyword>
+		<ProjectName>AkVorbisDecoder</ProjectName>
+	</PropertyGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ORBIS'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>MultiByte</CharacterSet>
+		<UseDebugLibraries>false</UseDebugLibraries>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|ORBIS'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>MultiByte</CharacterSet>
+		<UseDebugLibraries>false</UseDebugLibraries>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ORBIS'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>MultiByte</CharacterSet>
+		<UseDebugLibraries>false</UseDebugLibraries>
+	</PropertyGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+	<ImportGroup Label="ExtensionSettings">
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ORBIS'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Profile|ORBIS'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|ORBIS'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Label="UserMacros" />
+	<PropertyGroup>
+		<_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|ORBIS'">..\..\..\..\PS4\Debug\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|ORBIS'">..\..\..\..\PS4\Debug\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|ORBIS'">AkVorbisDecoder</TargetName>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Profile|ORBIS'">..\..\..\..\PS4\Profile\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Profile|ORBIS'">..\..\..\..\PS4\Profile\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Profile|ORBIS'">AkVorbisDecoder</TargetName>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Release|ORBIS'">..\..\..\..\PS4\Release\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Release|ORBIS'">..\..\..\..\PS4\Release\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Release|ORBIS'">AkVorbisDecoder</TargetName>
+	</PropertyGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ORBIS'">
+		<ClCompile>
+			<AdditionalOptions>-Wno-invalid-offsetof -Wno-switch  -Wno-unused-variable -Wno-missing-braces %(AdditionalOptions)</AdditionalOptions>
+			<Optimization>MaxSpeed</Optimization>
+			<AdditionalIncludeDirectories>$(SCE_ORBIS_SDK_DIR)\target\include;$(SCE_ORBIS_SDK_DIR)\target\include_common;$(SCE_ORBIS_SDK_DIR)\host_tools\lib\clang\3.1\include;Common;Tremor;Tremor\FloatingPoint;..\..\AkAudiolib\PS4;..\..\AkAudiolib\SoftwarePipeline;..\..\AkAudiolib\Common;..\..\..\..\include;Win32;Tremor\Win32;..\..\Plugins\Effects\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>SN_TARGET_ORBIS;__SCE__;AUDIOKINETIC;AK_PS4;_DEBUG;AUDIOKINETIC;AKSOUNDENGINE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+			<OptimizationLevel>Level3</OptimizationLevel>
+			<FastMath>true</FastMath>
+			<PrecompiledHeader></PrecompiledHeader>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>SN_TARGET_ORBIS;__SCE__;AUDIOKINETIC;AK_PS4;_DEBUG;AUDIOKINETIC;AKSOUNDENGINE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>$(SCE_ORBIS_SDK_DIR)\target\include;$(SCE_ORBIS_SDK_DIR)\target\include_common;$(SCE_ORBIS_SDK_DIR)\host_tools\lib\clang\3.1\include;Common;Tremor;Tremor\FloatingPoint;..\..\AkAudiolib\PS4;..\..\AkAudiolib\SoftwarePipeline;..\..\AkAudiolib\Common;..\..\..\..\include;Win32;Tremor\Win32;..\..\Plugins\Effects\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)AkVorbisDecoder.a</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+			<OptimizeReferences>true</OptimizeReferences>
+			<EnableCOMDATFolding>true</EnableCOMDATFolding>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Profile|ORBIS'">
+		<ClCompile>
+			<AdditionalOptions>-Wno-invalid-offsetof -Wno-switch  -Wno-unused-variable -Wno-missing-braces %(AdditionalOptions)</AdditionalOptions>
+			<Optimization>MaxSpeed</Optimization>
+			<AdditionalIncludeDirectories>$(SCE_ORBIS_SDK_DIR)\target\include;$(SCE_ORBIS_SDK_DIR)\target\include_common;$(SCE_ORBIS_SDK_DIR)\host_tools\lib\clang\3.1\include;Common;Tremor;Tremor\FloatingPoint;..\..\AkAudiolib\PS4;..\..\AkAudiolib\SoftwarePipeline;..\..\AkAudiolib\Common;..\..\..\..\include;Win32;Tremor\Win32;..\..\Plugins\Effects\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>SN_TARGET_ORBIS;__SCE__;AUDIOKINETIC;AK_PS4;NDEBUG;AUDIOKINETIC;AKSOUNDENGINE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+			<OptimizationLevel>Level3</OptimizationLevel>
+			<FastMath>true</FastMath>
+			<PrecompiledHeader></PrecompiledHeader>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>SN_TARGET_ORBIS;__SCE__;AUDIOKINETIC;AK_PS4;NDEBUG;AUDIOKINETIC;AKSOUNDENGINE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>$(SCE_ORBIS_SDK_DIR)\target\include;$(SCE_ORBIS_SDK_DIR)\target\include_common;$(SCE_ORBIS_SDK_DIR)\host_tools\lib\clang\3.1\include;Common;Tremor;Tremor\FloatingPoint;..\..\AkAudiolib\PS4;..\..\AkAudiolib\SoftwarePipeline;..\..\AkAudiolib\Common;..\..\..\..\include;Win32;Tremor\Win32;..\..\Plugins\Effects\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)AkVorbisDecoder.a</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+			<OptimizeReferences>true</OptimizeReferences>
+			<EnableCOMDATFolding>true</EnableCOMDATFolding>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ORBIS'">
+		<ClCompile>
+			<AdditionalOptions>-Wno-invalid-offsetof -Wno-switch  -Wno-unused-variable -Wno-missing-braces %(AdditionalOptions)</AdditionalOptions>
+			<Optimization>MaxSpeed</Optimization>
+			<AdditionalIncludeDirectories>$(SCE_ORBIS_SDK_DIR)\target\include;$(SCE_ORBIS_SDK_DIR)\target\include_common;$(SCE_ORBIS_SDK_DIR)\host_tools\lib\clang\3.1\include;Common;Tremor;Tremor\FloatingPoint;..\..\AkAudiolib\PS4;..\..\AkAudiolib\SoftwarePipeline;..\..\AkAudiolib\Common;..\..\..\..\include;Win32;Tremor\Win32;..\..\Plugins\Effects\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>SN_TARGET_ORBIS;__SCE__;AUDIOKINETIC;AK_PS4;NDEBUG;AK_OPTIMIZED;AUDIOKINETIC;AKSOUNDENGINE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+			<OptimizationLevel>Level3</OptimizationLevel>
+			<FastMath>true</FastMath>
+			<PrecompiledHeader></PrecompiledHeader>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>SN_TARGET_ORBIS;__SCE__;AUDIOKINETIC;AK_PS4;NDEBUG;AK_OPTIMIZED;AUDIOKINETIC;AKSOUNDENGINE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>$(SCE_ORBIS_SDK_DIR)\target\include;$(SCE_ORBIS_SDK_DIR)\target\include_common;$(SCE_ORBIS_SDK_DIR)\host_tools\lib\clang\3.1\include;Common;Tremor;Tremor\FloatingPoint;..\..\AkAudiolib\PS4;..\..\AkAudiolib\SoftwarePipeline;..\..\AkAudiolib\Common;..\..\..\..\include;Win32;Tremor\Win32;..\..\Plugins\Effects\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)AkVorbisDecoder.a</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+			<OptimizeReferences>true</OptimizeReferences>
+			<EnableCOMDATFolding>true</EnableCOMDATFolding>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemGroup>
+		<ClInclude Include="Common\AkSrcBankVorbis.h" />
+		<ClInclude Include="Common\AkSrcFileVorbis.h" />
+		<ClInclude Include="Common\AkSrcVorbis.h" />
+		<ClInclude Include="Common\AkVorbisCodebookMgr.h" />
+		<ClInclude Include="Common\AkVorbisInfo.h" />
+		<ClInclude Include="Tremor\FloatingPoint\mdct.h" />
+		<ClInclude Include="Tremor\FloatingPoint\mdct_lookup.h" />
+		<ClInclude Include="Tremor\FloatingPoint\misc.h" />
+		<ClInclude Include="Tremor\FloatingPoint\window_lookup.h" />
+		<ClInclude Include="Win32\AkVorbisCodec.h" />
+		<ClInclude Include="Tremor\Win32\codec_internal.h" />
+		<ClInclude Include="Tremor\codebook.h" />
+		<ClInclude Include="Tremor\ivorbiscodec.h" />
+		<ClInclude Include="Tremor\lsp_lookup.h" />
+		<ClInclude Include="Tremor\ogg.h" />
+		<ClInclude Include="Tremor\os.h" />
+		<ClInclude Include="Tremor\os_types.h" />
+		<ClInclude Include="Tremor\packed_codebooks.h" />
+	</ItemGroup>
+	<ItemGroup>
+		<ClCompile Include="Common\AkSrcBankVorbis.cpp">
+		</ClCompile>
+		<ClCompile Include="Common\AkSrcFileVorbis.cpp">
+		</ClCompile>
+		<ClCompile Include="Common\AkVorbisCodebookMgr.cpp">
+		</ClCompile>
+		<ClCompile Include="Tremor\FloatingPoint\floor1.cpp">
+		</ClCompile>
+		<ClCompile Include="Tremor\FloatingPoint\floor_lookup.cpp">
+		</ClCompile>
+		<ClCompile Include="Tremor\FloatingPoint\mdct.cpp">
+		</ClCompile>
+		<ClCompile Include="Win32\AkVorbisCodec.cpp">
+		</ClCompile>
+		<ClCompile Include="Tremor\Win32\codebook.cpp">
+		</ClCompile>
+		<ClCompile Include="Tremor\Win32\dsp.cpp">
+		</ClCompile>
+		<ClCompile Include="Tremor\bitwise.cpp">
+		</ClCompile>
+		<ClCompile Include="Tremor\info.cpp">
+		</ClCompile>
+		<ClCompile Include="Tremor\mapping0.cpp">
+		</ClCompile>
+		<ClCompile Include="Tremor\packed_codebooks.cpp">
+		</ClCompile>
+		<ClCompile Include="Tremor\res012.cpp">
+		</ClCompile>
+	</ItemGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+	<ImportGroup Label="ExtensionTargets">
+	</ImportGroup>
+</Project>

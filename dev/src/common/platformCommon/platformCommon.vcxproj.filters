@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="build.cpp" />
+    <ClCompile Include="clipboardWin32.cpp">
+      <Filter>Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="platformWindows.cpp">
+      <Filter>Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="platform.cpp" />
+    <ClCompile Include="win32Viewport.cpp">
+      <Filter>Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="platformDurango.cpp">
+      <Filter>Durango</Filter>
+    </ClCompile>
+    <ClCompile Include="platformOrbis.cpp">
+      <Filter>Orbis</Filter>
+    </ClCompile>
+    <ClCompile Include="secondScreenManager.cpp">
+      <Filter>secondscreen</Filter>
+    </ClCompile>
+    <ClCompile Include="secondScreenDevicePC.cpp">
+      <Filter>secondscreen</Filter>
+    </ClCompile>
+    <ClCompile Include="secondScreenDeviceWatcherPC.cpp">
+      <Filter>secondscreen</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="build.h" />
+    <ClInclude Include="clipboardWin32.h">
+      <Filter>Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="platform.h" />
+    <ClInclude Include="assertResource.h">
+      <Filter>Windows\res</Filter>
+    </ClInclude>
+    <ClInclude Include="win32Viewport.h">
+      <Filter>Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="secondScreenDevice.h">
+      <Filter>secondscreen</Filter>
+    </ClInclude>
+    <ClInclude Include="secondScreenDeviceWatcher.h">
+      <Filter>secondscreen</Filter>
+    </ClInclude>
+    <ClInclude Include="secondScreenManager.h">
+      <Filter>secondscreen</Filter>
+    </ClInclude>
+    <ClInclude Include="platformFeature.h" />
+    <ClInclude Include="secondScreenDevicePC.h">
+      <Filter>secondscreen</Filter>
+    </ClInclude>
+    <ClInclude Include="secondScreenDeviceWatcherPC.h">
+      <Filter>secondscreen</Filter>
+    </ClInclude>
+    <ClInclude Include="scriptErrorResource.h">
+      <Filter>Windows\res</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Windows">
+      <UniqueIdentifier>{174d5fcb-0b47-45f3-abd7-f20ce0f9bc86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Durango">
+      <UniqueIdentifier>{4c2a1d7c-e5b9-4966-b81f-5d4bbeb6b572}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Orbis">
+      <UniqueIdentifier>{86219025-7161-4dad-b097-c8b67b3f560c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Windows\res">
+      <UniqueIdentifier>{759e0ff7-299a-4ebe-b29d-68d13b2964f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="secondscreen">
+      <UniqueIdentifier>{2b3b4fdf-f892-4174-861f-bb33bb7a7aa6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assert.customrc">
+      <Filter>Windows\res</Filter>
+    </None>
+    <None Include="scriptError.customrc">
+      <Filter>Windows\res</Filter>
+    </None>
+  </ItemGroup>
+</Project>

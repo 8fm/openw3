@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="atomicsTests.cpp" />
+    <ClCompile Include="build.cpp" />
+    <ClCompile Include="containersTests.cpp" />
+    <ClCompile Include="guidsTests.cpp" />
+    <ClCompile Include="intrinsicsTests.cpp" />
+    <ClCompile Include="randomTests.cpp" />
+    <ClCompile Include="stringToIntTests.cpp" />
+    <ClCompile Include="systemTypesTests.cpp" />
+    <ClCompile Include="..\unitTestsFramework\testRunnerDurango.cpp">
+      <Filter>durango</Filter>
+    </ClCompile>
+    <ClCompile Include="errorTests.cpp" />
+    <ClCompile Include="logTests.cpp" />
+    <ClCompile Include="threadTests.cpp" />
+    <ClCompile Include="networkTests.cpp" />
+    <ClCompile Include="externDefinition.cpp" />
+    <ClCompile Include="scalarTests.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="vectorArithmaticTests.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="vector2Tests.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="vectorFunctionsTests.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="vector3Tests.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="vector4Tests.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="matrix4x4Tests.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="matrixArithmeticTests.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="matrixFunctionTests.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\unitTestsFramework\testRunner.cpp" />
+    <ClCompile Include="matrix3x3Tests.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="quaternionTests.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="qsTransformTests.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="transformTests.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="eulerAnglesTests.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="AABBTests.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="build.h" />
+    <ClInclude Include="logMock.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="durango">
+      <UniqueIdentifier>{595ec12c-90b2-41fe-8ab7-3ae74f83cc68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Math">
+      <UniqueIdentifier>{84fa1eae-76c0-4d3f-9c5c-0c091c1f4eb2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="unitTestsKernel.appxmanifest">
+      <Filter>durango</Filter>
+    </AppxManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\unitTestsFramework\Logo.png">
+      <Filter>durango</Filter>
+    </Image>
+    <Image Include="..\unitTestsFramework\SmallLogo.png">
+      <Filter>durango</Filter>
+    </Image>
+    <Image Include="..\unitTestsFramework\SplashScreen.png">
+      <Filter>durango</Filter>
+    </Image>
+    <Image Include="..\unitTestsFramework\StoreLogo.png">
+      <Filter>durango</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="matrix4x4Tests.inl">
+      <Filter>Math</Filter>
+    </None>
+    <None Include="matrix3x3Tests.inl">
+      <Filter>Math</Filter>
+    </None>
+    <None Include="matrixArithmeticTests.inl">
+      <Filter>Math</Filter>
+    </None>
+    <None Include="matrixFunctionTests.inl">
+      <Filter>Math</Filter>
+    </None>
+  </ItemGroup>
+</Project>

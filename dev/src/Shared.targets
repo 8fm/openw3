@@ -1,0 +1,224 @@
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <Target Name="CreateAppxPackageArtifactsDir" BeforeTargets="BeforeGenerateProjectPriFile" Condition="'$(Platform)' == 'Durango'">
+    <MakeDir Condition="!Exists('$(TargetDir)$(AppxPackageArtifactsDir)')" Directories="$(TargetDir)$(AppxPackageArtifactsDir)"/>
+  </Target>
+  
+  <Target Name="VerifyEnumRTTI" BeforeTargets="ClCompile">
+    <Message Text="Verifying RTTI enums..." />
+    <Exec Command="$(SolutionDir)..\internal\RTTIVerify\RTTIVerify.exe $(MSBuildProjectFullPath)"/>
+  </Target>
+
+  <Target Name="CompileBisonScripts" BeforeTargets="ClCompile" Inputs="@(BisonScripts)" Outputs="@(BisonScripts->'$(Platform)\$(Configuration)\%(Filename)_bison.cxx');@(BisonScripts->'$(Platform)\$(Configuration)\%(Filename)_bison.cxx.h')">
+    <Message Text="Compiling bison scripts..." />
+    <MakeDir Directories="$(Platform)\$(Configuration)\" />    
+    <Error Text="Failed to create $(Platform)\$(Configuration)\ dir" Condition="!Exists('$(Platform)\$(Configuration)\')" />
+    <Message Text="Created $(Platform)\$(Configuration)\ dir" />
+    <Exec Command="SET PATH=..\..\..\external\bison\bin;%PATH% 
+          bison.exe %(BisonScripts.AdditionalArguments) --defines=&quot;$(Platform)\$(Configuration)\%(BisonScripts.Filename)_bison.cxx.h&quot; -o&quot;$(Platform)\$(Configuration)\%(BisonScripts.Filename)_bison.cxx&quot; %(BisonScripts.Filename)%(Extension)"/>
+  </Target>
+
+  <Target Name="CleanBisonScripts" BeforeTargets="Clean">
+    <Delete Files="@(BisonScripts->'$(Platform)\$(Configuration)\%(Filename)_bison.cxx');@(BisonScripts->'$(Platform)\$(Configuration)\%(Filename)_bison.cxx.h')" />
+  </Target>
+
+  <!-- FIXME: those targets got deactivated due to possible error mentioned here: 
+       http://social.msdn.microsoft.com/Forums/vstudio/en-US/45ab4c92-a97a-4114-9424-8f018e708517/linker-error-lnk1318-unexpected-pdb-error-rpc-23-0x000006ba?forum=vcgeneral -->
+  <Target Name="GroupSimpleSourceFiles" BeforeTargets="ClCompile" Condition="'@(ClCompile)' != '' And '$(Platform)' != 'Durango' And '$(Platform)' != 'ORBIS' And '$(UseMinimalRebuild)' == 'false' And '$(MPBuild)' == 'true'">
+    <ItemGroup>
+      <SimpleSourceFiles Condition="'%(ClCompile.PrecompiledHeader)' != 'Create' and '%(ClCompile.ExcludedFromBuild)'!='true' and HasTrailingSlash('%(ClCompile.ObjectFileName)')" Include="@(ClCompile)" />
+      <ClCompile Condition="'%(ClCompile.PrecompiledHeader)' != 'Create' and '%(ClCompile.ExcludedFromBuild)'!='true' and HasTrailingSlash('%(ClCompile.ObjectFileName)')" >
+        <ExcludedFromBuild>true</ExcludedFromBuild>
+        <TemporaryExclude>true</TemporaryExclude>
+      </ClCompile>
+      <ClCompile Condition="'%(ClCompile.PrecompiledHeader)' == 'Create' and '%(ClCompile.ExcludedFromBuild)'!='true'" >
+        <MinimalRebuild>false</MinimalRebuild>
+      </ClCompile>
+    </ItemGroup>
+    
+    <PropertyGroup>
+      <ProjectPrecompileHeader>%(SimpleSourceFiles.PrecompiledHeader)</ProjectPrecompileHeader>
+      <ProjectAdditionalIncludeDirectories>%(SimpleSourceFiles.AdditionalIncludeDirectories)</ProjectAdditionalIncludeDirectories>
+      <ProjectAdditionalOptions>%(SimpleSourceFiles.AdditionalOptions)</ProjectAdditionalOptions>
+      <ProjectAdditionalUsingDirectories>%(SimpleSourceFiles.AdditionalUsingDirectories)</ProjectAdditionalUsingDirectories>
+      <ProjectAssemblerListingLocation>%(SimpleSourceFiles.AssemblerListingLocation)</ProjectAssemblerListingLocation>
+      <ProjectAssemblerOutput>%(SimpleSourceFiles.AssemblerOutput)</ProjectAssemblerOutput>
+      <ProjectBasicRuntimeChecks>%(SimpleSourceFiles.BasicRuntimeChecks)</ProjectBasicRuntimeChecks>
+      <ProjectBrowseInformation>%(SimpleSourceFiles.BrowseInformation)</ProjectBrowseInformation>
+      <ProjectBrowseInformationFile>%(SimpleSourceFiles.BrowseInformationFile)</ProjectBrowseInformationFile>
+      <ProjectBufferSecurityCheck>%(SimpleSourceFiles.BufferSecurityCheck)</ProjectBufferSecurityCheck>
+      <ProjectCallingConvention>%(SimpleSourceFiles.CallingConvention)</ProjectCallingConvention>
+      <ProjectCompileAsManaged>%(SimpleSourceFiles.CompileAsManaged)</ProjectCompileAsManaged>
+      <ProjectCompileAs>%(SimpleSourceFiles.CompileAs)</ProjectCompileAs>
+      <ProjectDebugInformationFormat>%(SimpleSourceFiles.DebugInformationFormat)</ProjectDebugInformationFormat>
+      <ProjectDisableLanguageExtensions>%(SimpleSourceFiles.DisableLanguageExtensions)</ProjectDisableLanguageExtensions>
+      <ProjectDisableSpecificWarnings>%(SimpleSourceFiles.DisableSpecificWarnings)</ProjectDisableSpecificWarnings>
+      <ProjectEnableEnhancedInstructionSet>%(SimpleSourceFiles.EnableEnhancedInstructionSet)</ProjectEnableEnhancedInstructionSet>
+      <ProjectEnablePREfast>%(SimpleSourceFiles.EnablePREfast)</ProjectEnablePREfast>
+      <ProjectEnableFiberSafeOptimizations>%(SimpleSourceFiles.EnableFiberSafeOptimizations)</ProjectEnableFiberSafeOptimizations>
+      <ProjectErrorReporting>%(SimpleSourceFiles.ErrorReporting)</ProjectErrorReporting>
+      <ProjectExceptionHandling>%(SimpleSourceFiles.ExceptionHandling)</ProjectExceptionHandling>
+      <ProjectExpandAttributedSource>%(SimpleSourceFiles.ExpandAttributedSource)</ProjectExpandAttributedSource>
+      <ProjectFavorSizeOrSpeed>%(SimpleSourceFiles.FavorSizeOrSpeed)</ProjectFavorSizeOrSpeed>
+      <ProjectFloatingPointExceptions>%(SimpleSourceFiles.FloatingPointExceptions)</ProjectFloatingPointExceptions>
+      <ProjectFloatingPointModel>%(SimpleSourceFiles.FloatingPointModel)</ProjectFloatingPointModel>
+      <ProjectForceConformanceInForLoopScope>%(SimpleSourceFiles.ForceConformanceInForLoopScope)</ProjectForceConformanceInForLoopScope>
+      <ProjectForcedIncludeFiles>%(SimpleSourceFiles.ForcedIncludeFiles)</ProjectForcedIncludeFiles>
+      <ProjectForcedUsingFiles>%(SimpleSourceFiles.ForcedUsingFiles)</ProjectForcedUsingFiles>
+      <ProjectFunctionLevelLinking>%(SimpleSourceFiles.FunctionLevelLinking)</ProjectFunctionLevelLinking>
+      <ProjectGenerateXMLDocumentationFiles>%(SimpleSourceFiles.GenerateXMLDocumentationFiles)</ProjectGenerateXMLDocumentationFiles>
+      <ProjectIgnoreStandardIncludePath>%(SimpleSourceFiles.IgnoreStandardIncludePath)</ProjectIgnoreStandardIncludePath>
+      <ProjectInlineFunctionExpansion>%(SimpleSourceFiles.InlineFunctionExpansion)</ProjectInlineFunctionExpansion>
+      <ProjectIntrinsicFunctions>%(SimpleSourceFiles.IntrinsicFunctions)</ProjectIntrinsicFunctions>
+      <ProjectMinimalRebuild>false</ProjectMinimalRebuild>
+      <ProjectMultiProcessorCompilation>true</ProjectMultiProcessorCompilation>
+      <ProjectObjectFileName>%(SimpleSourceFiles.ObjectFileName)</ProjectObjectFileName>
+      <ProjectOmitDefaultLibName>%(SimpleSourceFiles.OmitDefaultLibName)</ProjectOmitDefaultLibName>
+      <ProjectOmitFramePointers>%(SimpleSourceFiles.OmitFramePointers)</ProjectOmitFramePointers>
+      <ProjectOpenMPSupport>%(SimpleSourceFiles.OpenMPSupport)</ProjectOpenMPSupport>
+      <ProjectOptimization>%(SimpleSourceFiles.Optimization)</ProjectOptimization>
+      <ProjectPrecompiledHeaderFile>%(SimpleSourceFiles.PrecompiledHeaderFile)</ProjectPrecompiledHeaderFile>
+      <ProjectPrecompiledHeaderOutputFile>%(SimpleSourceFiles.PrecompiledHeaderOutputFile)</ProjectPrecompiledHeaderOutputFile>
+      <ProjectPreprocessKeepComments>%(SimpleSourceFiles.PreprocessKeepComments)</ProjectPreprocessKeepComments>
+      <ProjectPreprocessorDefinitions>%(SimpleSourceFiles.PreprocessorDefinitions)</ProjectPreprocessorDefinitions>
+      <ProjectPreprocessSuppressLineNumbers>%(SimpleSourceFiles.PreprocessSuppressLineNumbers)</ProjectPreprocessSuppressLineNumbers>
+      <ProjectPreprocessToFile>%(SimpleSourceFiles.PreprocessToFile)</ProjectPreprocessToFile>
+      <ProjectProcessorNumber>%(SimpleSourceFiles.ProcessorNumber)</ProjectProcessorNumber>
+      <ProjectProgramDataBaseFileName>%(SimpleSourceFiles.ProgramDataBaseFileName)</ProjectProgramDataBaseFileName>
+      <ProjectRuntimeLibrary>%(SimpleSourceFiles.RuntimeLibrary)</ProjectRuntimeLibrary>
+      <ProjectRuntimeTypeInfo>%(SimpleSourceFiles.RuntimeTypeInfo)</ProjectRuntimeTypeInfo>
+      <ProjectShowIncludes>%(SimpleSourceFiles.ShowIncludes)</ProjectShowIncludes>
+      <ProjectSmallerTypeCheck>%(SimpleSourceFiles.SmallerTypeCheck)</ProjectSmallerTypeCheck>
+      <ProjectStringPooling>%(SimpleSourceFiles.StringPooling)</ProjectStringPooling>
+      <ProjectStructMemberAlignment>%(SimpleSourceFiles.StructMemberAlignment)</ProjectStructMemberAlignment>
+      <ProjectSuppressStartupBanner>%(SimpleSourceFiles.SuppressStartupBanner)</ProjectSuppressStartupBanner>
+      <ProjectTreatSpecificWarningsAsErrors>%(SimpleSourceFiles.TreatSpecificWarningsAsErrors)</ProjectTreatSpecificWarningsAsErrors>
+      <ProjectTreatWarningAsError>%(SimpleSourceFiles.TreatWarningAsError)</ProjectTreatWarningAsError>
+      <ProjectTreatWChar_tAsBuiltInType>%(SimpleSourceFiles.TreatWChar_tAsBuiltInType)</ProjectTreatWChar_tAsBuiltInType>
+      <ProjectUndefineAllPreprocessorDefinitions>%(SimpleSourceFiles.UndefineAllPreprocessorDefinitions)</ProjectUndefineAllPreprocessorDefinitions>
+      <ProjectUndefinePreprocessorDefinitions>%(SimpleSourceFiles.UndefinePreprocessorDefinitions)</ProjectUndefinePreprocessorDefinitions>
+      <ProjectUseFullPaths>%(SimpleSourceFiles.UseFullPaths)</ProjectUseFullPaths>
+      <ProjectUseUnicodeForAssemblerListing>%(SimpleSourceFiles.UseUnicodeForAssemblerListing)</ProjectUseUnicodeForAssemblerListing>
+      <ProjectWarningLevel>%(SimpleSourceFiles.WarningLevel)</ProjectWarningLevel>
+      <ProjectWholeProgramOptimization>%(SimpleSourceFiles.WholeProgramOptimization)</ProjectWholeProgramOptimization>
+      <ProjectXMLDocumentationFileName>%(SimpleSourceFiles.XMLDocumentationFileName)</ProjectXMLDocumentationFileName>
+      <ProjectCreateHotpatchableImage>%(SimpleSourceFiles.CreateHotpatchableImage)</ProjectCreateHotpatchableImage>
+      <ProjectTrackerLogDirectory>%(SimpleSourceFiles.TrackerLogDirectory)</ProjectTrackerLogDirectory>
+      <ProjectMinimalRebuildFromTracking>%(SimpleSourceFiles.MinimalRebuildFromTracking)</ProjectMinimalRebuildFromTracking>
+      <ProjectAcceptableNonZeroExitCodes>%(SimpleSourceFiles.AcceptableNonZeroExitCodes)</ProjectAcceptableNonZeroExitCodes>
+      <ProjectCompilerIteration>%(SimpleSourceFiles.CompilerIteration)</ProjectCompilerIteration>
+    </PropertyGroup>
+
+    <PropertyGroup>
+      <ProjectPrecompiledHeaderOutputFile  Condition="'$(ProjectPrecompileHeader)' == 'NotUsing' or '$(ProjectPrecompileHeader)' == ''"></ProjectPrecompiledHeaderOutputFile>
+      <ProjectPrecompiledHeaderOutputFile  Condition="'$(ProjectPrecompileHeader)' != 'NotUsing' and '$(RunCodeAnalysisOnce)'=='true' and '$(ProjectPrecompileHeader)' != ''">%(ClCompile.PrecompiledHeaderOutputFile).codeanalysis</ProjectPrecompiledHeaderOutputFile>
+      <ProjectPrecompiledHeaderFile        Condition="'$(ProjectPrecompileHeader)' == 'NotUsing' or '$(ProjectPrecompileHeader)' == ''"></ProjectPrecompiledHeaderFile>
+      <ProjectAssemblerListingLocation     Condition="'$(ProjectAssemblerOutput)' == 'NoListing' or '$(ProjectAssemblerOutput)' == ''"></ProjectAssemblerListingLocation>
+      <ProjectMinimalRebuildFromTracking   Condition="'$(BuildType)' != 'Build' or '$(ForceRebuild)' == 'true'">false</ProjectMinimalRebuildFromTracking>
+    </PropertyGroup>
+  </Target>
+
+  <Target Name="CompileSimpleSourceFiles" AfterTargets="ClCompile" Condition="@(SimpleSourceFiles) != '' And '$(Platform)' != 'Durango' And '$(Platform)' != 'ORBIS' And '$(UseMinimalRebuild)' == 'false' And '$(MPBuild)' == 'true'">
+
+    <ItemGroup>
+      <ClNoDependencies Condition="'@(ClNoDependencies)' == '' and '%(ClInclude.NoDependency)' == 'true'" Include="@(ClInclude)"/>
+      <ClNoDependencies Condition="'$(NoDependencies)' != ''" Include="$(NoDependencies)" />
+    </ItemGroup>
+
+    <CL
+        BuildingInIDE                      ="$(BuildingInsideVisualStudio)"
+        Sources                            ="@(SimpleSourceFiles)"
+
+        AdditionalIncludeDirectories       ="$(ProjectAdditionalIncludeDirectories)"
+        AdditionalOptions                  ="$(ProjectAdditionalOptions)"
+        AdditionalUsingDirectories         ="$(ProjectAdditionalUsingDirectories)"
+        AssemblerListingLocation           ="$(ProjectAssemblerListingLocation)"
+        AssemblerOutput                    ="$(ProjectAssemblerOutput)"
+        BasicRuntimeChecks                 ="$(ProjectBasicRuntimeChecks)"
+        BrowseInformation                  ="$(ProjectBrowseInformation)"
+        BrowseInformationFile              ="$(ProjectBrowseInformationFile)"
+        BufferSecurityCheck                ="$(ProjectBufferSecurityCheck)"
+        CallingConvention                  ="$(ProjectCallingConvention)"
+        CompileAsManaged                   ="$(ProjectCompileAsManaged)"
+        CompileAs                          ="$(ProjectCompileAs)"
+        DebugInformationFormat             ="$(ProjectDebugInformationFormat)"
+        DisableLanguageExtensions          ="$(ProjectDisableLanguageExtensions)"
+        DisableSpecificWarnings            ="$(ProjectDisableSpecificWarnings)"
+        EnableEnhancedInstructionSet       ="$(ProjectEnableEnhancedInstructionSet)"
+        EnableFiberSafeOptimizations       ="$(ProjectEnableFiberSafeOptimizations)"
+        EnablePREfast                      ="$(ProjectEnablePREfast)"
+        ErrorReporting                     ="$(ProjectErrorReporting)"
+        ExceptionHandling                  ="$(ProjectExceptionHandling)"
+        ExcludedInputPaths                 ="$(ExcludePath)"
+        ExpandAttributedSource             ="$(ProjectExpandAttributedSource)"
+        FavorSizeOrSpeed                   ="$(ProjectFavorSizeOrSpeed)"
+        FloatingPointExceptions            ="$(ProjectFloatingPointExceptions)"
+        FloatingPointModel                 ="$(ProjectFloatingPointModel)"
+        ForceConformanceInForLoopScope     ="$(ProjectForceConformanceInForLoopScope)"
+        ForcedIncludeFiles                 ="$(ProjectForcedIncludeFiles)"
+        ForcedUsingFiles                   ="$(ProjectForcedUsingFiles)"
+        FunctionLevelLinking               ="$(ProjectFunctionLevelLinking)"
+        GenerateXMLDocumentationFiles      ="$(ProjectGenerateXMLDocumentationFiles)"
+        IgnoreStandardIncludePath          ="$(ProjectIgnoreStandardIncludePath)"
+        InlineFunctionExpansion            ="$(ProjectInlineFunctionExpansion)"
+        IntrinsicFunctions                 ="$(ProjectIntrinsicFunctions)"
+        MinimalRebuild                     ="$(ProjectMinimalRebuild)"
+        MultiProcessorCompilation          ="$(ProjectMultiProcessorCompilation)"
+        ObjectFileName                     ="$(ProjectObjectFileName)"
+        OmitDefaultLibName                 ="$(ProjectOmitDefaultLibName)"
+        OmitFramePointers                  ="$(ProjectOmitFramePointers)"
+        OpenMPSupport                      ="$(ProjectOpenMPSupport)"
+        Optimization                       ="$(ProjectOptimization)"
+        PrecompiledHeader                  ="$(ProjectPrecompileHeader)"
+        PrecompiledHeaderFile              ="$(ProjectPrecompiledHeaderFile)"
+        PrecompiledHeaderOutputFile        ="$(ProjectPrecompiledHeaderOutputFile)"
+        PreprocessKeepComments             ="$(ProjectPreprocessKeepComments)"
+        PreprocessorDefinitions            ="$(ProjectPreprocessorDefinitions)"
+        PreprocessSuppressLineNumbers      ="$(ProjectPreprocessSuppressLineNumbers)"
+        PreprocessToFile                   ="$(ProjectPreprocessToFile)"
+        ProcessorNumber                    ="$(ProjectProcessorNumber)"
+        ProgramDataBaseFileName            ="$(ProjectProgramDataBaseFileName)"
+        RuntimeLibrary                     ="$(ProjectRuntimeLibrary)"
+        RuntimeTypeInfo                    ="$(ProjectRuntimeTypeInfo)"
+        ShowIncludes                       ="$(ProjectShowIncludes)"
+        SmallerTypeCheck                   ="$(ProjectSmallerTypeCheck)"
+        StringPooling                      ="$(ProjectStringPooling)"
+        StructMemberAlignment              ="$(ProjectStructMemberAlignment)"
+        SuppressStartupBanner              ="$(ProjectSuppressStartupBanner)"
+        TreatSpecificWarningsAsErrors      ="$(ProjectTreatSpecificWarningsAsErrors)"
+        TreatWarningAsError                ="$(ProjectTreatWarningAsError)"
+        TreatWChar_tAsBuiltInType          ="$(ProjectTreatWChar_tAsBuiltInType)"
+        UndefineAllPreprocessorDefinitions ="$(ProjectUndefineAllPreprocessorDefinitions)"
+        UndefinePreprocessorDefinitions    ="$(ProjectUndefinePreprocessorDefinitions)"
+        UseFullPaths                       ="$(ProjectUseFullPaths)"
+        UseUnicodeForAssemblerListing      ="$(ProjectUseUnicodeForAssemblerListing)"
+        WarningLevel                       ="$(ProjectWarningLevel)"
+        WholeProgramOptimization           ="$(ProjectWholeProgramOptimization)"
+        XMLDocumentationFileName           ="$(ProjectXMLDocumentationFileName)"
+        CreateHotpatchableImage            ="$(ProjectCreateHotpatchableImage)"
+
+        TrackerLogDirectory                ="$(ProjectTrackerLogDirectory)"
+
+        TLogReadFiles                      ="@(CLTLogReadFiles)"
+        TLogWriteFiles                     ="@(CLTLogWriteFiles)"
+        ToolExe                            ="$(CLToolExe)"
+        ToolPath                           ="$(CLToolPath)"
+        TrackFileAccess                    ="$(TrackFileAccess)"
+        MinimalRebuildFromTracking         ="$(ProjectMinimalRebuildFromTracking)"
+        ToolArchitecture                   ="$(CLToolArchitecture)"
+        TrackerFrameworkPath               ="$(CLTrackerFrameworkPath)"
+        TrackerSdkPath                     ="$(CLTrackerSdkPath)"
+        TrackedInputFilesToIgnore          ="@(ClNoDependencies)"
+        
+        AcceptableNonZeroExitCodes         ="$(ProjectAcceptableNonZeroExitCodes)"
+        YieldDuringToolExecution           ="$(ClYieldDuringToolExecution)"
+    />
+    <ItemGroup>
+      <ClCompile Condition="'%(ClCompile.TemporaryExclude)'=='true'" >
+        <ExcludedFromBuild>false</ExcludedFromBuild>
+        <TemporaryExclude>false</TemporaryExclude>
+      </ClCompile>
+    </ItemGroup>
+  </Target>
+
+</Project>

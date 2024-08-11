@@ -1,0 +1,26 @@
+// I've given this file a custom extension so that visual studio doesn't feel compelled
+// to smash it to bits before rebuilding it in it's own image
+//
+#include "scriptErrorResource.h"
+
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SCRIPTERRDLG DIALOGEX 0, 0, 799, 319
+STYLE DS_CENTER | DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST
+CAPTION "The Witcher 3: Wild Hunt - Script Compilation Errors"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Retry Script Compilation",IDSCRIPTRETRY,427,298,90,14
+    PUSHBUTTON      "Exit Application",IDSCRIPTEXIT,710,298,82,14
+    EDITTEXT        IDC_SCRIPTERR,7,7,785,280,ES_MULTILINE | ES_AUTOHSCROLL | ES_READONLY,WS_EX_LEFTSCROLLBAR
+    PUSHBUTTON      "Skip Script Compilation",IDSCRIPTSKIP,628,298,81,14
+    DEFPUSHBUTTON   "Copy to Clipboard",IDSCRIPTCOPY,519,298,90,14
+END
+
+

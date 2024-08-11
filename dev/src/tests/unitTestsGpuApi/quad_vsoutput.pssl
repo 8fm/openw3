@@ -1,0 +1,6 @@
+struct VS_OUTPUT
+{
+	float4 Position		: S_POSITION;
+	float4 Color		: TEXCOORD0;
+	float2 UV			: TEXCOORD1;
+};

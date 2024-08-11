@@ -1,0 +1,2047 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" TreatAsLocalProperty="OutDir;TargetName;IntDir;PlatformToolset;SharedPreprocessorDefines">
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedConfigurationSetup.props))\SharedConfigurationSetup.props" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{86A8C174-FB8F-42D3-9B60-52299FBEF2C1}</ProjectGuid>
+    <RootNamespace>editor</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <SubSystem>Windows</SubSystem>
+  </PropertyGroup>
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.props))\Shared.props" />
+  <PropertyGroup Label="Configuration">
+    <ProjectPreprocessorDefines>$(SharedPreprocessorDefines);__WXMSW__;__WX__;wxUSE_UNICODE;</ProjectPreprocessorDefines>
+    <ProjectPreprocessorDefines Condition="'$(Configuration)'=='Debug'">$(ProjectPreprocessorDefines);__WXDEBUG__;</ProjectPreprocessorDefines>
+    <ProjectPreprocessorDefines Condition="'$(Configuration)'=='Release' or '$(Configuration)'=='ReleaseGame'">$(ProjectPreprocessorDefines);</ProjectPreprocessorDefines>
+    <ProjectPreprocessorDefines Condition="'$(Configuration)'=='Final'">$(ProjectPreprocessorDefines);</ProjectPreprocessorDefines>
+    <ProjectPreprocessorDefines Condition="'$(Platform)'=='Win32'">$(ProjectPreprocessorDefines);WIN32;</ProjectPreprocessorDefines>
+    <ProjectPreprocessorDefines Condition="'$(Platform)'=='x64'">$(ProjectPreprocessorDefines);_WIN64;</ProjectPreprocessorDefines>
+    <ProjectClDirs>$(SolutionDir)../external/gfx4/Src;$(SolutionDir)../external/gfx4/Include;$(SolutionDir)../external/P4V/$(Platform)/include;$(SolutionDir)../external/wxWidgets-2.9.4\include;$(SolutionDir)../external/wxWidgets-2.9.4\include\msvc;./propgrid/include;$(SolutionDir)../external/hk650r1/Source;$(SolutionDir)../external/devil/$(Platform);$(SolutionDir)../internal/ReTech;$(SolutionDir)../external/loopbackAPI/loopback-capture</ProjectClDirs>
+    <WXLibrariesRoot>$(SolutionDir)../external/recast/lib/Debug;$(SolutionDir)../external/wxwidgets-2.9.4/lib/vc_lib/$(Platform)</WXLibrariesRoot>
+    <WXLibrariesRoot Condition="$(PlatformToolset) == 'v110'">$(SolutionDir)../external/recast/lib/Debug;$(SolutionDir)../external/wxwidgets-2.9.4/lib/vc_lib/vc110/$(Platform)</WXLibrariesRoot>
+    <ProjectLiDirs>$(WXLibrariesRoot);$(SolutionDir)../internal/ReTech/re_archive/lib;$(SolutionDir)../internal/ReTech/re_math/lib;$(SolutionDir)../external/loopbackAPI/x64/DebugDLL</ProjectLiDirs>
+    <ProjectLiIgnore>wxexpat;wxexpatd</ProjectLiIgnore>
+    <ProjectLiDeps Condition="'$(Platform)' == 'x64'">kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;comctl32.lib;loopback-capture.lib</ProjectLiDeps>
+    <ProjectLiDeps Condition="'$(Platform)' == 'x64' and '$(Configuration)' != 'Debug'">$(ProjectLiDeps);re_archive_Release_x64.lib;re_math_Release_x64.lib</ProjectLiDeps>
+    <ProjectLiDeps Condition="'$(Platform)' == 'x64' and '$(Configuration)' == 'Debug'">$(ProjectLiDeps);re_archive_Debug_x64.lib;re_math_Debug_x64.lib</ProjectLiDeps>
+  </PropertyGroup>
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedItemGroups.props))\SharedItemGroups.props" />
+  <ItemGroup>
+    <ClCompile Include="achievementSelection.cpp" />
+    <ClCompile Include="animationListExporter.cpp" />
+    <ClCompile Include="animSetReportDlg.cpp" />
+    <ClCompile Include="animationValidator.cpp" />
+    <ClCompile Include="animFKPosePreviewEditor.cpp" />
+    <ClCompile Include="animFriendPagePointCloudLookAt.cpp" />
+    <ClCompile Include="animFriendPageStepPlayer.cpp" />
+    <ClCompile Include="animIKPosePreviewEditor.cpp" />
+    <ClCompile Include="assetBrowserContextMenuHelper.cpp" />
+    <ClCompile Include="attitudeSearchDialog.cpp" />
+    <ClCompile Include="controlRigPresetsPanel.cpp" />
+    <ClCompile Include="destructionPhysicalRepresentation.cpp" />
+    <ClCompile Include="destructionPreviewComponent.cpp" />
+    <ClCompile Include="dlcListDlg.cpp" />
+    <ClCompile Include="duplicatesFinder.cpp" />
+    <ClCompile Include="entityTagGroupItem.cpp" />
+    <ClCompile Include="errorsListDlg.cpp" />
+    <ClCompile Include="inGameConfigurationDlg.cpp" />
+    <ClCompile Include="dialogEditorMainControlPanel.cpp" />
+    <ClCompile Include="itemsThumbnailGenerator.cpp" />
+    <ClCompile Include="languageSelector.cpp" />
+    <ClCompile Include="localizedStringsWithKeysManager.cpp" />
+    <ClCompile Include="mergedGeometryTool.cpp" />
+    <ClCompile Include="meshMaterialRemapper.cpp" />
+    <ClCompile Include="meshSoundInfo.cpp" />
+    <ClCompile Include="missingTemplatesErrorsDisplayer.cpp" />
+    <ClCompile Include="nodeTransformManager.cpp" />
+    <ClCompile Include="refreshVoicesDlg.cpp" />
+    <ClCompile Include="remappingDialog.cpp" />
+    <ClCompile Include="autoScriptWindow.cpp" />
+    <ClCompile Include="autoSizeListCtrl.cpp" />
+    <ClCompile Include="batchLODGenerator.cpp" />
+    <ClCompile Include="behaviorEditorAnimationUsagePanel.cpp" />
+    <ClCompile Include="behaviorEditorGhostsPanel.cpp" />
+    <ClCompile Include="changeDrawableFlags.cpp" />
+    <ClCompile Include="changeLightChannels.cpp" />
+    <ClCompile Include="chooseRewardXMLCustomEditor.cpp" />
+    <ClCompile Include="controlRigBoneTransformPanel.cpp" />
+    <ClCompile Include="controlRigIKPanel.cpp" />
+    <ClCompile Include="controlVertexHandler.cpp" />
+    <ClCompile Include="dialogEditorFlowCtrl.cpp" />
+    <ClCompile Include="dialogEditor_timeline.cpp" />
+    <ClCompile Include="dialogTimelineItemDebugCommentEvent.cpp" />
+    <ClCompile Include="dialogEditorLocAnalyser.cpp" />
+    <ClCompile Include="editorMemoryBudgets.cpp" />
+    <ClCompile Include="engineConfigProperties.cpp" />
+    <ClCompile Include="entityList.cpp" />
+    <ClCompile Include="entityLootSetupDialog.cpp" />
+    <ClCompile Include="entityMeshGenerator.cpp" />
+    <ClCompile Include="hardAttachmentBonePicker.cpp" />
+    <ClCompile Include="characterDBEditor.cpp" />
+    <ClCompile Include="characterDBPropertyEditor.cpp" />
+    <ClCompile Include="characterEdCustomTypes.cpp" />
+    <ClCompile Include="characterFolderTree.cpp" />
+    <ClCompile Include="characterInheritanceTree.cpp" />
+    <ClCompile Include="characterResourceContainer.cpp" />
+    <ClCompile Include="cutsceneNetPanel.cpp" />
+    <ClCompile Include="controlRigPanel.cpp" />
+    <ClCompile Include="dialogEditorImportW2StringsDlg.cpp" />
+    <ClCompile Include="dialogEditorKeyframeCtrl.cpp" />
+    <ClCompile Include="dialogEditorEditMimicsDlg.cpp" />
+    <ClCompile Include="dialogEditorLocCtrl.cpp" />
+    <ClCompile Include="dialogEditor_net.cpp" />
+    <ClCompile Include="dialogEditor_tools.cpp" />
+    <ClCompile Include="dialogLineSelector.cpp" />
+    <ClCompile Include="dialogEditorHelperEntitiesCtrl.cpp" />
+    <ClCompile Include="dialogEventGenerator_cameras.cpp" />
+    <ClCompile Include="dialogEventGenerator_mimic.cpp" />
+    <ClCompile Include="dialogNetPanel.cpp" />
+    <ClCompile Include="dialogTimelineEventsLinker.cpp" />
+    <ClCompile Include="downscaleBiasDlg.cpp" />
+    <ClCompile Include="entityMimicsPanel.cpp" />
+    <ClCompile Include="enumRefreshableEditor.cpp" />
+    <ClCompile Include="cascadePropertyEditor.cpp" />
+    <ClCompile Include="creatureDefinitionsEditor.cpp" />
+    <ClCompile Include="crowdDebugger.cpp" />
+    <ClCompile Include="curveEditDrawer.cpp" />
+    <ClCompile Include="curveEditionWrapper.cpp" />
+    <ClCompile Include="curveEditorPanelHelper.cpp" />
+    <ClCompile Include="curveEditorTool.cpp" />
+    <ClCompile Include="curveEditorWindow.cpp" />
+    <ClCompile Include="customControlList.cpp" />
+    <ClCompile Include="dataErrorReporter.cpp" />
+    <ClCompile Include="defaultCharactersIterator.cpp" />
+    <ClCompile Include="destructionResetTool.cpp" />
+    <ClCompile Include="detachablePanel.cpp" />
+    <ClCompile Include="dialogAnimationParameterEditor.cpp" />
+    <ClCompile Include="dialogBoneSelectionEditor.cpp" />
+    <ClCompile Include="dialogEditorActorsProvider.cpp" />
+    <ClCompile Include="dialogEditorCameraCtrl.cpp" />
+    <ClCompile Include="dialogEditorDebugger.cpp" />
+    <ClCompile Include="dialogEditorModificationCtrl.cpp" />
+    <ClCompile Include="dialogEditorSceneCtrl.cpp" />
+    <ClCompile Include="dialogEditorSpeakerInput.cpp" />
+    <ClCompile Include="dialogEditorTempLipsyncDlg.cpp" />
+    <ClCompile Include="dialogEditorUtils.cpp" />
+    <ClCompile Include="dialogEditorVideo.cpp" />
+    <ClCompile Include="dialogEditorWorldCtrl.cpp" />
+    <ClCompile Include="dialogEditor_cameras.cpp" />
+    <ClCompile Include="dialogEditor_dialogsets.cpp" />
+    <ClCompile Include="dialogEditor_hacks.cpp" />
+    <ClCompile Include="dialogEditor_mediator.cpp" />
+    <ClCompile Include="dialogEventGenerator.cpp" />
+    <ClCompile Include="dialogEventGeneratorInternals.cpp" />
+    <ClCompile Include="dialogEventGeneratorRuleFactory.cpp" />
+    <ClCompile Include="dialogEventGeneratorSetupDialog.cpp" />
+    <ClCompile Include="dialogEventGenerator_anim.cpp" />
+    <ClCompile Include="dialogSectionTitle.cpp" />
+    <ClCompile Include="dialogTimeline_align.cpp" />
+    <ClCompile Include="dialogTimeline_events.cpp" />
+    <ClCompile Include="dialogTimeline_items.cpp" />
+    <ClCompile Include="dialogTrack.cpp" />
+    <ClCompile Include="directoryWatcher.cpp" />
+    <ClCompile Include="draggableFloatingPointControl.cpp" />
+    <ClCompile Include="editorNames.cpp" />
+    <ClCompile Include="emptyEntityCollector.cpp" />
+    <ClCompile Include="encounterEditor.cpp" />
+    <ClCompile Include="encounterEditTool.cpp" />
+    <ClCompile Include="entityDismemberPanel.cpp" />
+    <ClCompile Include="entityEditorWoundItem.cpp" />
+    <ClCompile Include="entityTagsSelector.cpp" />
+    <ClCompile Include="encounterPhasesEditor.cpp" />
+    <ClCompile Include="exporters\storySceneValidator.cpp" />
+    <ClCompile Include="gameResourceEditor.cpp" />
+    <ClCompile Include="googleanalytics.cpp" />
+    <ClCompile Include="graphConnectionClipboard.cpp" />
+    <ClCompile Include="idBlockOp.cpp" />
+    <ClCompile Include="idInterlocutorIDEditor.cpp" />
+    <ClCompile Include="idConnectorPackEditor.cpp" />
+    <ClCompile Include="idScreenplayEditor.cpp" />
+    <ClCompile Include="idVoice.cpp" />
+    <ClCompile Include="itemSelectionDialogs\mappedClassSelectorDialog.cpp" />
+    <ClCompile Include="itemSelectionDialogs\spawnTreeNodeSelector.cpp" />
+    <ClCompile Include="lightEntityCollector.cpp" />
+    <ClCompile Include="lootEditor.cpp" />
+    <ClCompile Include="curveResourceEditor.cpp" />
+    <ClCompile Include="lootNameSelectionEditor.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="materialValueMappingEditor.cpp" />
+    <ClCompile Include="materialValueMappingItem.cpp" />
+    <ClCompile Include="minimapGeneratorTool.cpp" />
+    <ClCompile Include="multiCurvePropertyEditor.cpp" />
+    <ClCompile Include="netPanel.cpp" />
+    <ClCompile Include="objectInspector.cpp" />
+    <ClCompile Include="odbcMgr.cpp" />
+    <ClCompile Include="patToolPanel.cpp" />
+    <ClCompile Include="playGoChunkSelector.cpp" />
+    <ClCompile Include="presets.cpp" />
+    <ClCompile Include="presetsBox.cpp" />
+    <ClCompile Include="previewItem.cpp" />
+    <ClCompile Include="propertyDialog.cpp" />
+    <ClCompile Include="propertyRecurrentBrowser.cpp" />
+    <ClCompile Include="redUserPrivileges.cpp" />
+    <ClCompile Include="resourceIterator.cpp" />
+    <ClCompile Include="sceneAnimationReporter.cpp" />
+    <ClCompile Include="sceneRecorder.cpp" />
+    <ClCompile Include="sceneValidator.cpp" />
+    <ClCompile Include="sceneValidator_events.cpp" />
+    <ClCompile Include="simplexTreeEditor.cpp" />
+    <ClCompile Include="changeMaterialFlags.cpp" />
+    <ClCompile Include="spawnTreeEditor.cpp" />
+    <ClCompile Include="environmentPointEdit.cpp" />
+    <ClCompile Include="exporters\customSceneExporters.cpp" />
+    <ClCompile Include="exporters\gameplayEntityLocalizationExporter.cpp" />
+    <ClCompile Include="exporters\localizationExporter.cpp" />
+    <ClCompile Include="exporters\locStringsWithKeysLocalizationExporter.cpp" />
+    <ClCompile Include="exporters\sceneLocalizationExporter.cpp" />
+    <ClCompile Include="exporters\storySceneExporter.cpp" />
+    <ClCompile Include="fileGrid.cpp" />
+    <ClCompile Include="gameplayParamEditor.cpp" />
+    <ClCompile Include="ghostConfigDialog.cpp" />
+    <ClCompile Include="guiResourceEditor.cpp" />
+    <ClCompile Include="guiResourceGraphEditor.cpp" />
+    <ClCompile Include="iconGrid.cpp" />
+    <ClCompile Include="interactiveDialogEditor.cpp" />
+    <ClCompile Include="interactiveDialogGraphEditor.cpp" />
+    <ClCompile Include="interactivePreviewPanel.cpp" />
+    <ClCompile Include="itemSelectionDialogs\behaviorTreeBlockTypeSelector.cpp" />
+    <ClCompile Include="itemSelectionDialogs\behaviorTreeScriptTaskSelector.cpp" />
+    <ClCompile Include="itemSelectionDialogs\classSelectorDialog.cpp" />
+    <ClCompile Include="journalLocalizationExporter.cpp" />
+    <ClCompile Include="lipsyncDataSceneExporter.cpp" />
+    <ClCompile Include="markerTools.cpp" />
+    <ClCompile Include="meshLiveBindings.cpp" />
+    <ClCompile Include="meshPreviewComponent.cpp" />
+    <ClCompile Include="meshTypePreviewComponent.cpp" />
+    <ClCompile Include="mimicPoseSelector.cpp" />
+    <ClCompile Include="dataError.cpp" />
+    <ClCompile Include="poiEditor.cpp" />
+    <ClCompile Include="popupNotification.cpp" />
+    <ClCompile Include="previewWorld.cpp" />
+    <ClCompile Include="screenshotEditor.cpp" />
+    <ClCompile Include="reviewEditor.cpp" />
+    <ClCompile Include="selectFromListDialog.cpp" />
+    <ClCompile Include="animaitonSelectionEditor.cpp" />
+    <ClCompile Include="animationEditorUtils.cpp" />
+    <ClCompile Include="animationParamPanel.cpp" />
+    <ClCompile Include="animationPreviewGhost.cpp" />
+    <ClCompile Include="animationPreview.cpp" />
+    <ClCompile Include="animationPreviewPostprocess.cpp" />
+    <ClCompile Include="animationReporter.cpp" />
+    <ClCompile Include="animationReporterNodes.cpp" />
+    <ClCompile Include="animationReporterRecords.cpp" />
+    <ClCompile Include="animationReporterScriptAnim.cpp" />
+    <ClCompile Include="animationReporterSound.cpp" />
+    <ClCompile Include="animationReporterTodoList.cpp" />
+    <ClCompile Include="animationReporterViewAnimations.cpp" />
+    <ClCompile Include="animationReporterViewAnimsets.cpp" />
+    <ClCompile Include="animationReporterViewAp.cpp" />
+    <ClCompile Include="animationReporterViewBehaviors.cpp" />
+    <ClCompile Include="animationReporterViewEntities.cpp" />
+    <ClCompile Include="animationReporterViewExternalAnims.cpp" />
+    <ClCompile Include="animationTrajectoryUtils.cpp" />
+    <ClCompile Include="animationTreeBrowser.cpp" />
+    <ClCompile Include="animBrowserTrajectory.cpp" />
+    <ClCompile Include="animBuilder.cpp" />
+    <ClCompile Include="animBuilderTimeline.cpp" />
+    <ClCompile Include="animFriend.cpp" />
+    <ClCompile Include="animFriendPage.cpp" />
+    <ClCompile Include="animFriendPageHitReaction.cpp" />
+    <ClCompile Include="animFriendPageIkAttack.cpp" />
+    <ClCompile Include="animFriendPreview.cpp" />
+    <ClCompile Include="animPlot.cpp" />
+    <ClCompile Include="animationReporterSerialize.cpp" />
+    <ClCompile Include="app.cpp" />
+    <ClCompile Include="behaviorAnimationBrowser.cpp" />
+    <ClCompile Include="behaviorEditorNodes.cpp" />
+    <ClCompile Include="behTreeEditedItem.cpp" />
+    <ClCompile Include="behTreePropertyEditor.cpp" />
+    <ClCompile Include="bezierTool.cpp" />
+    <ClCompile Include="bgViewer.cpp" />
+    <ClCompile Include="cameraPreviewTool.cpp" />
+    <ClCompile Include="characterEntityEditor.cpp" />
+    <ClCompile Include="checkListDlg.cpp" />
+    <ClCompile Include="choice.cpp" />
+    <ClCompile Include="chooseItemCustomEditor.cpp" />
+    <ClCompile Include="chooseItemDialog.cpp" />
+    <ClCompile Include="chooseRewardCustomEditor.cpp" />
+    <ClCompile Include="classHierarchyMapper.cpp" />
+    <ClCompile Include="clipboardData.cpp" />
+    <ClCompile Include="communityEmbeddedCustomEditor.cpp" />
+    <ClCompile Include="controlRigEd.cpp" />
+    <ClCompile Include="cutsceneEntityControlPanel.cpp" />
+    <ClCompile Include="dialogEditorChangePosePropertyEditor.cpp" />
+    <ClCompile Include="dialogEditorChangeSlotPropertyEditor.cpp" />
+    <ClCompile Include="dialogEditorDialogsetPanel.cpp" />
+    <ClCompile Include="directorySelectionEditor.cpp" />
+    <ClCompile Include="entityVoiceTagEditor.cpp" />
+    <ClCompile Include="itemSelectionDialogs\basicSelectorDialogPropertyEditor.cpp" />
+    <ClCompile Include="itemSelectionDialogs\inventoryCategorySelectorDialog.cpp" />
+    <ClCompile Include="itemSelectionDialogs\inventoryItemSelectorDialog.cpp" />
+    <ClCompile Include="itemSelectionDialogs\voiceTagSelectorDialog.cpp" />
+    <ClCompile Include="multiBoolDlg.cpp" />
+    <ClCompile Include="entityAnimSlotsPanel.cpp" />
+    <ClCompile Include="entityConverterWindow.cpp" />
+    <ClCompile Include="enumVariantSelection.cpp" />
+    <ClCompile Include="helpBubble.cpp" />
+    <ClCompile Include="huntingClueSelector.cpp" />
+    <ClCompile Include="htmlLog.cpp" />
+    <ClCompile Include="importTextureSourceData.cpp" />
+    <ClCompile Include="itemSelectionDialogs\componentSelectorDialog.cpp" />
+    <ClCompile Include="itemSelectionDialogs\entityClassSelectorDialog.cpp" />
+    <ClCompile Include="itemSelectionDialogs\itemSelectorDialogBase.cpp" />
+    <ClCompile Include="itemSelectionDialogs\simpleStringSelector.cpp" />
+    <ClCompile Include="journalEditor.cpp" />
+    <ClCompile Include="journalPropertySelector.cpp" />
+    <ClCompile Include="journalSelectorWidget.cpp" />
+    <ClCompile Include="journalTree.cpp" />
+    <ClCompile Include="lipsyncPreview.cpp" />
+    <ClCompile Include="lodAssigner.cpp" />
+    <ClCompile Include="mapPinValidatorWindow.cpp" />
+    <ClCompile Include="massActionDialog.cpp" />
+    <ClCompile Include="meshPhysicalRepresentation.cpp" />
+    <ClCompile Include="npcConverter.cpp" />
+    <ClCompile Include="objectClipboard.cpp" />
+    <ClCompile Include="particleCurveEditor.cpp" />
+    <ClCompile Include="pathlibEditor.cpp" />
+    <ClCompile Include="perlinGenerator.cpp" />
+    <ClCompile Include="physicalCollisionSelector.cpp" />
+    <ClCompile Include="previewCooker.cpp" />
+    <ClCompile Include="editorAnimCacheGen.cpp" />
+    <ClCompile Include="editorEngine.cpp" />
+    <ClCompile Include="entityAnimationPanel.cpp" />
+    <ClCompile Include="entityEditorSlotItem.cpp" />
+    <ClCompile Include="entityHeadsPanel.cpp" />
+    <ClCompile Include="frame.cpp" />
+    <ClCompile Include="spawnTreeNodeProxy.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="sqlDeleteString.cpp" />
+    <ClCompile Include="sqlDeleteStringInfo.cpp" />
+    <ClCompile Include="sqlGetNextStringId.cpp" />
+    <ClCompile Include="sqlGetRedUserPrivileges.cpp" />
+    <ClCompile Include="sqlInsertString.cpp" />
+    <ClCompile Include="sqlInsertStringInfo.cpp" />
+    <ClCompile Include="sqlSelectStrings.cpp" />
+    <ClCompile Include="sqlSelectStringsWithKeys.cpp" />
+    <ClCompile Include="stickersEditor.cpp" />
+    <ClCompile Include="shapesPreviewItem.cpp" />
+    <ClCompile Include="editorDataPresets.cpp" />
+    <ClCompile Include="storyScenePreviewPlayer.cpp" />
+    <ClCompile Include="swfImagePanel.cpp" />
+    <ClCompile Include="swfViewer.cpp" />
+    <ClCompile Include="templateInsertion.cpp" />
+    <ClCompile Include="stripeEdit.cpp" />
+    <ClCompile Include="terrainEditWorkingBuffers.cpp" />
+    <ClCompile Include="terrainTextureUsageTool.cpp" />
+    <ClCompile Include="textControl.cpp" />
+    <ClCompile Include="textureArrayGrid.cpp" />
+    <ClCompile Include="texturePreviewPanel.cpp" />
+    <ClCompile Include="textureViewer.cpp" />
+    <ClCompile Include="timelineImpl\drawBuffer.cpp" />
+    <ClCompile Include="timelineImpl\drawGroup.cpp" />
+    <ClCompile Include="timelineImpl\drawGroupDialogTracks.cpp" />
+    <ClCompile Include="timelineImpl\drawGroupTimebar.cpp" />
+    <ClCompile Include="timelineImpl\drawGroupTracks.cpp" />
+    <ClCompile Include="timelineImpl\drawGroupVolatile.cpp" />
+    <ClCompile Include="timelineImpl\drawing.cpp" />
+    <ClCompile Include="timeValueEditor.cpp" />
+    <ClCompile Include="track.cpp" />
+    <ClCompile Include="traitEdCustomTypes.cpp" />
+    <ClCompile Include="traitEditor.cpp" />
+    <ClCompile Include="traitEmbeddedCustomEditor.cpp" />
+    <ClCompile Include="traitListSelection.cpp" />
+    <ClCompile Include="traitValidator.cpp" />
+    <ClCompile Include="undoAnimBrowser.cpp" />
+    <ClCompile Include="undoAnimEventsEditor.cpp" />
+    <ClCompile Include="undoBehaviorGraph.cpp" />
+    <ClCompile Include="undoBehTreeEditor.cpp" />
+    <ClCompile Include="undoDialogEditor.cpp" />
+    <ClCompile Include="undoEntityEditor.cpp" />
+    <ClCompile Include="umbraTool.cpp" />
+    <ClCompile Include="undoGraph.cpp" />
+    <ClCompile Include="undoGridEditor.cpp" />
+    <ClCompile Include="undoGroupingObjects.cpp" />
+    <ClCompile Include="undoHistoryFrame.cpp" />
+    <ClCompile Include="undoJobTreeEditor.cpp" />
+    <ClCompile Include="undoMaterialEditor.cpp" />
+    <ClCompile Include="undoMeshEditor.cpp" />
+    <ClCompile Include="undoQuestGraph.cpp" />
+    <ClCompile Include="undoSpawnTreeEditor.cpp" />
+    <ClCompile Include="undoStripe.cpp" />
+    <ClCompile Include="undoTimeLine.cpp" />
+    <ClCompile Include="undoTransform.cpp" />
+    <ClCompile Include="undoTreeEditor.cpp" />
+    <ClCompile Include="undoVegetation.cpp" />
+    <ClCompile Include="inventoryReport.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="maraudersMapAIDebugCanvas.cpp" />
+    <ClCompile Include="resourceFinder.cpp" />
+    <ClCompile Include="resources.cpp" />
+    <ClCompile Include="dropTarget.cpp" />
+    <ClCompile Include="colorPicker.cpp" />
+    <ClCompile Include="colorPickerAdvanced.cpp" />
+    <ClCompile Include="canvas.cpp" />
+    <ClCompile Include="rewardEditor.cpp" />
+    <ClCompile Include="rewardsSummary.cpp" />
+    <ClCompile Include="sceneEmotionStatesSelection.cpp" />
+    <ClCompile Include="sceneUsageExporter.cpp" />
+    <ClCompile Include="scriptCompilationErrorsDialog.cpp" />
+    <ClCompile Include="staticAnimationSelection.cpp" />
+    <ClCompile Include="stringSelectorTool.cpp" />
+    <ClCompile Include="propertiesBrowserWithStatusbar.cpp" />
+    <ClCompile Include="propertiesFrame.cpp" />
+    <ClCompile Include="propertiesPage.cpp" />
+    <ClCompile Include="propertiesPageHavok.cpp" />
+    <ClCompile Include="basePropItem.cpp" />
+    <ClCompile Include="propertyButton.cpp" />
+    <ClCompile Include="entityHandleEditor.cpp" />
+    <ClCompile Include="materialPropItem.cpp" />
+    <ClCompile Include="objectsRootItem.cpp" />
+    <ClCompile Include="propertyItem.cpp" />
+    <ClCompile Include="propertyItemArray.cpp" />
+    <ClCompile Include="propertyItemBitfield.cpp" />
+    <ClCompile Include="propertyItemClass.cpp" />
+    <ClCompile Include="propertyItemEngineQsTransform.cpp" />
+    <ClCompile Include="propertyItemEngineTransform.cpp" />
+    <ClCompile Include="propertyItemEnum.cpp" />
+    <ClCompile Include="propertyItemPointer.cpp" />
+    <ClCompile Include="propertyItemSimpleCurve.cpp" />
+    <ClCompile Include="propertyItemSoftHandle.cpp" />
+    <ClCompile Include="baseGroupItem.cpp" />
+    <ClCompile Include="classGroupItem.cpp" />
+    <ClCompile Include="componentGroupItem.cpp" />
+    <ClCompile Include="dynamicPropGroupItem.cpp" />
+    <ClCompile Include="matEngineValueGroupItem.cpp" />
+    <ClCompile Include="materialGroupItem.cpp" />
+    <ClCompile Include="materialInstanceGroupItem.cpp" />
+    <ClCompile Include="2daArrayExclusiveValueEdition.cpp" />
+    <ClCompile Include="2daArrayValueSelection.cpp" />
+    <ClCompile Include="2daTagListBoxEditor.cpp" />
+    <ClCompile Include="appearanceList.cpp" />
+    <ClCompile Include="functionListSelection.cpp" />
+    <ClCompile Include="cameraShakeEnumList.cpp" />
+    <ClCompile Include="classList.cpp" />
+    <ClCompile Include="componentListSelection.cpp" />
+    <ClCompile Include="curvePropertyEditor.cpp" />
+    <ClCompile Include="effectBehaviorEventListSelection.cpp" />
+    <ClCompile Include="effectBoneListSelection.cpp" />
+    <ClCompile Include="effectParameterListSelection.cpp" />
+    <ClCompile Include="entityOnLayerReferenceEditor.cpp" />
+    <ClCompile Include="enumList.cpp" />
+    <ClCompile Include="itemListSelection.cpp" />
+    <ClCompile Include="jobActionAnimSelection.cpp" />
+    <ClCompile Include="layerGroupListSelection.cpp" />
+    <ClCompile Include="layerGroupTreeSelection.cpp" />
+    <ClCompile Include="layerGuidListSelection.cpp" />
+    <ClCompile Include="listBoxEditor.cpp" />
+    <ClCompile Include="questBehaviorGraphProperties.cpp" />
+    <ClCompile Include="scriptedEnumEditor.cpp" />
+    <ClCompile Include="selectionList.cpp" />
+    <ClCompile Include="slider.cpp" />
+    <ClCompile Include="soundMaterialSelector.cpp" />
+    <ClCompile Include="spawnsetPhasesEditor.cpp" />
+    <ClCompile Include="terrainCursor.cpp" />
+    <ClCompile Include="terrainEditTool.cpp" />
+    <ClCompile Include="terrainTileBufferModifiers.cpp" />
+    <ClCompile Include="textEditor.cpp" />
+    <ClCompile Include="textureArrayViewer.cpp" />
+    <ClCompile Include="textureGroupSelection.cpp" />
+    <ClCompile Include="typeList.cpp" />
+    <ClCompile Include="undoTerrain.cpp" />
+    <ClCompile Include="dialogTimelineItemInterpolationEvent.cpp" />
+    <ClCompile Include="updateFocusEntityTemplatesDlg.cpp" />
+    <ClCompile Include="updateThumbnailDialog.cpp" />
+    <ClCompile Include="vegetationEditTool.cpp" />
+    <ClCompile Include="vegetationGenerator.cpp" />
+    <ClCompile Include="vertexPaintTool.cpp" />
+    <ClCompile Include="voice.cpp" />
+    <ClCompile Include="voiceEditor.cpp" />
+    <ClCompile Include="voiceTagListEditor.cpp" />
+    <ClCompile Include="w2StringImporter.cpp" />
+    <ClCompile Include="whatsNewDlg.cpp" />
+    <ClCompile Include="widgetItemList.cpp" />
+    <ClCompile Include="output.cpp" />
+    <ClCompile Include="sceneExplorer.cpp" />
+    <ClCompile Include="draggedSpinButton.cpp" />
+    <ClCompile Include="selectionProperties.cpp" />
+    <ClCompile Include="graphEditor.cpp" />
+    <ClCompile Include="graphEditorLayout.cpp" />
+    <ClCompile Include="graphEditorMenu.cpp" />
+    <ClCompile Include="filterPanel.cpp" />
+    <ClCompile Include="curveEditor.cpp" />
+    <ClCompile Include="curveEditorCanvas.cpp" />
+    <ClCompile Include="environmentProperties.cpp" />
+    <ClCompile Include="toggleButtonPanel.cpp" />
+    <ClCompile Include="toggleButton.cpp" />
+    <ClCompile Include="spinSliderControl.cpp" />
+    <ClCompile Include="animBrowser.cpp" />
+    <ClCompile Include="animBrowserBehavior.cpp" />
+    <ClCompile Include="animBrowserCompression.cpp" />
+    <ClCompile Include="animBrowserPreview.cpp" />
+    <ClCompile Include="animBrowserPasteEventsRelativeToOtherEventDialog.cpp" />
+    <ClCompile Include="animBrowserFindEventDialog.cpp" />
+    <ClCompile Include="animBrowserRecompressDialog.cpp" />
+    <ClCompile Include="animEventsTimeline.cpp" />
+    <ClCompile Include="draggablePanel.cpp" />
+    <ClCompile Include="treeListCtrl.cpp" />
+    <ClCompile Include="treeListCtrl_XRC.cpp" />
+    <ClCompile Include="gradientCtrl.cpp" />
+    <ClCompile Include="gradientCtrl_XRC.cpp" />
+    <ClCompile Include="gradientEditor.cpp" />
+    <ClCompile Include="smartLayout.cpp" />
+    <ClCompile Include="sheet\sheet.cpp" />
+    <ClCompile Include="sheet\sheetatr.cpp" />
+    <ClCompile Include="sheet\sheetedg.cpp" />
+    <ClCompile Include="sheet\sheetedt.cpp" />
+    <ClCompile Include="sheet\sheetren.cpp" />
+    <ClCompile Include="sheet\sheetsel.cpp" />
+    <ClCompile Include="sheet\sheetspt.cpp" />
+    <ClCompile Include="sheet\sheettbl.cpp" />
+    <ClCompile Include="sheet\sheetval.cpp" />
+    <ClCompile Include="audioEventBrowser.cpp" />
+    <ClCompile Include="soundPropertyEditors.cpp" />
+    <ClCompile Include="treeEditor.cpp" />
+    <ClCompile Include="layerGroupTree.cpp" />
+    <ClCompile Include="layerGroupList.cpp" />
+    <ClCompile Include="wizardImpl.cpp" />
+    <ClCompile Include="editorWizardDefinition.cpp" />
+    <ClCompile Include="wizardTemplate.cpp" />
+    <ClCompile Include="worldMassActions.cpp" />
+    <ClCompile Include="worldProperties.cpp" />
+    <ClCompile Include="timeline.cpp" />
+    <ClCompile Include="skeletonEditor.cpp" />
+    <ClCompile Include="mimicFacesEditor.cpp" />
+    <ClCompile Include="assetBrowser.cpp">
+      <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ShowIncludes>
+      <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='ReleaseGame|Win32'">false</ShowIncludes>
+      <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">false</ShowIncludes>
+      <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ShowIncludes>
+      <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='ReleaseGame|x64'">false</ShowIncludes>
+      <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='Final|x64'">false</ShowIncludes>
+      <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='No opts|Win32'">false</ShowIncludes>
+      <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='No opts|x64'">false</ShowIncludes>
+    </ClCompile>
+    <ClCompile Include="resourceView.cpp" />
+    <ClCompile Include="versionControlIconsPainter.cpp" />
+    <ClCompile Include="localizationToolsFrame.cpp" />
+    <ClCompile Include="resourceSorter.cpp" />
+    <ClCompile Include="moveEntities.cpp" />
+    <ClCompile Include="entitiesBrowser.cpp" />
+    <ClCompile Include="gameInputSelection.cpp" />
+    <ClCompile Include="genericResourceEditor.cpp" />
+    <ClCompile Include="entityAppearanceSelection.cpp" />
+    <ClCompile Include="entityEditor.cpp" />
+    <ClCompile Include="entityGraphEditor.cpp" />
+    <ClCompile Include="entityPreviewPanel.cpp" />
+    <ClCompile Include="VariantEditor.cpp" />
+    <ClCompile Include="materialListManager.cpp" />
+    <ClCompile Include="meshEditor.cpp" />
+    <ClCompile Include="meshLODList.cpp" />
+    <ClCompile Include="meshMaterialList.cpp" />
+    <ClCompile Include="meshPreviewPanel.cpp" />
+    <ClCompile Include="meshStats.cpp" />
+    <ClCompile Include="meshStatsViewerFrame.cpp" />
+    <ClCompile Include="materialEditor.cpp" />
+    <ClCompile Include="materialGraphEditor.cpp" />
+    <ClCompile Include="materialPreviewPanel.cpp" />
+    <ClCompile Include="shaderView.cpp" />
+    <ClCompile Include="behaviorAnimSelection.cpp" />
+    <ClCompile Include="behaviorAnimationLister.cpp" />
+    <ClCompile Include="behaviorBoneMultiSelection.cpp" />
+    <ClCompile Include="behaviorBoneSelection.cpp" />
+    <ClCompile Include="behaviorBoneSelectionDlg.cpp" />
+    <ClCompile Include="behaviorControlPanel.cpp" />
+    <ClCompile Include="behaviorDebugger.cpp" />
+    <ClCompile Include="behaviorDebugVisualizer.cpp" />
+    <ClCompile Include="behaviorEditor.cpp" />
+    <ClCompile Include="behaviorEditorPanel.cpp" />
+    <ClCompile Include="behaviorGraphAnalyser.cpp" />
+    <ClCompile Include="behaviorGraphEditor.cpp" />
+    <ClCompile Include="behaviorGraphPoseTracer.cpp" />
+    <ClCompile Include="behaviorNodeSearcher.cpp" />
+    <ClCompile Include="behaviorPreviewPanel.cpp" />
+    <ClCompile Include="behaviorProperties.cpp" />
+    <ClCompile Include="behaviorRagdollPanel.cpp" />
+    <ClCompile Include="behaviorSlotTester.cpp" />
+    <ClCompile Include="behaviorValueSelection.cpp" />
+    <ClCompile Include="behaviorVariableEditor.cpp" />
+    <ClCompile Include="emitterGraphEditor.cpp" />
+    <ClCompile Include="particleEditor.cpp" />
+    <ClCompile Include="particlePreviewPanel.cpp" />
+    <ClCompile Include="particlePropertiesBrowser.cpp" />
+    <ClCompile Include="tagEditor.cpp" />
+    <ClCompile Include="tagMiniEditor.cpp" />
+    <ClCompile Include="tagPropertyEditor.cpp" />
+    <ClCompile Include="tagTreeCtrl.cpp" />
+    <ClCompile Include="tagViewEditor.cpp" />
+    <ClCompile Include="2daTagListUpdater.cpp" />
+    <ClCompile Include="appearanceTagListUpdater.cpp" />
+    <ClCompile Include="tagListUpdater.cpp" />
+    <ClCompile Include="gameTimeEditor.cpp" />
+    <ClCompile Include="gameTimePropertyEditor.cpp" />
+    <ClCompile Include="shortcutsEditor.cpp" />
+    <ClCompile Include="spawnSetActionEditor.cpp" />
+    <ClCompile Include="spawnSetDebugger.cpp" />
+    <ClCompile Include="spawnSetEditor.cpp" />
+    <ClCompile Include="2dArrayEditor.cpp" />
+    <ClCompile Include="dialogEditor.cpp" />
+    <ClCompile Include="dialogEditorPage.cpp" />
+    <ClCompile Include="dialogGraphEditor.cpp" />
+    <ClCompile Include="dialogPreview.cpp" />
+    <ClCompile Include="dialogTimeline.cpp" />
+    <ClCompile Include="dialogEditorChoice.cpp" />
+    <ClCompile Include="dialogEditorChoiceLine.cpp" />
+    <ClCompile Include="dialogEditorComment.cpp" />
+    <ClCompile Include="dialogEditorCutscene.cpp" />
+    <ClCompile Include="dialogEditorElement.cpp" />
+    <ClCompile Include="dialogEditorInjectedChoiceLine.cpp" />
+    <ClCompile Include="dialogEditorLine.cpp" />
+    <ClCompile Include="dialogEditorLineTextDecorator.cpp" />
+    <ClCompile Include="dialogEditorQuestChoice.cpp" />
+    <ClCompile Include="dialogEditorScriptLine.cpp" />
+    <ClCompile Include="dialogEditorSection.cpp" />
+    <ClCompile Include="dialogHandlerFactory.cpp" />
+    <ClCompile Include="tagEditorHandler.cpp" />
+    <ClCompile Include="dialogUtilityHandlers.cpp" />
+    <ClCompile Include="dialogEditorActorPropertyEditor.cpp" />
+    <ClCompile Include="dialogEditorAnimationPropertyEditor.cpp" />
+    <ClCompile Include="dialogEditorBehaviorEventPropertyEditor.cpp" />
+    <ClCompile Include="dialogEditorCustomCameraSelector.cpp" />
+    <ClCompile Include="dialogEditorEnterActorPropertyEditor.cpp" />
+    <ClCompile Include="dialogEditorSettingPropertyEditor.cpp" />
+    <ClCompile Include="mimicsAnimationSelector.cpp" />
+    <ClCompile Include="stringPropertyEditor.cpp" />
+    <ClCompile Include="effectEditor.cpp" />
+    <ClCompile Include="effectProperties.cpp" />
+    <ClCompile Include="effectTracksEditor.cpp" />
+    <ClCompile Include="cutsceneControlPanel.cpp" />
+    <ClCompile Include="communityDebugger.cpp" />
+    <ClCompile Include="communityDebuggerEditor.cpp" />
+    <ClCompile Include="communityEditor.cpp" />
+    <ClCompile Include="communityValidator.cpp" />
+    <ClCompile Include="skeletonPreview.cpp" />
+    <ClCompile Include="jobTreeEditor.cpp" />
+    <ClCompile Include="jobTreePreviewPanel.cpp" />
+    <ClCompile Include="maraudersMap.cpp" />
+    <ClCompile Include="maraudersMapCanvas.cpp" />
+    <ClCompile Include="maraudersMapItems.cpp" />
+    <ClCompile Include="questEditor.cpp" />
+    <ClCompile Include="questEditorUndoStep.cpp" />
+    <ClCompile Include="questGraphEditor.cpp" />
+    <ClCompile Include="factsDBEditor.cpp" />
+    <ClCompile Include="gameFactEditor.cpp" />
+    <ClCompile Include="questControlledNPCsLog.cpp" />
+    <ClCompile Include="questExecutionLog.cpp" />
+    <ClCompile Include="questScenesDebugger.cpp" />
+    <ClCompile Include="questsDebugger.cpp" />
+    <ClCompile Include="questThreadsDebugger.cpp" />
+    <ClCompile Include="questGraphSearcher.cpp" />
+    <ClCompile Include="gridCellEditors.cpp" />
+    <ClCompile Include="gridEditor.cpp" />
+    <ClCompile Include="gridOutline.cpp" />
+    <ClCompile Include="gridPropertyWrapper.cpp" />
+    <ClCompile Include="gridCustomCellEditors.cpp" />
+    <ClCompile Include="gridCustomColumns.cpp" />
+    <ClCompile Include="gridCustomTypes.cpp" />
+    <ClCompile Include="cutsceneEditor.cpp" />
+    <ClCompile Include="cutsceneEffectsPropertyEditors.cpp" />
+    <ClCompile Include="cutsceneTimeline.cpp" />
+    <ClCompile Include="behTreeEditor.cpp" />
+    <ClCompile Include="behTreeGraphEditor.cpp" />
+    <ClCompile Include="floatValueEditor.cpp" />
+    <ClCompile Include="animEventsEditor.cpp" />
+    <ClCompile Include="localizedStringEditor.cpp" />
+    <ClCompile Include="localizedStringsEditor.cpp" />
+    <ClCompile Include="localizedStringsWithKeys.cpp" />
+    <ClCompile Include="attitudeEditor.cpp" />
+    <ClCompile Include="steeringEditor.cpp" />
+    <ClCompile Include="steeringGraphEditor.cpp" />
+    <ClCompile Include="reactionsDebugger.cpp" />
+    <ClCompile Include="previewPanel.cpp" />
+    <ClCompile Include="renderingPanel.cpp" />
+    <ClCompile Include="renderingWindow.cpp" />
+    <ClCompile Include="worldEditPanel.cpp" />
+    <ClCompile Include="viewportWidgetBase.cpp" />
+    <ClCompile Include="viewportWidgetLines.cpp" />
+    <ClCompile Include="viewportWidgetManager.cpp" />
+    <ClCompile Include="viewportWidgetMoveAxis.cpp" />
+    <ClCompile Include="viewportWidgetMovePlane.cpp" />
+    <ClCompile Include="viewportWidgetRotateAxis.cpp" />
+    <ClCompile Include="viewportWidgetScaleAxis.cpp" />
+    <ClCompile Include="viewportWidgetScalePlane.cpp" />
+    <ClCompile Include="viewportWidgetScaleUniform.cpp" />
+    <ClCompile Include="worldSceneDebugger.cpp" />
+    <ClCompile Include="worldSelectionCustomEditor.cpp" />
+    <ClCompile Include="wxAUIRed.cpp" />
+    <ClCompile Include="wxThumbnailImageLoader.cpp" />
+    <ClCompile Include="editorTool.cpp" />
+    <ClCompile Include="editorToolContext.cpp" />
+    <ClCompile Include="toolsPanel.cpp" />
+    <ClCompile Include="areaVertexEdit.cpp" />
+    <ClCompile Include="brushFaceTool.cpp" />
+    <ClCompile Include="textDialog.cpp" />
+    <ClCompile Include="spriteEdit.cpp" />
+    <ClCompile Include="cutsceneTool.cpp" />
+    <ClCompile Include="rulerTool.cpp" />
+    <ClCompile Include="worldEnvironmentEditor.cpp" />
+    <ClCompile Include="sceneEdit.cpp" />
+    <ClCompile Include="sceneExporter.cpp" />
+    <ClCompile Include="collisionMemToolModel.cpp" />
+    <ClCompile Include="collisionMemUsageTool.cpp" />
+    <ClCompile Include="collisionObjSizeCalc.cpp" />
+    <ClCompile Include="worldTreeTraverser.cpp" />
+    <ClCompile Include="brushBuilderCube.cpp" />
+    <ClCompile Include="brushPanel.cpp" />
+    <ClCompile Include="areaPivotEdit.cpp" />
+    <ClCompile Include="pivot.cpp" />
+    <ClCompile Include="seedTool.cpp" />
+    <ClCompile Include="gardenerTool.cpp" />
+    <ClCompile Include="staticCameraTool.cpp" />
+    <ClCompile Include="playAnimTool.cpp" />
+    <ClCompile Include="selectionEditor.cpp" />
+    <ClCompile Include="undoCreate.cpp" />
+    <ClCompile Include="undoManager.cpp" />
+    <ClCompile Include="undoProperty.cpp" />
+    <ClCompile Include="undoSelection.cpp" />
+    <ClCompile Include="undoStep.cpp" />
+    <ClCompile Include="undoToolSwitch.cpp" />
+    <ClCompile Include="undoVertex.cpp" />
+    <ClCompile Include="win32feedback.cpp" />
+    <ClCompile Include="versionControl.cpp" />
+    <ClCompile Include="versionControlWrapper.cpp" />
+    <ClCompile Include="wxVersionControlInterface.cpp" />
+    <ClCompile Include="aboutDlg.cpp" />
+    <ClCompile Include="clientDlg.cpp" />
+    <ClCompile Include="comboBoxDialog.cpp" />
+    <ClCompile Include="commonDlgs.cpp" />
+    <ClCompile Include="displayItemDlg.cpp" />
+    <ClCompile Include="fileDlg.cpp" />
+    <ClCompile Include="fileHistoryDlg.cpp" />
+    <ClCompile Include="importDlg.cpp" />
+    <ClCompile Include="inputBoxDlg.cpp" />
+    <ClCompile Include="reloadDialog.cpp" />
+    <ClCompile Include="saveDlg.cpp" />
+    <ClCompile Include="submitDialog.cpp" />
+    <ClCompile Include="virtualMemWalkerDlg.cpp" />
+    <ClCompile Include="configDirectory.cpp" />
+    <ClCompile Include="configManager.cpp" />
+    <ClCompile Include="meshColoringScheme.cpp" />
+    <ClCompile Include="assertMsgImp.cpp" />
+    <ClCompile Include="build.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="editorClasses.cpp" />
+    <ClCompile Include="fileWatcher.cpp" />
+    <ClCompile Include="numberRangePropertyEditor.cpp" />
+    <ClCompile Include="sceneDialogsetEditor.cpp" />
+    <ClCompile Include="sceneDialogsetPreviewPanel.cpp" />
+    <ClCompile Include="sceneDialogsetsPropertyEditors.cpp" />
+    <ClCompile Include="utils.cpp" />
+    <ClCompile Include="xmlErrorsDisplayer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="aaEditorIncludes.h" />
+    <ClInclude Include="achievementSelection.h" />
+    <ClInclude Include="animationListExporter.h" />
+    <ClInclude Include="animSetReportDlg.h" />
+    <ClInclude Include="animationValidator.h" />
+    <ClInclude Include="animFKPosePreviewEditor.h" />
+    <ClInclude Include="animFriendPagePointCloudLookAt.h" />
+    <ClInclude Include="animFriendPageStepPlayer.h" />
+    <ClInclude Include="animIKPosePreviewEditor.h" />
+    <ClInclude Include="attitudeSearchDialog.h" />
+    <ClInclude Include="controlRigPresetsPanel.h" />
+    <ClInclude Include="destructionPhysicalRepresentation.h" />
+    <ClInclude Include="destructionPreviewComponent.h" />
+    <ClInclude Include="dlcListDlg.h" />
+    <ClInclude Include="duplicatesFinder.h" />
+    <ClInclude Include="entityTagGroupItem.h" />
+    <ClInclude Include="errorsListDlg.h" />
+    <ClInclude Include="inGameConfigurationDlg.h" />
+    <ClInclude Include="dialogEditorMainControlPanel.h" />
+    <ClInclude Include="itemsThumbnailGenerator.h" />
+    <ClInclude Include="languageSelector.h" />
+    <ClInclude Include="localizedStringsWithKeysManager.h" />
+    <ClInclude Include="mergedGeometryTool.h" />
+    <ClInclude Include="meshMaterialRemapper.h" />
+    <ClInclude Include="meshSoundInfo.h" />
+    <ClInclude Include="missingTemplatesErrorsDisplayer.h" />
+    <ClInclude Include="nodeTransformManager.h" />
+    <ClInclude Include="refreshVoicesDlg.h" />
+    <ClInclude Include="remappingDialog.h" />
+    <ClInclude Include="autoScriptWindow.h" />
+    <ClInclude Include="autoSizeListCtrl.h" />
+    <ClInclude Include="batchLODGenerator.h" />
+    <ClInclude Include="behaviorEditorAnimationUsagePanel.h" />
+    <ClInclude Include="behaviorEditorGhostsPanel.h" />
+    <ClInclude Include="changeDrawableFlags.h" />
+    <ClInclude Include="changeLightChannels.h" />
+    <ClInclude Include="changeMaterialFlags.h" />
+    <ClInclude Include="chooseRewardXMLCustomEditor.h" />
+    <ClInclude Include="engineConfigProperties.h" />
+    <ClInclude Include="controlRigBoneTransformPanel.h" />
+    <ClInclude Include="controlRigIKPanel.h" />
+    <ClInclude Include="controlVertexHandler.h" />
+    <ClInclude Include="dialogEditorFlowCtrl.h" />
+    <ClInclude Include="dialogTimelineItemDebugCommentEvent.h" />
+    <ClInclude Include="dialogEditorLocAnalyser.h" />
+    <ClInclude Include="editorMemoryBudgets.h" />
+    <ClInclude Include="entityList.h" />
+    <ClInclude Include="entityLootSetupDialog.h" />
+    <ClInclude Include="entityMeshGenerator.h" />
+    <ClInclude Include="hardAttachmentBonePicker.h" />
+    <ClInclude Include="characterDBEdInterfaces.h" />
+    <ClInclude Include="characterDBEditor.h" />
+    <ClInclude Include="characterDBPropertyEditor.h" />
+    <ClInclude Include="characterEdCustomTypes.h" />
+    <ClInclude Include="characterFolderTree.h" />
+    <ClInclude Include="characterInheritanceTree.h" />
+    <ClInclude Include="characterResourceContainer.h" />
+    <ClInclude Include="cutsceneNetPanel.h" />
+    <ClInclude Include="controlRigPanel.h" />
+    <ClInclude Include="dialogEditorImportW2StringsDlg.h" />
+    <ClInclude Include="dialogEditorKeyframeCtrl.h" />
+    <ClInclude Include="dialogEditorEditMimicsDlg.h" />
+    <ClInclude Include="dialogEditorLocCtrl.h" />
+    <ClInclude Include="dialogLineSelector.h" />
+    <ClInclude Include="dialogEditorHelperEntitiesCtrl.h" />
+    <ClInclude Include="dialogNetPanel.h" />
+    <ClInclude Include="dialogTimelineEventsLinker.h" />
+    <ClInclude Include="downscaleBiasDlg.h" />
+    <ClInclude Include="editorPreviewCameraProvider.h" />
+    <ClInclude Include="entityMimicsPanel.h" />
+    <ClInclude Include="enumRefreshableEditor.h" />
+    <ClInclude Include="cascadePropertyEditor.h" />
+    <ClInclude Include="creatureDefinitionsEditor.h" />
+    <ClInclude Include="crowdDebugger.h" />
+    <ClInclude Include="curveEditorPanelHelper.h" />
+    <ClInclude Include="curveEditorTool.h" />
+    <ClInclude Include="curveEditorWindow.h" />
+    <ClInclude Include="curveEditDrawer.h" />
+    <ClInclude Include="customControlList.h" />
+    <ClInclude Include="dataErrorReporter.h" />
+    <ClInclude Include="destructionResetTool.h" />
+    <ClInclude Include="curveEditionWrapper.h" />
+    <ClInclude Include="detachablePanel.h" />
+    <ClInclude Include="dialogAnimationParameterEditor.h" />
+    <ClInclude Include="dialogBoneSelectionEditor.h" />
+    <ClInclude Include="dialogEditorActorsProvider.h" />
+    <ClInclude Include="dialogEditorCameraCtrl.h" />
+    <ClInclude Include="dialogEditorDebugger.h" />
+    <ClInclude Include="dialogEditorModificationCtrl.h" />
+    <ClInclude Include="dialogEditorSceneCtrl.h" />
+    <ClInclude Include="dialogEditorSpeakerInput.h" />
+    <ClInclude Include="dialogEditorTempLipsyncDlg.h" />
+    <ClInclude Include="dialogEditorUtils.h" />
+    <ClInclude Include="dialogEditorVideo.h" />
+    <ClInclude Include="dialogEditorWorldCtrl.h" />
+    <ClInclude Include="dialogEditor_hacks.h" />
+    <ClInclude Include="dialogEventGenerator.h" />
+    <ClInclude Include="dialogEventGeneratorInternals.h" />
+    <ClInclude Include="dialogEventGeneratorRuleFactory.h" />
+    <ClInclude Include="dialogEventGeneratorSetupDialog.h" />
+    <ClInclude Include="dialogSectionTitle.h" />
+    <ClInclude Include="dialogTimeline_includes.h" />
+    <ClInclude Include="dialogTimeline_items.h" />
+    <ClInclude Include="dialogTrack.h" />
+    <ClInclude Include="directoryWatcher.h" />
+    <ClInclude Include="draggableFloatingPointControl.h" />
+    <ClInclude Include="emptyEntityCollector.h" />
+    <ClInclude Include="encounterEditor.h" />
+    <ClInclude Include="encounterEditTool.h" />
+    <ClInclude Include="entityEditorWoundItem.h" />
+    <ClInclude Include="entityTagsSelector.h" />
+    <ClInclude Include="encounterPhasesEditor.h" />
+    <ClInclude Include="exporters\storySceneValidator.h" />
+    <ClInclude Include="gameResourceEditor.h" />
+    <ClInclude Include="googleanalytics.h" />
+    <ClInclude Include="graphConnectionClipboard.h" />
+    <ClInclude Include="gridCellAttrCustomizer.h" />
+    <ClInclude Include="idBlockOp.h" />
+    <ClInclude Include="idInterlocutorIDEditor.h" />
+    <ClInclude Include="idConnectorPackEditor.h" />
+    <ClInclude Include="idScreenplayEditor.h" />
+    <ClInclude Include="itemSelectionDialogs\mappedClassSelectorDialog.h" />
+    <ClInclude Include="itemSelectionDialogs\spawnTreeNodeSelector.h" />
+    <ClInclude Include="lightEntityCollector.h" />
+    <ClInclude Include="lootEditor.h" />
+    <ClInclude Include="lootNameSelectionEditor.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="materialValueMappingEditor.h" />
+    <ClInclude Include="materialValueMappingItem.h" />
+    <ClInclude Include="minimapGeneratorTool.h" />
+    <ClInclude Include="multiCurvePropertyEditor.h" />
+    <ClInclude Include="multiValueBitmapButtonControl.h" />
+    <ClInclude Include="netPanel.h" />
+    <ClInclude Include="objectInspector.h" />
+    <ClInclude Include="odbcMgr.h" />
+    <ClInclude Include="patToolPanel.h" />
+    <ClInclude Include="playGoChunkSelector.h" />
+    <ClInclude Include="poppedUp.h" />
+    <ClInclude Include="presets.h" />
+    <ClInclude Include="presetsBox.h" />
+    <ClInclude Include="previewItem.h" />
+    <ClInclude Include="redUserPrivileges.h" />
+    <ClInclude Include="propertiesPageComponent.h" />
+    <ClInclude Include="propertyDialog.h" />
+    <ClInclude Include="propertyRecurrentBrowser.h" />
+    <ClInclude Include="resourceIterator.h" />
+    <ClInclude Include="sceneAnimationReporter.h" />
+    <ClInclude Include="sceneRecorder.h" />
+    <ClInclude Include="sceneValidator.h" />
+    <ClInclude Include="simplexTreeEditor.h" />
+    <ClInclude Include="sqlSelectStringsWithKeys.h" />
+    <ClInclude Include="sortNames.h" />
+    <ClInclude Include="curveResourceEditor.h" />
+    <ClInclude Include="spawnTreeEditor.h" />
+    <ClInclude Include="environmentPointEdit.h" />
+    <ClInclude Include="exporters\customSceneExporters.h" />
+    <ClInclude Include="exporters\gameplayEntityLocalizationExporter.h" />
+    <ClInclude Include="exporters\localizationExporter.h" />
+    <ClInclude Include="exporters\locStringsWithKeysLocalizationExporter.h" />
+    <ClInclude Include="exporters\sceneLocalizationExporter.h" />
+    <ClInclude Include="exporters\storySceneExporter.h" />
+    <ClInclude Include="fileGrid.h" />
+    <ClInclude Include="gameplayParamEditor.h" />
+    <ClInclude Include="ghostConfigDialog.h" />
+    <ClInclude Include="guiResourceEditor.h" />
+    <ClInclude Include="guiResourceGraphEditor.h" />
+    <ClInclude Include="iconGrid.h" />
+    <ClInclude Include="interactiveDialogEditor.h" />
+    <ClInclude Include="interactiveDialogGraphEditor.h" />
+    <ClInclude Include="interactivePreviewPanel.h" />
+    <ClInclude Include="itemSelectionDialogs\behaviorTreeBlockTypeSelector.h" />
+    <ClInclude Include="itemSelectionDialogs\behaviorTreeScriptTaskSelector.h" />
+    <ClInclude Include="itemSelectionDialogs\classSelectorDialog.h" />
+    <ClInclude Include="journalLocalizationExporter.h" />
+    <ClInclude Include="animationPreviewItems.h" />
+    <ClInclude Include="lipsyncDataSceneExporter.h" />
+    <ClInclude Include="markerTools.h" />
+    <ClInclude Include="meshLiveBindings.h" />
+    <ClInclude Include="meshPreviewComponent.h" />
+    <ClInclude Include="meshTypePreviewComponent.h" />
+    <ClInclude Include="mimicPoseSelector.h" />
+    <ClInclude Include="dataError.h" />
+    <ClInclude Include="poiEditor.h" />
+    <ClInclude Include="namesregistry.h" />
+    <ClInclude Include="popupNotification.h" />
+    <ClInclude Include="previewWorld.h" />
+    <ClInclude Include="restartable.h" />
+    <ClInclude Include="screenshotEditor.h" />
+    <ClInclude Include="reviewEditor.h" />
+    <ClInclude Include="selectFromListDialog.h" />
+    <ClInclude Include="animationEditorUtils.h" />
+    <ClInclude Include="animationParamPanel.h" />
+    <ClInclude Include="animationPreviewGhost.h" />
+    <ClInclude Include="animationPreview.h" />
+    <ClInclude Include="animationPreviewPostprocess.h" />
+    <ClInclude Include="animationReporter.h" />
+    <ClInclude Include="animationReporterNodes.h" />
+    <ClInclude Include="animationReporterPosesSaverLoader.h" />
+    <ClInclude Include="animationReporterRecords.h" />
+    <ClInclude Include="animationReporterSound.h" />
+    <ClInclude Include="animationReporterTodoList.h" />
+    <ClInclude Include="animationSelectionEditor.h" />
+    <ClInclude Include="animationTrajectoryUtils.h" />
+    <ClInclude Include="animationTrajectoryParamInitializer.h" />
+    <ClInclude Include="animationTreeBrowser.h" />
+    <ClInclude Include="animBrowserTrajectory.h" />
+    <ClInclude Include="animBuilder.h" />
+    <ClInclude Include="animBuilderTimeline.h" />
+    <ClInclude Include="animFriend.h" />
+    <ClInclude Include="animFriendPage.h" />
+    <ClInclude Include="animFriendPageHitReaction.h" />
+    <ClInclude Include="animFriendPageIkAttack.h" />
+    <ClInclude Include="animFriendPreview.h" />
+    <ClInclude Include="animPlot.h" />
+    <ClInclude Include="app.h" />
+    <ClInclude Include="behaviorAnimationBrowser.h" />
+    <ClInclude Include="behaviorEditorNodes.h" />
+    <ClInclude Include="behaviorTrajUtils.h" />
+    <ClInclude Include="behTreeEditedItem.h" />
+    <ClInclude Include="behTreePropertyEditor.h" />
+    <ClInclude Include="bezierTool.h" />
+    <ClInclude Include="bgViewer.h" />
+    <ClInclude Include="cameraPreviewTool.h" />
+    <ClInclude Include="characterEntityEditor.h" />
+    <ClInclude Include="checkListDlg.h" />
+    <ClInclude Include="choice.h" />
+    <ClInclude Include="chooseItemCustomEditor.h" />
+    <ClInclude Include="chooseItemDialog.h" />
+    <ClInclude Include="chooseRewardCustomEditor.h" />
+    <ClInclude Include="classHierarchyMapper.h" />
+    <ClInclude Include="clipboardData.h" />
+    <ClInclude Include="communityEmbeddedCustomEditor.h" />
+    <ClInclude Include="controlRigEd.h" />
+    <ClInclude Include="cutsceneEntityControlPanel.h" />
+    <ClInclude Include="defaultCharactersIterator.h" />
+    <ClInclude Include="defaultColorsIterator.h" />
+    <ClInclude Include="dialogEditorChangePosePropertyEditor.h" />
+    <ClInclude Include="dialogEditorChangeSlotPropertyEditor.h" />
+    <ClInclude Include="dialogEditorDialogsetPanel.h" />
+    <ClInclude Include="entityVoiceTagEditor.h" />
+    <ClInclude Include="itemSelectionDialogs\basicSelectorDialogPropertyEditor.h" />
+    <ClInclude Include="itemSelectionDialogs\inventoryCategorySelectorDialog.h" />
+    <ClInclude Include="itemSelectionDialogs\inventoryItemSelectorDialog.h" />
+    <ClInclude Include="itemSelectionDialogs\voiceTagSelectorDialog.h" />
+    <ClInclude Include="multiBoolDlg.h" />
+    <ClInclude Include="edtimer.h" />
+    <ClInclude Include="directorySelectionEditor.h" />
+    <ClInclude Include="entityConverterWindow.h" />
+    <ClInclude Include="entityEditorHelpers.h" />
+    <ClInclude Include="enumVariantSelection.h" />
+    <ClInclude Include="helpBubble.h" />
+    <ClInclude Include="huntingClueSelector.h" />
+    <ClInclude Include="htmlLog.h" />
+    <ClInclude Include="importTextureSourceData.h" />
+    <ClInclude Include="itemSelectionDialogs\componentSelectorDialog.h" />
+    <ClInclude Include="itemSelectionDialogs\entityClassSelectorDialog.h" />
+    <ClInclude Include="itemSelectionDialogs\itemSelectorDialogBase.h" />
+    <ClInclude Include="itemSelectionDialogs\simpleStringSelector.h" />
+    <ClInclude Include="journalEditor.h" />
+    <ClInclude Include="journalPropertySelector.h" />
+    <ClInclude Include="journalSelectorWidget.h" />
+    <ClInclude Include="journalTree.h" />
+    <ClInclude Include="lazyWin32feedback.h" />
+    <ClInclude Include="lipsyncPreview.h" />
+    <ClInclude Include="lodAssigner.h" />
+    <ClInclude Include="mapPinValidatorWindow.h" />
+    <ClInclude Include="massActionDialog.h" />
+    <ClInclude Include="meshPhysicalRepresentation.h" />
+    <ClInclude Include="npcConverter.h" />
+    <ClInclude Include="objectClipboard.h" />
+    <ClInclude Include="particleCurveEditor.h" />
+    <ClInclude Include="pathlibEditor.h" />
+    <ClInclude Include="perlinGenerator.h" />
+    <ClInclude Include="physicalCollisionSelector.h" />
+    <ClInclude Include="previewCooker.h" />
+    <ClInclude Include="editorAnimCacheGen.h" />
+    <ClInclude Include="editorEngine.h" />
+    <ClInclude Include="entityEditorSlotItem.h" />
+    <ClInclude Include="frame.h" />
+    <ClInclude Include="spawnTreeNodeProxy.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="sqlDeleteString.h" />
+    <ClInclude Include="sqlDeleteStringInfo.h" />
+    <ClInclude Include="sqlGetNextStringId.h" />
+    <ClInclude Include="sqlGetRedUserPrivileges.h" />
+    <ClInclude Include="sqlInsertString.h" />
+    <ClInclude Include="sqlInsertStringInfo.h" />
+    <ClInclude Include="sqlSelectStrings.h" />
+    <ClInclude Include="stickersEditor.h" />
+    <ClInclude Include="shapesPreviewItem.h" />
+    <ClInclude Include="editorDataPresets.h" />
+    <ClInclude Include="storyScenePreviewPlayer.h" />
+    <ClInclude Include="stringDbTypes.h" />
+    <ClInclude Include="swfImagePanel.h" />
+    <ClInclude Include="swfViewer.h" />
+    <ClInclude Include="TemplateInsertion.h" />
+    <ClInclude Include="stripeEdit.h" />
+    <ClInclude Include="terrainEditWorkingBuffers.h" />
+    <ClInclude Include="terrainTextureUsageTool.h" />
+    <ClInclude Include="textControl.h" />
+    <ClInclude Include="textureArrayGrid.h" />
+    <ClInclude Include="texturePreviewPanel.h" />
+    <ClInclude Include="textureViewer.h" />
+    <ClInclude Include="timelineImpl\drawBuffer.h" />
+    <ClInclude Include="timelineImpl\drawGroup.h" />
+    <ClInclude Include="timelineImpl\drawGroupDialogTracks.h" />
+    <ClInclude Include="timelineImpl\drawGroupTimebar.h" />
+    <ClInclude Include="timelineImpl\drawGroupTracks.h" />
+    <ClInclude Include="timelineImpl\drawGroupVolatile.h" />
+    <ClInclude Include="timelineImpl\drawing.h" />
+    <ClInclude Include="timelineLayout.h" />
+    <ClInclude Include="timeValueEditor.h" />
+    <ClInclude Include="track.h" />
+    <ClInclude Include="traitEdCustomTypes.h" />
+    <ClInclude Include="traitEditor.h" />
+    <ClInclude Include="traitEmbeddedCustomEditor.h" />
+    <ClInclude Include="traitListSelection.h" />
+    <ClInclude Include="traitValidator.h" />
+    <ClInclude Include="undoAnimBrowser.h" />
+    <ClInclude Include="undoAnimEventsEditor.h" />
+    <ClInclude Include="undoBehaviorGraph.h" />
+    <ClInclude Include="undoBehTreeEditor.h" />
+    <ClInclude Include="undoDialogEditor.h" />
+    <ClInclude Include="undoEntityEditor.h" />
+    <ClInclude Include="umbraTool.h" />
+    <ClInclude Include="undoGraph.h" />
+    <ClInclude Include="undoGridEditor.h" />
+    <ClInclude Include="undoGroupingObjects.h" />
+    <ClInclude Include="undoHistoryFrame.h" />
+    <ClInclude Include="undoJobTreeEditor.h" />
+    <ClInclude Include="undoMaterialEditor.h" />
+    <ClInclude Include="undoMeshEditor.h" />
+    <ClInclude Include="undoQuestGraph.h" />
+    <ClInclude Include="undoSpawnTreeEditor.h" />
+    <ClInclude Include="undoStripe.h" />
+    <ClInclude Include="undoTimeLine.h" />
+    <ClInclude Include="undoTransform.h" />
+    <ClInclude Include="undoTreeEditor.h" />
+    <ClInclude Include="undoVegetation.h" />
+    <ClInclude Include="htmlUtils.h" />
+    <ClInclude Include="inventoryReport.h" />
+    <ClInclude Include="maraudersMapAIDebugCanvas.h" />
+    <ClInclude Include="resourceFinder.h" />
+    <ClInclude Include="resources.h" />
+    <ClInclude Include="res\resource.h" />
+    <ClInclude Include="dropTarget.h" />
+    <ClInclude Include="colorPicker.h" />
+    <ClInclude Include="colorPickerAdvanced.h" />
+    <ClInclude Include="canvas.h" />
+    <ClInclude Include="rewardEditor.h" />
+    <ClInclude Include="rewardsSummary.h" />
+    <ClInclude Include="sceneEmotionStatesSelection.h" />
+    <ClInclude Include="sceneUsageExporter.h" />
+    <ClInclude Include="scriptCompilationErrorsDialog.h" />
+    <ClInclude Include="staticAnimationSelection.h" />
+    <ClInclude Include="stringSelectorTool.h" />
+    <ClInclude Include="propertiesBrowserWithStatusbar.h" />
+    <ClInclude Include="propertiesFrame.h" />
+    <ClInclude Include="propertiesPage.h" />
+    <ClInclude Include="propertiesPageHavok.h" />
+    <ClInclude Include="basePropItem.h" />
+    <ClInclude Include="propertyButton.h" />
+    <ClInclude Include="entityHandleEditor.h" />
+    <ClInclude Include="materialPropItem.h" />
+    <ClInclude Include="objectsRootItem.h" />
+    <ClInclude Include="propertyItem.h" />
+    <ClInclude Include="propertyItemArray.h" />
+    <ClInclude Include="propertyItemBitfield.h" />
+    <ClInclude Include="propertyItemClass.h" />
+    <ClInclude Include="propertyItemEngineQsTransform.h" />
+    <ClInclude Include="propertyItemEngineTransform.h" />
+    <ClInclude Include="propertyItemEnum.h" />
+    <ClInclude Include="propertyItemPointer.h" />
+    <ClInclude Include="propertyItemSimpleCurve.h" />
+    <ClInclude Include="propertyItemSoftHandle.h" />
+    <ClInclude Include="baseGroupItem.h" />
+    <ClInclude Include="classGroupItem.h" />
+    <ClInclude Include="componentGroupItem.h" />
+    <ClInclude Include="dynamicPropGroupItem.h" />
+    <ClInclude Include="matEngineValueGroupItem.h" />
+    <ClInclude Include="materialGroupItem.h" />
+    <ClInclude Include="materialInstanceGroupItem.h" />
+    <ClInclude Include="2daArrayExclusiveValueEdition.h" />
+    <ClInclude Include="2daArrayValueSelection.h" />
+    <ClInclude Include="2daTagListBoxEditor.h" />
+    <ClInclude Include="appearanceList.h" />
+    <ClInclude Include="functionListSelection.h" />
+    <ClInclude Include="cameraShakeEnumList.h" />
+    <ClInclude Include="classList.h" />
+    <ClInclude Include="componentListSelection.h" />
+    <ClInclude Include="curvePropertyEditor.h" />
+    <ClInclude Include="effectBehaviorEventListSelection.h" />
+    <ClInclude Include="effectBoneListSelection.h" />
+    <ClInclude Include="effectParameterListSelection.h" />
+    <ClInclude Include="entityOnLayerReferenceEditor.h" />
+    <ClInclude Include="enumList.h" />
+    <ClInclude Include="itemListSelection.h" />
+    <ClInclude Include="jobActionAnimSelection.h" />
+    <ClInclude Include="layerGroupListSelection.h" />
+    <ClInclude Include="layerGroupTreeSelection.h" />
+    <ClInclude Include="layerGuidListSelection.h" />
+    <ClInclude Include="listBoxEditor.h" />
+    <ClInclude Include="questBehaviorGraphProperties.h" />
+    <ClInclude Include="scriptedEnumEditor.h" />
+    <ClInclude Include="selectionList.h" />
+    <ClInclude Include="slider.h" />
+    <ClInclude Include="soundMaterialSelector.h" />
+    <ClInclude Include="spawnsetPhasesEditor.h" />
+    <ClInclude Include="terrainBrush.h" />
+    <ClInclude Include="terrainCursor.h" />
+    <ClInclude Include="terrainEditTool.h" />
+    <ClInclude Include="textEditor.h" />
+    <ClInclude Include="textureArrayViewer.h" />
+    <ClInclude Include="textureGroupSelection.h" />
+    <ClInclude Include="typeList.h" />
+    <ClInclude Include="undoTerrain.h" />
+    <ClInclude Include="dialogTimelineItemInterpolationEvent.h" />
+    <ClInclude Include="updateFocusEntityTemplatesDlg.h" />
+    <ClInclude Include="updateThumbnailDialog.h" />
+    <ClInclude Include="vegetationEditTool.h" />
+    <ClInclude Include="vegetationGenerator.h" />
+    <ClInclude Include="vertexPaintTool.h" />
+    <ClInclude Include="voice.h" />
+    <ClInclude Include="voiceEditor.h" />
+    <ClInclude Include="voiceTagListEditor.h" />
+    <ClInclude Include="w2StringImporter.h" />
+    <ClInclude Include="whatsNewDlg.h" />
+    <ClInclude Include="widgetItemList.h" />
+    <ClInclude Include="output.h" />
+    <ClInclude Include="sceneExplorer.h" />
+    <ClInclude Include="draggedSpinButton.h" />
+    <ClInclude Include="selectionProperties.h" />
+    <ClInclude Include="graphEditor.h" />
+    <ClInclude Include="filterPanel.h" />
+    <ClInclude Include="curveEditor.h" />
+    <ClInclude Include="curveEditorCanvas.h" />
+    <ClInclude Include="environmentProperties.h" />
+    <ClInclude Include="toggleButtonPanel.h" />
+    <ClInclude Include="toggleButton.h" />
+    <ClInclude Include="spinSliderControl.h" />
+    <ClInclude Include="animBrowser.h" />
+    <ClInclude Include="animBrowserBehavior.h" />
+    <ClInclude Include="animBrowserCompression.h" />
+    <ClInclude Include="animBrowserPreview.h" />
+    <ClInclude Include="animBrowserPasteEventsRelativeToOtherEventDialog.h" />
+    <ClInclude Include="animBrowserFindEventDialog.h" />
+    <ClInclude Include="animBrowserRecompressDialog.h" />
+    <ClInclude Include="animEventsTimeline.h" />
+    <ClInclude Include="draggablePanel.h" />
+    <ClInclude Include="treeListCtrl.h" />
+    <ClInclude Include="treeListCtrl_XRC.h" />
+    <ClInclude Include="gradientCtrl.h" />
+    <ClInclude Include="gradientCtrl_XRC.h" />
+    <ClInclude Include="gradientEditor.h" />
+    <ClInclude Include="smartLayout.h" />
+    <ClInclude Include="sheet\pairarr.h" />
+    <ClInclude Include="sheet\sheet.h" />
+    <ClInclude Include="sheet\sheetatr.h" />
+    <ClInclude Include="sheet\sheetdef.h" />
+    <ClInclude Include="sheet\sheetedg.h" />
+    <ClInclude Include="sheet\sheetedt.h" />
+    <ClInclude Include="sheet\sheetren.h" />
+    <ClInclude Include="sheet\sheetsel.h" />
+    <ClInclude Include="sheet\sheetspt.h" />
+    <ClInclude Include="sheet\sheettbl.h" />
+    <ClInclude Include="sheet\sheetval.h" />
+    <ClInclude Include="sheet\srtobjar.h" />
+    <ClInclude Include="sheet\wx24defs.h" />
+    <ClInclude Include="textCtrlEx.h" />
+    <ClInclude Include="textCtrlExXmlHandler.h" />
+    <ClInclude Include="audioEventBrowser.h" />
+    <ClInclude Include="soundPropertyEditors.h" />
+    <ClInclude Include="treeEditor.h" />
+    <ClInclude Include="layerGroupTree.h" />
+    <ClInclude Include="layerGroupList.h" />
+    <ClInclude Include="wizardImpl.h" />
+    <ClInclude Include="editorWizardDefinition.h" />
+    <ClInclude Include="wizardTemplate.h" />
+    <ClInclude Include="worldMassActions.h" />
+    <ClInclude Include="worldProperties.h" />
+    <ClInclude Include="timeline.h" />
+    <ClInclude Include="skeletonEditor.h" />
+    <ClInclude Include="mimicFacesEditor.h" />
+    <ClInclude Include="assetBrowser.h" />
+    <ClInclude Include="resourceView.h" />
+    <ClInclude Include="versionControlIconsPainter.h" />
+    <ClInclude Include="localizationToolsFrame.h" />
+    <ClInclude Include="resourceSorter.h" />
+    <ClInclude Include="moveEntities.h" />
+    <ClInclude Include="entitiesBrowser.h" />
+    <ClInclude Include="gameInputSelection.h" />
+    <ClInclude Include="genericResourceEditor.h" />
+    <ClInclude Include="entityAppearanceSelection.h" />
+    <ClInclude Include="entityEditor.h" />
+    <ClInclude Include="entityGraphEditor.h" />
+    <ClInclude Include="entityPreviewPanel.h" />
+    <ClInclude Include="VariantEditor.h" />
+    <ClInclude Include="materialListManager.h" />
+    <ClInclude Include="meshEditor.h" />
+    <ClInclude Include="meshLODList.h" />
+    <ClInclude Include="meshMaterialList.h" />
+    <ClInclude Include="meshPreviewPanel.h" />
+    <ClInclude Include="meshStats.h" />
+    <ClInclude Include="meshStatsViewerFrame.h" />
+    <ClInclude Include="materialEditor.h" />
+    <ClInclude Include="materialGraphEditor.h" />
+    <ClInclude Include="materialPreviewPanel.h" />
+    <ClInclude Include="shaderView.h" />
+    <ClInclude Include="behaviorAnimSelection.h" />
+    <ClInclude Include="behaviorAnimationLister.h" />
+    <ClInclude Include="behaviorBoneMultiSelection.h" />
+    <ClInclude Include="behaviorBoneSelection.h" />
+    <ClInclude Include="behaviorBoneSelectionDlg.h" />
+    <ClInclude Include="behaviorControlPanel.h" />
+    <ClInclude Include="behaviorDebugger.h" />
+    <ClInclude Include="behaviorDebugVisualizer.h" />
+    <ClInclude Include="behaviorEditor.h" />
+    <ClInclude Include="behaviorEditorPanel.h" />
+    <ClInclude Include="behaviorGraphAnalyser.h" />
+    <ClInclude Include="behaviorGraphEditor.h" />
+    <ClInclude Include="behaviorGraphPoseTracer.h" />
+    <ClInclude Include="behaviorNodeSearcher.h" />
+    <ClInclude Include="behaviorPreviewPanel.h" />
+    <ClInclude Include="behaviorProperties.h" />
+    <ClInclude Include="behaviorRagdollPanel.h" />
+    <ClInclude Include="behaviorSlotTester.h" />
+    <ClInclude Include="behaviorValueSelection.h" />
+    <ClInclude Include="behaviorVariableEditor.h" />
+    <ClInclude Include="emitterGraphEditor.h" />
+    <ClInclude Include="particleEditor.h" />
+    <ClInclude Include="particlePreviewPanel.h" />
+    <ClInclude Include="particlePropertiesBrowser.h" />
+    <ClInclude Include="tagEditor.h" />
+    <ClInclude Include="tagMiniEditor.h" />
+    <ClInclude Include="tagPropertyEditor.h" />
+    <ClInclude Include="tagTreeCtrl.h" />
+    <ClInclude Include="tagTreeItemData.h" />
+    <ClInclude Include="tagViewEditor.h" />
+    <ClInclude Include="2daTagListUpdater.h" />
+    <ClInclude Include="appearanceTagListUpdater.h" />
+    <ClInclude Include="tagListUpdater.h" />
+    <ClInclude Include="gameTimeEditor.h" />
+    <ClInclude Include="gameTimePropertyEditor.h" />
+    <ClInclude Include="shortcut.h" />
+    <ClInclude Include="shortcutsEditor.h" />
+    <ClInclude Include="spawnSetActionEditor.h" />
+    <ClInclude Include="spawnSetDebugger.h" />
+    <ClInclude Include="spawnSetEditor.h" />
+    <ClInclude Include="spawnSetGrid.h" />
+    <ClInclude Include="2dArrayEditor.h" />
+    <ClInclude Include="dialogEditor.h" />
+    <ClInclude Include="dialogEditorActions.h" />
+    <ClInclude Include="dialogEditorPage.h" />
+    <ClInclude Include="dialogGraphEditor.h" />
+    <ClInclude Include="dialogPreview.h" />
+    <ClInclude Include="dialogTimeline.h" />
+    <ClInclude Include="dialogEditorChoice.h" />
+    <ClInclude Include="dialogEditorChoiceLine.h" />
+    <ClInclude Include="dialogEditorComment.h" />
+    <ClInclude Include="dialogEditorCutscene.h" />
+    <ClInclude Include="dialogEditorElement.h" />
+    <ClInclude Include="dialogEditorInjectedChoiceLine.h" />
+    <ClInclude Include="dialogEditorLine.h" />
+    <ClInclude Include="dialogEditorLineTextDecorator.h" />
+    <ClInclude Include="dialogEditorQuestChoice.h" />
+    <ClInclude Include="dialogEditorScriptLine.h" />
+    <ClInclude Include="dialogEditorSection.h" />
+    <ClInclude Include="dialogEditorHandler.h" />
+    <ClInclude Include="dialogEditorHandlerAware.h" />
+    <ClInclude Include="dialogHandlerFactory.h" />
+    <ClInclude Include="tagEditorHandler.h" />
+    <ClInclude Include="dialogUtilityHandlers.h" />
+    <ClInclude Include="dialogEditorActorPropertyEditor.h" />
+    <ClInclude Include="dialogEditorAnimationPropertyEditor.h" />
+    <ClInclude Include="dialogEditorBehaviorEventPropertyEditor.h" />
+    <ClInclude Include="dialogEditorCustomCameraSelector.h" />
+    <ClInclude Include="dialogEditorEnterActorPropertyEditor.h" />
+    <ClInclude Include="dialogEditorSettingPropertyEditor.h" />
+    <ClInclude Include="mimicsAnimationSelector.h" />
+    <ClInclude Include="stringPropertyEditor.h" />
+    <ClInclude Include="effectEditor.h" />
+    <ClInclude Include="effectProperties.h" />
+    <ClInclude Include="effectTracksEditor.h" />
+    <ClInclude Include="cutsceneControlPanel.h" />
+    <ClInclude Include="communityDebugger.h" />
+    <ClInclude Include="communityDebuggerEditor.h" />
+    <ClInclude Include="communityEditor.h" />
+    <ClInclude Include="communityValidator.h" />
+    <ClInclude Include="skeletonPreview.h" />
+    <ClInclude Include="jobTreeEditor.h" />
+    <ClInclude Include="jobTreePreviewPanel.h" />
+    <ClInclude Include="maraudersMap.h" />
+    <ClInclude Include="maraudersMapCanvas.h" />
+    <ClInclude Include="maraudersMapItems.h" />
+    <ClInclude Include="questEditor.h" />
+    <ClInclude Include="questEditorUndoStep.h" />
+    <ClInclude Include="questEdTool.h" />
+    <ClInclude Include="questGraphEditor.h" />
+    <ClInclude Include="factsDBEditor.h" />
+    <ClInclude Include="gameFactEditor.h" />
+    <ClInclude Include="questControlledNPCsLog.h" />
+    <ClInclude Include="questDebugInfo.h" />
+    <ClInclude Include="questExecutionLog.h" />
+    <ClInclude Include="questScenesDebugger.h" />
+    <ClInclude Include="questsDebugger.h" />
+    <ClInclude Include="questThreadsDebugger.h" />
+    <ClInclude Include="questGraphSearcher.h" />
+    <ClInclude Include="gridCellEditors.h" />
+    <ClInclude Include="gridColumnDesc.h" />
+    <ClInclude Include="gridEditor.h" />
+    <ClInclude Include="gridOutline.h" />
+    <ClInclude Include="gridPropertyWrapper.h" />
+    <ClInclude Include="gridTypeDesc.h" />
+    <ClInclude Include="gridCustomCellEditors.h" />
+    <ClInclude Include="gridCustomColumns.h" />
+    <ClInclude Include="gridCustomTypes.h" />
+    <ClInclude Include="cutsceneEditor.h" />
+    <ClInclude Include="cutsceneEffectsPropertyEditors.h" />
+    <ClInclude Include="cutsceneTimeline.h" />
+    <ClInclude Include="behTreeEditor.h" />
+    <ClInclude Include="behTreeGraphEditor.h" />
+    <ClInclude Include="floatValueEditor.h" />
+    <ClInclude Include="animEventsEditor.h" />
+    <ClInclude Include="localizedStringEditor.h" />
+    <ClInclude Include="localizedStringsEditor.h" />
+    <ClInclude Include="localizedStringsWithKeys.h" />
+    <ClInclude Include="attitudeEditor.h" />
+    <ClInclude Include="steeringEditor.h" />
+    <ClInclude Include="steeringGraphEditor.h" />
+    <ClInclude Include="reactionsDebugger.h" />
+    <ClInclude Include="previewPanel.h" />
+    <ClInclude Include="renderingPanel.h" />
+    <ClInclude Include="renderingWindow.h" />
+    <ClInclude Include="worldEditPanel.h" />
+    <ClInclude Include="viewportWidgetBase.h" />
+    <ClInclude Include="viewportWidgetLines.h" />
+    <ClInclude Include="viewportWidgetManager.h" />
+    <ClInclude Include="viewportWidgetMoveAxis.h" />
+    <ClInclude Include="viewportWidgetMovePlane.h" />
+    <ClInclude Include="viewportWidgetRotateAxis.h" />
+    <ClInclude Include="viewportWidgetScaleAxis.h" />
+    <ClInclude Include="viewportWidgetScalePlane.h" />
+    <ClInclude Include="viewportWidgetScaleUniform.h" />
+    <ClInclude Include="worldSceneDebugger.h" />
+    <ClInclude Include="worldSelectionCustomEditor.h" />
+    <ClInclude Include="wxAUIRed.h" />
+    <ClInclude Include="wxThumbnailImageLoader.h" />
+    <ClInclude Include="editorTool.h" />
+    <ClInclude Include="editorToolContext.h" />
+    <ClInclude Include="toolsPanel.h" />
+    <ClInclude Include="areaVertexEdit.h" />
+    <ClInclude Include="brushFaceTool.h" />
+    <ClInclude Include="textDialog.h" />
+    <ClInclude Include="cutsceneTool.h" />
+    <ClInclude Include="rulerTool.h" />
+    <ClInclude Include="worldEnvironmentEditor.h" />
+    <ClInclude Include="sceneExporter.h" />
+    <ClInclude Include="collisionMemToolModel.h" />
+    <ClInclude Include="collisionMemUsageTool.h" />
+    <ClInclude Include="collisionObjSizeCalc.h" />
+    <ClInclude Include="worldTreeTraverser.h" />
+    <ClInclude Include="brushPanel.h" />
+    <ClInclude Include="areaPivotEdit.h" />
+    <ClInclude Include="pivot.h" />
+    <ClInclude Include="staticcameratool.h" />
+    <ClInclude Include="callbackData.h" />
+    <ClInclude Include="selectionEditor.h" />
+    <ClInclude Include="undoCreate.h" />
+    <ClInclude Include="undoManager.h" />
+    <ClInclude Include="undoProperty.h" />
+    <ClInclude Include="undoSelection.h" />
+    <ClInclude Include="undoStep.h" />
+    <ClInclude Include="undoToolSwitch.h" />
+    <ClInclude Include="undoVertex.h" />
+    <ClInclude Include="win32splash.h" />
+    <ClInclude Include="versionControlWrapper.h" />
+    <ClInclude Include="wxVersionControlInterface.h" />
+    <ClInclude Include="aboutDlg.h" />
+    <ClInclude Include="clientDlg.h" />
+    <ClInclude Include="comboBoxDialog.h" />
+    <ClInclude Include="commonDlgs.h" />
+    <ClInclude Include="displayItemDlg.h" />
+    <ClInclude Include="fileDlg.h" />
+    <ClInclude Include="fileHistoryDlg.h" />
+    <ClInclude Include="importDlg.h" />
+    <ClInclude Include="inputBoxDlg.h" />
+    <ClInclude Include="reloadDialog.h" />
+    <ClInclude Include="saveDlg.h" />
+    <ClInclude Include="submitDialog.h" />
+    <ClInclude Include="virtualMemWalkerDlg.h" />
+    <ClInclude Include="configDirectory.h" />
+    <ClInclude Include="configManager.h" />
+    <ClInclude Include="meshColoringScheme.h" />
+    <ClInclude Include="build.h" />
+    <ClInclude Include="editorExternalResources.h" />
+    <ClInclude Include="editorTypeRegistry.h" />
+    <ClInclude Include="fileWatcher.h" />
+    <ClInclude Include="numberRangePropertyEditor.h" />
+    <ClInclude Include="sceneDialogsetEditor.h" />
+    <ClInclude Include="sceneDialogsetPreviewPanel.h" />
+    <ClInclude Include="sceneDialogsetsPropertyEditors.h" />
+    <ClInclude Include="utils.h" />
+    <ClInclude Include="editorMemory.h" />
+    <ClInclude Include="xmlErrorsDisplayer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="dialogEventGeneratorActions.inl" />
+    <None Include="dialogEventGeneratorConditions.inl" />
+    <None Include="meshLiveBindings.inl" />
+    <None Include="res\editor.fbp">
+      <FileType>Document</FileType>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="res\editor.ico" />
+    <CustomBuild Include="res\editor.xrc">
+      <Command>
+        cd res
+        wxrc editor.xrc -v -c -o "$(Platform)\$(Configuration)\editorXRC.hpp"
+      </Command>
+      <Outputs>res\$(Platform)\$(Configuration)\editorXRC.hpp;%(Outputs)</Outputs>
+      <Message>Building Main Editor XRC...</Message>
+      <SubType>Designer</SubType>
+    </CustomBuild>
+    <None Include="res\editor_ai.fbp" />
+    <CustomBuild Include="res\editor_ai.xrc">
+      <Command>
+        cd res
+        wxrc editor_ai.xrc -v -c -o "$(Platform)\$(Configuration)\editor_aiXRC.hpp"
+      </Command>
+      <Outputs>res\$(Platform)\$(Configuration)\editor_aiXRC.hpp;%(Outputs)</Outputs>
+      <Message>Building AI XRC...</Message>
+    </CustomBuild>
+    <None Include="res\editor_assetbrowser.fbp" />
+    <CustomBuild Include="res\editor_assetbrowser.xrc">
+      <FileType>Document</FileType>
+      <Command>
+        cd res
+        wxrc editor_assetbrowser.xrc -v -c -o "$(Platform)\$(Configuration)\editor_assetbrowserXRC.hpp"
+      </Command>
+      <Message>Building Asset Browser UI</Message>
+      <Outputs>res\$(Platform)\$(Configuration)\editor_assetbrowserXRC.hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <None Include="res\editor_beh.fbp">
+      <SubType>Designer</SubType>
+    </None>
+    <CustomBuild Include="res\editor_beh.xrc">
+      <Message>Building Behaviors UI</Message>
+      <Command>
+        cd res
+        wxrc editor_beh.xrc -v -c -o "$(Platform)\$(Configuration)\editor_behXRC.hpp"
+      </Command>
+      <Outputs>res\$(Platform)\$(Configuration)\editor_behXRC.hpp;%(Outputs)</Outputs>
+      <SubType>Designer</SubType>
+    </CustomBuild>
+    <None Include="res\editor_character_db.fbp" />
+    <CustomBuild Include="res\editor_character_db.xrc">
+      <FileType>Document</FileType>
+      <Command>
+        cd res
+        wxrc %(Filename).xrc -v -c -o "$(Platform)\$(Configuration)\%(Filename)XRC.hpp"
+      </Command>
+      <Message>Building Character DB</Message>
+      <Outputs>res\$(Platform)\$(Configuration)\editor_character_dbXRC.hpp;%(Outputs)</Outputs>
+      <SubType>Designer</SubType>
+    </CustomBuild>
+    <None Include="res\editor_cutsceneeditor.fbp" />
+    <CustomBuild Include="res\editor_cutsceneeditor.xrc">
+      <FileType>Document</FileType>
+      <Command>
+        cd res
+        wxrc editor_cutsceneeditor.xrc -v -c -o "$(Platform)\$(Configuration)\editor_cutsceneeditorXRC.hpp"
+      </Command>
+      <Outputs>res\$(Platform)\$(Configuration)\editor_cutsceneeditorXRC.hpp;%(Outputs)</Outputs>
+      <Message>Building Cutscene Editor</Message>
+    </CustomBuild>
+    <None Include="res\editor_dataErrorReporter.fbp" />
+    <CustomBuild Include="res\editor_dataErrorReporter.xrc">
+      <FileType>Document</FileType>
+      <Message>Building Data Error Reporter UI</Message>
+      <Outputs>res\$(Platform)\$(Configuration)\editor_dataErrorReporterXRC.hpp;%(Outputs)</Outputs>
+      <Command>
+        cd res
+        wxrc editor_dataErrorReporter.xrc -v -c -o "$(Platform)\$(Configuration)\editor_dataErrorReporterXRC.hpp"
+      </Command>
+    </CustomBuild>
+    <None Include="res\editor_encounters.fbp" />
+    <CustomBuild Include="res\editor_encounters.xrc">
+      <FileType>Document</FileType>
+      <Outputs>res\$(Platform)\$(Configuration)\editor_encountersXRC.hpp;%(Outputs)</Outputs>
+      <Message>Building Encounters UI</Message>
+      <Command>
+        cd res
+        wxrc editor_encounters.xrc -v -c -o "$(Platform)\$(Configuration)\editor_encountersXRC.hpp"
+      </Command>
+    </CustomBuild>
+    <None Include="res\editor_entity.fbp" />
+    <CustomBuild Include="res\editor_entity.xrc">
+      <FileType>Document</FileType>
+      <Message>Building Editor Entity</Message>
+      <Command>
+        cd res
+        wxrc editor_entity.xrc -v -c -o "$(Platform)\$(Configuration)\editor_entityXRC.hpp"
+      </Command>
+      <Outputs>res\$(Platform)\$(Configuration)\editor_entityXRC.hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <None Include="res\editor_environments.fbp" />
+    <CustomBuild Include="res\editor_environments.xrc">
+      <FileType>Document</FileType>
+      <Command>
+        cd res
+        wxrc editor_environments.xrc -v -c -o "$(Platform)\$(Configuration)\editor_environmentsXRC.hpp"
+      </Command>
+      <Outputs>res\$(Platform)\$(Configuration)\editor_environmentsXRC.hpp;%(Outputs)</Outputs>
+      <Message>Building Environments Panel</Message>
+    </CustomBuild>
+    <None Include="res\editor_guiresource.fbp" />
+    <CustomBuild Include="res\editor_guiresource.xrc">
+      <FileType>Document</FileType>
+      <Command>
+        cd res
+        wxrc editor_guiresource.xrc -v -c -o "$(Platform)\$(Configuration)\editor_guiresourceXRC.hpp"
+      </Command>
+      <Outputs>res\$(Platform)\$(Configuration)\editor_guiresourceXRC.hpp;%(Outputs)</Outputs>
+      <Message>Building GUI Source</Message>
+    </CustomBuild>
+    <None Include="res\editor_loot.fbp" />
+    <CustomBuild Include="res\editor_loot.xrc">
+      <FileType>Document</FileType>
+      <Command>cd res
+               wxrc editor_loot.xrc -v -c -o "$(Platform)\$(Configuration)\editor_lootXRC.hpp"
+	  </Command>
+      <Message>Building Loot Editor</Message>
+      <Outputs>res\$(Platform)\$(Configuration)\editor_lootXRC.hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <None Include="res\editor_materialMapping.fbp" />
+    <CustomBuild Include="res\editor_materialMapping.xrc">
+      <FileType>Document</FileType>
+      <Command>
+        cd res
+        wxrc editor_materialMapping.xrc -v -c -o "$(Platform)\$(Configuration)\editor_materialMappingXRC.hpp"
+      </Command>
+      <Message>Building Material Mapping UI</Message>
+      <Outputs>res\$(Platform)\$(Configuration)\editor_materialMappingXRC.hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <None Include="res\editor_objectInpector.fbp" />
+    <CustomBuild Include="res\editor_objectInspector.xrc">
+      <FileType>Document</FileType>
+      <Message>Building Object Inspector UI</Message>
+      <Command>
+        cd res
+        wxrc editor_objectInspector.xrc -v -c -o "$(Platform)\$(Configuration)\editor_objectInspectorXRC.hpp"
+      </Command>
+      <Outputs>res\$(Platform)\$(Configuration)\editor_objectInspectorXRC.hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <None Include="res\editor_particleeditor.fbp" />
+    <CustomBuild Include="res\editor_particleeditor.xrc">
+      <Command>
+        cd res
+        wxrc editor_particleeditor.xrc -v -c -o "$(Platform)\$(Configuration)\editor_particleeditorXRC.hpp"
+      </Command>
+      <Outputs>res\$(Platform)\$(Configuration)\editor_particleeditorXRC.hpp;%(Outputs)</Outputs>
+      <Message>Building Particel Editor</Message>
+    </CustomBuild>
+    <None Include="res\editor_screenshot.fbp" />
+    <CustomBuild Include="res\editor_screenshot.xrc">
+      <FileType>Document</FileType>
+      <Command>
+        cd res
+        wxrc editor_screenshot.xrc -v -c -o "$(Platform)\$(Configuration)\editor_screenshotXRC.hpp"
+      </Command>
+      <Outputs>res\$(Platform)\$(Configuration)\editor_screenshotXRC.hpp;%(Outputs)</Outputs>
+      <Message>Building Screenshots Panel</Message>
+    </CustomBuild>
+    <None Include="res\editor_errorDialogs.fbp" />
+    <CustomBuild Include="res\editor_errorDialogs.xrc">
+      <Command>
+        cd res
+        wxrc %(Filename).xrc -v -c -o "$(Platform)\$(Configuration)\%(Filename)XRC.hpp"
+      </Command>
+      <Message>Building Error Dialogs</Message>
+      <Outputs>res\$(Platform)\$(Configuration)\editor_errorDialogsXRC.hpp;%(Outputs)</Outputs>
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <None Include="res\editor_foliage_generator.fbp" />
+    <CustomBuild Include="res\editor_foliage_generator.xrc">
+      <FileType>Document</FileType>
+      <Command>
+        cd res
+        wxrc editor_foliage_generator.xrc -v -c -o "$(Platform)\$(Configuration)\editor_foliage_generatorXRC.hpp"
+      </Command>
+      <Message>Building Foliage Generator</Message>
+      <Outputs>res\$(Platform)\$(Configuration)\editor_foliage_generatorXRC.hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <None Include="res\editor_dialogs.fbp" />
+    <CustomBuild Include="res\editor_dialogs.xrc">
+      <FileType>Document</FileType>
+      <Command>
+        cd res
+        wxrc editor_dialogs.xrc -v -c -o "$(Platform)\$(Configuration)\editor_dialogsXRC.hpp"
+      </Command>
+      <Message>Building Dialogs UI</Message>
+      <Outputs>res\$(Platform)\$(Configuration)\editor_dialogsXRC.hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <None Include="res\editor_gui.fbp" />
+    <CustomBuild Include="res\editor_gui.xrc">
+      <FileType>Document</FileType>
+      <Command>
+        cd res
+        wxrc editor_gui.xrc -v -c -o "$(Platform)\$(Configuration)\editor_guiXRC.hpp"
+      </Command>
+      <Outputs>res\$(Platform)\$(Configuration)\editor_guiXRC.hpp;%(Outputs)</Outputs>
+      <Message>Building Editor UI Resources</Message>
+    </CustomBuild>
+    <None Include="res\editor_job.fbp" />
+    <CustomBuild Include="res\editor_job.xrc">
+      <FileType>Document</FileType>
+      <Command>
+        cd res
+        wxrc editor_job.xrc -v -c -o "$(Platform)\$(Configuration)\editor_jobXRC.hpp"
+      </Command>
+      <Outputs>res\$(Platform)\$(Configuration)\editor_jobXRC.hpp;%(Outputs)</Outputs>
+      <Message>Building Editor Job Resources</Message>
+    </CustomBuild>
+    <None Include="res\editor_journal.fbp" />
+    <CustomBuild Include="res\editor_journal.xrc">
+      <FileType>Document</FileType>
+      <Command>
+        cd res
+        wxrc %(Filename).xrc -v -c -o "$(Platform)\$(Configuration)\%(Filename)XRC.hpp"
+      </Command>
+      <Message>Building Journal</Message>
+      <Outputs>res\$(Platform)\$(Configuration)\editor_journalXRC.hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <None Include="res\editor_materialeditor.fbp" />
+    <CustomBuild Include="res\editor_materialeditor.xrc">
+      <FileType>Document</FileType>
+      <Command>
+        cd res
+        wxrc editor_materialeditor.xrc -v -c -o "$(Platform)\$(Configuration)\editor_materialeditorXRC.hpp"
+      </Command>
+      <Outputs>res\$(Platform)\$(Configuration)\editor_materialeditorXRC.hpp;%(Outputs)</Outputs>
+      <Message>Building Material Editor</Message>
+    </CustomBuild>
+    <None Include="res\editor_mesheditor.fbp" />
+    <CustomBuild Include="res\editor_mesheditor.xrc">
+      <FileType>Document</FileType>
+      <Message>Building Mesh Editor UI</Message>
+      <Command>
+        cd res
+        wxrc editor_mesheditor.xrc -v -c -o "$(Platform)\$(Configuration)\editor_mesheditorXRC.hpp"
+      </Command>
+      <Outputs>res\$(Platform)\$(Configuration)\editor_mesheditorXRC.hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <None Include="res\editor_pathlib.fbp" />
+    <CustomBuild Include="res\editor_pathlib.xrc">
+      <FileType>Document</FileType>
+      <Command>
+        cd res
+        wxrc %(Filename).xrc -v -c -o "$(Platform)\$(Configuration)\%(Filename)XRC.hpp"
+      </Command>
+      <Message>Building PathLib Editor</Message>
+      <Outputs>res\$(Platform)\$(Configuration)\editor_pathlibXRC.hpp</Outputs>
+    </CustomBuild>
+    <None Include="res\editor_quests.fbp" />
+    <CustomBuild Include="res\editor_quests.xrc">
+      <Message>Building Quests UI</Message>
+      <Command>
+        cd res
+        wxrc editor_quests.xrc -v -c -o "$(Platform)\$(Configuration)\editor_questsXRC.hpp"
+      </Command>
+      <Outputs>res\$(Platform)\$(Configuration)\editor_questsXRC.hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <None Include="res\editor_review_system.fbp" />
+    <CustomBuild Include="res\editor_review_system.xrc">
+      <Message>Building Review System</Message>
+      <FileType>Document</FileType>
+      <Command>
+        cd res
+        wxrc editor_review_system.xrc -v -c -o "$(Platform)\$(Configuration)\editor_review_systemXRC.hpp"
+      </Command>
+      <Outputs>res\$(Platform)\$(Configuration)\editor_review_systemXRC.hpp</Outputs>
+    </CustomBuild>
+    <None Include="res\editor_scene_importer.fbp" />
+    <CustomBuild Include="res\editor_scene_importer.xrc">
+      <FileType>Document</FileType>
+      <Command>
+        cd res
+        wxrc editor_scene_importer.xrc -v -c -o "$(Platform)\$(Configuration)\editor_scene_importerXRC.hpp"
+      </Command>
+      <Message>Building Scene Importer Tools</Message>
+      <Outputs>res\$(Platform)\$(Configuration)\editor_scene_importerXRC.hpp</Outputs>
+    </CustomBuild>
+    <None Include="res\editor_stripes.fbp" />
+    <CustomBuild Include="res\editor_stripes.xrc">
+      <FileType>Document</FileType>
+      <Command>
+        cd res
+        wxrc editor_stripes.xrc -v -c -o "$(Platform)\$(Configuration)\editor_stripesXRC.hpp"
+      </Command>
+      <Outputs>res\$(Platform)\$(Configuration)\editor_stripesXRC.hpp;%(Outputs)</Outputs>
+      <Message>Building Stripes Panel</Message>
+    </CustomBuild>
+    <None Include="res\editor_swfviewer.fbp" />
+    <CustomBuild Include="res\editor_swfviewer.xrc">
+      <FileType>Document</FileType>
+      <Command>
+        cd res
+        wxrc editor_swfviewer.xrc -v -c -o "$(Platform)\$(Configuration)\editor_swfviewerXRC.hpp"</Command>
+      <Message>Building SWF Viewer UI</Message>
+      <Outputs>res\$(Platform)\$(Configuration)\editor_swfviewerXRC.hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <None Include="res\editor_tarrays.fbp" />
+    <CustomBuild Include="res\editor_tarrays.xrc">
+      <FileType>Document</FileType>
+      <Command>
+        cd res
+        wxrc editor_tarrays.xrc -v -c -o "$(Platform)\$(Configuration)\editor_tarraysXRC.hpp"
+      </Command>
+      <Message>Building Texture Arrays Viewer</Message>
+      <Outputs>res\$(Platform)\$(Configuration)\editor_tarraysXRC.hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <None Include="res\editor_terrain.fbp" />
+    <CustomBuild Include="res\editor_terrain.xrc">
+      <FileType>Document</FileType>
+      <Command>
+        cd res
+        wxrc editor_terrain.xrc -v -c -o "$(Platform)\$(Configuration)\editor_terrainXRC.hpp"
+      </Command>
+      <Message>Building Terrain Edit Tools</Message>
+      <Outputs>res\$(Platform)\$(Configuration)\editor_terrainXRC.hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <None Include="res\editor_textureviewer.fbp" />
+    <CustomBuild Include="res\editor_textureviewer.xrc">
+      <FileType>Document</FileType>
+      <Command>
+        cd res
+        wxrc editor_textureviewer.xrc -v -c -o "$(Platform)\$(Configuration)\editor_textureviewerXRC.hpp"</Command>
+      <Message>Building Texture Viewer</Message>
+      <Outputs>res\$(Platform)\$(Configuration)\editor_textureviewerXRC.hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <None Include="res\editor_umbra.fbp" />
+    <CustomBuild Include="res\editor_umbra.xrc">
+      <FileType>Document</FileType>
+      <Command>
+        cd res
+        wxrc editor_umbra.xrc -v -c -o "$(Platform)\$(Configuration)\editor_umbraXRC.hpp"
+      </Command>
+      <Message>Building Umbra Tools</Message>
+      <Outputs>res\$(Platform)\$(Configuration)\editor_umbraXRC.hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <None Include="res\editor_tools.fbp" />
+    <CustomBuild Include="res\editor_tools.xrc">
+      <Message>Building Tools UI</Message>
+      <Command>
+        cd res
+        wxrc editor_tools.xrc -v -c -o "$(Platform)\$(Configuration)\editor_toolsXRC.hpp"
+      </Command>
+      <Outputs>res\$(Platform)\$(Configuration)\editor_toolsXRC.hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <None Include="res\editor_vegetation.fbp" />
+    <CustomBuild Include="res\editor_vegetation.xrc">
+      <FileType>Document</FileType>
+      <Command>
+        cd res
+        wxrc editor_vegetation.xrc -v -c -o "$(Platform)\$(Configuration)\editor_vegetationXRC.hpp"
+      </Command>
+      <Message>Building Vegetation Edit Tools</Message>
+      <Outputs>res\$(Platform)\$(Configuration)\editor_vegetationXRC.hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <None Include="res\editor_worldSceneDebugger.fbp" />
+    <CustomBuild Include="res\editor_worldSceneDebugger.xrc">
+      <FileType>Document</FileType>
+      <Command>
+        cd res
+        wxrc editor_worldSceneDebugger.xrc -v -c -o "$(Platform)\$(Configuration)\editor_worldSceneDebuggerXRC.hpp"
+      </Command>
+      <Message>Building World Scene Debugger UI</Message>
+      <Outputs>res\$(Platform)\$(Configuration)\editor_worldSceneDebuggerXRC.hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <None Include="res\editor_entityMeshGen.fbp" />
+    <CustomBuild Include="res\editor_entityMeshGen.xrc">
+      <FileType>Document</FileType>
+      <Command>
+        cd res
+        wxrc editor_entityMeshGen.xrc -v -c -o "$(Platform)\$(Configuration)\editor_entityMeshGenXRC.hpp"
+      </Command>
+      <Message>Building Entity Proxy Mesh UI</Message>
+      <Outputs>res\$(Platform)\$(Configuration)\editor_entityMeshGenXRC.hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <None Include="res\editor_entityProxySetup.fbp" />
+    <CustomBuild Include="res\editor_entityProxySetup.xrc">
+      <FileType>Document</FileType>
+      <Command>
+        cd res
+        wxrc editor_entityProxySetup.xrc -v -c -o "$(Platform)\$(Configuration)\editor_entityProxySetupXRC.hpp"
+      </Command>
+      <Message>Building Entity Proxy Setup UI</Message>
+      <Outputs>res\$(Platform)\$(Configuration)\editor_entityProxySetupXRC.hpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <None Include="res\images\cloneIcon.png" />
+    <None Include="res\images\flattenIcon.png" />
+    <None Include="res\images\meltIcon.png" />
+    <None Include="res\images\riseIcon.png" />
+    <None Include="res\images\slopeIcon.png" />
+    <None Include="res\images\smoothIcon.png" />
+    <None Include="res\images\stampIcon.png" />
+    <None Include="res\wxrc.exe" />
+    <None Include="res\images\add.png" />
+    <None Include="res\images\angle.png" />
+    <None Include="res\images\arrow_down.png" />
+    <None Include="res\images\arrow_up.png" />
+    <None Include="res\images\bin_closed.png" />
+    <None Include="res\images\bricks.png" />
+    <None Include="res\images\bricks2.png" />
+    <None Include="res\images\bug.png" />
+    <None Include="res\images\bug_go.png" />
+    <None Include="res\images\check_gray.png" />
+    <None Include="res\images\check_off.png" />
+    <None Include="res\images\check_on.png" />
+    <None Include="res\images\checked_in.png" />
+    <None Include="res\images\checked_out.png" />
+    <None Include="res\images\component.png" />
+    <None Include="res\images\control_fastforward_blue.png" />
+    <None Include="res\images\control_pause_blue.png" />
+    <None Include="res\images\control_play_blue.png" />
+    <None Include="res\images\control_repeat_blue.png" />
+    <None Include="res\images\control_rewind_blue.png" />
+    <None Include="res\images\control_start_blue.png" />
+    <None Include="res\images\control_stop_blue.png" />
+    <None Include="res\images\controller.png" />
+    <None Include="res\images\curve_controlpoints.png" />
+    <None Include="res\images\curve_snapping.png" />
+    <None Include="res\images\curve_tangents.png" />
+    <None Include="res\images\depot.png" />
+    <None Include="res\images\dir_changed.png" />
+    <None Include="res\images\dir_closed.png" />
+    <None Include="res\images\dir_opened.png" />
+    <None Include="res\images\disk.png" />
+    <None Include="res\images\entity.png" />
+    <None Include="res\images\eye.png" />
+    <None Include="res\images\find.png" />
+    <None Include="res\images\folder_page.png" />
+    <None Include="res\images\grid.png" />
+    <None Include="res\images\home.png" />
+    <None Include="res\images\joystick.png" />
+    <None Include="res\images\layout.png" />
+    <None Include="res\images\lightning.png" />
+    <None Include="res\images\local.png" />
+    <None Include="res\images\marked_delete.png" />
+    <None Include="res\images\materials.png" />
+    <None Include="res\images\move.png" />
+    <None Include="res\images\not_synced.png" />
+    <None Include="res\images\page_add.png" />
+    <None Include="res\images\page_copy.png" />
+    <None Include="res\images\page_paste.png" />
+    <None Include="res\images\pb_add.png" />
+    <None Include="res\images\pb_browse.png" />
+    <None Include="res\images\pb_clear.png" />
+    <None Include="res\images\pb_delete.png" />
+    <None Include="res\images\pb_empty.png" />
+    <None Include="res\images\pb_find.png" />
+    <None Include="res\images\pb_insert.png" />
+    <None Include="res\images\pb_new.png" />
+    <None Include="res\images\pb_pick.png" />
+    <None Include="res\images\pb_use.png" />
+    <None Include="res\images\properties.png" />
+    <None Include="res\images\refresh.png" />
+    <None Include="res\images\rotate.png" />
+    <None Include="res\images\save16.png" />
+    <None Include="res\images\scale.png" />
+    <None Include="res\images\streaming.png" />
+    <None Include="res\images\table.png" />
+    <None Include="res\images\template.png" />
+    <None Include="res\images\tool.png" />
+    <None Include="res\images\tree_collapse.png" />
+    <None Include="res\images\tree_expand.png" />
+    <None Include="res\images\world.png" />
+    <None Include="res\images\world16.png" />
+    <None Include="res\images\xenon.png" />
+    <None Include="animEventsTimelineItems.inl" />
+    <None Include="dialogTimelineItems.inl" />
+    <None Include="cutsceneTimelineItems.inl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="res\editor.rc">
+      <AdditionalIncludeDirectories>$(IntDir);$(SolutionDir)../external/wxWidgets-2.9.4/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <ResourceCompile Include="res\version.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\common\core\core.vcxproj">
+      <Project>{bec313e8-15bc-4693-930f-d5fe597adab0}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\engine\engine.vcxproj">
+      <Project>{61b04d76-fc60-4662-9917-ce2ccd6c6b25}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\game\game.vcxproj">
+      <Project>{b1e9721b-f7a2-4497-9409-67487ba3b419}</Project>
+      <Private>true</Private>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\gpuApiDX10\gpuApiDX10.vcxproj">
+      <Project>{7e8999e0-7735-4eeb-a328-b2763dbe04bd}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\gpuApiUtils\gpuApiUtils.vcxproj">
+      <Project>{25a08abc-1a48-45e3-a6a1-8853070c2d72}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\matcompiler\matcompiler.vcxproj">
+      <Project>{5304ffb3-a910-464d-ba75-4c96ca90bb59}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\physics\physics.vcxproj">
+      <Project>{60a7e708-44b4-4337-908d-f125c77f81e9}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\platformCommon\platformCommon.vcxproj">
+      <Project>{c30680e9-5cda-4a71-89e6-0b195dfc8bfd}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\redIO\redIO.vcxproj">
+      <Project>{cb12e47d-db64-4466-9c54-59c3da05e6bf}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\redMath\redMath.vcxproj">
+      <Project>{14054554-1f10-4eb8-839b-d4bb8592515b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\redMemoryFramework\redMemoryFramework.vcxproj">
+      <Project>{6bcfb601-80ce-4183-9ae2-ba3cf6c68715}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\redNetwork\RedNetwork.vcxproj">
+      <Project>{99596beb-157a-4c15-94b4-25e3a580de22}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\redSystem\redSystem.vcxproj">
+      <Project>{9c1f2dbf-9ea5-41b9-8430-d869c8ac2189}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\redThreads\redThreads.vcxproj">
+      <Project>{50404845-5499-4116-911c-55a575807ef6}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\renderer\render.vcxproj">
+      <Project>{3ac2d4a5-c4c8-48b9-9ba9-487a142d0c8f}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\scripts\scripts.vcxproj">
+      <Project>{2bb69d9f-79fc-4a10-b998-c0ba982efbc6}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\games\r4\r4.vcxproj">
+      <Project>{cae14b93-3735-453e-8734-38841f384203}</Project>
+      <Private>true</Private>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\importer\importer.vcxproj">
+      <Project>{3dc466a5-bfe1-477b-b09f-3de227cd3f74}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\platform\platform.vcxproj">
+      <Project>{d3fc2b93-22b2-44b4-97d2-6aba46d0e580}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\versionControl\versionControl.vcxproj">
+      <Project>{2effd008-66a3-4024-a06d-4a03f3a971a2}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\images\horz_align.png" />
+    <Image Include="res\images\horz_distribute.png" />
+    <Image Include="res\images\spawnTree-Al-behavior-00.png" />
+    <Image Include="res\images\spawnTree-Al-behavior-01.png" />
+    <Image Include="res\images\spawnTree-Al-behavior-02.png" />
+    <Image Include="res\images\spawnTree-Al-behavior-03.png" />
+    <Image Include="res\images\spawnTree-Al-behavior-04.png" />
+    <Image Include="res\images\spawnTree-Al-behavior-05.png" />
+    <Image Include="res\images\spawnTree-condition-icon.png" />
+    <Image Include="res\images\spawnTree-creature-entry.png" />
+    <Image Include="res\images\spawnTree-spawn-behavior-00.png" />
+    <Image Include="res\images\spawnTree-spawn-behavior-01.png" />
+    <Image Include="res\images\spawnTree-spawn-behavior-02.png" />
+    <Image Include="res\images\spawnTree-spawn-behavior-03.png" />
+    <Image Include="res\images\spawnTree-spawn-behavior-04.png" />
+    <Image Include="res\images\spawnTree-spawn-behavior-05.png" />
+    <Image Include="res\images\spawnTree-story-phase-icon.png" />
+    <Image Include="res\images\spawnTree-story-phase-setter.png" />
+    <Image Include="res\images\vert_align.png" />
+    <Image Include="res\images\vert_distribute.png" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.targets))\Shared.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

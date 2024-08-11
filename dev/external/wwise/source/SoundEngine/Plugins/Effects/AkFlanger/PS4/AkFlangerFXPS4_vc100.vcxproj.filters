@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<Filter Include="Common">
+			<UniqueIdentifier>{7FBC9657-75E3-8841-87FD-916713E08C1A}</UniqueIdentifier>
+		</Filter>
+	</ItemGroup>
+	<ItemGroup>
+		<ClInclude Include="..\AkFlangerFX.h" />
+		<ClInclude Include="..\AkFlangerFXInfo.h" />
+		<ClInclude Include="..\AkFlangerFXParams.h" />
+		<ClInclude Include="..\..\Common\LFO.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\Common\LFOMono.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\Common\LFOMultichannel.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\Common\LFOPolicies.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\Common\Mix2Interp.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\Common\OnePoleFilter.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\Common\UniComb.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+	</ItemGroup>
+	<ItemGroup>
+		<ClCompile Include="..\AkFlangerFX.cpp" />
+		<ClCompile Include="..\AkFlangerFXParams.cpp" />
+		<ClCompile Include="..\..\Common\LFO.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\Common\Mix2Interp.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\Common\OnePoleFilter.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\Common\UniComb.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+	</ItemGroup>
+</Project>

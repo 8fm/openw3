@@ -1,0 +1,30 @@
+/***********************************************************************
+The content of this file includes source code for the sound engine
+portion of the AUDIOKINETIC Wwise Technology and constitutes "Level
+Two Source Code" as defined in the Source Code Addendum attached
+with this file.  Any use of the Level Two Source Code shall be
+subject to the terms and conditions outlined in the Source Code
+Addendum and the End User License Agreement for Wwise(R).
+
+Version: v2013.2.9  Build: 4872
+Copyright (c) 2006-2014 Audiokinetic Inc.
+***********************************************************************/
+
+#ifndef _AKSPUINLINE_H_
+#define _AKSPUINLINE_H_
+
+#if defined(__SPU__) /* && defined(AKUSESPUINLINE) */
+#define SPUInline inline
+#define SPUForceInline AkForceInline
+#define SPUStatic static
+#else
+#define SPUInline
+#define SPUStatic
+#define SPUForceInline
+#endif
+
+#ifndef NULL
+#define NULL 0
+#endif
+
+#endif

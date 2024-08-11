@@ -1,0 +1,1267 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<resource xmlns="http://www.wxwindows.org/wxxrc" version="2.3.0.1">
+	<object class="wxPanel" name="FactsDBEditor">
+		<style>wxTAB_TRAVERSAL</style>
+		<size>500,300</size>
+		<object class="wxBoxSizer">
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxEXPAND</flag>
+				<border>0</border>
+				<object class="wxBoxSizer">
+					<orient>wxVERTICAL</orient>
+					<object class="sizeritem">
+						<option>1</option>
+						<flag>wxEXPAND</flag>
+						<border>5</border>
+						<object class="wxSplitterWindow" name="m_splitter6">
+							<style>wxSP_3D</style>
+							<sashpos>245</sashpos>
+							<gravity>0</gravity>
+							<minsize>0</minsize>
+							<orientation>vertical</orientation>
+							<object class="wxPanel" name="m_panel21">
+								<style>wxTAB_TRAVERSAL</style>
+								<object class="wxBoxSizer">
+									<orient>wxVERTICAL</orient>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALL|wxEXPAND</flag>
+										<border>5</border>
+										<object class="wxStaticText" name="m_staticText159">
+											<style>wxALIGN_CENTRE</style>
+											<label>Fact IDs:</label>
+											<wrap>-1</wrap>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<option>1</option>
+										<flag>wxALL|wxEXPAND</flag>
+										<border>0</border>
+										<object class="wxListBox" name="idsListBox">
+											<content />
+										</object>
+									</object>
+								</object>
+							</object>
+							<object class="wxPanel" name="m_panel22">
+								<style>wxTAB_TRAVERSAL</style>
+								<object class="wxBoxSizer">
+									<orient>wxVERTICAL</orient>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALL|wxEXPAND</flag>
+										<border>5</border>
+										<object class="wxStaticText" name="m_staticText160">
+											<style>wxALIGN_CENTRE</style>
+											<label>Facts:</label>
+											<wrap>-1</wrap>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<option>1</option>
+										<flag>wxALL|wxEXPAND</flag>
+										<border>0</border>
+										<object class="wxListBox" name="valuesListBox">
+											<content />
+										</object>
+									</object>
+								</object>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxEXPAND</flag>
+				<border>0</border>
+				<object class="wxBoxSizer">
+					<orient>wxHORIZONTAL</orient>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxBitmapButton" name="filterIdsButton">
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/filter.png</bitmap>
+							<default>0</default>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>1</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxTextCtrl" name="idFilterValue">
+							<style>wxTE_PROCESS_ENTER</style>
+							<value></value>
+							<maxlength>0</maxlength>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxEXPAND</flag>
+						<border>5</border>
+						<object class="wxStaticText" name="statusBar">
+							<font>
+								<family>default</family>
+								<style>normal</style>
+								<weight>bold</weight>
+								<underlined>0</underlined>
+								<face>Arial</face>
+							</font>
+							<label></label>
+							<wrap>-1</wrap>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+	<object class="wxDialog" name="GameFactEditor">
+		<style>wxDEFAULT_DIALOG_STYLE</style>
+		<size>343,257</size>
+		<title>Game Fact Editor</title>
+		<object class="wxBoxSizer">
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<option>3</option>
+				<flag>wxEXPAND | wxALL</flag>
+				<border>5</border>
+				<object class="wxPanel" name="m_panel162">
+					<style>wxTAB_TRAVERSAL</style>
+					<object class="wxBoxSizer">
+						<orient>wxVERTICAL</orient>
+						<object class="sizeritem">
+							<option>1</option>
+							<flag>wxEXPAND</flag>
+							<border>5</border>
+							<object class="wxStaticBoxSizer">
+								<orient>wxHORIZONTAL</orient>
+								<label>Value</label>
+								<object class="sizeritem">
+									<option>1</option>
+									<flag>wxTOP|wxBOTTOM|wxRIGHT</flag>
+									<border>5</border>
+									<object class="wxSpinCtrl" name="value">
+										<style>wxSP_ARROW_KEYS</style>
+										<value>0</value>
+										<min>-100000</min>
+										<max>1000000</max>
+									</object>
+								</object>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>1</option>
+							<flag>wxEXPAND</flag>
+							<border>5</border>
+							<object class="wxStaticBoxSizer">
+								<orient>wxHORIZONTAL</orient>
+								<label>Date</label>
+								<object class="sizeritem">
+									<option>1</option>
+									<flag>wxALL</flag>
+									<border>5</border>
+									<object class="wxSpinCtrl" name="timeSecond">
+										<style>wxSP_ARROW_KEYS</style>
+										<value>0</value>
+										<min>0</min>
+										<max>10000000</max>
+									</object>
+								</object>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>2</option>
+							<flag>wxEXPAND</flag>
+							<border>5</border>
+							<object class="wxStaticBoxSizer">
+								<orient>wxVERTICAL</orient>
+								<label>Expiration Time</label>
+								<object class="sizeritem">
+									<option>1</option>
+									<flag>wxEXPAND</flag>
+									<border>5</border>
+									<object class="wxFlexGridSizer">
+										<rows>0</rows>
+										<cols>2</cols>
+										<vgap>0</vgap>
+										<hgap>0</hgap>
+										<growablecols></growablecols>
+										<growablerows></growablerows>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxALL</flag>
+											<border>5</border>
+											<object class="wxRadioButton" name="expireNever">
+												<label>Never</label>
+												<value>1</value>
+											</object>
+										</object>
+										<object class="spacer">
+											<option>1</option>
+											<flag>wxEXPAND</flag>
+											<border>5</border>
+											<size>0,0</size>
+										</object>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxALL</flag>
+											<border>5</border>
+											<object class="wxRadioButton" name="expireWhenActEnds">
+												<label>When act ends</label>
+												<value>0</value>
+											</object>
+										</object>
+										<object class="spacer">
+											<option>1</option>
+											<flag>wxEXPAND</flag>
+											<border>5</border>
+											<size>0,0</size>
+										</object>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxALL</flag>
+											<border>5</border>
+											<object class="wxRadioButton" name="expireAfterTime">
+												<label>After time:</label>
+												<value>0</value>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>1</option>
+											<flag>wxALL</flag>
+											<border>2</border>
+											<object class="wxSpinCtrl" name="expirationTimeValue">
+												<style>wxSP_ARROW_KEYS</style>
+												<value>0</value>
+												<min>0</min>
+												<max>1000000</max>
+											</object>
+										</object>
+									</object>
+								</object>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxALIGN_CENTER_HORIZONTAL</flag>
+				<border>5</border>
+				<object class="wxBoxSizer">
+					<orient>wxHORIZONTAL</orient>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="okButton">
+							<label>OK</label>
+							<default>1</default>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="cancelButton">
+							<label>Cancel</label>
+							<default>0</default>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+	<object class="wxFrame" name="QuestEditor">
+		<style>wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL</style>
+		<size>1024,768</size>
+		<title>Quest Editor</title>
+		<aui_managed>0</aui_managed>
+		<object class="wxMenuBar" name="menubar">
+			<label>MyMenuBar</label>
+			<object class="wxMenu" name="menuFile">
+				<label>File</label>
+				<object class="wxMenuItem" name="menuItemSave">
+					<label>Save\tCtrl+S</label>
+					<help></help>
+				</object>
+				<object class="wxMenuItem" name="menuItemSaveAll">
+					<label>Save all</label>
+					<help></help>
+				</object>
+				<object class="separator" />
+				<object class="wxMenuItem" name="menuItemExit">
+					<label>Exit</label>
+					<help></help>
+				</object>
+			</object>
+			<object class="wxMenu" name="menuEdit">
+				<label>Edit</label>
+				<object class="wxMenuItem" name="menuItemUndo">
+					<label>Undo\tCtrl+Z</label>
+					<help></help>
+				</object>
+				<object class="wxMenuItem" name="menuItemRedo">
+					<label>Redo\tCtrl+Y</label>
+					<help></help>
+				</object>
+				<object class="separator" />
+				<object class="wxMenuItem" name="menuItemCopy">
+					<label>Copy\tCtrl+C</label>
+					<help></help>
+				</object>
+				<object class="wxMenuItem" name="menuItemPaste">
+					<label>Paste\tCtrl+V</label>
+					<help></help>
+				</object>
+				<object class="wxMenuItem" name="menuItemCut">
+					<label>Cut\tCtrl+X</label>
+					<help></help>
+				</object>
+				<object class="separator" />
+				<object class="wxMenuItem" name="menuItemFind">
+					<label>Find\tCtrl+F</label>
+					<help></help>
+				</object>
+				<object class="separator" />
+				<object class="wxMenuItem" name="menuItemCopyQuestView">
+					<label>Copy Quest View\tShift+Ctrl+C</label>
+					<help></help>
+				</object>
+				<object class="wxMenuItem" name="menuItemPasteQuestView">
+					<label>Paste Quest View\tShift+Ctrl+V</label>
+					<help></help>
+				</object>
+			</object>
+			<object class="wxMenu" name="menuTools">
+				<label>Tools</label>
+				<object class="wxMenuItem" name="menuItemUpdateGUIDs">
+					<label>Update GUIDs</label>
+					<help></help>
+				</object>
+				<object class="wxMenuItem" name="menuItemUpdateCommunityGUIDS">
+					<label>Update Community GUIDs</label>
+					<help></help>
+				</object>
+				<object class="wxMenuItem" name="menuItemUpgrade">
+					<label>Upgrade</label>
+					<help></help>
+				</object>
+				<object class="wxMenuItem" name="menuItemCleanSourceData">
+					<label>Cleanup source data</label>
+					<help></help>
+				</object>
+				<object class="wxMenuItem" name="menuItemSaveDependencyInfo">
+					<label>Save Dependency Info</label>
+					<help></help>
+				</object>
+				<object class="wxMenuItem" name="menuItemCookSceneData">
+					<label>Cook scene data</label>
+					<help></help>
+				</object>
+			</object>
+		</object>
+		<object class="wxToolBar" name="toolBar">
+			<style>wxTB_HORIZONTAL</style>
+			<bitmapsize>16,16</bitmapsize>
+			<margins></margins>
+			<packing>1</packing>
+			<separation>5</separation>
+			<object class="tool" name="toolFlowSequence">
+				<label>Flow sequence</label>
+				<tooltip></tooltip>
+				<longhelp></longhelp>
+				<bitmap>images/arrow_divide.png</bitmap>
+			</object>
+			<object class="tool" name="toolFind">
+				<label>find</label>
+				<tooltip></tooltip>
+				<longhelp></longhelp>
+				<bitmap>images/pb_browse.png</bitmap>
+			</object>
+			<object class="tool" name="toolClean">
+				<label>clean</label>
+				<tooltip></tooltip>
+				<longhelp></longhelp>
+				<bitmap>images\clear_debug_flags.png</bitmap>
+			</object>
+		</object>
+		<object class="wxSplitterWindow" name="MainSplitter">
+			<style>wxSP_3D</style>
+			<sashpos>50</sashpos>
+			<gravity>0</gravity>
+			<minsize>0</minsize>
+			<orientation>horizontal</orientation>
+			<object class="wxPanel" name="topPanel">
+				<style>wxTAB_TRAVERSAL</style>
+				<object class="wxBoxSizer">
+					<orient>wxVERTICAL</orient>
+					<object class="sizeritem">
+						<option>2</option>
+						<flag>wxEXPAND</flag>
+						<border>5</border>
+						<object class="wxSplitterWindow" name="TopPanelSplitter">
+							<style>wxSP_3D</style>
+							<sashpos>300</sashpos>
+							<gravity>0</gravity>
+							<minsize>0</minsize>
+							<orientation>vertical</orientation>
+							<object class="wxPanel" name="PropertiesPanel">
+								<style>wxTAB_TRAVERSAL</style>
+								<object class="wxBoxSizer">
+									<orient>wxVERTICAL</orient>
+								</object>
+							</object>
+							<object class="wxPanel" name="GraphPanel">
+								<style>wxTAB_TRAVERSAL</style>
+								<object class="wxBoxSizer">
+									<orient>wxVERTICAL</orient>
+								</object>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+	<object class="wxPanel" name="QuestsDebugger">
+		<style>wxTAB_TRAVERSAL</style>
+		<size>500,300</size>
+		<object class="wxBoxSizer">
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxALL|wxEXPAND</flag>
+				<border>0</border>
+				<object class="wxTreeCtrl" name="activeThreadsTree">
+					<style>wxTR_DEFAULT_STYLE</style>
+				</object>
+			</object>
+		</object>
+	</object>
+	<object class="wxDialog" name="QuestBlocksFinder">
+		<style>wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER</style>
+		<size>800,524</size>
+		<title>Find Quest Blocks</title>
+		<object class="wxBoxSizer">
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxStaticBoxSizer">
+					<orient>wxVERTICAL</orient>
+					<label>Category</label>
+					<object class="sizeritem">
+						<option>1</option>
+						<flag>wxEXPAND | wxALL</flag>
+						<border>0</border>
+						<object class="wxNotebook" name="m_notebook15">
+							<object class="notebookpage">
+								<label>By Type</label>
+								<selected>1</selected>
+								<object class="wxPanel" name="byTypePage">
+									<style>wxTAB_TRAVERSAL</style>
+									<object class="wxBoxSizer">
+										<orient>wxHORIZONTAL</orient>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxALL</flag>
+											<border>5</border>
+											<object class="wxBitmapButton" name="byTypeSearchButton">
+												<style>wxBU_AUTODRAW</style>
+												<size>32,32</size>
+												<bitmap>images/pb_browse.png</bitmap>
+												<default>0</default>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxALL</flag>
+											<border>5</border>
+											<object class="wxStaticText" name="m_staticText204">
+												<label>Block type:</label>
+												<wrap>-1</wrap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxALL</flag>
+											<border>5</border>
+											<object class="wxChoice" name="blockTypeChoice">
+												<selection>20</selection>
+												<content>
+													<item>AND</item>
+													<item>Behavior Control</item>
+													<item>Behavior Event Emitter</item>
+													<item>Behavior Notification Pause</item>
+													<item>Checkpoint</item>
+													<item>Condition</item>
+													<item>Context</item>
+													<item>Cut Control</item>
+													<item>Facts DB Change</item>
+													<item>Formations Manager</item>
+													<item>Hide Layers</item>
+													<item>Interaction Dialog</item>
+													<item>Interest point emitter</item>
+													<item>Load Layers</item>
+													<item>Log Entry</item>
+													<item>Pause Condition</item>
+													<item>Phase</item>
+													<item>Script</item>
+													<item>Scripted Dialog</item>
+													<item>Scene</item>
+													<item>Story Phase Setter</item>
+													<item>Teleport</item>
+													<item>Time Management</item>
+													<item>XOR</item>
+												</content>
+											</object>
+										</object>
+									</object>
+								</object>
+							</object>
+							<object class="notebookpage">
+								<label>By Name</label>
+								<selected>0</selected>
+								<object class="wxPanel" name="byNamePage">
+									<style>wxTAB_TRAVERSAL</style>
+									<object class="wxBoxSizer">
+										<orient>wxHORIZONTAL</orient>
+										<object class="sizeritem">
+											<option>1</option>
+											<flag>wxEXPAND</flag>
+											<border>5</border>
+											<object class="wxBoxSizer">
+												<orient>wxHORIZONTAL</orient>
+												<object class="sizeritem">
+													<option>0</option>
+													<flag>wxALL</flag>
+													<border>5</border>
+													<object class="wxBitmapButton" name="byNameSearchButton">
+														<style>wxBU_AUTODRAW</style>
+														<size>32,32</size>
+														<bitmap>images/pb_browse.png</bitmap>
+														<default>0</default>
+													</object>
+												</object>
+												<object class="sizeritem">
+													<option>0</option>
+													<flag>wxALL</flag>
+													<border>5</border>
+													<object class="wxStaticText" name="m_staticText205">
+														<label>Block name:</label>
+														<wrap>-1</wrap>
+													</object>
+												</object>
+												<object class="sizeritem">
+													<option>0</option>
+													<flag>wxALL</flag>
+													<border>5</border>
+													<object class="wxTextCtrl" name="blockName">
+														<value></value>
+														<maxlength>0</maxlength>
+													</object>
+												</object>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxALL</flag>
+											<border>5</border>
+											<object class="wxRadioBox" name="matchCriteria">
+												<style>wxRA_SPECIFY_COLS</style>
+												<label>Matching criteria</label>
+												<selection>0</selection>
+												<content>
+													<item>Match whole</item>
+													<item>Match part</item>
+												</content>
+												<dimension>1</dimension>
+											</object>
+										</object>
+									</object>
+								</object>
+							</object>
+							<object class="notebookpage">
+								<label>By Condition</label>
+								<selected>0</selected>
+								<object class="wxPanel" name="byConditionPage">
+									<style>wxTAB_TRAVERSAL</style>
+									<object class="wxBoxSizer">
+										<orient>wxHORIZONTAL</orient>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxALL</flag>
+											<border>5</border>
+											<object class="wxBitmapButton" name="byConditionSearchButton">
+												<style>wxBU_AUTODRAW</style>
+												<size>32,32</size>
+												<bitmap>images/pb_browse.png</bitmap>
+												<default>0</default>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxALL</flag>
+											<border>5</border>
+											<object class="wxStaticText" name="m_staticText241">
+												<label>Type:</label>
+												<wrap>-1</wrap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxALL</flag>
+											<border>5</border>
+											<object class="wxChoice" name="conditionTypeChoice">
+												<selection>11</selection>
+												<content>
+													<item>Actor</item>
+													<item>Cutscene</item>
+													<item>Facts DB</item>
+													<item>Fight</item>
+													<item>Interaction</item>
+													<item>QTE</item>
+													<item>Reaction</item>
+													<item>Tags presence</item>
+													<item>Time exact</item>
+													<item>Time period</item>
+													<item>Trigger inside</item>
+													<item>Trigger entry</item>
+													<item>Wait for</item>
+												</content>
+											</object>
+										</object>
+									</object>
+								</object>
+							</object>
+							<object class="notebookpage">
+								<label>By Script Func</label>
+								<selected>0</selected>
+								<object class="wxPanel" name="byScriptFunction">
+									<style>wxTAB_TRAVERSAL</style>
+									<object class="wxBoxSizer">
+										<orient>wxHORIZONTAL</orient>
+										<object class="sizeritem">
+											<option>1</option>
+											<flag>wxEXPAND | wxALL</flag>
+											<border>5</border>
+											<object class="wxScrolledWindow" name="m_scrolledWindow1">
+												<style>wxHSCROLL</style>
+												<scrollrate>5,5</scrollrate>
+												<object class="wxBoxSizer">
+													<orient>wxHORIZONTAL</orient>
+													<object class="sizeritem">
+														<option>0</option>
+														<flag>wxALL</flag>
+														<border>5</border>
+														<object class="wxBitmapButton" name="byFunctionSearchButton">
+															<style>wxBU_AUTODRAW</style>
+															<size>32,32</size>
+															<bitmap>images/pb_browse.png</bitmap>
+															<default>0</default>
+														</object>
+													</object>
+													<object class="sizeritem">
+														<option>0</option>
+														<flag>wxALL</flag>
+														<border>5</border>
+														<object class="wxStaticText" name="m_staticText2041">
+															<label>Function name:</label>
+															<wrap>-1</wrap>
+														</object>
+													</object>
+													<object class="sizeritem">
+														<option>0</option>
+														<flag>wxALL|wxEXPAND</flag>
+														<border>5</border>
+														<object class="wxChoice" name="functionNameChoice">
+															<size>200,-1</size>
+															<selection>20</selection>
+															<content />
+														</object>
+													</object>
+												</object>
+											</object>
+										</object>
+									</object>
+								</object>
+							</object>
+							<object class="notebookpage">
+								<label>By Fact</label>
+								<selected>0</selected>
+								<object class="wxPanel" name="byFact">
+									<style>wxTAB_TRAVERSAL</style>
+									<object class="wxBoxSizer">
+										<orient>wxHORIZONTAL</orient>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxALL</flag>
+											<border>5</border>
+											<object class="wxBitmapButton" name="byFactSearchButton">
+												<style>wxBU_AUTODRAW</style>
+												<size>32,32</size>
+												<bitmap>images/pb_browse.png</bitmap>
+												<default>0</default>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxALL</flag>
+											<border>5</border>
+											<object class="wxStaticText" name="m_staticText2411">
+												<label>Fact id:</label>
+												<wrap>-1</wrap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>1</option>
+											<flag>wxALL</flag>
+											<border>5</border>
+											<object class="wxTextCtrl" name="factIdText">
+												<value></value>
+												<maxlength>0</maxlength>
+											</object>
+										</object>
+									</object>
+								</object>
+							</object>
+							<object class="notebookpage">
+								<label>By Reward</label>
+								<selected>0</selected>
+								<object class="wxPanel" name="byReward">
+									<style>wxTAB_TRAVERSAL</style>
+									<object class="wxBoxSizer">
+										<orient>wxHORIZONTAL</orient>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>5</border>
+											<object class="wxBitmapButton" name="byRewardSearchButton">
+												<style>wxBU_AUTODRAW</style>
+												<size>32,32</size>
+												<bitmap>images/pb_browse.png</bitmap>
+												<default>0</default>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>5</border>
+											<object class="wxStaticText" name="m_staticText27">
+												<label>Reward name:</label>
+												<wrap>-1</wrap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>1</option>
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>5</border>
+											<object class="wxChoice" name="rewardNameChoice">
+												<selection>0</selection>
+												<content />
+											</object>
+										</object>
+									</object>
+								</object>
+							</object>
+							<object class="notebookpage">
+								<label>By GUID</label>
+								<selected>0</selected>
+								<object class="wxPanel" name="byGUIDPage">
+									<style>wxTAB_TRAVERSAL</style>
+									<object class="wxBoxSizer">
+										<orient>wxHORIZONTAL</orient>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxALL</flag>
+											<border>5</border>
+											<object class="wxBitmapButton" name="byGUIDSearchButton">
+												<style>wxBU_AUTODRAW</style>
+												<size>32,32</size>
+												<bitmap>images/pb_browse.png</bitmap>
+												<default>0</default>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxALL</flag>
+											<border>5</border>
+											<object class="wxStaticText" name="m_staticText207">
+												<label>GUID:</label>
+												<wrap>-1</wrap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxALL</flag>
+											<border>5</border>
+											<object class="wxTextCtrl" name="blockGUID">
+												<value></value>
+												<maxlength>0</maxlength>
+											</object>
+										</object>
+									</object>
+								</object>
+							</object>
+							<object class="notebookpage">
+								<label>Spawnsets</label>
+								<selected>0</selected>
+								<object class="wxPanel" name="spawnsetPage">
+									<style>wxTAB_TRAVERSAL</style>
+									<object class="wxBoxSizer">
+										<orient>wxHORIZONTAL</orient>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxALL</flag>
+											<border>5</border>
+											<object class="wxBitmapButton" name="spawnsetSearchButton">
+												<style>wxBU_AUTODRAW</style>
+												<size>32,32</size>
+												<bitmap>images/pb_browse.png</bitmap>
+												<default>0</default>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxALL</flag>
+											<border>5</border>
+											<object class="wxStaticText" name="m_staticText206">
+												<label>Phase name:</label>
+												<wrap>-1</wrap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxALL</flag>
+											<border>5</border>
+											<object class="wxTextCtrl" name="storyPhaseName">
+												<value></value>
+												<maxlength>0</maxlength>
+											</object>
+										</object>
+									</object>
+								</object>
+							</object>
+							<object class="notebookpage">
+								<label>Outdated</label>
+								<selected>0</selected>
+								<object class="wxPanel" name="outdatedPage">
+									<style>wxTAB_TRAVERSAL</style>
+									<object class="wxBoxSizer">
+										<orient>wxVERTICAL</orient>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxALL</flag>
+											<border>5</border>
+											<object class="wxBitmapButton" name="outdatedSearchButton">
+												<style>wxBU_AUTODRAW</style>
+												<size>32,32</size>
+												<bitmap>images/exclamation.png</bitmap>
+												<default>0</default>
+											</object>
+										</object>
+									</object>
+								</object>
+							</object>
+							<object class="notebookpage">
+								<label>Invalid journal paths</label>
+								<selected>0</selected>
+								<object class="wxPanel" name="invalidPage">
+									<style>wxTAB_TRAVERSAL</style>
+									<object class="wxBoxSizer">
+										<orient>wxVERTICAL</orient>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxALL</flag>
+											<border>5</border>
+											<object class="wxBitmapButton" name="invalidSearchButton">
+												<style>wxBU_AUTODRAW</style>
+												<size>32,32</size>
+												<bitmap>images/exclamation.png</bitmap>
+												<default>0</default>
+											</object>
+										</object>
+									</object>
+								</object>
+							</object>
+							<object class="notebookpage">
+								<label>Zero GUID</label>
+								<selected>0</selected>
+								<object class="wxPanel" name="zeroGuidPage">
+									<style>wxTAB_TRAVERSAL</style>
+									<object class="wxBoxSizer">
+										<orient>wxVERTICAL</orient>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxALL</flag>
+											<border>5</border>
+											<object class="wxBitmapButton" name="zeroGUIDSearchButton">
+												<style>wxBU_AUTODRAW</style>
+												<size>32,32</size>
+												<bitmap>images/exclamation.png</bitmap>
+												<default>0</default>
+											</object>
+										</object>
+									</object>
+								</object>
+							</object>
+							<object class="notebookpage">
+								<label>From XML</label>
+								<selected>0</selected>
+								<object class="wxPanel" name="fromXMLPage">
+									<style>wxTAB_TRAVERSAL</style>
+									<object class="wxBoxSizer">
+										<orient>wxVERTICAL</orient>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxALL</flag>
+											<border>5</border>
+											<object class="wxButton" name="importFromXMLButton">
+												<label>Import</label>
+												<default>0</default>
+											</object>
+										</object>
+									</object>
+								</object>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxStaticBoxSizer">
+					<orient>wxVERTICAL</orient>
+					<label>Results</label>
+					<object class="sizeritem">
+						<option>1</option>
+						<flag>wxALL|wxEXPAND</flag>
+						<border>0</border>
+						<object class="wxListBox" name="results">
+							<content />
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxEXPAND</flag>
+				<border>0</border>
+				<object class="wxStaticBoxSizer">
+					<orient>wxVERTICAL</orient>
+					<label>Tools</label>
+					<object class="sizeritem">
+						<option>1</option>
+						<flag>wxEXPAND | wxALL</flag>
+						<border>5</border>
+						<object class="wxNotebook" name="m_notebook16">
+							<object class="notebookpage">
+								<label>XML Exporter</label>
+								<selected>0</selected>
+								<object class="wxPanel" name="toolXMLExportPage">
+									<style>wxTAB_TRAVERSAL</style>
+									<object class="wxBoxSizer">
+										<orient>wxHORIZONTAL</orient>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxALL</flag>
+											<border>5</border>
+											<object class="wxButton" name="exportToXMLButton">
+												<label>Export</label>
+												<default>0</default>
+											</object>
+										</object>
+									</object>
+								</object>
+							</object>
+							<object class="notebookpage">
+								<label>Find Cutscenes</label>
+								<selected>0</selected>
+								<object class="wxPanel" name="toolCutscenesFinder">
+									<style>wxTAB_TRAVERSAL</style>
+									<object class="wxBoxSizer">
+										<orient>wxVERTICAL</orient>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxALL</flag>
+											<border>5</border>
+											<object class="wxButton" name="findCutscenesBtn">
+												<label>Find</label>
+												<default>0</default>
+											</object>
+										</object>
+									</object>
+								</object>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+	<object class="wxPanel" name="QuestScenesDebugger">
+		<style>wxTAB_TRAVERSAL</style>
+		<size>658,359</size>
+		<object class="wxBoxSizer">
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxSplitterWindow" name="m_splitter38">
+					<style>wxSP_3D</style>
+					<sashpos>256</sashpos>
+					<gravity>0.1</gravity>
+					<minsize>0</minsize>
+					<orientation>vertical</orientation>
+					<object class="wxPanel" name="m_panel275">
+						<style>wxTAB_TRAVERSAL</style>
+						<object class="wxBoxSizer">
+							<orient>wxHORIZONTAL</orient>
+							<object class="sizeritem">
+								<option>1</option>
+								<flag>wxEXPAND</flag>
+								<border>5</border>
+								<object class="wxSplitterWindow" name="m_splitter8">
+									<style>wxSP_3D</style>
+									<sashpos>0</sashpos>
+									<gravity>0.5</gravity>
+									<minsize>0</minsize>
+									<orientation>horizontal</orientation>
+									<object class="wxPanel" name="m_panel278">
+										<style>wxTAB_TRAVERSAL</style>
+										<object class="wxBoxSizer">
+											<orient>wxVERTICAL</orient>
+											<object class="sizeritem">
+												<option>0</option>
+												<flag>wxALL</flag>
+												<border>5</border>
+												<object class="wxStaticText" name="m_staticText265">
+													<label>Running scenes:</label>
+													<wrap>-1</wrap>
+												</object>
+											</object>
+											<object class="sizeritem">
+												<option>1</option>
+												<flag>wxALL|wxEXPAND</flag>
+												<border>5</border>
+												<object class="wxListCtrl" name="activeScenes">
+													<style>wxLC_REPORT</style>
+												</object>
+											</object>
+										</object>
+									</object>
+									<object class="wxPanel" name="m_panel277">
+										<style>wxTAB_TRAVERSAL</style>
+										<object class="wxBoxSizer">
+											<orient>wxVERTICAL</orient>
+											<object class="sizeritem">
+												<option>0</option>
+												<flag>wxALL</flag>
+												<border>5</border>
+												<object class="wxStaticText" name="m_staticText264">
+													<label>Scheduled scenes:</label>
+													<wrap>-1</wrap>
+												</object>
+											</object>
+											<object class="sizeritem">
+												<option>1</option>
+												<flag>wxALL|wxEXPAND</flag>
+												<border>5</border>
+												<object class="wxListCtrl" name="scheduledScenes">
+													<style>wxLC_REPORT</style>
+												</object>
+											</object>
+										</object>
+									</object>
+								</object>
+							</object>
+						</object>
+					</object>
+					<object class="wxPanel" name="m_panel276">
+						<style>wxTAB_TRAVERSAL</style>
+						<object class="wxBoxSizer">
+							<orient>wxHORIZONTAL</orient>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxEXPAND | wxALL</flag>
+								<border>5</border>
+								<object class="wxPanel" name="m_panel282">
+									<style>wxTAB_TRAVERSAL</style>
+									<object class="wxBoxSizer">
+										<orient>wxVERTICAL</orient>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxALL</flag>
+											<border>5</border>
+											<object class="wxStaticText" name="m_staticText266">
+												<label>Active voicetags:</label>
+												<wrap>-1</wrap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>1</option>
+											<flag>wxALL|wxEXPAND</flag>
+											<border>5</border>
+											<object class="wxListBox" name="lockedTags">
+												<content />
+											</object>
+										</object>
+									</object>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>1</option>
+								<flag>wxEXPAND | wxALL</flag>
+								<border>5</border>
+								<object class="wxPanel" name="m_panel32">
+									<style>wxTAB_TRAVERSAL</style>
+									<object class="wxBoxSizer">
+										<orient>wxVERTICAL</orient>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxALL</flag>
+											<border>5</border>
+											<object class="wxStaticText" name="m_staticText267">
+												<label>Completed scenes:</label>
+												<wrap>-1</wrap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>1</option>
+											<flag>wxALL|wxEXPAND</flag>
+											<border>5</border>
+											<object class="wxListCtrl" name="completedScenes">
+												<style>wxLC_REPORT</style>
+											</object>
+										</object>
+									</object>
+								</object>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+	<object class="wxFrame" name="RewardEditor">
+		<style>wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL</style>
+		<size>509,568</size>
+		<title>Reward editor</title>
+		<centered>1</centered>
+		<aui_managed>0</aui_managed>
+		<object class="wxSplitterWindow" name="Splitter">
+			<style>wxSP_3D</style>
+			<sashpos>0</sashpos>
+			<gravity>0</gravity>
+			<minsize>200</minsize>
+			<orientation>vertical</orientation>
+			<object class="wxPanel" name="m_panel26">
+				<style>wxTAB_TRAVERSAL</style>
+				<object class="wxBoxSizer">
+					<orient>wxVERTICAL</orient>
+					<object class="sizeritem">
+						<option>1</option>
+						<flag>wxEXPAND</flag>
+						<border>5</border>
+						<object class="wxTreeCtrl" name="m_rewardTree">
+							<style>wxTR_DEFAULT_STYLE|wxTR_EDIT_LABELS</style>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALIGN_CENTER_HORIZONTAL</flag>
+						<border>5</border>
+						<object class="wxBoxSizer">
+							<orient>wxHORIZONTAL</orient>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALL</flag>
+								<border>5</border>
+								<object class="wxButton" name="m_okButton">
+									<enabled>0</enabled>
+									<hidden>1</hidden>
+									<label>Ok</label>
+									<default>1</default>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALL</flag>
+								<border>5</border>
+								<object class="wxButton" name="m_cancelButton">
+									<hidden>1</hidden>
+									<label>Cancel</label>
+									<default>0</default>
+								</object>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="wxPanel" name="m_panel27">
+				<style>wxTAB_TRAVERSAL</style>
+				<object class="wxBoxSizer">
+					<orient>wxVERTICAL</orient>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALIGN_CENTER</flag>
+						<border>5</border>
+						<object class="wxBoxSizer">
+							<orient>wxHORIZONTAL</orient>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALIGN_CENTER|wxALL</flag>
+								<border>5</border>
+								<object class="wxStaticBitmap" name="m_bitmap1">
+									<bitmap>images/arrow_right.png</bitmap>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALL</flag>
+								<border>10</border>
+								<object class="wxStaticText" name="rewardName">
+									<style>wxALIGN_CENTRE</style>
+									<font>
+										<size>11</size>
+										<family>default</family>
+										<style>normal</style>
+										<weight>bold</weight>
+										<underlined>0</underlined>
+									</font>
+									<label>RewardName</label>
+									<wrap>-1</wrap>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALIGN_CENTER|wxALL</flag>
+								<border>5</border>
+								<object class="wxStaticBitmap" name="m_bitmap2">
+									<bitmap>images/arrow_left.png</bitmap>
+								</object>
+							</object>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>1</option>
+						<flag>wxEXPAND</flag>
+						<border>5</border>
+						<object class="wxPanel" name="propsPanel">
+							<style>wxSIMPLE_BORDER|wxTAB_TRAVERSAL</style>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+</resource>

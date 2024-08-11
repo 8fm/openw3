@@ -1,0 +1,415 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="durango">
+      <UniqueIdentifier>{52382c65-1c1b-4282-9404-b6d6f5b90d5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="windows">
+      <UniqueIdentifier>{9318105a-5ef8-427f-bbf9-ddb1c52103b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="orbis">
+      <UniqueIdentifier>{0896e9b4-c0c4-4d1d-82e6-be732da5b9d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="states">
+      <UniqueIdentifier>{97f07000-487b-487c-98fa-bc03ffd2ed78}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="durango\Manifest">
+      <UniqueIdentifier>{b85ba73e-e915-4a17-ba19-717ee4ffea5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="durango\Manifest\de-DE">
+      <UniqueIdentifier>{52b22ba1-7a84-4dcf-b4ac-ef9b646f39cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="durango\Manifest\en-US">
+      <UniqueIdentifier>{3d8f5ec1-e3b0-4e7a-a042-0088816c6d92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="durango\Manifest\es-ES">
+      <UniqueIdentifier>{f273d2ab-5962-47e2-bfdb-ab31d6cf0792}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="durango\Manifest\es-MX">
+      <UniqueIdentifier>{e1938206-351e-4592-85e7-436b6fb84ee5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="durango\Manifest\fr-FR">
+      <UniqueIdentifier>{cb44e0f2-f9d6-480f-8a8e-b02eba2d1d49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="durango\Manifest\it-IT">
+      <UniqueIdentifier>{63cc0853-3dd0-4266-a079-37d553497aac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="durango\Manifest\ko-KR">
+      <UniqueIdentifier>{3a98d8f7-642e-491a-bc74-aa8e0a9bca4b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="durango\Manifest\pl-PL">
+      <UniqueIdentifier>{ebeb9c10-0256-41eb-a624-e142a723029a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="durango\Manifest\pt-BR">
+      <UniqueIdentifier>{b6d0cd09-1cb5-4313-84bd-5402380cc53b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="durango\Manifest\ru-RU">
+      <UniqueIdentifier>{aeb39506-3cce-4fb4-83df-4a696fe65d46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="durango\Manifest\zh-TW">
+      <UniqueIdentifier>{1eee9805-550f-4c04-948d-6fb265b97530}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="durango\Manifest\en-AE">
+      <UniqueIdentifier>{26cea3b7-9072-49cc-953a-d6cc8ca188d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="durango\Manifest\en-CZ">
+      <UniqueIdentifier>{62950190-00c5-4c84-a5d1-e2be98000be1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="durango\Manifest\en-HU">
+      <UniqueIdentifier>{6d89a33d-bbb4-43a0-81cd-c36f68432d2a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="durango\Manifest\ja-JP">
+      <UniqueIdentifier>{2b8ece7d-fa14-43e7-b723-9814869eca1c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="mainRed.cpp" />
+    <ClCompile Include="mainWindows.cpp">
+      <Filter>windows</Filter>
+    </ClCompile>
+    <ClCompile Include="initializationState.cpp">
+      <Filter>states</Filter>
+    </ClCompile>
+    <ClCompile Include="build.cpp" />
+    <ClCompile Include="externDefinitions.cpp" />
+    <ClCompile Include="utilityWindows.cpp">
+      <Filter>windows</Filter>
+    </ClCompile>
+    <ClCompile Include="utility.cpp" />
+    <ClCompile Include="gameRunningState.cpp">
+      <Filter>states</Filter>
+    </ClCompile>
+    <ClCompile Include="shutdownState.cpp">
+      <Filter>states</Filter>
+    </ClCompile>
+    <ClCompile Include="mainOrbis.cpp">
+      <Filter>orbis</Filter>
+    </ClCompile>
+    <ClCompile Include="utilityOrbis.cpp">
+      <Filter>orbis</Filter>
+    </ClCompile>
+    <ClCompile Include="mainDurango.cpp">
+      <Filter>durango</Filter>
+    </ClCompile>
+    <ClCompile Include="utilityDurango.cpp">
+      <Filter>durango</Filter>
+    </ClCompile>
+    <ClCompile Include="gameApplicationDurango.cpp">
+      <Filter>durango</Filter>
+    </ClCompile>
+    <ClCompile Include="activateState.cpp">
+      <Filter>states</Filter>
+    </ClCompile>
+    <ClCompile Include="gameConstrainedState.cpp">
+      <Filter>states</Filter>
+    </ClCompile>
+    <ClCompile Include="operatorNewDelete_orbis.cpp">
+      <Filter>orbis</Filter>
+    </ClCompile>
+    <ClCompile Include="gameApplicationOrbis.cpp">
+      <Filter>orbis</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="mainRed.h" />
+    <ClInclude Include="initializationState.h">
+      <Filter>states</Filter>
+    </ClInclude>
+    <ClInclude Include="states.h">
+      <Filter>states</Filter>
+    </ClInclude>
+    <ClInclude Include="build.h" />
+    <ClInclude Include="externDefinitions.h" />
+    <ClInclude Include="utility.h" />
+    <ClInclude Include="gameRunningState.h">
+      <Filter>states</Filter>
+    </ClInclude>
+    <ClInclude Include="shutdownState.h">
+      <Filter>states</Filter>
+    </ClInclude>
+    <ClInclude Include="gameApplicationDurango.h">
+      <Filter>durango</Filter>
+    </ClInclude>
+    <ClInclude Include="activateState.h">
+      <Filter>states</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>windows</Filter>
+    </ClInclude>
+    <ClInclude Include="gameContrainedState.h">
+      <Filter>states</Filter>
+    </ClInclude>
+    <ClInclude Include="r4MemoryWindows.h">
+      <Filter>windows</Filter>
+    </ClInclude>
+    <ClInclude Include="r4MemoryDurango.h">
+      <Filter>durango</Filter>
+    </ClInclude>
+    <ClInclude Include="r4MemoryOrbis.h">
+      <Filter>orbis</Filter>
+    </ClInclude>
+    <ClInclude Include="gameApplicationOrbis.h">
+      <Filter>orbis</Filter>
+    </ClInclude>
+    <ClInclude Include="win32splash.h">
+      <Filter>windows</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="icon.ico">
+      <Filter>windows</Filter>
+    </Image>
+    <Image Include="Manifest\defaultTile.png">
+      <Filter>durango\Manifest</Filter>
+    </Image>
+    <Image Include="Manifest\logo.png">
+      <Filter>durango\Manifest</Filter>
+    </Image>
+    <Image Include="Manifest\smallLogo.png">
+      <Filter>durango\Manifest</Filter>
+    </Image>
+    <Image Include="Manifest\splashScreen.png">
+      <Filter>durango\Manifest</Filter>
+    </Image>
+    <Image Include="Manifest\de-DE\defaultTile.png">
+      <Filter>durango\Manifest\de-DE</Filter>
+    </Image>
+    <Image Include="Manifest\de-DE\logo.png">
+      <Filter>durango\Manifest\de-DE</Filter>
+    </Image>
+    <Image Include="Manifest\de-DE\smallLogo.png">
+      <Filter>durango\Manifest\de-DE</Filter>
+    </Image>
+    <Image Include="Manifest\de-DE\splashScreen.png">
+      <Filter>durango\Manifest\de-DE</Filter>
+    </Image>
+    <Image Include="Manifest\en-US\defaultTile.png">
+      <Filter>durango\Manifest\en-US</Filter>
+    </Image>
+    <Image Include="Manifest\en-US\logo.png">
+      <Filter>durango\Manifest\en-US</Filter>
+    </Image>
+    <Image Include="Manifest\en-US\smallLogo.png">
+      <Filter>durango\Manifest\en-US</Filter>
+    </Image>
+    <Image Include="Manifest\en-US\splashScreen.png">
+      <Filter>durango\Manifest\en-US</Filter>
+    </Image>
+    <Image Include="Manifest\es-ES\defaultTile.png">
+      <Filter>durango\Manifest\es-ES</Filter>
+    </Image>
+    <Image Include="Manifest\es-ES\logo.png">
+      <Filter>durango\Manifest\es-ES</Filter>
+    </Image>
+    <Image Include="Manifest\es-ES\smallLogo.png">
+      <Filter>durango\Manifest\es-ES</Filter>
+    </Image>
+    <Image Include="Manifest\es-ES\splashScreen.png">
+      <Filter>durango\Manifest\es-ES</Filter>
+    </Image>
+    <Image Include="Manifest\es-MX\defaultTile.png">
+      <Filter>durango\Manifest\es-MX</Filter>
+    </Image>
+    <Image Include="Manifest\es-MX\logo.png">
+      <Filter>durango\Manifest\es-MX</Filter>
+    </Image>
+    <Image Include="Manifest\es-MX\smallLogo.png">
+      <Filter>durango\Manifest\es-MX</Filter>
+    </Image>
+    <Image Include="Manifest\es-MX\splashScreen.png">
+      <Filter>durango\Manifest\es-MX</Filter>
+    </Image>
+    <Image Include="Manifest\fr-FR\defaultTile.png">
+      <Filter>durango\Manifest\fr-FR</Filter>
+    </Image>
+    <Image Include="Manifest\fr-FR\logo.png">
+      <Filter>durango\Manifest\fr-FR</Filter>
+    </Image>
+    <Image Include="Manifest\fr-FR\smallLogo.png">
+      <Filter>durango\Manifest\fr-FR</Filter>
+    </Image>
+    <Image Include="Manifest\fr-FR\splashScreen.png">
+      <Filter>durango\Manifest\fr-FR</Filter>
+    </Image>
+    <Image Include="Manifest\it-IT\defaultTile.png">
+      <Filter>durango\Manifest\it-IT</Filter>
+    </Image>
+    <Image Include="Manifest\it-IT\logo.png">
+      <Filter>durango\Manifest\it-IT</Filter>
+    </Image>
+    <Image Include="Manifest\it-IT\smallLogo.png">
+      <Filter>durango\Manifest\it-IT</Filter>
+    </Image>
+    <Image Include="Manifest\it-IT\splashScreen.png">
+      <Filter>durango\Manifest\it-IT</Filter>
+    </Image>
+    <Image Include="Manifest\ko-KR\defaultTile.png">
+      <Filter>durango\Manifest\ko-KR</Filter>
+    </Image>
+    <Image Include="Manifest\ko-KR\logo.png">
+      <Filter>durango\Manifest\ko-KR</Filter>
+    </Image>
+    <Image Include="Manifest\ko-KR\smallLogo.png">
+      <Filter>durango\Manifest\ko-KR</Filter>
+    </Image>
+    <Image Include="Manifest\ko-KR\splashScreen.png">
+      <Filter>durango\Manifest\ko-KR</Filter>
+    </Image>
+    <Image Include="Manifest\ru-RU\defaultTile.png">
+      <Filter>durango\Manifest\ru-RU</Filter>
+    </Image>
+    <Image Include="Manifest\ru-RU\logo.png">
+      <Filter>durango\Manifest\ru-RU</Filter>
+    </Image>
+    <Image Include="Manifest\ru-RU\smallLogo.png">
+      <Filter>durango\Manifest\ru-RU</Filter>
+    </Image>
+    <Image Include="Manifest\ru-RU\splashScreen.png">
+      <Filter>durango\Manifest\ru-RU</Filter>
+    </Image>
+    <Image Include="Manifest\pt-BR\defaultTile.png">
+      <Filter>durango\Manifest\pt-BR</Filter>
+    </Image>
+    <Image Include="Manifest\pt-BR\logo.png">
+      <Filter>durango\Manifest\pt-BR</Filter>
+    </Image>
+    <Image Include="Manifest\pt-BR\smallLogo.png">
+      <Filter>durango\Manifest\pt-BR</Filter>
+    </Image>
+    <Image Include="Manifest\pt-BR\splashScreen.png">
+      <Filter>durango\Manifest\pt-BR</Filter>
+    </Image>
+    <Image Include="Manifest\pl-PL\defaultTile.png">
+      <Filter>durango\Manifest\pl-PL</Filter>
+    </Image>
+    <Image Include="Manifest\pl-PL\logo.png">
+      <Filter>durango\Manifest\pl-PL</Filter>
+    </Image>
+    <Image Include="Manifest\pl-PL\smallLogo.png">
+      <Filter>durango\Manifest\pl-PL</Filter>
+    </Image>
+    <Image Include="Manifest\pl-PL\splashScreen.png">
+      <Filter>durango\Manifest\pl-PL</Filter>
+    </Image>
+    <Image Include="Manifest\zh-TW\defaultTile.png">
+      <Filter>durango\Manifest\zh-TW</Filter>
+    </Image>
+    <Image Include="Manifest\zh-TW\logo.png">
+      <Filter>durango\Manifest\zh-TW</Filter>
+    </Image>
+    <Image Include="Manifest\zh-TW\smallLogo.png">
+      <Filter>durango\Manifest\zh-TW</Filter>
+    </Image>
+    <Image Include="Manifest\zh-TW\splashScreen.png">
+      <Filter>durango\Manifest\zh-TW</Filter>
+    </Image>
+    <Image Include="Manifest\en-AE\defaultTile.png">
+      <Filter>durango\Manifest\en-AE</Filter>
+    </Image>
+    <Image Include="Manifest\en-AE\logo.png">
+      <Filter>durango\Manifest\en-AE</Filter>
+    </Image>
+    <Image Include="Manifest\en-AE\smallLogo.png">
+      <Filter>durango\Manifest\en-AE</Filter>
+    </Image>
+    <Image Include="Manifest\en-AE\splashScreen.png">
+      <Filter>durango\Manifest\en-AE</Filter>
+    </Image>
+    <Image Include="Manifest\en-CZ\defaultTile.png">
+      <Filter>durango\Manifest\en-CZ</Filter>
+    </Image>
+    <Image Include="Manifest\en-CZ\logo.png">
+      <Filter>durango\Manifest\en-CZ</Filter>
+    </Image>
+    <Image Include="Manifest\en-CZ\smallLogo.png">
+      <Filter>durango\Manifest\en-CZ</Filter>
+    </Image>
+    <Image Include="Manifest\en-CZ\splashScreen.png">
+      <Filter>durango\Manifest\en-CZ</Filter>
+    </Image>
+    <Image Include="Manifest\en-HU\defaultTile.png">
+      <Filter>durango\Manifest\en-HU</Filter>
+    </Image>
+    <Image Include="Manifest\en-HU\logo.png">
+      <Filter>durango\Manifest\en-HU</Filter>
+    </Image>
+    <Image Include="Manifest\en-HU\smallLogo.png">
+      <Filter>durango\Manifest\en-HU</Filter>
+    </Image>
+    <Image Include="Manifest\en-HU\splashScreen.png">
+      <Filter>durango\Manifest\en-HU</Filter>
+    </Image>
+    <Image Include="Manifest\ja-JP\defaultTile.png">
+      <Filter>durango\Manifest\ja-JP</Filter>
+    </Image>
+    <Image Include="Manifest\ja-JP\logo.png">
+      <Filter>durango\Manifest\ja-JP</Filter>
+    </Image>
+    <Image Include="Manifest\ja-JP\smallLogo.png">
+      <Filter>durango\Manifest\ja-JP</Filter>
+    </Image>
+    <Image Include="Manifest\ja-JP\splashScreen.png">
+      <Filter>durango\Manifest\ja-JP</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="package.appxmanifest">
+      <Filter>durango</Filter>
+    </AppxManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="r4Launcher.rc">
+      <Filter>windows</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <PRIResource Include="Manifest\de-DE\Resources.resw">
+      <Filter>durango\Manifest\de-DE</Filter>
+    </PRIResource>
+    <PRIResource Include="Manifest\en-US\Resources.resw">
+      <Filter>durango\Manifest\en-US</Filter>
+    </PRIResource>
+    <PRIResource Include="Manifest\es-ES\Resources.resw">
+      <Filter>durango\Manifest\es-ES</Filter>
+    </PRIResource>
+    <PRIResource Include="Manifest\es-MX\Resources.resw">
+      <Filter>durango\Manifest\es-MX</Filter>
+    </PRIResource>
+    <PRIResource Include="Manifest\fr-FR\Resources.resw">
+      <Filter>durango\Manifest\fr-FR</Filter>
+    </PRIResource>
+    <PRIResource Include="Manifest\it-IT\Resources.resw">
+      <Filter>durango\Manifest\it-IT</Filter>
+    </PRIResource>
+    <PRIResource Include="Manifest\ko-KR\Resources.resw">
+      <Filter>durango\Manifest\ko-KR</Filter>
+    </PRIResource>
+    <PRIResource Include="Manifest\ru-RU\Resources.resw">
+      <Filter>durango\Manifest\ru-RU</Filter>
+    </PRIResource>
+    <PRIResource Include="Manifest\pt-BR\Resources.resw">
+      <Filter>durango\Manifest\pt-BR</Filter>
+    </PRIResource>
+    <PRIResource Include="Manifest\pl-PL\Resources.resw">
+      <Filter>durango\Manifest\pl-PL</Filter>
+    </PRIResource>
+    <PRIResource Include="Manifest\zh-TW\Resources.resw">
+      <Filter>durango\Manifest\zh-TW</Filter>
+    </PRIResource>
+    <PRIResource Include="Manifest\en-AE\Resources.resw">
+      <Filter>durango\Manifest\en-AE</Filter>
+    </PRIResource>
+    <PRIResource Include="Manifest\en-CZ\Resources.resw">
+      <Filter>durango\Manifest\en-CZ</Filter>
+    </PRIResource>
+    <PRIResource Include="Manifest\en-HU\Resources.resw">
+      <Filter>durango\Manifest\en-HU</Filter>
+    </PRIResource>
+    <PRIResource Include="Manifest\ja-JP\Resources.resw">
+      <Filter>durango\Manifest\ja-JP</Filter>
+    </PRIResource>
+    <PRIResource Include="Manifest\Resources.resw">
+      <Filter>durango\Manifest</Filter>
+    </PRIResource>
+  </ItemGroup>
+</Project>

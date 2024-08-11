@@ -1,0 +1,9 @@
+RW_Texture3D<int4> DestTex : register(u0);
+Texture3D<int4> SourceTex : register(t0);
+
+[NUM_THREADS(4,4,4)]
+void main( uint3 position : S_DISPATCH_THREAD_ID )
+{
+	DestTex[position] = SourceTex.Load(int4(position.x, position.y, position.z, 0));
+}
+

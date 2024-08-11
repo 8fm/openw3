@@ -1,0 +1,19 @@
+/* SCE CONFIDENTIAL
+PlayStation(R)4 Programmer Tool Runtime Library Release 01.700.081
+* Copyright (C) 2014 Sony Computer Entertainment Inc.
+* All Rights Reserved.
+*/
+
+Texture3D g_texture : register(t0);
+SamplerState g_sampler : register(s0);
+
+ConstantBuffer g_constants : register(c0)
+{
+	float4 m_mul;
+	float4 m_add;
+};
+
+float4 main(float4 screen : S_POSITION) : S_TARGET_OUTPUT
+{
+	return g_texture.Sample(g_sampler, screen.xyz * m_mul.xyz + m_add.xyz);
+}

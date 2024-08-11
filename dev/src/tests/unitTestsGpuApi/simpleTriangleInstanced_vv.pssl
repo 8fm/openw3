@@ -1,0 +1,26 @@
+ConstantBuffer globalvs
+{
+    float4 colors[3];
+};
+
+struct PSInput
+{
+	float4 pos : S_POSITION;
+	float4 col : COLOR;
+};
+
+PSInput main( uint vertexId : S_VERTEX_ID, uint instanceId : S_INSTANCE_ID )
+{
+	PSInput o;
+	float4 verts[3] = 
+    {
+        { float4( -0.1f, -0.1f, 0, 1 ) }, 
+		{ float4(  0.0f,  0.1f, 0, 1 ) },
+        { float4(  0.1f, -0.1f, 0, 1 ) },
+    };
+
+	o.pos = float4( -0.5f + verts[vertexId].x + ((instanceId % 8) / 6.0f), -0.5f + verts[vertexId].y + ((instanceId / 8) / 6.0f), 0, 1);
+	o.col = colors[vertexId];
+
+	return o;
+}

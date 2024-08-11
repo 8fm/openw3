@@ -1,0 +1,413 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="redMemoryCrt.h">
+      <Filter>Internal\Crt</Filter>
+    </ClInclude>
+    <ClInclude Include="redMemoryFramework.h">
+      <Filter>Public Include</Filter>
+    </ClInclude>
+    <ClInclude Include="redMemoryAllocatorRegistration.h">
+      <Filter>Internal\Memory Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="redMemoryThreads.h">
+      <Filter>Internal\Threads</Filter>
+    </ClInclude>
+    <ClInclude Include="redMemoryAllocator.h">
+      <Filter>Internal\Allocators\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="redMemoryAllocators.h">
+      <Filter>Public Include</Filter>
+    </ClInclude>
+    <ClInclude Include="redMemoryFrameworkPlatform.h">
+      <Filter>Internal\Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="redMemoryFrameworkTypes.h">
+      <Filter>Public Include</Filter>
+    </ClInclude>
+    <ClInclude Include="redMemoryMacros.h">
+      <Filter>Public Include</Filter>
+    </ClInclude>
+    <ClInclude Include="redMemoryManager.h">
+      <Filter>Internal\Memory Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="redMemoryMetricsCollector.h">
+      <Filter>Internal\Metrics</Filter>
+    </ClInclude>
+    <ClInclude Include="redMemoryPoolMetrics.h">
+      <Filter>Internal\Metrics</Filter>
+    </ClInclude>
+    <ClInclude Include="redMemoryMetricsCallstack.h">
+      <Filter>Internal\Metrics</Filter>
+    </ClInclude>
+    <ClInclude Include="redMemoryMetricsSerialiser.h">
+      <Filter>Internal\Metrics</Filter>
+    </ClInclude>
+    <ClInclude Include="redMemoryNullAllocator.h">
+      <Filter>Internal\Allocators\NullAllocator</Filter>
+    </ClInclude>
+    <ClInclude Include="redMemoryMetricsNamePool.h">
+      <Filter>Internal\Metrics</Filter>
+    </ClInclude>
+    <ClInclude Include="redMemoryPageAllocator.h">
+      <Filter>Internal\OS Allocator</Filter>
+    </ClInclude>
+    <ClInclude Include="redMemoryPageAllocatorWin.h">
+      <Filter>Internal\OS Allocator\Implementations</Filter>
+    </ClInclude>
+    <ClInclude Include="redMemoryTlsfAllocator.h">
+      <Filter>Internal\Allocators\TLSF</Filter>
+    </ClInclude>
+    <ClInclude Include="redMemoryTlsfImpl.h">
+      <Filter>Internal\Allocators\TLSF</Filter>
+    </ClInclude>
+    <ClInclude Include="redMemoryThreadsOrbis.h">
+      <Filter>Internal\Threads\Implementations</Filter>
+    </ClInclude>
+    <ClInclude Include="redMemoryPageAllocatorOrbis.h">
+      <Filter>Internal\OS Allocator\Implementations</Filter>
+    </ClInclude>
+    <ClInclude Include="redMemoryAtomics.h">
+      <Filter>Internal\Threads</Filter>
+    </ClInclude>
+    <ClInclude Include="redMemoryLeakTracker.h">
+      <Filter>Internal\Metrics</Filter>
+    </ClInclude>
+    <ClInclude Include="redMemoryAllocatorInfo.h">
+      <Filter>Internal\Metrics</Filter>
+    </ClInclude>
+    <ClInclude Include="redMemoryFileWriterWinAPI.h">
+      <Filter>Internal\Metrics\Implementations</Filter>
+    </ClInclude>
+    <ClInclude Include="redMemoryCallstackCachedWriter.h">
+      <Filter>Internal\Metrics</Filter>
+    </ClInclude>
+    <ClInclude Include="redMemoryFileWriter.h">
+      <Filter>Internal\Metrics</Filter>
+    </ClInclude>
+    <ClInclude Include="redMemoryFileWriterOrbis.h">
+      <Filter>Internal\Metrics\Implementations</Filter>
+    </ClInclude>
+    <ClInclude Include="redMemorySystemMemoryStats.h">
+      <Filter>Internal\Metrics</Filter>
+    </ClInclude>
+    <ClInclude Include="redMemoryLog.h">
+      <Filter>Internal\Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="redMemoryCrashReporter.h">
+      <Filter>Internal\Memory Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="redMemoryAllocatorCreator.h">
+      <Filter>Internal\Memory Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="redMemoryFileWriterDurango.h">
+      <Filter>Internal\Metrics\Implementations</Filter>
+    </ClInclude>
+    <ClInclude Include="redMemoryPageAllocatorDurango.h">
+      <Filter>Internal\OS Allocator\Implementations</Filter>
+    </ClInclude>
+    <ClInclude Include="redMemoryThreadsDurango.h">
+      <Filter>Internal\Threads\Implementations</Filter>
+    </ClInclude>
+    <ClInclude Include="redMemoryAssert.h">
+      <Filter>Internal\Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="redMemoryCallbackList.h">
+      <Filter>Internal\Memory Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="redMemoryArrayMetrics.h">
+      <Filter>Internal\Metrics</Filter>
+    </ClInclude>
+    <ClInclude Include="redMemoryHook.h">
+      <Filter>Internal\Memory Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="redMemoryFillHook.h">
+      <Filter>Internal\Default Hooks</Filter>
+    </ClInclude>
+    <ClInclude Include="redMemoryMetricsHistogramData.h">
+      <Filter>Internal\Metrics</Filter>
+    </ClInclude>
+    <ClInclude Include="redMemoryMetricsClassGroup.h">
+      <Filter>Internal\Metrics</Filter>
+    </ClInclude>
+    <ClInclude Include="redMemorySmallBlockAllocator.h">
+      <Filter>Internal\Allocators\SmallBlockAllocator</Filter>
+    </ClInclude>
+    <ClInclude Include="redMemorySmallBlockAllocator.inl">
+      <Filter>Internal\Allocators\SmallBlockAllocator</Filter>
+    </ClInclude>
+    <ClInclude Include="redMemorySmallBlockAllocatorImpl.inl">
+      <Filter>Internal\Allocators\SmallBlockAllocator</Filter>
+    </ClInclude>
+    <ClInclude Include="redMemoryGpuAllocator.h">
+      <Filter>Internal\Allocators\GpuAllocator</Filter>
+    </ClInclude>
+    <ClInclude Include="redMemoryRegionAllocator.h">
+      <Filter>Internal\Allocators\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="redMemoryListHelpers.h">
+      <Filter>Internal\Allocators\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="redMemoryMultiAllocator.h">
+      <Filter>Internal\Allocators\MultiAllocator</Filter>
+    </ClInclude>
+    <ClInclude Include="redMemoryDebugAllocator.h">
+      <Filter>Internal\Allocators\DebugAllocator</Filter>
+    </ClInclude>
+    <ClInclude Include="redMemoryVirtualAllocWrapper.h">
+      <Filter>Internal\Allocators\SystemAllocatorWrapper</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="redMemoryAllocatorRegistration.inl">
+      <Filter>Internal\Memory Manager</Filter>
+    </None>
+    <None Include="redMemoryCrtWinAPI.inl">
+      <Filter>Internal\Crt\Implementations</Filter>
+    </None>
+    <None Include="redMemoryThreadsNullAPI.h">
+      <Filter>Internal\Threads\Implementations</Filter>
+    </None>
+    <None Include="redMemoryThreadsWinAPI.h">
+      <Filter>Internal\Threads\Implementations</Filter>
+    </None>
+    <None Include="redMemoryManager.inl">
+      <Filter>Internal\Memory Manager</Filter>
+    </None>
+    <None Include="redMemoryMetricsCollector.inl">
+      <Filter>Internal\Metrics</Filter>
+    </None>
+    <None Include="redMemoryPoolMetrics.inl">
+      <Filter>Internal\Metrics</Filter>
+    </None>
+    <None Include="redMemoryMetricsSerialiser.inl">
+      <Filter>Internal\Metrics</Filter>
+    </None>
+    <None Include="redMemoryMetricsCallstack.inl">
+      <Filter>Internal\Metrics</Filter>
+    </None>
+    <None Include="redMemoryNullAllocator.inl">
+      <Filter>Internal\Allocators\NullAllocator</Filter>
+    </None>
+    <None Include="redMemoryMetricsNamePool.inl">
+      <Filter>Internal\Metrics</Filter>
+    </None>
+    <None Include="redMemoryTlsfAllocator.inl">
+      <Filter>Internal\Allocators\TLSF</Filter>
+    </None>
+    <None Include="redMemoryTlsfImpl.inl">
+      <Filter>Internal\Allocators\TLSF</Filter>
+    </None>
+    <None Include="redMemoryCrtOrbis.inl">
+      <Filter>Internal\Crt\Implementations</Filter>
+    </None>
+    <None Include="redMemoryAtomicsOrbis.inl">
+      <Filter>Internal\Threads\Implementations</Filter>
+    </None>
+    <None Include="redMemoryAtomicsWinAPI.inl">
+      <Filter>Internal\Threads\Implementations</Filter>
+    </None>
+    <None Include="redMemoryAllocatorInfo.inl">
+      <Filter>Internal\Metrics</Filter>
+    </None>
+    <None Include="redMemoryFileWriterWinApi.inl">
+      <Filter>Internal\Metrics\Implementations</Filter>
+    </None>
+    <None Include="redMemoryOrbisMallocReplacement.inl">
+      <Filter>Public Include\Orbis</Filter>
+    </None>
+    <None Include="redMemoryAllocatorCreator.inl">
+      <Filter>Internal\Memory Manager</Filter>
+    </None>
+    <None Include="redMemoryCrtDurango.inl">
+      <Filter>Internal\Crt\Implementations</Filter>
+    </None>
+    <None Include="redMemoryAtomicsDurango.inl">
+      <Filter>Internal\Threads\Implementations</Filter>
+    </None>
+    <None Include="redMemoryCallbackList.inl">
+      <Filter>Internal\Memory Manager</Filter>
+    </None>
+    <None Include="redMemoryMetricsClassGroup.inl">
+      <Filter>Internal\Metrics</Filter>
+    </None>
+    <None Include="redMemoryGpuAllocator.inl">
+      <Filter>Internal\Allocators\GpuAllocator</Filter>
+    </None>
+    <None Include="redMemoryListHelpers.inl">
+      <Filter>Internal\Allocators\Utils</Filter>
+    </None>
+    <None Include="redMemoryVirtualAllocWrapper.inl">
+      <Filter>Internal\Allocators\SystemAllocatorWrapper</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Internal">
+      <UniqueIdentifier>{18919744-366a-4647-9717-89250eeebd14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Internal\Crt">
+      <UniqueIdentifier>{4528c6fc-a8bd-485d-8d3c-e33bd9234008}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Public Include">
+      <UniqueIdentifier>{83086c1c-571e-4f9d-b3cb-b341c39e31d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Internal\Allocators">
+      <UniqueIdentifier>{49a48248-4c6a-4e41-ab7a-acc6e3f5178d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Internal\Metrics">
+      <UniqueIdentifier>{7a308e83-bc3a-463a-b3a1-d5c69893515a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Internal\Threads">
+      <UniqueIdentifier>{144129e4-c68e-40af-9b99-6d948a932d05}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Internal\Threads\Implementations">
+      <UniqueIdentifier>{902ed3ab-da61-422e-a34f-ef2b7fca914d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Internal\Crt\Implementations">
+      <UniqueIdentifier>{07a367c5-43ce-4f2d-b723-5649f0578911}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Internal\Allocators\Interface">
+      <UniqueIdentifier>{f7d3489c-685f-4d28-9eed-e49ce527d4f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Internal\Platform">
+      <UniqueIdentifier>{559b1fcd-b0ab-4f3d-8983-4068df764cad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Internal\Memory Manager">
+      <UniqueIdentifier>{afc0a344-8df0-4ad9-92f2-b30cd387f15c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Internal\Allocators\NullAllocator">
+      <UniqueIdentifier>{780cd257-7e5b-423b-a372-2e8e91a91733}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Internal\OS Allocator">
+      <UniqueIdentifier>{50c74d44-454f-43e0-acd2-57ef18158b58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Internal\OS Allocator\Implementations">
+      <UniqueIdentifier>{055dcc43-c8a9-4aa5-b9bf-398cee5a850f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Internal\Allocators\TLSF">
+      <UniqueIdentifier>{770cf4ce-f1fe-49da-8554-b595ce4e7982}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Internal\Metrics\Implementations">
+      <UniqueIdentifier>{098c0b86-7aa6-4371-b898-9884e009f928}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Public Include\Orbis">
+      <UniqueIdentifier>{9d53e372-b7c8-444f-af34-202c323b3cf4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Internal\Default Hooks">
+      <UniqueIdentifier>{a09ad9f0-2e29-47d4-ae19-43af020ac71a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Internal\Allocators\SmallBlockAllocator">
+      <UniqueIdentifier>{bdf88b12-ee4a-40d8-9d11-c0a6294eb900}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Internal\Allocators\GpuAllocator">
+      <UniqueIdentifier>{5ae61346-128d-4997-b79f-5c7e7a75a436}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Internal\Allocators\Utils">
+      <UniqueIdentifier>{9ab98dbe-a540-4df9-935b-1050350669ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Internal\Allocators\MultiAllocator">
+      <UniqueIdentifier>{afb2d464-4506-4d2e-a9e4-712c543d7096}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Internal\Allocators\DebugAllocator">
+      <UniqueIdentifier>{659eefd5-a826-4a34-91cf-f8df0b676b26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Internal\Allocators\SystemAllocatorWrapper">
+      <UniqueIdentifier>{2625296f-31c3-4393-b385-1f242a24f25d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="redMemoryFramework.cpp">
+      <Filter>Internal</Filter>
+    </ClCompile>
+    <ClCompile Include="redMemoryAllocatorRegistration.cpp">
+      <Filter>Internal\Memory Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="redMemoryAllocator.cpp">
+      <Filter>Internal\Allocators\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="redMemoryManager.cpp">
+      <Filter>Internal\Memory Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="redMemoryMetricsCollector.cpp">
+      <Filter>Internal\Metrics</Filter>
+    </ClCompile>
+    <ClCompile Include="redMemoryMetricsSerialiser.cpp">
+      <Filter>Internal\Metrics</Filter>
+    </ClCompile>
+    <ClCompile Include="redMemoryMetricsCallstack.cpp">
+      <Filter>Internal\Metrics</Filter>
+    </ClCompile>
+    <ClCompile Include="redMemoryPageAllocatorWin.cpp">
+      <Filter>Internal\OS Allocator\Implementations</Filter>
+    </ClCompile>
+    <ClCompile Include="redMemoryTlsfImpl.cpp">
+      <Filter>Internal\Allocators\TLSF</Filter>
+    </ClCompile>
+    <ClCompile Include="redMemoryPageAllocatorOrbis.cpp">
+      <Filter>Internal\OS Allocator\Implementations</Filter>
+    </ClCompile>
+    <ClCompile Include="redMemoryLeakTracker.cpp">
+      <Filter>Internal\Metrics</Filter>
+    </ClCompile>
+    <ClCompile Include="redMemoryMetricsCallstackOrbis.cpp">
+      <Filter>Internal\Metrics\Implementations</Filter>
+    </ClCompile>
+    <ClCompile Include="redMemoryMetricsCallstackWinAPI.cpp">
+      <Filter>Internal\Metrics\Implementations</Filter>
+    </ClCompile>
+    <ClCompile Include="redMemoryFileWriterWinApi.cpp">
+      <Filter>Internal\Metrics\Implementations</Filter>
+    </ClCompile>
+    <ClCompile Include="redMemoryMetricsSerialiserOrbis.cpp">
+      <Filter>Internal\Metrics\Implementations</Filter>
+    </ClCompile>
+    <ClCompile Include="redMemoryMetricsSerialiserWinAPI.cpp">
+      <Filter>Internal\Metrics\Implementations</Filter>
+    </ClCompile>
+    <ClCompile Include="redMemoryCallstackCachedWriter.cpp">
+      <Filter>Internal\Metrics</Filter>
+    </ClCompile>
+    <ClCompile Include="redMemoryFileWriterOrbis.cpp">
+      <Filter>Internal\Metrics\Implementations</Filter>
+    </ClCompile>
+    <ClCompile Include="redMemorySystemMemoryStatsWinAPI.cpp">
+      <Filter>Internal\Metrics\Implementations</Filter>
+    </ClCompile>
+    <ClCompile Include="redMemoryCrashReporter.cpp">
+      <Filter>Internal\Memory Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="redMemorySystemMemoryStatsOrbisAPI.cpp">
+      <Filter>Internal\Metrics\Implementations</Filter>
+    </ClCompile>
+    <ClCompile Include="redMemoryMetricsCallstackDurango.cpp">
+      <Filter>Internal\Metrics\Implementations</Filter>
+    </ClCompile>
+    <ClCompile Include="redMemoryMetricsSerialiserDurango.cpp">
+      <Filter>Internal\Metrics\Implementations</Filter>
+    </ClCompile>
+    <ClCompile Include="redMemorySystemMemoryStatsDurango.cpp">
+      <Filter>Internal\Metrics\Implementations</Filter>
+    </ClCompile>
+    <ClCompile Include="redMemoryPageAllocatorDurango.cpp">
+      <Filter>Internal\OS Allocator\Implementations</Filter>
+    </ClCompile>
+    <ClCompile Include="redMemoryFileWriterDurango.cpp">
+      <Filter>Internal\Metrics\Implementations</Filter>
+    </ClCompile>
+    <ClCompile Include="redMemoryArrayMetrics.cpp">
+      <Filter>Internal\Metrics</Filter>
+    </ClCompile>
+    <ClCompile Include="redMemoryMetricsHistogramData.cpp">
+      <Filter>Internal\Metrics</Filter>
+    </ClCompile>
+    <ClCompile Include="redMemoryRegionAllocator.cpp">
+      <Filter>Internal\Allocators\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="redMemoryMultiAllocator.cpp">
+      <Filter>Internal\Allocators\MultiAllocator</Filter>
+    </ClCompile>
+    <ClCompile Include="redMemoryDebugAllocator.cpp">
+      <Filter>Internal\Allocators\DebugAllocator</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

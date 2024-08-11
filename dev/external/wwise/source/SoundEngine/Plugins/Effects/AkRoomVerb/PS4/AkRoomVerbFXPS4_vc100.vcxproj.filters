@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<Filter Include="Common">
+			<UniqueIdentifier>{AE427778-F315-A345-AB4A-A6BAF685FF09}</UniqueIdentifier>
+		</Filter>
+	</ItemGroup>
+	<ItemGroup>
+		<ClInclude Include="..\AkRoomVerbFX.h" />
+		<ClInclude Include="..\AkRoomVerbFXParams.h" />
+		<ClInclude Include="..\AlgoTunings.h" />
+		<ClInclude Include="..\DelayLengths.h" />
+		<ClInclude Include="..\ERTables.h" />
+		<ClInclude Include="..\ERUnitDual.h" />
+		<ClInclude Include="..\FDN4.h" />
+		<ClInclude Include="..\FDNLPFilter.h" />
+		<ClInclude Include="..\ReverbState.h" />
+		<ClInclude Include="..\..\Common\ConstantPowerChannelMixdown.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\Common\DelayLine.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\Common\Mix3Interp.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\Common\OnePoleFilter.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\Common\OnePoleZeroHPFilter.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+	</ItemGroup>
+	<ItemGroup>
+		<ClCompile Include="..\AkRoomVerbFX.cpp" />
+		<ClCompile Include="..\AkRoomVerbFXParams.cpp" />
+		<ClCompile Include="..\ERUnitDual.cpp" />
+		<ClCompile Include="..\FDN4.cpp" />
+		<ClCompile Include="..\..\Common\AllpassFilter.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\Common\ConstantPowerChannelMixdown.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\Common\DelayLine.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\Common\Mix3Interp.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\Common\OnePoleFilter.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\Common\OnePoleZeroHPFilter.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+	</ItemGroup>
+</Project>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<Filter Include="3rdParty">
+			<UniqueIdentifier>{F8ECB19F-C39E-1A45-86AA-E48DF405FB65}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="3rdParty\Common">
+			<UniqueIdentifier>{33C046AC-C743-BC45-83F4-95AB094700E0}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="3rdParty\Common\tlsf">
+			<UniqueIdentifier>{72F957EF-65A4-F84B-9DD7-894C723A30C5}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Common">
+			<UniqueIdentifier>{E805C67A-3012-DB48-BAC2-92A93E49B288}</UniqueIdentifier>
+		</Filter>
+	</ItemGroup>
+	<ItemGroup>
+		<ClInclude Include="stdafx.h" />
+		<ClInclude Include="..\..\3rdParty\Common\tlsf\tlsf.h">
+			<Filter>3rdParty\Common\tlsf</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\3rdParty\Common\tlsf\tlsfbits.h">
+			<Filter>3rdParty\Common\tlsf</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Common\AkMemoryMgrBase.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+	</ItemGroup>
+	<ItemGroup>
+		<ClCompile Include="stdafx.cpp" />
+		<ClCompile Include="..\..\3rdParty\Common\tlsf\tlsf.cpp">
+			<Filter>3rdParty\Common\tlsf</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkMemoryMgrBase.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Common\AkMemoryMgr.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+	</ItemGroup>
+</Project>

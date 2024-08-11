@@ -1,0 +1,27 @@
+ConstantBuffer CameraShaderConsts : register(b0)
+{
+	row_major float4x4  VSC_Local;
+	row_major float4x4	VSC_WorldToView;
+	row_major float4x4	VSC_ViewToScreen;
+};
+
+struct VSInput
+{
+	float4 pos : POSITION;
+	float4 color : COLOR;
+};
+
+struct PSInput
+{
+	float4 pos : S_POSITION;
+	float4 col : COLOR;
+};
+
+PSInput main(VSInput i)
+{
+	PSInput o;
+	o.pos = mul( mul( mul( i.pos, VSC_Local ), VSC_WorldToView ), VSC_ViewToScreen );
+	o.col = i.color;
+
+	return o;
+}

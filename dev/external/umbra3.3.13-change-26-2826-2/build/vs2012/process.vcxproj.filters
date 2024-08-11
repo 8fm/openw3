@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="samples">
+      <UniqueIdentifier>{4B2B3CA3-44A0-FF40-8813-7ED299788940}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="samples\resources">
+      <UniqueIdentifier>{150E5028-E4D5-9E4E-9A18-80E422262D0A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source">
+      <UniqueIdentifier>{E292E171-DE29-D34F-AE02-E21085375134}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\process">
+      <UniqueIdentifier>{6F8E3B78-6E9C-B34F-8047-EC2C46BE8A1A}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\samples\resources\testkey.pfx">
+      <Filter>samples\resources</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\samples\resources\Logo.png">
+      <Filter>samples\resources</Filter>
+    </Image>
+    <Image Include="..\..\samples\resources\SmallLogo.png">
+      <Filter>samples\resources</Filter>
+    </Image>
+    <Image Include="..\..\samples\resources\SplashScreen.png">
+      <Filter>samples\resources</Filter>
+    </Image>
+    <Image Include="..\..\samples\resources\StoreLogo.png">
+      <Filter>samples\resources</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\source\process\umbraProcess.cpp">
+      <Filter>source\process</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

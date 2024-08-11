@@ -1,0 +1,352 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="debug|ORBIS">
+      <Configuration>debug</Configuration>
+      <Platform>ORBIS</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="checked|ORBIS">
+      <Configuration>checked</Configuration>
+      <Platform>ORBIS</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="profile|ORBIS">
+      <Configuration>profile</Configuration>
+      <Platform>ORBIS</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="release|ORBIS">
+      <Configuration>release</Configuration>
+      <Platform>ORBIS</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ApplicationEnvironment>title</ApplicationEnvironment>
+    <!-- - - - -->
+    <PlatformToolset>v110</PlatformToolset>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <ProjectGuid>{7705FBF6-A4A8-E380-0E1A-25DAC1D2C9A8}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debug|ORBIS'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <GenerateManifest>false</GenerateManifest>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='checked|ORBIS'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <GenerateManifest>false</GenerateManifest>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='profile|ORBIS'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <GenerateManifest>false</GenerateManifest>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='release|ORBIS'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <GenerateManifest>false</GenerateManifest>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='debug|ORBIS'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='checked|ORBIS'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='profile|ORBIS'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='release|ORBIS'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debug|ORBIS'">
+    <OutDir>$(SolutionDir)../../../Lib/ps4\</OutDir>
+    <IntDir>./ORBIS/PhysXVisualDebuggerSDK/debug\</IntDir>
+    <TargetExt>.a</TargetExt>
+    <TargetName>lib$(ProjectName)DEBUG</TargetName>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules />
+    <CodeAnalysisRuleAssemblies />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='debug|ORBIS'">
+    <ClCompile>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <BasicRuntimeChecks>UninitializedLocalUsageCheck</BasicRuntimeChecks>
+      <AdditionalOptions>-fdiagnostics-show-option -Wall -fno-rtti -fno-exceptions -ffast-math -fno-strict-aliasing -ffunction-sections -fdata-sections -Wno-invalid-offsetof -Wno-unknown-pragmas -Werror -O0 -g</AdditionalOptions>
+      <OptimizationLevel>Level0</OptimizationLevel>
+      <FastMath>false</FastMath>
+      <NoStrictAliasing>false</NoStrictAliasing>
+      <UnrollLoops>false</UnrollLoops>
+      <AnsiCompliance>false</AnsiCompliance>
+      <MsExtensions>false</MsExtensions>
+      <AdditionalIncludeDirectories>$(SCE_ORBIS_SDK_DIR)/target/include;./../../PhysXProfileSDK;./../../../Include/foundation;./../../foundation/include;./../../../Include/physxprofilesdk;./../../../Include/physxvisualdebuggersdk;./../../../Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>PX_PS4;_LIB;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;PX_PHYSX_STATIC_LIB;_DEBUG;PX_DEBUG;PX_CHECKED;PX_SUPPORT_VISUAL_DEBUGGER;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CppExceptions>false</CppExceptions>
+      <WarningLevel>Level3</WarningLevel>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+    </ClCompile>
+    <Lib>
+      <AdditionalOptions>
+      </AdditionalOptions>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)lib$(ProjectName)DEBUG.a</OutputFile>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ProgramDatabaseFile>$(OutDir)/lib$(ProjectName)DEBUG.a.pdb</ProgramDatabaseFile>
+    </Lib>
+    <ResourceCompile>
+    </ResourceCompile>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='checked|ORBIS'">
+    <OutDir>$(SolutionDir)../../../Lib/ps4\</OutDir>
+    <IntDir>./ORBIS/PhysXVisualDebuggerSDK/checked\</IntDir>
+    <TargetExt>.a</TargetExt>
+    <TargetName>lib$(ProjectName)CHECKED</TargetName>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules />
+    <CodeAnalysisRuleAssemblies />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='checked|ORBIS'">
+    <ClCompile>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <AdditionalOptions>-fdiagnostics-show-option -Wall -fno-rtti -fno-exceptions -ffast-math -fno-strict-aliasing -ffunction-sections -fdata-sections -Wno-invalid-offsetof -Wno-unknown-pragmas -Werror -O2</AdditionalOptions>
+      <OptimizationLevel>Level2</OptimizationLevel>
+      <FastMath>false</FastMath>
+      <NoStrictAliasing>false</NoStrictAliasing>
+      <UnrollLoops>false</UnrollLoops>
+      <AnsiCompliance>false</AnsiCompliance>
+      <MsExtensions>false</MsExtensions>
+      <AdditionalIncludeDirectories>$(SCE_ORBIS_SDK_DIR)/target/include;./../../PhysXProfileSDK;./../../../Include/foundation;./../../foundation/include;./../../../Include/physxprofilesdk;./../../../Include/physxvisualdebuggersdk;./../../../Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>PX_PS4;_LIB;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;PX_PHYSX_STATIC_LIB;NDEBUG;PX_CHECKED;PX_SUPPORT_VISUAL_DEBUGGER;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CppExceptions>false</CppExceptions>
+      <WarningLevel>Level3</WarningLevel>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+    </ClCompile>
+    <Lib>
+      <AdditionalOptions>
+      </AdditionalOptions>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)lib$(ProjectName)CHECKED.a</OutputFile>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ProgramDatabaseFile>$(OutDir)/lib$(ProjectName)CHECKED.a.pdb</ProgramDatabaseFile>
+    </Lib>
+    <ResourceCompile>
+    </ResourceCompile>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='profile|ORBIS'">
+    <OutDir>$(SolutionDir)../../../Lib/ps4\</OutDir>
+    <IntDir>./ORBIS/PhysXVisualDebuggerSDK/profile\</IntDir>
+    <TargetExt>.a</TargetExt>
+    <TargetName>lib$(ProjectName)PROFILE</TargetName>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules />
+    <CodeAnalysisRuleAssemblies />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='profile|ORBIS'">
+    <ClCompile>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <AdditionalOptions>-fdiagnostics-show-option -Wall -fno-rtti -fno-exceptions -ffast-math -fno-strict-aliasing -ffunction-sections -fdata-sections -Wno-invalid-offsetof -Wno-unknown-pragmas -Werror -O2</AdditionalOptions>
+      <OptimizationLevel>Level2</OptimizationLevel>
+      <FastMath>false</FastMath>
+      <NoStrictAliasing>false</NoStrictAliasing>
+      <UnrollLoops>false</UnrollLoops>
+      <AnsiCompliance>false</AnsiCompliance>
+      <MsExtensions>false</MsExtensions>
+      <AdditionalIncludeDirectories>$(SCE_ORBIS_SDK_DIR)/target/include;./../../PhysXProfileSDK;./../../../Include/foundation;./../../foundation/include;./../../../Include/physxprofilesdk;./../../../Include/physxvisualdebuggersdk;./../../../Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>PX_PS4;_LIB;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;PX_PHYSX_STATIC_LIB;NDEBUG;PX_PROFILE;PX_SUPPORT_VISUAL_DEBUGGER;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CppExceptions>false</CppExceptions>
+      <WarningLevel>Level3</WarningLevel>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+    </ClCompile>
+    <Lib>
+      <AdditionalOptions>
+      </AdditionalOptions>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)lib$(ProjectName)PROFILE.a</OutputFile>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ProgramDatabaseFile>$(OutDir)/lib$(ProjectName)PROFILE.a.pdb</ProgramDatabaseFile>
+    </Lib>
+    <ResourceCompile>
+    </ResourceCompile>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='release|ORBIS'">
+    <OutDir>$(SolutionDir)../../../Lib/ps4\</OutDir>
+    <IntDir>./ORBIS/PhysXVisualDebuggerSDK/release\</IntDir>
+    <TargetExt>.a</TargetExt>
+    <TargetName>lib$(ProjectName)</TargetName>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules />
+    <CodeAnalysisRuleAssemblies />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='release|ORBIS'">
+    <ClCompile>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <AdditionalOptions>-fdiagnostics-show-option -Wall -fno-rtti -fno-exceptions -ffast-math -fno-strict-aliasing -ffunction-sections -fdata-sections -Wno-invalid-offsetof -Wno-unknown-pragmas -Werror -O3</AdditionalOptions>
+      <OptimizationLevel>Level3</OptimizationLevel>
+      <FastMath>false</FastMath>
+      <NoStrictAliasing>false</NoStrictAliasing>
+      <UnrollLoops>false</UnrollLoops>
+      <AnsiCompliance>false</AnsiCompliance>
+      <MsExtensions>false</MsExtensions>
+      <AdditionalIncludeDirectories>$(SCE_ORBIS_SDK_DIR)/target/include;./../../PhysXProfileSDK;./../../../Include/foundation;./../../foundation/include;./../../../Include/physxprofilesdk;./../../../Include/physxvisualdebuggersdk;./../../../Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>PX_PS4;_LIB;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;PX_PHYSX_STATIC_LIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CppExceptions>false</CppExceptions>
+      <WarningLevel>Level3</WarningLevel>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+    </ClCompile>
+    <Lib>
+      <AdditionalOptions>
+      </AdditionalOptions>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)lib$(ProjectName).a</OutputFile>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ProgramDatabaseFile>$(OutDir)/lib$(ProjectName).a.pdb</ProgramDatabaseFile>
+    </Lib>
+    <ResourceCompile>
+    </ResourceCompile>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Include\physxvisualdebuggersdk\PvdBits.h">
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\physxvisualdebuggersdk\PvdConnection.h">
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\physxvisualdebuggersdk\PvdConnectionFlags.h">
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\physxvisualdebuggersdk\PvdConnectionManager.h">
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\physxvisualdebuggersdk\PvdDataStream.h">
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\physxvisualdebuggersdk\PvdDataStreamHelpers.h">
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\physxvisualdebuggersdk\PvdErrorCodes.h">
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\physxvisualdebuggersdk\PvdImmediateRenderer.h">
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\physxvisualdebuggersdk\PvdNetworkStreams.h">
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\physxvisualdebuggersdk\PvdObjectModelBaseTypeDefs.h">
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\physxvisualdebuggersdk\PvdObjectModelBaseTypes.h">
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\physxvisualdebuggersdk\PvdObjectModelMetaData.h">
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\physxvisualdebuggersdk\PvdSimpleErrorStream.h">
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\PhysXVisualDebuggerSDK\PvdByteStreams.h">
+    </ClInclude>
+    <ClInclude Include="..\..\PhysXVisualDebuggerSDK\PvdClient.h">
+    </ClInclude>
+    <ClInclude Include="..\..\PhysXVisualDebuggerSDK\PvdCommStreamEvents.h">
+    </ClInclude>
+    <ClInclude Include="..\..\PhysXVisualDebuggerSDK\PvdCommStreamEventSink.h">
+    </ClInclude>
+    <ClInclude Include="..\..\PhysXVisualDebuggerSDK\PvdCommStreamEventTypes.h">
+    </ClInclude>
+    <ClInclude Include="..\..\PhysXVisualDebuggerSDK\PvdCommStreamMetaData.h">
+    </ClInclude>
+    <ClInclude Include="..\..\PhysXVisualDebuggerSDK\PvdCommStreamParsing.h">
+    </ClInclude>
+    <ClInclude Include="..\..\PhysXVisualDebuggerSDK\PvdCommStreamParsingConverters.h">
+    </ClInclude>
+    <ClInclude Include="..\..\PhysXVisualDebuggerSDK\PvdCommStreamSDKEventTypes.h">
+    </ClInclude>
+    <ClInclude Include="..\..\PhysXVisualDebuggerSDK\PvdCommStreamTypes.h">
+    </ClInclude>
+    <ClInclude Include="..\..\PhysXVisualDebuggerSDK\PvdFileLoader.h">
+    </ClInclude>
+    <ClInclude Include="..\..\PhysXVisualDebuggerSDK\PvdFileStream.h">
+    </ClInclude>
+    <ClInclude Include="..\..\PhysXVisualDebuggerSDK\PvdFoundation.h">
+    </ClInclude>
+    <ClInclude Include="..\..\PhysXVisualDebuggerSDK\PvdImmediateRenderImpl.h">
+    </ClInclude>
+    <ClInclude Include="..\..\PhysXVisualDebuggerSDK\PvdImmediateRenderTypes.h">
+    </ClInclude>
+    <ClInclude Include="..\..\PhysXVisualDebuggerSDK\PvdInternalByteStreams.h">
+    </ClInclude>
+    <ClInclude Include="..\..\PhysXVisualDebuggerSDK\PvdMarshalling.h">
+    </ClInclude>
+    <ClInclude Include="..\..\PhysXVisualDebuggerSDK\PvdMemNetworkStreams.h">
+    </ClInclude>
+    <ClInclude Include="..\..\PhysXVisualDebuggerSDK\PvdMemRandomAccessIOStream.h">
+    </ClInclude>
+    <ClInclude Include="..\..\PhysXVisualDebuggerSDK\PvdNetworkToByteStreams.h">
+    </ClInclude>
+    <ClInclude Include="..\..\PhysXVisualDebuggerSDK\PvdObjectModel.h">
+    </ClInclude>
+    <ClInclude Include="..\..\PhysXVisualDebuggerSDK\PvdObjectModelEventStream.h">
+    </ClInclude>
+    <ClInclude Include="..\..\PhysXVisualDebuggerSDK\PvdObjectModelEventStreamEventTypes.h">
+    </ClInclude>
+    <ClInclude Include="..\..\PhysXVisualDebuggerSDK\PvdObjectModelEventStreamInternal.h">
+    </ClInclude>
+    <ClInclude Include="..\..\PhysXVisualDebuggerSDK\PvdObjectModelEventStreamPreviousEvents.h">
+    </ClInclude>
+    <ClInclude Include="..\..\PhysXVisualDebuggerSDK\PvdObjectModelEventStreamPreviousEventTypes.h">
+    </ClInclude>
+    <ClInclude Include="..\..\PhysXVisualDebuggerSDK\PvdObjectModelInternalTypeDefs.h">
+    </ClInclude>
+    <ClInclude Include="..\..\PhysXVisualDebuggerSDK\PvdObjectModelInternalTypes.h">
+    </ClInclude>
+    <ClInclude Include="..\..\PhysXVisualDebuggerSDK\PvdRandomAccessIOStream.h">
+    </ClInclude>
+    <ClInclude Include="..\..\PhysXVisualDebuggerSDK\PvdRepXExport.h">
+    </ClInclude>
+    <ClInclude Include="..\..\PhysXVisualDebuggerSDK\PvdServer.h">
+    </ClInclude>
+    <ClInclude Include="..\..\PhysXVisualDebuggerSDK\PvdSimpleAllocator.h">
+    </ClInclude>
+    <ClInclude Include="..\..\PhysXVisualDebuggerSDK\PvdSimpleErrorStream.h">
+    </ClInclude>
+    <ClInclude Include="..\..\PhysXVisualDebuggerSDK\SimpleXmlWriter.h">
+    </ClInclude>
+    <ClCompile Include="..\..\PhysXVisualDebuggerSDK\PvdCommStreamBufferedEventSink.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\PhysXVisualDebuggerSDK\PvdConnection.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\PhysXVisualDebuggerSDK\PvdConnectionManager.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\PhysXVisualDebuggerSDK\PvdDataStream.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\PhysXVisualDebuggerSDK\PvdNetworkStreams.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\PhysXVisualDebuggerSDK\PvdImmediateRenderer.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\PhysXVisualDebuggerSDK\PvdObjectModelMetaData.cpp">
+    </ClCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="samples">
+      <UniqueIdentifier>{E9F5EA7C-0546-7A4F-BC06-97DC26F665A5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="samples\resources">
+      <UniqueIdentifier>{DF5696C7-556B-1648-BE7B-D123DD0F8948}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils">
+      <UniqueIdentifier>{F04313BA-3E3F-E943-B7C1-8180DD078BB6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils\validator">
+      <UniqueIdentifier>{3E534523-0C4C-7945-86CB-74BD4852AB23}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\samples\resources\testkey.pfx">
+      <Filter>samples\resources</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\samples\resources\Logo.png">
+      <Filter>samples\resources</Filter>
+    </Image>
+    <Image Include="..\..\samples\resources\SmallLogo.png">
+      <Filter>samples\resources</Filter>
+    </Image>
+    <Image Include="..\..\samples\resources\SplashScreen.png">
+      <Filter>samples\resources</Filter>
+    </Image>
+    <Image Include="..\..\samples\resources\StoreLogo.png">
+      <Filter>samples\resources</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\utils\validator\umbraTrace.hpp">
+      <Filter>utils\validator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\utils\validator\umbraValidator.hpp">
+      <Filter>utils\validator</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\utils\validator\umbraValidator.cpp">
+      <Filter>utils\validator</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

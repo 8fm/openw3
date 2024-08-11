@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" TreatAsLocalProperty="OutDir;TargetName;IntDir;PlatformToolset">
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedConfigurationSetup.props))\SharedConfigurationSetup.props" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{6BCFB601-80CE-4183-9AE2-BA3CF6C68715}</ProjectGuid>
+    <RootNamespace>redMemoryFramework</RootNamespace>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <UsePrecompiledHeaders>false</UsePrecompiledHeaders>
+  </PropertyGroup>
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.props))\Shared.props" />
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedItemGroups.props))\SharedItemGroups.props" />
+  <ItemGroup>
+    <ClInclude Include="redMemoryAllocator.h" />
+    <ClInclude Include="redMemoryAllocatorCreator.h" />
+    <ClInclude Include="redMemoryAllocatorInfo.h" />
+    <ClInclude Include="redMemoryAllocatorRegistration.h" />
+    <ClInclude Include="redMemoryAllocators.h" />
+    <ClInclude Include="redMemoryArrayMetrics.h" />
+    <ClInclude Include="redMemoryAssert.h" />
+    <ClInclude Include="redMemoryAtomics.h" />
+    <ClInclude Include="redMemoryCallbackList.h" />
+    <ClInclude Include="redMemoryCallstackCachedWriter.h" />
+    <ClInclude Include="redMemoryCrashReporter.h" />
+    <ClInclude Include="redMemoryDebugAllocator.h" />
+    <ClInclude Include="redMemoryFileWriter.h" />
+    <ClInclude Include="redMemoryFileWriterDurango.h" />
+    <ClInclude Include="redMemoryFileWriterOrbis.h" />
+    <ClInclude Include="redMemoryFileWriterWinAPI.h" />
+    <ClInclude Include="redMemoryFillHook.h" />
+    <ClInclude Include="redMemoryFramework.h" />
+    <ClInclude Include="redMemoryCrt.h" />
+    <ClInclude Include="redMemoryFrameworkPlatform.h" />
+    <ClInclude Include="redMemoryFrameworkTypes.h" />
+    <ClInclude Include="redMemoryGpuAllocator.h" />
+    <ClInclude Include="redMemoryHook.h" />
+    <ClInclude Include="redMemoryLeakTracker.h" />
+    <ClInclude Include="redMemoryListHelpers.h" />
+    <ClInclude Include="redMemoryLog.h" />
+    <ClInclude Include="redMemoryMacros.h" />
+    <ClInclude Include="redMemoryManager.h" />
+    <ClInclude Include="redMemoryMetricsCallstack.h" />
+    <ClInclude Include="redMemoryMetricsClassGroup.h" />
+    <ClInclude Include="redMemoryMetricsCollector.h" />
+    <ClInclude Include="redMemoryMetricsHistogramData.h" />
+    <ClInclude Include="redMemoryMetricsNamePool.h" />
+    <ClInclude Include="redMemoryMetricsSerialiser.h" />
+    <ClInclude Include="redMemoryMultiAllocator.h" />
+    <ClInclude Include="redMemoryNullAllocator.h" />
+    <ClInclude Include="redMemoryPageAllocator.h" />
+    <ClInclude Include="redMemoryPageAllocatorDurango.h">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="redMemoryPageAllocatorOrbis.h">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Orbis'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="redMemoryPageAllocatorWin.h" />
+    <ClInclude Include="redMemoryPoolMetrics.h" />
+    <ClInclude Include="redMemoryRegionAllocator.h" />
+    <ClInclude Include="redMemorySmallBlockAllocator.h" />
+    <ClInclude Include="redMemorySystemMemoryStats.h" />
+    <ClInclude Include="redMemoryThreads.h" />
+    <ClInclude Include="redMemoryThreadsDurango.h" />
+    <ClInclude Include="redMemoryThreadsOrbis.h">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Orbis'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="redMemoryTlsfAllocator.h" />
+    <ClInclude Include="redMemoryTlsfImpl.h" />
+    <ClInclude Include="redMemoryVirtualAllocWrapper.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="redMemoryAllocator.cpp" />
+    <ClCompile Include="redMemoryAllocatorRegistration.cpp" />
+    <ClCompile Include="redMemoryArrayMetrics.cpp" />
+    <ClCompile Include="redMemoryCallstackCachedWriter.cpp" />
+    <ClCompile Include="redMemoryCrashReporter.cpp" />
+    <ClCompile Include="redMemoryDebugAllocator.cpp" />
+    <ClCompile Include="redMemoryFileWriterOrbis.cpp">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Orbis'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="redMemoryFileWriterWinApi.cpp">
+      <ExcludedFromBuild Condition="'$(Platform)'!='x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="redMemoryFramework.cpp" />
+    <ClCompile Include="redMemoryLeakTracker.cpp" />
+    <ClCompile Include="redMemoryManager.cpp" />
+    <ClCompile Include="redMemoryMetricsCallstack.cpp" />
+    <ClCompile Include="redMemoryMetricsCallstackDurango.cpp">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="redMemoryMetricsCallstackOrbis.cpp">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Orbis'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="redMemoryMetricsCallstackWinAPI.cpp">
+      <ExcludedFromBuild Condition="'$(Platform)'!='x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="redMemoryMetricsCollector.cpp" />
+    <ClCompile Include="redMemoryMetricsHistogramData.cpp" />
+    <ClCompile Include="redMemoryMetricsSerialiser.cpp" />
+    <ClCompile Include="redMemoryMetricsSerialiserDurango.cpp">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="redMemoryMetricsSerialiserOrbis.cpp">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Orbis'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="redMemoryMetricsSerialiserWinAPI.cpp">
+      <ExcludedFromBuild Condition="'$(Platform)'!='x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="redMemoryMultiAllocator.cpp" />
+    <ClCompile Include="redMemoryPageAllocatorDurango.cpp">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="redMemoryPageAllocatorOrbis.cpp">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Orbis'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="redMemoryPageAllocatorWin.cpp">
+      <ExcludedFromBuild Condition="'$(Platform)'!='x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClInclude Include="redMemorySmallBlockAllocator.inl" />
+    <ClCompile Include="redMemoryRegionAllocator.cpp" />
+    <ClCompile Include="redMemorySystemMemoryStatsDurango.cpp">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="redMemorySystemMemoryStatsOrbisAPI.cpp">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Orbis'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="redMemorySystemMemoryStatsWinAPI.cpp">
+      <ExcludedFromBuild Condition="'$(Platform)'!='x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="redMemoryTlsfImpl.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="redMemoryAllocatorCreator.inl" />
+    <None Include="redMemoryAllocatorInfo.inl" />
+    <None Include="redMemoryAllocatorRegistration.inl" />
+    <None Include="redMemoryAtomicsDurango.inl" />
+    <None Include="redMemoryAtomicsOrbis.inl" />
+    <None Include="redMemoryAtomicsWinAPI.inl" />
+    <None Include="redMemoryCallbackList.inl" />
+    <None Include="redMemoryCrtDurango.inl">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </None>
+    <None Include="redMemoryCrtOrbis.inl">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Orbis'">true</ExcludedFromBuild>
+    </None>
+    <None Include="redMemoryCrtWinAPI.inl">
+      <ExcludedFromBuild Condition="'$(Platform)'!='x64'">true</ExcludedFromBuild>
+    </None>
+    <ClCompile Include="redMemoryFileWriterDurango.cpp">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </ClCompile>
+    <None Include="redMemoryFileWriterWinApi.inl" />
+    <None Include="redMemoryGpuAllocator.inl" />
+    <None Include="redMemoryListHelpers.inl" />
+    <None Include="redMemoryManager.inl" />
+    <None Include="redMemoryMetricsCallstack.inl" />
+    <None Include="redMemoryMetricsClassGroup.inl" />
+    <None Include="redMemoryMetricsCollector.inl" />
+    <None Include="redMemoryMetricsNamePool.inl" />
+    <None Include="redMemoryMetricsSerialiser.inl" />
+    <None Include="redMemoryNullAllocator.inl" />
+    <None Include="redMemoryOrbisMallocReplacement.inl" />
+    <None Include="redMemoryPoolMetrics.inl" />
+    <ClInclude Include="redMemorySmallBlockAllocatorImpl.inl" />
+    <None Include="redMemoryThreadsNullAPI.h" />
+    <None Include="redMemoryThreadsWinAPI.h">
+      <ExcludedFromBuild Condition="'$(Platform)'=='Orbis'">true</ExcludedFromBuild>
+    </None>
+    <None Include="redMemoryTlsfAllocator.inl" />
+    <None Include="redMemoryTlsfImpl.inl" />
+    <None Include="redMemoryVirtualAllocWrapper.inl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.targets))\Shared.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

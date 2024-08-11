@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<Filter Include="Win32">
+			<UniqueIdentifier>{5572F59A-C234-B744-8AC9-AEAD73B16F01}</UniqueIdentifier>
+		</Filter>
+	</ItemGroup>
+	<ItemGroup>
+		<ClInclude Include="..\Win32\AkFDNReverbFX.h">
+			<Filter>Win32</Filter>
+		</ClInclude>
+		<ClInclude Include="..\AkFDNReverbFXParams.h" />
+	</ItemGroup>
+	<ItemGroup>
+		<ClCompile Include="..\Win32\AkFDNReverbFX.cpp">
+			<Filter>Win32</Filter>
+		</ClCompile>
+		<ClCompile Include="..\AkFDNReverbFXParams.cpp" />
+	</ItemGroup>
+</Project>

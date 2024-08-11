@@ -1,0 +1,460 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" TreatAsLocalProperty="OutDir;TargetName;IntDir;PlatformToolset">
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedConfigurationSetup.props))\SharedConfigurationSetup.props" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{FFD281CC-DEED-BEEF-AE4C-8A8D548F63D1}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>r4Launcher</RootNamespace>
+    <ProjectName>r4Launcher</ProjectName>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <SubSystem>Windows</SubSystem>
+    <ProjectClDirs>$(SolutionDir)../external/gfx4/Src;$(SolutionDir)../external/gfx4/Include;$(SolutionDir)../external/hk650r1/Source;</ProjectClDirs>
+  </PropertyGroup>
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.props))\Shared.props" />
+  <PropertyGroup Label="Configuration">
+    <UseMinimalRebuild Condition="'$(Platform)' == 'Durango'">false</UseMinimalRebuild>
+  </PropertyGroup>
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedItemGroups.props))\SharedItemGroups.props" />
+  <PropertyGroup Condition="'$(Configuration)'=='ReleaseGame'">
+    <TargetName>witcher3Release</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)'=='Final'">
+    <TargetName>witcher3</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='No opts|Durango'">
+    <PullMappingFile>pullMappingFileSplitCook.xml</PullMappingFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Platform)'=='x64'">
+    <EmbedManifest>true</EmbedManifest>
+    <GenerateManifest>true</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseGame|Durango'">
+    <PullMappingFile>pullMappingFileSplitCook.xml</PullMappingFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profiling|Durango'">
+    <PullMappingFile>pullMappingFileSplitCook.xml</PullMappingFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Final|Durango'">
+    <PullMappingFile>pullMappingFileSplitCook.xml</PullMappingFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Durango'">
+    <PullMappingFile>pullMappingFileSplitCook.xml</PullMappingFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='FinalWithLogging|Durango'">
+    <PullMappingFile>pullMappingFileSplitCook.xml</PullMappingFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Durango'">
+    <PullMappingFile>pullMappingFileSplitCook.xml</PullMappingFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\common\gpuApiDX10\gpuApiDX10.vcxproj" Condition="'$(Platform)'=='x64'">
+      <Project>{7E8999E0-7735-4EEB-A328-B2763DBE04BD}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\gpuApiDX10\gpuApiDX10.vcxproj" Condition="'$(Platform)'=='Win32'">
+      <Project>{7E8999E0-7735-4EEB-A328-B2763DBE04BD}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\gpuApiDX10\gpuApiDX10.vcxproj" Condition="'$(Platform)'=='Durango'">
+      <Project>{7e8999e0-7735-4eeb-a328-b2763dbe04bd}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\physics\physics.vcxproj">
+      <Project>{60a7e708-44b4-4337-908d-f125c77f81e9}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\durango\platformDurango\platformDurango.vcxproj" Condition="'$(Platform)'=='Durango'">
+      <Project>{5FCDA94C-D915-4A3F-8AA6-158A8B189401}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\orbis\platformOrbis\platformOrbis.vcxproj" Condition="'$(Platform)'=='ORBIS'">
+      <Project>{6853D4A2-5828-4E2C-9A93-A083B88DEB80}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\win32\platform\platform.vcxproj" Condition="'$(Platform)'=='x64'">
+      <Project>{D3FC2B93-22B2-44B4-97D2-6ABA46D0E580}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\win32\platform\platform.vcxproj" Condition="'$(Platform)'=='Win32'">
+      <Project>{D3FC2B93-22B2-44B4-97D2-6ABA46D0E580}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\gpuApiGnm\gpuApiGnm.vcxproj" Condition="'$(Platform)'=='ORBIS'">
+      <Project>{AC6894FF-D535-4FC4-B428-8EBECE284267}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\core\core.vcxproj">
+      <Project>{BEC313E8-15BC-4693-930F-D5FE597ADAB0}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\engine\engine.vcxproj">
+      <Project>{61B04D76-FC60-4662-9917-CE2CCD6C6B25}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\game\game.vcxproj">
+      <Project>{B1E9721B-F7A2-4497-9409-67487BA3B419}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\gpuApiUtils\gpuApiUtils.vcxproj">
+      <Project>{25A08ABC-1A48-45E3-A6A1-8853070C2D72}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\matcompiler\matcompiler.vcxproj">
+      <Project>{5304FFB3-A910-464D-BA75-4C96CA90BB59}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\platformCommon\platformCommon.vcxproj">
+      <Project>{C30680E9-5CDA-4A71-89E6-0B195DFC8BFD}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\redIO\redIO.vcxproj">
+      <Project>{CB12E47D-DB64-4466-9C54-59C3DA05E6BF}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\redMath\redMath.vcxproj">
+      <Project>{14054554-1F10-4EB8-839B-D4BB8592515B}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\redMemoryFramework\redMemoryFramework.vcxproj">
+      <Project>{6BCFB601-80CE-4183-9AE2-BA3CF6C68715}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\redNetwork\RedNetwork.vcxproj">
+      <Project>{99596BEB-157A-4C15-94B4-25E3A580DE22}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\redSystem\redSystem.vcxproj">
+      <Project>{9C1F2DBF-9EA5-41B9-8430-D869C8AC2189}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\redThreads\redThreads.vcxproj">
+      <Project>{50404845-5499-4116-911C-55A575807EF6}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\renderer\render.vcxproj">
+      <Project>{3AC2D4A5-C4C8-48B9-9BA9-487A142D0C8F}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\scripts\scripts.vcxproj">
+      <Project>{2BB69D9F-79FC-4A10-B998-C0BA982EFBC6}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\games\r4\r4.vcxproj">
+      <Project>{CAE14B93-3735-453E-8734-38841F384203}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="activateState.cpp" />
+    <ClCompile Include="build.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="externDefinitions.cpp" />
+    <ClCompile Include="gameApplicationDurango.cpp">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="gameApplicationOrbis.cpp">
+      <ExcludedFromBuild Condition="'$(Platform)'!='ORBIS'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="gameConstrainedState.cpp" />
+    <ClCompile Include="gameRunningState.cpp" />
+    <ClCompile Include="initializationState.cpp" />
+    <ClCompile Include="mainDurango.cpp">
+      <CompileAsWinRT Condition="'$(Platform)'=='Durango'">true</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Platform)'=='Durango'">NotUsing</PrecompiledHeader>
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="mainOrbis.cpp">
+      <ExcludedFromBuild Condition="'$(Platform)'!='ORBIS'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="mainRed.cpp">
+      <ExcludedFromBuild Condition="'$(Platform)'!='x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="mainWindows.cpp">
+      <ExcludedFromBuild Condition="'$(Platform)'!='x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="operatorNewDelete_orbis.cpp" />
+    <ClCompile Include="shutdownState.cpp" />
+    <ClCompile Include="utility.cpp" />
+    <ClCompile Include="utilityDurango.cpp">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="utilityOrbis.cpp">
+      <ExcludedFromBuild Condition="'$(Platform)'!='ORBIS'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="utilityWindows.cpp">
+      <ExcludedFromBuild Condition="'$(Platform)'!='x64'">true</ExcludedFromBuild>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="activateState.h" />
+    <ClInclude Include="build.h" />
+    <ClInclude Include="externDefinitions.h" />
+    <ClInclude Include="gameApplicationDurango.h">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="gameApplicationOrbis.h" />
+    <ClInclude Include="gameContrainedState.h" />
+    <ClInclude Include="gameRunningState.h" />
+    <ClInclude Include="initializationState.h" />
+    <ClInclude Include="mainRed.h">
+      <ExcludedFromBuild Condition="'$(Platform)'=='Durango'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="r4MemoryDurango.h" />
+    <ClInclude Include="r4MemoryOrbis.h" />
+    <ClInclude Include="r4MemoryWindows.h" />
+    <ClInclude Include="resource.h">
+      <ExcludedFromBuild Condition="'$(Platform)'=='Durango'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="shutdownState.h" />
+    <ClInclude Include="utility.h" />
+    <ClInclude Include="states.h" />
+    <ClInclude Include="win32splash.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="icon.ico">
+      <ExcludedFromBuild Condition="'$(Platform)'!='x64'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\de-DE\defaultTile.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\de-DE\logo.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\de-DE\smallLogo.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\de-DE\splashScreen.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\defaultTile.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\en-AE\defaultTile.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\en-AE\logo.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\en-AE\smallLogo.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\en-AE\splashScreen.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\en-CZ\defaultTile.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\en-CZ\logo.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\en-CZ\smallLogo.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\en-CZ\splashScreen.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\en-HU\defaultTile.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\en-HU\logo.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\en-HU\smallLogo.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\en-HU\splashScreen.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\en-US\defaultTile.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\en-US\logo.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\en-US\smallLogo.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\en-US\splashScreen.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\es-ES\defaultTile.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\es-ES\logo.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\es-ES\smallLogo.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\es-ES\splashScreen.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\es-MX\defaultTile.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\es-MX\logo.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\es-MX\smallLogo.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\es-MX\splashScreen.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\fr-FR\defaultTile.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\fr-FR\logo.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\fr-FR\smallLogo.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\fr-FR\splashScreen.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\it-IT\defaultTile.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\it-IT\logo.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\it-IT\smallLogo.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\it-IT\splashScreen.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\ja-JP\defaultTile.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\ja-JP\logo.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\ja-JP\smallLogo.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\ja-JP\splashScreen.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\ko-KR\defaultTile.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\ko-KR\logo.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\ko-KR\smallLogo.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\ko-KR\splashScreen.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\logo.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\pl-PL\defaultTile.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\pl-PL\logo.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\pl-PL\smallLogo.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\pl-PL\splashScreen.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\pt-BR\defaultTile.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\pt-BR\logo.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\pt-BR\smallLogo.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\pt-BR\splashScreen.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\ru-RU\defaultTile.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\ru-RU\logo.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\ru-RU\smallLogo.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\ru-RU\splashScreen.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\smallLogo.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\splashScreen.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\zh-TW\defaultTile.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\zh-TW\logo.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\zh-TW\smallLogo.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Manifest\zh-TW\splashScreen.png">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="package.appxmanifest">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+      <SubType>Designer</SubType>
+    </AppxManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="r4Launcher.rc">
+      <ExcludedFromBuild Condition="'$(Platform)'=='Durango'">true</ExcludedFromBuild>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup Condition="'$(Platform)'=='Durango'">
+    <SDKReference Include="Xbox Services API, Version=8.0">
+      <CopyLocal>True</CopyLocal>
+    </SDKReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PRIResource Include="Manifest\de-DE\Resources.resw">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </PRIResource>
+    <PRIResource Include="Manifest\en-AE\Resources.resw">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </PRIResource>
+    <PRIResource Include="Manifest\en-CZ\Resources.resw">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </PRIResource>
+    <PRIResource Include="Manifest\en-HU\Resources.resw">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </PRIResource>
+    <PRIResource Include="Manifest\en-US\Resources.resw">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </PRIResource>
+    <PRIResource Include="Manifest\es-ES\Resources.resw">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </PRIResource>
+    <PRIResource Include="Manifest\es-MX\Resources.resw">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </PRIResource>
+    <PRIResource Include="Manifest\fr-FR\Resources.resw">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </PRIResource>
+    <PRIResource Include="Manifest\it-IT\Resources.resw">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </PRIResource>
+    <PRIResource Include="Manifest\ja-JP\Resources.resw">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </PRIResource>
+    <PRIResource Include="Manifest\ko-KR\Resources.resw">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </PRIResource>
+    <PRIResource Include="Manifest\pl-PL\Resources.resw">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </PRIResource>
+    <PRIResource Include="Manifest\pt-BR\Resources.resw">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </PRIResource>
+    <PRIResource Include="Manifest\Resources.resw">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </PRIResource>
+    <PRIResource Include="Manifest\ru-RU\Resources.resw">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </PRIResource>
+    <PRIResource Include="Manifest\zh-TW\Resources.resw">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Durango'">true</ExcludedFromBuild>
+    </PRIResource>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.targets))\Shared.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

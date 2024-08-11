@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" TreatAsLocalProperty="OutDir;TargetName;IntDir;PlatformToolset">
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedConfigurationSetup.props))\SharedConfigurationSetup.props" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{25A08ABC-1A48-45E3-A6A1-8853070C2D72}</ProjectGuid>
+    <RootNamespace>gpuApiUtils</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <UsePrecompiledHeaders>true</UsePrecompiledHeaders>
+    <PrecompiledHeaderFile>gpuApiUtils.h</PrecompiledHeaderFile>
+  </PropertyGroup>
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.props))\Shared.props" />
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedItemGroups.props))\SharedItemGroups.props" />
+  <ItemGroup>
+    <ClInclude Include="gpuApiCommon.h" />
+    <ClInclude Include="gpuApiContainer.h" />
+    <ClInclude Include="gpuApiDDSLoader.h" />
+    <ClInclude Include="gpuApiErrorHandling.h" />
+    <ClInclude Include="gpuApiInterface.h" />
+    <ClInclude Include="gpuApiMappingCommon.h" />
+    <ClInclude Include="gpuApiMemory.h" />
+    <ClInclude Include="gpuApiMemoryClasses.h" />
+    <ClInclude Include="gpuApiMemoryPools.h" />
+    <ClInclude Include="gpuApiRenderCommon.h" />
+    <ClInclude Include="gpuApiSamplerCommon.h" />
+    <ClInclude Include="gpuApiShaderParsing.h" />
+    <ClInclude Include="gpuApiTypes.h" />
+    <ClInclude Include="gpuApiUtils.h" />
+    <ClInclude Include="gpuApiVertexDeclarations.h" />
+    <ClInclude Include="gpuApiVertexPacking.h" />
+    <ClInclude Include="gpuApiVertexFormats.h" />
+    <ClInclude Include="mojoshader\mojoshader.h">
+      <ExcludedFromBuild Condition="'$(Platform)'=='ORBIS'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="mojoshader\mojoshader_internal.h">
+      <ExcludedFromBuild Condition="'$(Platform)'=='ORBIS'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="mojoshader\mojoshader_parser_hlsl.h">
+      <ExcludedFromBuild Condition="'$(Platform)'=='ORBIS'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="mojoshader\mojoshader_version.h">
+      <ExcludedFromBuild Condition="'$(Platform)'=='ORBIS'">true</ExcludedFromBuild>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="gpuApiCommon.cpp" />
+    <ClCompile Include="gpuApiDDSLoader.cpp" />
+    <ClCompile Include="gpuApiMemory.cpp" />
+    <ClCompile Include="gpuApiShaderParsing.cpp" />
+    <ClCompile Include="gpuApiUtils.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="gpuApiVertexFormats.cpp" />
+    <ClCompile Include="gpuApiVertexLayoutsCommon.cpp" />
+    <ClCompile Include="gpuApiVertexPacking.cpp" />
+    <ClCompile Include="mojoshader\mojoshader.c">
+      <CompileAs>CompileAsCpp</CompileAs>
+      <PrecompiledHeader />
+      <ExcludedFromBuild Condition="'$(Platform)'=='ORBIS'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="mojoshader\mojoshader_assembler.c">
+      <CompileAs>CompileAsCpp</CompileAs>
+      <PrecompiledHeader />
+      <ExcludedFromBuild Condition="'$(Platform)'=='ORBIS'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="mojoshader\mojoshader_common.c">
+      <CompileAs>CompileAsCpp</CompileAs>
+      <PrecompiledHeader />
+      <ExcludedFromBuild Condition="'$(Platform)'=='ORBIS'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="mojoshader\mojoshader_compiler.c">
+      <CompileAs>CompileAsCpp</CompileAs>
+      <PrecompiledHeader />
+      <ExcludedFromBuild Condition="'$(Platform)'=='ORBIS'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="mojoshader\mojoshader_effects.c">
+      <CompileAs>CompileAsCpp</CompileAs>
+      <PrecompiledHeader />
+      <ExcludedFromBuild Condition="'$(Platform)'=='ORBIS'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="mojoshader\mojoshader_lexer.c">
+      <CompileAs>CompileAsCpp</CompileAs>
+      <PrecompiledHeader />
+      <ExcludedFromBuild Condition="'$(Platform)'=='ORBIS'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="mojoshader\mojoshader_opengl.c">
+      <CompileAs>CompileAsCpp</CompileAs>
+      <PrecompiledHeader />
+      <ExcludedFromBuild Condition="'$(Platform)'=='ORBIS'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="mojoshader\mojoshader_preprocessor.c">
+      <CompileAs>CompileAsCpp</CompileAs>
+      <PrecompiledHeader />
+      <ExcludedFromBuild Condition="'$(Platform)'=='ORBIS'">true</ExcludedFromBuild>
+    </ClCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.targets))\Shared.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

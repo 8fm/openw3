@@ -1,0 +1,2130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<resource xmlns="http://www.wxwindows.org/wxxrc" version="2.3.0.1">
+	<object class="wxFrame" name="MainFrame">
+		<style>wxCAPTION|wxCLOSE_BOX|wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL</style>
+		<size>881,593</size>
+		<title>Witcher Script Studio</title>
+		<centered>1</centered>
+		<aui_managed>0</aui_managed>
+		<object class="wxMenuBar" name="MainMenu">
+			<label>MainMenuBar</label>
+			<object class="wxMenu" name="fileMenu">
+				<label>_File</label>
+				<object class="wxMenuItem" name="openScriptDirectory">
+					<label>Open Scripts Directory</label>
+					<help></help>
+				</object>
+				<object class="wxMenuItem" name="createNewMod">
+					<label>Create new mod</label>
+					<help></help>
+				</object>
+				<object class="wxMenuItem" name="openExistingSolution">
+					<label>Open existing solution</label>
+					<help></help>
+				</object>
+				<object class="wxMenuItem" name="installMod">
+					<label>Install Mod</label>
+					<help></help>
+				</object>
+				<object class="separator" />
+				<object class="wxMenuItem" name="fileSave">
+					<label>Save\tCtrl+S</label>
+					<help></help>
+					<bitmap>images/vs/saveHS.png</bitmap>
+				</object>
+				<object class="wxMenuItem" name="fileSaveAll">
+					<label>Save All\tShift+Ctrl+S</label>
+					<help></help>
+					<bitmap>images/vs/SaveAllHS.png</bitmap>
+				</object>
+				<object class="separator" />
+				<object class="wxMenuItem" name="versionControlCredentials">
+					<label>Version Control Credentials</label>
+					<help></help>
+					<bitmap>images/sol/findcheckouts.gif</bitmap>
+				</object>
+				<object class="separator" />
+				<object class="wxMenu" name="fileRecentSolutions">
+					<label>Recent</label>
+				</object>
+				<object class="separator" />
+				<object class="wxMenuItem" name="fileExit">
+					<label>Exit\tAlt+F4</label>
+					<help></help>
+				</object>
+			</object>
+			<object class="wxMenu" name="editMenu">
+				<label>_Edit</label>
+				<object class="wxMenuItem" name="editUndo">
+					<label>_Undo\tCtrl+Z</label>
+					<help></help>
+					<bitmap>images/vs/Edit_UndoHS.png</bitmap>
+				</object>
+				<object class="wxMenuItem" name="editRedo">
+					<label>_Redo\tCtrl+Y</label>
+					<help></help>
+					<bitmap>images/vs/Edit_RedoHS.png</bitmap>
+				</object>
+				<object class="separator" />
+				<object class="wxMenuItem" name="editCut">
+					<label>Cu_t\tCtrl-X</label>
+					<help></help>
+					<bitmap>images/vs/CutHS.png</bitmap>
+				</object>
+				<object class="wxMenuItem" name="editCopy">
+					<label>_Copy\tCtrl-C</label>
+					<help></help>
+					<bitmap>images\page_copy.png</bitmap>
+				</object>
+				<object class="wxMenuItem" name="editPaste">
+					<label>_Paste\tCtrl-V</label>
+					<help></help>
+					<bitmap>images/vs/PasteHS.png</bitmap>
+				</object>
+				<object class="separator" />
+				<object class="wxMenuItem" name="editFind">
+					<label>Find...\tCtrl+F</label>
+					<help></help>
+					<bitmap>images/vs/FindHS.png</bitmap>
+				</object>
+				<object class="wxMenuItem" name="editFindAll">
+					<label>Find all...\tCtrl+Shift+F</label>
+					<help></help>
+					<bitmap>images/vs/FindHS.png</bitmap>
+				</object>
+				<object class="wxMenuItem" name="editFindNext">
+					<label>Find next\tF3</label>
+					<help></help>
+					<bitmap>images/vs/FindNextHS.png</bitmap>
+				</object>
+				<object class="wxMenuItem" name="editFindPrev">
+					<label>Find previous\tCtrl+F3</label>
+					<help></help>
+					<bitmap>images/vs/FindNextHS.png</bitmap>
+				</object>
+				<object class="wxMenuItem" name="editGoto">
+					<label>Go To...\tCtrl+G</label>
+					<help></help>
+				</object>
+				<object class="separator" />
+				<object class="wxMenuItem" name="editNavigateBackward">
+					<label>Navigate Backward\tCtrl+-</label>
+					<help></help>
+					<bitmap>images\control_start_blue.png</bitmap>
+				</object>
+				<object class="wxMenuItem" name="editNavigateForward">
+					<label>Navigate Forward\tCtrl+Shift+-</label>
+					<help></help>
+					<bitmap>images\control_end_blue.png</bitmap>
+				</object>
+				<object class="separator" />
+				<object class="wxMenu" name="editBookmarks">
+					<label>Bookmarks</label>
+					<object class="wxMenuItem" name="editBookmarksToggleBookmark">
+						<label>Toggle Bookmark\tCTRL+F2</label>
+						<help></help>
+					</object>
+					<object class="wxMenuItem" name="editBookmarksNextBookmark">
+						<label>Next Bookmark\tF2</label>
+						<help></help>
+					</object>
+					<object class="wxMenuItem" name="editBookmarksPreviousBookmark">
+						<label>Previous Bookmark\tSHIFT+F2</label>
+						<help></help>
+					</object>
+					<object class="wxMenuItem" name="editBookmarksClearAllBookmarks">
+						<label>Clear All Bookmarks</label>
+						<help></help>
+					</object>
+				</object>
+			</object>
+			<object class="wxMenu" name="debugMenu">
+				<label>_Debug</label>
+				<object class="wxMenuItem" name="debugReloadScripts">
+					<label>_Reload scripts\tF7</label>
+					<help></help>
+					<bitmap>images/vs/build.png</bitmap>
+				</object>
+				<object class="wxMenuItem" name="debugForgetCompilationAction">
+					<label>Forget compilation action choice</label>
+					<help></help>
+				</object>
+				<object class="separator" />
+				<object class="wxMenuItem" name="debugContinue">
+					<label>Continue\tF5</label>
+					<help></help>
+					<bitmap>images/sol/resume_6.gif</bitmap>
+				</object>
+				<object class="wxMenuItem" name="debugStepOver">
+					<label>Step over\tF10</label>
+					<help></help>
+					<bitmap>images/sol/stepover_6.gif</bitmap>
+				</object>
+				<object class="wxMenuItem" name="debugStepInto">
+					<label>Step into\tF11</label>
+					<help></help>
+					<bitmap>images/sol/stepinto_6.gif</bitmap>
+				</object>
+				<object class="wxMenuItem" name="debugStepOut">
+					<label>Step out\tShift+F11</label>
+					<help></help>
+					<bitmap>images/sol/stepreturn_6.gif</bitmap>
+				</object>
+				<object class="separator" />
+				<object class="wxMenuItem" name="debugProfile">
+					<label>Profile</label>
+					<help>Profile a discrete number of frames</help>
+					<bitmap>images/calculator.png</bitmap>
+				</object>
+				<object class="wxMenuItem" name="debugProfileContinuous">
+					<label>Continuous profile</label>
+					<help>Start or stop continuous profiling</help>
+					<bitmap>images/check_on.png</bitmap>
+					<checkable>1</checkable>
+				</object>
+				<object class="separator" />
+				<object class="wxMenuItem" name="debugToggleBreakpoint">
+					<label>Toggle breakpoint\tF9</label>
+					<help></help>
+					<bitmap>images\breakpoint.png</bitmap>
+				</object>
+				<object class="wxMenuItem" name="debugClearAllBreakpoints">
+					<label>Clear all breakpoints\tCtrl+Shift+F9</label>
+					<help></help>
+					<bitmap>images\clear_breakpoints.png</bitmap>
+				</object>
+			</object>
+			<object class="wxMenu" name="toolsMenu">
+				<label>Tools</label>
+				<object class="wxMenuItem" name="toolsOpenSolutionFile">
+					<label>Find file in solution...\tAlt+Shift+O</label>
+					<help></help>
+					<bitmap>images/open_solution_file.png</bitmap>
+				</object>
+				<object class="wxMenuItem" name="toolsFindSymbol">
+					<label>Find Symbol...\tAlt+Shift+S</label>
+					<help></help>
+				</object>
+				<object class="separator" />
+				<object class="wxMenu" name="textEditorOptions">
+					<label>Text Editor</label>
+					<object class="wxMenuItem" name="optionsCodeOutlining">
+						<label>Code Outlining</label>
+						<help>When enabled, this allows you to collapse and expand blocks of code</help>
+						<checked>1</checked>
+						<checkable>1</checkable>
+					</object>
+					<object class="wxMenuItem" name="optionsCodeHighlightBrackets">
+						<label>Highlight Brackets</label>
+						<help>Highlight matching bracket pairs</help>
+						<checked>1</checked>
+						<checkable>1</checkable>
+					</object>
+					<object class="wxMenuItem" name="optionsCodeIndentationGuide">
+						<label>Indentation Guides</label>
+						<help></help>
+						<checked>1</checked>
+						<checkable>1</checkable>
+					</object>
+					<object class="wxMenuItem" name="optionsCodeWordHighlight">
+						<label>Highlight matching words</label>
+						<help></help>
+						<checkable>1</checkable>
+					</object>
+					<object class="wxMenuItem" name="optionsCodeShowWhitespace">
+						<label>Show Whitespace</label>
+						<help></help>
+						<checkable>1</checkable>
+					</object>
+					<object class="wxMenuItem" name="optionsCodeShowEOL">
+						<label>Show Line Endings</label>
+						<help></help>
+						<checkable>1</checkable>
+					</object>
+					<object class="wxMenu" name="m_menu3">
+						<label>Hover Information</label>
+						<object class="wxMenuItem" name="optionsCodeHoverTooltips">
+							<label>Tooltips</label>
+							<help>Show code information using tool tips</help>
+							<checked>1</checked>
+							<radio>1</radio>
+						</object>
+						<object class="wxMenuItem" name="optionsCodeHoverAnnotations">
+							<label>Annotations</label>
+							<help>Show code information using Annotations</help>
+							<radio>1</radio>
+						</object>
+						<object class="wxMenuItem" name="optionsCodeHoverDisabled">
+							<label>Disabled</label>
+							<help></help>
+							<radio>1</radio>
+						</object>
+					</object>
+					<object class="wxMenuItem" name="optionsCodeColours">
+						<label>Colours...</label>
+						<help></help>
+					</object>
+				</object>
+				<object class="wxMenu" name="generalOptions">
+					<label>General</label>
+					<object class="wxMenu" name="breakpointOptions">
+						<label>Breakpoints</label>
+						<object class="wxMenuItem" name="breakpointOptionStartBar">
+							<label>Flash Start Bar Icon</label>
+							<help></help>
+							<checkable>1</checkable>
+						</object>
+						<object class="wxMenuItem" name="breakpointOptionWindowToFront">
+							<label>Bring window to front</label>
+							<help></help>
+							<checkable>1</checkable>
+						</object>
+						<object class="wxMenuItem" name="breakpointOptionAutoSaving">
+							<label>Auto Saving</label>
+							<help></help>
+							<checkable>1</checkable>
+						</object>
+					</object>
+				</object>
+				<object class="wxMenu" name="advancedOptions">
+					<label>Advanced</label>
+					<object class="wxMenuItem" name="optionsAdvancedOpcodes">
+						<label>Display opcodes</label>
+						<help></help>
+						<checkable>1</checkable>
+					</object>
+					<object class="wxMenuItem" name="optionsAdvancedPing">
+						<label>Ping</label>
+						<help></help>
+					</object>
+				</object>
+			</object>
+			<object class="wxMenu" name="windowMenu">
+				<label>Window</label>
+				<object class="wxMenuItem" name="windowCloseAllDocs">
+					<label>Close All Documents</label>
+					<help></help>
+					<bitmap>images\close_all_documents.png</bitmap>
+				</object>
+			</object>
+		</object>
+		<object class="wxBoxSizer">
+			<orient>wxHORIZONTAL</orient>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxALL|wxEXPAND</flag>
+				<border>0</border>
+				<object class="wxSplitterWindow" name="MainSplitter">
+					<style>wxSP_LIVE_UPDATE|wxSP_NOBORDER</style>
+					<sashpos>207</sashpos>
+					<gravity>0.2</gravity>
+					<minsize>0</minsize>
+					<orientation>vertical</orientation>
+					<object class="wxPanel" name="SolutionPanel">
+						<style>wxCLIP_CHILDREN|wxTAB_TRAVERSAL</style>
+					</object>
+					<object class="wxPanel" name="RightPanel">
+						<style>wxTAB_TRAVERSAL</style>
+						<object class="wxBoxSizer">
+							<orient>wxVERTICAL</orient>
+							<object class="sizeritem">
+								<option>1</option>
+								<flag>wxALL|wxEXPAND</flag>
+								<border>0</border>
+								<object class="wxSplitterWindow" name="RightSplitter">
+									<style>wxSP_LIVE_UPDATE|wxSP_NOBORDER</style>
+									<sashpos>367</sashpos>
+									<gravity>0.8</gravity>
+									<minsize>1</minsize>
+									<orientation>horizontal</orientation>
+									<object class="wxPanel" name="DocumentsPanel">
+										<style>wxTAB_TRAVERSAL</style>
+										<bg>#ababab</bg>
+									</object>
+									<object class="wxPanel" name="LogPanel">
+										<style>wxTAB_TRAVERSAL</style>
+									</object>
+								</object>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+		<object class="wxStatusBar" name="StatusBar">
+			<style>wxST_SIZEGRIP</style>
+			<fields>1</fields>
+		</object>
+		<object class="wxToolBar" name="ToolBar">
+			<style>wxTB_DOCKABLE|wxTB_FLAT|wxTB_HORIZONTAL</style>
+			<bitmapsize>16,16</bitmapsize>
+			<margins></margins>
+			<packing>1</packing>
+			<separation>5</separation>
+			<object class="tool" name="fileSave">
+				<label>tool</label>
+				<tooltip>Save</tooltip>
+				<longhelp>Save</longhelp>
+				<bitmap>images/vs/saveHS.png</bitmap>
+			</object>
+			<object class="tool" name="fileSaveAll">
+				<label>tool</label>
+				<tooltip>Save All</tooltip>
+				<longhelp>Save All</longhelp>
+				<bitmap>images/vs/SaveAllHS.png</bitmap>
+			</object>
+			<object class="tool" name="fileCloseAll">
+				<label>Close All Documents</label>
+				<tooltip>Close all documents</tooltip>
+				<longhelp>Close all documents</longhelp>
+				<bitmap>images\close_all_documents.png</bitmap>
+			</object>
+			<object class="separator" />
+			<object class="tool" name="editUndo">
+				<label>tool</label>
+				<tooltip>Undo last operation</tooltip>
+				<longhelp>Undo last operation</longhelp>
+				<bitmap>images/vs/Edit_UndoHS.png</bitmap>
+			</object>
+			<object class="tool" name="editRedo">
+				<label>tool</label>
+				<tooltip>Redo last operation</tooltip>
+				<longhelp>Redo last operation</longhelp>
+				<bitmap>images/vs/Edit_RedoHS.png</bitmap>
+			</object>
+			<object class="separator" />
+			<object class="tool" name="editCut">
+				<label>tool</label>
+				<tooltip>Cut selection</tooltip>
+				<longhelp>Cut selection</longhelp>
+				<bitmap>images/vs/CutHS.png</bitmap>
+			</object>
+			<object class="tool" name="editCopy">
+				<label>tool</label>
+				<tooltip>Copy selection</tooltip>
+				<longhelp>Copy selection</longhelp>
+				<bitmap>images\page_copy.png</bitmap>
+			</object>
+			<object class="tool" name="editPaste">
+				<label>tool</label>
+				<tooltip>Paste selection</tooltip>
+				<longhelp>Paste selection</longhelp>
+				<bitmap>images/vs/PasteHS.png</bitmap>
+			</object>
+			<object class="separator" />
+			<object class="tool" name="editFind">
+				<label>Find</label>
+				<tooltip>Find occurence of string in file(s)</tooltip>
+				<longhelp>Find occurence of string in file(s)</longhelp>
+				<bitmap>images/vs/FindHS.png</bitmap>
+			</object>
+			<object class="tool" name="navPrev">
+				<label>Navigate Backward</label>
+				<tooltip>Navigate Backward</tooltip>
+				<longhelp>Navigate Backward</longhelp>
+				<bitmap>images\control_start_blue.png</bitmap>
+			</object>
+			<object class="tool" name="navNext">
+				<label>Navigate Forward</label>
+				<tooltip>Navigate Forward</tooltip>
+				<longhelp>Navigate Forward</longhelp>
+				<bitmap>images\control_end_blue.png</bitmap>
+			</object>
+			<object class="separator" />
+			<object class="tool" name="debugReloadScripts">
+				<label>Reload</label>
+				<tooltip>Reload scripts</tooltip>
+				<longhelp>Reload scripts</longhelp>
+				<bitmap>images/vs/build.png</bitmap>
+			</object>
+			<object class="separator" />
+			<object class="tool" name="debugContinue">
+				<label>Continue</label>
+				<tooltip>Continue execution of game</tooltip>
+				<longhelp>Continue execution of game</longhelp>
+				<bitmap>images/sol/resume_6.gif</bitmap>
+			</object>
+			<object class="separator" />
+			<object class="tool" name="debugStepOver">
+				<label>Step over</label>
+				<tooltip>Step over current statement</tooltip>
+				<longhelp>Step over current statement</longhelp>
+				<bitmap>images/sol/stepover_6.gif</bitmap>
+			</object>
+			<object class="tool" name="debugStepInto">
+				<label>tool</label>
+				<tooltip>Step into statement</tooltip>
+				<longhelp>Step into statement</longhelp>
+				<bitmap>images/sol/stepinto_6.gif</bitmap>
+			</object>
+			<object class="tool" name="debugStepOut">
+				<label>Step Out</label>
+				<tooltip>Step out from current function</tooltip>
+				<longhelp>Step out from current function</longhelp>
+				<bitmap>images/sol/stepreturn_6.gif</bitmap>
+			</object>
+			<object class="separator" />
+			<object class="tool" name="attachDebugger">
+				<label>Attach debugger to game</label>
+				<tooltip>Connect to running game</tooltip>
+				<longhelp>Connect to running game</longhelp>
+				<bitmap>images/bug.png</bitmap>
+				<toggle>1</toggle>
+			</object>
+			<object class="wxChoice" name="AddressHistory">
+				<size>100,-1</size>
+				<selection>0</selection>
+				<content>
+					<item>127.0.0.1</item>
+					<item>&lt;new&gt;</item>
+					<item>192.168.100.100</item>
+				</content>
+			</object>
+			<object class="wxChoice" name="ConnectionPort">
+				<selection>0</selection>
+				<content>
+					<item>editor</item>
+					<item>game</item>
+				</content>
+			</object>
+			<object class="separator" />
+			<object class="tool" name="debugProfile">
+				<label>Profiler</label>
+				<tooltip>Profile function calls</tooltip>
+				<longhelp>Profile function calls</longhelp>
+				<bitmap>images/calculator.png</bitmap>
+			</object>
+			<object class="wxSpinCtrl" name="ProfileFrameCounter">
+				<size>45,-1</size>
+				<tooltip>Profile this many frames </tooltip>
+				<value>10</value>
+				<min>1</min>
+				<max>100</max>
+			</object>
+			<object class="tool" name="debugProfileContinuous">
+				<label>Profiler</label>
+				<tooltip>Profile function calls (continuous mode)</tooltip>
+				<longhelp>Profile function calls (continuous mode)</longhelp>
+				<bitmap>images/calculator_link.png</bitmap>
+				<toggle>1</toggle>
+			</object>
+			<object class="separator" />
+			<object class="tool" name="unfilteredLocals">
+				<label>Unfiltered locals</label>
+				<tooltip>Show unfiltered properties in locals window</tooltip>
+				<longhelp>Show unfiltered properties in locals window</longhelp>
+				<bitmap>images/tool.png</bitmap>
+				<toggle>1</toggle>
+			</object>
+			<object class="tool" name="sortLocals">
+				<label>tool</label>
+				<tooltip>Sort Locals Lexographically</tooltip>
+				<longhelp>Sort Locals Lexographically</longhelp>
+				<bitmap>images/sort_alpha_asc.png</bitmap>
+				<toggle>1</toggle>
+			</object>
+		</object>
+	</object>
+	<object class="wxPanel" name="XResources">
+		<style>wxTAB_TRAVERSAL</style>
+		<size>803,337</size>
+		<object class="wxBoxSizer">
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag></flag>
+				<border>5</border>
+				<object class="wxBoxSizer">
+					<orient>wxHORIZONTAL</orient>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_PB_FIND">
+							<bitmap>images/pb_find.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_TAB_BREAKPOINT">
+							<bitmap>images/vs/breakpoints.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_CHECK_ON">
+							<bitmap>images/check_on.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_CHECK_OFF">
+							<bitmap>images/check_off.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_CHECK_GRAY">
+							<bitmap>images/check_gray.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_TAB_OUTPUT">
+							<bitmap>images/vs/output.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_TAB_CLASSES">
+							<bitmap>images/vs/classes.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_TAB_CALLSTACK">
+							<bitmap>images/vs/callstack.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_TAB_LOCALS">
+							<bitmap>images/vs/locals.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_TAB_WATCH">
+							<bitmap>images\vs\watch.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_TAB_SOLUTION">
+							<bitmap>images/vs/project.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_TAB_CONSOLE">
+							<bitmap>images/sol/desktop.ICO</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_TAB_BOOKMARK">
+							<bitmap>images/bookmarks.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_TAB_PROFILER">
+							<bitmap>images/calculator.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_TAB_THREADS">
+							<bitmap>images/vs/threads.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_TAB_NAVHISTORY">
+							<bitmap>images\control_play_blue.png</bitmap>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag></flag>
+				<border>5</border>
+				<object class="wxBoxSizer">
+					<orient>wxHORIZONTAL</orient>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_FILE_LOCAL">
+							<bitmap>images\sol\IconTextFileLocal.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_FILE_LOCAL_MODIFIED">
+							<bitmap>images\sol\IconTextFileLocalMarked.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_FILE_ADD">
+							<bitmap>images/sol/IconTextFileAdd.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_FILE_ADD_MODIFIED">
+							<bitmap>images\sol\IconTextFileAddMarked.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_FILE_NORMAL">
+							<bitmap>images/sol/IconTextFile.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_FILE_MODIFIED">
+							<bitmap>images/sol/IconTextFileMarked.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_FILE_OUTOFDATE">
+							<bitmap>images\sol\IconTextFileOutOfDate.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_FILE_MODIFIED_OUTOFDATE">
+							<bitmap>images\sol\IconTextFileModifiedOutofDate.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_FILE_DELETED">
+							<bitmap>images\sol\IconTextFileDeleted.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_FILE_LOCKED">
+							<bitmap>images/sol/IconTextFileLocked.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_FILE_LOCKED_OUTOFDATE">
+							<bitmap>images\sol\IconTextFileLockedOutOfDate.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_DIR_CLOSED">
+							<bitmap>images/dir_closed.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_DIR_OPENED">
+							<bitmap>images/sol/IconDirOpened.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_CLASSES">
+							<bitmap>images/sol/IconClasses.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_TREE_EXPAND">
+							<bitmap>images/tree_expand.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_TREE_COLLAPSE">
+							<bitmap>images/tree_collapse.png</bitmap>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag></flag>
+				<border>5</border>
+				<object class="wxBoxSizer">
+					<orient>wxHORIZONTAL</orient>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_SCC_CHECKOUT">
+							<bitmap>images/sol/checkout.gif</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_SCC_CHECKIN">
+							<bitmap>images/sol/checkin.gif</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_SCC_ADD">
+							<bitmap>images/sol/addtosrc.gif</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_SCC_REVERT">
+							<bitmap>images/sol/undocheckout.gif</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_SCC_GETLATEST">
+							<bitmap>images/sol/update.gif</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_SCC_REMOVE">
+							<bitmap>images/vs/DeleteHS.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_SCC_DIFF">
+							<bitmap>images/sol/diff.gif</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_ADD_FILE">
+							<bitmap>images/vs/NewDocumentHS.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_ADD_DIRECTORY">
+							<bitmap>images/sol/IconDirNew.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_BROWSE_DIRECTORY">
+							<bitmap>images\sol\IconDirBrowse.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_RESCAN">
+							<bitmap>images/pb_browse.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_SHOW_IN_DIRECTORY">
+							<bitmap>images/sol/emblem-symbolic-link.png</bitmap>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxBoxSizer">
+					<orient>wxHORIZONTAL</orient>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_CALLSTACK_HEAD">
+							<bitmap>images/vs/scope.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_CALLSTACK_LOCAL">
+							<bitmap>images/vs/scope2.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_TREE_MEMBER_PUBLIC">
+							<bitmap>images/vs/member.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_TREE_MEMBER_PRIVATE">
+							<bitmap>images/vs/member2.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_TREE_OBJECT">
+							<bitmap>images/vs/this.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_TREE_STATEMACHINE">
+							<bitmap>images/vs/statemachine.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_TREE_STATE">
+							<bitmap>images/vs/state.png</bitmap>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxBoxSizer">
+					<orient>wxHORIZONTAL</orient>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_OBJECT_CONST">
+							<bitmap>images/vs/object_constant.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_OBJECT_CONST_IMPORTED">
+							<bitmap>images/vs/object_constant_imported.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_OBJECT_CLASS">
+							<bitmap>images/vs/object_class.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_OBJECT_CLASS_IMPORTED">
+							<bitmap>images/vs/object_class_imported.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_OBJECT_ENUM">
+							<bitmap>images/vs/object_enum.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_OBJECT_ENUM_IMPORTED">
+							<bitmap>images/vs/object_enum_imported.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_OBJECT_ENUMOPTION">
+							<bitmap>images/vs/object_enumitem.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_OBJECT_EVENT">
+							<bitmap>images/vs/object_event.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_OBJECT_EVENT_IMPORTED">
+							<bitmap>images/vs/object_event_imported.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_OBJECT_FIELD">
+							<bitmap>images/vs/object_field.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_OBJECT_FIELD_IMPORTED">
+							<bitmap>images/vs/object_field_imported.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_OBJECT_METHOD">
+							<bitmap>images/vs/object_method.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_OBJECT_METHOD_IMPORTED">
+							<bitmap>images/vs/object_method_imported.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_OBJECT_STATE">
+							<bitmap>images/vs/object_state.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_OBJECT_STRUCT">
+							<bitmap>images/vs/object_struct.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_OBJECT_STRUCT_IMPORTED">
+							<bitmap>images/vs/object_struct_imported.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_OBJECT_ENTRY">
+							<bitmap>images/vs/object_entry.png</bitmap>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxBoxSizer">
+					<orient>wxHORIZONTAL</orient>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_DEBUGGER_CONNECTED">
+							<bitmap>images/debugger_connected.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_DEBUGGER_DISCONNECTED">
+							<bitmap>images/debugger_disconnected.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_DEBUGGER_CONNECTING">
+							<bitmap>images\debugger_connecting.png</bitmap>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxBoxSizer">
+					<orient>wxHORIZONTAL</orient>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_RESET">
+							<bitmap>images\undo.png</bitmap>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxBoxSizer">
+					<orient>wxVERTICAL</orient>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticBitmap" name="IMG_CURSOR_DRAGCOPY">
+							<bitmap>images\cursor_drag_copy.png</bitmap>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+	<object class="wxPanel" name="ProfilerFrame">
+		<style>wxTAB_TRAVERSAL</style>
+		<size>763,620</size>
+		<object class="wxBoxSizer">
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxEXPAND | wxALL</flag>
+				<border>0</border>
+				<object class="wxPanel" name="m_panel14">
+					<style>wxTAB_TRAVERSAL</style>
+					<object class="wxBoxSizer">
+						<orient>wxVERTICAL</orient>
+						<object class="sizeritem">
+							<option>1</option>
+							<flag>wxEXPAND</flag>
+							<border>0</border>
+							<object class="wxSplitterWindow" name="SplitterBottom">
+								<style>wxSP_3D</style>
+								<sashpos>458</sashpos>
+								<gravity>0</gravity>
+								<minsize>0</minsize>
+								<orientation>horizontal</orientation>
+								<object class="wxPanel" name="m_panel10">
+									<style>wxTAB_TRAVERSAL</style>
+									<object class="wxBoxSizer">
+										<orient>wxVERTICAL</orient>
+										<object class="sizeritem">
+											<option>1</option>
+											<flag>wxEXPAND</flag>
+											<border>5</border>
+											<object class="wxSplitterWindow" name="SplitterTop">
+												<style>wxSP_3D</style>
+												<sashpos>-100</sashpos>
+												<gravity>0</gravity>
+												<minsize>0</minsize>
+												<orientation>horizontal</orientation>
+												<object class="wxPanel" name="m_panel12">
+													<style>wxTAB_TRAVERSAL</style>
+													<object class="wxBoxSizer">
+														<orient>wxVERTICAL</orient>
+														<object class="sizeritem">
+															<option>3</option>
+															<flag>wxEXPAND | wxALL</flag>
+															<border>0</border>
+															<object class="wxNotebook" name="Tabs1">
+																<object class="notebookpage">
+																	<label>Functions</label>
+																	<selected>0</selected>
+																	<object class="wxPanel" name="m_panel5">
+																		<style>wxTAB_TRAVERSAL</style>
+																		<object class="wxBoxSizer">
+																			<orient>wxVERTICAL</orient>
+																			<object class="sizeritem">
+																				<option>1</option>
+																				<flag>wxALL|wxEXPAND</flag>
+																				<border>0</border>
+																				<object class="wxListCtrl" name="FunctionList">
+																					<style>wxLC_HRULES|wxLC_REPORT|wxLC_VRULES</style>
+																				</object>
+																			</object>
+																		</object>
+																	</object>
+																</object>
+															</object>
+														</object>
+													</object>
+												</object>
+												<object class="wxPanel" name="m_panel13">
+													<style>wxTAB_TRAVERSAL</style>
+													<object class="wxBoxSizer">
+														<orient>wxVERTICAL</orient>
+														<object class="sizeritem">
+															<option>1</option>
+															<flag>wxEXPAND | wxALL</flag>
+															<border>0</border>
+															<object class="wxNotebook" name="Tabs2">
+																<object class="notebookpage">
+																	<label>Calls</label>
+																	<selected>0</selected>
+																	<object class="wxPanel" name="m_panel51">
+																		<style>wxTAB_TRAVERSAL</style>
+																		<object class="wxBoxSizer">
+																			<orient>wxVERTICAL</orient>
+																			<object class="sizeritem">
+																				<option>1</option>
+																				<flag>wxALL|wxEXPAND</flag>
+																				<border>0</border>
+																				<object class="wxListCtrl" name="CallsList">
+																					<style>wxLC_HRULES|wxLC_REPORT|wxLC_VRULES</style>
+																				</object>
+																			</object>
+																		</object>
+																	</object>
+																</object>
+															</object>
+														</object>
+													</object>
+												</object>
+											</object>
+										</object>
+									</object>
+								</object>
+								<object class="wxPanel" name="m_panel11">
+									<style>wxTAB_TRAVERSAL</style>
+									<object class="wxBoxSizer">
+										<orient>wxVERTICAL</orient>
+										<object class="sizeritem">
+											<option>1</option>
+											<flag>wxEXPAND | wxALL</flag>
+											<border>0</border>
+											<object class="wxNotebook" name="Tabs3">
+												<object class="notebookpage">
+													<label>Called by</label>
+													<selected>0</selected>
+													<object class="wxPanel" name="m_panel511">
+														<style>wxTAB_TRAVERSAL</style>
+														<object class="wxBoxSizer">
+															<orient>wxVERTICAL</orient>
+															<object class="sizeritem">
+																<option>1</option>
+																<flag>wxALL|wxEXPAND</flag>
+																<border>0</border>
+																<object class="wxListCtrl" name="CalledByList">
+																	<style>wxLC_HRULES|wxLC_REPORT|wxLC_VRULES</style>
+																</object>
+															</object>
+														</object>
+													</object>
+												</object>
+											</object>
+										</object>
+									</object>
+								</object>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+	<object class="wxDialog" name="SearchDialog">
+		<style>wxCLOSE_BOX|wxDEFAULT_DIALOG_STYLE|wxTAB_TRAVERSAL</style>
+		<size>406,338</size>
+		<title>Find _ Replace</title>
+		<object class="wxBoxSizer">
+			<orient>wxHORIZONTAL</orient>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxBoxSizer">
+					<orient>wxVERTICAL</orient>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxEXPAND | wxALL</flag>
+						<border>0</border>
+						<object class="wxPanel" name="m_pnlReplace1">
+							<style>wxTAB_TRAVERSAL</style>
+							<object class="wxBoxSizer">
+								<orient>wxVERTICAL</orient>
+								<object class="sizeritem">
+									<option>0</option>
+									<flag>wxALL</flag>
+									<border>2</border>
+									<object class="wxStaticText" name="m_lblFindWhat">
+										<label>Find what:</label>
+										<wrap>-1</wrap>
+									</object>
+								</object>
+								<object class="sizeritem">
+									<option>0</option>
+									<flag>wxALL|wxEXPAND</flag>
+									<border>2</border>
+									<object class="wxComboBox" name="m_txtToFind">
+										<value></value>
+										<content />
+									</object>
+								</object>
+								<object class="sizeritem">
+									<option>0</option>
+									<flag>wxALL</flag>
+									<border>2</border>
+									<object class="wxStaticText" name="m_lblReplaceWith">
+										<label>Replace with:</label>
+										<wrap>-1</wrap>
+									</object>
+								</object>
+								<object class="sizeritem">
+									<option>0</option>
+									<flag>wxALL|wxEXPAND</flag>
+									<border>2</border>
+									<object class="wxComboBox" name="m_txtToReplace">
+										<value></value>
+										<content />
+									</object>
+								</object>
+							</object>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxEXPAND</flag>
+						<border>2</border>
+						<object class="wxPanel" name="m_pnlOptions">
+							<style>wxTAB_TRAVERSAL</style>
+							<object class="wxBoxSizer">
+								<orient>wxVERTICAL</orient>
+								<object class="sizeritem">
+									<option>0</option>
+									<flag>wxALL</flag>
+									<border>5</border>
+									<object class="wxCheckBox" name="m_chkMatchCase">
+										<label>Match case</label>
+										<checked>0</checked>
+									</object>
+								</object>
+								<object class="sizeritem">
+									<option>0</option>
+									<flag>wxALL</flag>
+									<border>5</border>
+									<object class="wxCheckBox" name="m_chkUseRegExp">
+										<label>Use regular expressions</label>
+										<checked>0</checked>
+									</object>
+								</object>
+								<object class="sizeritem">
+									<option>0</option>
+									<flag>wxALL|wxEXPAND</flag>
+									<border>5</border>
+									<object class="wxRadioBox" name="m_rdbSearchMode">
+										<style>wxRA_SPECIFY_COLS</style>
+										<label>Matching mode</label>
+										<selection>0</selection>
+										<content>
+											<item>Match any position</item>
+											<item>Match start of the word</item>
+											<item>Match whole word</item>
+										</content>
+										<dimension>1</dimension>
+									</object>
+								</object>
+								<object class="sizeritem">
+									<option>0</option>
+									<flag>wxEXPAND|wxALL</flag>
+									<border>5</border>
+									<object class="wxRadioBox" name="m_rdbFilesMode">
+										<style>wxRA_SPECIFY_COLS</style>
+										<label>Files to check</label>
+										<selection>0</selection>
+										<content>
+											<item>Current document</item>
+											<item>Opened documents</item>
+											<item>All files in solution</item>
+										</content>
+										<dimension>1</dimension>
+									</object>
+								</object>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxBoxSizer">
+					<orient>wxVERTICAL</orient>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL|wxEXPAND</flag>
+						<border>2</border>
+						<object class="wxButton" name="m_btnFindNext">
+							<tooltip>Press Enter in the text box to repeat the search</tooltip>
+							<label>Find Next</label>
+							<default>1</default>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL|wxEXPAND</flag>
+						<border>2</border>
+						<object class="wxButton" name="m_btnFindPrev">
+							<tooltip>Press CTRL+Enter in the text box to repeat the search</tooltip>
+							<label>Find Previous</label>
+							<default>0</default>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL|wxEXPAND</flag>
+						<border>2</border>
+						<object class="wxButton" name="m_btnFindAll">
+							<label>Find All</label>
+							<default>0</default>
+						</object>
+					</object>
+					<object class="spacer">
+						<option>1</option>
+						<flag>wxEXPAND</flag>
+						<border>5</border>
+						<size>0,0</size>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALIGN_RIGHT|wxALL</flag>
+						<border>0</border>
+						<object class="wxPanel" name="m_pnlReplace2">
+							<style>wxTAB_TRAVERSAL</style>
+							<object class="wxBoxSizer">
+								<orient>wxVERTICAL</orient>
+								<object class="sizeritem">
+									<option>0</option>
+									<flag>wxALL|wxEXPAND</flag>
+									<border>2</border>
+									<object class="wxButton" name="m_btnReplaceNext">
+										<label>Replace Forward</label>
+										<default>0</default>
+									</object>
+								</object>
+								<object class="sizeritem">
+									<option>0</option>
+									<flag>wxALL|wxEXPAND</flag>
+									<border>2</border>
+									<object class="wxButton" name="m_btnReplacePrev">
+										<label>Replace Backward</label>
+										<default>0</default>
+									</object>
+								</object>
+								<object class="sizeritem">
+									<option>0</option>
+									<flag>wxALL|wxEXPAND</flag>
+									<border>2</border>
+									<object class="wxButton" name="m_btnReplaceAll">
+										<label>Replace All</label>
+										<default>0</default>
+									</object>
+								</object>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+	<object class="wxDialog" name="GotoDialog">
+		<style>wxDEFAULT_DIALOG_STYLE</style>
+		<size>228,120</size>
+		<title>Go To Line</title>
+		<object class="wxBoxSizer">
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxALL|wxEXPAND</flag>
+				<border>8</border>
+				<object class="wxStaticText" name="lblLineNumber">
+					<style>wxALIGN_LEFT</style>
+					<label>Line number</label>
+					<wrap>-1</wrap>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxALL|wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxTextCtrl" name="txtLineNumber">
+					<value></value>
+					<maxlength>0</maxlength>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxStdDialogButtonSizer">
+					<object class="button">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="wxID_OK">
+							<label>&amp;OK</label>
+						</object>
+					</object>
+					<object class="button">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="wxID_CANCEL">
+							<label>&amp;Cancel</label>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+	<object class="wxDialog" name="OpenSolutionFileDialog">
+		<style>wxDEFAULT_DIALOG_STYLE</style>
+		<title>Open Solution File</title>
+		<object class="wxBoxSizer">
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxALL|wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxListCtrl" name="listCtrlSolutionFiles">
+					<style>wxLC_REPORT|wxLC_VRULES|wxSIMPLE_BORDER</style>
+					<size>750,344</size>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxBoxSizer">
+					<orient>wxHORIZONTAL</orient>
+					<object class="sizeritem">
+						<option>1</option>
+						<flag>wxBOTTOM|wxEXPAND|wxLEFT|wxRIGHT</flag>
+						<border>5</border>
+						<object class="wxTextCtrl" name="txtFileFilter">
+							<style>wxTE_PROCESS_ENTER|wxSIMPLE_BORDER</style>
+							<bg>#ffffff</bg>
+							<value></value>
+							<maxlength>0</maxlength>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+	<object class="wxDialog" name="FindSymbolDialog">
+		<style>wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER</style>
+		<size>697,357</size>
+		<title>Find Symbol</title>
+		<object class="wxBoxSizer">
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxALL|wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxListCtrl" name="listCtrlSymbols">
+					<style>wxLC_REPORT</style>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxBoxSizer">
+					<orient>wxHORIZONTAL</orient>
+					<object class="sizeritem">
+						<option>1</option>
+						<flag>wxALL|wxEXPAND</flag>
+						<border>5</border>
+						<object class="wxTextCtrl" name="txtFilter">
+							<value></value>
+							<maxlength>0</maxlength>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="btnOK">
+							<label>OK</label>
+							<default>1</default>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="btnCancel">
+							<label>Cancel</label>
+							<default>0</default>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+	<object class="wxDialog" name="CloseAllDialog">
+		<style>wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER</style>
+		<title>Close All</title>
+		<object class="wxBoxSizer">
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxALL</flag>
+				<border>5</border>
+				<object class="wxStaticText" name="label">
+					<label>Modified files:</label>
+					<wrap>-1</wrap>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxALL|wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxCheckListBox" name="checkList">
+					<style>wxLB_NEEDED_SB</style>
+					<content />
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxALIGN_BOTTOM|wxALIGN_CENTER</flag>
+				<border>5</border>
+				<object class="wxBoxSizer">
+					<orient>wxHORIZONTAL</orient>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="btnSelectAll">
+							<label>Select all</label>
+							<default>0</default>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="btnDeselectAll">
+							<label>Deselect all</label>
+							<default>0</default>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxALIGN_CENTER</flag>
+				<border>5</border>
+				<object class="wxBoxSizer">
+					<orient>wxHORIZONTAL</orient>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="btnSave">
+							<label>Save selected and close</label>
+							<default>0</default>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="btnClose">
+							<label>Close</label>
+							<default>0</default>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="btnCancel">
+							<label>Cancel</label>
+							<default>0</default>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+	<object class="wxFrame" name="ColourSelectionDialog">
+		<style>wxCAPTION|wxCLOSE_BOX|wxFRAME_FLOAT_ON_PARENT|wxMAXIMIZE_BOX|wxMINIMIZE_BOX|wxSYSTEM_MENU|wxTAB_TRAVERSAL</style>
+		<size>500,400</size>
+		<title>Colours</title>
+		<centered>1</centered>
+		<aui_managed>0</aui_managed>
+		<object class="wxBoxSizer">
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxListbook" name="Main">
+					<style>wxLB_DEFAULT</style>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxPanel" name="PreviewPanel">
+					<style>wxTAB_TRAVERSAL</style>
+					<object class="wxBoxSizer">
+						<orient>wxVERTICAL</orient>
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+	<object class="wxDialog" name="CheckInDialog">
+		<style>wxDEFAULT_DIALOG_STYLE|wxMAXIMIZE_BOX|wxMINIMIZE_BOX|wxRESIZE_BORDER|wxSTAY_ON_TOP</style>
+		<size>518,366</size>
+		<title>Submit</title>
+		<centered>1</centered>
+		<object class="wxBoxSizer">
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxPanel" name="m_panel17">
+					<style>wxTAB_TRAVERSAL</style>
+					<object class="wxBoxSizer">
+						<orient>wxVERTICAL</orient>
+						<object class="sizeritem">
+							<option>1</option>
+							<flag>wxALL|wxEXPAND</flag>
+							<border>5</border>
+							<object class="wxStaticBoxSizer">
+								<orient>wxVERTICAL</orient>
+								<label>Description of changes:</label>
+								<object class="sizeritem">
+									<option>1</option>
+									<flag>wxEXPAND</flag>
+									<border>5</border>
+									<object class="wxTextCtrl" name="description">
+										<style>wxTE_MULTILINE</style>
+										<value></value>
+									</object>
+								</object>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>1</option>
+							<flag>wxALL|wxEXPAND</flag>
+							<border>5</border>
+							<object class="wxStaticBoxSizer">
+								<orient>wxVERTICAL</orient>
+								<label>List of affected files:</label>
+								<object class="sizeritem">
+									<option>1</option>
+									<flag>wxEXPAND</flag>
+									<border>5</border>
+									<object class="wxListCtrl" name="fileList">
+										<style>wxLC_REPORT</style>
+									</object>
+								</object>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxBOTTOM|wxEXPAND</flag>
+							<border>5</border>
+							<object class="wxStdDialogButtonSizer">
+								<object class="button">
+									<flag>wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
+									<border>5</border>
+									<object class="wxButton" name="wxID_OK">
+										<label>&amp;OK</label>
+									</object>
+								</object>
+								<object class="button">
+									<flag>wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
+									<border>5</border>
+									<object class="wxButton" name="wxID_CANCEL">
+										<label>&amp;Cancel</label>
+									</object>
+								</object>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+	<object class="wxDialog" name="credentials">
+		<style>wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER|wxSTAY_ON_TOP</style>
+		<size>281,113</size>
+		<title>Version Control Credentials</title>
+		<centered>1</centered>
+		<object class="wxBoxSizer">
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxALL|wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxStdDialogButtonSizer">
+					<object class="button">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="wxID_OK">
+							<label>&amp;OK</label>
+						</object>
+					</object>
+					<object class="button">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="wxID_CANCEL">
+							<label>&amp;Cancel</label>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+	<object class="wxDialog" name="createNewModDialog">
+		<style>wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER|wxSTAY_ON_TOP|wxSYSTEM_MENU</style>
+		<title>Create new mod</title>
+		<centered>1</centered>
+		<object class="wxBoxSizer">
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxALL|wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxFlexGridSizer">
+					<rows>0</rows>
+					<cols>2</cols>
+					<vgap>0</vgap>
+					<hgap>0</hgap>
+					<growablecols>1</growablecols>
+					<growablerows></growablerows>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL|wxEXPAND</flag>
+						<border>5</border>
+						<object class="wxStaticText" name="m_staticText7">
+							<style>wxALIGN_LEFT</style>
+							<label>Mod name</label>
+							<wrap>-1</wrap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>1</option>
+						<flag>wxALL|wxEXPAND</flag>
+						<border>5</border>
+						<object class="wxTextCtrl" name="modName">
+							<style>wxTE_RICH|wxTE_RICH2</style>
+							<value></value>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL|wxEXPAND</flag>
+						<border>5</border>
+						<object class="wxStaticText" name="m_staticText71">
+							<style>wxALIGN_LEFT</style>
+							<label>Workspace</label>
+							<wrap>-1</wrap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL|wxEXPAND</flag>
+						<border>5</border>
+						<object class="wxDirPickerCtrl" name="workspaceLocationPicker">
+							<value></value>
+							<message>Select a folder</message>
+							<style>wxDIRP_USE_TEXTCTRL</style>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL|wxEXPAND</flag>
+						<border>5</border>
+						<object class="wxStaticText" name="m_staticText72">
+							<style>wxALIGN_LEFT</style>
+							<label>Game Install</label>
+							<wrap>-1</wrap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL|wxEXPAND</flag>
+						<border>5</border>
+						<object class="wxDirPickerCtrl" name="gameInstallLocation">
+							<value></value>
+							<message>Select a folder</message>
+							<style>wxDIRP_DEFAULT_STYLE</style>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxALL|wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxTextCtrl" name="instructions">
+					<style>wxTE_MULTILINE|wxTE_NO_VSCROLL|wxTE_READONLY|wxTE_WORDWRAP|wxSIMPLE_BORDER</style>
+					<value>Mod name: What you would like to call this mod.\n\nWorkspace: Location on your computer where you would like the mod to reside. This should be away from the installation folder of your game\n\nGame install: The root folder of the Witcher 3 installation on your computer. For example:\nC:\\GOG Games\\The Witcher 3 Wild Hunt</value>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxALL|wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxStdDialogButtonSizer">
+					<object class="button">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="wxID_OK">
+							<label>&amp;OK</label>
+						</object>
+					</object>
+					<object class="button">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="wxID_CANCEL">
+							<label>&amp;Cancel</label>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+	<object class="wxDialog" name="installModDialog">
+		<style>wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER</style>
+		<title>Install Mod</title>
+		<centered>1</centered>
+		<object class="wxBoxSizer">
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxALL|wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxFlexGridSizer">
+					<rows>0</rows>
+					<cols>2</cols>
+					<vgap>0</vgap>
+					<hgap>0</hgap>
+					<growablecols>1</growablecols>
+					<growablerows></growablerows>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL|wxEXPAND</flag>
+						<border>5</border>
+						<object class="wxStaticText" name="m_staticText10">
+							<label>Game install</label>
+							<wrap>-1</wrap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL|wxEXPAND</flag>
+						<border>5</border>
+						<object class="wxDirPickerCtrl" name="outputDirectory">
+							<value></value>
+							<message>Select a folder</message>
+							<style>wxDIRP_DEFAULT_STYLE</style>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxALL|wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxTextCtrl" name="instructions">
+					<style>wxTE_MULTILINE|wxTE_NO_VSCROLL|wxTE_READONLY|wxTE_WORDWRAP|wxSIMPLE_BORDER</style>
+					<value>Game install: The root folder of the Witcher 3 installation on your computer. For example:\nC:GOG GamesThe Witcher 3 Wild Hunt</value>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxALL|wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxStdDialogButtonSizer">
+					<object class="button">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="wxID_OK">
+							<label>&amp;OK</label>
+						</object>
+					</object>
+					<object class="button">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="wxID_CANCEL">
+							<label>&amp;Cancel</label>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+	<object class="wxDialog" name="compileModDialog">
+		<style>wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER|wxSTAY_ON_TOP</style>
+		<size>247,284</size>
+		<title>Compile Mod</title>
+		<centered>1</centered>
+		<object class="wxBoxSizer">
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxALL|wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxRadioBox" name="compilationAction">
+					<style>wxRA_SPECIFY_COLS</style>
+					<label>Action</label>
+					<selection>0</selection>
+					<content>
+						<item>Use Existing Scripts</item>
+						<item>Install Mod</item>
+						<item>Use Workspace Scripts</item>
+					</content>
+					<dimension>1</dimension>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxALL|wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxCheckBox" name="saveChoice">
+					<style>wxCHK_2STATE</style>
+					<label>Always take this action</label>
+					<checked>0</checked>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxALL|wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxTextCtrl" name="instructions">
+					<style>wxTE_MULTILINE|wxTE_NO_VSCROLL|wxTE_READONLY|wxTE_WORDWRAP|wxSIMPLE_BORDER</style>
+					<size>300,200</size>
+					<value>Use existing scripts: Compile the scripts that are already installed. If you have not already installed the scripts from your mod you may experience strange problems trying to debug any changes you have made since the previous installation\n\nInstall Mod: Ensure the installed scripts are up to date before compiling\n\nUse Workspace scripts: Force the game to only use the scripts located in your workspace. You may experience strange problems if you currently have other mods installed or your source files are from a previous version of the game.</value>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxALL|wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxStdDialogButtonSizer">
+					<object class="button">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="wxID_OK">
+							<label>&amp;OK</label>
+						</object>
+					</object>
+					<object class="button">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="wxID_CANCEL">
+							<label>&amp;Cancel</label>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+</resource>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="source">
+      <UniqueIdentifier>{0A60E4A0-2D96-C64D-8549-86B432C236F0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\optimizer">
+      <UniqueIdentifier>{09BBAD76-A980-494F-8DE9-CFE04A8E1EFA}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\source\optimizer\umbraLicense.cpp">
+      <Filter>source\optimizer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\optimizer\umbraTask.cpp">
+      <Filter>source\optimizer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\optimizer\umbraLocalComputation.cpp">
+      <Filter>source\optimizer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\optimizer\umbraCloudComputation.cpp">
+      <Filter>source\optimizer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\optimizer\umbraScene.cpp">
+      <Filter>source\optimizer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\optimizer\umbraBuilder.cpp">
+      <Filter>source\optimizer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\optimizer\umbraComputationArgs.cpp">
+      <Filter>source\optimizer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\optimizer\umbraOptimizerTextCommand.cpp">
+      <Filter>source\optimizer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\optimizer\umbraOptimizerInfoString.cpp">
+      <Filter>source\optimizer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\optimizer\umbraObjectGrouper.cpp">
+      <Filter>source\optimizer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\optimizer\umbraDPVSBuilder.cpp">
+      <Filter>source\optimizer</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

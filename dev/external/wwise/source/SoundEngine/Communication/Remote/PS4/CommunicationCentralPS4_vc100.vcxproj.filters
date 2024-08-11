@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<Filter Include="CodeBase">
+			<UniqueIdentifier>{987DF3AE-DCB5-2840-8F59-D4742949901E}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Common">
+			<UniqueIdentifier>{43A7E08C-AC42-4549-895B-6EE5B0A6AE92}</UniqueIdentifier>
+		</Filter>
+	</ItemGroup>
+	<ItemGroup>
+		<ClInclude Include="stdafx.h" />
+		<ClInclude Include="..\CodeBase\CommandChannel.h">
+			<Filter>CodeBase</Filter>
+		</ClInclude>
+		<ClInclude Include="..\CodeBase\CommunicationCentral.h">
+			<Filter>CodeBase</Filter>
+		</ClInclude>
+		<ClInclude Include="..\CodeBase\DiscoveryChannel.h">
+			<Filter>CodeBase</Filter>
+		</ClInclude>
+		<ClInclude Include="..\CodeBase\GameSocket.h">
+			<Filter>CodeBase</Filter>
+		</ClInclude>
+		<ClInclude Include="..\CodeBase\GameSocketAddr.h">
+			<Filter>CodeBase</Filter>
+		</ClInclude>
+		<ClInclude Include="..\CodeBase\IChannelsHolder.h">
+			<Filter>CodeBase</Filter>
+		</ClInclude>
+		<ClInclude Include="..\CodeBase\ICommandChannelHandler.h">
+			<Filter>CodeBase</Filter>
+		</ClInclude>
+		<ClInclude Include="..\CodeBase\ICommunicationCentral.h">
+			<Filter>CodeBase</Filter>
+		</ClInclude>
+		<ClInclude Include="..\CodeBase\ICommunicationCentralNotifyHandler.h">
+			<Filter>CodeBase</Filter>
+		</ClInclude>
+		<ClInclude Include="..\CodeBase\IncomingChannel.h">
+			<Filter>CodeBase</Filter>
+		</ClInclude>
+		<ClInclude Include="..\CodeBase\INotificationChannel.h">
+			<Filter>CodeBase</Filter>
+		</ClInclude>
+		<ClInclude Include="..\CodeBase\Network.h">
+			<Filter>CodeBase</Filter>
+		</ClInclude>
+		<ClInclude Include="..\CodeBase\NetworkCaptureWriter.h">
+			<Filter>CodeBase</Filter>
+		</ClInclude>
+		<ClInclude Include="..\CodeBase\NetworkTypes.h">
+			<Filter>CodeBase</Filter>
+		</ClInclude>
+		<ClInclude Include="..\CodeBase\NotificationChannel.h">
+			<Filter>CodeBase</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\Common\CommunicationDefines.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\Common\ConsoleDiscoveryMessage.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\Common\IPConnectorPorts.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\Common\Serializer.h">
+			<Filter>Common</Filter>
+		</ClInclude>
+	</ItemGroup>
+	<ItemGroup>
+		<ClCompile Include="stdafx.cpp" />
+		<ClCompile Include="..\CodeBase\CommandChannel.cpp">
+			<Filter>CodeBase</Filter>
+		</ClCompile>
+		<ClCompile Include="..\CodeBase\Communication.cpp">
+			<Filter>CodeBase</Filter>
+		</ClCompile>
+		<ClCompile Include="..\CodeBase\CommunicationCentral.cpp">
+			<Filter>CodeBase</Filter>
+		</ClCompile>
+		<ClCompile Include="..\CodeBase\DiscoveryChannel.cpp">
+			<Filter>CodeBase</Filter>
+		</ClCompile>
+		<ClCompile Include="..\CodeBase\IncomingChannel.cpp">
+			<Filter>CodeBase</Filter>
+		</ClCompile>
+		<ClCompile Include="..\CodeBase\NetworkCaptureWriter.cpp">
+			<Filter>CodeBase</Filter>
+		</ClCompile>
+		<ClCompile Include="..\CodeBase\NotificationChannel.cpp">
+			<Filter>CodeBase</Filter>
+		</ClCompile>
+		<ClCompile Include="GameSocket.cpp" />
+		<ClCompile Include="GameSocketAddr.cpp" />
+		<ClCompile Include="Network.cpp" />
+		<ClCompile Include="..\..\Common\ConsoleDiscoveryMessage.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\Common\IPConnectorPorts.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\Common\Serializer.cpp">
+			<Filter>Common</Filter>
+		</ClCompile>
+	</ItemGroup>
+</Project>

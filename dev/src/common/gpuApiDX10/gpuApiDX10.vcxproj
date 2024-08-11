@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" TreatAsLocalProperty="OutDir;TargetName;IntDir;PlatformToolset">
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedConfigurationSetup.props))\SharedConfigurationSetup.props" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7E8999E0-7735-4EEB-A328-B2763DBE04BD}</ProjectGuid>
+    <RootNamespace>gpuApiDX10</RootNamespace>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <UsePrecompiledHeaders>false</UsePrecompiledHeaders>
+  </PropertyGroup>
+
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.props))\Shared.props" />
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedItemGroups.props))\SharedItemGroups.props" />
+
+  <ItemGroup>
+    <ClInclude Include="gpuApi.h" />
+    <ClInclude Include="gpuApiDDSLoader.h" />
+    <ClInclude Include="gpuApiGamma.h" />
+    <ClInclude Include="gpuApiMapping.h" />
+    <ClInclude Include="gpuApiRenderState.h" />
+    <ClInclude Include="build.h" />
+    <ClInclude Include="gpuApiBase.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="gpuApi.cpp" />
+    <ClCompile Include="gpuApiBuffer.cpp" />
+    <ClCompile Include="gpuApiDDSLoader.cpp" />
+    <ClCompile Include="gpuApiDevice.cpp" />
+    <ClCompile Include="gpuApiDeviceState.cpp" />
+    <ClCompile Include="gpuApiDrawContext.cpp" />
+    <ClCompile Include="gpuApiGamma.cpp" />
+    <ClCompile Include="gpuApiQuery.cpp" />
+    <ClCompile Include="gpuApiRender.cpp" />
+    <ClCompile Include="gpuApiRenderState.cpp" />
+    <ClCompile Include="gpuApiRenderTarget.cpp" />
+    <ClCompile Include="gpuApiSamplerStates.cpp" />
+    <ClCompile Include="gpuApiShader.cpp" />
+    <ClCompile Include="gpuApiTexture.cpp" />
+    <ClCompile Include="gpuApiVertexLayouts.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.targets))\Shared.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

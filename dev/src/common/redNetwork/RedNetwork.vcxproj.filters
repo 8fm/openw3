@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="address.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="packet.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="fixedPoolList.h">
+      <Filter>Internal Storage Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="network.h" />
+    <ClInclude Include="socket.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="platform\platformWindows.h">
+      <Filter>Platform Specific</Filter>
+    </ClInclude>
+    <ClInclude Include="platform\platformOrbis.h">
+      <Filter>Platform Specific</Filter>
+    </ClInclude>
+    <ClInclude Include="memory.h">
+      <Filter>Internal Storage Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="simpleDynArray.h">
+      <Filter>Internal Storage Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="list.h">
+      <Filter>Internal Storage Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="manager.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="channel.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="ping.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="rawManager.h">
+      <Filter>RawNetwork</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="address.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="packet.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="socket.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="platform\platformWindows.cpp">
+      <Filter>Platform Specific</Filter>
+    </ClCompile>
+    <ClCompile Include="memory.cpp">
+      <Filter>Internal Storage Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="simpleDynArray.cpp">
+      <Filter>Internal Storage Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="channel.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="manager.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="ping.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="rawManager.cpp">
+      <Filter>RawNetwork</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Internal Storage Helpers">
+      <UniqueIdentifier>{6c300e36-1042-4793-a35e-9886e4476e04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Base">
+      <UniqueIdentifier>{3ba42ad6-d619-4bc1-958d-91f4af3fd917}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform Specific">
+      <UniqueIdentifier>{296fb68d-7031-4616-9700-3a910d01130b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System">
+      <UniqueIdentifier>{936aedd1-6988-43ec-b770-6a8bcd8491e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility">
+      <UniqueIdentifier>{94f1d066-df10-4bfd-a7ee-7b045aca87d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RawNetwork">
+      <UniqueIdentifier>{33354e33-0d5f-4523-b26b-a7f5e6e7f412}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

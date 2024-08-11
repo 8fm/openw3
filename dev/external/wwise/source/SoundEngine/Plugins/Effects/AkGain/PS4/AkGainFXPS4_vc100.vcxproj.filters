@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<Filter Include="Win32">
+			<UniqueIdentifier>{FCB2B4D5-2AFA-EB4D-8D7E-A44B2C508FCC}</UniqueIdentifier>
+		</Filter>
+	</ItemGroup>
+	<ItemGroup>
+		<ClInclude Include="..\Win32\AkGainFX.h">
+			<Filter>Win32</Filter>
+		</ClInclude>
+		<ClInclude Include="..\AkGainFXParams.h" />
+	</ItemGroup>
+	<ItemGroup>
+		<ClCompile Include="..\Win32\AkGainFX.cpp">
+			<Filter>Win32</Filter>
+		</ClCompile>
+		<ClCompile Include="..\AkGainFXParams.cpp" />
+	</ItemGroup>
+</Project>

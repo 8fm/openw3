@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" TreatAsLocalProperty="OutDir;TargetName;IntDir;PlatformToolset">
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedConfigurationSetup.props))\SharedConfigurationSetup.props" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C03BC8F7-D12C-4459-9B84-FF0CD94CD023}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>unitTestsCore</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <SubSystem>Console</SubSystem>
+    <ProjectClDirs>../../../external/gmock;../../../external/gmock/include;../../../external/gtest/include;../../../external/gtest;</ProjectClDirs>
+  </PropertyGroup>
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.props))\Shared.props" />
+  <PropertyGroup Label="Configuration">
+    <UseMinimalRebuild Condition="'$(Platform)' == 'Durango'">false</UseMinimalRebuild>
+  </PropertyGroup>
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), SharedItemGroups.props))\SharedItemGroups.props" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <TargetName>$(ProjectName).$(Configuration).Tests</TargetName>
+  </PropertyGroup>
+  <ItemGroup>
+    <ClCompile Include="..\unitTestsFramework\testRunner.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='No opts|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Profiling|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Final|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FinalWithLogging|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseGame|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='No opts|Durango'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Profiling|Durango'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Final|Durango'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Durango'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FinalWithLogging|Durango'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseGame|Durango'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Durango'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='No opts|ORBIS'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Profiling|ORBIS'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Final|ORBIS'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ORBIS'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FinalWithLogging|ORBIS'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseGame|ORBIS'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|ORBIS'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\unitTestsFramework\testRunnerDurango.cpp">
+      <CompileAsWinRT Condition="'$(Platform)'=='Durango'">true</CompileAsWinRT>
+      <PrecompiledHeader Condition="'$(Platform)'=='Durango'">NotUsing</PrecompiledHeader>
+      <ExcludedFromBuild Condition="'$(Platform)'=='x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Platform)'=='Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Platform)'=='ORBIS'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="bitopsTests.cpp" />
+    <ClCompile Include="build.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <PrecompiledHeaderFile>build.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="bundleDataCacheTests.cpp" />
+    <ClCompile Include="bundlePreambleParserTest.cpp" />
+    <ClCompile Include="commandLineParserTest.cpp" />
+    <ClCompile Include="debugBundleHeaderParserTest.cpp" />
+    <ClCompile Include="deferredBufferTests.cpp" />
+    <ClCompile Include="externDefinition.cpp" />
+    <ClCompile Include="filePathTest.cpp" />
+    <ClCompile Include="gameConfigurationTest.cpp" />
+    <ClCompile Include="idAllocatorTests.cpp" />
+    <ClCompile Include="mapTest.cpp" />
+    <ClCompile Include="namesTest.cpp" />
+    <ClCompile Include="objectsTest.cpp" />
+    <ClCompile Include="operatorNewDelete_orbis.cpp" />
+    <ClCompile Include="ptrdiffTest.cpp" />
+    <ClCompile Include="rectTest.cpp" />
+    <ClCompile Include="scopedPtrTests.cpp" />
+    <ClCompile Include="sharedPtrTests.cpp" />
+    <ClCompile Include="streamingGridTest.cpp" />
+    <ClCompile Include="stringTest.cpp" />
+    <ClCompile Include="taskDequeTest.cpp" />
+    <ClCompile Include="testBundleData.cpp" />
+    <ClCompile Include="uniqueBufferTests.cpp" />
+    <ClCompile Include="uniquePtrTests.cpp" />
+    <ClCompile Include="weakPtrTests.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\common\core\core.vcxproj">
+      <Project>{bec313e8-15bc-4693-930f-d5fe597adab0}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\gpuApiUtils\gpuApiUtils.vcxproj">
+      <Project>{25a08abc-1a48-45e3-a6a1-8853070c2d72}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\redIO\redIO.vcxproj">
+      <Project>{cb12e47d-db64-4466-9c54-59c3da05e6bf}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\redMath\redMath.vcxproj">
+      <Project>{14054554-1f10-4eb8-839b-d4bb8592515b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\redMemoryFramework\redMemoryFramework.vcxproj">
+      <Project>{6bcfb601-80ce-4183-9ae2-ba3cf6c68715}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\redNetwork\RedNetwork.vcxproj">
+      <Project>{99596beb-157a-4c15-94b4-25e3a580de22}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\redSystem\redSystem.vcxproj">
+      <Project>{9c1f2dbf-9ea5-41b9-8430-d869c8ac2189}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\redThreads\redThreads.vcxproj">
+      <Project>{50404845-5499-4116-911c-55a575807ef6}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\scripts\scripts.vcxproj">
+      <Project>{2bb69d9f-79fc-4a10-b998-c0ba982efbc6}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\unitTestsFramework\unitTestsFramework.vcxproj">
+      <Project>{51372f5a-83ac-44b2-8783-9974d39f425a}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="build.h" />
+    <ClInclude Include="bundleTestMocks.h" />
+    <ClCompile Include="jsonTest.cpp">
+      <FileType>CppHeader</FileType>
+    </ClCompile>
+    <ClInclude Include="hashmap_old.h" />
+    <ClInclude Include="hashmap_W2.h" />
+    <ClInclude Include="testBundleData.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="unitTestsCore.appxmanifest">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='No opts|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseGame|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Final|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='No opts|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseGame|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">true</ExcludedFromBuild>
+    </AppxManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\unitTestsFramework\Logo.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='No opts|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseGame|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Final|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='No opts|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseGame|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\unitTestsFramework\SmallLogo.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='No opts|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseGame|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Final|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='No opts|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseGame|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\unitTestsFramework\SplashScreen.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='No opts|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseGame|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Final|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='No opts|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseGame|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\unitTestsFramework\StoreLogo.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='No opts|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseGame|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Final|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='No opts|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseGame|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">true</ExcludedFromBuild>
+    </Image>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared.targets))\Shared.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
