@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project
+    DefaultTargets="Build"
+    ToolsVersion="4.0"
+    xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="debug|x64">
+      <Configuration>debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="checked|x64">
+      <Configuration>checked</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="release|x64">
+      <Configuration>release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="profile|x64">
+      <Configuration>profile</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals"></PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup
+      Condition="'$(Configuration)|$(Platform)'=='debug|x64'"
+      Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <GenerateManifest>false</GenerateManifest>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup
+      Condition="'$(Configuration)|$(Platform)'=='checked|x64'"
+      Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <GenerateManifest>false</GenerateManifest>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup
+      Condition="'$(Configuration)|$(Platform)'=='release|x64'"
+      Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <GenerateManifest>false</GenerateManifest>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup
+      Condition="'$(Configuration)|$(Platform)'=='profile|x64'"
+      Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <GenerateManifest>false</GenerateManifest>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings"></ImportGroup>
+  <ImportGroup
+      Label="PropertySheets"
+      Condition="'$(Configuration)|$(Platform)'=='debug|x64'">
+    <Import
+        Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props"
+        Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')"
+        Label="LocalAppDataPlatform"
+    />
+    <Import Project="./nxpath.vsprops" />
+  </ImportGroup>
+  <ImportGroup
+      Label="PropertySheets"
+      Condition="'$(Configuration)|$(Platform)'=='checked|x64'">
+    <Import
+        Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props"
+        Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')"
+        Label="LocalAppDataPlatform"
+    />
+    <Import Project="./nxpath.vsprops" />
+  </ImportGroup>
+  <ImportGroup
+      Label="PropertySheets"
+      Condition="'$(Configuration)|$(Platform)'=='release|x64'">
+    <Import
+        Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props"
+        Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')"
+        Label="LocalAppDataPlatform"
+    />
+    <Import Project="./nxpath.vsprops" />
+  </ImportGroup>
+  <ImportGroup
+      Label="PropertySheets"
+      Condition="'$(Configuration)|$(Platform)'=='profile|x64'">
+    <Import
+        Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props"
+        Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')"
+        Label="LocalAppDataPlatform"
+    />
+    <Import Project="./nxpath.vsprops" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debug|x64'">
+    <OutDir>$(SolutionDir)../../bin/vc17win64-PhysX_3.3\</OutDir>
+    <IntDir>build//x64/APEX_Particles/debug\</IntDir>
+    <TargetExt>.dll</TargetExt>
+    <TargetName>$(ProjectName)DEBUG_x64</TargetName>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules/>
+    <CodeAnalysisRuleAssemblies/>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='debug|x64'">
+    <ClCompile>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <StringPooling>true</StringPooling>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <AdditionalOptions>/MP /wd4201</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(NXPATH)/Include;$(NXPATH)/Include/common;$(NXPATH)/Include/cooking;$(NXPATH)/Include/extensions;$(NXPATH)/Include/geometry;$(NXPATH)/Include/pvd;$(NXPATH)/Include/gpu;$(NXPATH)/Include/deformable;$(NXPATH)/Include/particles;$(NXPATH)/Include/characterkinematic;$(NXPATH)/Include/characterdynamic;$(NXPATH)/Include/vehicle;$(NXPATH)/Source/GeomUtils/headers;$(NXPATH)/Source/PhysXGpu/include;$(NXPATH)/Include/pxtask;$(NXPATH)/Include/physxprofilesdk;$(NXPATH)/Source/physxprofilesdk;$(NXPATH)/Include/physxvisualdebuggersdk;$(NXPATH)/Source/physxvisualdebuggersdk;./../../shared/general/shared;$(NXPATH)/Include/foundation;$(NXPATH)/Include/foundation/windows;$(NXPATH)/Source/foundation/include;$(NXPATH)/Source/foundation/include/windows;./../../public;./../../shared/general/renderdebug/public;./../../shared/general/renderdebug/include;./../../shared/general/PxIOStream/public;./../../shared/general/PxIOStream/include;./../../shared/general/string_parsing/include;./../../framework/public;./../../framework/public/PhysX3;./../../common/include;./../../common/include/windows;./../../shared/internal/include;./../../module/common/include;./../../NxParameterized/public;./../../NxParameterized/include;./../../module/particlesPhysX3/public;./../../module/particles/public;./../../module/particles/include;./../../module/particles/include/windows;./../../module/emitter/include;./../../module/basicios/include;./../../module/nxfluidios/include;./../../module/pxparticleios/include;./../../module/iofx/include;./../../module/turbulencefs/include;./../../module/basicfs/include;./../../module/forcefield/include;./../../module/emitter/public;./../../module/basicios/public;./../../module/basicfs/public;./../../module/nxfluidios/public;./../../module/pxparticleios/public;./../../module/iofx/public;./../../module/turbulencefs/public;./../../module/forcefield/public;./../../shared/external/include;./../../shared/general/floatmath/include;./../../shared/general/PairFilter/include;./../../shared/general/stan_hull/include;./../../shared/general/HACD/include;./../../shared/general/HACD/public;./../../externals/CUDA_5.0.35/include;./../../externals/boost;./../../framework/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;WIN64;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_USRDLL;_DEBUG;PX_DEBUG;PX_CHECKED;PHYSX_PROFILE_SDK;PX_SUPPORT_VISUAL_DEBUGGER;PX_PROFILE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>false</ExceptionHandling>
+      <WarningLevel>Level4</WarningLevel>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile></PrecompiledHeaderFile>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/MACHINE:x64 /INCREMENTAL:NO /DELAYLOAD:nvcuda.dll</AdditionalOptions>
+      <AdditionalDependencies>DelayImp.lib;cuda.lib;PhysX3DEBUG_x64.lib;PhysX3CommonDEBUG_x64.lib;PhysXProfileSDKDEBUG.lib;PhysX3ExtensionsDEBUG.lib;PhysX3VehicleDEBUG.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName)DEBUG_x64.dll</OutputFile>
+      <AdditionalLibraryDirectories>$(NXPATH)/Lib/WIN64;$(NXPATH)/SDKs/lib/WIN64;./../../externals/CUDA_5.0.35/lib/x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ProgramDatabaseFile>$(OutDir)/$(ProjectName)DEBUG_x64.dll.pdb</ProgramDatabaseFile>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapFileName>$(OutDir)/$(ProjectName)DEBUG_x64.dll.map</MapFileName>
+      <SubSystem>Console</SubSystem>
+      <ImportLibrary>./../../lib/vc17win64-PhysX_3.3/$(TargetName).lib</ImportLibrary>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <ResourceCompile></ResourceCompile>
+    <ProjectReference></ProjectReference>
+  </ItemDefinitionGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='checked|x64'">
+    <OutDir>$(SolutionDir)../../bin/vc17win64-PhysX_3.3\</OutDir>
+    <IntDir>build//x64/APEX_Particles/checked\</IntDir>
+    <TargetExt>.dll</TargetExt>
+    <TargetName>$(ProjectName)CHECKED_x64</TargetName>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules/>
+    <CodeAnalysisRuleAssemblies/>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='checked|x64'">
+    <ClCompile>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <StringPooling>true</StringPooling>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <AdditionalOptions>/MP /wd4201</AdditionalOptions>
+      <Optimization>Full</Optimization>
+      <AdditionalIncludeDirectories>$(NXPATH)/Include;$(NXPATH)/Include/common;$(NXPATH)/Include/cooking;$(NXPATH)/Include/extensions;$(NXPATH)/Include/geometry;$(NXPATH)/Include/pvd;$(NXPATH)/Include/gpu;$(NXPATH)/Include/deformable;$(NXPATH)/Include/particles;$(NXPATH)/Include/characterkinematic;$(NXPATH)/Include/characterdynamic;$(NXPATH)/Include/vehicle;$(NXPATH)/Source/GeomUtils/headers;$(NXPATH)/Source/PhysXGpu/include;$(NXPATH)/Include/pxtask;$(NXPATH)/Include/physxprofilesdk;$(NXPATH)/Source/physxprofilesdk;$(NXPATH)/Include/physxvisualdebuggersdk;$(NXPATH)/Source/physxvisualdebuggersdk;./../../shared/general/shared;$(NXPATH)/Include/foundation;$(NXPATH)/Include/foundation/windows;$(NXPATH)/Source/foundation/include;$(NXPATH)/Source/foundation/include/windows;./../../public;./../../shared/general/renderdebug/public;./../../shared/general/renderdebug/include;./../../shared/general/PxIOStream/public;./../../shared/general/PxIOStream/include;./../../shared/general/string_parsing/include;./../../framework/public;./../../framework/public/PhysX3;./../../common/include;./../../common/include/windows;./../../shared/internal/include;./../../module/common/include;./../../NxParameterized/public;./../../NxParameterized/include;./../../module/particlesPhysX3/public;./../../module/particles/public;./../../module/particles/include;./../../module/particles/include/windows;./../../module/emitter/include;./../../module/basicios/include;./../../module/nxfluidios/include;./../../module/pxparticleios/include;./../../module/iofx/include;./../../module/turbulencefs/include;./../../module/basicfs/include;./../../module/forcefield/include;./../../module/emitter/public;./../../module/basicios/public;./../../module/basicfs/public;./../../module/nxfluidios/public;./../../module/pxparticleios/public;./../../module/iofx/public;./../../module/turbulencefs/public;./../../module/forcefield/public;./../../shared/external/include;./../../shared/general/floatmath/include;./../../shared/general/PairFilter/include;./../../shared/general/stan_hull/include;./../../shared/general/HACD/include;./../../shared/general/HACD/public;./../../externals/CUDA_5.0.35/include;./../../externals/boost;./../../framework/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;WIN64;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_USRDLL;NDEBUG;PX_CHECKED;PHYSX_PROFILE_SDK;PX_SUPPORT_VISUAL_DEBUGGER;_SECURE_SCL=0;_ITERATOR_DEBUG_LEVEL=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>false</ExceptionHandling>
+      <WarningLevel>Level4</WarningLevel>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile></PrecompiledHeaderFile>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/MACHINE:x64 /INCREMENTAL:NO /DELAYLOAD:nvcuda.dll</AdditionalOptions>
+      <AdditionalDependencies>DelayImp.lib;cuda.lib;PhysX3CHECKED_x64.lib;PhysX3CommonCHECKED_x64.lib;PhysXProfileSDKCHECKED.lib;PhysX3ExtensionsCHECKED.lib;PhysX3VehicleCHECKED.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName)CHECKED_x64.dll</OutputFile>
+      <AdditionalLibraryDirectories>$(NXPATH)/Lib/WIN64;$(NXPATH)/SDKs/lib/WIN64;./../../externals/CUDA_5.0.35/lib/x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ProgramDatabaseFile>$(OutDir)/$(ProjectName)CHECKED_x64.dll.pdb</ProgramDatabaseFile>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapFileName>$(OutDir)/$(ProjectName)CHECKED_x64.dll.map</MapFileName>
+      <SubSystem>Console</SubSystem>
+      <ImportLibrary>./../../lib/vc17win64-PhysX_3.3/$(TargetName).lib</ImportLibrary>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <ResourceCompile></ResourceCompile>
+    <ProjectReference></ProjectReference>
+  </ItemDefinitionGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='release|x64'">
+    <OutDir>$(SolutionDir)../../bin/vc17win64-PhysX_3.3\</OutDir>
+    <IntDir>build//x64/APEX_Particles/release\</IntDir>
+    <TargetExt>.dll</TargetExt>
+    <TargetName>$(ProjectName)_x64</TargetName>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules/>
+    <CodeAnalysisRuleAssemblies/>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='release|x64'">
+    <ClCompile>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <StringPooling>true</StringPooling>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <AdditionalOptions>/MP /wd4201</AdditionalOptions>
+      <Optimization>Full</Optimization>
+      <AdditionalIncludeDirectories>$(NXPATH)/Include;$(NXPATH)/Include/common;$(NXPATH)/Include/cooking;$(NXPATH)/Include/extensions;$(NXPATH)/Include/geometry;$(NXPATH)/Include/pvd;$(NXPATH)/Include/gpu;$(NXPATH)/Include/deformable;$(NXPATH)/Include/particles;$(NXPATH)/Include/characterkinematic;$(NXPATH)/Include/characterdynamic;$(NXPATH)/Include/vehicle;$(NXPATH)/Source/GeomUtils/headers;$(NXPATH)/Source/PhysXGpu/include;$(NXPATH)/Include/pxtask;$(NXPATH)/Include/physxprofilesdk;$(NXPATH)/Source/physxprofilesdk;$(NXPATH)/Include/physxvisualdebuggersdk;$(NXPATH)/Source/physxvisualdebuggersdk;./../../shared/general/shared;$(NXPATH)/Include/foundation;$(NXPATH)/Include/foundation/windows;$(NXPATH)/Source/foundation/include;$(NXPATH)/Source/foundation/include/windows;./../../public;./../../shared/general/renderdebug/public;./../../shared/general/renderdebug/include;./../../shared/general/PxIOStream/public;./../../shared/general/PxIOStream/include;./../../shared/general/string_parsing/include;./../../framework/public;./../../framework/public/PhysX3;./../../common/include;./../../common/include/windows;./../../shared/internal/include;./../../module/common/include;./../../NxParameterized/public;./../../NxParameterized/include;./../../module/particlesPhysX3/public;./../../module/particles/public;./../../module/particles/include;./../../module/particles/include/windows;./../../module/emitter/include;./../../module/basicios/include;./../../module/nxfluidios/include;./../../module/pxparticleios/include;./../../module/iofx/include;./../../module/turbulencefs/include;./../../module/basicfs/include;./../../module/forcefield/include;./../../module/emitter/public;./../../module/basicios/public;./../../module/basicfs/public;./../../module/nxfluidios/public;./../../module/pxparticleios/public;./../../module/iofx/public;./../../module/turbulencefs/public;./../../module/forcefield/public;./../../shared/external/include;./../../shared/general/floatmath/include;./../../shared/general/PairFilter/include;./../../shared/general/stan_hull/include;./../../shared/general/HACD/include;./../../shared/general/HACD/public;./../../externals/CUDA_5.0.35/include;./../../externals/boost;./../../framework/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;WIN64;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_USRDLL;NDEBUG;APEX_SHIPPING;_SECURE_SCL=0;_ITERATOR_DEBUG_LEVEL=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>false</ExceptionHandling>
+      <WarningLevel>Level4</WarningLevel>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile></PrecompiledHeaderFile>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/MACHINE:x64 /INCREMENTAL:NO /DELAYLOAD:nvcuda.dll</AdditionalOptions>
+      <AdditionalDependencies>DelayImp.lib;cuda.lib;PhysX3_x64.lib;PhysX3Common_x64.lib;PhysXProfileSDK.lib;PhysX3Extensions.lib;PhysX3Vehicle.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName)_x64.dll</OutputFile>
+      <AdditionalLibraryDirectories>$(NXPATH)/Lib/WIN64;$(NXPATH)/SDKs/lib/WIN64;./../../externals/CUDA_5.0.35/lib/x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ProgramDatabaseFile>$(OutDir)/$(ProjectName)_x64.dll.pdb</ProgramDatabaseFile>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapFileName>$(OutDir)/$(ProjectName)_x64.dll.map</MapFileName>
+      <SubSystem>Console</SubSystem>
+      <ImportLibrary>./../../lib/vc17win64-PhysX_3.3/$(TargetName).lib</ImportLibrary>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <ResourceCompile></ResourceCompile>
+    <ProjectReference></ProjectReference>
+  </ItemDefinitionGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='profile|x64'">
+    <OutDir>$(SolutionDir)../../bin/vc17win64-PhysX_3.3\</OutDir>
+    <IntDir>build//x64/APEX_Particles/profile\</IntDir>
+    <TargetExt>.dll</TargetExt>
+    <TargetName>$(ProjectName)PROFILE_x64</TargetName>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules/>
+    <CodeAnalysisRuleAssemblies/>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='profile|x64'">
+    <ClCompile>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <StringPooling>true</StringPooling>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <AdditionalOptions>/MP /wd4201</AdditionalOptions>
+      <Optimization>Full</Optimization>
+      <AdditionalIncludeDirectories>$(NXPATH)/Include;$(NXPATH)/Include/common;$(NXPATH)/Include/cooking;$(NXPATH)/Include/extensions;$(NXPATH)/Include/geometry;$(NXPATH)/Include/pvd;$(NXPATH)/Include/gpu;$(NXPATH)/Include/deformable;$(NXPATH)/Include/particles;$(NXPATH)/Include/characterkinematic;$(NXPATH)/Include/characterdynamic;$(NXPATH)/Include/vehicle;$(NXPATH)/Source/GeomUtils/headers;$(NXPATH)/Source/PhysXGpu/include;$(NXPATH)/Include/pxtask;$(NXPATH)/Include/physxprofilesdk;$(NXPATH)/Source/physxprofilesdk;$(NXPATH)/Include/physxvisualdebuggersdk;$(NXPATH)/Source/physxvisualdebuggersdk;./../../shared/general/shared;$(NXPATH)/Include/foundation;$(NXPATH)/Include/foundation/windows;$(NXPATH)/Source/foundation/include;$(NXPATH)/Source/foundation/include/windows;./../../public;./../../shared/general/renderdebug/public;./../../shared/general/renderdebug/include;./../../shared/general/PxIOStream/public;./../../shared/general/PxIOStream/include;./../../shared/general/string_parsing/include;./../../framework/public;./../../framework/public/PhysX3;./../../common/include;./../../common/include/windows;./../../shared/internal/include;./../../module/common/include;./../../NxParameterized/public;./../../NxParameterized/include;./../../module/particlesPhysX3/public;./../../module/particles/public;./../../module/particles/include;./../../module/particles/include/windows;./../../module/emitter/include;./../../module/basicios/include;./../../module/nxfluidios/include;./../../module/pxparticleios/include;./../../module/iofx/include;./../../module/turbulencefs/include;./../../module/basicfs/include;./../../module/forcefield/include;./../../module/emitter/public;./../../module/basicios/public;./../../module/basicfs/public;./../../module/nxfluidios/public;./../../module/pxparticleios/public;./../../module/iofx/public;./../../module/turbulencefs/public;./../../module/forcefield/public;./../../shared/external/include;./../../shared/general/floatmath/include;./../../shared/general/PairFilter/include;./../../shared/general/stan_hull/include;./../../shared/general/HACD/include;./../../shared/general/HACD/public;./../../externals/CUDA_5.0.35/include;./../../externals/boost;./../../framework/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;WIN64;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_USRDLL;NDEBUG;PHYSX_PROFILE_SDK;PX_SUPPORT_VISUAL_DEBUGGER;PX_PROFILE;_SECURE_SCL=0;_ITERATOR_DEBUG_LEVEL=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>false</ExceptionHandling>
+      <WarningLevel>Level4</WarningLevel>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile></PrecompiledHeaderFile>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/MACHINE:x64 /INCREMENTAL:NO /DELAYLOAD:nvcuda.dll</AdditionalOptions>
+      <AdditionalDependencies>DelayImp.lib;cuda.lib;PhysX3PROFILE_x64.lib;PhysX3CommonPROFILE_x64.lib;PhysXProfileSDKPROFILE.lib;PhysX3ExtensionsPROFILE.lib;PhysX3VehiclePROFILE.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName)PROFILE_x64.dll</OutputFile>
+      <AdditionalLibraryDirectories>$(NXPATH)/Lib/WIN64;$(NXPATH)/SDKs/lib/WIN64;./../../externals/CUDA_5.0.35/lib/x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ProgramDatabaseFile>$(OutDir)/$(ProjectName)PROFILE_x64.dll.pdb</ProgramDatabaseFile>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapFileName>$(OutDir)/$(ProjectName)PROFILE_x64.dll.map</MapFileName>
+      <SubSystem>Console</SubSystem>
+      <ImportLibrary>./../../lib/vc17win64-PhysX_3.3/$(TargetName).lib</ImportLibrary>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <ResourceCompile></ResourceCompile>
+    <ProjectReference></ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\resource\apex.rc"></ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\module\particles\src\AttractorFieldSamplerData.cpp"></ClCompile>
+    <ClCompile Include="..\..\module\particles\src\AttractorFieldSamplerEffect.cpp"></ClCompile>
+    <ClCompile Include="..\..\module\particles\src\EffectPackageActor.cpp"></ClCompile>
+    <ClCompile Include="..\..\module\particles\src\EffectPackageActorParams.cpp"></ClCompile>
+    <ClCompile Include="..\..\module\particles\src\EffectPackageAsset.cpp"></ClCompile>
+    <ClCompile Include="..\..\module\particles\src\EffectPackageAssetParams.cpp"></ClCompile>
+    <ClCompile Include="..\..\module\particles\src\EffectPackageData.cpp"></ClCompile>
+    <ClCompile Include="..\..\module\particles\src\EffectPackageDatabaseParams.cpp"></ClCompile>
+    <ClCompile Include="..\..\module\particles\src\EffectPackageEmitterDatabaseParams.cpp"></ClCompile>
+    <ClCompile Include="..\..\module\particles\src\EffectPackageFieldSamplerDatabaseParams.cpp"></ClCompile>
+    <ClCompile Include="..\..\module\particles\src\EffectPackageGraphicsMaterialsParams.cpp"></ClCompile>
+    <ClCompile Include="..\..\module\particles\src\EffectPackageIOFXDatabaseParams.cpp"></ClCompile>
+    <ClCompile Include="..\..\module\particles\src\EffectPackageIOSDatabaseParams.cpp"></ClCompile>
+    <ClCompile Include="..\..\module\particles\src\EmitterData.cpp"></ClCompile>
+    <ClCompile Include="..\..\module\particles\src\EmitterEffect.cpp"></ClCompile>
+    <ClCompile Include="..\..\module\particles\src\ForceFieldData.cpp"></ClCompile>
+    <ClCompile Include="..\..\module\particles\src\ForceFieldEffect.cpp"></ClCompile>
+    <ClCompile Include="..\..\module\particles\src\GraphicsEffectData.cpp"></ClCompile>
+    <ClCompile Include="..\..\module\particles\src\GraphicsMaterialData.cpp"></ClCompile>
+    <ClCompile Include="..\..\module\particles\src\HeatSourceData.cpp"></ClCompile>
+    <ClCompile Include="..\..\module\particles\src\HeatSourceEffect.cpp"></ClCompile>
+    <ClCompile Include="..\..\module\particles\src\JetFieldSamplerData.cpp"></ClCompile>
+    <ClCompile Include="..\..\module\particles\src\JetFieldSamplerEffect.cpp"></ClCompile>
+    <ClCompile Include="..\..\module\particles\src\ModuleParticles.cpp"></ClCompile>
+    <ClCompile Include="..\..\module\particles\src\NoiseFieldSamplerData.cpp"></ClCompile>
+    <ClCompile Include="..\..\module\particles\src\NoiseFieldSamplerEffect.cpp"></ClCompile>
+    <ClCompile Include="..\..\module\particles\src\ParticlesDebugRenderParams.cpp"></ClCompile>
+    <ClCompile Include="..\..\module\particles\src\ParticleSimulationData.cpp"></ClCompile>
+    <ClCompile Include="..\..\module\particles\src\ParticlesModuleParameters.cpp"></ClCompile>
+    <ClCompile Include="..\..\module\particles\src\ParticlesScene.cpp"></ClCompile>
+    <ClCompile Include="..\..\module\particles\src\SubstanceSourceData.cpp"></ClCompile>
+    <ClCompile Include="..\..\module\particles\src\SubstanceSourceEffect.cpp"></ClCompile>
+    <ClCompile Include="..\..\module\particles\src\TurbulenceFieldSamplerData.cpp"></ClCompile>
+    <ClCompile Include="..\..\module\particles\src\TurbulenceFieldSamplerEffect.cpp"></ClCompile>
+    <ClCompile Include="..\..\module\particles\src\VolumeRenderMaterialData.cpp"></ClCompile>
+    <ClCompile Include="..\..\module\particles\src\VortexFieldSamplerData.cpp"></ClCompile>
+    <ClCompile Include="..\..\module\particles\src\VortexFieldSamplerEffect.cpp"></ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\module\particles\include\AttractorFieldSamplerData.h"></ClInclude>
+    <ClInclude Include="..\..\module\particles\include\AttractorFieldSamplerEffect.h"></ClInclude>
+    <ClInclude Include="..\..\module\particles\include\EffectPackageActor.h"></ClInclude>
+    <ClInclude Include="..\..\module\particles\include\EffectPackageActorParams.h"></ClInclude>
+    <ClInclude Include="..\..\module\particles\include\EffectPackageAsset.h"></ClInclude>
+    <ClInclude Include="..\..\module\particles\include\EffectPackageAssetParams.h"></ClInclude>
+    <ClInclude Include="..\..\module\particles\include\EffectPackageData.h"></ClInclude>
+    <ClInclude Include="..\..\module\particles\include\EffectPackageDatabaseParams.h"></ClInclude>
+    <ClInclude Include="..\..\module\particles\include\EffectPackageEmitterDatabaseParams.h"></ClInclude>
+    <ClInclude Include="..\..\module\particles\include\EffectPackageFieldSamplerDatabaseParams.h"></ClInclude>
+    <ClInclude Include="..\..\module\particles\include\EffectPackageGraphicsMaterialsParams.h"></ClInclude>
+    <ClInclude Include="..\..\module\particles\include\EffectPackageIOFXDatabaseParams.h"></ClInclude>
+    <ClInclude Include="..\..\module\particles\include\EffectPackageIOSDatabaseParams.h"></ClInclude>
+    <ClInclude Include="..\..\module\particles\include\EmitterData.h"></ClInclude>
+    <ClInclude Include="..\..\module\particles\include\EmitterEffect.h"></ClInclude>
+    <ClInclude Include="..\..\module\particles\include\ForceFieldData.h"></ClInclude>
+    <ClInclude Include="..\..\module\particles\include\ForceFieldEffect.h"></ClInclude>
+    <ClInclude Include="..\..\module\particles\include\GraphicsEffectData.h"></ClInclude>
+    <ClInclude Include="..\..\module\particles\include\GraphicsMaterialData.h"></ClInclude>
+    <ClInclude Include="..\..\module\particles\include\HeatSourceData.h"></ClInclude>
+    <ClInclude Include="..\..\module\particles\include\HeatSourceEffect.h"></ClInclude>
+    <ClInclude Include="..\..\module\particles\include\JetFieldSamplerData.h"></ClInclude>
+    <ClInclude Include="..\..\module\particles\include\JetFieldSamplerEffect.h"></ClInclude>
+    <ClInclude Include="..\..\module\particles\include\MinPhysxSdkVersion.h"></ClInclude>
+    <ClInclude Include="..\..\module\particles\include\ModuleParticles.h"></ClInclude>
+    <ClInclude Include="..\..\module\particles\include\ModulePerfScope.h"></ClInclude>
+    <ClInclude Include="..\..\module\particles\include\NoiseFieldSamplerData.h"></ClInclude>
+    <ClInclude Include="..\..\module\particles\include\NoiseFieldSamplerEffect.h"></ClInclude>
+    <ClInclude Include="..\..\module\particles\include\ParticlesBase.h"></ClInclude>
+    <ClInclude Include="..\..\module\particles\include\ParticlesDebugRenderParams.h"></ClInclude>
+    <ClInclude Include="..\..\module\particles\include\ParticleSimulationData.h"></ClInclude>
+    <ClInclude Include="..\..\module\particles\include\ParticlesModuleParameters.h"></ClInclude>
+    <ClInclude Include="..\..\module\particles\include\ParticlesParamClasses.h"></ClInclude>
+    <ClInclude Include="..\..\module\particles\include\ParticlesScene.h"></ClInclude>
+    <ClInclude Include="..\..\module\particles\include\SubstanceSourceData.h"></ClInclude>
+    <ClInclude Include="..\..\module\particles\include\SubstanceSourceEffect.h"></ClInclude>
+    <ClInclude Include="..\..\module\particles\include\TurbulenceFieldSamplerData.h"></ClInclude>
+    <ClInclude Include="..\..\module\particles\include\TurbulenceFieldSamplerEffect.h"></ClInclude>
+    <ClInclude Include="..\..\module\particles\include\VolumeRenderMaterialData.h"></ClInclude>
+    <ClInclude Include="..\..\module\particles\include\VortexFieldSamplerData.h"></ClInclude>
+    <ClInclude Include="..\..\module\particles\include\VortexFieldSamplerEffect.h"></ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\module\particles\public\NxEffectPackageActor.h"></ClInclude>
+    <ClInclude Include="..\..\module\particles\public\NxEffectPackageAsset.h"></ClInclude>
+    <ClInclude Include="..\..\module\particles\public\NxModuleParticles.h"></ClInclude>
+    <ClInclude Include="..\..\module\particles\public\NxParticlesPreview.h"></ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\module\particles\parameters\EffectPackageActor.pl"></None>
+    <None Include="..\..\module\particles\parameters\EffectPackageAsset.pl"></None>
+    <None Include="..\..\module\particles\parameters\EffectPackageDatabase.pl"></None>
+    <None Include="..\..\module\particles\parameters\EffectPackageDebugRenderParamSchema.pl"></None>
+    <None Include="..\..\module\particles\parameters\EffectPackageEmitterDatabase.pl"></None>
+    <None Include="..\..\module\particles\parameters\EffectPackageFieldSamplerDatabase.pl"></None>
+    <None Include="..\..\module\particles\parameters\EffectPackageGraphicsMaterials.pl"></None>
+    <None Include="..\..\module\particles\parameters\EffectPackageIOFXDatabase.pl"></None>
+    <None Include="..\..\module\particles\parameters\EffectPackageIOSDatabase.pl"></None>
+    <None Include="..\..\module\particles\parameters\ModuleDescParamSchema.pl"></None>
+  </ItemGroup>
+  <ItemGroup></ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\module\common\src\ModuleProfileCommon.cpp"></ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\module\common\include\ModuleProfileCommon.h"></ClInclude>
+  </ItemGroup>
+  <ItemGroup></ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="./ApexCommon.vcxproj">
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="./ApexShared.vcxproj">
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="./ApexFramework.vcxproj">
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="./APEX_Emitter.vcxproj">
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="./APEX_BasicIOS.vcxproj">
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="./APEX_IOFX.vcxproj">
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="./APEX_FieldSampler.vcxproj">
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="./APEX_BasicFS.vcxproj">
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="./APEX_ParticleIOS.vcxproj">
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="./APEX_ForceField.vcxproj">
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets"></ImportGroup>
+</Project>
