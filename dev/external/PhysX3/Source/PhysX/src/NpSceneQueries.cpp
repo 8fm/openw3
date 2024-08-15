@@ -760,7 +760,7 @@ bool NpSceneQueries::multiQuery(
 
 
 // explicit instantiations for multiQuery to fix link errors on android
-#if !(PX_IS_WINDOWS | PX_IS_X360 | PX_IS_SPU)
+#if !(PX_IS_WINDOWS | PX_IS_X360 | PX_IS_SPU) || _MSC_VER > 1700
 #define TMQ(hittype) \
 	template bool NpSceneQueries::multiQuery<hittype>( \
 		const MultiQueryInput& input, PxHitCallback<hittype>& hits, PxHitFlags hitFlags, \
