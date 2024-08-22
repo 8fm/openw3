@@ -19,7 +19,9 @@
 #define USE_NVAPI
 #define VENDOR_ID_NVIDIA 0x10DE
 
+#if _MSC_VER == 1700
 #define USE_AMDAGS
+#endif
 //ADL usage is obsolete, we switched to AGS
 //#define USE_AMDADL 
 #define VENDOR_ID_AMD 0x1002
