@@ -13,7 +13,11 @@
 #	define COMPRESSION_DIR	PROJECT_CONFIGURATION
 #endif
 
-#pragma comment( lib, RED_EXPAND_AND_STRINGIFY( ../../../external/compression/snappy/msvc/bin/PROJECT_PLATFORM/COMPRESSION_DIR/snappy.RED_PLATFORM_LIBRARY_EXT ) )
+#if _MSC_VER == 1700
+#pragma comment( lib, RED_EXPAND_AND_STRINGIFY( external/compression/snappy/msvc/bin/PROJECT_PLATFORM/COMPRESSION_DIR/snappy.RED_PLATFORM_LIBRARY_EXT ) )
+#else
+#pragma comment( lib, RED_EXPAND_AND_STRINGIFY( external/compression/snappy/msvc17/bin/PROJECT_PLATFORM/COMPRESSION_DIR/snappy.RED_PLATFORM_LIBRARY_EXT ) )
+#endif
 
 namespace Red { namespace Core {
 

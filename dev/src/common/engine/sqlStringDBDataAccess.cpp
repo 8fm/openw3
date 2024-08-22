@@ -15,9 +15,9 @@
 #include "../../../external/stringdb/sqlStringDB.h"
 
 #ifdef _WIN64
-#	pragma comment ( lib, "../../../external/stringdb/x64/Release/stringdb_x64.lib" )
+#	pragma comment ( lib, "external/stringdb/x64/Release/stringdb_x64.lib" )
 #elif defined(W2_PLATFORM_WIN32)
-#	pragma comment ( lib, "../../../external/stringdb/x86/Release/stringdb_x86.lib" )
+#	pragma comment ( lib, "external/stringdb/x86/Release/stringdb_x86.lib" )
 #endif
 
 const String CSQLStringDBDataAccess::SPEECH_DIRECTORY = TXT( "\\speech\\" );

@@ -13,7 +13,7 @@
 #	define COMPRESSION_DIR	PROJECT_CONFIGURATION
 #endif
 
-#pragma comment( lib, RED_EXPAND_AND_STRINGIFY( ../../../external/compression/zlib/lib/PROJECT_PLATFORM/COMPRESSION_DIR/zlib.RED_PLATFORM_LIBRARY_EXT ) )
+#pragma comment( lib, RED_EXPAND_AND_STRINGIFY( external/compression/zlib/lib/PROJECT_PLATFORM/COMPRESSION_DIR/zlib.RED_PLATFORM_LIBRARY_EXT ) )
 
 #include "zlib.h"
 

@@ -37,11 +37,11 @@
 
 #ifdef _DEBUG
 	#ifndef RECAST_LIB_PATH
-		#define RECAST_LIB_PATH "..\\..\\..\\external\\recast\\lib\\Debug\\"
+		#define RECAST_LIB_PATH "external\\recast\\lib\\Debug\\"
 	#endif
 #else
 	#ifndef RECAST_LIB_PATH
-		#define RECAST_LIB_PATH "..\\..\\..\\external\\recast\\lib\\Release\\"
+		#define RECAST_LIB_PATH "external\\recast\\lib\\Release\\"
 	#endif
 #endif
 

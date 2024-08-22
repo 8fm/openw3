@@ -8,9 +8,9 @@
 #ifdef USE_INTEL_ITT
 
 #ifdef _WIN64
-#define INTELITT_LIB_PATH "..\\..\\..\\external\\IntelITT\\libs\\x64\\"
+#define INTELITT_LIB_PATH "external\\IntelITT\\libs\\x64\\"
 #else
-#define INTELITT_LIB_PATH "..\\..\\..\\external\\IntelITT\\libs\\Win32\\"
+#define INTELITT_LIB_PATH "external\\IntelITT\\libs\\Win32\\"
 #endif
 
 #define USE_INTEL_2014_R2

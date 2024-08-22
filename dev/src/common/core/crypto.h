@@ -13,10 +13,16 @@
 #ifdef RED_USE_CRYPTO
 
 #ifdef RED_PLATFORM_WINPC
-# ifdef _DEBUG
-#  pragma comment( lib, "../../../external/cryptopp562/x64/Output/Debug/cryptlib.lib")
+# if _MSC_VER == 1700
+#  define LIB_SUBFOLDER ""
 # else
-#   pragma comment( lib, "../../../external/cryptopp562/x64/Output/Release/cryptlib.lib")
+#  define LIB_SUBFOLDER "vs2022/"
+# endif
+
+# ifdef _DEBUG
+#  pragma comment( lib, "external/cryptopp562/" LIB_SUBFOLDER "x64/Output/Debug/cryptlib.lib")
+# else
+#   pragma comment( lib, "external/cryptopp562/" LIB_SUBFOLDER "x64/Output/Release/cryptlib.lib")
 # endif
 #endif // RED_PLATFORM_WINPC
 

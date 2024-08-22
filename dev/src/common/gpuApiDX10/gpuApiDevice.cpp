@@ -13,9 +13,9 @@
 #include "../../../external/nvapi/nvapi.h"
 
 #if defined( RED_PLATFORM_WIN32 )
-#pragma comment (lib, "../../../external/nvapi/x86/nvapi.lib")
+#pragma comment (lib, "external/nvapi/x86/nvapi.lib")
 #elif defined( RED_PLATFORM_WIN64 )
-#pragma comment (lib, "../../../external/nvapi/amd64/nvapi64.lib")
+#pragma comment (lib, "external/nvapi/amd64/nvapi64.lib")
 #endif
 
 #endif // USE_NVAPI
@@ -32,15 +32,15 @@
 
 #ifndef _DEBUG
 #if defined( RED_PLATFORM_WIN32 )
-#pragma comment (lib, "../../../external/AMDGPUServices_v2_2/AGS Lib/lib/Win32/static/amd_ags.lib")
+#pragma comment (lib, "external/AMDGPUServices_v2_2/AGS Lib/lib/Win32/static/amd_ags.lib")
 #elif defined( RED_PLATFORM_WIN64 )
-#pragma comment (lib, "../../../external/AMDGPUServices_v2_2/AGS Lib/lib/x64/static/amd_ags64.lib")
+#pragma comment (lib, "external/AMDGPUServices_v2_2/AGS Lib/lib/x64/static/amd_ags64.lib")
 #endif
 #else
 #if defined( RED_PLATFORM_WIN32 )
-#pragma comment (lib, "../../../external/AMDGPUServices_v2_2/AGS Lib/lib/Win32/static/amd_ags_d.lib")
+#pragma comment (lib, "external/AMDGPUServices_v2_2/AGS Lib/lib/Win32/static/amd_ags_d.lib")
 #elif defined( RED_PLATFORM_WIN64 )
-#pragma comment (lib, "../../../external/AMDGPUServices_v2_2/AGS Lib/lib/x64/static/amd_ags64_d.lib")
+#pragma comment (lib, "external/AMDGPUServices_v2_2/AGS Lib/lib/x64/static/amd_ags64_d.lib")
 #endif
 #endif
 

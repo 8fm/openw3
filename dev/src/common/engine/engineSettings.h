@@ -59,7 +59,7 @@ Build errors: 30>AkRumble.lib(AkRumbleControllerXInput.obj) : error LNK2019: unr
 # else
 #  define INPUT_UT_ARCH "x86"
 # endif
-# define INPUT_UT_DXSDK_LIB_PATH "../../../external/dxsdk(June2010)/lib/" INPUT_UT_ARCH "/"
+# define INPUT_UT_DXSDK_LIB_PATH "external/dxsdk(June2010)/lib/" INPUT_UT_ARCH "/"
 # pragma comment ( lib, INPUT_UT_DXSDK_LIB_PATH "xinput.lib" )
 #endif
 

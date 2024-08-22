@@ -24,7 +24,7 @@
 # define INPUTDEVMGR_ARCH "x86"
 #endif
 
-#define INPUTDEVMGR_DXSDK_LIB_PATH "../../../external/dxsdk(June2010)/lib/" INPUTDEVMGR_ARCH "/"
+#define INPUTDEVMGR_DXSDK_LIB_PATH "external/dxsdk(June2010)/lib/" INPUTDEVMGR_ARCH "/"
 
 #pragma comment ( lib, INPUTDEVMGR_DXSDK_LIB_PATH "dinput8.lib" )
 //FIXME: Linked in baseEngine. Happy now WWise? #pragma comment ( lib, INPUTDEVMGR_DXSDK_LIB_PATH "xinput.lib" )

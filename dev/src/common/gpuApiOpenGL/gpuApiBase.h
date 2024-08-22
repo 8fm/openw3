@@ -10,5 +10,5 @@
 
 #include "../../../external/glew/include/GL/glew.h"
 #include "../../../external/glew/include/GL/wglew.h"
-#pragma comment (lib,  "../../../external/glew/lib/Release/x64/glew32.lib")
+#pragma comment (lib,  "external/glew/lib/Release/x64/glew32.lib")
 #endif

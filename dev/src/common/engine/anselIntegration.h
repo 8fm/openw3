@@ -9,7 +9,7 @@
 
 	#include "NvCameraSDK.h"
 
-	#define CAMERAWORKS_LIB_PATH "..\\..\\..\\external\\Ansel\\lib\\"
+	#define CAMERAWORKS_LIB_PATH "external\\Ansel\\lib\\"
 
 	#pragma comment(lib, CAMERAWORKS_LIB_PATH "NvCameraSDK64.lib")
 #endif

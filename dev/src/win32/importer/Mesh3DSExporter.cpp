@@ -67,15 +67,15 @@ CMesh3DSExporter::CMesh3DSExporter()
 #include <lib3ds.h>
 #ifdef _WIN64
 #ifdef _DEBUG
-#pragma comment ( lib, "..\\..\\..\\external\\lib3ds\\debug_static\\lib3ds-2_0_x64.lib" )
+#pragma comment ( lib, "external\\lib3ds\\debug_static\\lib3ds-2_0_x64.lib" )
 #else
-#pragma comment ( lib, "..\\..\\..\\external\\lib3ds\\release_static\\lib3ds-2_0_x64.lib" )
+#pragma comment ( lib, "external\\lib3ds\\release_static\\lib3ds-2_0_x64.lib" )
 #endif
 #else
 #ifdef _DEBUG
-#pragma comment ( lib, "..\\..\\..\\external\\lib3ds\\debug_static\\lib3ds-2_0.lib" )
+#pragma comment ( lib, "external\\lib3ds\\debug_static\\lib3ds-2_0.lib" )
 #else
-#pragma comment ( lib, "..\\..\\..\\external\\lib3ds\\release_static\\lib3ds-2_0.lib" )
+#pragma comment ( lib, "external\\lib3ds\\release_static\\lib3ds-2_0.lib" )
 #endif
 #endif
 

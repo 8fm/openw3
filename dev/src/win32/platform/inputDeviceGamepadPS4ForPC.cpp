@@ -15,11 +15,19 @@
 
 #pragma comment(lib, "hid.lib")
 
+#if _MSC_VER == 1700
 #ifdef RED_CONFIGURATION_DEBUG
-	#pragma comment(lib, "../../../external/ps4padpc/lib/Debug/libScePad_static_debug_vs2012.lib")
+	#pragma comment(lib, "external/ps4padpc/lib/Debug/libScePad_static_debug_vs2012.lib")
 #else
-	#pragma comment(lib, "../../../external/ps4padpc/lib/Release/libScePad_static_vs2012.lib")
+	#pragma comment(lib, "external/ps4padpc/lib/Release/libScePad_static_vs2012.lib")
 #endif
+#else // _MSC_VER == 1700
+#ifdef RED_CONFIGURATION_DEBUG
+	#pragma comment(lib, "external/ps4padpc/lib/Debug/libScePad_static_debug_vs2015.lib")
+#else
+	#pragma comment(lib, "external/ps4padpc/lib/Release/libScePad_static_vs2015.lib")
+#endif
+#endif // _MSC_VER == 1700
 
 namespace
 {

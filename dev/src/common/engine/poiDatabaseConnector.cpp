@@ -11,9 +11,9 @@
 #include "commonConfigs.h"
 
 #ifdef _WIN64
-#pragma comment ( lib, "../../../internal/MarkersSystemDB/MarkersSystemDB_x64.lib" )
+#pragma comment ( lib, "internal/MarkersSystemDB/MarkersSystemDB_x64.lib" )
 #elif defined(W2_PLATFORM_WIN32)
-#pragma comment ( lib, "../../../internal/MarkersSystemDB/MarkersSystemDB_x86.lib" )
+#pragma comment ( lib, "internal/MarkersSystemDB/MarkersSystemDB_x86.lib" )
 #endif
 
 #ifndef NO_MARKER_SYSTEMS
