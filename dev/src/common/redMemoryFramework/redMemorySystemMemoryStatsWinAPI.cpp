@@ -107,7 +107,7 @@ Red::System::Bool SystemMemoryStats::WarnOnLowMemory( Red::System::Uint64 lowMem
 		// If we run out of virtual address space, crashes will most likely occur
 		if( systemMemory.m_freeVirtualBytes < lowMemoryAmount )
 		{
-			Red::System::AnsiChar format[] = "!! WARNING: Virtual memory available < %" RED_PRIu64 "MB (%" RED_PRIu64 "MB Remaining of %"RED_PRIu64 "MB Total) Largest available block = %" RED_PRIsize_t "!!\n";
+			Red::System::AnsiChar format[] = "!! WARNING: Virtual memory available < %" RED_PRIu64 "MB (%" RED_PRIu64 "MB Remaining of %" RED_PRIu64 "MB Total) Largest available block = %" RED_PRIsize_t "!!\n";
 			Red::System::SNPrintF( debugOutput, ARRAY_COUNT( debugOutput ), format, lowMemoryAmount / c_oneMb, 
 																					systemMemory.m_freeVirtualBytes / c_oneMb, 
 																					systemMemory.m_totalVirtualBytes / c_oneMb,

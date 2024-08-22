@@ -115,7 +115,7 @@ void CWetnessComponent::UpdateValues( SWetnessParams& params )
 			if( m_weatherManager->GetEffectStrength( EWeatherEffectType::WET_RAIN ) > 0.0f )
 			{
 				m_wetnessParams.m_interior += dt * m_wetnessParams.m_blendInFromRainSpeed;
-				m_wetnessParams.m_interior = Min( m_wetnessParams.m_interior, pow(weatherWetness , 4.3f) );
+				m_wetnessParams.m_interior = Min( m_wetnessParams.m_interior, powf(weatherWetness , 4.3f) );
 			}
 			// if player is outside and its not raining, decrease rain wetness
 			else

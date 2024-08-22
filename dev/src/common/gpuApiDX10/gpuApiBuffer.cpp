@@ -9,7 +9,7 @@ namespace GpuApi
 
 	// ----------------------------------------------------------------------
 
-	inline ID3D11Buffer* GetD3DBuffer( const BufferRef &ref )
+	ID3D11Buffer* GetD3DBuffer( const BufferRef &ref )
 	{
 		GPUAPI_ASSERT( !(ref && !GetDeviceData().m_Buffers.Data(ref).m_pBufferResource) );
 		return ref ? GetDeviceData().m_Buffers.Data(ref).m_pBufferResource : nullptr;
