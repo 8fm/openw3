@@ -35,7 +35,7 @@
       <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
       <ProgramDatabaseFile  Condition="'$(GeneratePDB)' == 'false'" />
       <SubSystem>$(SubSystem)</SubSystem>
-      <AdditionalLibraryDirectories>$(ProjectLiDirs)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)..;$(ProjectLiDirs)</AdditionalLibraryDirectories>
       <AdditionalDependencies>$(ProjectLiDeps)</AdditionalDependencies>
     </Link>
     <Lib Condition="'$(ConfigurationType)' == 'StaticLibrary'">
