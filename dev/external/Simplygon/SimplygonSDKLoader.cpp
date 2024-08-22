@@ -692,7 +692,7 @@ namespace SimplygonSDK
 			}
 #endif
 
-		int len = _filelength(fp->_file);
+		int len = _filelength(_fileno(fp));
 		char *dest = (char*)new char[len+1];
 		if( fread(dest,1,len,fp) != len )
 			{
