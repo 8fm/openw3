@@ -25,6 +25,8 @@ public:
 	explicit CFilePath( const CFilePath&& path );
 
 	void operator=( const PathString& path );
+	//! Assignment operator
+	CFilePath& operator=( const CFilePath& path );
 
 	~CFilePath();
 

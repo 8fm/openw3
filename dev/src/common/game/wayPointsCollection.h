@@ -106,6 +106,10 @@ public:
 			Uint32								m_groupId;
 
 			Group()																	{}
+			//! Copy constructor
+			Group( const Group& g )
+				: m_list( g.m_list )
+				, m_groupId( g.m_groupId )											{}
 			Group( Group&& g )
 				: m_list( Move( g.m_list ) )
 				, m_groupId( g.m_groupId )											{}

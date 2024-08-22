@@ -96,6 +96,14 @@ struct SCurveData
 	{
 	}
 
+	//! Copy constructor
+	SCurveData( const SCurveData& other )
+		:	m_curveValues( other.m_curveValues ) ,
+			m_valueType( other.m_valueType ),
+			m_baseType( other.m_baseType ),
+			m_loop( other.m_loop )
+	{}
+
 	SCurveData( SCurveData && other )
 		:	m_curveValues( std::move( other.m_curveValues ) ) ,
 			m_valueType( std::move( other.m_valueType ) ),

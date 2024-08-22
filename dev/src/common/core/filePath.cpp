@@ -41,6 +41,17 @@ CFilePath::CFilePath( const CFilePath&& path )
 
 }
 
+CFilePath& CFilePath::operator=( const CFilePath& path )
+{
+	if (this != &path)
+	{
+		m_path = path.m_path;
+		m_directories = path.m_directories;
+		m_filename = path.m_filename;
+	}
+	return *this;
+}
+
 void CFilePath::operator=( const PathString& path )
 {
 	m_path = path;
