@@ -60,7 +60,7 @@ T Min(const T& a, const T& b)
 // IMPORTANT - Do NOT make script studio dependent on core!
 #include "../../common/redSystem/compilerExtensions.h"
 
-#include <um\urlmon.h>
+#include <urlmon.h>
 
 // Widgets
 #include "wx/wxprec.h"
