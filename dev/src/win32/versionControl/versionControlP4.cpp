@@ -11,29 +11,29 @@
 #if _MSC_VER == 1700
 	#ifdef _WIN64
 		#ifdef _DEBUG
-		#define P4V_LIB_PATH "..\\..\\..\\external\\P4V\\x64\\lib\\VS2012\\debug\\"
+		#define P4V_LIB_PATH "external\\P4V\\x64\\lib\\VS2012\\debug\\"
 		#else
-		#define P4V_LIB_PATH "..\\..\\..\\external\\P4V\\x64\\lib\\VS2012\\release\\"
+		#define P4V_LIB_PATH "external\\P4V\\x64\\lib\\VS2012\\release\\"
 		#endif
 	#else
 		#ifdef _DEBUG
-		#define P4V_LIB_PATH "..\\..\\..\\external\\P4V\\lib\\VS2012\\debug\\"
+		#define P4V_LIB_PATH "external\\P4V\\lib\\VS2012\\debug\\"
 		#else
-		#define P4V_LIB_PATH "..\\..\\..\\external\\P4V\\lib\\VS2012\\release\\"
+		#define P4V_LIB_PATH "external\\P4V\\lib\\VS2012\\release\\"
 		#endif
 	#endif
 #elif _MSC_VER == 1600
 	#ifdef _WIN64
 		#ifdef _DEBUG
-		#define P4V_LIB_PATH "..\\..\\..\\external\\P4V\\x64\\lib\\debug\\"
+		#define P4V_LIB_PATH "external\\P4V\\x64\\lib\\debug\\"
 		#else
-		#define P4V_LIB_PATH "..\\..\\..\\external\\P4V\\x64\\lib\\release\\"
+		#define P4V_LIB_PATH "external\\P4V\\x64\\lib\\release\\"
 		#endif
 	#else
 		#ifdef _DEBUG
-		#define P4V_LIB_PATH "..\\..\\..\\external\\P4V\\lib\\debug\\"
+		#define P4V_LIB_PATH "external\\P4V\\lib\\debug\\"
 		#else
-		#define P4V_LIB_PATH "..\\..\\..\\external\\P4V\\lib\\release\\"
+		#define P4V_LIB_PATH "external\\P4V\\lib\\release\\"
 		#endif
 	#endif
 #else

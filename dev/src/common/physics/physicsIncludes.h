@@ -65,7 +65,11 @@
 //#endif
 
 #ifdef RED_PLATFORM_WIN64
-	#define PHYSX_LIB_PATH "..\\..\\..\\external\\PhysX3\\lib\\win64\\"
+	#if _MSC_VER == 1700
+		#define PHYSX_LIB_PATH "external\\PhysX3\\lib\\win64\\"
+	#else
+		#define PHYSX_LIB_PATH "external\\PhysX3\\lib\\vc17win64\\"
+	#endif
 	#if defined(PHYSICS_PROFILE)
 		#define PHYSX_LIB_EXT "PROFILE.lib"
 		#define PHYSX_LIB_EXTB "PROFILE_x64.lib"
@@ -81,7 +85,11 @@
 		#define PHYSX_LIB_EXTB "CHECKED_x64.lib"
 	#endif
 #elif defined( RED_PLATFORM_WIN32 )
-	#define PHYSX_LIB_PATH "..\\..\\..\\external\\PhysX3\\lib\\win32\\"
+	#if _MSC_VER == 1700
+		#define PHYSX_LIB_PATH "external\\PhysX3\\lib\\win32\\"
+	#else
+		#define PHYSX_LIB_PATH "external\\PhysX3\\lib\\vc17win32\\"
+	#endif
 	#if defined(PHYSICS_PROFILE)
 		#define PHYSX_LIB_EXT "PROFILE.lib"
 		#define PHYSX_LIB_EXTB "PROFILE_x86.lib"
@@ -141,9 +149,17 @@
 #ifdef USE_APEX
 
 #ifdef RED_PLATFORM_WIN64
-	#define APEX_LIB_PATH "..\\..\\..\\external\\Apex\\lib\\vc10win64-PhysX_3.3\\"
+	#if _MSC_VER == 1700
+		#define APEX_LIB_PATH "external\\Apex\\lib\\vc10win64-PhysX_3.3\\"
+	#else
+		#define APEX_LIB_PATH "external\\Apex\\lib\\vc17win64-PhysX_3.3\\"
+	#endif
 #elif defined( RED_PLATFORM_WIN32 )
-	#define APEX_LIB_PATH "..\\..\\..\\external\\Apex\\lib\\vc10win32-PhysX_3.3\\"
+	#if _MSC_VER == 1700
+		#define APEX_LIB_PATH "external\\Apex\\lib\\vc10win32-PhysX_3.3\\"
+	#else
+		#define APEX_LIB_PATH "external\\Apex\\lib\\vc17win32-PhysX_3.3\\"
+	#endif
 #elif defined( RED_PLATFORM_ORBIS )
 	#define APEX_LIB_PATH "..\\..\\..\\external\\Apex\\lib\\vc10ps4-PhysX_3.3\\lib"
 #elif defined( RED_PLATFORM_DURANGO )

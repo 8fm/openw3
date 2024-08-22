@@ -13,7 +13,7 @@
 #	define COMPRESSION_DIR	PROJECT_CONFIGURATION
 #endif
 
-#pragma comment( lib, RED_EXPAND_AND_STRINGIFY( ../../../external/compression/lz4/msvc/bin/PROJECT_PLATFORM/COMPRESSION_DIR/lz4.RED_PLATFORM_LIBRARY_EXT ) )
+#pragma comment( lib, RED_EXPAND_AND_STRINGIFY( external/compression/lz4/msvc/bin/PROJECT_PLATFORM/COMPRESSION_DIR/lz4.RED_PLATFORM_LIBRARY_EXT ) )
 
 #include "../../../../external/compression/lz4/lz4.h"
 

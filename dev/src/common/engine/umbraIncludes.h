@@ -2,7 +2,7 @@
 
 #ifdef USE_UMBRA
 
-	#define UMBRA_DIR "..\\..\\..\\external\\umbra3.3.13-change-26-2826-2\\"
+	#define UMBRA_DIR "external\\umbra3.3.13-change-26-2826-2\\"
 	#include "..\\..\\..\\..\\external\\umbra3.3.13-change-26-2826-2\\interface\\optimizer\\umbraScene.hpp"
 	#include "..\\..\\..\\..\\external\\umbra3.3.13-change-26-2826-2\\interface\\optimizer\\umbraTask.hpp"
 	#include "..\\..\\..\\..\\external\\umbra3.3.13-change-26-2826-2\\interface\\optimizer\\\umbraBuilder.hpp"

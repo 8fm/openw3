@@ -6,17 +6,23 @@
 #include "resource.h"
 
 
+#if _MSC_VER == 1700
+	#define LIB_SUBFOLDER ""
+#else
+	#define LIB_SUBFOLDER "vs2022/"
+#endif
+
 #ifdef _DEBUG
 	#ifdef _WIN64
-		#pragma comment ( lib, "../../../external/dexzip/dzip64d.lib" )
+		#pragma comment ( lib, "external/dexzip/" LIB_SUBFOLDER "dzip64d.lib" )
 	#elif WIN32
-		#pragma comment ( lib, "../../../external/dexzip/dzipd.lib" )
+		#pragma comment ( lib, "external/dexzip/" LIB_SUBFOLDER "dzipd.lib" )
 	#endif
 #else
 	#ifdef _WIN64
-		#pragma comment ( lib, "../../../external/dexzip/dzip64.lib" )
+		#pragma comment ( lib, "external/dexzip/" LIB_SUBFOLDER "dzip64.lib" )
 	#elif WIN32
-		#pragma comment ( lib, "../../../external/dexzip/dzip.lib" )
+		#pragma comment ( lib, "external/dexzip/" LIB_SUBFOLDER "dzip.lib" )
 	#endif
 #endif
 #pragma comment( lib, "Psapi.lib" ) 

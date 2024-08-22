@@ -13,31 +13,31 @@
 #if _MSC_VER == 1700
 	#ifdef _DEBUG
 		#ifdef _WIN64
-			#pragma comment ( lib, "../../../internal/TestTrackConnection/Debug/vc110/x64/TestTrackConnection_x64.lib" )
+			#pragma comment ( lib, "internal/TestTrackConnection/Debug/vc110/x64/TestTrackConnection_x64.lib" )
 		#elif defined(W2_PLATFORM_WIN32)
-			#pragma comment ( lib, "../../../internal/TestTrackConnection/Debug/vc110/x86/TestTrackConnection_x86.lib" )
+			#pragma comment ( lib, "internal/TestTrackConnection/Debug/vc110/x86/TestTrackConnection_x86.lib" )
 		#endif
 		#endif
 	#ifdef NDEBUG
 		#ifdef _WIN64
-			#pragma comment ( lib, "../../../internal/TestTrackConnection/Release/vc110/x64/TestTrackConnection_x64.lib" )
+			#pragma comment ( lib, "internal/TestTrackConnection/Release/vc110/x64/TestTrackConnection_x64.lib" )
 		#elif defined(W2_PLATFORM_WIN32)
-			#pragma comment ( lib, "../../../internal/TestTrackConnection/Release/vc110/x86/TestTrackConnection_x86.lib" )
+			#pragma comment ( lib, "internal/TestTrackConnection/Release/vc110/x86/TestTrackConnection_x86.lib" )
 		#endif
 	#endif
 #elif _MSC_VER == 1600
 	#ifdef _DEBUG
 		#ifdef _WIN64
-			#pragma comment ( lib, "../../../internal/TestTrackConnection/Debug/TestTrackConnection_x64.lib" )
+			#pragma comment ( lib, "internal/TestTrackConnection/Debug/TestTrackConnection_x64.lib" )
 		#elif defined(W2_PLATFORM_WIN32)
-			#pragma comment ( lib, "../../../internal/TestTrackConnection/Debug/TestTrackConnection_x86.lib" )
+			#pragma comment ( lib, "internal/TestTrackConnection/Debug/TestTrackConnection_x86.lib" )
 		#endif
 		#endif
 	#ifdef NDEBUG
 		#ifdef _WIN64
-			#pragma comment ( lib, "../../../internal/TestTrackConnection/Release/TestTrackConnection_x64.lib" )
+			#pragma comment ( lib, "internal/TestTrackConnection/Release/TestTrackConnection_x64.lib" )
 		#elif defined(W2_PLATFORM_WIN32)
-			#pragma comment ( lib, "../../../internal/TestTrackConnection/Release/TestTrackConnection_x86.lib" )
+			#pragma comment ( lib, "internal/TestTrackConnection/Release/TestTrackConnection_x86.lib" )
 		#endif
 	#endif
 #else

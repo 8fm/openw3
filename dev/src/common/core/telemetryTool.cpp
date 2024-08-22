@@ -5,21 +5,21 @@
 
 #if defined(RED_PLATFORM_WINPC)
 	# ifdef RED_ARCH_X64
-		#pragma comment (lib, "../../../external/telemetry-2.0/lib/win/telemetry64.link.lib")
+		#pragma comment (lib, "external/telemetry-2.0/lib/win/telemetry64.link.lib")
 	# else
-		#pragma comment (lib, "../../../external/telemetry-2.0/lib/win/telemetry32.link.lib")
+		#pragma comment (lib, "external/telemetry-2.0/lib/win/telemetry32.link.lib")
 	# endif
 #elif defined(RED_PLATFORM_DURANGO)
 	#if defined(RED_CONFIGURATION_DEBUG)
-		#pragma comment (lib, "../../../external/telemetry-2.0/lib/durango/telemetrydurangod.lib")
+		#pragma comment (lib, "external/telemetry-2.0/lib/durango/telemetrydurangod.lib")
 	#else
-		#pragma comment (lib, "../../../external/telemetry-2.0/lib/durango/telemetrydurango.lib")
+		#pragma comment (lib, "external/telemetry-2.0/lib/durango/telemetrydurango.lib")
 	#endif
 #elif defined(RED_PLATFORM_ORBIS)
 	#if defined(RED_CONFIGURATION_DEBUG)
-		#pragma comment (lib, "../../../external/telemetry-2.0/lib/orbis/libTelemetryPS4c.a")
+		#pragma comment (lib, "external/telemetry-2.0/lib/orbis/libTelemetryPS4c.a")
 	#else
-		#pragma comment (lib, "../../../external/telemetry-2.0/lib/orbis/libTelemetryPS4.a")
+		#pragma comment (lib, "external/telemetry-2.0/lib/orbis/libTelemetryPS4.a")
 	#endif
 #endif
 

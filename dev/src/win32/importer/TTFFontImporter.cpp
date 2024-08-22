@@ -12,15 +12,15 @@
 
 #ifdef _WIN64
 	#ifdef _DEBUG
-		#pragma comment ( lib, "..\\..\\..\\external\\freetype\\objs\\win32\\vc2010\\freetype2411MT_D_x64.lib" )	
+		#pragma comment ( lib, "external\\freetype\\objs\\win32\\vc2010\\freetype2411MT_D_x64.lib" )
 	#else
-		#pragma comment ( lib, "..\\..\\..\\external\\freetype\\objs\\win32\\vc2010\\freetype2411MT_x64.lib" )
+		#pragma comment ( lib, "external\\freetype\\objs\\win32\\vc2010\\freetype2411MT_x64.lib" )
 	#endif
 #else
 	#ifdef _DEBUG
-		#pragma comment ( lib, "..\\..\\..\\external\\freetype\\objs\\win32\\vc2010\\freetype2411MT_D.lib" )	
+		#pragma comment ( lib, "external\\freetype\\objs\\win32\\vc2010\\freetype2411MT_D.lib" )
 	#else
-		#pragma comment ( lib, "..\\..\\..\\external\\freetype\\objs\\win32\\vc2010\\freetype2411MT.lib" )
+		#pragma comment ( lib, "external\\freetype\\objs\\win32\\vc2010\\freetype2411MT.lib" )
 	#endif
 #endif
 

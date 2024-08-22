@@ -60,11 +60,11 @@ using namespace AK;
 #ifdef RED_PLATFORM_WIN64
 	#define LIB_EXT ".lib"
 	#ifdef _DEBUG
-		#define WWISE_LIB_PATH "..\\..\\..\\external\\wwise\\lib\\x64_vc110\\Debug(StaticCRT)\\lib\\"
+		#define WWISE_LIB_PATH "external\\wwise\\lib\\x64_vc110\\Debug(StaticCRT)\\lib\\"
 	#elif defined(RED_FINAL_BUILD) && !defined(LOG_IN_FINAL)
-		#define WWISE_LIB_PATH "..\\..\\..\\external\\wwise\\lib\\x64_vc110\\Release(StaticCRT)\\lib\\"
+		#define WWISE_LIB_PATH "external\\wwise\\lib\\x64_vc110\\Release(StaticCRT)\\lib\\"
 	#else
-		#define WWISE_LIB_PATH "..\\..\\..\\external\\wwise\\lib\\x64_vc110\\Profile(StaticCRT)\\lib\\"
+		#define WWISE_LIB_PATH "external\\wwise\\lib\\x64_vc110\\Profile(StaticCRT)\\lib\\"
 	#endif
 #elif defined( RED_PLATFORM_DURANGO )
 	#define LIB_EXT ".lib"
@@ -89,11 +89,11 @@ using namespace AK;
 #else
 	#define LIB_EXT ".lib"
 	#ifdef _DEBUG
-		#define WWISE_LIB_PATH "..\\..\\..\\external\\wwise\\lib\\Win32_vc110\\Debug(StaticCRT)\\lib\\"
+		#define WWISE_LIB_PATH "external\\wwise\\lib\\Win32_vc110\\Debug(StaticCRT)\\lib\\"
 	#elif defined(RED_FINAL_BUILD) && !defined(LOG_IN_FINAL)
-		#define WWISE_LIB_PATH "..\\..\\..\\external\\wwise\\lib\\Win32_vc110\\Release(StaticCRT)\\lib\\"
+		#define WWISE_LIB_PATH "external\\wwise\\lib\\Win32_vc110\\Release(StaticCRT)\\lib\\"
 	#else
-		#define WWISE_LIB_PATH "..\\..\\..\\external\\wwise\\lib\\Win32_vc110\\Profile(StaticCRT)\\lib\\"
+		#define WWISE_LIB_PATH "external\\wwise\\lib\\Win32_vc110\\Profile(StaticCRT)\\lib\\"
 	#endif
 #endif
 

@@ -6,9 +6,9 @@
 #include FT_FREETYPE_H
 
 #ifdef RED_PLATFORM_WIN64
-# define LIB_HARFBUZZ_DIR "../../../external/harfbuzz-0.9.33/lib/x64/"
+# define LIB_HARFBUZZ_DIR "external/harfbuzz-0.9.33/lib/x64/"
 #else
-# define LIB_HARFBUZZ_DIR "../../../external/harfbuzz-0.9.33/lib/x86/"
+# define LIB_HARFBUZZ_DIR "external/harfbuzz-0.9.33/lib/x86/"
 #endif
 
 #ifdef _DEBUG

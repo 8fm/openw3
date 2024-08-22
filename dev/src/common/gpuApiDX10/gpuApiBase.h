@@ -17,38 +17,44 @@ RED_DISABLE_WARNING_MSC( 4005 )
 
 #include "../../../external/DirectXTex/DirectXTex/DirectXTex.h"
 
+#if _MSC_VER == 1700
+	#define LIB_SUBFOLDER ""
+#else
+	#define LIB_SUBFOLDER "vs2022/"
+#endif
+
 #ifdef _WIN64
 	#if defined( _DEBUG )
-		#pragma comment (lib,  "../../../external/DirectXTex/DirectXTex/x64/Debug/DirectXTex.lib")
+		#pragma comment (lib,  "external/DirectXTex/DirectXTex/" LIB_SUBFOLDER "x64/Debug/DirectXTex.lib")
 		#ifdef USE_COMPUTE_SHADER_FOR_BC7_COMPRESSION
-			#pragma comment (lib,  "../../../external/BC6HBC7 DirectCompute Encoder Tool/lib/x64/Debug/BC6HBC7EncoderCS.lib" )
+			#pragma comment (lib,  "external/BC6HBC7 DirectCompute Encoder Tool/lib/" LIB_SUBFOLDER "x64/Debug/BC6HBC7EncoderCS.lib" )
 		#endif
 	#elif defined( RELEASE )
-		#pragma comment (lib,  "../../../external/DirectXTex/DirectXTex/x64/Release/DirectXTex.lib")
+		#pragma comment (lib,  "external/DirectXTex/DirectXTex/" LIB_SUBFOLDER "x64/Release/DirectXTex.lib")
 		#ifdef USE_COMPUTE_SHADER_FOR_BC7_COMPRESSION
-			#pragma comment (lib,  "../../../external/BC6HBC7 DirectCompute Encoder Tool/lib/x64/Release/BC6HBC7EncoderCS.lib" )
+			#pragma comment (lib,  "external/BC6HBC7 DirectCompute Encoder Tool/lib/" LIB_SUBFOLDER "x64/Release/BC6HBC7EncoderCS.lib" )
 		#endif
 	#else
-		#pragma comment (lib,  "../../../external/DirectXTex/DirectXTex/x64/Profile/DirectXTex.lib")
+		#pragma comment (lib,  "external/DirectXTex/DirectXTex/" LIB_SUBFOLDER "x64/Profile/DirectXTex.lib")
 		#ifdef USE_COMPUTE_SHADER_FOR_BC7_COMPRESSION
-			#pragma comment (lib,  "../../../external/BC6HBC7 DirectCompute Encoder Tool/lib/x64/Profile/BC6HBC7EncoderCS.lib" ) 	
+			#pragma comment (lib,  "external/BC6HBC7 DirectCompute Encoder Tool/lib/" LIB_SUBFOLDER "x64/Profile/BC6HBC7EncoderCS.lib" )
 		#endif
 	#endif
 #else
 	#if defined( _DEBUG )
-		#pragma comment (lib,  "../../../external/DirectXTex/DirectXTex/Debug/DirectXTex.lib")
+		#pragma comment (lib,  "external/DirectXTex/DirectXTex/" LIB_SUBFOLDER "Debug/DirectXTex.lib")
 		#ifdef USE_COMPUTE_SHADER_FOR_BC7_COMPRESSION
-			#pragma comment (lib,  "../../../external/BC6HBC7 DirectCompute Encoder Tool/lib/Win32/Debug/BC6HBC7EncoderCS.lib" )
+			#pragma comment (lib,  "external/BC6HBC7 DirectCompute Encoder Tool/lib/" LIB_SUBFOLDER "Win32/Debug/BC6HBC7EncoderCS.lib" )
 		#endif
 	#elif defined( RELEASE )
-		#pragma comment (lib,  "../../../external/DirectXTex/DirectXTex/Release/DirectXTex.lib")
+		#pragma comment (lib,  "external/DirectXTex/DirectXTex/" LIB_SUBFOLDER "Release/DirectXTex.lib")
 		#ifdef USE_COMPUTE_SHADER_FOR_BC7_COMPRESSION
-			#pragma comment (lib,  "../../../external/BC6HBC7 DirectCompute Encoder Tool/lib/Win32/Release/BC6HBC7EncoderCS.lib" )
+			#pragma comment (lib,  "external/BC6HBC7 DirectCompute Encoder Tool/lib/" LIB_SUBFOLDER "Win32/Release/BC6HBC7EncoderCS.lib" )
 		#endif
 	#else
-		#pragma comment (lib,  "../../../external/DirectXTex/DirectXTex/Profile/DirectXTex.lib")
+		#pragma comment (lib,  "external/DirectXTex/DirectXTex/" LIB_SUBFOLDER "Profile/DirectXTex.lib")
 		#ifdef USE_COMPUTE_SHADER_FOR_BC7_COMPRESSION
-			#pragma comment (lib,  "../../../external/BC6HBC7 DirectCompute Encoder Tool/lib/Win32/Profile/BC6HBC7EncoderCS.lib" )
+			#pragma comment (lib,  "external/BC6HBC7 DirectCompute Encoder Tool/lib/" LIB_SUBFOLDER "Win32/Profile/BC6HBC7EncoderCS.lib" )
 		#endif
 	#endif
 #endif

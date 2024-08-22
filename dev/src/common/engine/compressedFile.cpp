@@ -5,15 +5,21 @@
 #include "../core/gameSave.h"
 
 
+#if _MSC_VER == 1700
+	#define LIB_SUBFOLDER ""
+#else
+	#define LIB_SUBFOLDER "vs2022/"
+#endif
+
 #ifdef RED_PLATFORM_WIN32
 #	include "../../../external/dexzip/dzip.h"
-#	pragma comment( lib, "../../../external/dexzip/dzip.lib" )
+#	pragma comment( lib, "external/dexzip/" LIB_SUBFOLDER "dzip.lib" )
 #	define USE_DZIP 
 #endif
 
 #ifdef RED_PLATFORM_WIN64
 #	include "../../../external/dexzip/dzip.h"
-#	pragma comment( lib, "../../../external/dexzip/dzip64.lib" )
+#	pragma comment( lib, "external/dexzip/" LIB_SUBFOLDER "dzip64.lib" )
 #	define USE_DZIP 
 #endif
 

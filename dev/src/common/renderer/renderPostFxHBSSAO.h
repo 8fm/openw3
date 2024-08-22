@@ -11,7 +11,7 @@
 #error Unsupported platform
 #endif
 
-#define NVSSAO_LIB_PATH "..\\..\\..\\external\\NvidiaSSAO\\"
+#define NVSSAO_LIB_PATH "external\\NvidiaSSAO\\"
 
 
 #if defined( RED_PLATFORM_DURANGO ) || defined( RED_PLATFORM_WINPC )

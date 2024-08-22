@@ -10,9 +10,9 @@
 #include "../../../external/nvToolsExt/include/nvToolsExt.h"
 
 #ifdef _WIN64
-#pragma comment( lib, "../../../external/nvToolsExt/lib/x64/nvToolsExt64_1.lib" )
+#pragma comment( lib, "external/nvToolsExt/lib/x64/nvToolsExt64_1.lib" )
 #else
-#pragma comment( lib, "../../../external/nvToolsExt/lib/x86/nvToolsExt32_1.lib" )
+#pragma comment( lib, "external/nvToolsExt/lib/x86/nvToolsExt32_1.lib" )
 #endif
 
 const Char* CNvtxProfiler::st_name = TXT( "NvtxProfiler" );

@@ -25,29 +25,29 @@
 #if _MSC_VER == 1700
 #ifdef _DEBUG
 #ifdef _WIN64
-#	pragma comment ( lib, "..\\..\\..\\external\\FBX_SDK_2016_1_2\\lib\\vs2012\\x64\\debug\\libfbxsdk-mt.lib" )
+#	pragma comment ( lib, "external\\FBX_SDK_2016_1_2\\lib\\vs2012\\x64\\debug\\libfbxsdk-mt.lib" )
 #else
-#	pragma comment ( lib, "..\\..\\..\\external\\FBX_SDK_2016_1_2\\lib\\vs2012\\x86\\debug\\libfbxsdk-mt.lib" )
+#	pragma comment ( lib, "external\\FBX_SDK_2016_1_2\\lib\\vs2012\\x86\\debug\\libfbxsdk-mt.lib" )
 #endif //_WIN64
 #else
 #ifdef _WIN64
-#	pragma comment ( lib, "..\\..\\..\\external\\FBX_SDK_2016_1_2\\lib\\vs2012\\x64\\release\\libfbxsdk-mt.lib" )
+#	pragma comment ( lib, "external\\FBX_SDK_2016_1_2\\lib\\vs2012\\x64\\release\\libfbxsdk-mt.lib" )
 #else
-#	pragma comment ( lib, "..\\..\\..\\external\\FBX_SDK_2016_1_2\\lib\\vs2012\\x86\\release\\libfbxsdk-mt.lib" )
+#	pragma comment ( lib, "external\\FBX_SDK_2016_1_2\\lib\\vs2012\\x86\\release\\libfbxsdk-mt.lib" )
 #endif //_WIN64
 #endif //_DEBUG
 #elif _MSC_VER == 1600
 #ifdef _DEBUG
 #ifdef _WIN64
-#	pragma comment ( lib, "..\\..\\..\\external\\FBX_SDK_2016_1_2\\lib\\vs2010\\x64\\debug\\libfbxsdk-mt.lib" )
+#	pragma comment ( lib, "external\\FBX_SDK_2016_1_2\\lib\\vs2010\\x64\\debug\\libfbxsdk-mt.lib" )
 #else
-#	pragma comment ( lib, "..\\..\\..\\external\\FBX_SDK_2016_1_2\\lib\\vs2010\\x86\\debug\\libfbxsdk-mt.lib" )
+#	pragma comment ( lib, "external\\FBX_SDK_2016_1_2\\lib\\vs2010\\x86\\debug\\libfbxsdk-mt.lib" )
 #endif //_WIN64
 #else
 #ifdef _WIN64
-#	pragma comment ( lib, "..\\..\\..\\external\\FBX_SDK_2016_1_2\\lib\\vs2010\\x64\\release\\libfbxsdk-mt.lib" )
+#	pragma comment ( lib, "external\\FBX_SDK_2016_1_2\\lib\\vs2010\\x64\\release\\libfbxsdk-mt.lib" )
 #else
-#	pragma comment ( lib, "..\\..\\..\\external\\FBX_SDK_2016_1_2\\lib\\vs2010\\x86\\release\\libfbxsdk-mt.lib" )
+#	pragma comment ( lib, "external\\FBX_SDK_2016_1_2\\lib\\vs2010\\x86\\release\\libfbxsdk-mt.lib" )
 #endif //_WIN64
 #endif //_DEBUG
 #else

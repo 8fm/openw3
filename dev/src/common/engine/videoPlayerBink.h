@@ -8,9 +8,9 @@
 #ifdef USE_BINK_VIDEO
 # include "../../../external/Bink2SDKWindows/include/bink.h"
 # ifdef _WIN64
-#  pragma comment( lib, "../../../external/Bink2SDKWindows/lib/bink2w64.lib" )
+#  pragma comment( lib, "external/Bink2SDKWindows/lib/bink2w64.lib" )
 # else
-#  pragma comment( lib, "../../../external/Bink2SDKWindows/lib/bink2w32.lib" )
+#  pragma comment( lib, "external/Bink2SDKWindows/lib/bink2w32.lib" )
 # endif
 
 struct SVideoParamsBink : public SVideoParams

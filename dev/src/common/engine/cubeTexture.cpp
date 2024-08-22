@@ -18,15 +18,15 @@
 
 #ifdef _WIN64
 	#ifdef _DEBUG
-		#pragma comment ( lib, "../../../external/libcubemapgen/CubeMapGenLib-x64-debug-MT.lib" )
+		#pragma comment ( lib, "external/libcubemapgen/CubeMapGenLib-x64-debug-MT.lib" )
 	#else
-		#pragma comment ( lib, "../../../external/libcubemapgen/CubeMapGenLib-x64-MT.lib" )
+		#pragma comment ( lib, "external/libcubemapgen/CubeMapGenLib-x64-MT.lib" )
 	#endif
 #else
 	#ifdef _DEBUG
-		#pragma comment ( lib, "../../../external/libcubemapgen/CubeMapGenLib-x86-debug-MT.lib" )
+		#pragma comment ( lib, "external/libcubemapgen/CubeMapGenLib-x86-debug-MT.lib" )
 	#else
-		#pragma comment ( lib, "../../../external/libcubemapgen/CubeMapGenLib-x86-MT.lib" )
+		#pragma comment ( lib, "external/libcubemapgen/CubeMapGenLib-x86-MT.lib" )
 	#endif
 #endif
 
