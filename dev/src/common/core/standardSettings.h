@@ -45,7 +45,7 @@
 
 //#define DISABLE_ALL_PERFCOUNTERS_EXCEPT_FPS
 //#define RED_FULL_DETERMINISM
-//#define NO_TELEMETRY			// Disable the telemetry logging
+#define NO_TELEMETRY			// Disable the telemetry logging
 //#define NO_TELEMETRY_DEBUG	// Disable telemetry debugging
 //#define NO_DEBUG_SERVER		// disable debug server
 
