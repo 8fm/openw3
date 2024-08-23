@@ -1,0 +1,39 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  build-windows:
+    name: Windows ${{ matrix.Configuration }} ${{ matrix.Platform }}
+    runs-on: windows-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        Configuration: [Final]
+        Platform: [x64]
+    steps:
+    - uses: actions/checkout@main
+      with:
+        submodules: recursive
+
+    - name: Get Windows libs
+      shell: cmd
+      run: |
+        curl -LJO https://github.com/8fm/openw3/releases/download/1.60-dev1/openw3-libs-vs2022-Final-x64.7z
+        7z x openw3-libs-vs2022-Final-x64.7z
+        dir bin
+
+    - uses: microsoft/setup-msbuild@main
+    - name: Build
+      working-directory: dev/src
+      run: msbuild /m /p:Configuration="${{ matrix.Configuration }}" /p:Platform="${{ matrix.Platform }}" LavaEngineVS2022.sln
+
+    - name: Prepare artifacts
+      shell: cmd
+      run: dir bin\x64 && copy bin\x64\witcher3.exe bin\upload
+
+    - name: Upload artifacts
+      uses: actions/upload-artifact@main
+      with:
+        name: Witcher3.${{ matrix.Configuration }}.${{ matrix.Platform }}.ci-${{ github.run_number }}
+        path: bin\upload
