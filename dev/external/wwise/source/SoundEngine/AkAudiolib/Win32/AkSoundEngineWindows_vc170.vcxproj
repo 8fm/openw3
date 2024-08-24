@@ -55,6 +55,7 @@
 		<RootNamespace>AkSoundEngine</RootNamespace>
 		<Keyword>Win32Proj</Keyword>
 		<ProjectName>AkSoundEngine</ProjectName>
+		<DXSDK_DIR>../../../../../dxsdk(June2010)</DXSDK_DIR>
 		<DefaultLanguage>en-US</DefaultLanguage>
 	</PropertyGroup>
 	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
