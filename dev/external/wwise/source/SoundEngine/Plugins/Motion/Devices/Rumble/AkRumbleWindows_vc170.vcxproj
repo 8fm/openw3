@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup Label="ProjectConfigurations">
+		<ProjectConfiguration Include="Debug|Win32">
+			<Configuration>Debug</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Debug|x64">
+			<Configuration>Debug</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Debug(StaticCRT)|Win32">
+			<Configuration>Debug(StaticCRT)</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Debug(StaticCRT)|x64">
+			<Configuration>Debug(StaticCRT)</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Profile|Win32">
+			<Configuration>Profile</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Profile|x64">
+			<Configuration>Profile</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Profile(StaticCRT)|Win32">
+			<Configuration>Profile(StaticCRT)</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Profile(StaticCRT)|x64">
+			<Configuration>Profile(StaticCRT)</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Release|Win32">
+			<Configuration>Release</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Release|x64">
+			<Configuration>Release</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Release(StaticCRT)|Win32">
+			<Configuration>Release(StaticCRT)</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Release(StaticCRT)|x64">
+			<Configuration>Release(StaticCRT)</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+	</ItemGroup>
+	<PropertyGroup Label="Globals">
+		<ProjectGuid>{AC334E06-D6AD-BBCA-3602-6ECAB5F18D81}</ProjectGuid>
+		<RootNamespace>AkRumble</RootNamespace>
+		<Keyword>Win32Proj</Keyword>
+		<ProjectName>AkRumble</ProjectName>
+		<DefaultLanguage>en-US</DefaultLanguage>
+	</PropertyGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<UseDebugLibraries>true</UseDebugLibraries>
+		<PlatformToolset>v143</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<UseDebugLibraries>true</UseDebugLibraries>
+		<PlatformToolset>v143</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|Win32'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<UseDebugLibraries>true</UseDebugLibraries>
+		<PlatformToolset>v143</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|x64'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<UseDebugLibraries>true</UseDebugLibraries>
+		<PlatformToolset>v143</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<UseDebugLibraries>true</UseDebugLibraries>
+		<PlatformToolset>v143</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|x64'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<UseDebugLibraries>true</UseDebugLibraries>
+		<PlatformToolset>v143</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|Win32'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<UseDebugLibraries>true</UseDebugLibraries>
+		<PlatformToolset>v143</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|x64'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<UseDebugLibraries>true</UseDebugLibraries>
+		<PlatformToolset>v143</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<UseDebugLibraries>true</UseDebugLibraries>
+		<PlatformToolset>v143</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<UseDebugLibraries>true</UseDebugLibraries>
+		<PlatformToolset>v143</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|Win32'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<UseDebugLibraries>true</UseDebugLibraries>
+		<PlatformToolset>v143</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|x64'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<UseDebugLibraries>true</UseDebugLibraries>
+		<PlatformToolset>v143</PlatformToolset>
+	</PropertyGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+	<ImportGroup Label="ExtensionSettings">
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../../../Build/PropertySheets/Win32/Debug_vc170.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../../../Build/PropertySheets/Win32/Debug_vc170.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../../../Build/PropertySheets/Win32/Debug_StaticCRT_vc170.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|x64'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../../../Build/PropertySheets/Win32/Debug_StaticCRT_vc170.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../../../Build/PropertySheets/Win32/NDebug_vc170.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Profile|x64'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../../../Build/PropertySheets/Win32/NDebug_vc170.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../../../Build/PropertySheets/Win32/NDebug_StaticCRT_vc170.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|x64'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../../../Build/PropertySheets/Win32/NDebug_StaticCRT_vc170.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../../../Build/PropertySheets/Win32/NDebug_vc170.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../../../Build/PropertySheets/Win32/NDebug_vc170.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../../../Build/PropertySheets/Win32/NDebug_StaticCRT_vc170.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|x64'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../../../Build/PropertySheets/Win32/NDebug_StaticCRT_vc170.props" />
+	</ImportGroup>
+	<PropertyGroup Label="UserMacros" />
+	<PropertyGroup>
+		<_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\..\..\..\$(Platform)_vc170\$(Configuration)\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\..\..\..\$(Platform)_vc170\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AkRumble</TargetName>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\..\..\..\$(Platform)_vc170\$(Configuration)\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\..\..\..\$(Platform)_vc170\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AkRumble</TargetName>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|Win32'">..\..\..\..\..\..\$(Platform)_vc170\$(Configuration)\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|Win32'">..\..\..\..\..\..\$(Platform)_vc170\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|Win32'">AkRumble</TargetName>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|x64'">..\..\..\..\..\..\$(Platform)_vc170\$(Configuration)\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|x64'">..\..\..\..\..\..\$(Platform)_vc170\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|x64'">AkRumble</TargetName>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'">..\..\..\..\..\..\$(Platform)_vc170\$(Configuration)\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'">..\..\..\..\..\..\$(Platform)_vc170\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'">AkRumble</TargetName>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">..\..\..\..\..\..\$(Platform)_vc170\$(Configuration)\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">..\..\..\..\..\..\$(Platform)_vc170\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">AkRumble</TargetName>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|Win32'">..\..\..\..\..\..\$(Platform)_vc170\$(Configuration)\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|Win32'">..\..\..\..\..\..\$(Platform)_vc170\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|Win32'">AkRumble</TargetName>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|x64'">..\..\..\..\..\..\$(Platform)_vc170\$(Configuration)\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|x64'">..\..\..\..\..\..\$(Platform)_vc170\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|x64'">AkRumble</TargetName>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\..\..\..\$(Platform)_vc170\$(Configuration)\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\..\..\..\$(Platform)_vc170\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AkRumble</TargetName>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\..\..\..\$(Platform)_vc170\$(Configuration)\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\..\..\..\$(Platform)_vc170\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AkRumble</TargetName>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|Win32'">..\..\..\..\..\..\$(Platform)_vc170\$(Configuration)\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|Win32'">..\..\..\..\..\..\$(Platform)_vc170\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|Win32'">AkRumble</TargetName>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|x64'">..\..\..\..\..\..\$(Platform)_vc170\$(Configuration)\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|x64'">..\..\..\..\..\..\$(Platform)_vc170\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|x64'">AkRumble</TargetName>
+	</PropertyGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+		<ClCompile>
+			<AdditionalIncludeDirectories>&quot;$(DXSDK_DIR)\include&quot;;.;..\..\..\..\..\..\include;..\..\..\..\AkAudiolib\Win32;..\..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>_DEBUG;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+			<EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>_DEBUG;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>&quot;$(DXSDK_DIR)\include&quot;;.;..\..\..\..\..\..\include;..\..\..\..\AkAudiolib\Win32;..\..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)AkRumble.lib</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+		<ClCompile>
+			<AdditionalIncludeDirectories>&quot;$(DXSDK_DIR)\include&quot;;.;..\..\..\..\..\..\include;..\..\..\..\AkAudiolib\Win32;..\..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>_DEBUG;WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+			<EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>_DEBUG;WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>&quot;$(DXSDK_DIR)\include&quot;;.;..\..\..\..\..\..\include;..\..\..\..\AkAudiolib\Win32;..\..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)AkRumble.lib</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|Win32'">
+		<ClCompile>
+			<AdditionalIncludeDirectories>&quot;$(DXSDK_DIR)\include&quot;;.;..\..\..\..\..\..\include;..\..\..\..\AkAudiolib\Win32;..\..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>_DEBUG;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+			<EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>_DEBUG;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>&quot;$(DXSDK_DIR)\include&quot;;.;..\..\..\..\..\..\include;..\..\..\..\AkAudiolib\Win32;..\..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)AkRumble.lib</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|x64'">
+		<ClCompile>
+			<AdditionalIncludeDirectories>&quot;$(DXSDK_DIR)\include&quot;;.;..\..\..\..\..\..\include;..\..\..\..\AkAudiolib\Win32;..\..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>_DEBUG;WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+			<EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>_DEBUG;WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>&quot;$(DXSDK_DIR)\include&quot;;.;..\..\..\..\..\..\include;..\..\..\..\AkAudiolib\Win32;..\..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)AkRumble.lib</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'">
+		<ClCompile>
+			<AdditionalIncludeDirectories>&quot;$(DXSDK_DIR)\include&quot;;.;..\..\..\..\..\..\include;..\..\..\..\AkAudiolib\Win32;..\..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>NDEBUG;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+			<EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>NDEBUG;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>&quot;$(DXSDK_DIR)\include&quot;;.;..\..\..\..\..\..\include;..\..\..\..\AkAudiolib\Win32;..\..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)AkRumble.lib</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">
+		<ClCompile>
+			<AdditionalIncludeDirectories>&quot;$(DXSDK_DIR)\include&quot;;.;..\..\..\..\..\..\include;..\..\..\..\AkAudiolib\Win32;..\..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>NDEBUG;WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+			<EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>NDEBUG;WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>&quot;$(DXSDK_DIR)\include&quot;;.;..\..\..\..\..\..\include;..\..\..\..\AkAudiolib\Win32;..\..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)AkRumble.lib</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|Win32'">
+		<ClCompile>
+			<AdditionalIncludeDirectories>&quot;$(DXSDK_DIR)\include&quot;;.;..\..\..\..\..\..\include;..\..\..\..\AkAudiolib\Win32;..\..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>NDEBUG;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+			<EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>NDEBUG;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>&quot;$(DXSDK_DIR)\include&quot;;.;..\..\..\..\..\..\include;..\..\..\..\AkAudiolib\Win32;..\..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)AkRumble.lib</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|x64'">
+		<ClCompile>
+			<AdditionalIncludeDirectories>&quot;$(DXSDK_DIR)\include&quot;;.;..\..\..\..\..\..\include;..\..\..\..\AkAudiolib\Win32;..\..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>NDEBUG;WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+			<EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>NDEBUG;WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>&quot;$(DXSDK_DIR)\include&quot;;.;..\..\..\..\..\..\include;..\..\..\..\AkAudiolib\Win32;..\..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)AkRumble.lib</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+		<ClCompile>
+			<AdditionalIncludeDirectories>&quot;$(DXSDK_DIR)\include&quot;;.;..\..\..\..\..\..\include;..\..\..\..\AkAudiolib\Win32;..\..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>NDEBUG;AK_OPTIMIZED;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+			<EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>NDEBUG;AK_OPTIMIZED;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>&quot;$(DXSDK_DIR)\include&quot;;.;..\..\..\..\..\..\include;..\..\..\..\AkAudiolib\Win32;..\..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)AkRumble.lib</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+		<ClCompile>
+			<AdditionalIncludeDirectories>&quot;$(DXSDK_DIR)\include&quot;;.;..\..\..\..\..\..\include;..\..\..\..\AkAudiolib\Win32;..\..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>NDEBUG;AK_OPTIMIZED;WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+			<EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>NDEBUG;AK_OPTIMIZED;WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>&quot;$(DXSDK_DIR)\include&quot;;.;..\..\..\..\..\..\include;..\..\..\..\AkAudiolib\Win32;..\..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)AkRumble.lib</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|Win32'">
+		<ClCompile>
+			<AdditionalIncludeDirectories>&quot;$(DXSDK_DIR)\include&quot;;.;..\..\..\..\..\..\include;..\..\..\..\AkAudiolib\Win32;..\..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>NDEBUG;AK_OPTIMIZED;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+			<EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>NDEBUG;AK_OPTIMIZED;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>&quot;$(DXSDK_DIR)\include&quot;;.;..\..\..\..\..\..\include;..\..\..\..\AkAudiolib\Win32;..\..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)AkRumble.lib</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|x64'">
+		<ClCompile>
+			<AdditionalIncludeDirectories>&quot;$(DXSDK_DIR)\include&quot;;.;..\..\..\..\..\..\include;..\..\..\..\AkAudiolib\Win32;..\..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>NDEBUG;AK_OPTIMIZED;WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+			<EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>NDEBUG;AK_OPTIMIZED;WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>&quot;$(DXSDK_DIR)\include&quot;;.;..\..\..\..\..\..\include;..\..\..\..\AkAudiolib\Win32;..\..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)AkRumble.lib</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemGroup>
+		<ClInclude Include="stdafx.h" />
+		<ClInclude Include="RumbleBus.h" />
+		<ClInclude Include="RumbleBusBase.h" />
+		<ClInclude Include="RumbleBusWindowsXBox.h" />
+		<ClInclude Include="AkRumbleControllerDirectInput.h" />
+		<ClInclude Include="AkRumbleControllerXInput.h" />
+		<ClInclude Include="RumbleDeviceHelper.h" />
+	</ItemGroup>
+	<ItemGroup>
+		<ClCompile Include="stdafx.cpp">
+			<PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+			<PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+			<PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|Win32'">Create</PrecompiledHeader>
+			<PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|x64'">Create</PrecompiledHeader>
+			<PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'">Create</PrecompiledHeader>
+			<PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">Create</PrecompiledHeader>
+			<PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|Win32'">Create</PrecompiledHeader>
+			<PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|x64'">Create</PrecompiledHeader>
+			<PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+			<PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+			<PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|Win32'">Create</PrecompiledHeader>
+			<PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|x64'">Create</PrecompiledHeader>
+		</ClCompile>
+		<ClCompile Include="RumbleBusBase.cpp">
+		</ClCompile>
+		<ClCompile Include="Factory.cpp">
+		</ClCompile>
+		<ClCompile Include="RumbleBusWindowsXBox.cpp">
+		</ClCompile>
+		<ClCompile Include="AkRumbleControllerDirectInput.cpp">
+		</ClCompile>
+		<ClCompile Include="AkRumbleControllerXInput.cpp">
+		</ClCompile>
+		<ClCompile Include="RumbleDeviceHelper.cpp">
+		</ClCompile>
+	</ItemGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+	<ImportGroup Label="ExtensionTargets">
+	</ImportGroup>
+</Project>

@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup Label="ProjectConfigurations">
+		<ProjectConfiguration Include="Debug|Win32">
+			<Configuration>Debug</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Debug|x64">
+			<Configuration>Debug</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Debug(StaticCRT)|Win32">
+			<Configuration>Debug(StaticCRT)</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Debug(StaticCRT)|x64">
+			<Configuration>Debug(StaticCRT)</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Profile|Win32">
+			<Configuration>Profile</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Profile|x64">
+			<Configuration>Profile</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Profile(StaticCRT)|Win32">
+			<Configuration>Profile(StaticCRT)</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Profile(StaticCRT)|x64">
+			<Configuration>Profile(StaticCRT)</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Release|Win32">
+			<Configuration>Release</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Release|x64">
+			<Configuration>Release</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Release(StaticCRT)|Win32">
+			<Configuration>Release(StaticCRT)</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Release(StaticCRT)|x64">
+			<Configuration>Release(StaticCRT)</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+	</ItemGroup>
+	<PropertyGroup Label="Globals">
+		<ProjectGuid>{6311202E-06BC-D53C-D41F-8E940916B366}</ProjectGuid>
+		<RootNamespace>AkRoomVerbFX</RootNamespace>
+		<Keyword>Win32Proj</Keyword>
+		<ProjectName>AkRoomVerbFX</ProjectName>
+		<DefaultLanguage>en-US</DefaultLanguage>
+	</PropertyGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<UseDebugLibraries>false</UseDebugLibraries>
+		<PlatformToolset>v143</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<UseDebugLibraries>false</UseDebugLibraries>
+		<PlatformToolset>v143</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|Win32'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<UseDebugLibraries>false</UseDebugLibraries>
+		<PlatformToolset>v143</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|x64'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<UseDebugLibraries>false</UseDebugLibraries>
+		<PlatformToolset>v143</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<UseDebugLibraries>false</UseDebugLibraries>
+		<PlatformToolset>v143</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|x64'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<UseDebugLibraries>false</UseDebugLibraries>
+		<PlatformToolset>v143</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|Win32'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<UseDebugLibraries>false</UseDebugLibraries>
+		<PlatformToolset>v143</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|x64'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<UseDebugLibraries>false</UseDebugLibraries>
+		<PlatformToolset>v143</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<UseDebugLibraries>false</UseDebugLibraries>
+		<PlatformToolset>v143</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<UseDebugLibraries>false</UseDebugLibraries>
+		<PlatformToolset>v143</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|Win32'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<UseDebugLibraries>false</UseDebugLibraries>
+		<PlatformToolset>v143</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|x64'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<UseDebugLibraries>false</UseDebugLibraries>
+		<PlatformToolset>v143</PlatformToolset>
+	</PropertyGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+	<ImportGroup Label="ExtensionSettings">
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../../../Build/PropertySheets/Win32/Debug_vc170.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../../../Build/PropertySheets/Win32/Debug_vc170.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../../../Build/PropertySheets/Win32/Debug_StaticCRT_vc170.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|x64'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../../../Build/PropertySheets/Win32/Debug_StaticCRT_vc170.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../../../Build/PropertySheets/Win32/NDebug_vc170.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Profile|x64'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../../../Build/PropertySheets/Win32/NDebug_vc170.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../../../Build/PropertySheets/Win32/NDebug_StaticCRT_vc170.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|x64'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../../../Build/PropertySheets/Win32/NDebug_StaticCRT_vc170.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../../../Build/PropertySheets/Win32/NDebug_vc170.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../../../Build/PropertySheets/Win32/NDebug_vc170.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../../../Build/PropertySheets/Win32/NDebug_StaticCRT_vc170.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|x64'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../../../Build/PropertySheets/Win32/NDebug_StaticCRT_vc170.props" />
+	</ImportGroup>
+	<PropertyGroup Label="UserMacros" />
+	<PropertyGroup>
+		<_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\..\..\..\$(Platform)_vc170\$(Configuration)\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\..\..\..\$(Platform)_vc170\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AkRoomVerbFX</TargetName>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\..\..\..\$(Platform)_vc170\$(Configuration)\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\..\..\..\$(Platform)_vc170\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AkRoomVerbFX</TargetName>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|Win32'">..\..\..\..\..\..\$(Platform)_vc170\$(Configuration)\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|Win32'">..\..\..\..\..\..\$(Platform)_vc170\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|Win32'">AkRoomVerbFX</TargetName>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|x64'">..\..\..\..\..\..\$(Platform)_vc170\$(Configuration)\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|x64'">..\..\..\..\..\..\$(Platform)_vc170\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|x64'">AkRoomVerbFX</TargetName>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'">..\..\..\..\..\..\$(Platform)_vc170\$(Configuration)\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'">..\..\..\..\..\..\$(Platform)_vc170\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'">AkRoomVerbFX</TargetName>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">..\..\..\..\..\..\$(Platform)_vc170\$(Configuration)\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">..\..\..\..\..\..\$(Platform)_vc170\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">AkRoomVerbFX</TargetName>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|Win32'">..\..\..\..\..\..\$(Platform)_vc170\$(Configuration)\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|Win32'">..\..\..\..\..\..\$(Platform)_vc170\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|Win32'">AkRoomVerbFX</TargetName>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|x64'">..\..\..\..\..\..\$(Platform)_vc170\$(Configuration)\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|x64'">..\..\..\..\..\..\$(Platform)_vc170\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|x64'">AkRoomVerbFX</TargetName>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\..\..\..\$(Platform)_vc170\$(Configuration)\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\..\..\..\$(Platform)_vc170\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AkRoomVerbFX</TargetName>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\..\..\..\$(Platform)_vc170\$(Configuration)\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\..\..\..\$(Platform)_vc170\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AkRoomVerbFX</TargetName>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|Win32'">..\..\..\..\..\..\$(Platform)_vc170\$(Configuration)\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|Win32'">..\..\..\..\..\..\$(Platform)_vc170\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|Win32'">AkRoomVerbFX</TargetName>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|x64'">..\..\..\..\..\..\$(Platform)_vc170\$(Configuration)\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|x64'">..\..\..\..\..\..\$(Platform)_vc170\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|x64'">AkRoomVerbFX</TargetName>
+	</PropertyGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+		<ClCompile>
+			<Optimization>Full</Optimization>
+			<AdditionalIncludeDirectories>..;..\..\..\..\..\..\include;..\..\Common\Win32;..\..\Common;..\..\..\Common;..\..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>_DEBUG;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader></PrecompiledHeader>
+			<EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>_DEBUG;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>..;..\..\..\..\..\..\include;..\..\Common\Win32;..\..\Common;..\..\..\Common;..\..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)AkRoomVerbFX.lib</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+			<OptimizeReferences>true</OptimizeReferences>
+			<EnableCOMDATFolding>true</EnableCOMDATFolding>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+		<ClCompile>
+			<Optimization>Full</Optimization>
+			<AdditionalIncludeDirectories>..;..\..\..\..\..\..\include;..\..\Common\Win32;..\..\Common;..\..\..\Common;..\..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>_DEBUG;WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader></PrecompiledHeader>
+			<EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>_DEBUG;WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>..;..\..\..\..\..\..\include;..\..\Common\Win32;..\..\Common;..\..\..\Common;..\..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)AkRoomVerbFX.lib</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+			<OptimizeReferences>true</OptimizeReferences>
+			<EnableCOMDATFolding>true</EnableCOMDATFolding>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|Win32'">
+		<ClCompile>
+			<Optimization>Full</Optimization>
+			<AdditionalIncludeDirectories>..;..\..\..\..\..\..\include;..\..\Common\Win32;..\..\Common;..\..\..\Common;..\..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>_DEBUG;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader></PrecompiledHeader>
+			<EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>_DEBUG;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>..;..\..\..\..\..\..\include;..\..\Common\Win32;..\..\Common;..\..\..\Common;..\..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)AkRoomVerbFX.lib</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+			<OptimizeReferences>true</OptimizeReferences>
+			<EnableCOMDATFolding>true</EnableCOMDATFolding>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|x64'">
+		<ClCompile>
+			<Optimization>Full</Optimization>
+			<AdditionalIncludeDirectories>..;..\..\..\..\..\..\include;..\..\Common\Win32;..\..\Common;..\..\..\Common;..\..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>_DEBUG;WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader></PrecompiledHeader>
+			<EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>_DEBUG;WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>..;..\..\..\..\..\..\include;..\..\Common\Win32;..\..\Common;..\..\..\Common;..\..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)AkRoomVerbFX.lib</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+			<OptimizeReferences>true</OptimizeReferences>
+			<EnableCOMDATFolding>true</EnableCOMDATFolding>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'">
+		<ClCompile>
+			<Optimization>Full</Optimization>
+			<AdditionalIncludeDirectories>..;..\..\..\..\..\..\include;..\..\Common\Win32;..\..\Common;..\..\..\Common;..\..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>NDEBUG;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader></PrecompiledHeader>
+			<EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>NDEBUG;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>..;..\..\..\..\..\..\include;..\..\Common\Win32;..\..\Common;..\..\..\Common;..\..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)AkRoomVerbFX.lib</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+			<OptimizeReferences>true</OptimizeReferences>
+			<EnableCOMDATFolding>true</EnableCOMDATFolding>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">
+		<ClCompile>
+			<Optimization>Full</Optimization>
+			<AdditionalIncludeDirectories>..;..\..\..\..\..\..\include;..\..\Common\Win32;..\..\Common;..\..\..\Common;..\..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>NDEBUG;WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader></PrecompiledHeader>
+			<EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>NDEBUG;WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>..;..\..\..\..\..\..\include;..\..\Common\Win32;..\..\Common;..\..\..\Common;..\..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)AkRoomVerbFX.lib</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+			<OptimizeReferences>true</OptimizeReferences>
+			<EnableCOMDATFolding>true</EnableCOMDATFolding>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|Win32'">
+		<ClCompile>
+			<Optimization>Full</Optimization>
+			<AdditionalIncludeDirectories>..;..\..\..\..\..\..\include;..\..\Common\Win32;..\..\Common;..\..\..\Common;..\..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>NDEBUG;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader></PrecompiledHeader>
+			<EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>NDEBUG;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>..;..\..\..\..\..\..\include;..\..\Common\Win32;..\..\Common;..\..\..\Common;..\..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)AkRoomVerbFX.lib</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+			<OptimizeReferences>true</OptimizeReferences>
+			<EnableCOMDATFolding>true</EnableCOMDATFolding>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|x64'">
+		<ClCompile>
+			<Optimization>Full</Optimization>
+			<AdditionalIncludeDirectories>..;..\..\..\..\..\..\include;..\..\Common\Win32;..\..\Common;..\..\..\Common;..\..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>NDEBUG;WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader></PrecompiledHeader>
+			<EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>NDEBUG;WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>..;..\..\..\..\..\..\include;..\..\Common\Win32;..\..\Common;..\..\..\Common;..\..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)AkRoomVerbFX.lib</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+			<OptimizeReferences>true</OptimizeReferences>
+			<EnableCOMDATFolding>true</EnableCOMDATFolding>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+		<ClCompile>
+			<Optimization>Full</Optimization>
+			<AdditionalIncludeDirectories>..;..\..\..\..\..\..\include;..\..\Common\Win32;..\..\Common;..\..\..\Common;..\..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>NDEBUG;AK_OPTIMIZED;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader></PrecompiledHeader>
+			<EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>NDEBUG;AK_OPTIMIZED;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>..;..\..\..\..\..\..\include;..\..\Common\Win32;..\..\Common;..\..\..\Common;..\..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)AkRoomVerbFX.lib</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+			<OptimizeReferences>true</OptimizeReferences>
+			<EnableCOMDATFolding>true</EnableCOMDATFolding>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+		<ClCompile>
+			<Optimization>Full</Optimization>
+			<AdditionalIncludeDirectories>..;..\..\..\..\..\..\include;..\..\Common\Win32;..\..\Common;..\..\..\Common;..\..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>NDEBUG;AK_OPTIMIZED;WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader></PrecompiledHeader>
+			<EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>NDEBUG;AK_OPTIMIZED;WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>..;..\..\..\..\..\..\include;..\..\Common\Win32;..\..\Common;..\..\..\Common;..\..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)AkRoomVerbFX.lib</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+			<OptimizeReferences>true</OptimizeReferences>
+			<EnableCOMDATFolding>true</EnableCOMDATFolding>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|Win32'">
+		<ClCompile>
+			<Optimization>Full</Optimization>
+			<AdditionalIncludeDirectories>..;..\..\..\..\..\..\include;..\..\Common\Win32;..\..\Common;..\..\..\Common;..\..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>NDEBUG;AK_OPTIMIZED;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader></PrecompiledHeader>
+			<EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>NDEBUG;AK_OPTIMIZED;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>..;..\..\..\..\..\..\include;..\..\Common\Win32;..\..\Common;..\..\..\Common;..\..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)AkRoomVerbFX.lib</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+			<OptimizeReferences>true</OptimizeReferences>
+			<EnableCOMDATFolding>true</EnableCOMDATFolding>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|x64'">
+		<ClCompile>
+			<Optimization>Full</Optimization>
+			<AdditionalIncludeDirectories>..;..\..\..\..\..\..\include;..\..\Common\Win32;..\..\Common;..\..\..\Common;..\..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>NDEBUG;AK_OPTIMIZED;WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader></PrecompiledHeader>
+			<EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>NDEBUG;AK_OPTIMIZED;WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>..;..\..\..\..\..\..\include;..\..\Common\Win32;..\..\Common;..\..\..\Common;..\..\..\..\AkAudiolib\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)AkRoomVerbFX.lib</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+			<OptimizeReferences>true</OptimizeReferences>
+			<EnableCOMDATFolding>true</EnableCOMDATFolding>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemGroup>
+		<ClInclude Include="..\AkRoomVerbFX.h" />
+		<ClInclude Include="..\AkRoomVerbFXParams.h" />
+		<ClInclude Include="..\AlgoTunings.h" />
+		<ClInclude Include="..\DelayLengths.h" />
+		<ClInclude Include="..\ERTables.h" />
+		<ClInclude Include="..\ERUnitDual.h" />
+		<ClInclude Include="..\FDN4.h" />
+		<ClInclude Include="..\FDNLPFilter.h" />
+		<ClInclude Include="..\ReverbState.h" />
+		<ClInclude Include="..\..\Common\ConstantPowerChannelMixdown.h" />
+		<ClInclude Include="..\..\Common\DelayLine.h" />
+		<ClInclude Include="..\..\Common\Mix3Interp.h" />
+		<ClInclude Include="..\..\Common\OnePoleFilter.h" />
+		<ClInclude Include="..\..\Common\OnePoleZeroHPFilter.h" />
+	</ItemGroup>
+	<ItemGroup>
+		<ClCompile Include="..\AkRoomVerbFX.cpp">
+		</ClCompile>
+		<ClCompile Include="..\AkRoomVerbFXParams.cpp">
+		</ClCompile>
+		<ClCompile Include="..\ERUnitDual.cpp">
+		</ClCompile>
+		<ClCompile Include="..\FDN4.cpp">
+		</ClCompile>
+		<ClCompile Include="..\..\Common\AllpassFilter.cpp">
+		</ClCompile>
+		<ClCompile Include="..\..\Common\ConstantPowerChannelMixdown.cpp">
+		</ClCompile>
+		<ClCompile Include="..\..\Common\DelayLine.cpp">
+		</ClCompile>
+		<ClCompile Include="..\..\Common\Mix3Interp.cpp">
+		</ClCompile>
+		<ClCompile Include="..\..\Common\OnePoleFilter.cpp">
+		</ClCompile>
+		<ClCompile Include="..\..\Common\OnePoleZeroHPFilter.cpp">
+		</ClCompile>
+	</ItemGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+	<ImportGroup Label="ExtensionTargets">
+	</ImportGroup>
+</Project>
