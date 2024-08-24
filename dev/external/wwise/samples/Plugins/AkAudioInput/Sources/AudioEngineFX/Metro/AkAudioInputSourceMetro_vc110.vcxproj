@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup Label="ProjectConfigurations">
+		<ProjectConfiguration Include="Debug|ARM">
+			<Configuration>Debug</Configuration>
+			<Platform>ARM</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Debug|Win32">
+			<Configuration>Debug</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Debug|x64">
+			<Configuration>Debug</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Profile|ARM">
+			<Configuration>Profile</Configuration>
+			<Platform>ARM</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Profile|Win32">
+			<Configuration>Profile</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Profile|x64">
+			<Configuration>Profile</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Release|ARM">
+			<Configuration>Release</Configuration>
+			<Platform>ARM</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Release|Win32">
+			<Configuration>Release</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Release|x64">
+			<Configuration>Release</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+	</ItemGroup>
+	<PropertyGroup Label="Globals">
+		<ProjectGuid>{1CEE3EFC-8BB6-5450-F0C4-7527747614C3}</ProjectGuid>
+		<RootNamespace>AkAudioInputSource</RootNamespace>
+		<Keyword>Win32Proj</Keyword>
+		<ProjectName>AkAudioInputSource</ProjectName>
+		<VCTargetsPath Condition="'$(VCTargetsPath11)' != '' and '$(VSVersion)' == '' and $(VisualStudioVersion) == ''">$(VCTargetsPath11)</VCTargetsPath>
+		<DefaultLanguage>en-US</DefaultLanguage>
+		<MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+		<AppContainerApplication>true</AppContainerApplication>
+	</PropertyGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<UseDebugLibraries>false</UseDebugLibraries>
+		<PlatformToolset>v110</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<UseDebugLibraries>false</UseDebugLibraries>
+		<PlatformToolset>v110</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<UseDebugLibraries>false</UseDebugLibraries>
+		<PlatformToolset>v110</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|ARM'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<UseDebugLibraries>false</UseDebugLibraries>
+		<PlatformToolset>v110</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<UseDebugLibraries>false</UseDebugLibraries>
+		<PlatformToolset>v110</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|x64'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<UseDebugLibraries>false</UseDebugLibraries>
+		<PlatformToolset>v110</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<UseDebugLibraries>false</UseDebugLibraries>
+		<PlatformToolset>v110</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<UseDebugLibraries>false</UseDebugLibraries>
+		<PlatformToolset>v110</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<UseDebugLibraries>false</UseDebugLibraries>
+		<PlatformToolset>v110</PlatformToolset>
+	</PropertyGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+	<ImportGroup Label="ExtensionSettings">
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../../../../source/Build/PropertySheets/Metro/Debug_vc110.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../../../../source/Build/PropertySheets/Metro/Debug_vc110.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../../../../source/Build/PropertySheets/Metro/Debug_vc110.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Profile|ARM'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../../../../source/Build/PropertySheets/Metro/NDebug_vc110.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../../../../source/Build/PropertySheets/Metro/NDebug_vc110.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Profile|x64'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../../../../source/Build/PropertySheets/Metro/NDebug_vc110.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../../../../source/Build/PropertySheets/Metro/NDebug_vc110.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../../../../source/Build/PropertySheets/Metro/NDebug_vc110.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../../../../source/Build/PropertySheets/Metro/NDebug_vc110.props" />
+	</ImportGroup>
+	<PropertyGroup Label="UserMacros" />
+	<PropertyGroup>
+		<_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">..\..\..\..\..\..\Metro_$(Platform)_vc110\$(Configuration)\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">..\..\..\..\..\..\Metro_$(Platform)_vc110\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">AkAudioInputSource</TargetName>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\..\..\..\Metro_$(Platform)_vc110\$(Configuration)\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\..\..\..\Metro_$(Platform)_vc110\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AkAudioInputSource</TargetName>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\..\..\..\Metro_$(Platform)_vc110\$(Configuration)\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\..\..\..\Metro_$(Platform)_vc110\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AkAudioInputSource</TargetName>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Profile|ARM'">..\..\..\..\..\..\Metro_$(Platform)_vc110\$(Configuration)\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Profile|ARM'">..\..\..\..\..\..\Metro_$(Platform)_vc110\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Profile|ARM'">AkAudioInputSource</TargetName>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'">..\..\..\..\..\..\Metro_$(Platform)_vc110\$(Configuration)\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'">..\..\..\..\..\..\Metro_$(Platform)_vc110\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'">AkAudioInputSource</TargetName>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">..\..\..\..\..\..\Metro_$(Platform)_vc110\$(Configuration)\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">..\..\..\..\..\..\Metro_$(Platform)_vc110\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">AkAudioInputSource</TargetName>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">..\..\..\..\..\..\Metro_$(Platform)_vc110\$(Configuration)\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">..\..\..\..\..\..\Metro_$(Platform)_vc110\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">AkAudioInputSource</TargetName>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\..\..\..\Metro_$(Platform)_vc110\$(Configuration)\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\..\..\..\Metro_$(Platform)_vc110\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AkAudioInputSource</TargetName>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\..\..\..\Metro_$(Platform)_vc110\$(Configuration)\lib\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\..\..\..\Metro_$(Platform)_vc110\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AkAudioInputSource</TargetName>
+	</PropertyGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+		<ClCompile>
+			<Optimization>MaxSpeed</Optimization>
+			<AdditionalIncludeDirectories>.;..;..\..\..\..\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>_DEBUG;AUDIOKINETIC;AKSOUNDENGINE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader></PrecompiledHeader>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>_DEBUG;AUDIOKINETIC;AKSOUNDENGINE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>.;..;..\..\..\..\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)AkAudioInputSource.lib</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+			<OptimizeReferences>true</OptimizeReferences>
+			<EnableCOMDATFolding>true</EnableCOMDATFolding>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+		<ClCompile>
+			<Optimization>MaxSpeed</Optimization>
+			<AdditionalIncludeDirectories>.;..;..\..\..\..\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>_DEBUG;WIN32;AUDIOKINETIC;AKSOUNDENGINE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader></PrecompiledHeader>
+			<EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>_DEBUG;WIN32;AUDIOKINETIC;AKSOUNDENGINE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>.;..;..\..\..\..\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)AkAudioInputSource.lib</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+			<OptimizeReferences>true</OptimizeReferences>
+			<EnableCOMDATFolding>true</EnableCOMDATFolding>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+		<ClCompile>
+			<Optimization>MaxSpeed</Optimization>
+			<AdditionalIncludeDirectories>.;..;..\..\..\..\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>_DEBUG;WIN64;AUDIOKINETIC;AKSOUNDENGINE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader></PrecompiledHeader>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>_DEBUG;WIN64;AUDIOKINETIC;AKSOUNDENGINE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>.;..;..\..\..\..\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)AkAudioInputSource.lib</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+			<OptimizeReferences>true</OptimizeReferences>
+			<EnableCOMDATFolding>true</EnableCOMDATFolding>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Profile|ARM'">
+		<ClCompile>
+			<Optimization>MaxSpeed</Optimization>
+			<AdditionalIncludeDirectories>.;..;..\..\..\..\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>NDEBUG;AUDIOKINETIC;AKSOUNDENGINE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader></PrecompiledHeader>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>NDEBUG;AUDIOKINETIC;AKSOUNDENGINE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>.;..;..\..\..\..\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)AkAudioInputSource.lib</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+			<OptimizeReferences>true</OptimizeReferences>
+			<EnableCOMDATFolding>true</EnableCOMDATFolding>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'">
+		<ClCompile>
+			<Optimization>MaxSpeed</Optimization>
+			<AdditionalIncludeDirectories>.;..;..\..\..\..\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>NDEBUG;WIN32;AUDIOKINETIC;AKSOUNDENGINE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader></PrecompiledHeader>
+			<EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>NDEBUG;WIN32;AUDIOKINETIC;AKSOUNDENGINE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>.;..;..\..\..\..\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)AkAudioInputSource.lib</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+			<OptimizeReferences>true</OptimizeReferences>
+			<EnableCOMDATFolding>true</EnableCOMDATFolding>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">
+		<ClCompile>
+			<Optimization>MaxSpeed</Optimization>
+			<AdditionalIncludeDirectories>.;..;..\..\..\..\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>NDEBUG;WIN64;AUDIOKINETIC;AKSOUNDENGINE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader></PrecompiledHeader>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>NDEBUG;WIN64;AUDIOKINETIC;AKSOUNDENGINE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>.;..;..\..\..\..\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)AkAudioInputSource.lib</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+			<OptimizeReferences>true</OptimizeReferences>
+			<EnableCOMDATFolding>true</EnableCOMDATFolding>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+		<ClCompile>
+			<Optimization>MaxSpeed</Optimization>
+			<AdditionalIncludeDirectories>.;..;..\..\..\..\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>NDEBUG;AK_OPTIMIZED;AUDIOKINETIC;AKSOUNDENGINE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader></PrecompiledHeader>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>NDEBUG;AK_OPTIMIZED;AUDIOKINETIC;AKSOUNDENGINE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>.;..;..\..\..\..\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)AkAudioInputSource.lib</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+			<OptimizeReferences>true</OptimizeReferences>
+			<EnableCOMDATFolding>true</EnableCOMDATFolding>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+		<ClCompile>
+			<Optimization>MaxSpeed</Optimization>
+			<AdditionalIncludeDirectories>.;..;..\..\..\..\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>NDEBUG;AK_OPTIMIZED;WIN32;AUDIOKINETIC;AKSOUNDENGINE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader></PrecompiledHeader>
+			<EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>NDEBUG;AK_OPTIMIZED;WIN32;AUDIOKINETIC;AKSOUNDENGINE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>.;..;..\..\..\..\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)AkAudioInputSource.lib</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+			<OptimizeReferences>true</OptimizeReferences>
+			<EnableCOMDATFolding>true</EnableCOMDATFolding>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+		<ClCompile>
+			<Optimization>MaxSpeed</Optimization>
+			<AdditionalIncludeDirectories>.;..;..\..\..\..\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>NDEBUG;AK_OPTIMIZED;WIN64;AUDIOKINETIC;AKSOUNDENGINE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader></PrecompiledHeader>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>NDEBUG;AK_OPTIMIZED;WIN64;AUDIOKINETIC;AKSOUNDENGINE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>.;..;..\..\..\..\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	<Lib>
+		<OutputFile>$(OutDir)AkAudioInputSource.lib</OutputFile>
+	</Lib>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+			<OptimizeReferences>true</OptimizeReferences>
+			<EnableCOMDATFolding>true</EnableCOMDATFolding>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemGroup>
+		<ClInclude Include="..\AkFXSrcAudioInput.h" />
+		<ClInclude Include="..\AkFXSrcAudioInputParams.h" />
+		<ClInclude Include="..\..\..\..\..\..\include\AK\Plugin\AkAudioInputSourceFactory.h" />
+		<ClInclude Include="..\..\..\..\..\..\include\AK\Plugin\PluginServices\AkValueRamp.h" />
+	</ItemGroup>
+	<ItemGroup>
+		<ClCompile Include="..\AkFXSrcAudioInput.cpp">
+		</ClCompile>
+		<ClCompile Include="..\AkFXSrcAudioInputParams.cpp">
+		</ClCompile>
+	</ItemGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+	<ImportGroup Label="ExtensionTargets">
+	</ImportGroup>
+</Project>

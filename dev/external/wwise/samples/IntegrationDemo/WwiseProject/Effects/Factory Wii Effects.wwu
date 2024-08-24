@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{7FE6457A-8D14-4D77-895C-AE53602C6B10}" SchemaVersion="62">
+	<Effects>
+		<WorkUnit Name="Factory Wii Effects" ID="{7FE6457A-8D14-4D77-895C-AE53602C6B10}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Wii Delay" ID="{14FB4AE8-26A0-46D2-92BE-5C4DD5192154}" ShortID="248217876">
+					<ChildrenList>
+						<Effect Name="Echoes_Linear_01" ID="{1B77703E-5104-4848-A428-ECACE6169D53}" PluginName="Wii Delay" CompanyID="0" PluginID="114">
+							<PropertyList>
+								<Property Name="Delay" Type="Real32" Value="500" />
+								<Property Name="Feedback" Type="Real32" Value="35" />
+							</PropertyList>
+						</Effect>
+						<Effect Name="Almost_Forever" ID="{C9AE20B0-1EC6-4FEB-94DC-E455F4220B0B}" PluginName="Wii Delay" CompanyID="0" PluginID="114">
+							<PropertyList>
+								<Property Name="Delay" Type="Real32" Value="600" />
+								<Property Name="Feedback" Type="Real32" Value="80" />
+							</PropertyList>
+						</Effect>
+						<Effect Name="OneTap_Half_Second" ID="{CC2334F0-3CF7-4FBE-BD0F-B9073F5568EC}" PluginName="Wii Delay" CompanyID="0" PluginID="114">
+							<PropertyList>
+								<Property Name="Delay" Type="Real32" Value="500" />
+								<Property Name="Feedback" Type="Real32" Value="15" />
+							</PropertyList>
+						</Effect>
+						<Effect Name="OneTap_One_Second" ID="{20B953C6-BD11-4BE3-9810-8B86BCB73495}" PluginName="Wii Delay" CompanyID="0" PluginID="114" />
+						<Effect Name="OneTap_Quarter_Second" ID="{72B0E707-5ECD-4352-A336-FCB0F58035F6}" PluginName="Wii Delay" CompanyID="0" PluginID="114">
+							<PropertyList>
+								<Property Name="Delay" Type="Real32" Value="250" />
+							</PropertyList>
+						</Effect>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Wii Chorus" ID="{70916FDC-BE84-454D-A18D-7DCCCBDEBC38}" ShortID="345611290">
+					<ChildrenList>
+						<Effect Name="Warped_Record" ID="{1E300825-43DB-4559-AD30-A0A5DA741165}" PluginName="Wii Chorus" CompanyID="0" PluginID="113">
+							<PropertyList>
+								<Property Name="Period" Type="Real32" Value="500" />
+								<Property Name="Variation" Type="Real32" Value="5" />
+							</PropertyList>
+						</Effect>
+						<Effect Name="Medium_Chorus" ID="{D53E2CC2-FABF-4C80-A73A-CEE545549D04}" PluginName="Wii Chorus" CompanyID="0" PluginID="113">
+							<PropertyList>
+								<Property Name="BaseDelay" Type="Real32" Value="10" />
+								<Property Name="Period" Type="Real32" Value="5000" />
+								<Property Name="Variation" Type="Real32" Value="2" />
+							</PropertyList>
+						</Effect>
+						<Effect Name="Slow_Flange" ID="{5727069D-7398-4F34-BDD2-3E21D6F9E73C}" PluginName="Wii Chorus" CompanyID="0" PluginID="113">
+							<PropertyList>
+								<Property Name="Period" Type="Real32" Value="10000" />
+								<Property Name="Variation" Type="Real32" Value="4" />
+							</PropertyList>
+						</Effect>
+						<Effect Name="Tight_Chorus" ID="{EAEB0594-B6C4-4A1B-A80E-8BD490096D33}" PluginName="Wii Chorus" CompanyID="0" PluginID="113">
+							<PropertyList>
+								<Property Name="Period" Type="Real32" Value="750" />
+								<Property Name="Variation" Type="Real32" Value="2" />
+							</PropertyList>
+						</Effect>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Wii High-Quality Reverb" ID="{4E1573F6-941C-4AE8-917B-904294B0E36B}" ShortID="211722127">
+					<ChildrenList>
+						<Effect Name="Hangar" ID="{2D7328CF-1F10-444B-84C3-C483815478D9}" PluginName="Wii High-Quality Reverb" CompanyID="0" PluginID="111">
+							<PropertyList>
+								<Property Name="Coloration" Type="Real32" Value="0.5" />
+								<Property Name="Crosstalk" Type="Real32" Value="0.05" />
+								<Property Name="Damping" Type="Real32" Value="0.1" />
+								<Property Name="ReverbTime" Type="Real32" Value="8" />
+							</PropertyList>
+						</Effect>
+						<Effect Name="Concert_Hall" ID="{B5157A71-9A2F-456D-9D61-EA634BDF6889}" PluginName="Wii High-Quality Reverb" CompanyID="0" PluginID="111">
+							<PropertyList>
+								<Property Name="Coloration" Type="Real32" Value="0.5" />
+								<Property Name="Damping" Type="Real32" Value="0.5" />
+								<Property Name="PreDelay" Type="Real32" Value="0.02" />
+							</PropertyList>
+						</Effect>
+						<Effect Name="Wooden_Room" ID="{5ACFE85D-635A-4BA8-BBEC-CEAF51BE9B7F}" PluginName="Wii High-Quality Reverb" CompanyID="0" PluginID="111">
+							<PropertyList>
+								<Property Name="Coloration" Type="Real32" Value="0.4" />
+								<Property Name="Crosstalk" Type="Real32" Value="0.03" />
+								<Property Name="Damping" Type="Real32" Value="0" />
+								<Property Name="PreDelay" Type="Real32" Value="0.06" />
+								<Property Name="ReverbTime" Type="Real32" Value="2" />
+							</PropertyList>
+						</Effect>
+						<Effect Name="Larger_Church" ID="{172F273C-981B-408B-9E88-73F87394041C}" PluginName="Wii High-Quality Reverb" CompanyID="0" PluginID="111">
+							<PropertyList>
+								<Property Name="Coloration" Type="Real32" Value="0.04" />
+								<Property Name="Damping" Type="Real32" Value="0.05" />
+								<Property Name="PreDelay" Type="Real32" Value="0.055" />
+								<Property Name="ReverbTime" Type="Real32" Value="5" />
+							</PropertyList>
+						</Effect>
+						<Effect Name="Parking_Garage" ID="{2C3A4CCC-2E17-402A-8F16-25A1C9345492}" PluginName="Wii High-Quality Reverb" CompanyID="0" PluginID="111">
+							<PropertyList>
+								<Property Name="Coloration" Type="Real32" Value="0.5" />
+								<Property Name="Crosstalk" Type="Real32" Value="0.05" />
+								<Property Name="Damping" Type="Real32" Value="0.1" />
+								<Property Name="ReverbTime" Type="Real32" Value="8" />
+							</PropertyList>
+						</Effect>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Wii Standard Reverb" ID="{7A49DFFA-220E-4CAB-80C5-8EF10716DE7E}" ShortID="460035358">
+					<ChildrenList>
+						<Effect Name="Sewer_Pipe" ID="{849230AB-C338-4110-8041-40118B4DC004}" PluginName="Wii Standard Reverb" CompanyID="0" PluginID="112">
+							<PropertyList>
+								<Property Name="Coloration" Type="Real32" Value="0.75" />
+								<Property Name="Damping" Type="Real32" Value="0.25" />
+								<Property Name="PreDelay" Type="Real32" Value="0" />
+								<Property Name="ReverbTime" Type="Real32" Value="3" />
+							</PropertyList>
+						</Effect>
+						<Effect Name="Small_Room" ID="{254B1DCA-DA28-4CB9-B9A3-65528031FE48}" PluginName="Wii Standard Reverb" CompanyID="0" PluginID="112">
+							<PropertyList>
+								<Property Name="Coloration" Type="Real32" Value="0.5" />
+								<Property Name="Damping" Type="Real32" Value="0" />
+								<Property Name="PreDelay" Type="Real32" Value="0" />
+								<Property Name="ReverbTime" Type="Real32" Value="0.4" />
+							</PropertyList>
+						</Effect>
+						<Effect Name="Large_Room" ID="{C40F4610-8404-4A5B-AF65-DA8AC1CF874C}" PluginName="Wii Standard Reverb" CompanyID="0" PluginID="112">
+							<PropertyList>
+								<Property Name="Coloration" Type="Real32" Value="0.2" />
+								<Property Name="Damping" Type="Real32" Value="0.5" />
+								<Property Name="PreDelay" Type="Real32" Value="0.03" />
+								<Property Name="ReverbTime" Type="Real32" Value="7.5" />
+							</PropertyList>
+						</Effect>
+						<Effect Name="Garage" ID="{F88BE6D4-6202-4443-B1CA-A94BE5C0E6C2}" PluginName="Wii Standard Reverb" CompanyID="0" PluginID="112">
+							<ExcludedPlatformList>
+								<Platform>VitaSW</Platform>
+								<Platform>Windows</Platform>
+								<Platform>WiiUSW</Platform>
+								<Platform>Xbox360</Platform>
+								<Platform>3DS</Platform>
+								<Platform>PS3</Platform>
+								<Platform>iOS</Platform>
+								<Platform>PS4</Platform>
+								<Platform>Mac</Platform>
+								<Platform>Android</Platform>
+								<Platform>VitaHW</Platform>
+							</ExcludedPlatformList>
+							<PropertyList>
+								<Property Name="Coloration" Type="Real32" Value="0.75" />
+								<Property Name="Damping" Type="Real32" Value="0.25" />
+								<Property Name="PreDelay" Type="Real32" Value="0.05" />
+								<Property Name="ReverbTime" Type="Real32" Value="5" />
+							</PropertyList>
+						</Effect>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Effects>
+</WwiseDocument>

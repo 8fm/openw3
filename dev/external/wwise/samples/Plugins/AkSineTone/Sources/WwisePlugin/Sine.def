@@ -1,0 +1,7 @@
+; Sine.def : Declares the module parameters for the DLL.
+
+LIBRARY      "Sine"
+
+EXPORTS
+	AkCreatePlugin
+	AkGetSoundEngineCallbacks

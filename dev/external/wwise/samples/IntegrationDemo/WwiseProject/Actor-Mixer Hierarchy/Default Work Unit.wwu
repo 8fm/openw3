@@ -1,0 +1,734 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{88012962-D6A8-4400-BC86-DF1A5980EDFA}" SchemaVersion="62">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{88012962-D6A8-4400-BC86-DF1A5980EDFA}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="Hello" ID="{5BA74442-2DEC-4370-AD70-97FC17EBF05D}" ShortID="39" Type="Voice">
+					<PropertyList>
+						<Property Name="DivergenceCenter" Type="int32">
+							<ValueList>
+								<Value>100</Value>
+							</ValueList>
+						</Property>
+						<Property Name="IsLoopingInfinite" Type="bool" Value="False" />
+						<Property Name="Priority" Type="int16">
+							<ValueList>
+								<Value>100</Value>
+								<Value Platform="Windows">100</Value>
+								<Value Platform="iOS">100</Value>
+								<Value Platform="PS4">100</Value>
+								<Value Platform="Mac">100</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Voices" ID="{FCDDF691-8885-4A61-BF35-24E9EA98700E}" WorkUnitID="{B90D7019-72C6-46E8-990C-3BC04B2724DB}" />
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Hello" ID="{2B2BB61A-EDDE-4219-B3ED-88AA9F94C541}" ShortID="399670944">
+							<Language>English(US)</Language>
+							<AudioFile>Hello.wav</AudioFile>
+						</AudioFileSource>
+						<AudioFileSource Name="Hello" ID="{674384D4-6A32-4654-A11D-36459C45AE69}" ShortID="570464320">
+							<Language>French(Canada)</Language>
+							<AudioFile>Hello.wav</AudioFile>
+						</AudioFileSource>
+						<SourcePlugin Name="Audio Input" ID="{701EB49F-9FBD-49E9-99FB-4291BBA2C5C2}" ShortID="644238497" PluginName="Wwise Audio Input" CompanyID="0" PluginID="200">
+							<Language>French(Canada)</Language>
+						</SourcePlugin>
+						<SourcePlugin Name="MP3 Input" ID="{864D14A9-8BAE-4B3E-BA78-D5A15E349ECB}" ShortID="685307368" PluginName="Wwise MP3 Input" CompanyID="0" PluginID="201">
+							<Language>French(Canada)</Language>
+						</SourcePlugin>
+						<SourcePlugin Name="Sine" ID="{1A8965BC-BDBF-4076-883F-F0862A155102}" ShortID="13945494" PluginName="Wwise Sine" CompanyID="0" PluginID="100">
+							<Language>French(Canada)</Language>
+						</SourcePlugin>
+						<SourcePlugin Name="Tone Generator" ID="{7B67563E-8299-4A16-B60E-453C19F66718}" ShortID="521053454" PluginName="Wwise Tone Generator" CompanyID="0" PluginID="102">
+							<Language>French(Canada)</Language>
+						</SourcePlugin>
+						<SourcePlugin Name="Wwise Silence" ID="{F2F43000-B6BB-42BD-BAF2-3660849E0021}" ShortID="685259227" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
+							<Language>French(Canada)</Language>
+						</SourcePlugin>
+					</ChildrenList>
+					<PositioningInfo>
+						<AttenuationInfo>
+							<NoAttenuation Platform="Linked" />
+						</AttenuationInfo>
+					</PositioningInfo>
+					<ConversionInfo>
+						<ConversionRef Name="Voice" ID="{E6582A3A-9DF1-4AF7-B55C-0E717D979AF8}" />
+					</ConversionInfo>
+					<ActiveSourceList>
+						<ActiveSource Name="Hello" ID="{2B2BB61A-EDDE-4219-B3ED-88AA9F94C541}" Platform="Linked" />
+						<ActiveSource Name="Hello" ID="{674384D4-6A32-4654-A11D-36459C45AE69}" Platform="Linked" />
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Markers_Test" ID="{447BE3DF-9FCC-438D-B834-95621EDCBB98}" ShortID="323164640" Type="SoundFX">
+					<PropertyList>
+						<Property Name="DivergenceCenter" Type="int32">
+							<ValueList>
+								<Value>100</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Control Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B90D7019-72C6-46E8-990C-3BC04B2724DB}" />
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Marker_Test_001" ID="{1B6ECDE4-A688-4993-B8EA-FF25B22057AB}" ShortID="544694784">
+							<Language>SFX</Language>
+							<AudioFile>Marker_Test_001.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<PositioningInfo>
+						<AttenuationInfo>
+							<NoAttenuation Platform="Linked" />
+						</AttenuationInfo>
+					</PositioningInfo>
+					<ConversionInfo>
+						<ConversionRef Name="Voice" ID="{E6582A3A-9DF1-4AF7-B55C-0E717D979AF8}" />
+					</ConversionInfo>
+					<ActiveSourceList>
+						<ActiveSource Name="Marker_Test_001" ID="{1B6ECDE4-A688-4993-B8EA-FF25B22057AB}" Platform="Linked" />
+					</ActiveSourceList>
+				</Sound>
+				<BlendContainer Name="Engine" ID="{DD540EA0-95C1-4CB0-B446-15C3F29C7959}" ShortID="900776192">
+					<PropertyList>
+						<Property Name="Lowpass" Type="int16">
+							<ValueList>
+								<Value>37</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Control Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B90D7019-72C6-46E8-990C-3BC04B2724DB}" />
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Engine_3000" ID="{B3F782B8-E527-41AB-B57A-73ACEEEC55FB}" ShortID="245489792" Type="SoundFX">
+							<Comment>Audiokinetic Inc. All rights reserved.
+Audio content provided by Tinitus, Inc.
+With the help of the Conservatory of Recording Arts and Sciences.
+© 2007 Tinitus, Inc.
+www.tinitus.net
+
+The Audio Content contained in this file is the property of Tinitus, Inc.  Your sole right with regard to this Audio Content is to listen to the Audio Content as part of this Sample Project.  This Audio Content cannot be used or modified for a commercial purpose nor for public demonstration.</Comment>
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True" />
+								<Property Name="Pitch" Type="int32">
+									<RTPCList>
+										<RTPC Name="" ID="{589190E3-2E98-4C8A-914D-4574322FFD3D}" ShortID="4806062">
+											<GameParameterRef Name="RPM" ID="{96D82097-CAED-4AA7-8853-18BD54CC94C6}" />
+											<Curve Name="" ID="{4319DE2D-86D4-4D6E-BC52-E95EE60545A8}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="65537" />
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>1000</XPos>
+														<YPos>-1902</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>1562.5</XPos>
+														<YPos>-1129</YPos>
+														<Flags>0</Flags>
+													</Point>
+													<Point>
+														<XPos>2125</XPos>
+														<YPos>-597</YPos>
+														<Flags>0</Flags>
+													</Point>
+													<Point>
+														<XPos>3250</XPos>
+														<YPos>139</YPos>
+														<Flags>0</Flags>
+													</Point>
+													<Point>
+														<XPos>4375</XPos>
+														<YPos>653</YPos>
+														<Flags>0</Flags>
+													</Point>
+													<Point>
+														<XPos>5500</XPos>
+														<YPos>1049</YPos>
+														<Flags>0</Flags>
+													</Point>
+													<Point>
+														<XPos>7750</XPos>
+														<YPos>1643</YPos>
+														<Flags>0</Flags>
+													</Point>
+													<Point>
+														<XPos>10000</XPos>
+														<YPos>2084</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Control Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B90D7019-72C6-46E8-990C-3BC04B2724DB}" />
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Porsche_Outside_On-Load_3000_01" ID="{B99A61E4-468E-438D-B901-57DAA78484AA}" ShortID="77544352">
+									<Comment>Audiokinetic Inc. All rights reserved.
+Audio content provided by Tinitus, Inc.
+With the help of the Conservatory of Recording Arts and Sciences.
+© 2007 Tinitus, Inc.
+www.tinitus.net
+
+The Audio Content contained in this file is the property of Tinitus, Inc.  Your sole right with regard to this 
+Audio Content is to listen to the Audio Content as part of this Sample Project.  This Audio Content cannot be 
+used or modified for a commercial purpose nor for public demonstration.</Comment>
+									<Language>SFX</Language>
+									<AudioFile>Porsche_Outside_On-Load_3000_01.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<PositioningInfo>
+								<AttenuationInfo>
+									<NoAttenuation Platform="Linked" />
+								</AttenuationInfo>
+							</PositioningInfo>
+							<ActiveSourceList>
+								<ActiveSource Name="Porsche_Outside_On-Load_3000_01" ID="{B99A61E4-468E-438D-B901-57DAA78484AA}" Platform="Linked" />
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Engine_4000" ID="{F0855C20-1B09-4860-9913-4D9FA5DC7180}" ShortID="995925760" Type="SoundFX">
+							<Comment>Audiokinetic Inc. All rights reserved.
+Audio content provided by Tinitus, Inc.
+With the help of the Conservatory of Recording Arts and Sciences.
+© 2007 Tinitus, Inc.
+www.tinitus.net
+
+The Audio Content contained in this file is the property of Tinitus, Inc.  Your sole right with regard to this Audio Content is to listen to the Audio Content as part of this Sample Project.  This Audio Content cannot be used or modified for a commercial purpose nor for public demonstration.</Comment>
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True" />
+								<Property Name="Pitch" Type="int32">
+									<RTPCList>
+										<RTPC Name="" ID="{17EFF602-C143-448D-B1E2-E3BCA6611AA3}" ShortID="260025248">
+											<GameParameterRef Name="RPM" ID="{96D82097-CAED-4AA7-8853-18BD54CC94C6}" />
+											<Curve Name="" ID="{9245E19F-0BE4-4D8D-889F-372C9199E152}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="65537" />
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>1000</XPos>
+														<YPos>-2400</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>1562.5</XPos>
+														<YPos>-1627</YPos>
+														<Flags>0</Flags>
+													</Point>
+													<Point>
+														<XPos>2125</XPos>
+														<YPos>-1095</YPos>
+														<Flags>0</Flags>
+													</Point>
+													<Point>
+														<XPos>3250</XPos>
+														<YPos>-359</YPos>
+														<Flags>0</Flags>
+													</Point>
+													<Point>
+														<XPos>4375</XPos>
+														<YPos>155</YPos>
+														<Flags>0</Flags>
+													</Point>
+													<Point>
+														<XPos>5500</XPos>
+														<YPos>551</YPos>
+														<Flags>0</Flags>
+													</Point>
+													<Point>
+														<XPos>7750</XPos>
+														<YPos>1145</YPos>
+														<Flags>0</Flags>
+													</Point>
+													<Point>
+														<XPos>10000</XPos>
+														<YPos>1586</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-1</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Control Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B90D7019-72C6-46E8-990C-3BC04B2724DB}" />
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Porsche_Outside_On-Load_4000_01" ID="{8FF8DEC7-6D14-4C1F-A2AC-4A53F19A7BB0}" ShortID="486600864">
+									<Comment>Audiokinetic Inc. All rights reserved.
+Audio content provided by Tinitus, Inc.
+With the help of the Conservatory of Recording Arts and Sciences.
+© 2007 Tinitus, Inc.
+www.tinitus.net
+
+The Audio Content contained in this file is the property of Tinitus, Inc.  Your sole right with regard to this 
+Audio Content is to listen to the Audio Content as part of this Sample Project.  This Audio Content cannot be 
+used or modified for a commercial purpose nor for public demonstration.</Comment>
+									<Language>SFX</Language>
+									<AudioFile>Porsche_Outside_On-Load_4000_01.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Porsche_Outside_On-Load_4000_01" ID="{8FF8DEC7-6D14-4C1F-A2AC-4A53F19A7BB0}" Platform="Linked" />
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Engine_6000" ID="{8ED2B399-3C71-4EF9-80F6-70C2367C0927}" ShortID="661488448" Type="SoundFX">
+							<Comment>Audiokinetic Inc. All rights reserved.
+Audio content provided by Tinitus, Inc.
+With the help of the Conservatory of Recording Arts and Sciences.
+© 2007 Tinitus, Inc.
+www.tinitus.net
+
+The Audio Content contained in this file is the property of Tinitus, Inc.  Your sole right with regard to this Audio Content is to listen to the Audio Content as part of this Sample Project.  This Audio Content cannot be used or modified for a commercial purpose nor for public demonstration.</Comment>
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True" />
+								<Property Name="Pitch" Type="int32">
+									<RTPCList>
+										<RTPC Name="" ID="{CDDF6978-BC5A-4E50-B6C9-62AD283E1E05}" ShortID="238650448">
+											<GameParameterRef Name="RPM" ID="{96D82097-CAED-4AA7-8853-18BD54CC94C6}" />
+											<Curve Name="" ID="{F0438553-7AE5-4FDB-B96D-8EBB4920231B}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="65537" />
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>1000</XPos>
+														<YPos>-3102</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>1562.5</XPos>
+														<YPos>-2329</YPos>
+														<Flags>0</Flags>
+													</Point>
+													<Point>
+														<XPos>2125</XPos>
+														<YPos>-1797</YPos>
+														<Flags>0</Flags>
+													</Point>
+													<Point>
+														<XPos>3250</XPos>
+														<YPos>-1061</YPos>
+														<Flags>0</Flags>
+													</Point>
+													<Point>
+														<XPos>4375</XPos>
+														<YPos>-547</YPos>
+														<Flags>0</Flags>
+													</Point>
+													<Point>
+														<XPos>5500</XPos>
+														<YPos>-151</YPos>
+														<Flags>0</Flags>
+													</Point>
+													<Point>
+														<XPos>7750</XPos>
+														<YPos>443</YPos>
+														<Flags>0</Flags>
+													</Point>
+													<Point>
+														<XPos>10000</XPos>
+														<YPos>884</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Control Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B90D7019-72C6-46E8-990C-3BC04B2724DB}" />
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Porsche_Outside_On-Load_6000_01" ID="{C3CC3E0D-A6CB-441A-8E85-4B1E4DA6A8FE}" ShortID="401675520">
+									<Comment>Audiokinetic Inc. All rights reserved.
+Audio content provided by Tinitus, Inc.
+With the help of the Conservatory of Recording Arts and Sciences.
+© 2007 Tinitus, Inc.
+www.tinitus.net
+
+The Audio Content contained in this file is the property of Tinitus, Inc.  Your sole right with regard to this 
+Audio Content is to listen to the Audio Content as part of this Sample Project.  This Audio Content cannot be 
+used or modified for a commercial purpose nor for public demonstration.</Comment>
+									<Language>SFX</Language>
+									<AudioFile>Porsche_Outside_On-Load_6000_01.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Porsche_Outside_On-Load_6000_01" ID="{C3CC3E0D-A6CB-441A-8E85-4B1E4DA6A8FE}" Platform="Linked" />
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<PositioningInfo>
+						<AttenuationInfo>
+							<NoAttenuation Platform="Linked" />
+						</AttenuationInfo>
+					</PositioningInfo>
+					<ConversionInfo>
+						<ConversionRef Name="SFX" ID="{3A429FCB-87D8-458B-B315-DBE8023064B3}" />
+					</ConversionInfo>
+					<BlendTrackList>
+						<BlendTrack Name="Blend Track" ID="{BE05A2F2-6E49-4C46-B79F-AE2ADA275201}" ShortID="270968384">
+							<PropertyList>
+								<Property Name="EnableCrossFading" Type="bool" Value="True" />
+								<Property Name="Volume" Type="Real64">
+									<RTPCList>
+										<RTPC Name="" ID="{A871E0D8-10FE-4C98-8C06-BEF0C355ECF9}" ShortID="913248384">
+											<GameParameterRef Name="RPM" ID="{96D82097-CAED-4AA7-8853-18BD54CC94C6}" />
+											<Curve Name="" ID="{122896A0-0A3C-4566-B8E3-391502A5335A}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3" />
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>1000</XPos>
+														<YPos>-1.04618</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>10000</XPos>
+														<YPos>0</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+							</PropertyList>
+							<CrossfadingGameParameterRef Name="RPM" ID="{96D82097-CAED-4AA7-8853-18BD54CC94C6}" />
+							<BlendTrackAssocList>
+								<BlendTrackAssoc>
+									<ItemRef Name="Engine_3000" ID="{B3F782B8-E527-41AB-B57A-73ACEEEC55FB}" />
+									<CrossfadingInfo>
+										<LeftEdgePos>1000</LeftEdgePos>
+										<LeftFadingMode>Automatic</LeftFadingMode>
+										<RightEdgePos>4122.86694981632</RightEdgePos>
+										<RightFadingMode>Automatic</RightFadingMode>
+										<RightFadingSegmentShape>Exp2</RightFadingSegmentShape>
+									</CrossfadingInfo>
+								</BlendTrackAssoc>
+								<BlendTrackAssoc>
+									<ItemRef Name="Engine_4000" ID="{F0855C20-1B09-4860-9913-4D9FA5DC7180}" />
+									<CrossfadingInfo>
+										<LeftEdgePos>1941.979529216</LeftEdgePos>
+										<LeftFadingMode>Automatic</LeftFadingMode>
+										<LeftFadingSegmentShape>Log2</LeftFadingSegmentShape>
+										<RightEdgePos>6416.3825057792</RightEdgePos>
+										<RightFadingMode>Automatic</RightFadingMode>
+										<RightFadingSegmentShape>Exp2</RightFadingSegmentShape>
+									</CrossfadingInfo>
+								</BlendTrackAssoc>
+								<BlendTrackAssoc>
+									<ItemRef Name="Engine_6000" ID="{8ED2B399-3C71-4EF9-80F6-70C2367C0927}" />
+									<CrossfadingInfo>
+										<LeftEdgePos>4588.73735479296</LeftEdgePos>
+										<LeftFadingMode>Automatic</LeftFadingMode>
+										<LeftFadingSegmentShape>Log2</LeftFadingSegmentShape>
+										<RightEdgePos>10000</RightEdgePos>
+										<RightFadingMode>Automatic</RightFadingMode>
+									</CrossfadingInfo>
+								</BlendTrackAssoc>
+							</BlendTrackAssocList>
+						</BlendTrack>
+					</BlendTrackList>
+				</BlendContainer>
+				<Sound Name="Microphone" ID="{DE905730-2690-4B1F-A21D-5CDFF373ED98}" ShortID="105868392" Type="SoundFX">
+					<PropertyList>
+						<Property Name="BypassEffect0" Type="bool">
+							<ValueList>
+								<Value Platform="Wii">False</Value>
+								<Value Platform="WiiUSW">False</Value>
+								<Value Platform="3DS">False</Value>
+							</ValueList>
+						</Property>
+						<Property Name="BypassEffect1" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+								<Value Platform="Wii">False</Value>
+								<Value Platform="WiiUSW">True</Value>
+								<Value Platform="3DS">False</Value>
+							</ValueList>
+						</Property>
+						<Property Name="BypassEffect2" Type="bool">
+							<ValueList>
+								<Value Platform="Wii">False</Value>
+								<Value Platform="WiiUSW">False</Value>
+								<Value Platform="3DS">False</Value>
+							</ValueList>
+						</Property>
+						<Property Name="BypassEffect3" Type="bool">
+							<ValueList>
+								<Value Platform="Wii">False</Value>
+								<Value Platform="WiiUSW">False</Value>
+								<Value Platform="3DS">False</Value>
+							</ValueList>
+						</Property>
+						<Property Name="RenderEffect0" Type="bool">
+							<ValueList>
+								<Value Platform="Wii">False</Value>
+								<Value Platform="WiiUSW">False</Value>
+								<Value Platform="3DS">False</Value>
+							</ValueList>
+						</Property>
+						<Property Name="RenderEffect1" Type="bool">
+							<ValueList>
+								<Value Platform="Wii">False</Value>
+								<Value Platform="WiiUSW">False</Value>
+								<Value Platform="3DS">False</Value>
+							</ValueList>
+						</Property>
+						<Property Name="RenderEffect2" Type="bool">
+							<ValueList>
+								<Value Platform="Wii">False</Value>
+								<Value Platform="WiiUSW">False</Value>
+								<Value Platform="3DS">False</Value>
+							</ValueList>
+						</Property>
+						<Property Name="RenderEffect3" Type="bool">
+							<ValueList>
+								<Value Platform="Wii">False</Value>
+								<Value Platform="WiiUSW">False</Value>
+								<Value Platform="3DS">False</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Control Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B90D7019-72C6-46E8-990C-3BC04B2724DB}" />
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<SourcePlugin Name="Audio Input" ID="{A8B026D3-4334-4C4B-B829-3E0F86D38E08}" ShortID="340541280" PluginName="Wwise Audio Input" CompanyID="0" PluginID="200">
+							<PropertyList>
+								<Property Name="AudioInputGain" Type="Real32" Value="0" />
+							</PropertyList>
+							<Language>SFX</Language>
+						</SourcePlugin>
+					</ChildrenList>
+					<EffectInfo>
+						<CustomEffect Platform="Linked" Index="0">
+							<Effect Name="Default (Custom)" ID="{7F4B07D8-C838-435D-B4EC-3E3213D1BB17}" ShortID="656632019" PluginName="Wwise Peak Limiter" CompanyID="0" PluginID="110">
+								<PropertyList>
+									<Property Name="OutputGain" Type="Real32" Value="11" />
+									<Property Name="Ratio" Type="Real32" Value="50" />
+									<Property Name="ReleaseTime" Type="Real32" Value="0.1" />
+								</PropertyList>
+							</Effect>
+						</CustomEffect>
+						<CustomEffect Platform="Linked" Index="1" CreatedFrom="{D20F3717-EBA2-4E3A-84F8-C8BD431563FB}">
+							<Effect Name="Echoes_Linear (Define custom)" ID="{7EF8F484-2490-40AA-A10D-B4295B46A7F0}" ShortID="748014606" PluginName="Wwise Delay" CompanyID="0" PluginID="106" />
+						</CustomEffect>
+					</EffectInfo>
+					<ConversionInfo>
+						<ConversionRef Name="SFX" ID="{3A429FCB-87D8-458B-B315-DBE8023064B3}" />
+					</ConversionInfo>
+					<ActiveSourceList>
+						<ActiveSource Name="Audio Input" ID="{A8B026D3-4334-4C4B-B829-3E0F86D38E08}" Platform="Linked" />
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Positioning_Demo" ID="{909498C3-C3D7-403B-A189-832A2B6674BD}" ShortID="1013554424" Type="SoundFX">
+					<PropertyList>
+						<Property Name="DivergenceCenter" Type="int32">
+							<ValueList>
+								<Value>100</Value>
+							</ValueList>
+						</Property>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True" />
+						<Property Name="MotionLowpass" Type="int16">
+							<ValueList>
+								<Value>0</Value>
+							</ValueList>
+						</Property>
+						<Property Name="PositioningType" Type="int16" Value="1" />
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Control Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B90D7019-72C6-46E8-990C-3BC04B2724DB}" />
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<SourcePlugin Name="Tone Generator" ID="{5045A975-22B2-404A-9085-3F09BAA13431}" ShortID="216464226" PluginName="Wwise Tone Generator" CompanyID="0" PluginID="102">
+							<PropertyList>
+								<Property Name="AttackTime" Type="Real32" Value="0.02" />
+								<Property Name="DurMode" Type="int32" Value="1" />
+								<Property Name="FixDur" Type="Real32" Value="0.06" />
+								<Property Name="ReleaseTime" Type="Real32" Value="0.02" />
+								<Property Name="SustainTime" Type="Real32" Value="0.02" />
+								<Property Name="WaveType" Type="int32" Value="5" />
+							</PropertyList>
+							<Language>SFX</Language>
+						</SourcePlugin>
+					</ChildrenList>
+					<PositioningInfo>
+						<AttenuationInfo>
+							<AttenuationRef Name="TEST" ID="{25F18D70-26B2-4DED-B075-E604291CD27C}" Platform="Linked" />
+						</AttenuationInfo>
+					</PositioningInfo>
+					<ConversionInfo>
+						<ConversionRef Name="SFX" ID="{3A429FCB-87D8-458B-B315-DBE8023064B3}" />
+					</ConversionInfo>
+					<ActiveSourceList>
+						<ActiveSource Name="Tone Generator" ID="{5045A975-22B2-404A-9085-3F09BAA13431}" Platform="Linked" />
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Hello_RSX" ID="{3C2A8C74-D9C7-4F38-A9E9-EB9764C6FB04}" ShortID="127164717" Type="Voice">
+					<ExcludedPlatformList>
+						<Platform>VitaSW</Platform>
+						<Platform>Wii</Platform>
+						<Platform>WiiUSW</Platform>
+						<Platform>Xbox360</Platform>
+						<Platform>3DS</Platform>
+						<Platform>iOS</Platform>
+						<Platform>Mac</Platform>
+						<Platform>VitaHW</Platform>
+					</ExcludedPlatformList>
+					<PropertyList>
+						<Property Name="DivergenceCenter" Type="int32">
+							<ValueList>
+								<Value>100</Value>
+							</ValueList>
+						</Property>
+						<Property Name="IsRSXStreamingEnabled" Type="bool" Value="True" />
+						<Property Name="Priority" Type="int16">
+							<ValueList>
+								<Value>100</Value>
+								<Value Platform="Windows">100</Value>
+								<Value Platform="iOS">100</Value>
+								<Value Platform="PS4">100</Value>
+								<Value Platform="Mac">100</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Voices" ID="{FCDDF691-8885-4A61-BF35-24E9EA98700E}" WorkUnitID="{B90D7019-72C6-46E8-990C-3BC04B2724DB}" />
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Hello" ID="{64A26D37-8FB4-4519-90BE-4B9C645D7CBE}" ShortID="557907063">
+							<Language>English(US)</Language>
+							<AudioFile>Hello.wav</AudioFile>
+						</AudioFileSource>
+						<AudioFileSource Name="Hello" ID="{DCBFD8FD-88A7-444B-8FB6-27639472FE51}" ShortID="306982885">
+							<Language>French(Canada)</Language>
+							<AudioFile>Hello.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<PositioningInfo>
+						<AttenuationInfo>
+							<NoAttenuation Platform="Linked" />
+						</AttenuationInfo>
+					</PositioningInfo>
+					<ConversionInfo>
+						<ConversionRef Name="Voice" ID="{E6582A3A-9DF1-4AF7-B55C-0E717D979AF8}" />
+					</ConversionInfo>
+					<ActiveSourceList>
+						<ActiveSource Name="Hello" ID="{64A26D37-8FB4-4519-90BE-4B9C645D7CBE}" Platform="Linked" />
+						<ActiveSource Name="Hello" ID="{DCBFD8FD-88A7-444B-8FB6-27639472FE51}" Platform="Linked" />
+					</ActiveSourceList>
+				</Sound>
+				<Folder Name="BGM Demo" ID="{52468003-8793-4F9F-BF10-7C5863733A82}" ShortID="302124742">
+					<ChildrenList>
+						<Sound Name="NonRecordableMusic" ID="{25C31C5B-9955-46C8-BC4C-DA953F59FFFD}" ShortID="986248011" Type="SoundFX">
+							<PropertyList>
+								<Property Name="HdrEnvelopeSensitivity" Type="Real64" Value="20" />
+								<Property Name="MotionLowpass" Type="int16">
+									<ValueList>
+										<Value>0</Value>
+									</ValueList>
+								</Property>
+								<Property Name="VirtualVoiceQueueBehavior" Type="int16" Value="1" />
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Unrecorded Background Music" ID="{D03CA0DB-019D-4D28-B97D-6E7B4AD39D4F}" WorkUnitID="{B90D7019-72C6-46E8-990C-3BC04B2724DB}" />
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Guitar" ID="{1DE0C005-C746-4438-9EC1-D1433E1CA1F3}" ShortID="1028934394">
+									<PropertyList>
+										<Property Name="LoopEnd" Type="Real64" Value="-1" />
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Guitar.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ConversionInfo>
+								<ConversionRef Name="Music" ID="{7A8858E3-8A2D-4BB7-A53D-2DE16D1A752B}" />
+							</ConversionInfo>
+							<ActiveSourceList>
+								<ActiveSource Name="Guitar" ID="{1DE0C005-C746-4438-9EC1-D1433E1CA1F3}" Platform="Linked" />
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="RecordableMusic" ID="{F31BBA14-D4C1-4D38-9E60-F3C22386D5B3}" ShortID="520869836" Type="SoundFX">
+							<PropertyList>
+								<Property Name="HdrEnvelopeSensitivity" Type="Real64" Value="20" />
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True" />
+								<Property Name="MotionLowpass" Type="int16">
+									<ValueList>
+										<Value>0</Value>
+									</ValueList>
+								</Property>
+								<Property Name="VirtualVoiceQueueBehavior" Type="int16" Value="1" />
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Music" ID="{4810BCA9-BA17-4C9F-B065-1F1CB8AC7DEE}" WorkUnitID="{B90D7019-72C6-46E8-990C-3BC04B2724DB}" />
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Bass160Fight3" ID="{B4358C30-8C57-4FD9-B063-3DD1225D6CF6}" ShortID="663670250">
+									<PropertyList>
+										<Property Name="LoopEnd" Type="Real64" Value="-1" />
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Bass160Fight3.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ConversionInfo>
+								<ConversionRef Name="SFX" ID="{3A429FCB-87D8-458B-B315-DBE8023064B3}" />
+							</ConversionInfo>
+							<ActiveSourceList>
+								<ActiveSource Name="Bass160Fight3" ID="{B4358C30-8C57-4FD9-B063-3DD1225D6CF6}" Platform="Linked" />
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

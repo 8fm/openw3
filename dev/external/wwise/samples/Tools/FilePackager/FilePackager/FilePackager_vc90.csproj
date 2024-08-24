@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B5A5535B-F218-425C-A6A4-1606E4257AE9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FilePackager</RootNamespace>
+    <AssemblyName>FilePackager</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\..\Authoring\Win32\Debug\bin\tools\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\..\Authoring\Win32\Release\bin\tools\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\..\..\..\Authoring\x64\Debug\bin\tools\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <OutputPath>..\..\..\..\..\Authoring\x64\Release\bin\tools\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\..\..\..\Authoring\Win32\Debug\bin\tools\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>..\..\..\..\..\Authoring\Win32\Release\bin\tools\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\..\include\AK\AkWwiseSDKVersion.cs">
+      <Link>AkWwiseSDKVersion.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\InfoFile\InfoFile.cs">
+      <Link>InfoFile\InfoFile.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\InfoFile\InfoFileHelpers.cs">
+      <Link>InfoFile\InfoFileHelpers.cs</Link>
+    </Compile>
+    <Compile Include="Base\EnumValueIsVisibleAttribute.cs" />
+    <Compile Include="Base\NameHelpers.cs" />
+    <Compile Include="Base\NaturalStringComparer.cs" />
+    <Compile Include="Base\ResourcesDescriptionAttribute.cs" />
+    <Compile Include="Base\StringEqualityComparer.cs" />
+    <Compile Include="Base\WPF\ByteFormatConverter.cs" />
+    <Compile Include="Base\WPF\AutoCursor.cs" />
+    <Compile Include="Base\WPF\BuildStatusToBrushConverter.cs" />
+    <Compile Include="Base\WPF\ChmHelp.cs" />
+    <Compile Include="Base\WPF\EditLabel.xaml.cs">
+      <DependentUpon>EditLabel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Base\WPF\EnumDescriptionConverter.cs" />
+    <Compile Include="Base\WPF\GridViewColumnVisibilityManager.cs" />
+    <Compile Include="Base\WPF\Helpers.cs" />
+    <Compile Include="Base\WPF\IRenamable.cs" />
+    <Compile Include="Base\WPF\NotBooleanToVisibilityConverter.cs" />
+    <Compile Include="Base\WPF\NotNullToBooleanConverter.cs" />
+    <Compile Include="Base\WPF\GridViewSort.cs" />
+    <Compile Include="Base\WPF\IntIsZeroToBrushConverter.cs" />
+    <Compile Include="Base\WPF\ListViewStandardBehavior.cs" />
+    <Compile Include="Base\WPF\ValidationErrorGetErrorMessageConverter.cs" />
+    <Compile Include="Base\WPF\WindowPosition.cs" />
+    <Compile Include="IApplication.cs" />
+    <Compile Include="Base\WPF\BooleanToFontWeightConverter.cs" />
+    <Compile Include="Base\WPF\NotNullToVisibilityConverter.cs" />
+    <Compile Include="Base\WPF\EnumToVisibilityConverter.cs" />
+    <Compile Include="Base\WPF\EnumToBooleanConverter.cs" />
+    <Compile Include="Base\Extensions.cs" />
+    <Compile Include="Base\OnDemandCollection.cs" />
+    <Compile Include="Base\WPF\SeverityToBrushConverter.cs" />
+    <Compile Include="Base\WPF\DragDropHelper.cs" />
+    <Compile Include="Base\WPF\DraggedAdorner.cs" />
+    <Compile Include="Base\WPF\InsertionAdorner.cs" />
+    <Compile Include="Base\WPF\Utilities.cs" />
+    <Compile Include="Commands\DelegateCommand.cs" />
+    <Compile Include="Commands\CommandReference.cs" />
+    <Compile Include="Models\ContentItemBase.cs" />
+    <Compile Include="Models\LanguagePackageIds.cs" />
+    <Compile Include="Models\ManualPackagingInfo.cs" />
+    <Compile Include="Base\ModelBase.cs" />
+    <Compile Include="Models\Package.cs" />
+    <Compile Include="Models\PackageContentItem.cs" />
+    <Compile Include="Models\Project.cs" />
+    <Compile Include="Packaging\FileLUT.cs" />
+    <Compile Include="Packaging\FileOrganizer.cs" />
+    <Compile Include="Packaging\FilePackageGenerator.cs" />
+    <Compile Include="Packaging\FilePackageWriter.cs" />
+    <Compile Include="Packaging\FNVHash.cs" />
+    <Compile Include="Packaging\Header.cs" />
+    <Compile Include="Packaging\LanguagesMap.cs" />
+    <Compile Include="Packaging\StringMap.cs" />
+    <Compile Include="Persist\Migration.cs" />
+    <Compile Include="Persist\IMigrationStep.cs" />
+    <Compile Include="Persist\ProjectPersist.cs" />
+    <Compile Include="Persist\Steps\Migrate5to6.cs" />
+    <Compile Include="Persist\Steps\Migrate4to5.cs" />
+    <Compile Include="Persist\Steps\Migrate3to4.cs" />
+    <Compile Include="Persist\Steps\Migrate2to3.cs" />
+    <Compile Include="Persist\Steps\Migrate1to2.cs" />
+    <Compile Include="TopicAlias.cs" />
+    <Compile Include="Undo\EventGroup.cs" />
+    <Compile Include="Undo\CollectionChangeUndoEvent.cs" />
+    <Compile Include="Undo\IUndoEvent.cs" />
+    <Compile Include="Undo\PropertyChangeUndoEvent.cs" />
+    <Compile Include="Undo\UndoableObservableCollection.cs" />
+    <Compile Include="Undo\UndoManager.cs" />
+    <Compile Include="ViewModels\AboutViewModel.cs" />
+    <Compile Include="ViewModels\BuildViewModel.cs" />
+    <Compile Include="ViewModels\CommandLineViewModel.cs" />
+    <Compile Include="ViewModels\ContentItemViewModel.cs" />
+    <Compile Include="ViewModels\ContentItemBaseViewModel.cs" />
+    <Compile Include="ViewModels\LanguagePackageIdsViewModel.cs" />
+    <Compile Include="ViewModels\LayoutContentItemViewModel.cs" />
+    <Compile Include="ViewModels\ManualPackagingInfoViewModel.cs" />
+    <Compile Include="ViewModels\ReferenceManager.cs" />
+    <Compile Include="ViewModels\PackageContentItemViewModel.cs" />
+    <Compile Include="ViewModels\PackageViewModel.cs" />
+    <Compile Include="ViewModels\ProjectViewModel.cs" />
+    <Compile Include="Base\ViewModelBase.cs" />
+    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Base\WPF\EditLabel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

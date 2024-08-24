@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{B90D7019-72C6-46E8-990C-3BC04B2724DB}" SchemaVersion="62">
+	<Busses>
+		<WorkUnit Name="Default Work Unit" ID="{B90D7019-72C6-46E8-990C-3BC04B2724DB}" PersistMode="Standalone">
+			<ChildrenList>
+				<Bus Name="Master Control Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
+					<ChildrenList>
+						<Bus Name="Voices" ID="{FCDDF691-8885-4A61-BF35-24E9EA98700E}">
+							<PropertyList>
+								<Property Name="BusVolume" Type="Real64">
+									<ValueList>
+										<Value>-4</Value>
+									</ValueList>
+								</Property>
+								<Property Name="BypassEffect" Type="bool">
+									<RTPCList>
+										<RTPC Name="" ID="{6458FE37-14E4-44DC-94A6-944431441F02}" ShortID="783660359">
+											<GameParameterRef Name="Enable_Effect" ID="{3EECEA1A-734E-4564-AA6B-92B7E93BC4D7}" />
+											<Curve Name="" ID="{B6108D5C-9D69-4023-90C5-94C9EA826435}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="66049" />
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>1</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>49.8366013071895</XPos>
+														<YPos>0</YPos>
+														<Flags>0</Flags>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>0</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+							</PropertyList>
+							<EffectInfo>
+								<CustomEffect Platform="Linked" Index="0" CreatedFrom="{FC9B2CA3-2F46-455A-8998-CE2C311CD26B}">
+									<Effect Name="_BigReverb (Define custom)" ID="{250E5FF9-A3D4-4017-904B-963821DB9B39}" ShortID="668148182" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118">
+										<PropertyList>
+											<Property Name="DecayTime" Type="Real32" Value="6.8" />
+											<Property Name="Density" Type="Real32" Value="70" />
+											<Property Name="ERFrontBackDelay" Type="Real32" Value="100" />
+											<Property Name="ERLevel" Type="Real32" Value="-31" />
+											<Property Name="ERPattern" Type="int32" Value="9" />
+											<Property Name="Filter1Freq" Type="Real32" Value="490" />
+											<Property Name="Filter1Gain" Type="Real32" Value="-4.5" />
+											<Property Name="Filter1InsertPos" Type="int32" Value="2" />
+											<Property Name="Filter2InsertPos" Type="int32" Value="0" />
+											<Property Name="Filter3Freq" Type="Real32" Value="11000" />
+											<Property Name="Filter3Gain" Type="Real32" Value="-4.5" />
+											<Property Name="HFDamping" Type="Real32" Value="5.7" />
+											<Property Name="PreDelay" Type="Real32" Value="150" />
+											<Property Name="Quality" Type="int32" Value="16" />
+											<Property Name="ReverbLevel" Type="Real32" Value="-24" />
+											<Property Name="RoomSize" Type="Real32" Value="100" />
+										</PropertyList>
+									</Effect>
+								</CustomEffect>
+							</EffectInfo>
+						</Bus>
+						<Bus Name="Environmental Bus" ID="{53D0C673-DFDE-4CD6-92E6-5A1C2D92FBE1}">
+							<ChildrenList>
+								<AuxBus Name="Hangar_Env" ID="{3C8A8587-751D-4B97-8508-FAB37723E482}">
+									<PropertyList>
+										<Property Name="BypassEffect0" Type="bool">
+											<ValueList>
+												<Value Platform="Wii">False</Value>
+												<Value Platform="3DS">False</Value>
+												<Value Platform="iOS">False</Value>
+												<Value Platform="VitaHW">False</Value>
+											</ValueList>
+										</Property>
+										<Property Name="BypassEffect1" Type="bool">
+											<ValueList>
+												<Value Platform="Wii">False</Value>
+												<Value Platform="3DS">False</Value>
+												<Value Platform="iOS">False</Value>
+												<Value Platform="VitaHW">False</Value>
+											</ValueList>
+										</Property>
+										<Property Name="BypassEffect2" Type="bool">
+											<ValueList>
+												<Value Platform="Wii">False</Value>
+												<Value Platform="3DS">False</Value>
+												<Value Platform="iOS">False</Value>
+												<Value Platform="VitaHW">False</Value>
+											</ValueList>
+										</Property>
+										<Property Name="BypassEffect3" Type="bool">
+											<ValueList>
+												<Value Platform="Wii">False</Value>
+												<Value Platform="3DS">False</Value>
+												<Value Platform="iOS">False</Value>
+												<Value Platform="VitaHW">False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<EffectInfo>
+										<EffectRef Name="Hangar_Env" ID="{C2817027-BAD4-4483-8762-64C45E56497E}" CompanyID="0" Index="0" Platform="Linked" PluginID="118" PluginName="Wwise RoomVerb" />
+										<EffectRef Name="Garage" ID="{F88BE6D4-6202-4443-B1CA-A94BE5C0E6C2}" CompanyID="0" Index="0" Platform="Wii" PluginID="112" PluginName="Wii Standard Reverb" />
+										<EffectRef Name="Hangar_3DS" ID="{E718D6B2-90C5-4B1C-80DE-F27D2EBC8E99}" CompanyID="0" Index="0" Platform="3DS" PluginID="133" PluginName="3DS Reverb" />
+										<EffectRef Name="Hangar_Env_Low" ID="{02B9CCFE-D719-4F10-B10C-844791DA0F01}" CompanyID="0" Index="0" Platform="iOS" PluginID="115" PluginName="Wwise Matrix Reverb" />
+										<CustomEffect Platform="VitaHW" Index="0">
+											<Effect Name="Default (Custom)" ID="{EC551BFA-3792-40F7-8C10-2640297EE891}" ShortID="920518491" PluginName="Vita Reverb" CompanyID="0" PluginID="140" />
+										</CustomEffect>
+									</EffectInfo>
+								</AuxBus>
+							</ChildrenList>
+						</Bus>
+						<Bus Name="Voices_Radio" ID="{84B0F2A1-5514-4C22-B77B-2E91CD9FDAFB}" />
+						<Bus Name="Music" ID="{4810BCA9-BA17-4C9F-B065-1F1CB8AC7DEE}" />
+					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="PlayerHealth" ID="{04DA61D8-C090-4BA1-A0A3-CCAD0587AE0E}" />
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="Blasted" ID="{AD983F7E-AFAE-4BD6-A9D8-ADB456C0A6BA}" />
+								<State Name="Custom State" ID="{ED1354D6-AAB8-48D2-BF29-507176C5268C}" ShortID="416526659">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16" Value="57" />
+										<Property Name="Pitch" Type="int32" Value="-860" />
+									</PropertyList>
+								</State>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
+				</Bus>
+				<MotionBus Name="Master Motion Bus" ID="{20A630BA-3398-4676-B927-1004DFE41FD8}" />
+				<Bus Name="Master Secondary Bus" ID="{D2E0BC7E-7B3F-4FFE-A670-FAE02761B631}">
+					<PropertyList>
+						<Property Name="HdrOutputGameParameterMax" Type="Real64">
+							<ValueList>
+								<Value>100</Value>
+							</ValueList>
+						</Property>
+						<Property Name="HdrRatio" Type="Real64">
+							<ValueList>
+								<Value>100</Value>
+							</ValueList>
+						</Property>
+						<Property Name="HdrReleaseTimeMode" Type="int16">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
+						<Property Name="MaxDuckVolume" Type="Real64" Value="-96" />
+					</PropertyList>
+					<ChildrenList>
+						<Bus Name="Unrecorded Background Music" ID="{D03CA0DB-019D-4D28-B97D-6E7B4AD39D4F}">
+							<PropertyList>
+								<Property Name="HdrOutputGameParameterMax" Type="Real64">
+									<ValueList>
+										<Value>100</Value>
+									</ValueList>
+								</Property>
+								<Property Name="HdrRatio" Type="Real64">
+									<ValueList>
+										<Value>100</Value>
+									</ValueList>
+								</Property>
+								<Property Name="HdrReleaseTimeMode" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="MaxDuckVolume" Type="Real64" Value="-96" />
+							</PropertyList>
+						</Bus>
+					</ChildrenList>
+				</Bus>
+			</ChildrenList>
+		</WorkUnit>
+	</Busses>
+</WwiseDocument>

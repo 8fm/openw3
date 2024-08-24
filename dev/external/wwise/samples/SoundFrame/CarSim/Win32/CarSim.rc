@@ -1,0 +1,415 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\CarSim.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\n"
+    "#define AK_WWISESDK_SAMPLE_FILEDESC ""Audiokinetic CarSim SoundFrame Sample""\r\n"
+    "#define AK_WWISESDK_SAMPLE_INTERNALNAME ""CarSim.exe""\r\n"
+    "#define AK_WWISESDK_SAMPLE_ORIGINALFILE ""CarSim.exe""\r\n"
+    "#include ""AkWwiseSDKVersion.rc""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\CarSim.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 70
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Car Sim"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LTEXT           "Audiokinetic Car Sim <VERSION>",IDC_NAME_AND_VERSION,7,7,221,8,SS_NOPREFIX
+    LTEXT           "Copyright (c) 2006 Audiokinetic Inc.  All rights reserved.",IDC_STATIC,7,24,221,16
+    DEFPUSHBUTTON   "Close",IDOK,92,47,50,16,WS_GROUP
+END
+
+IDD_CAR_SIM_DIALOG DIALOGEX 0, 0, 172, 267
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Car Sim"
+MENU IDR_MAIN_MENU
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LTEXT           "Game Object:",IDC_STATIC,13,22,45,8
+    EDITTEXT        IDC_GAME_OBJECT_NAME_EDIT,59,20,97,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Play",IDC_PLAY_BUTTON,50,76,50,14
+    PUSHBUTTON      "Stop",IDC_STOP_BUTTON,105,76,50,14
+    LTEXT           "Engine:",IDC_STATIC,20,79,25,8
+    LTEXT           "Throttle:",IDC_STATIC,16,97,29,8
+    EDITTEXT        IDC_THROTTLE_EDIT,50,94,105,14,ES_CENTER | ES_MULTILINE | ES_AUTOHSCROLL | ES_READONLY
+    CONTROL         "",IDC_THROTTLE_SLIDER,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,50,112,105,15
+    LTEXT           "Gear Box:",IDC_STATIC,12,136,33,8
+    PUSHBUTTON      "Down",IDC_GEAR_DOWN_BUTTON,50,132,50,14
+    PUSHBUTTON      "Up",IDC_GEAR_UP_BUTTON,105,132,50,14
+    CONTROL         "Auxiliary Send",IDC_ENVIRONMENT_CHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,160,56,10
+    LTEXT           "Dry:",IDC_STATIC,30,177,15,8
+    LTEXT           "Wet:",IDC_STATIC,30,198,17,8
+    CONTROL         "",IDC_DRY_VOLUME_SLIDER,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,50,174,81,15
+    CONTROL         "",IDC_WET_VOLUME_SLIDER,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,50,195,81,15
+    LTEXT           "Static",IDC_DRY_VALUE_STATIC,132,177,19,8
+    LTEXT           "Static",IDC_WET_VALUE_STATIC,132,198,19,8
+    GROUPBOX        "User Input",IDC_STATIC,7,65,158,151
+    GROUPBOX        "Current State",IDC_STATIC,7,216,158,43
+    LTEXT           "Gear:",IDC_STATIC,21,229,19,8
+    LTEXT           "Static",IDC_CURRENT_GEAR_STATIC,47,229,35,8
+    LTEXT           "RPM:",IDC_STATIC,22,244,18,8
+    LTEXT           "Static",IDC_CURRENT_RPM_STATIC,47,244,35,8
+    LTEXT           "Load:",IDC_STATIC,92,229,19,8
+    LTEXT           "Static",IDC_CURRENT_LOAD_STATIC,118,229,40,8
+    LTEXT           "Speed:",IDC_STATIC,87,244,24,8
+    LTEXT           "Static",IDC_CURRENT_SPEED_STATIC,118,244,40,8
+    EDITTEXT        IDC_CAR_SETTINGS_EDIT,15,44,96,14,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "...",IDC_CAR_SETTINGS_BROWSE_BUTTON,112,44,18,14
+    PUSHBUTTON      "Edit...",IDC_CAR_SETTINGS_EDIT_BUTTON,132,44,28,14
+    GROUPBOX        "Car Settings",IDC_STATIC,7,34,158,29
+    LTEXT           "Status:",IDC_STATIC,13,7,24,8
+    LTEXT           "Static",IDC_CONNECTION_STATUS_STATIC,42,7,113,8
+END
+
+IDD_ASSIGNEMENT_DIALOG DIALOGEX 0, 0, 195, 215
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Car Sim Assignments"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,79,194,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,137,194,50,14
+    COMBOBOX        IDC_RPM_GAME_PARAM_COMBO,56,25,122,74,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "RPM:",IDC_STATIC,35,28,18,8
+    COMBOBOX        IDC_LOAD_GAME_PARAM_COMBO,56,42,122,74,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Load:",IDC_STATIC,34,45,19,8
+    COMBOBOX        IDC_SPEED_GAME_PARAM_COMBO,56,59,122,74,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Speed:",IDC_STATIC,29,61,24,8
+    COMBOBOX        IDC_ENGINE_PLAY_EVENT_COMBO,56,90,122,74,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Engine Play:",IDC_STATIC,13,92,40,8
+    GROUPBOX        "Game Parameters",IDC_STATIC,7,15,180,63
+    COMBOBOX        IDC_ENGINE_STOP_EVENT_COMBO,56,107,122,74,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Engine Stop:",IDC_STATIC,11,110,42,8
+    COMBOBOX        IDC_UP_SHIFT_EVENT_COMBO,56,124,122,74,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Up Shift:",IDC_STATIC,24,127,29,8
+    COMBOBOX        IDC_DOWN_SHIFT_EVENT_COMBO,56,141,122,74,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Down Shift:",IDC_STATIC,15,143,38,8
+    GROUPBOX        "Events",IDC_STATIC,7,79,180,80
+    COMBOBOX        IDC_ENVIRONMENT_COMBO,56,171,122,74,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    RTEXT           "Aux Send 1:",IDC_STATIC,7,173,46,8
+    GROUPBOX        "Auxiliary Sends",IDC_STATIC,7,161,180,30
+END
+
+IDD_CAR_SETTINGS_DIALOG DIALOGEX 0, 0, 371, 214
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Car Settings"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Close",IDCANCEL,314,193,50,14
+    COMBOBOX        IDC_NUM_OF_GEARS_COMBO,61,13,63,81,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "No. of Gears:",IDC_STATIC,14,15,44,8
+    LTEXT           "1st:",IDC_STATIC,15,42,14,8
+    CONTROL         "",IDC_GEAR_1_SLIDER,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,32,39,100,15
+    EDITTEXT        IDC_GEAR_1_EDIT,134,39,44,14,ES_CENTER | ES_MULTILINE | ES_AUTOHSCROLL | ES_WANTRETURN
+    LTEXT           "2nd:",IDC_STATIC,13,60,16,8
+    CONTROL         "",IDC_GEAR_2_SLIDER,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,32,57,100,15
+    EDITTEXT        IDC_GEAR_2_EDIT,134,57,44,14,ES_CENTER | ES_MULTILINE | ES_AUTOHSCROLL | ES_WANTRETURN
+    LTEXT           "3rd:",IDC_STATIC,15,79,14,8
+    CONTROL         "",IDC_GEAR_3_SLIDER,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,32,76,100,15
+    EDITTEXT        IDC_GEAR_3_EDIT,134,76,44,14,ES_CENTER | ES_MULTILINE | ES_AUTOHSCROLL | ES_WANTRETURN
+    LTEXT           "4th:",IDC_STATIC,15,98,14,8
+    CONTROL         "",IDC_GEAR_4_SLIDER,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,32,95,100,15
+    EDITTEXT        IDC_GEAR_4_EDIT,134,95,44,14,ES_CENTER | ES_MULTILINE | ES_AUTOHSCROLL | ES_WANTRETURN
+    LTEXT           "5th:",IDC_STATIC,15,116,14,8
+    CONTROL         "",IDC_GEAR_5_SLIDER,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,32,113,100,15
+    EDITTEXT        IDC_GEAR_5_EDIT,134,113,44,14,ES_CENTER | ES_MULTILINE | ES_AUTOHSCROLL | ES_WANTRETURN
+    LTEXT           "6th:",IDC_STATIC,15,135,14,8
+    CONTROL         "",IDC_GEAR_6_SLIDER,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,32,132,100,15
+    EDITTEXT        IDC_GEAR_6_EDIT,134,132,44,14,ES_CENTER | ES_MULTILINE | ES_AUTOHSCROLL | ES_WANTRETURN
+    LTEXT           "7th:",IDC_STATIC,15,155,14,8
+    CONTROL         "",IDC_GEAR_7_SLIDER,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,32,151,100,15
+    EDITTEXT        IDC_GEAR_7_EDIT,134,151,44,14,ES_CENTER | ES_MULTILINE | ES_AUTOHSCROLL | ES_WANTRETURN
+    EDITTEXT        IDC_WEIGHT_EDIT,287,17,69,14,ES_RIGHT | ES_MULTILINE | ES_AUTOHSCROLL | ES_WANTRETURN
+    LTEXT           "Weight (Kg):",IDC_STATIC,239,20,42,8
+    EDITTEXT        IDC_TORQUE_EDIT,287,36,69,14,ES_RIGHT | ES_MULTILINE | ES_AUTOHSCROLL | ES_WANTRETURN
+    LTEXT           "Torque (N-M):",IDC_STATIC,235,39,46,8
+    EDITTEXT        IDC_DRAG_COEFFICIENT_EDIT,287,55,69,14,ES_RIGHT | ES_MULTILINE | ES_AUTOHSCROLL | ES_WANTRETURN
+    LTEXT           "Drag Coefficient (Cd):",IDC_STATIC,209,59,72,8
+    EDITTEXT        IDC_FRONT_SURFACE_EDIT,287,74,69,14,ES_RIGHT | ES_MULTILINE | ES_AUTOHSCROLL | ES_WANTRETURN
+    LTEXT           "Front Surface:",IDC_STATIC,233,77,48,8
+    EDITTEXT        IDC_ROLLING_RESISTANCE_EDIT,287,93,69,14,ES_RIGHT | ES_MULTILINE | ES_AUTOHSCROLL | ES_WANTRETURN
+    LTEXT           "Rolling resistance:",IDC_STATIC,222,96,59,8
+    EDITTEXT        IDC_DIFFERENTIAL_RATIO_EDIT,287,112,69,14,ES_RIGHT | ES_MULTILINE | ES_AUTOHSCROLL | ES_WANTRETURN
+    LTEXT           "Differential ratio (x:1):",IDC_STATIC,207,115,74,8
+    EDITTEXT        IDC_WHEEL_RADIUS_EDIT,287,131,69,14,ES_RIGHT | ES_MULTILINE | ES_AUTOHSCROLL | ES_WANTRETURN
+    LTEXT           "Wheel radius (m):",IDC_STATIC,220,134,58,8
+    EDITTEXT        IDC_MINIMUM_RPM_EDIT,287,150,69,14,ES_RIGHT | ES_MULTILINE | ES_AUTOHSCROLL | ES_WANTRETURN
+    LTEXT           "Minimum RPM:",IDC_STATIC,235,153,46,8
+    EDITTEXT        IDC_RPM_CUT_OFF_EDIT,287,169,69,14,ES_RIGHT | ES_MULTILINE | ES_AUTOHSCROLL | ES_WANTRETURN
+    LTEXT           "RPM Cut Off:",IDC_STATIC,237,172,44,8
+    PUSHBUTTON      "Default",ID_DEFAULT_BUTTON,7,193,50,14
+    PUSHBUTTON      "Save As...",ID_SAVE_AS_BUTTON,182,193,50,14
+    PUSHBUTTON      "Save",ID_SAVE_BUTTON,237,193,50,14
+END
+
+IDD_FRAMERATE_DIALOG DIALOGEX 0, 0, 155, 62
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Framerate"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,25,41,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,81,41,50,14
+    LTEXT           "FPS:",IDC_STATIC,34,20,16,8
+    EDITTEXT        IDC_FRAMERATE_EDIT,53,17,68,14,ES_CENTER | ES_AUTOHSCROLL | ES_NUMBER
+END
+
+IDD_JOYSTICK_DIALOG DIALOGEX 0, 0, 176, 148
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Joystick"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "Use Joystick",IDC_USE_JOYSTICK_CHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,12,55,10
+    COMBOBOX        IDC_JOYSTICK_COMBO,77,28,86,75,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_GEARUP_COMBO,77,47,86,75,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_GEARDOWN_COMBO,77,66,86,75,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_THROTTLE_COMBO,77,85,86,75,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_ENVIRONMENT_WET_COMBO,77,104,86,75,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,65,127,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,119,127,50,14
+    RTEXT           "Joystick:",IDC_STATIC,7,30,68,8
+    RTEXT           "Gearbox Up:",IDC_STATIC,7,50,68,8
+    RTEXT           "Gearbox Down:",IDC_STATIC,7,69,68,8
+    RTEXT           "Throttle:",IDC_STATIC,7,87,68,8
+    RTEXT           "Aux Send:",IDC_STATIC,7,107,68,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 63
+    END
+
+    IDD_CAR_SIM_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 165
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 260
+    END
+
+    IDD_ASSIGNEMENT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 187
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 208
+    END
+
+    IDD_CAR_SETTINGS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 364
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 207
+    END
+
+    IDD_FRAMERATE_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 148
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+
+    IDD_JOYSTICK_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 169
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 141
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAIN_MENU MENU 
+BEGIN
+    POPUP "File"
+    BEGIN
+        MENUITEM "New...",                      ID_FILE_NEW
+        MENUITEM "Open...",                     ID_FILE_OPEN
+        MENUITEM "Save",                        ID_FILE_SAVE
+        MENUITEM "Save as...",                  ID_FILE_SAVEAS
+        MENUITEM SEPARATOR
+        MENUITEM "Exit",                        ID_FILE_EXIT
+    END
+    POPUP "Settings"
+    BEGIN
+        MENUITEM "Car Sim Assignments...",      ID_SETTINGS_CARSIMASSIGNEMENTS
+        MENUITEM "Joystick...",                 ID_SETTINGS_JOYSTICK
+        MENUITEM "Framerate...",                ID_SETTINGS_FRAMERATE
+    END
+    POPUP "Help"
+    BEGIN
+        MENUITEM "Car Sim Help",                ID_HELP_HELP
+        MENUITEM "About Car Sim...",            ID_HELP_ABOUTCARSIM
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_CAR_SETTINGS_DIALOG DLGINIT
+BEGIN
+    IDC_NUM_OF_GEARS_COMBO, 0x403, 2, 0
+0x0031, 
+    IDC_NUM_OF_GEARS_COMBO, 0x403, 2, 0
+0x0032, 
+    IDC_NUM_OF_GEARS_COMBO, 0x403, 2, 0
+0x0033, 
+    IDC_NUM_OF_GEARS_COMBO, 0x403, 2, 0
+0x0034, 
+    IDC_NUM_OF_GEARS_COMBO, 0x403, 2, 0
+0x0035, 
+    IDC_NUM_OF_GEARS_COMBO, 0x403, 2, 0
+0x0036, 
+    IDC_NUM_OF_GEARS_COMBO, 0x403, 2, 0
+0x0037, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About CarSim..."
+    IDS_CAR_SIM_DEFAULT_GAME_OBJECT "Car Sim"
+    IDS_ASSIGNMENT_NONE     "None"
+    IDS_TITLE_BAR_TEXT      "%s - Car Sim"
+    IDS_DEFAULT_FILE_NAME   "New Car Sim"
+    IDS_SAVE_ERROR          "Error: Could not save in %s."
+    IDS_OPEN_ERROR          "Error: Could not open %s."
+    IDS_STATUS_CONNECTED    "Connected to Wwise"
+    IDS_STATUS_DISCONNECTED "Disconnected"
+    IDS_INVALID_FRAMERATE_MESSAGE 
+                            "The Framerate you set must be between %d and %d."
+    IDS_SETTINGS_TITLE_BAR_TEXT "%s - Car Settings"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_DEFAULT_SETTINGS_FILE_NAME "New Car Settings"
+    IDS_SAVE_SETTINGS_ON_CLOSE "Do you want to save your car settings?"
+    IDS_MESSAGE_CAPTION     "Car Sim"
+    IDS_SAVE_SIMULATION_ON_CLOSE 
+                            "Do you want to save your Car Sim simulation?"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\CarSim.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"     // Standard components
+#endif
+#define AK_WWISESDK_SAMPLE_FILEDESC "Audiokinetic CarSim SoundFrame Sample"
+#define AK_WWISESDK_SAMPLE_INTERNALNAME "CarSim.exe"
+#define AK_WWISESDK_SAMPLE_ORIGINALFILE "CarSim.exe"
+#include "AkWwiseSDKVersion.rc"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

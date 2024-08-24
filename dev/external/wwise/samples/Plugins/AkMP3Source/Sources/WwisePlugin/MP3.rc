@@ -1,0 +1,180 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define AK_WWISESDK_SAMPLE_FILEDESC ""Audio Input Wwise plug-in""\r\n"
+    "#define AK_WWISESDK_SAMPLE_INTERNALNAME ""MP3.dll""\r\n"
+    "#define AK_WWISESDK_SAMPLE_ORIGINALFILE ""MP3.dll""\r\n"
+    "#include ""AkWwiseSDKVersion.rc""\r\n"
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_MP3_TOKEN           "Token"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (Canada) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENC)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_CAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MP3PLUGIN_SMALL DIALOGEX 0, 0, 277, 13
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+IDD_MP3PLUGIN_BIG DIALOGEX 0, 0, 518, 280
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_CLIPCHILDREN
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "MP3 Test File",IDC_BOX_STATIC_MP3,6,0,365,59
+    RTEXT           "Filename:",IDC_STATIC_MP3_INPUT,34,20,32,8,WS_TABSTOP
+    GROUPBOX        "Base Info",IDC_STATIC,8,63,363,57
+    RTEXT           "Channels:",IDC_STATIC,33,77,33,8
+    RTEXT           "Sample Rate:",IDC_STATIC,22,90,44,8
+    RTEXT           "Duration:",IDC_STATIC,35,103,31,8
+    LTEXT           "",IDC_CHANNELS,72,77,219,8
+    LTEXT           "",IDC_SAMPLERATE,72,90,219,8
+    LTEXT           "",IDC_DURATION,72,103,220,8
+    LTEXT           "",IDC_FILENAME,72,20,271,8
+    PUSHBUTTON      "...",IDC_BROWSE,347,17,13,14
+    GROUPBOX        "Tag",IDC_STATIC,6,123,365,48
+    RTEXT           "Artist:",IDC_STATIC,45,146,21,8
+    RTEXT           "Track:",IDC_STATIC,45,134,21,8
+    RTEXT           "Album:",IDC_STATIC,43,158,23,8
+    LTEXT           "",IDC_ARTIST,72,146,287,8
+    LTEXT           "",IDC_TRACK,72,134,287,8
+    LTEXT           "",IDC_ALBUM,72,158,287,8
+    RTEXT           "Start Position:",IDC_STATIC,20,38,46,8
+    CONTROL         "",IDC_STARTPOS,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,72,37,285,12
+    GROUPBOX        "Playback",IDC_STATIC,6,175,365,22
+    RTEXT           "Position:",IDC_STATIC,38,184,28,8
+    LTEXT           "",IDC_PLAYPOS,72,184,287,8
+    LTEXT           "The information displayed in the Property Editor is for testing purposes only. The test file is not packaged within your SoundBanks, and is used only to create and test the overall mix.",IDC_STATIC,6,210,365,29
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_MP3PLUGIN_SMALL, DIALOG
+    BEGIN
+        VERTGUIDE, 2
+    END
+
+    IDD_MP3PLUGIN_BIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        VERTGUIDE, 15
+        VERTGUIDE, 66
+        VERTGUIDE, 72
+        VERTGUIDE, 371
+        HORZGUIDE, 24
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (Canada) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define AK_WWISESDK_SAMPLE_FILEDESC "Audio Input Wwise plug-in"
+#define AK_WWISESDK_SAMPLE_INTERNALNAME "MP3.dll"
+#define AK_WWISESDK_SAMPLE_ORIGINALFILE "MP3.dll"
+#include "AkWwiseSDKVersion.rc"
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "afxres.rc"     // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

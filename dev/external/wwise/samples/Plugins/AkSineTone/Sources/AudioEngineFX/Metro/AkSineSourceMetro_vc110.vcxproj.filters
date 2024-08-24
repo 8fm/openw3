@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<Filter Include="DSP">
+			<UniqueIdentifier>{66641438-CA75-1F44-A44B-5983EFDDEF70}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="include">
+			<UniqueIdentifier>{96B14A04-EED3-684B-A910-A93F8BF970BC}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="include\AK">
+			<UniqueIdentifier>{04D7E8B9-F21B-E44A-B8E1-226A83601725}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="include\AK\Plugin">
+			<UniqueIdentifier>{18CE77CD-FC42-5E4B-9CAD-CAC6D66D0FB1}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="include\AK\DSP">
+			<UniqueIdentifier>{E4547677-6DDE-C041-92D7-FE08AC25306A}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="include\AK\Plugin\PluginServices">
+			<UniqueIdentifier>{1623844F-C772-384C-92C5-2859227D9AA9}</UniqueIdentifier>
+		</Filter>
+	</ItemGroup>
+	<ItemGroup>
+		<ClInclude Include="..\AkFXSrcSine.h" />
+		<ClInclude Include="..\AkFXSrcSineParams.h" />
+		<ClInclude Include="..\..\..\..\..\..\include\AK\Plugin\AkSineSourceFactory.h">
+			<Filter>include\AK\Plugin</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\..\include\AK\DSP\AkApplyGain.h">
+			<Filter>include\AK\DSP</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\..\include\AK\Plugin\PluginServices\AkFXDurationHandler.h">
+			<Filter>include\AK\Plugin\PluginServices</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\..\include\AK\Plugin\PluginServices\AkFXParameterChangeHandler.h">
+			<Filter>include\AK\Plugin\PluginServices</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\DSP\AkSineOsc.h">
+			<Filter>DSP</Filter>
+		</ClInclude>
+	</ItemGroup>
+	<ItemGroup>
+		<ClCompile Include="..\AkFXSrcSine.cpp" />
+		<ClCompile Include="..\AkFXSrcSineParams.cpp" />
+		<ClCompile Include="..\..\..\..\..\DSP\AkSineOsc.cpp">
+			<Filter>DSP</Filter>
+		</ClCompile>
+	</ItemGroup>
+</Project>

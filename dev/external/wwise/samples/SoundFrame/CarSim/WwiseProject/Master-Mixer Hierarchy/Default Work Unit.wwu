@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{76F6F266-6145-4403-96D9-BE5BF8C91EEB}" SchemaVersion="62">
+	<Busses>
+		<WorkUnit Name="Default Work Unit" ID="{76F6F266-6145-4403-96D9-BE5BF8C91EEB}" PersistMode="Standalone">
+			<ChildrenList>
+				<Bus Name="Master Control Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
+					<ChildrenList>
+						<Bus Name="Environments" ID="{7EA9405F-0825-42FB-836A-6091F215D0D6}">
+							<ChildrenList>
+								<AuxBus Name="Claustro_Robotic_Trash_Env" ID="{6C73C912-90DE-46D2-9345-AAF381955D96}">
+									<EffectInfo>
+										<EffectRef Name="Claustro_Robotic_Trash_Env" ID="{180947BF-CB6D-4108-98DB-B1E7A90F524F}" CompanyID="0" Index="0" Platform="Linked" PluginID="118" PluginName="Wwise RoomVerb" />
+									</EffectInfo>
+								</AuxBus>
+								<AuxBus Name="Huge_Space_Dreaming_Env" ID="{7A8D2078-E919-41F9-BC19-59B83D182E79}">
+									<EffectInfo>
+										<EffectRef Name="Huge_Space_Dreaming_Env" ID="{3D88A07A-6F0C-4CFF-A140-4BC62F9D2661}" CompanyID="0" Index="0" Platform="Linked" PluginID="118" PluginName="Wwise RoomVerb" />
+									</EffectInfo>
+								</AuxBus>
+								<AuxBus Name="Claustro_Inside_Your_Head_Env" ID="{2AB4A01F-5A9F-4882-B8AA-50981908B086}">
+									<EffectInfo>
+										<EffectRef Name="Claustro_Inside_Your_Head_Env" ID="{FDDCC998-C5B5-49F6-B711-E85DA0B70BFE}" CompanyID="0" Index="0" Platform="Linked" PluginID="118" PluginName="Wwise RoomVerb" />
+									</EffectInfo>
+								</AuxBus>
+								<AuxBus Name="Bright_Small_Hall_Env" ID="{39546021-C812-4B8F-8C03-558A83D4C87D}">
+									<EffectInfo>
+										<EffectRef Name="Bright_Small_Hall_Env" ID="{4D11F2B7-6057-4887-A725-F00E1629699E}" CompanyID="0" Index="0" Platform="Linked" PluginID="118" PluginName="Wwise RoomVerb" />
+									</EffectInfo>
+								</AuxBus>
+							</ChildrenList>
+						</Bus>
+					</ChildrenList>
+				</Bus>
+				<MotionBus Name="Master Motion Bus" ID="{20A630BA-3398-4676-B927-1004DFE41FD8}" />
+				<Bus Name="Master Secondary Bus" ID="{D2E0BC7E-7B3F-4FFE-A670-FAE02761B631}">
+					<PropertyList>
+						<Property Name="HdrOutputGameParameterMax" Type="Real64">
+							<ValueList>
+								<Value>100</Value>
+							</ValueList>
+						</Property>
+						<Property Name="HdrThreshold" Type="Real64">
+							<ValueList>
+								<Value>0</Value>
+							</ValueList>
+						</Property>
+						<Property Name="MaxDuckVolume" Type="Real64" Value="-96" />
+					</PropertyList>
+				</Bus>
+			</ChildrenList>
+		</WorkUnit>
+	</Busses>
+</WwiseDocument>

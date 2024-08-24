@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (C) 2006 Audiokinetic Inc. -->
+<PluginModule>
+  <SourcePlugin Name="Wwise MP3 Input" CompanyID="0" PluginID="201">
+    <PluginInfo CanUnlink="true">
+      <PlatformSupport>
+        <Platform Name="Windows"></Platform>
+      </PlatformSupport>
+    </PluginInfo>
+    <Properties>
+      <Property Name="Token" Type="int32" IsVisible="false">
+        <DefaultValue>0</DefaultValue>
+        <AudioEnginePropertyID>0</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="int32">
+              <Min>0</Min>
+              <Max>2147483647</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+      </Property>
+    </Properties>
+  </SourcePlugin>
+</PluginModule>

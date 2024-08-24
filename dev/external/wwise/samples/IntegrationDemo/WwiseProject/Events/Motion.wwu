@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{B39A546D-1EC1-4B7D-8CB2-1AD10490AFB8}" SchemaVersion="62">
+	<Events>
+		<WorkUnit Name="Motion" ID="{B39A546D-1EC1-4B7D-8CB2-1AD10490AFB8}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="DoorSliding" ID="{8CF184AA-F3B8-4C51-AD77-6FF739E73976}">
+					<ChildrenList>
+						<Action Name="Play" ID="{145EB852-01F1-4A39-A114-944958C25E42}" ShortID="799755853" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{D146C9E9-101B-4183-93BC-D96E59D00C54}" Global="false">
+									<ObjectRef Name="DoorSliding" ID="{C2FE5D00-C3BF-4513-8F56-EA201A2FF725}" WorkUnitID="{B8E18876-D5DC-4A01-ABE4-F522E6D122B2}" />
+								</Element>
+							</ElementList>
+						</Action>
+						<Action Name="Play" ID="{55393159-DE08-49B4-84FE-5E3F691DDB54}" ShortID="395381921" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{6ABC75FB-AAB0-438E-8B7D-C0ADAC628185}" Global="false">
+									<ObjectRef Name="DoorSliding_Motion" ID="{74DAB445-7D41-42DB-A298-D46BA986592B}" WorkUnitID="{B8E18876-D5DC-4A01-ABE4-F522E6D122B2}" />
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="GunFire" ID="{29039A3F-0C6D-49F1-B1EA-7460B7E9D9A0}">
+					<ChildrenList>
+						<Action Name="Play" ID="{98E39E49-8901-4C7B-8451-1369F3A38B1D}" ShortID="282900385" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{5E217982-1F8C-4617-891D-F71D4BF3B75E}" Global="false">
+									<ObjectRef Name="GunFire" ID="{9E2D8122-A02F-4FEC-9212-B1C9DD89DCBD}" WorkUnitID="{B8E18876-D5DC-4A01-ABE4-F522E6D122B2}" />
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

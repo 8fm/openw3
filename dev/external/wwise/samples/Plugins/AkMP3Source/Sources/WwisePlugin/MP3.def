@@ -1,0 +1,7 @@
+; MP3.def : Declares the module parameters for the DLL.
+
+LIBRARY      "MP3"
+
+EXPORTS
+	AkCreatePlugin
+	AkGetSoundEngineCallbacks

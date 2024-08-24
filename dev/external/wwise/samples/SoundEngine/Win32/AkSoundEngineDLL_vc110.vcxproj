@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup Label="ProjectConfigurations">
+		<ProjectConfiguration Include="Debug|Win32">
+			<Configuration>Debug</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Debug|x64">
+			<Configuration>Debug</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Profile|Win32">
+			<Configuration>Profile</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Profile|x64">
+			<Configuration>Profile</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Release|Win32">
+			<Configuration>Release</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Release|x64">
+			<Configuration>Release</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+	</ItemGroup>
+	<PropertyGroup Label="Globals">
+		<ProjectGuid>{B5226101-74A2-32DE-17C9-C321982A567B}</ProjectGuid>
+		<RootNamespace>AkSoundEngineDLL</RootNamespace>
+		<Keyword>Win32Proj</Keyword>
+		<ProjectName>AkSoundEngineDLL</ProjectName>
+		<VCTargetsPath Condition="'$(VCTargetsPath11)' != '' and '$(VSVersion)' == '' and $(VisualStudioVersion) == ''">$(VCTargetsPath11)</VCTargetsPath>
+		<DefaultLanguage>en-US</DefaultLanguage>
+	</PropertyGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+		<ConfigurationType>DynamicLibrary</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<UseDebugLibraries>true</UseDebugLibraries>
+		<PlatformToolset>v110</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+		<ConfigurationType>DynamicLibrary</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<UseDebugLibraries>true</UseDebugLibraries>
+		<PlatformToolset>v110</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'" Label="Configuration">
+		<ConfigurationType>DynamicLibrary</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<UseDebugLibraries>true</UseDebugLibraries>
+		<PlatformToolset>v110</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|x64'" Label="Configuration">
+		<ConfigurationType>DynamicLibrary</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<UseDebugLibraries>true</UseDebugLibraries>
+		<PlatformToolset>v110</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+		<ConfigurationType>DynamicLibrary</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<UseDebugLibraries>true</UseDebugLibraries>
+		<PlatformToolset>v110</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+		<ConfigurationType>DynamicLibrary</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<UseDebugLibraries>true</UseDebugLibraries>
+		<PlatformToolset>v110</PlatformToolset>
+	</PropertyGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+	<ImportGroup Label="ExtensionSettings">
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../source/Build/PropertySheets/Win32/Debug_vc110.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../source/Build/PropertySheets/Win32/Debug_vc110.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../source/Build/PropertySheets/Win32/NDebug_vc110.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Profile|x64'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../source/Build/PropertySheets/Win32/NDebug_vc110.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../source/Build/PropertySheets/Win32/NDebug_vc110.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../source/Build/PropertySheets/Win32/NDebug_vc110.props" />
+	</ImportGroup>
+	<PropertyGroup Label="UserMacros" />
+	<PropertyGroup>
+		<_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\$(Platform)_vc110\$(Configuration)\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\$(Platform)_vc110\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectName)</TargetName>
+		<IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</IgnoreImportLibrary>
+		<LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\$(Platform)_vc110\$(Configuration)\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\$(Platform)_vc110\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectName)</TargetName>
+		<IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</IgnoreImportLibrary>
+		<LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'">..\..\..\$(Platform)_vc110\$(Configuration)\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'">..\..\..\$(Platform)_vc110\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'">$(ProjectName)</TargetName>
+		<IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'">false</IgnoreImportLibrary>
+		<LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'">true</LinkIncremental>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">..\..\..\$(Platform)_vc110\$(Configuration)\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">..\..\..\$(Platform)_vc110\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">$(ProjectName)</TargetName>
+		<IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">false</IgnoreImportLibrary>
+		<LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">true</LinkIncremental>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\$(Platform)_vc110\$(Configuration)\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\$(Platform)_vc110\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectName)</TargetName>
+		<IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</IgnoreImportLibrary>
+		<LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</LinkIncremental>
+		<OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\$(Platform)_vc110\$(Configuration)\</OutDir>
+		<IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\$(Platform)_vc110\$(Configuration)\obj\$(ProjectName)\</IntDir>
+		<TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectName)</TargetName>
+		<IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</IgnoreImportLibrary>
+		<LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</LinkIncremental>
+	</PropertyGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+		<ClCompile>
+			<AdditionalIncludeDirectories>.;..\Common;..\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>_DEBUG;WIN32;AKSOUNDENGINEDLL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader></PrecompiledHeader>
+			<EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>_DEBUG;WIN32;AKSOUNDENGINEDLL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>.;..\Common;..\..\..\include;..\..\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+		<Link>
+			<AdditionalDependencies>AkConvolutionReverbFX.lib;iZTrashMultibandDistortionFX.lib;AstoundsoundExpanderFX.lib;AkTremoloFX.lib;AkMemoryMgr.lib;AkMotionGenerator.lib;AkSineSource.lib;AkSoundSeedWind.lib;AkStereoDelayFX.lib;AkGuitarDistortionFX.lib;AkRumble.lib;AkSoundEngine.lib;AkMP3Source.lib;iZTrashBoxModelerFX.lib;AkSoundSeedImpactFX.lib;AkRoomVerbFX.lib;iZTrashDelayFX.lib;McDSPFutzBoxFX.lib;AkParametricEQFX.lib;McDSPLimiterFX.lib;AkToneSource.lib;AkFlangerFX.lib;AkCompressorFX.lib;AstoundsoundFolddownFX.lib;AkAudioInputSource.lib;AkMusicEngine.lib;AkDelayFX.lib;CrankcaseAudioREVModelPlayerFX.lib;AkSoundSeedWoosh.lib;iZHybridReverbFX.lib;AkPitchShifterFX.lib;iZTrashDynamicsFX.lib;iZTrashDistortionFX.lib;AstoundsoundRTIFX.lib;AkSilenceSource.lib;AkGainFX.lib;AkVorbisDecoder.lib;AkTimeStretchFX.lib;AstoundsoundShared.lib;iZTrashFiltersFX.lib;AkMatrixReverbFX.lib;AkMeterFX.lib;AkStreamMgr.lib;AkHarmonizerFX.lib;AkPeakLimiterFX.lib;AkExpanderFX.lib;dxguid.lib;XInput.lib;msacm32.lib;CommunicationCentral.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+			<OutputFile>$(OutDir)bin/$(ProjectName).dll</OutputFile>
+			<AdditionalLibraryDirectories>&quot;$(DXSDK_DIR)\lib\x86&quot;;$(OutDir)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+			<ImportLibrary>$(OutDir)\lib\$(ProjectName).lib</ImportLibrary>
+			<TargetMachine>MachineX86</TargetMachine>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+		<ClCompile>
+			<AdditionalIncludeDirectories>.;..\Common;..\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>_DEBUG;WIN64;AKSOUNDENGINEDLL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader></PrecompiledHeader>
+			<EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>_DEBUG;WIN64;AKSOUNDENGINEDLL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>.;..\Common;..\..\..\include;..\..\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+		<Link>
+			<AdditionalDependencies>AkConvolutionReverbFX.lib;iZTrashMultibandDistortionFX.lib;AstoundsoundExpanderFX.lib;AkTremoloFX.lib;AkMemoryMgr.lib;AkMotionGenerator.lib;AkSineSource.lib;AkSoundSeedWind.lib;AkStereoDelayFX.lib;AkGuitarDistortionFX.lib;AkRumble.lib;AkSoundEngine.lib;AkMP3Source.lib;iZTrashBoxModelerFX.lib;AkSoundSeedImpactFX.lib;AkRoomVerbFX.lib;iZTrashDelayFX.lib;McDSPFutzBoxFX.lib;AkParametricEQFX.lib;McDSPLimiterFX.lib;AkToneSource.lib;AkFlangerFX.lib;AkCompressorFX.lib;AstoundsoundFolddownFX.lib;AkAudioInputSource.lib;AkMusicEngine.lib;AkDelayFX.lib;CrankcaseAudioREVModelPlayerFX.lib;AkSoundSeedWoosh.lib;iZHybridReverbFX.lib;AkPitchShifterFX.lib;iZTrashDynamicsFX.lib;iZTrashDistortionFX.lib;AstoundsoundRTIFX.lib;AkSilenceSource.lib;AkGainFX.lib;AkVorbisDecoder.lib;AkTimeStretchFX.lib;AstoundsoundShared.lib;iZTrashFiltersFX.lib;AkMatrixReverbFX.lib;AkMeterFX.lib;AkStreamMgr.lib;AkHarmonizerFX.lib;AkPeakLimiterFX.lib;AkExpanderFX.lib;dxguid.lib;XInput.lib;msacm32.lib;CommunicationCentral.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+			<OutputFile>$(OutDir)bin/$(ProjectName).dll</OutputFile>
+			<AdditionalLibraryDirectories>&quot;$(DXSDK_DIR)\lib\x64&quot;;$(OutDir)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+			<ImportLibrary>$(OutDir)\lib\$(ProjectName).lib</ImportLibrary>
+			<TargetMachine>MachineX64</TargetMachine>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'">
+		<ClCompile>
+			<AdditionalIncludeDirectories>.;..\Common;..\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>NDEBUG;WIN32;AKSOUNDENGINEDLL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader></PrecompiledHeader>
+			<EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>NDEBUG;WIN32;AKSOUNDENGINEDLL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>.;..\Common;..\..\..\include;..\..\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+		<Link>
+			<AdditionalDependencies>AkConvolutionReverbFX.lib;iZTrashMultibandDistortionFX.lib;AstoundsoundExpanderFX.lib;AkTremoloFX.lib;AkMemoryMgr.lib;AkMotionGenerator.lib;AkSineSource.lib;AkSoundSeedWind.lib;AkStereoDelayFX.lib;AkGuitarDistortionFX.lib;AkRumble.lib;AkSoundEngine.lib;AkMP3Source.lib;iZTrashBoxModelerFX.lib;AkSoundSeedImpactFX.lib;AkRoomVerbFX.lib;iZTrashDelayFX.lib;McDSPFutzBoxFX.lib;AkParametricEQFX.lib;McDSPLimiterFX.lib;AkToneSource.lib;AkFlangerFX.lib;AkCompressorFX.lib;AstoundsoundFolddownFX.lib;AkAudioInputSource.lib;AkMusicEngine.lib;AkDelayFX.lib;CrankcaseAudioREVModelPlayerFX.lib;AkSoundSeedWoosh.lib;iZHybridReverbFX.lib;AkPitchShifterFX.lib;iZTrashDynamicsFX.lib;iZTrashDistortionFX.lib;AstoundsoundRTIFX.lib;AkSilenceSource.lib;AkGainFX.lib;AkVorbisDecoder.lib;AkTimeStretchFX.lib;AstoundsoundShared.lib;iZTrashFiltersFX.lib;AkMatrixReverbFX.lib;AkMeterFX.lib;AkStreamMgr.lib;AkHarmonizerFX.lib;AkPeakLimiterFX.lib;AkExpanderFX.lib;dxguid.lib;XInput.lib;msacm32.lib;CommunicationCentral.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+			<OutputFile>$(OutDir)bin/$(ProjectName).dll</OutputFile>
+			<AdditionalLibraryDirectories>&quot;$(DXSDK_DIR)\lib\x86&quot;;$(OutDir)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+			<ImportLibrary>$(OutDir)\lib\$(ProjectName).lib</ImportLibrary>
+			<TargetMachine>MachineX86</TargetMachine>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">
+		<ClCompile>
+			<AdditionalIncludeDirectories>.;..\Common;..\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>NDEBUG;WIN64;AKSOUNDENGINEDLL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader></PrecompiledHeader>
+			<EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>NDEBUG;WIN64;AKSOUNDENGINEDLL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>.;..\Common;..\..\..\include;..\..\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+		<Link>
+			<AdditionalDependencies>AkConvolutionReverbFX.lib;iZTrashMultibandDistortionFX.lib;AstoundsoundExpanderFX.lib;AkTremoloFX.lib;AkMemoryMgr.lib;AkMotionGenerator.lib;AkSineSource.lib;AkSoundSeedWind.lib;AkStereoDelayFX.lib;AkGuitarDistortionFX.lib;AkRumble.lib;AkSoundEngine.lib;AkMP3Source.lib;iZTrashBoxModelerFX.lib;AkSoundSeedImpactFX.lib;AkRoomVerbFX.lib;iZTrashDelayFX.lib;McDSPFutzBoxFX.lib;AkParametricEQFX.lib;McDSPLimiterFX.lib;AkToneSource.lib;AkFlangerFX.lib;AkCompressorFX.lib;AstoundsoundFolddownFX.lib;AkAudioInputSource.lib;AkMusicEngine.lib;AkDelayFX.lib;CrankcaseAudioREVModelPlayerFX.lib;AkSoundSeedWoosh.lib;iZHybridReverbFX.lib;AkPitchShifterFX.lib;iZTrashDynamicsFX.lib;iZTrashDistortionFX.lib;AstoundsoundRTIFX.lib;AkSilenceSource.lib;AkGainFX.lib;AkVorbisDecoder.lib;AkTimeStretchFX.lib;AstoundsoundShared.lib;iZTrashFiltersFX.lib;AkMatrixReverbFX.lib;AkMeterFX.lib;AkStreamMgr.lib;AkHarmonizerFX.lib;AkPeakLimiterFX.lib;AkExpanderFX.lib;dxguid.lib;XInput.lib;msacm32.lib;CommunicationCentral.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+			<OutputFile>$(OutDir)bin/$(ProjectName).dll</OutputFile>
+			<AdditionalLibraryDirectories>&quot;$(DXSDK_DIR)\lib\x64&quot;;$(OutDir)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+			<ImportLibrary>$(OutDir)\lib\$(ProjectName).lib</ImportLibrary>
+			<TargetMachine>MachineX64</TargetMachine>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+		<ClCompile>
+			<AdditionalIncludeDirectories>.;..\Common;..\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>NDEBUG;AK_OPTIMIZED;WIN32;AKSOUNDENGINEDLL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader></PrecompiledHeader>
+			<EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>NDEBUG;AK_OPTIMIZED;WIN32;AKSOUNDENGINEDLL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>.;..\Common;..\..\..\include;..\..\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+		<Link>
+			<AdditionalDependencies>AkConvolutionReverbFX.lib;iZTrashMultibandDistortionFX.lib;AstoundsoundExpanderFX.lib;AkTremoloFX.lib;AkMemoryMgr.lib;AkMotionGenerator.lib;AkSineSource.lib;AkSoundSeedWind.lib;AkStereoDelayFX.lib;AkGuitarDistortionFX.lib;AkRumble.lib;AkSoundEngine.lib;AkMP3Source.lib;iZTrashBoxModelerFX.lib;AkSoundSeedImpactFX.lib;AkRoomVerbFX.lib;iZTrashDelayFX.lib;McDSPFutzBoxFX.lib;AkParametricEQFX.lib;McDSPLimiterFX.lib;AkToneSource.lib;AkFlangerFX.lib;AkCompressorFX.lib;AstoundsoundFolddownFX.lib;AkAudioInputSource.lib;AkMusicEngine.lib;AkDelayFX.lib;CrankcaseAudioREVModelPlayerFX.lib;AkSoundSeedWoosh.lib;iZHybridReverbFX.lib;AkPitchShifterFX.lib;iZTrashDynamicsFX.lib;iZTrashDistortionFX.lib;AstoundsoundRTIFX.lib;AkSilenceSource.lib;AkGainFX.lib;AkVorbisDecoder.lib;AkTimeStretchFX.lib;AstoundsoundShared.lib;iZTrashFiltersFX.lib;AkMatrixReverbFX.lib;AkMeterFX.lib;AkStreamMgr.lib;AkHarmonizerFX.lib;AkPeakLimiterFX.lib;AkExpanderFX.lib;dxguid.lib;XInput.lib;msacm32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+			<OutputFile>$(OutDir)bin/$(ProjectName).dll</OutputFile>
+			<AdditionalLibraryDirectories>&quot;$(DXSDK_DIR)\lib\x86&quot;;$(OutDir)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+			<ImportLibrary>$(OutDir)\lib\$(ProjectName).lib</ImportLibrary>
+			<TargetMachine>MachineX86</TargetMachine>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+		<ClCompile>
+			<AdditionalIncludeDirectories>.;..\Common;..\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>NDEBUG;AK_OPTIMIZED;WIN64;AKSOUNDENGINEDLL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PrecompiledHeader></PrecompiledHeader>
+			<EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>NDEBUG;AK_OPTIMIZED;WIN64;AKSOUNDENGINEDLL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>.;..\Common;..\..\..\include;..\..\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+		<Link>
+			<AdditionalDependencies>AkConvolutionReverbFX.lib;iZTrashMultibandDistortionFX.lib;AstoundsoundExpanderFX.lib;AkTremoloFX.lib;AkMemoryMgr.lib;AkMotionGenerator.lib;AkSineSource.lib;AkSoundSeedWind.lib;AkStereoDelayFX.lib;AkGuitarDistortionFX.lib;AkRumble.lib;AkSoundEngine.lib;AkMP3Source.lib;iZTrashBoxModelerFX.lib;AkSoundSeedImpactFX.lib;AkRoomVerbFX.lib;iZTrashDelayFX.lib;McDSPFutzBoxFX.lib;AkParametricEQFX.lib;McDSPLimiterFX.lib;AkToneSource.lib;AkFlangerFX.lib;AkCompressorFX.lib;AstoundsoundFolddownFX.lib;AkAudioInputSource.lib;AkMusicEngine.lib;AkDelayFX.lib;CrankcaseAudioREVModelPlayerFX.lib;AkSoundSeedWoosh.lib;iZHybridReverbFX.lib;AkPitchShifterFX.lib;iZTrashDynamicsFX.lib;iZTrashDistortionFX.lib;AstoundsoundRTIFX.lib;AkSilenceSource.lib;AkGainFX.lib;AkVorbisDecoder.lib;AkTimeStretchFX.lib;AstoundsoundShared.lib;iZTrashFiltersFX.lib;AkMatrixReverbFX.lib;AkMeterFX.lib;AkStreamMgr.lib;AkHarmonizerFX.lib;AkPeakLimiterFX.lib;AkExpanderFX.lib;dxguid.lib;XInput.lib;msacm32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+			<OutputFile>$(OutDir)bin/$(ProjectName).dll</OutputFile>
+			<AdditionalLibraryDirectories>&quot;$(DXSDK_DIR)\lib\x64&quot;;$(OutDir)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+			<SubSystem>Windows</SubSystem>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+			<ImportLibrary>$(OutDir)\lib\$(ProjectName).lib</ImportLibrary>
+			<TargetMachine>MachineX64</TargetMachine>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemGroup>
+		<ClInclude Include="AkSoundEngineDLL.h" />
+		<ClInclude Include="AkSoundEngineExports.h" />
+		<ClInclude Include="resource.h" />
+		<ClInclude Include="AkDefaultIOHookBlocking.h" />
+		<ClInclude Include="AkFileHelpers.h" />
+		<ClInclude Include="..\Common\AkFileLocationBase.h" />
+	</ItemGroup>
+	<ItemGroup>
+		<ClCompile Include="AkSoundEngineDLL.cpp">
+		</ClCompile>
+		<ClCompile Include="AkDefaultIOHookBlocking.cpp">
+		</ClCompile>
+		<ClCompile Include="..\Common\AkFileLocationBase.cpp">
+		</ClCompile>
+	</ItemGroup>
+	<ItemGroup>
+		<ResourceCompile Include="AkSoundEngineDLL.rc" />
+	</ItemGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+	<ImportGroup Label="ExtensionTargets">
+	</ImportGroup>
+</Project>

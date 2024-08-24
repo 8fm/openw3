@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{DC1BCA07-F4BB-483E-A207-A5D3F24C41B2}" SchemaVersion="62">
+	<Effects>
+		<WorkUnit Name="Default Work Unit" ID="{DC1BCA07-F4BB-483E-A207-A5D3F24C41B2}" PersistMode="Standalone">
+			<ChildrenList>
+				<Effect Name="Hangar_Env" ID="{C2817027-BAD4-4483-8762-64C45E56497E}" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118">
+					<PropertyList>
+						<Property Name="DecayTime" Type="Real32" Value="6.1" />
+						<Property Name="Density" Type="Real32" Value="100" />
+						<Property Name="Diffusion" Type="Real32" Value="53" />
+						<Property Name="ERFrontBackDelay" Type="Real32" Value="100" />
+						<Property Name="ERLevel" Type="Real32" Value="-15" />
+						<Property Name="ERPattern" Type="int32" Value="5" />
+						<Property Name="Filter1Freq" Type="Real32" Value="490" />
+						<Property Name="Filter1Gain" Type="Real32" Value="-4.5" />
+						<Property Name="Filter2Freq" Type="Real32" Value="2200" />
+						<Property Name="Filter2InsertPos" Type="int32" Value="0" />
+						<Property Name="Filter2Q" Type="Real32" Value="0.1" />
+						<Property Name="Filter3Freq" Type="Real32" Value="10240" />
+						<Property Name="Filter3Gain" Type="Real32" Value="3" />
+						<Property Name="HFDamping" Type="Real32" Value="6.9" />
+						<Property Name="PreDelay" Type="Real32" Value="95" />
+						<Property Name="Quality" Type="int32" Value="6" />
+						<Property Name="ReverbLevel" Type="Real32" Value="-17" />
+						<Property Name="RoomShape" Type="Real32" Value="0" />
+						<Property Name="RoomSize" Type="Real32" Value="71" />
+						<Property Name="StereoWidth" Type="Real32" Value="139" />
+					</PropertyList>
+				</Effect>
+				<Effect Name="Tunnel_Env" ID="{36DE7D53-09B5-4B9F-916A-812732974560}" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118">
+					<PropertyList>
+						<Property Name="DecayTime" Type="Real32" Value="1.7" />
+						<Property Name="Density" Type="Real32" Value="44" />
+						<Property Name="ERFrontBackDelay" Type="Real32" Value="50" />
+						<Property Name="ERLevel" Type="Real32" Value="-21" />
+						<Property Name="ERPattern" Type="int32" Value="11" />
+						<Property Name="Filter1Freq" Type="Real32" Value="590" />
+						<Property Name="Filter1Gain" Type="Real32" Value="2" />
+						<Property Name="Filter1InsertPos" Type="int32" Value="2" />
+						<Property Name="Filter2Freq" Type="Real32" Value="780" />
+						<Property Name="Filter3Gain" Type="Real32" Value="-0.5" />
+						<Property Name="HFDamping" Type="Real32" Value="2.8" />
+						<Property Name="PreDelay" Type="Real32" Value="50" />
+						<Property Name="Quality" Type="int32" Value="16" />
+						<Property Name="ReverbLevel" Type="Real32" Value="-24" />
+						<Property Name="RoomShape" Type="Real32" Value="55" />
+						<Property Name="RoomSize" Type="Real32" Value="22" />
+					</PropertyList>
+				</Effect>
+				<Effect Name="Hangar_Env_Low" ID="{02B9CCFE-D719-4F10-B10C-844791DA0F01}" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115">
+					<PropertyList>
+						<Property Name="HFRatio" Type="Real32" Value="5.4" />
+						<Property Name="PreDelay" Type="Real32" Value="0.15" />
+						<Property Name="ReverbTime" Type="Real32" Value="4.2" />
+						<Property Name="WetLevel" Type="Real32" Value="-23" />
+					</PropertyList>
+				</Effect>
+				<Effect Name="Dark_Cathedral" ID="{5D107457-F392-439F-AF71-8D0235D9C0F8}" PluginName="Wwise Convolution Reverb" CompanyID="0" PluginID="127">
+					<Comment>Impulse response created by Pinguin ing.büro
+© 2010 Pinguin ing.büro.  All rights reserved.
+IR Pre-delay: 20ms 
+</Comment>
+					<PropertyList>
+						<Property Name="CenterLevel" Type="Real32" Value="-12" />
+						<Property Name="IRConvolutionSmooth" Type="Real32" Value="5" />
+						<Property Name="IRConvolutionStop" Type="Real64" Value="4.04647541966427" />
+						<Property Name="IRConvolutionThreshold" Type="Real32" Value="-62" />
+						<Property Name="IRLevel" Type="Real32" Value="-37" />
+						<Property Name="IRStretch" Type="Real32" Value="119" />
+						<Property Name="PreDelay" Type="Real32" Value="64" />
+					</PropertyList>
+					<ChildrenList>
+						<PluginMediaSource Name="AK St-Katharinen" ID="{5314F988-340E-4631-B4BC-52FB22E4AD77}" ShortID="8071170">
+							<ParentPluginID>8323075</ParentPluginID>
+							<PropertyList>
+								<Property Name="DataFileName" Type="string" Value="AK_Factory_IR\Churches\AK St-Katharinen.wav" />
+							</PropertyList>
+						</PluginMediaSource>
+					</ChildrenList>
+					<PluginData>
+	<ConvolutionData>
+		<CurveList Version="1">
+			<CurveInfo Name="IRGraphicEQ">
+				<Curve Name="" ID="{C52A2C96-440C-43CE-8187-C98337CC7E5C}">
+					<PropertyList>
+						<Property Name="Flags" Type="int32" Value="19" />
+					</PropertyList>
+					<PointList>
+						<Point>
+							<XPos>20</XPos>
+							<YPos>0</YPos>
+							<Flags>5</Flags>
+						</Point>
+						<Point>
+							<XPos>20000</XPos>
+							<YPos>0</YPos>
+							<Flags>37</Flags>
+						</Point>
+					</PointList>
+				</Curve>
+			</CurveInfo>
+			<CurveInfo Name="IRLPF">
+				<Curve Name="" ID="{AC3B840F-048F-4CCD-A35B-FACA50745303}">
+					<PropertyList>
+						<Property Name="Flags" Type="int32" Value="5" />
+					</PropertyList>
+					<PointList>
+						<Point>
+							<XPos>0</XPos>
+							<YPos>9043.22581</YPos>
+							<Flags>5</Flags>
+						</Point>
+						<Point>
+							<XPos>5.44758333333333</XPos>
+							<YPos>5820.64516</YPos>
+							<Flags>37</Flags>
+						</Point>
+					</PointList>
+				</Curve>
+			</CurveInfo>
+			<CurveInfo Name="IRLevel">
+				<Curve Name="" ID="{4989E76F-912C-4686-8B5F-329A529E5D89}">
+					<PropertyList>
+						<Property Name="Flags" Type="int32" Value="1" />
+					</PropertyList>
+					<PointList>
+						<Point>
+							<XPos>0</XPos>
+							<YPos>0</YPos>
+							<Flags>5</Flags>
+						</Point>
+						<Point>
+							<XPos>5.44758333333333</XPos>
+							<YPos>0</YPos>
+							<Flags>37</Flags>
+						</Point>
+					</PointList>
+				</Curve>
+			</CurveInfo>
+		</CurveList>
+	</ConvolutionData>
+</PluginData>
+				</Effect>
+				<Effect Name="Hangar_3DS" ID="{E718D6B2-90C5-4B1C-80DE-F27D2EBC8E99}" PluginName="3DS Reverb" CompanyID="0" PluginID="133" />
+			</ChildrenList>
+		</WorkUnit>
+	</Effects>
+</WwiseDocument>

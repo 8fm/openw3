@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{B027AD61-DAAE-4D44-9E0C-394BFD7D8FE3}" SchemaVersion="62">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{B027AD61-DAAE-4D44-9E0C-394BFD7D8FE3}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_Engine" ID="{D298E1CC-04C8-4885-AB95-497BA4ABDCAE}">
+					<ChildrenList>
+						<Action Name="Play" ID="{C553996D-245D-42C9-9254-7A36D05D913D}" ShortID="934605035" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{5D28D581-BDEF-4885-8CAF-0282FFABF164}" Global="false">
+									<ObjectRef Name="Engine" ID="{97A58685-6231-4227-9BAB-451E089615A8}" WorkUnitID="{DF1211E0-7B41-4179-B2A5-64F8AF3E6CC2}" />
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Engine" ID="{01091B09-EF30-47BB-B641-A23366EF5F3F}">
+					<ChildrenList>
+						<Action Name="Stop" ID="{C427BF5E-49FC-424D-A969-833D1B2086D0}" ShortID="667733582" Type="Stop" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{704AF993-9163-4C38-B021-D9B9F98E1A47}" Global="false">
+									<ObjectRef Name="Engine" ID="{97A58685-6231-4227-9BAB-451E089615A8}" WorkUnitID="{DF1211E0-7B41-4179-B2A5-64F8AF3E6CC2}" />
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
