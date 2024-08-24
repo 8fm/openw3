@@ -10,38 +10,27 @@
 
 #ifndef NO_MARKER_SYSTEMS
 
-#if _MSC_VER == 1700
-	#ifdef _DEBUG
-		#ifdef _WIN64
-			#pragma comment ( lib, "internal/TestTrackConnection/Debug/vc110/x64/TestTrackConnection_x64.lib" )
-		#elif defined(W2_PLATFORM_WIN32)
-			#pragma comment ( lib, "internal/TestTrackConnection/Debug/vc110/x86/TestTrackConnection_x86.lib" )
-		#endif
-		#endif
-	#ifdef NDEBUG
-		#ifdef _WIN64
-			#pragma comment ( lib, "internal/TestTrackConnection/Release/vc110/x64/TestTrackConnection_x64.lib" )
-		#elif defined(W2_PLATFORM_WIN32)
-			#pragma comment ( lib, "internal/TestTrackConnection/Release/vc110/x86/TestTrackConnection_x86.lib" )
-		#endif
-	#endif
-#elif _MSC_VER == 1600
-	#ifdef _DEBUG
-		#ifdef _WIN64
-			#pragma comment ( lib, "internal/TestTrackConnection/Debug/TestTrackConnection_x64.lib" )
-		#elif defined(W2_PLATFORM_WIN32)
-			#pragma comment ( lib, "internal/TestTrackConnection/Debug/TestTrackConnection_x86.lib" )
-		#endif
-		#endif
-	#ifdef NDEBUG
-		#ifdef _WIN64
-			#pragma comment ( lib, "internal/TestTrackConnection/Release/TestTrackConnection_x64.lib" )
-		#elif defined(W2_PLATFORM_WIN32)
-			#pragma comment ( lib, "internal/TestTrackConnection/Release/TestTrackConnection_x86.lib" )
-		#endif
-	#endif
+#if _MSC_VER == 1600
+	#define LIB_SUBFOLDER ""
+#elif _MSC_VER == 1700
+	#define LIB_SUBFOLDER "vc110/"
 #else
-#error Unsupported compiler
+	#define LIB_SUBFOLDER "vc170/"
+#endif
+
+#ifdef _DEBUG
+	#ifdef _WIN64
+		#pragma comment ( lib, "internal/TestTrackConnection/Debug/" LIB_SUBFOLDER "x64/TestTrackConnection_x64.lib" )
+	#elif defined(W2_PLATFORM_WIN32)
+		#pragma comment ( lib, "internal/TestTrackConnection/Debug/" LIB_SUBFOLDER "/x86/TestTrackConnection_x86.lib" )
+	#endif
+	#endif
+#ifdef NDEBUG
+	#ifdef _WIN64
+		#pragma comment ( lib, "internal/TestTrackConnection/Release/" LIB_SUBFOLDER "/x64/TestTrackConnection_x64.lib" )
+	#elif defined(W2_PLATFORM_WIN32)
+		#pragma comment ( lib, "internal/TestTrackConnection/Release/" LIB_SUBFOLDER "/x86/TestTrackConnection_x86.lib" )
+	#endif
 #endif
 
 
