@@ -625,7 +625,7 @@ public:
     { 
         if (sParams.DisplayWidthCm == 0)
         {
-            sParams.DisplayWidthCm = sParams.DisplayDiagInches / sqrt(1.0f + 1.f/sParams.DisplayAspectRatio * 
+            sParams.DisplayWidthCm = sParams.DisplayDiagInches / sqrtf(1.0f + 1.f/sParams.DisplayAspectRatio *
             1.f/sParams.DisplayAspectRatio) * 2.54f /* inches to cm */; 
         }
         if (Matrices->S3DImpl)
