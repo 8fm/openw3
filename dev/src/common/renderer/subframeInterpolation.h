@@ -51,8 +51,8 @@ public:
 
 		// Get angles at points 1 and 2
 
-		const Float angleAt1 = (to0Vec.IsZero() || to1Vec.IsZero()) ? 0.0f : acos( Vector::Dot3(to0Vec, to1Vec) );
-		const Float angleAt2 = (to1Vec.IsZero() || to2Vec.IsZero()) ? 0.0f : acos( Vector::Dot3(to1Vec, to2Vec) );
+		const Float angleAt1 = (to0Vec.IsZero() || to1Vec.IsZero()) ? 0.0f : acosf( Vector::Dot3(to0Vec, to1Vec) );
+		const Float angleAt2 = (to1Vec.IsZero() || to2Vec.IsZero()) ? 0.0f : acosf( Vector::Dot3(to1Vec, to2Vec) );
 
 		// Return average of 2 angles
 

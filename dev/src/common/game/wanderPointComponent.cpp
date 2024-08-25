@@ -217,7 +217,7 @@ void CWanderPointComponent::WaypointGenerateEditorFragments( CRenderFrame* frame
 										Float lineDist = (i1 - p1).SquareMag();
 										Float ratio = (lineDist < NumericLimits< Float >::Epsilon()) ?
 											 0.f :
-											sqrt( lineDist ) / m_len;
+											sqrtf( lineDist ) / m_len;
 										Float radius = m_r1 + (m_r2 - m_r1) * ratio;
 										return (i1 - i2).SquareMag() < radius * radius;
 									}

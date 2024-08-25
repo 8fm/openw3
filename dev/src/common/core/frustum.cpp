@@ -62,7 +62,7 @@ void ComputeFrustumPlane( const EFrustumPlane plane, const Matrix& matrix, __m12
 	}
 
 	// Normalize plane
-	Float len = sqrt( x * x + y * y + z * z );
+	Float len = sqrtf( x * x + y * y + z * z );
 	outPlane = _mm_setr_ps( x / len, y / len, z / len, w / len );
 	outMask = _mm_cmplt_ps( outPlane, _mm_setzero_ps() );
 }

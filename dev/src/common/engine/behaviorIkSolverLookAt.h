@@ -226,7 +226,7 @@ protected:
 		
 		clampedTargetInOut.X *= w;*/
 		
-		Float loc = 100.f * distMax / cosh( DEG2RAD( clampedTargetInOut.X ) ) + rangeStart * MAbs( clampedTargetInOut.X );
+		Float loc = 100.f * distMax / coshf( DEG2RAD( clampedTargetInOut.X ) ) + rangeStart * MAbs( clampedTargetInOut.X );
 
 		if ( clampedTargetInOut.Y < loc )
 		{

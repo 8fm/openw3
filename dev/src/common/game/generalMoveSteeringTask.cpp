@@ -115,7 +115,7 @@ void CMoveSTSnapToMinimalVelocity::CalculateSteering( IMovementCommandBuffer& co
 		Float minSpeed = m_minVelocity+0.01f;
 		if ( headingLenSq > (0.01f*0.01f) && headingLenSq < (minSpeed*minSpeed) )
 		{
-			Float headingLen = sqrt( headingLenSq );
+			Float headingLen = sqrtf( headingLenSq );
 			comm.ModifyHeading( currHeading * (minSpeed / headingLen) );
 		}
 	}
@@ -867,7 +867,7 @@ void CMoveSTSeparateFromActors::CalculateSteering( IMovementCommandBuffer& comm,
 			{
 				return true;
 			}
-			Float dist = sqrt( distSq );
+			Float dist = sqrtf( distSq );
 
 			Float distRatio = dist <= m_personalSpace ? 1.f : 1.f - (dist - m_personalSpace) / m_separationDistance;
 			Float actorMass = 1.f * distRatio;		// TODO: some kind of actors weight
@@ -1132,7 +1132,7 @@ void CMoveSTApplySteering::CalculateSteering( IMovementCommandBuffer& comm, Inst
 			Float speedMult = 1.f;
 			if ( headingLenSq < 1.f )
 			{
-				speedMult = sqrt( headingLenSq );
+				speedMult = sqrtf( headingLenSq );
 			}
 
 			ApplyHeading( comm, heading );
@@ -2165,7 +2165,7 @@ void CMoveSTCollisionResponse::CollisionResponse( IMovementCommandBuffer& comm, 
 			{
 				return true;
 			}
-			Float dist = sqrt( distSq );
+			Float dist = sqrtf( distSq );
 
 			Float distRatio = 1.f - (dist / separationDistance);
 
@@ -2293,7 +2293,7 @@ Float CMoveSTForwardCollisionResponse::ForwardCollisionResponse( IMovementComman
 			{
 				return true;
 			}
-			Float dist = sqrt( distSq );
+			Float dist = sqrtf( distSq );
 
 			diff *= ratio * ( separationDistance - dist ) / dist;
 
@@ -2555,7 +2555,7 @@ void CMoveSTKeepAwayTarget::CalculateSteering( IMovementCommandBuffer& comm, Ins
 		{
 			heading = -heading;
 		}
-		comm.AddHeading( heading, fabs( m_headingImportance ) );
+		comm.AddHeading( heading, fabsf( m_headingImportance ) );
 		comm.AddSpeed( m_speed, 1.0f );
 	}
 }

@@ -753,7 +753,7 @@ public:
 		m_numPlanes++;
 
 		// Normalize plane
-		Float len = sqrt( x*x + y*y + z*z );
+		Float len = sqrtf( x*x + y*y + z*z );
 		plane.A[0] = x / len;
 		plane.A[1] = y / len;
 		plane.A[2] = z / len;

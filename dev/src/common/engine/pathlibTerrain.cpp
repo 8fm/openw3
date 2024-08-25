@@ -1910,7 +1910,7 @@ Bool CTerrainAreaDescription::ComputeTerrainData( CDetailedSurfaceData* surface,
 
 	const Float maxTerrainAngle = m_pathlib->GetGlobalSettings().GetMaxTerrainSlope();
 
-	const Float maxZDiff = quadSize * tan( DEG2RAD( maxTerrainAngle ) );
+	const Float maxZDiff = quadSize * tanf( DEG2RAD( maxTerrainAngle ) );
 
 	Bool markDirty = false;
 	for ( Uint32 y = 0; y < resolution-1; ++y )

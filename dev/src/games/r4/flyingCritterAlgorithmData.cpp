@@ -695,7 +695,7 @@ void CFlyingCrittersAlgorithmData::CalculateSound( TSwarmStatesList crittersStat
 
 		soundJobData->m_center		= centerOfMass;
 		soundJobData->m_intensity	= mass;
-		soundJobData->m_radius		= sqrt( radiusSq );
+		soundJobData->m_radius		= sqrtf( radiusSq );
 		soundJobData->m_distance	= dist;
 
 		soundJobData->m_yaw			= cameraOrient.Yaw - distOrient.Yaw;
@@ -1005,7 +1005,7 @@ void CFlyingCrittersAlgorithmData::ComputeAltitudeForce( Vector3 & altitudeForce
 {
 	altitudeForce				= Vector3( 0.0f, 0.0f, 0.0f );
 	const Float diffToAltitude	= randomAltitude - idleTargetPosition.Z;
-	const Float distToAltitude	= fabs( diffToAltitude );
+	const Float distToAltitude	= fabsf( diffToAltitude );
 	if ( distToAltitude > m_maxDistToAltitude_IdleTarget )
 	{
 		altitudeForce.Z		= ( diffToAltitude / distToAltitude ) * ( distToAltitude - m_maxDistToAltitude_IdleTarget );

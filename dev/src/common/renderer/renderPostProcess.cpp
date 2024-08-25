@@ -852,8 +852,8 @@ void CRenderPostProcess::ProcessTonemappingHelpers( const CRenderFrameInfo& info
 		const Float clamped_frame_time	= Clamp( prev_frame_time, 1.f / 250.f, 1.f / 5.f );
 
 		// Time based adaptation
-		const Float adaptationValueUp   = 1.f - exp( -( clamped_frame_time * info.m_envParametersDayPoint.m_toneMappingAdaptationSpeedUp * 0.5f ) );
-		const Float adaptationValueDown = 1.f - exp( -( clamped_frame_time * info.m_envParametersDayPoint.m_toneMappingAdaptationSpeedDown * 0.5f ) );
+		const Float adaptationValueUp   = 1.f - expf( -( clamped_frame_time * info.m_envParametersDayPoint.m_toneMappingAdaptationSpeedUp * 0.5f ) );
+		const Float adaptationValueDown = 1.f - expf( -( clamped_frame_time * info.m_envParametersDayPoint.m_toneMappingAdaptationSpeedDown * 0.5f ) );
 
 		const Bool instant_adaptation    = info.m_instantAdaptation || prev_frame_time < 0 || Config::cvForceInstantAdaptation.Get() || surfaces->IsPersistentSurfaceDirty( CRenderSurfaces::PS_Luminance );
 		

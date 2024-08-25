@@ -56,12 +56,12 @@ namespace QuadraticBezierNamespace
 			if(Delta==0)
 			{
 				numroots=1;
-				roots[0]=(-b+sqrt(Delta))/(2*a);
+				roots[0]=(-b+sqrtf(Delta))/(2*a);
 				return;
 			}
 			numroots=2;
-			roots[0]=(-b+sqrt(Delta))/(2*a);
-			roots[1]=(-b-sqrt(Delta))/(2*a);
+			roots[0]=(-b+sqrtf(Delta))/(2*a);
+			roots[1]=(-b-sqrtf(Delta))/(2*a);
 		}
 		void Polynomial::FindRoots3(float* roots, int & numroots)
 		{
@@ -75,10 +75,10 @@ namespace QuadraticBezierNamespace
 			float m = 4.5f*((B*C)-(3*D))-(B*B*B);
 			float n = (B*B)-3*C;
 			float Delta = (m*m)-(n*n*n);
-			float r=m+sqrt(Delta);
-			float s=m-sqrt(Delta);
-			r=Sign(r)*pow( abs(r), 1.0f/3.0f );
-			s=Sign(s)*pow( abs(s), 1.0f/3.0f );
+			float r=m+sqrtf(Delta);
+			float s=m-sqrtf(Delta);
+			r=Sign(r)*powf( abs(r), 1.0f/3.0f );
+			s=Sign(s)*powf( abs(s), 1.0f/3.0f );
 			if(Delta>0)
 			{
 				numroots=1;
@@ -90,19 +90,19 @@ namespace QuadraticBezierNamespace
 				if(m==0)
 				{
 					numroots=1;
-					roots[0]=(1.0f/3.0f)*(-B+2*Sign(m)*pow(abs(m),(1.0f/3.0f)));
+					roots[0]=(1.0f/3.0f)*(-B+2*Sign(m)*powf(abs(m),(1.0f/3.0f)));
 					return;
 				}
 				numroots=2;
-				roots[0]=(1.0f/3.0f)*(-B+2*Sign(m)*pow(abs(m),(1.0f/3.0f)));
-				roots[1]=(1.0f/3.0f)*(-B-Sign(m)*pow(abs(m),(1.0f/3.0f)));
+				roots[0]=(1.0f/3.0f)*(-B+2*Sign(m)*powf(abs(m),(1.0f/3.0f)));
+				roots[1]=(1.0f/3.0f)*(-B-Sign(m)*powf(abs(m),(1.0f/3.0f)));
 				return;
 			}
-			float fi = acos( m/(n*sqrt(n)) );
+			float fi = acosf( m/(n*sqrtf(n)) );
 			numroots=3;
-			roots[0]=(1.0f/3.0f)*( -B + 2*sqrt(n)*cos(  (fi+0*2*M_PI)/3.0f  )  );
-			roots[1]=(1.0f/3.0f)*( -B + 2*sqrt(n)*cos(  (fi+1*2*M_PI)/3.0f  )  );
-			roots[2]=(1.0f/3.0f)*( -B + 2*sqrt(n)*cos(  (fi+2*2*M_PI)/3.0f  )  );
+			roots[0]=(1.0f/3.0f)*( -B + 2*sqrtf(n)*cosf(  (fi+0*2*M_PI)/3.0f  )  );
+			roots[1]=(1.0f/3.0f)*( -B + 2*sqrtf(n)*cosf(  (fi+1*2*M_PI)/3.0f  )  );
+			roots[2]=(1.0f/3.0f)*( -B + 2*sqrtf(n)*cosf(  (fi+2*2*M_PI)/3.0f  )  );
 		}
 		void Polynomial::FindRoots4(float* roots, int & numroots)
 		{
@@ -118,16 +118,16 @@ namespace QuadraticBezierNamespace
 			float m = 4.5f*(A*B*C + 3*A*A*D + 3*C*C + 8*B*D)-(B*B*B);
 			float n = 3*(4*D-A*C) + (B*B);
 			float Delta = (m*m)-(n*n*n);
-			float r=m+Sign(Delta)*sqrt(fabs(Delta));
-			float s=m-Sign(Delta)*sqrt(fabs(Delta));
-			r=Sign(r)*pow( abs(r), 1.0f/3.0f );
-			s=Sign(s)*pow( abs(s), 1.0f/3.0f );
+			float r=m+Sign(Delta)*sqrtf(fabsf(Delta));
+			float s=m-Sign(Delta)*sqrtf(fabsf(Delta));
+			r=Sign(r)*powf( abs(r), 1.0f/3.0f );
+			s=Sign(s)*powf( abs(s), 1.0f/3.0f );
 			if(Delta>0)
 			{
 				float x = (1.f/3.f)*(-B+r+s);
 				float pierw =	((A*A)/4.0f) + B + x;
-				float t1 = (-A/4.0f)+(1.0f/2.0f)*sqrt( pierw );
-				float t2 = (-A/4.0f)-(1.0f/2.0f)*sqrt( pierw );
+				float t1 = (-A/4.0f)+(1.0f/2.0f)*sqrtf( pierw );
+				float t2 = (-A/4.0f)-(1.0f/2.0f)*sqrtf( pierw );
 				GetRoots4(x, m, n, A, B, C, pierw,t1,t2, roots, numroots);
 				return;
 			}
@@ -135,32 +135,32 @@ namespace QuadraticBezierNamespace
 			{
 				if(m==0)
 				{
-					float x = (1.0f/3.0f)*(-B+2*Sign(m)*pow(abs(m),(1.0f/3.0f)));
+					float x = (1.0f/3.0f)*(-B+2*Sign(m)*powf(abs(m),(1.0f/3.0f)));
 					float pierw =	((A*A)/4.0f) + B + x;
-					float t1 = (-A/4.0f)+(1.0f/2.0f)*sqrt( pierw );
-					float t2 = (-A/4.0f)-(1.0f/2.0f)*sqrt( pierw );
+					float t1 = (-A/4.0f)+(1.0f/2.0f)*sqrtf( pierw );
+					float t2 = (-A/4.0f)-(1.0f/2.0f)*sqrtf( pierw );
 					GetRoots4(x, m, n, A, B, C, pierw,t1,t2, roots, numroots);
 					return;
 				}
-				float x = (1.0f/3.0f)*(-B+2*Sign(m)*pow(abs(m),(1.0f/3.0f)));
-				float x2 =(1.0f/3.0f)*(-B-Sign(m)*pow(abs(m),(1.0f/3.0f)));
+				float x = (1.0f/3.0f)*(-B+2*Sign(m)*powf(abs(m),(1.0f/3.0f)));
+				float x2 =(1.0f/3.0f)*(-B-Sign(m)*powf(abs(m),(1.0f/3.0f)));
 				float pierw =	((A*A)/4.0f) + B + x;
 				if(pierw==0){	pierw = ((A*A)/4.0f) + B + x2;	}
-				float t1 = (-A/4.0f)+(1.0f/2.0f)*sqrt( pierw );
-				float t2 = (-A/4.0f)-(1.0f/2.0f)*sqrt( pierw );
+				float t1 = (-A/4.0f)+(1.0f/2.0f)*sqrtf( pierw );
+				float t2 = (-A/4.0f)-(1.0f/2.0f)*sqrtf( pierw );
 				GetRoots4(x, m, n, A, B, C, pierw,t1,t2, roots, numroots);
 				return;
 			}
-			float fi = acos( m/(n*sqrt(n)) );
-			float x1 = (1.0f/3.0f)*( -B + 2*sqrt(n)*cos(  (fi+0*2*M_PI)/3.0f  )  );
-			float x2=  (1.0f/3.0f)*( -B + 2*sqrt(n)*cos(  (fi+1*2*M_PI)/3.0f  )  );
-			float x3=  (1.0f/3.0f)*( -B + 2*sqrt(n)*cos(  (fi+2*2*M_PI)/3.0f  )  );
+			float fi = acosf( m/(n*sqrtf(n)) );
+			float x1 = (1.0f/3.0f)*( -B + 2*sqrtf(n)*cosf(  (fi+0*2*M_PI)/3.0f  )  );
+			float x2=  (1.0f/3.0f)*( -B + 2*sqrtf(n)*cosf(  (fi+1*2*M_PI)/3.0f  )  );
+			float x3=  (1.0f/3.0f)*( -B + 2*sqrtf(n)*cosf(  (fi+2*2*M_PI)/3.0f  )  );
 			float x=x1;
 			float pierw =	((A*A)/4.0f) + B + x1; x=x1;
 			if(pierw==0){	pierw = ((A*A)/4.0f) + B + x2; x=x2;	}
 			if(pierw==0){	pierw = ((A*A)/4.0f) + B + x3; x=x3;	}
-			float t1 = (-A/4.0f)+(1.0f/2.0f)*sqrt( pierw );
-			float t2 = (-A/4.0f)-(1.0f/2.0f)*sqrt( pierw );
+			float t1 = (-A/4.0f)+(1.0f/2.0f)*sqrtf( pierw );
+			float t2 = (-A/4.0f)-(1.0f/2.0f)*sqrtf( pierw );
 			GetRoots4(x, m, n, A, B, C, pierw,t1,t2, roots, numroots);
 			return;
 		}
@@ -178,16 +178,16 @@ namespace QuadraticBezierNamespace
 			{
 				numroots=3;
 				roots[0]=t1;
-				roots[1]=t2+sqrt(sq2);
-				roots[2]=t2-sqrt(sq2);
+				roots[1]=t2+sqrtf(sq2);
+				roots[2]=t2-sqrtf(sq2);
 				return;
 			}
 			if(sq2==0)
 			{
 				numroots=3;
 				roots[0]=t2;
-				roots[1]=t1+sqrt(sq1);
-				roots[2]=t1-sqrt(sq1);
+				roots[1]=t1+sqrtf(sq1);
+				roots[2]=t1-sqrtf(sq1);
 				return;
 			}
 			if(sq1==0 && sq2==0)
@@ -201,14 +201,14 @@ namespace QuadraticBezierNamespace
 			if(sq1>0)
 			{
 				numroots+=2;
-				roots[0]=t1+sqrt(sq1);
-				roots[1]=t1-sqrt(sq1);
+				roots[0]=t1+sqrtf(sq1);
+				roots[1]=t1-sqrtf(sq1);
 			}
 			if(sq2>0)
 			{
 				numroots+=2;
-				roots[numroots-2]=t2+sqrt(sq2);
-				roots[numroots-1]=t2-sqrt(sq2);
+				roots[numroots-2]=t2+sqrtf(sq2);
+				roots[numroots-1]=t2-sqrtf(sq2);
 			}
 		}
 }

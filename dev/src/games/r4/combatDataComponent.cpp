@@ -248,7 +248,7 @@ Int32 CCombatDataComponent::GetAttackerIndex( CActor* actor )
 Int32 CCombatDataComponent::RightAttackerIndex( Int32 index )
 {
 	const CAttacker& attacker = m_attackers[ index ];
-	Float distToleranceSq = sqrt( attacker.m_distance2DSq ) + 2.f; distToleranceSq *= distToleranceSq;
+	Float distToleranceSq = sqrtf( attacker.m_distance2DSq ) + 2.f; distToleranceSq *= distToleranceSq;
 	Int32 rightIndex = index;
 	do
 	{
@@ -267,7 +267,7 @@ Int32 CCombatDataComponent::RightAttackerIndex( Int32 index )
 Int32 CCombatDataComponent::LeftAttackerIndex( Int32 index )
 {
 	const CAttacker& attacker = m_attackers[ index ];
-	Float distToleranceSq = sqrt( attacker.m_distance2DSq ) + 2.f; distToleranceSq *= distToleranceSq;
+	Float distToleranceSq = sqrtf( attacker.m_distance2DSq ) + 2.f; distToleranceSq *= distToleranceSq;
 	Int32 leftIndex = index;
 	Int32 maxIndex = m_attackers.Size()-1;
 	do

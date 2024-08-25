@@ -280,7 +280,7 @@ RED_INLINE CNavNode* CNodeMap::FindClosestNode( const Vector3& pos, Float& maxDi
 		}
 	}
 
-	maxDist = sqrt( closestNodeSq );
+	maxDist = sqrtf( closestNodeSq );
 
 	return closestNode;
 }
@@ -350,7 +350,7 @@ RED_INLINE CNavNode* CNodeMap::FindClosestNodeInBoundings( const Vector3& pos, c
 		}
 	}
 
-	maxDist = sqrt( closestNodeSq );
+	maxDist = sqrtf( closestNodeSq );
 
 	return closestNode;
 }
@@ -405,7 +405,7 @@ RED_INLINE Uint32 CNodeMap::FindNClosestNodes( const Vector3& pos, Float& maxDis
 		}
 	}
 
-	maxDist = sqrt( closestDistSq );
+	maxDist = sqrtf( closestDistSq );
 
 	return context.m_elementsFoundCount;
 }

@@ -2347,7 +2347,7 @@ void CRenderEnvProbeManager::BlurTempParaboloid( const GpuApi::TextureRef &texRe
 					Float d = 6.4f;
 					Float e = 1.5f;
 
-					return pow( a * exp( - pow((normFactor - b) * d, 2) / (2 * c * c) ), e );
+					return powf( a * expf( - powf((normFactor - b) * d, 2) / (2 * c * c) ), e );
 				}
 			};
 

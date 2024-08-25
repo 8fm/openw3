@@ -617,7 +617,7 @@ void CTestFramework::Tick( Uint64 tickNumber, Float& frameDelta )
 	
 	m_GCScheduler.PerformRequests();
 
-	frameDelta = floor( frameDelta * 1000 ) / 1000;
+	frameDelta = floorf( frameDelta * 1000 ) / 1000;
 
 	if( tickNumber == 0 && frameDelta == 0.0f )
 	{

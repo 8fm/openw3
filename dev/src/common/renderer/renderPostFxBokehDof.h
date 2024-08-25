@@ -72,7 +72,7 @@ class CPostFxBokehDof
 		GpuApi::SetSamplerStatePreset( 4, GpuApi::SAMPSTATEPRESET_ClampLinearNoMip);
 
 		const Float cameraFOV = DEG2RAD(camera.GetFOV());
-		const Float focalLength = 1.0f / (2.0f * tan( cameraFOV / 2.0f ));
+		const Float focalLength = 1.0f / (2.0f * tanf( cameraFOV / 2.0f ));
 		
 		///////////////////////////////////////////////////////////////////
 		// Distance that cause far bokeh not to be visible at all. Bcoz sometimes

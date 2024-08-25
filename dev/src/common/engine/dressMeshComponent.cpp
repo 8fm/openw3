@@ -184,7 +184,7 @@ void CDressMeshComponent::ProcessParentPose( SBehaviorGraphOutput* poseLS, const
 		AnglesPerfect.W=-1;
 		//AnglesPerfect.Normalize4();
 
-		Float bsk = pow((AnglesPerfect.X-Angles.X),2) + pow((AnglesPerfect.Y-Angles.Y),2) + pow((AnglesPerfect.Z-Angles.Z),2) + pow((AnglesPerfect.W-Angles.W),2);
+		Float bsk = powf((AnglesPerfect.X-Angles.X),2) + powf((AnglesPerfect.Y-Angles.Y),2) + powf((AnglesPerfect.Z-Angles.Z),2) + powf((AnglesPerfect.W-Angles.W),2);
 		bsk/=16.0f;
 		Float w = 1-bsk;
 

@@ -1474,9 +1474,9 @@ void CApexClothWrapper::GetDebugVertex( TDynArray< DebugVertex >& debugVertex )
 						for ( Uint32 i=0; i<=numPoints; i++ )
 						{
 							const Float localAngle = 2.0f * M_PI * ( i / (Float)numPoints );
-							const Float u = cos( localAngle ) * sin( angle ) * radius;
-							const Float v = sin( localAngle ) * sin( angle ) * radius;
-							const Float w = cos( angle ) * radius;
+							const Float u = cosf( localAngle ) * sinf( angle ) * radius;
+							const Float v = sinf( localAngle ) * sinf( angle ) * radius;
+							const Float w = cosf( angle ) * radius;
 							Vector point = ( uaxes[axis] * u ) + ( vaxes[axis] * v ) + ( waxes[axis] * w );
 							ringPoints.PushBack( center + matrix.TransformPoint( point ) );
 						}
@@ -1506,9 +1506,9 @@ void CApexClothWrapper::GetDebugVertex( TDynArray< DebugVertex >& debugVertex )
 						for ( Uint32 i=0; i<=numPoints; i++ )
 						{
 							const Float localAngle = 2.0f * M_PI * ( i / (Float)numPoints );
-							const Float u = cos( localAngle ) * sin( angle ) * radius;
-							const Float v = sin( localAngle ) * sin( angle ) * radius;
-							const Float w = cos( angle ) * radius;
+							const Float u = cosf( localAngle ) * sinf( angle ) * radius;
+							const Float v = sinf( localAngle ) * sinf( angle ) * radius;
+							const Float w = cosf( angle ) * radius;
 							Vector point = ( uaxes[axis] * u ) + ( vaxes[axis] * v ) + ( waxes[axis] * w );
 							ringPoints.PushBack( center + matrix.TransformPoint( point ) );
 						}

@@ -19,12 +19,12 @@
 
 inline float arctan2(float a, float b)
 {
-	return atan2(a,b);
+	return atan2f(a,b);
 }
 
 inline float absVal(float a)
 {
-	return fabs(a);
+	return fabsf(a);
 }
 
 struct float4
@@ -398,7 +398,7 @@ inline float argument(const complex & a)
 inline complex complexsqrt(const complex& c)
 {
 	complex com;
-	float b = sqrt((sqrt(c.x*c.x+c.y*c.y)-c.x)/2.f);
+	float b = sqrtf((sqrtf(c.x*c.x+c.y*c.y)-c.x)/2.f);
 	float a = c.y/(2*b);
 	com.x = a;
 	com.y = b;
@@ -785,10 +785,10 @@ inline void M33_quat( const M33 & m, quat & q )
 	if(q1 < 0.0f) q1 = 0.0f;
 	if(q2 < 0.0f) q2 = 0.0f;
 	if(q3 < 0.0f) q3 = 0.0f;
-	q0 = sqrt(q0);
-	q1 = sqrt(q1);
-	q2 = sqrt(q2);
-	q3 = sqrt(q3);
+	q0 = sqrtf(q0);
+	q1 = sqrtf(q1);
+	q2 = sqrtf(q2);
+	q3 = sqrtf(q3);
 	if(q0 >= q1 && q0 >= q2 && q0 >= q3) 
 	{
 		q0 *= +1.0f;
@@ -1442,19 +1442,19 @@ inline bool box3_triangle_intersection( const float3 & minb, const float3 & maxb
 	float edist = (a.x*ed.y)-(a.y*ed.x);
 	float vdist = (c.x*ed.y)-(c.y*ed.x);
 	if(edist>vdist){float temp = edist;edist = vdist;vdist = temp;}
-	float rad = (half.x*fabs(ed.y))+(half.y*fabs(ed.x));
+	float rad = (half.x*fabsf(ed.y))+(half.y*fabsf(ed.x));
 	if( !box1_intersection( -rad, rad, edist, vdist) ){return false;}
 
 	edist = (a.x*ed.z)-(a.z*ed.x);
 	vdist = (c.x*ed.z)-(c.z*ed.x);
 	if(edist>vdist){float temp = edist;edist = vdist;vdist = temp;}
-	rad = (half.x*fabs(ed.z))+(half.z*fabs(ed.x));
+	rad = (half.x*fabsf(ed.z))+(half.z*fabsf(ed.x));
 	if( !box1_intersection( -rad, rad, edist, vdist) ){return false;}
 
 	edist = (a.y*ed.z)-(a.z*ed.y);
 	vdist = (c.y*ed.z)-(c.z*ed.y);
 	if(edist>vdist){float temp = edist;edist = vdist;vdist = temp;}
-	rad = (half.y*fabs(ed.z))+(half.z*fabs(ed.y));
+	rad = (half.y*fabsf(ed.z))+(half.z*fabsf(ed.y));
 	if( !box1_intersection( -rad, rad, edist, vdist) ){return false;}
 
 	////////////////////
@@ -1462,19 +1462,19 @@ inline bool box3_triangle_intersection( const float3 & minb, const float3 & maxb
 	edist = (a.x*ed.y)-(a.y*ed.x);
 	vdist = (b.x*ed.y)-(b.y*ed.x);
 	if(edist>vdist){float temp = edist;edist = vdist;vdist = temp;}
-	rad = (half.x*fabs(ed.y))+(half.y*fabs(ed.x));
+	rad = (half.x*fabsf(ed.y))+(half.y*fabsf(ed.x));
 	if( !box1_intersection( -rad, rad, edist, vdist) ){return false;}
 
 	edist = (a.x*ed.z)-(a.z*ed.x);
 	vdist = (b.x*ed.z)-(b.z*ed.x);
 	if(edist>vdist){float temp = edist;edist = vdist;vdist = temp;}
-	rad = (half.x*fabs(ed.z))+(half.z*fabs(ed.x));
+	rad = (half.x*fabsf(ed.z))+(half.z*fabsf(ed.x));
 	if( !box1_intersection( -rad, rad, edist, vdist) ){return false;}
 
 	edist = (a.y*ed.z)-(a.z*ed.y);
 	vdist = (b.y*ed.z)-(b.z*ed.y);
 	if(edist>vdist){float temp = edist;edist = vdist;vdist = temp;}
-	rad = (half.y*fabs(ed.z))+(half.z*fabs(ed.y));
+	rad = (half.y*fabsf(ed.z))+(half.z*fabsf(ed.y));
 	if( !box1_intersection( -rad, rad, edist, vdist) ){return false;}
 
 	///////////////////
@@ -1482,19 +1482,19 @@ inline bool box3_triangle_intersection( const float3 & minb, const float3 & maxb
 	edist = (b.x*ed.y)-(b.y*ed.x);
 	vdist = (a.x*ed.y)-(a.y*ed.x);
 	if(edist>vdist){float temp = edist;edist = vdist;vdist = temp;}
-	rad = (half.x*fabs(ed.y))+(half.y*fabs(ed.x));
+	rad = (half.x*fabsf(ed.y))+(half.y*fabsf(ed.x));
 	if( !box1_intersection( -rad, rad, edist, vdist) ){return false;}
 
 	edist = (b.x*ed.z)-(b.z*ed.x);
 	vdist = (a.x*ed.z)-(a.z*ed.x);
 	if(edist>vdist){float temp = edist;edist = vdist;vdist = temp;}
-	rad = (half.x*fabs(ed.z))+(half.z*fabs(ed.x));
+	rad = (half.x*fabsf(ed.z))+(half.z*fabsf(ed.x));
 	if( !box1_intersection( -rad, rad, edist, vdist) ){return false;}
 
 	edist = (b.y*ed.z)-(b.z*ed.y);
 	vdist = (a.y*ed.z)-(a.z*ed.y);
 	if(edist>vdist){float temp = edist;edist = vdist;vdist = temp;}
-	rad = (half.y*fabs(ed.z))+(half.z*fabs(ed.y));
+	rad = (half.y*fabsf(ed.z))+(half.z*fabsf(ed.y));
 	if( !box1_intersection( -rad, rad, edist, vdist) ){return false;}
 
 	////////////////////////////////////
@@ -1520,7 +1520,7 @@ inline float3 two_lines_closest_points( const ray3 & a, const ray3 & b )
 	tm.mRotation.row2 = b.dir;
 	tm.mRotation.row3 = normalize( cross( tm.mRotation.row1, tm.mRotation.row2 ) );
 	float3 p = b.pos * inverse(tm);
-	return float3( (p.x), (p.y), fabs(p.z) );
+	return float3( (p.x), (p.y), fabsf(p.z) );
 }
 
 

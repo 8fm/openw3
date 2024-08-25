@@ -180,8 +180,8 @@ Matrix CAnimDangleConstraint_Collar::CalculateOffsets( const Matrix & boneTM, co
 		const Vector p2 = mat.TransformPoint( sphPos2 );
 		// This is Position of the sliced circle
 
-		const Float rad = sqrt( Max( 0.0f, (r*r) - (p.Z*p.Z ) ) );
-		const Float rad2 = sqrt( Max( 0.0f, (r2*r2) - (p2.Z*p2.Z ) ) );
+		const Float rad = sqrtf( Max( 0.0f, (r*r) - (p.Z*p.Z ) ) );
+		const Float rad2 = sqrtf( Max( 0.0f, (r2*r2) - (p2.Z*p2.Z ) ) );
 		// This is radius of the sliced pice
 
 		const Vector toSphere = Vector( p.X, p.Y, 0.0f, 1.0f);
@@ -196,9 +196,9 @@ Matrix CAnimDangleConstraint_Collar::CalculateOffsets( const Matrix & boneTM, co
 		Float ang2 = 0.0f;
 		if ( p.Y < 0.0f && p.Y > -rad )
 		{
-			Float w = sqrt( Max( 0.0f, (z*z) - (rad*rad) ) );
-			Float ang1 = acos( w/z );
-			Float ang2 = acos( p.X/z );
+			Float w = sqrtf( Max( 0.0f, (z*z) - (rad*rad) ) );
+			Float ang1 = acosf( w/z );
+			Float ang2 = acosf( p.X/z );
 			Float anga = ( ang1 - ang2 );
 			Float angb = ( ang2 - ang1 );
 			ang = anga>angb ? -angb : -anga;
@@ -206,9 +206,9 @@ Matrix CAnimDangleConstraint_Collar::CalculateOffsets( const Matrix & boneTM, co
 		}
 		else if ( p.Y >= 0.0f )
 		{
-			Float w = sqrt( Max( 0.0f, (z*z) - (rad*rad) ) );
-			Float ang1 = -acos( w/z );
-			Float ang2 = acos( p.X/z );
+			Float w = sqrtf( Max( 0.0f, (z*z) - (rad*rad) ) );
+			Float ang1 = -acosf( w/z );
+			Float ang2 = acosf( p.X/z );
 			Float anga = ( ang1 - ang2 );
 			Float angb = ( ang2 - ang1 );
 			ang = anga>angb ? -angb : -anga;
@@ -217,9 +217,9 @@ Matrix CAnimDangleConstraint_Collar::CalculateOffsets( const Matrix & boneTM, co
 
 		if ( p2.Y < 0.0f && p2.Y > -rad2 )
 		{
-			Float w2 = sqrt( Max( 0.0f, (z2*z2) - (rad2*rad2) ) );
-			Float ang12 = acos( w2/z2 );
-			Float ang22 = acos( p2.X/z2 );
+			Float w2 = sqrtf( Max( 0.0f, (z2*z2) - (rad2*rad2) ) );
+			Float ang12 = acosf( w2/z2 );
+			Float ang22 = acosf( p2.X/z2 );
 			Float anga2 = ( ang12 - ang22 );
 			Float angb2 = ( ang22 - ang12 );
 			ang2 = anga2>angb2 ? -angb2 : -anga2;
@@ -227,9 +227,9 @@ Matrix CAnimDangleConstraint_Collar::CalculateOffsets( const Matrix & boneTM, co
 		}
 		else if ( p2.Y >= 0.0f )
 		{
-			Float w2 = sqrt( Max( 0.0f, (z2*z2) - (rad2*rad2) ) );
-			Float ang12 = -acos( w2/z2 );
-			Float ang22 = acos( p2.X/z2 );
+			Float w2 = sqrtf( Max( 0.0f, (z2*z2) - (rad2*rad2) ) );
+			Float ang12 = -acosf( w2/z2 );
+			Float ang22 = acosf( p2.X/z2 );
 			Float anga2 = ( ang12 - ang22 );
 			Float angb2 = ( ang22 - ang12 );
 			ang2 = anga2>angb2 ? -angb2 : -anga2;
@@ -358,7 +358,7 @@ Matrix CAnimDangleConstraint_Pusher::CalculateOffsets( const Matrix & boneTM, co
 		const Vector p = mat.TransformPoint( sphPos );
 		// This is Position of the sliced circle
 
-		const Float rad = sqrt( Max( 0.0f, (r*r) - (p.Z*p.Z ) ) );
+		const Float rad = sqrtf( Max( 0.0f, (r*r) - (p.Z*p.Z ) ) );
 		// This is radius of the sliced pice
 
 		const Vector toSphere = Vector( p.X, p.Y, 0.0f, 1.0f);
@@ -369,9 +369,9 @@ Matrix CAnimDangleConstraint_Pusher::CalculateOffsets( const Matrix & boneTM, co
 
 		if ( p.Y < 0.0f && p.Y > -rad )
 		{
-			Float w = sqrt( Max( 0.0f, (z*z) - (rad*rad) ) );
-			Float ang1 = acos( w/z );
-			Float ang2 = acos( p.X/z );
+			Float w = sqrtf( Max( 0.0f, (z*z) - (rad*rad) ) );
+			Float ang1 = acosf( w/z );
+			Float ang2 = acosf( p.X/z );
 			Float anga = ( ang1 - ang2 );
 			Float angb = ( ang2 - ang1 );
 
@@ -389,9 +389,9 @@ Matrix CAnimDangleConstraint_Pusher::CalculateOffsets( const Matrix & boneTM, co
 		}
 		else if ( p.Y >= 0.0f )
 		{
-			Float w = sqrt( Max( 0.0f, (z*z) - (rad*rad) ) );
-			Float ang1 = -acos( w/z );
-			Float ang2 = acos( p.X/z );
+			Float w = sqrtf( Max( 0.0f, (z*z) - (rad*rad) ) );
+			Float ang1 = -acosf( w/z );
+			Float ang2 = acosf( p.X/z );
 			Float anga = ( ang1 - ang2 );
 			Float angb = ( ang2 - ang1 );
 

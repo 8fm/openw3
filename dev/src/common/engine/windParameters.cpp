@@ -55,8 +55,8 @@ void CWindParameters::TickWindParameters( Float timeDelta )
 		m_frac = Clamp<Float>( m_frac + timeDelta*m_windDirectionAdaptationSpeed, 0.0f, 1.0f );		
 		m_windDirection = Lerp<Float>( m_frac, m_sourceWindDirection, m_targetDirection );
 		
-		m_cachedWindDirection.X = cos( m_windDirection );
-		m_cachedWindDirection.Y = sin( m_windDirection );
+		m_cachedWindDirection.X = cosf( m_windDirection );
+		m_cachedWindDirection.Y = sinf( m_windDirection );
 	}
 
 	m_accumCloudOffset += -m_cachedWindDirection * timeDelta * m_windScale;

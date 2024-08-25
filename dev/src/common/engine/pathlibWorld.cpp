@@ -169,7 +169,7 @@ Bool CPathLibWorld::MoveAwayFromWall( PathLib::AreaId areaId, const Vector3& pos
 			{
 				break;
 			}
-			Float obstacleDist = sqrt( query.m_closestDistSq );
+			Float obstacleDist = sqrtf( query.m_closestDistSq );
 			Vector2 diff = ( testPos.AsVector2() - query.m_pointOut.AsVector2() ).Normalized();
 			diff *= personalSpace - obstacleDist + 0.05f;			// set length
 			testPos.AsVector2() += diff;
@@ -239,7 +239,7 @@ Bool CPathLibWorld::FindSafeSpot( PathLib::AreaId areaId, const Vector3& pos, Fl
 			{
 				break;
 			}
-			Float obstacleDist = sqrt( query.m_closestDistSq );
+			Float obstacleDist = sqrtf( query.m_closestDistSq );
 			Vector2 diff = ( testPos.AsVector2() - query.m_pointOut.AsVector2() ).Normalized();
 			diff *= personalSpace - obstacleDist + 0.05f;			// set length
 			testPos.AsVector2() += diff;
@@ -1844,7 +1844,7 @@ Float CPathLibWorld::GetClosestObstacle( const Vector3& v, Float personalSpace, 
 	if ( query.GetSubQuery().HasHit() )
 	{
 		outCollisionPoint = query.m_query.m_pointOut;
-		return sqrt( query.m_query.m_closestDistSq );
+		return sqrtf( query.m_query.m_closestDistSq );
 	}
 	else
 	{
@@ -1859,7 +1859,7 @@ Float CPathLibWorld::GetClosestObstacle( const Vector3& v1, const Vector3& v2, F
 	{
 		outPointOnLine = query.m_query.m_closestPointOnSegment;
 		outCollisionPoint = query.m_query.m_closestGeometryPoint;
-		return sqrt( query.m_query.m_closestDistSq );
+		return sqrtf( query.m_query.m_closestDistSq );
 	}
 	else
 	{
@@ -2124,7 +2124,7 @@ Float CPathLibWorld::GetClosestObstacle( PathLib::AreaId& areaId, const Vector3&
 	if ( query.GetSubQuery().HasHit() )
 	{
 		outCollisionPoint = query.m_query.m_pointOut;
-		return sqrt( query.m_query.m_closestDistSq );
+		return sqrtf( query.m_query.m_closestDistSq );
 	}
 	else
 	{
@@ -2144,7 +2144,7 @@ Float CPathLibWorld::GetClosestObstacle( PathLib::AreaId& areaId, const Vector3&
 	{
 		outPointOnLine = query.m_query.m_closestPointOnSegment;
 		outCollisionPoint = query.m_query.m_closestGeometryPoint;
-		return sqrt( query.m_query.m_closestDistSq );
+		return sqrtf( query.m_query.m_closestDistSq );
 	}
 	else
 	{

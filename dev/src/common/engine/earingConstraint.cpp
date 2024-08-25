@@ -47,7 +47,7 @@ Float bonePendulum::collision( const Vector & norm, Float k )
 		Float p = -k*k+u*u+v*v;
 		if( (k+u)!=0.0f && p>0.0f  )
 		{
-			Float t = 2.0f*atanf( (v-sqrt(p))/(k+u) );
+			Float t = 2.0f*atanf( (v-sqrtf(p))/(k+u) );
 			if( t>0.0f )
 			{
 				return t;
@@ -240,11 +240,11 @@ void boneTracer::quaternionToAngleAxis( const RedQuaternion & q, RedVector4 & v,
 		v.W = 0.0f;
 		return;
 	}
-	Float d = sqrt( 1.0f-q.Quat.W*q.Quat.W );
+	Float d = sqrtf( 1.0f-q.Quat.W*q.Quat.W );
 	v.X = (q.Quat.X/d);
 	v.Y = (q.Quat.Y/d);
 	v.Z = (q.Quat.Z/d);
-	v.W = (2.0f*acos(q.Quat.W))/dt;
+	v.W = (2.0f*acosf(q.Quat.W))/dt;
 }
 void boneTracer::attach( const RedVector4 & np, const RedQuaternion & nr )
 {

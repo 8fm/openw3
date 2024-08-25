@@ -751,7 +751,7 @@ EulerAngles Matrix::ToEulerAngles( ) const
 	else
 	{
 		ret.Roll  = -RAD2DEG( atan2f( GetRow(0).A[2], GetRow(2).A[2] ) );
-		ret.Pitch =  RAD2DEG( asin( GetRow(1).A[2] ) );
+		ret.Pitch =  RAD2DEG( asinf( GetRow(1).A[2] ) );
 		ret.Yaw	  = -RAD2DEG( atan2f( GetRow(1).A[0], GetRow(1).A[1] ) );
 	}
 
@@ -786,7 +786,7 @@ EulerAngles Matrix::ToEulerAnglesFull( ) const
 	else
 	{
 		ret.Roll  = -RAD2DEG( atan2f( GetRow(0).A[2], GetRow(2).A[2] * rescaleR2toR0 ) );
-		ret.Pitch =  RAD2DEG( asin( cell12 ) );
+		ret.Pitch =  RAD2DEG( asinf( cell12 ) );
 		ret.Yaw	  = -RAD2DEG( atan2f( GetRow(1).A[0], GetRow(1).A[1] ) ); // unscaling is not needed, both arguments has same scale
 	}
 

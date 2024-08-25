@@ -278,7 +278,7 @@ void CBehTreeNodeStrafingInstance::UpdateChannels( const CMovingAgentComponent& 
 	}
 
 	
-	m_currentTargetDistance = sqrt( attackerData.m_distance2DSq );
+	m_currentTargetDistance = sqrtf( attackerData.m_distance2DSq );
 	if ( m_currentTargetDistance > m_currDesiredDistance + 0.25f )
 	{
 		Float diff = m_currentTargetDistance - m_currDesiredDistance;
@@ -328,7 +328,7 @@ void CBehTreeNodeStrafingInstance::UpdateChannels( const CMovingAgentComponent& 
 	}
 	else if ( outputLenSq > 1.f )
 	{
-		heading *= 1.f / sqrt( outputLenSq );
+		heading *= 1.f / sqrtf( outputLenSq );
 	}
 
 	if ( m_customAlgorithm )
@@ -361,7 +361,7 @@ void CBehTreeNodeStrafingInstance::UpdateChannels( const CMovingAgentComponent& 
 		}
 		else
 		{
-			m_currentWorldHeading = m_currentWorldHeading + headingChange * ( outputChange / sqrt( diffSq ) );
+			m_currentWorldHeading = m_currentWorldHeading + headingChange * ( outputChange / sqrtf( diffSq ) );
 		}
 	}
 

@@ -79,13 +79,13 @@ namespace QuadraticBezierNamespace
 	}
 	inline float LengthExpr(Float c0, Float c1, Float c2, float t = 1.0f)
 	{
-		Float sc0 = sqrt(c0);
-		Float sc2 = sqrt(c2);
+		Float sc0 = sqrtf(c0);
+		Float sc2 = sqrtf(c2);
 		Float m1 = 2*sc2;
-		Float pierw = sqrt(c0+t*(c1+c2*t));
-		Float logar = log(c1+sc0*m1) - log(c1+m1*pierw+2*c2*t);
+		Float pierw = sqrtf(c0+t*(c1+c2*t));
+		Float logar = logf(c1+sc0*m1) - logf(c1+m1*pierw+2*c2*t);
 		Float licz = m1*(-sc0*c1+pierw*(c1+2*c2*t))+(c1*c1-4*c0*c2)*logar;
-		Float mian = 8*pow(c2,(3.f/2.f));
+		Float mian = 8*powf(c2,(3.f/2.f));
 		return licz/mian;
 	}
 	template< typename T >
@@ -137,13 +137,13 @@ namespace QuadraticBezierNamespace
 		Float c1 = 4*A*B;
 		Float c0 = B*B;
 		Float tim = 0.0f;
-		Float a = sqrt( c0+tim*(c1+c2*tim) );
+		Float a = sqrtf( c0+tim*(c1+c2*tim) );
 		Float b = 0.0f;
 		tim = len/a;
 		Float val=LengthExpr(c0,c1,c2,tim);
 		while(fabs(val-len)>0.001)
 		{
-			a = sqrt( c0+tim*(c1+c2*tim) );
+			a = sqrtf( c0+tim*(c1+c2*tim) );
 			b = val - (a*tim);
 			tim = (len-b)/a;
 			val=LengthExpr(c0,c1,c2,tim);

@@ -335,13 +335,13 @@ Double EulerAngles::YawFromXY( Double x, Double y )
 Vector EulerAngles::YawToVector( Float yaw )
 {
 	Float angle = DEG2RAD( yaw );
-	return Vector( -sin( angle ), cos( angle ), 0.f, 0.f );
+	return Vector( -sinf( angle ), cosf( angle ), 0.f, 0.f );
 }
 
 Vector2 EulerAngles::YawToVector2( Float yaw )
 {
 	Float angle = DEG2RAD( yaw );
-	return Vector2( -sin( angle ), cos( angle ) );
+	return Vector2( -sinf( angle ), cosf( angle ) );
 }
 
 Float EulerAngles::AngleDistance( Float a, Float b )

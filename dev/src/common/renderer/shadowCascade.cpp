@@ -184,7 +184,7 @@ Vector CalculateLimitedShadowDirection( const Vector &shadowDir, Float degreesLi
 		limitedShadowDir.Normalize3();
 
 		const Float xyLen = sqrtf(shadowDir.X*shadowDir.X + shadowDir.Y*shadowDir.Y);
-		const Float angle = atan2( xyLen, shadowDir.Z );
+		const Float angle = atan2f( xyLen, shadowDir.Z );
 		const Float limitAngle = DEG2RAD( 90 + degreesLimit );
 		if ( angle < limitAngle && xyLen > 0.001f )
 		{

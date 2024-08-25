@@ -137,10 +137,10 @@ void CSwarmLairEntity::OnTimer(const CName name, Uint32 id, Float timeDelta)
 
 void CSwarmLairEntity::InterpolateWithBezierCurve(Vector* output, const Float progress, const Vector& positionA, const Vector& controlPointA, const Vector& positionB, const Vector& controlPointB) const
 {
-	(*output) = positionA * pow(1.0f - progress, 3.0f);								// (1-t)^3 * P0
-	(*output) += controlPointA * progress * 3.0f * pow(1.0f - progress, 2.0f);		// 3 * (1-t)^2 * P1
-	(*output) += controlPointB * (1.0f - progress) * 3.0f * pow(progress, 2.0f);	// 3 * (1-t) * t^2 * P2
-	(*output) += positionB * pow(progress, 3.0f);									// t^3 * P3
+	(*output) = positionA * powf(1.0f - progress, 3.0f);							// (1-t)^3 * P0
+	(*output) += controlPointA * progress * 3.0f * powf(1.0f - progress, 2.0f);		// 3 * (1-t)^2 * P1
+	(*output) += controlPointB * (1.0f - progress) * 3.0f * powf(progress, 2.0f);	// 3 * (1-t) * t^2 * P2
+	(*output) += positionB * powf(progress, 3.0f);									// t^3 * P3
 }
 
 void CSwarmLairEntity::Initialize()

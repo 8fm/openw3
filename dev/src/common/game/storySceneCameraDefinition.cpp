@@ -29,7 +29,7 @@ ApertureDofParams::ApertureDofParams()
 void ApertureDofParams::ToEngineDofParams( SDofParams& dofParams ) const
 {
 	Float focalInMeters = m_focalLength * 0.001f;
-	Float aperture = ::pow( 1.4142f, m_aperture );
+	Float aperture = ::powf( 1.4142f, m_aperture );
 	
 	Float hyperfocalDistance = ( focalInMeters * focalInMeters )/ ( aperture * CIRCLE_OF_CONFUSION );
 
@@ -65,9 +65,9 @@ void ApertureDofParams::FromEngineDofParams( Float dofNear, Float dofFar )
 	m_distance = dofNear * ( ( dofFar - dofNear ) / ( dofFar + dofNear ) + 1 );
 
 	Float hyperfocalDistance = dofNear * ( ( dofFar + dofNear ) / ( dofFar - dofNear ) + 1 );
-	Float aperture = ::pow( 1.4142f, m_aperture );
+	Float aperture = ::powf( 1.4142f, m_aperture );
 
-	m_focalLength = ::sqrt( hyperfocalDistance * aperture * CIRCLE_OF_CONFUSION ) * 1000.0f;
+	m_focalLength = ::sqrtf( hyperfocalDistance * aperture * CIRCLE_OF_CONFUSION ) * 1000.0f;
 }
 
 Bool ApertureDofParams::IsDefault() const

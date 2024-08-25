@@ -694,8 +694,8 @@ Bool CGenerator::CollectTerrainGeometry( CGenerationInputData& input, Bool colle
  			if ( cos2A < -0.001f && !isConcave )
  			{
  				// special case when angle is greater then 90 degrees. In this case we put 2 nodes insteady of one
- 				Float cosA = sqrt( (cos2A + 1.f) / 2.f );
- 				Float sinA = sqrt( 1.f - cosA*cosA );
+ 				Float cosA = sqrtf( (cos2A + 1.f) / 2.f );
+ 				Float sinA = sqrtf( 1.f - cosA*cosA );
  
  				Float x = (r * ( 1.f - cosA )) / sinA;
  				// Now compute two locations
@@ -720,7 +720,7 @@ Bool CGenerator::CollectTerrainGeometry( CGenerationInputData& input, Bool colle
  			else
 			{
 				// spawn single node
-				Float cosA = sqrt( (cos2A + 1.f) / 2.f );
+				Float cosA = sqrtf( (cos2A + 1.f) / 2.f );
 				Float dist = r / cosA ;			// at most: 2^(1/2) * r
 				//
 				Vector2 dirVec = dirVec1+dirVec2;

@@ -255,8 +255,8 @@ void CRenderParticleEmitter::InitSpawnCircle( char* particle, const SParticleUpd
 	const Float radius = updateData.m_spawn_CircleSphere_SurfaceOnly ? outerRadius : generator.Get< Float >( innerRadius , outerRadius );
 
 	// Calculate the spawn deltas
-	const Float dx = cos( angleTheta ) * radius;
-	const Float dy = sin( angleTheta ) * radius;
+	const Float dx = cosf( angleTheta ) * radius;
+	const Float dy = sinf( angleTheta ) * radius;
 	const Float dz = 0.0f;
 
 	// Move by circle radius
@@ -319,28 +319,28 @@ void CRenderParticleEmitter::InitSpawnSphere( char* particle, const SParticleUpd
 		if ( circleNotOnSurfaceX )
 		{
 			if ( !circleNotOnSurfaceY )
-				dy = cos( angleTheta ) * radius;
+				dy = cosf( angleTheta ) * radius;
 
 			if ( !circleNotOnSurfaceZ )
-				dz = sin( angleTheta ) * radius;
+				dz = sinf( angleTheta ) * radius;
 		}
 		
 		if ( circleNotOnSurfaceY )
 		{
 			if ( !circleNotOnSurfaceX )
-				dx = cos( angleTheta ) * radius;
+				dx = cosf( angleTheta ) * radius;
 
 			if ( !circleNotOnSurfaceZ )
-				dz = sin( angleTheta ) * radius;
+				dz = sinf( angleTheta ) * radius;
 		}
 
 		if ( circleNotOnSurfaceZ )
 		{
 			if ( !circleNotOnSurfaceX )
-				dx = cos( angleTheta ) * radius;
+				dx = cosf( angleTheta ) * radius;
 
 			if ( !circleNotOnSurfaceY )
-				dy = sin( angleTheta ) * radius;
+				dy = sinf( angleTheta ) * radius;
 		}
 	}
 	else // 3D shape
@@ -354,20 +354,20 @@ void CRenderParticleEmitter::InitSpawnSphere( char* particle, const SParticleUpd
 		if ( spawnPositiveX || spawnNegativeX )
 		{
 			// Calculate the position delta
-			dx = cos( angleTheta ) * cos( anglePhi ) * radius;	
+			dx = cosf( angleTheta ) * cosf( anglePhi ) * radius;
 		}
 		// Check the Y positive and negative checks
 		if ( spawnPositiveY || spawnNegativeY )
 		{
 			// Calculate the position delta
-			dy = sin( angleTheta ) * cos( anglePhi ) * radius;
+			dy = sinf( angleTheta ) * cosf( anglePhi ) * radius;
 		}
 
 		// Check the Z positive and negative checks
 		if ( spawnPositiveZ || spawnNegativeZ )
 		{
 			// Calculate the position delta
-			dz = sin( anglePhi ) * radius;	
+			dz = sinf( anglePhi ) * radius;
 		}
 	}
 

@@ -53,7 +53,7 @@ quad_projector::~quad_projector()
 
 bool quad_projector::Project( const Vector & pos, const Vector & r1, const Vector & r2, const Vector & r3, Float farPlane, Float Fov, Float Ratio, Float MinAmp, Float MaxAmp, Float waterMaxLevel )
 {
-	Float tFov = tan(Fov*m_rad_half_deg);
+	Float tFov = tanf(Fov*m_rad_half_deg);
 	
 	// scale the projection based on the shape offsets
 	// hardcoded by now	
@@ -170,7 +170,7 @@ bool quad_projector::Project( const Vector & pos, const Vector & r1, const Vecto
 
 bool quad_projector::ProjectFull( const Vector & pos, const Vector & r1, const Vector & r2, const Vector & r3, Float farPlane, Float Fov, Float Ratio, Float MinAmp, Float MaxAmp )
 {
-	Float tFov = tan(Fov*m_rad_half_deg);
+	Float tFov = tanf(Fov*m_rad_half_deg);
 	Float y = tFov;
 	Float x = (tFov*Ratio);
 	m_projected[0] = pos + (r3 + (r1*-x) + (r2*-y))*farPlane*1.001f;
@@ -183,7 +183,7 @@ bool quad_projector::ProjectFull( const Vector & pos, const Vector & r1, const V
 
 bool quad_projector::ProjectScreenSpace( const Vector & pos, const Vector & r1, const Vector & r2, const Vector & r3, Float nearPlane, Float Fov, Float Ratio, Vector* outResult )
 {
-	Float tFov = tan(Fov*m_rad_half_deg);
+	Float tFov = tanf(Fov*m_rad_half_deg);
 	Float y = tFov;
 	Float x = (tFov*Ratio);	
 
@@ -1060,7 +1060,7 @@ void CRenderProxy_Water::UpdateConstantBuffer( const CRenderFrameInfo& frameInfo
 			waterConstants->SimulationCamera.nearPlane = frameInfo.m_camera.GetNearPlane();
 			const Float ratio = frameInfo.m_camera.GetAspect();
 			const Float fov  = frameInfo.m_camera.GetFOV();
-			const Float tanFov = tan(fov*( M_PI/180.0f)*0.5f);
+			const Float tanFov = tanf(fov*( M_PI/180.0f)*0.5f);
 										
 			waterConstants->SimulationCamera.tanFov = tanFov;
 			waterConstants->SimulationCamera.tanFov_x_ratio = (tanFov*ratio);

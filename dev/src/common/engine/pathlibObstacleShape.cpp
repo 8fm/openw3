@@ -365,7 +365,7 @@ Bool CObstacleShape::ComputeLineDetour( CAreaDescription* area, Float personalSp
 	{
 		return true;
 	}
-	Float dist = sqrt( distSq );
+	Float dist = sqrtf( distSq );
 	Float divisions = MCeil( dist / maxNodesDist );
 
 	Vector2 perpedicular = MathUtils::GeometryUtils::PerpendicularR( diff / dist );
@@ -671,7 +671,7 @@ Bool CObstacleShapeCircle::VSpatialQuery( CClosestObstacleCircleQueryData& query
 		query.m_obstacleHit = true;
 		return true;
 	}
-	Float centerDist = sqrt( centerDistSq );
+	Float centerDist = sqrtf( centerDistSq );
 	Float dist = centerDist - m_radius;
 	Float distSq = dist*dist;
 	if( distSq < query.m_closestDistSq )
@@ -724,7 +724,7 @@ Bool CObstacleShapeCircle::VSpatialQuery( CClosestObstacleWideLineQueryData& que
 		query.m_obstacleHit = true;
 		return true;
 	}
-	Float centerDist = sqrt( centerDistSq );
+	Float centerDist = sqrtf( centerDistSq );
 	Float dist = centerDist - m_radius;
 	Float distSq = dist*dist;
 	if( distSq < query.m_closestDistSq )
@@ -1046,7 +1046,7 @@ Bool CObstacleShapePoly::VSpatialQuery( CCircleQueryData& query, const Vector3* 
 Bool CObstacleShapePoly::VSpatialQuery( CClosestObstacleCircleQueryData& query, const Vector3* bbox ) const
 {
 	Vector2 closestPoint;
-	Float distSq = MathUtils::GeometryUtils::ClosestPointPolygonPoint2D( m_verts, query.m_circleCenter.AsVector2(), sqrt( query.m_closestDistSq ), closestPoint );
+	Float distSq = MathUtils::GeometryUtils::ClosestPointPolygonPoint2D( m_verts, query.m_circleCenter.AsVector2(), sqrtf( query.m_closestDistSq ), closestPoint );
 	if ( distSq < query.m_closestDistSq )
 	{
 		query.m_closestDistSq = distSq;
@@ -1102,7 +1102,7 @@ Bool CObstacleShapePoly::VSpatialQuery( CClosestObstacleWideLineQueryData& query
 {
 	Vector2 closestPointPoly;
 	Vector2 closestPointSegment;
-	Float distSq = MathUtils::GeometryUtils::ClosestPointPolygonLine2D( m_verts, query.m_v1.AsVector2(), query.m_v2.AsVector2(), sqrt( query.m_closestDistSq ), closestPointPoly, closestPointSegment );
+	Float distSq = MathUtils::GeometryUtils::ClosestPointPolygonLine2D( m_verts, query.m_v1.AsVector2(), query.m_v2.AsVector2(), sqrtf( query.m_closestDistSq ), closestPointPoly, closestPointSegment );
 	if ( distSq < query.m_closestDistSq )
 	{
 		query.m_closestDistSq = distSq;
@@ -1202,8 +1202,8 @@ void CObstacleShapePoly::VComputeDetour( CAreaDescription* area, Float personalS
 		if ( cos2A < -0.001f )
 		{
 			// special case when angle is greater then 90 degrees. In this case we put 2 nodes insteady of one
-			Float cosA = sqrt( (cos2A + 1.f) / 2.f );
-			Float sinA = sqrt( 1.f - cosA*cosA );
+			Float cosA = sqrtf( (cos2A + 1.f) / 2.f );
+			Float sinA = sqrtf( 1.f - cosA*cosA );
 
 			Float x = (r * ( 1.f - cosA )) / sinA;
 			// Now compute two locations
@@ -1235,7 +1235,7 @@ void CObstacleShapePoly::VComputeDetour( CAreaDescription* area, Float personalS
 		else
 		{
 			// spawn single node
-			Float cosA = sqrt( (cos2A + 1.f) / 2.f );
+			Float cosA = sqrtf( (cos2A + 1.f) / 2.f );
 			Float dist = r / cosA ;			// at most: 2^(1/2) * DEFAULT_PS
 			//
 			Vector2 dirVec = dirVec1+dirVec2;

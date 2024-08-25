@@ -247,7 +247,7 @@ void CFlyingCritterAI::UpdateFlying( const SSwarmMemberStateData& currState, SSw
 		if ( applyThinnessForce )
 		{
 			const Float distToCenterOfCloud		= centerOfCloud.Z - currentPosition.Z;
-			const Float absDistToCenterOfCloud	= fabs( distToCenterOfCloud );
+			const Float absDistToCenterOfCloud	= fabsf( distToCenterOfCloud );
 			if ( absDistToCenterOfCloud > minDistToCenterOfCloud )
 			{
 				const Float force	= ( absDistToCenterOfCloud - minDistToCenterOfCloud ) / maxDistToCenterOfCloud;

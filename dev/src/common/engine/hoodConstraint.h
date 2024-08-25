@@ -21,7 +21,7 @@ public:
 		Float pierw = (vdir*vdir)-((tov.X*tov.X+tov.Y*tov.Y+tov.Z*tov.Z)-(r*r));
 		if( pierw>=0 )
 		{
-			Float t = -vdir+sqrt(pierw);
+			Float t = -vdir+sqrtf(pierw);
 			if( t>0 )
 			{
 				worldSpace.SetTranslation( p+worldSpace.GetAxisZ()*t );

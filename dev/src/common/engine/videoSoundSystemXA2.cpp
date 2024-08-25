@@ -119,8 +119,8 @@ static void SetVolumeXA2( IXAudio2SourceVoice* pSourceVoice, Float sfx, Float vo
 		const Float a = 0.001f;
 		const Float b = 6.908f;
 
-		normSFx = sfx == 0.f ? 0.f : a * exp( sfx * b );
-		normVoice = voice == 0.f ? 0.f : a * exp( voice * b );
+		normSFx = sfx == 0.f ? 0.f : a * expf( sfx * b );
+		normVoice = voice == 0.f ? 0.f : a * expf( voice * b );
 	}
 
 	normSFx = Clamp< Float >( normSFx, 0.f, 1.f );

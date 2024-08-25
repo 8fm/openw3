@@ -22,8 +22,8 @@ void CColorShift::CalculateColorShiftMatrix( Matrix& coloringMatrix ) const
 		Vector( 0.0f, 0.0f, 0.0f, 1.0f ) );
 
 	Matrix hueRotationMatrix( 
-		Vector( cos( normalizedHue ), -sin( normalizedHue ), 0.0f, 0.0f ),
-		Vector( sin( normalizedHue ), cos( normalizedHue ), 0.0f, 0.0f ),
+		Vector( cosf( normalizedHue ), -sinf( normalizedHue ), 0.0f, 0.0f ),
+		Vector( sinf( normalizedHue ), cosf( normalizedHue ), 0.0f, 0.0f ),
 		Vector( 0.0f, 0.0f, 1.0f, 0.0f ),
 		Vector( 0.0f, 0.0f, 0.0f, 1.0f ) );
 

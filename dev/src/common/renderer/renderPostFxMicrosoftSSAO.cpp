@@ -535,18 +535,18 @@ CPostFXMicrosoftSSAO::CPostFXMicrosoftSSAO()
 	m_LastNormalToDepthBrightnessEqualiser = m_NormalToDepthBrightnessEqualiser - 1.0f;
 	m_NormalBackProjectionTolerance		= 0.0f;		//Config::cvNormalBackProjectionTolerance.Get();
 
-	m_SampleThickness[ 0]				= sqrt(1.0f - 0.2f * 0.2f);
-	m_SampleThickness[ 1]				= sqrt(1.0f - 0.4f * 0.4f);
-	m_SampleThickness[ 2]				= sqrt(1.0f - 0.6f * 0.6f);
-	m_SampleThickness[ 3]				= sqrt(1.0f - 0.8f * 0.8f);
-	m_SampleThickness[ 4]				= sqrt(1.0f - 0.2f * 0.2f - 0.2f * 0.2f);
-	m_SampleThickness[ 5]				= sqrt(1.0f - 0.2f * 0.2f - 0.4f * 0.4f);
-	m_SampleThickness[ 6]				= sqrt(1.0f - 0.2f * 0.2f - 0.6f * 0.6f);
-	m_SampleThickness[ 7]				= sqrt(1.0f - 0.2f * 0.2f - 0.8f * 0.8f);
-	m_SampleThickness[ 8]				= sqrt(1.0f - 0.4f * 0.4f - 0.4f * 0.4f);
-	m_SampleThickness[ 9]				= sqrt(1.0f - 0.4f * 0.4f - 0.6f * 0.6f);
-	m_SampleThickness[10]				= sqrt(1.0f - 0.4f * 0.4f - 0.8f * 0.8f);
-	m_SampleThickness[11]				= sqrt(1.0f - 0.6f * 0.6f - 0.6f * 0.6f);
+	m_SampleThickness[ 0]				= sqrtf(1.0f - 0.2f * 0.2f);
+	m_SampleThickness[ 1]				= sqrtf(1.0f - 0.4f * 0.4f);
+	m_SampleThickness[ 2]				= sqrtf(1.0f - 0.6f * 0.6f);
+	m_SampleThickness[ 3]				= sqrtf(1.0f - 0.8f * 0.8f);
+	m_SampleThickness[ 4]				= sqrtf(1.0f - 0.2f * 0.2f - 0.2f * 0.2f);
+	m_SampleThickness[ 5]				= sqrtf(1.0f - 0.2f * 0.2f - 0.4f * 0.4f);
+	m_SampleThickness[ 6]				= sqrtf(1.0f - 0.2f * 0.2f - 0.6f * 0.6f);
+	m_SampleThickness[ 7]				= sqrtf(1.0f - 0.2f * 0.2f - 0.8f * 0.8f);
+	m_SampleThickness[ 8]				= sqrtf(1.0f - 0.4f * 0.4f - 0.4f * 0.4f);
+	m_SampleThickness[ 9]				= sqrtf(1.0f - 0.4f * 0.4f - 0.6f * 0.6f);
+	m_SampleThickness[10]				= sqrtf(1.0f - 0.4f * 0.4f - 0.8f * 0.8f);
+	m_SampleThickness[11]				= sqrtf(1.0f - 0.6f * 0.6f - 0.6f * 0.6f);
 
 	m_CBData							= nullptr;
 
