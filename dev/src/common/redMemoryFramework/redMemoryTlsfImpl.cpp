@@ -1227,7 +1227,7 @@ void OutputBinary64( Red::System::Uint64 value, Char* output )
 	Char* outPtr = output;
 	for( Int64 i = 63; i >= 0; --i )
 	{
-		Int64 b = ( 1 << i );
+		Int64 b = ( static_cast<Int64>(1) << i );
 		*(outPtr++) = value & b ? *c_one : *c_zero;
 	}
 	*(outPtr++) = 0;
