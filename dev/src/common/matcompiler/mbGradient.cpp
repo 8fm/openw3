@@ -137,9 +137,9 @@ CodeChunk CMaterialBlockGradient::Compile( CMaterialBlockCompiler& compiler, EMa
 	for ( Uint32 i = 0; i < m_gradient.GetNumPoints(); i++)
 	{
 
-		CodeChunk color_r = pow( m_gradient.GetValueAtIndex(i).X / 255.0f, 2.2f );
-		CodeChunk color_g = pow( m_gradient.GetValueAtIndex(i).Y / 255.0f, 2.2f );
-		CodeChunk color_b = pow( m_gradient.GetValueAtIndex(i).Z / 255.0f, 2.2f );
+		CodeChunk color_r = powf( m_gradient.GetValueAtIndex(i).X / 255.0f, 2.2f );
+		CodeChunk color_g = powf( m_gradient.GetValueAtIndex(i).Y / 255.0f, 2.2f );
+		CodeChunk color_b = powf( m_gradient.GetValueAtIndex(i).Z / 255.0f, 2.2f );
 		CodeChunk color_a = m_gradient.GetValueAtIndex(i).W / 255.0f;
 		CodeChunk colorsEntry = CodeChunk::Printf( false, "\tfloat4( %s, %s, %s, %s ),", color_r.AsChar(), color_g.AsChar(), color_b.AsChar(), color_a.AsChar());
 		compiler.GetShader(shaderTarget).Statement( colorsEntry );
