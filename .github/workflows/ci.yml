@@ -3,8 +3,8 @@ name: CI
 on: [push, pull_request]
 
 jobs:
-  build-windows:
-    name: Windows ${{ matrix.Configuration }} ${{ matrix.Platform }}
+  windows-sln:
+    name: Windows sln ${{ matrix.Configuration }} ${{ matrix.Platform }}
     runs-on: windows-latest
     strategy:
       fail-fast: false
@@ -19,8 +19,8 @@ jobs:
     - name: Get Windows libs
       shell: cmd
       run: |
-        curl -LJO https://github.com/8fm/openw3/releases/download/1.60-dev1/openw3-libs-vs2022-Final-x64.7z
-        7z x openw3-libs-vs2022-Final-x64.7z
+        curl -LJO https://github.com/8fm/openw3/releases/download/1.60-dev2/openw3-libs-windows-Final-Debug-x64.7z
+        7z x openw3-libs-windows-Final-Debug-x64.7z
         dir bin
 
     - uses: microsoft/setup-msbuild@main
@@ -30,10 +30,46 @@ jobs:
 
     - name: Prepare artifacts
       shell: cmd
-      run: dir bin\x64 && copy bin\x64\witcher3.exe bin\upload
-
+      run: dir bin\x64 && copy bin\x64\*.exe bin\upload
     - name: Upload artifacts
       uses: actions/upload-artifact@main
       with:
-        name: Witcher3.${{ matrix.Configuration }}.${{ matrix.Platform }}.ci-${{ github.run_number }}
+        name: Witcher3.${{ matrix.Configuration }}.${{ matrix.Platform }}.sln.ci-${{ github.run_number }}
+        path: bin\upload
+
+  windows-cmake:
+    name: Windows cmake ${{ matrix.Configuration }} ${{ matrix.Platform }}
+    runs-on: windows-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        Configuration: [Debug, Final]
+        Platform: [x64]
+    steps:
+    - uses: actions/checkout@main
+      with:
+        submodules: recursive
+
+    - name: Get Windows libs
+      shell: cmd
+      run: |
+        curl -LJO https://github.com/8fm/openw3/releases/download/1.60-dev2/openw3-libs-windows-Final-Debug-x64.7z
+        7z x openw3-libs-windows-Final-Debug-x64.7z
+        dir bin
+
+    - uses: ilammy/msvc-dev-cmd@v1
+    - name: Build
+      run: |
+        cmake --preset='ninja-${{ matrix.Configuration }}-${{ matrix.Platform }}'
+        cmake --build --preset='${{ matrix.Configuration }}-${{ matrix.Platform }}'
+
+    - name: Prepare artifacts
+      shell: cmd
+      run: |
+        dir bin\${{ matrix.Configuration }}-${{ matrix.Platform }}
+        copy bin\${{ matrix.Configuration }}-${{ matrix.Platform }}\*.exe bin\upload
+    - name: Upload artifacts
+      uses: actions/upload-artifact@main
+      with:
+        name: Witcher3.${{ matrix.Configuration }}.${{ matrix.Platform }}.cmake.ci-${{ github.run_number }}
         path: bin\upload
