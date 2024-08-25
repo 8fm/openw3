@@ -137,7 +137,7 @@ void CSwarmAlgorithmData::CalculateSound( TSwarmStatesList crittersStates, CSwar
 
 		soundJobData->m_center		= centerOfMass;
 		soundJobData->m_intensity	= mass;
-		soundJobData->m_radius		= sqrt( radiusSq );
+		soundJobData->m_radius		= sqrtf( radiusSq );
 		soundJobData->m_distance	= dist;
 
 		soundJobData->m_yaw			= cameraOrient.Yaw - distOrient.Yaw;

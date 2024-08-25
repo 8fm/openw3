@@ -79,7 +79,7 @@ namespace NodeFinderHelper
 
 			Vector2 nodeDiff = m_pos.AsVector2() - nodePos.AsVector2();
 
-			Float dist = sqrt( distSq );
+			Float dist = sqrtf( distSq );
 			Float ratio = (dist - m_tolerance) / dist;
 
 			Vector3 testPos;
@@ -118,7 +118,7 @@ namespace NodeFinderHelper
 		RED_INLINE Float			DistSq( const Vector3& v0, const Vector3& v1 )
 		{
 			Float dist3DSq = (v0 - v1).SquareMag();
-			Float distExt = sqrt( dist3DSq ) + m_extDist;
+			Float distExt = sqrtf( dist3DSq ) + m_extDist;
 			return distExt*distExt;
 		}
 
@@ -133,7 +133,7 @@ namespace NodeFinderHelper
 		RED_INLINE Float			DistSq( const Vector3& v0, const Vector3& v1 )
 		{
 			Float dist2DSq = (v0.AsVector2() - v1.AsVector2()).SquareMag();
-			Float distExt = sqrt( dist2DSq ) + m_extDist;
+			Float distExt = sqrtf( dist2DSq ) + m_extDist;
 			return distExt*distExt;
 		}
 

@@ -377,7 +377,7 @@ Float Box::Distance( const Vector& pos ) const
 	if ( pos.Y > Max.Y ) sqrsum += (Max.Y - pos.Y)*(Max.Y - pos.Y);
 	if ( pos.Z < Min.Z ) sqrsum += (Min.Z - pos.Z)*(Min.Z - pos.Z);
 	if ( pos.Z > Max.Z ) sqrsum += (Max.Z - pos.Z)*(Max.Z - pos.Z);
-	return sqrt(sqrsum);
+	return sqrtf(sqrsum);
 }
 
 Float Box::SquaredDistance( const Vector& pos ) const

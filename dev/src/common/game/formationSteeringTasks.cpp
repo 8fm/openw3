@@ -126,7 +126,7 @@ void CFormationDontBackDownSteeringTask::CalculateSteering( IMovementCommandBuff
 	{
 		Float sinAngle = data[ i_sinAngle ];
 
-		Float sinGamma = sqrt( 1.f - cosGamma );
+		Float sinGamma = sqrtf( 1.f - cosGamma );
 		Float r = (headingLen * sinGamma / data[ i_sinAngle ]);
 
 		if ( toTarget.CrossZ( normalizedHeadig ) < 0.f )
@@ -218,7 +218,7 @@ void CFormationKeepDistanceToMembersSteeringTask::CalculateSteeringInput( IMovem
 		}
 
 		Vector2 diff = ownerPos - cachedData.m_actor->GetWorldPositionRef();
-		Float dist = sqrt( cachedData.m_actorSqDistance );
+		Float dist = sqrtf( cachedData.m_actorSqDistance );
 		Float ratio = 1.f;
 		if ( dist > m_minDistance )
 		{
@@ -279,7 +279,7 @@ void CFormationKeepAwaylLeaderSteeringTask::CalculateSteeringInput( IMovementCom
 		return;
 	}
 
-	Float dist = sqrt( distSq );
+	Float dist = sqrtf( distSq );
 
 	Float ratio = 1.f;
 	if ( dist > m_minLeaderDistance )
@@ -385,7 +385,7 @@ void CFormationDontFallBehindSteeringTask::CalculateSteering( IMovementCommandBu
 		Float importance = m_speedImportance;
 		if ( distSq > m_minFallBehindDistance*m_minFallBehindDistance )
 		{
-			Float dist = sqrt( distSq );
+			Float dist = sqrtf( distSq );
 			importance *= 1.f - (dist - m_minFallBehindDistance) / (m_maxFallBehindDistance - m_minFallBehindDistance);
 		}
 

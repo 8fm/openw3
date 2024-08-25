@@ -205,7 +205,7 @@ void CMoveSTNeverBackDown::CalculateSteering( IMovementCommandBuffer& comm, Inst
 	{
 		Float sinAngle = data[ i_sinAngle ];
 
-		Float sinGamma = sqrt( 1.f - cosGamma );
+		Float sinGamma = sqrtf( 1.f - cosGamma );
 		Float r = (headingLen * sinGamma / data[ i_sinAngle ]);
 
 		if ( toTarget.CrossZ( normalizedHeadig ) < 0.f )

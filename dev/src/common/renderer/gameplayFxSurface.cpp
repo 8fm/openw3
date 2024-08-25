@@ -271,7 +271,7 @@ void CSurfacePostFX::Tick( Float time )
 
 			if( !markedForRemoval )
 			{			
-				Float resultingRange = floor( m_groups[i].m_range );
+				Float resultingRange = floorf( m_groups[i].m_range );
 				Float packW = m_groups[i].m_factor + resultingRange + 1000.0f*(Float)( m_groups[i].m_type + 1.0f );
 
 				m_cBufPtr[i] = Vector( m_groups[i].m_position.X, m_groups[i].m_position.Y, m_groups[i].m_position.Z, packW );

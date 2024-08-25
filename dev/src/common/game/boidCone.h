@@ -36,7 +36,7 @@ inline Bool CBoidCone::IsPointInCone( const Vector2 &point )const
 	if (	squaredDist < m_range * m_range
 		&&	squaredDist > NumericLimits< Float >::Epsilon() )
 	{
-		const Float dist = sqrt( squaredDist );
+		const Float dist = sqrtf( squaredDist );
 
 		const Vector3 normedDistVect	= distVect / dist;				// normalize diff
 		const Float dot					= m_forwardVect.Dot( normedDistVect.AsVector2() );
@@ -72,7 +72,7 @@ inline Float CBoidCone::ComputeDistanceToCone( const Vector2 &P, Vector2 &normed
 	else if ( sqPPosLength > m_range * m_range ) // point is on top of the cone
 	{
 		//const Vector2 posP	= P - m_position;
-		const Float dist			= sqrt( sqPPosLength );
+		const Float dist			= sqrtf( sqPPosLength );
 		const Vector2 normedPPos	= PPos / dist;
 		normedDistVect				= normedPPos;
 		pushVector					= (m_rightVect * m_rightVect.Dot( -normedPPos )).Normalized() * 0.2f;

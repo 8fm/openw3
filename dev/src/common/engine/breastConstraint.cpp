@@ -38,7 +38,7 @@ void simulator::Simulate( Float dt )
 		m_pointPosVel.Z += nx/dt*m_a;
 		m_pointPosVel.W += ny/dt*m_a;
 	}
-	Float xl = sqrt((m_shape.X - m_pointPosVel.X)*(m_shape.X - m_pointPosVel.X) + (m_shape.Y - m_pointPosVel.Y) * (m_shape.Y - m_pointPosVel.Y));
+	Float xl = sqrtf((m_shape.X - m_pointPosVel.X)*(m_shape.X - m_pointPosVel.X) + (m_shape.Y - m_pointPosVel.Y) * (m_shape.Y - m_pointPosVel.Y));
 	if ( xl > 0.f )
 	{
 		Float tempLen = xl*xl;
@@ -47,7 +47,7 @@ void simulator::Simulate( Float dt )
 	}
 	m_pointPosVel.Z *= m_velDamp;
 	m_pointPosVel.W *= m_velDamp;
-	const Float currentVel = sqrt( m_pointPosVel.Z*m_pointPosVel.Z + m_pointPosVel.W*m_pointPosVel.W );
+	const Float currentVel = sqrtf( m_pointPosVel.Z*m_pointPosVel.Z + m_pointPosVel.W*m_pointPosVel.W );
 	if ( currentVel > m_velClamp )
 	{
 		m_pointPosVel.Z = (m_pointPosVel.Z / currentVel)*m_velClamp;
@@ -76,8 +76,8 @@ Float simulator::Collision( )
 	const Float del = bv*bv - 4.f*av*cv;
 	if ( del > 0.0f )
 	{
-		Float x1 = ( (-bv - sqrt( del ))/(2.f*av) );
-		Float x2 = ( (-bv + sqrt( del ))/(2.f*av) );
+		Float x1 = ( (-bv - sqrtf( del ))/(2.f*av) );
+		Float x2 = ( (-bv + sqrtf( del ))/(2.f*av) );
 		Float res = ( x2>x1 ) ? x2 : x1;
 		if ( res >= 0.f )
 		{
@@ -145,7 +145,7 @@ void simulator::CalcNormal( Float &nx, Float &ny )
 	const Float b = m_shape.W;
 	nnx = 2.f * (m_pointPosVel.X - m_shape.X) / (a*a);
 	nny = 2.f * (m_pointPosVel.Y - m_shape.Y) / (b*b);
-	const Float len = sqrt( nnx*nnx + nny*nny );
+	const Float len = sqrtf( nnx*nnx + nny*nny );
 	if ( len > 0.f )
 	{
 		nnx /= -len;

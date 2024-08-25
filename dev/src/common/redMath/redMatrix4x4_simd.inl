@@ -606,7 +606,7 @@ namespace RedMath
 			else
 			{
 				ret.Roll = -RAD2DEG( Red::Math::MATan2( Row0.Z, Row2.Z * rescaleR2toR0 ) );
-				ret.Pitch =  RAD2DEG( asin( cell12 ) );
+				ret.Pitch =  RAD2DEG( asinf( cell12 ) );
 				ret.Yaw	= -RAD2DEG( Red::Math::MATan2( Row1.X, Row1.Y ) ); // unscaling is not needed, both arguments has same scale
 			}
 

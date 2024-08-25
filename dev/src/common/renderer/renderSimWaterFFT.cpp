@@ -381,7 +381,7 @@ GpuApi::TextureRef CRenderSimWaterFFT::Calculate( Float wdir, Float wspeed, Floa
 		};
 
 		// hack, simulation becomes unstable after ~300000 seconds (few days of playthrough...)
-		Float modDeltaTime = fmod( deltaTime, 100000.0f );
+		Float modDeltaTime = fmodf( deltaTime, 100000.0f );
 
 		SConstantBuffer constBuffer;
 		constBuffer.dataPhilips = Vector( Red::Math::MSin( wdir ) , Red::Math::MCos( wdir ) , accelWaterSpeed * accelWaterSpeed , amplitude );

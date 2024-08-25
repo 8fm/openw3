@@ -216,7 +216,7 @@ namespace RedMath
 		RedVector2 RedEulerAngles::YawToVector2( float _yaw )
 		{
 			float angle = DEG2RAD( _yaw );
-			return RedVector2( -Red::Math::MSin( angle ), cos( angle ) );
+			return RedVector2( -Red::Math::MSin( angle ), cosf( angle ) );
 		}
 
 		float RedEulerAngles::AngleDistance( float _a, float _b )

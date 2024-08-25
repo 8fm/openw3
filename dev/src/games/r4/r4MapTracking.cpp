@@ -34,7 +34,7 @@ namespace
 		Float d = p0.X*p0.X + p0.Y*p0.Y + c.X*c.X + c.Y*c.Y - r*r - ( p0.X*c.X + p0.Y*c.Y ) * 2.f;
 
 		Float delta = Abs( b*b - 4.f*a*d );
-		Float deltaSqrt = sqrt( delta );
+		Float deltaSqrt = sqrtf( delta );
 
 		//Float a0 = (-b - deltaSqrt) / (2.f*a);
 		//Float a1 = (-b + deltaSqrt) / (2.f*a);

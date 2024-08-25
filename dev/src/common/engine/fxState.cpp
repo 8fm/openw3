@@ -253,7 +253,7 @@ Restart:
 					if ( loopLength > 0.f )
 					{
 						// Calculate the wrap length
-						const Float loopFracTime = fmod( timePastLoopEnd, loopLength );
+						const Float loopFracTime = fmodf( timePastLoopEnd, loopLength );
 						ASSERT( loopFracTime < loopLength );
 
 						// Collect from the previous time to the end of the loop to the end

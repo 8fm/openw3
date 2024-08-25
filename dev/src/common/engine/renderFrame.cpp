@@ -569,9 +569,9 @@ void CRenderFrame::AddDebugSphere( const Vector& center, Float radius, const Mat
 			for ( Uint32 i=0; i<=numPoints; i++ )
 			{
 				const Float localAngle = 2.0f * M_PI * ( i / (Float)numPoints );
-				const Float u = cos( localAngle ) * sin( angle ) * radius;
-				const Float v = sin( localAngle ) * sin( angle ) * radius;
-				const Float w = cos( angle ) * radius;
+				const Float u = cosf( localAngle ) * sinf( angle ) * radius;
+				const Float v = sinf( localAngle ) * sinf( angle ) * radius;
+				const Float w = cosf( angle ) * radius;
 				Vector point = ( uaxes[axis] * u ) + ( vaxes[axis] * v ) + ( waxes[axis] * w );
 				ringPoints.PushBack( center + matrix.TransformPoint( point ) );
 			}
@@ -636,9 +636,9 @@ void CRenderFrame::AddDebugCircle( const Vector& center, Float radius, const Mat
 	for ( Uint32 i=0; i<=numPoints; i++ )
 	{
 		const Float localAngle = 2.0f * M_PI * ( i / (Float)numPoints );
-		const Float u = cos( localAngle ) * sin( angle ) * radius;
-		const Float v = sin( localAngle ) * sin( angle ) * radius;
-		const Float w = cos( angle ) * radius;
+		const Float u = cosf( localAngle ) * sinf( angle ) * radius;
+		const Float v = sinf( localAngle ) * sinf( angle ) * radius;
+		const Float w = cosf( angle ) * radius;
 		Vector point = ( Vector::EX * u ) + ( Vector::EY * v ) + ( Vector::EZ * w );
 		ringPoints.PushBack( center + matrix.TransformPoint( point ) );
 	}
@@ -973,9 +973,9 @@ void CRenderFrame::AddDebugEllipsoid( const Vector& center, Float a, Float b, Fl
 
 				const Float localAngle = 2.0f * M_PI * ( i / (Float)numPoints );
 
-				const Float u = sin( angle ) * cos( localAngle ) * params[uaxes[axis]];
-				const Float v = sin( angle ) * sin( localAngle ) * params[vaxes[axis]];
-				const Float w = cos( angle ) * params[waxes[axis]];
+				const Float u = sinf( angle ) * cosf( localAngle ) * params[uaxes[axis]];
+				const Float v = sinf( angle ) * sinf( localAngle ) * params[vaxes[axis]];
+				const Float w = cosf( angle ) * params[waxes[axis]];
 
 				Vector point = ( vecs[uaxes[axis]] * u ) + ( vecs[vaxes[axis]] * v ) + ( vecs[waxes[axis]] * w );
 				ringPoints.PushBack( center + matrix.TransformPoint( point ) );
@@ -1219,9 +1219,9 @@ void CRenderFrame::AddDebugCone( const Matrix& matrix, Float radius, Float inner
 	for ( Uint32 i=0; i<numSegments; i++ )
 	{
 		const Float angle = (i / (Float)numSegments) * M_PI * 2.0f;
-		Vector coneVector = ( x * cos( angle ) ) + ( z * sin( angle ) );
-		coneInnerPoints.PushBack( o + ( y * radius * cos( DEG2RAD( innerAngle * 0.5f ) ) ) + coneVector * sin( DEG2RAD( innerAngle * 0.5f ) ) * radius );
-		coneOuterPoints.PushBack( o + ( y * radius * cos( DEG2RAD( outerAngle * 0.5f  ) ) ) + coneVector * sin( DEG2RAD( outerAngle * 0.5f ) ) * radius );
+		Vector coneVector = ( x * cosf( angle ) ) + ( z * sinf( angle ) );
+		coneInnerPoints.PushBack( o + ( y * radius * cosf( DEG2RAD( innerAngle * 0.5f ) ) ) + coneVector * sinf( DEG2RAD( innerAngle * 0.5f ) ) * radius );
+		coneOuterPoints.PushBack( o + ( y * radius * cosf( DEG2RAD( outerAngle * 0.5f  ) ) ) + coneVector * sinf( DEG2RAD( outerAngle * 0.5f ) ) * radius );
 	}
 
 	// Cone lines
@@ -1250,8 +1250,8 @@ void CRenderFrame::AddDebugCone( const Matrix& matrix, Float radius, Float inner
 	for ( Int32 i=-numSphereSegments; i<=numSphereSegments; i++ )
 	{
 		const Float angle = DEG2RAD( 0.5f * outerAngle * i / (Float)numSphereSegments );
-		sphereSegments.PushBack( o + y * cos( angle ) * radius + z * sin( angle ) * radius );
-		sphereSegments.PushBack( o + y * cos( angle ) * radius + x * sin( angle ) * radius );
+		sphereSegments.PushBack( o + y * cosf( angle ) * radius + z * sinf( angle ) * radius );
+		sphereSegments.PushBack( o + y * cosf( angle ) * radius + x * sinf( angle ) * radius );
 	}
 
 	// Sphere segments

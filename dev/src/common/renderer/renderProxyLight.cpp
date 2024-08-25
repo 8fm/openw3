@@ -640,9 +640,9 @@ bool TestSphereBoxIntersection( const Vector& sphereCenter, float sphereRadius, 
 	// transforming the sphere into that coordinate system.
 	Vector kCDiff = sphereCenter - boxCenter;
 
-	float fAx = fabs( kCDiff.X );
-	float fAy = fabs( kCDiff.Y );
-	float fAz = fabs( kCDiff.Z );
+	float fAx = fabsf( kCDiff.X );
+	float fAy = fabsf( kCDiff.Y );
+	float fAz = fabsf( kCDiff.Z );
 	float fDx = fAx - boxExtents.X;
 	float fDy = fAy - boxExtents.Y;
 	float fDz = fAz - boxExtents.Z;

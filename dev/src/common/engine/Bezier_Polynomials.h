@@ -14,7 +14,7 @@ namespace QuadraticBezierNamespace
 			float Sum=0.f; 
 			for(int i=0;i<Count();i++)
 			{
-				Sum+=pow(x,m_degree-i)*m_constants[i];
+				Sum+=powf(x,static_cast<float>(m_degree-i))*m_constants[i];
 			} 
 			return Sum;
 		}

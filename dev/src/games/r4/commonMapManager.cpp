@@ -4538,7 +4538,7 @@ Bool CCommonMapManager::UpdateDynamicMapPins_Processing( Bool processAll /*= fal
 		else
 		{
 			const Vector& entityPos = gameplayEntity->GetWorldPositionRef();
-			float heightDiff = fabs( playerPos.Z - entityPos.Z );
+			float heightDiff = fabsf( playerPos.Z - entityPos.Z );
 			if ( heightDiff < DYNAMIC_MAPPIN_VISIBLILITY_VERTICAL_THRESHOLD )
 			{
 				if ( actor )
@@ -4612,7 +4612,7 @@ Bool CCommonMapManager::UpdateDynamicMapPins_Processing( Bool processAll /*= fal
 				if ( gameplayEntity->GetFocusModeVisibility() == FMV_Clue )
 				{
 					const Vector& cluePos = gameplayEntity->GetWorldPositionRef();
-					float heightDiff = fabs( playerPos.Z - cluePos.Z );
+					float heightDiff = fabsf( playerPos.Z - cluePos.Z );
 					if ( heightDiff < MONSTER_CLUE_MAPPIN_VISIBLILITY_VERTICAL_THRESHOLD )
 					{
 						if ( playerPos.DistanceSquaredTo2D( cluePos ) < MONSTER_CLUE_SEARCH_RADIUS * MONSTER_CLUE_SEARCH_RADIUS )

@@ -233,7 +233,7 @@ void CMoveSTOnRoad::CalculateSteering( IMovementCommandBuffer& comm, InstanceBuf
 	Vector pathTangentAtAnticipatedPosition;
 	roadCurve->CalculateAbsoluteTangentFromCurveDirection( anticipatedCurvePosition, pathTangentAtAnticipatedPosition );
 
-	Float distanceFromPath = sqrt( distanceFromPathSq );
+	Float distanceFromPath = sqrtf( distanceFromPathSq );
 	Float desiredDistanceToPath = Clamp( distanceFromPath, 0.2f * roadWidth, 0.65f * roadWidth );			// FUN FACT: It actually nicely convert case of being on wrong pavement side
 	Vector2 perpendicularOffset = MathUtils::GeometryUtils::PerpendicularR( pathTangentAtAnticipatedPosition.AsVector2() );
 	perpendicularOffset.Normalize();

@@ -152,7 +152,7 @@ namespace AnimCompressionUtils
 			}
 
 			point = toRemovePoint;
-			cost = sqrt( minCost );
+			cost = sqrtf( minCost );
 		}
 
 	public:

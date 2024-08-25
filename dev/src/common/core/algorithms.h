@@ -89,7 +89,7 @@ RED_INLINE T Abs(const T& a)
 template <>
 RED_INLINE Float Abs< Float >(const Float& a)				
 { 
-	return fabs( a ) ;
+	return fabsf( a ) ;
 }
 
 

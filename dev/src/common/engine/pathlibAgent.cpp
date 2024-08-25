@@ -508,7 +508,7 @@ Bool CAgent::StayOnNavdataRec( Vector3& inOutDeltaMovement, Int32 recursionLimit
 	if ( desiredLenSq > prevLenSq )
 	{
 		// decrease new delta movement length to match previous one
-		inOutDeltaMovement.AsVector2() *= sqrt(prevLenSq / desiredLenSq);
+		inOutDeltaMovement.AsVector2() *= sqrtf(prevLenSq / desiredLenSq);
 	}
 	else if ( desiredLenSq < 0.02f*0.02f )
 	{

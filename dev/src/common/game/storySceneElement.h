@@ -124,7 +124,7 @@ public:
 		if( IsLooped() )
 		{
 			// Update current time and wrap it when necessary.
-			m_currentTime = fmod( m_currentTime + timeDelta, m_duration );
+			m_currentTime = fmodf( m_currentTime + timeDelta, m_duration );
 		}
 		else
 		{

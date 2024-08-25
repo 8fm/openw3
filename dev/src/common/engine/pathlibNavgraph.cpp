@@ -847,7 +847,7 @@ Bool CNavGraph::ConnectNodeList( CNavNode* nodes, Uint32 nodesCount, NodeFlags d
 		{
 			Float distSq = closestConnectors[ i ].m_second;
 
-			ConnectNode( closestConnectors[ i ].m_first, nodes[ i ].GetFullId(), defaultLinkFlags, CalculateLinkCost( sqrt( distSq ) ) );
+			ConnectNode( closestConnectors[ i ].m_first, nodes[ i ].GetFullId(), defaultLinkFlags, CalculateLinkCost( sqrtf( distSq ) ) );
 			ret = true;
 		}
 	}
@@ -991,7 +991,7 @@ Bool CNavGraph::MoveNodesToAvailablePositions()
 				m_areaDescription->VSpatialQuery( query );
 				if ( query.HasHit() )
 				{
-					Float distanceToObstacle = sqrt( query.m_closestDistSq );
+					Float distanceToObstacle = sqrtf( query.m_closestDistSq );
 
 					Vector2 vecOut = tryPos.AsVector2() - query.m_pointOut.AsVector2();
 					vecOut.Normalize();
@@ -1805,7 +1805,7 @@ Bool CNavGraph::ImproveLink( const Vector3& pos1, const Vector3& pos2, LinkImpro
 	}
 
 	// Compute possibly safe position (rubber band vertex)
-	Float obstacleDistance = sqrt( query.m_closestDistSq );
+	Float obstacleDistance = sqrtf( query.m_closestDistSq );
 
 	Vector2 moveVec = query.m_closestPointOnSegment.AsVector2() - query.m_closestGeometryPoint.AsVector2();
 	//moveVec.Normalize();
@@ -2339,7 +2339,7 @@ Bool CNavGraph::TryToConnectExternalConnector( CNavNode* externalConnector, CAre
 	//}
 	if ( internalConnector )
 	{
-		NavLinkCost linkCost = CalculateLinkCost( sqrt( closestConnectorSq ) );
+		NavLinkCost linkCost = CalculateLinkCost( sqrtf( closestConnectorSq ) );
 		AddLink( *externalConnector, CPathLink( internalConnector, NF_CONNECTOR, linkCost ) );
 		AddLink( *internalConnector, CPathLink( externalConnector, NF_CONNECTOR, linkCost ) );
 		return true;

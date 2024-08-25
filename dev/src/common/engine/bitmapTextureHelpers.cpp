@@ -930,7 +930,7 @@ Float CalculateToksvigFactorForPixel( Uint8 *buf, Uint32 width, Uint32 height, U
 		{
 			const Float sigma = 1.f; //< filter width [0..1]
 			const Float v = 2.f * sigma * sigma;
-			return exp( -(i*i + j*j) / v ) / ( M_PI*v );
+			return expf( -(i*i + j*j) / v ) / ( M_PI*v );
 		}
 
 		static Vector SampleToksvigNormal( Uint8 *buf, Uint32 width, Uint32 height, Int32 i, Int32 j )

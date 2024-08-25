@@ -77,7 +77,7 @@ const Rect Rect::EMPTY( Rect::RESET_STATE );
 
 RED_INLINE Float GetOXAngle( const Vector& p )
 {
-	return atan2( p.Y, p.X ) * 180.0f / 3.14159265f + 180.0f;
+	return atan2f( p.Y, p.X ) * 180.0f / 3.14159265f + 180.0f;
 }
 
 RED_INLINE void SwitchValues( Vector& v1, Vector& v2 )

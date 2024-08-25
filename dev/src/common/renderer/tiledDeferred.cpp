@@ -307,7 +307,7 @@ struct LightParams
 	Float UnpackSpotOuterRadAngle() const
 	{
 		ASSERT( UnpackTypeIsSpot() );
-		return acos( params.X );
+		return acosf( params.X );
 	}
 
 	// helper packing for spot light
@@ -336,8 +336,8 @@ struct LightParams
 			positionAndRadiusCull = Lerp<Vector>( proxy.m_outerAngle / 180.0f, origin, origin2 );
 
 			// Get cone params
-			const Float innerAngleCos = cos( 0.5f * DEG2RAD( proxy.m_innerAngle ) );
-			const Float outerAngleCos = cos( 0.5f * DEG2RAD( proxy.m_outerAngle ) );
+			const Float innerAngleCos = cosf( 0.5f * DEG2RAD( proxy.m_innerAngle ) );
+			const Float outerAngleCos = cosf( 0.5f * DEG2RAD( proxy.m_outerAngle ) );
 			params = Vector( outerAngleCos, 1.0f / ( innerAngleCos - outerAngleCos ), -outerAngleCos / ( innerAngleCos - outerAngleCos ), proxy.m_softness );
 		}
 

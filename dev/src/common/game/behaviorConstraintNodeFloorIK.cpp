@@ -733,11 +733,11 @@ SBehaviorConstraintNodeFloorIKLegs::SBehaviorConstraintNodeFloorIKLegs()
 
 void SBehaviorConstraintNodeFloorIKLegs::Setup( CBehaviorGraphInstance& instance, const SBehaviorConstraintNodeFloorIKLegsData& data )
 {
-	m_maxCosAngleOffUprightNormal = cos( DEG2RAD( data.m_maxAngleOffUprightNormal ) );
-	m_maxSinAngleOffUprightNormal = sin( DEG2RAD( data.m_maxAngleOffUprightNormal ) );
-	m_maxCosAngleOffUprightNormalSide = cos( DEG2RAD( data.m_maxAngleOffUprightNormalSide ) );
-	m_maxSinAngleOffUprightNormalSide = sin( DEG2RAD( data.m_maxAngleOffUprightNormalSide ) );
-	m_maxCosAngleOffUprightNormalToRevert = cos( DEG2RAD( data.m_maxAngleOffUprightNormalToRevert ) );
+	m_maxCosAngleOffUprightNormal = cosf( DEG2RAD( data.m_maxAngleOffUprightNormal ) );
+	m_maxSinAngleOffUprightNormal = sinf( DEG2RAD( data.m_maxAngleOffUprightNormal ) );
+	m_maxCosAngleOffUprightNormalSide = cosf( DEG2RAD( data.m_maxAngleOffUprightNormalSide ) );
+	m_maxSinAngleOffUprightNormalSide = sinf( DEG2RAD( data.m_maxAngleOffUprightNormalSide ) );
+	m_maxCosAngleOffUprightNormalToRevert = cosf( DEG2RAD( data.m_maxAngleOffUprightNormalToRevert ) );
 }
 
 //////////////////////////////////////////////////////////////////////////
@@ -887,7 +887,7 @@ void SBehaviorConstraintNodeFloorIKLeg::Reset( const SBehaviorConstraintNodeFloo
 
 RED_INLINE static void FixZOnSlope_Old( Vector& loc, Float slopeAngleRad )
 {
-	loc.Z = loc.Y * sin( slopeAngleRad );
+	loc.Z = loc.Y * sinf( slopeAngleRad );
 }
 
 RED_INLINE static void FixZOnSlope_New( Vector& loc, Float slopeAngleRad )
@@ -925,8 +925,8 @@ RED_INLINE static Vector ApplyJumpingOffset( Vector const & loc, Float jumpingOf
 RED_INLINE static void SetNormalOfSlope( Vector& normal, Float slopeAngleRad )
 {
 	normal.X = 0.0f;
-	normal.Y = -sin( slopeAngleRad );
-	normal.Z = cos( slopeAngleRad );
+	normal.Y = -sinf( slopeAngleRad );
+	normal.Z = cosf( slopeAngleRad );
 }
 
 RED_INLINE static Float GetAngleDegFromNormal( const Vector& normal )
@@ -2248,8 +2248,8 @@ void CBehaviorConstraintNodeFloorIK::GenerateFragments( CBehaviorGraphInstance& 
 			}
 			else
 			{
-				aloc = loc + forward * a + Vector::EZ * a * sin( slopeAngleFromAnimRad );
-				alocNoOffset = locNoOffset + forward * a + Vector::EZ * a * sin( slopeAngleFromAnimRad );
+				aloc = loc + forward * a + Vector::EZ * a * sinf( slopeAngleFromAnimRad );
+				alocNoOffset = locNoOffset + forward * a + Vector::EZ * a * sinf( slopeAngleFromAnimRad );
 			}
 
 			frame->AddDebugLine( aloc - side, aloc + side, Color( 155, 0, 0, 100 ), true, true );

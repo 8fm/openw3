@@ -2223,7 +2223,7 @@ bool CMovingAgentComponent::AdjustRequestedMovementDirectionPhysics( Vector & di
 			// Find the side we need to check
 			Vector direction		= directionWS;
 			Float const dot			= Vector::Dot2( direction.Normalized3(), normal2D );
-			Float const dotLimit	= sin( DEG2RAD( angleToDeflect ) );
+			Float const dotLimit	= sinf( DEG2RAD( angleToDeflect ) );
 			shouldStop				= Abs( dot ) > dotLimit;
 			direction				= ( ( direction - normal2D * dot ).Normalized2() - normal2D * 0.1f ).Normalized2();
 

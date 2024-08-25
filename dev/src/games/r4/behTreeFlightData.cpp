@@ -70,7 +70,7 @@ void CBehTreeFlightData::SetupBehaviorVariables( CActor* actor, const Vector& de
 
 	// Calculate Pitch
 	// acos( Dot( actorToDestinationNormalized, actorToDestinationNormalized2D ) ) is basically 1 - Z^2 
-	flyPitch = acos( 1.f - actorToDestinationNormalized.Z * actorToDestinationNormalized.Z );
+	flyPitch = acosf( 1.f - actorToDestinationNormalized.Z * actorToDestinationNormalized.Z );
 
 	flyPitch = RAD2DEG( flyPitch )/90;
 

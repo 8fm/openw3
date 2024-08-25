@@ -708,8 +708,8 @@ void BuildConeGeometry( TDynArray< Float >& vertices, Uint32& numberOfVertices, 
 	for ( Int32 i = -numSphereSegments; i <= numSphereSegments; ++i )
 	{
 		const Float angle = DEG2RAD( 0.5f * outerAngle * i / (Float)numSphereSegments );
-		sphereSegments.PushBack( Vector::EY * cos( angle ) * radius + Vector::EZ * sin( angle ) * radius );
-		sphereSegments.PushBack( Vector::EY * cos( angle ) * radius + Vector::EX * sin( angle ) * radius );
+		sphereSegments.PushBack( Vector::EY * cosf( angle ) * radius + Vector::EZ * sinf( angle ) * radius );
+		sphereSegments.PushBack( Vector::EY * cosf( angle ) * radius + Vector::EX * sinf( angle ) * radius );
 	}
 
 	for ( auto& v : sphereSegments )

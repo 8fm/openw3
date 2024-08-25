@@ -723,7 +723,7 @@ Float CBehaviorGraphLookAtSystemNode::GetLimitStartFromRange( Float range ) cons
 	if ( range > 0.f && range < 360.f )
 	{
 		Float temp = - range / 2.f + 90.f;
-		return tan( (Float)( DEG2RAD(temp) ) );
+		return tanf( (Float)( DEG2RAD(temp) ) );
 	}
 	else
 	{

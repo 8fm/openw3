@@ -150,8 +150,8 @@ void CHumbleCritterAI::Update( const SSwarmMemberStateData& currState, SSwarmMem
 			Vector2 fieldPlacement	= enviroment->NormalAabbVector( currentPosition.AsVector2() );
 			fieldPlacement.X		*= Float( enviroment->GetWidth() );
 			fieldPlacement.Y		*= Float( enviroment->GetHeight() );
-			fieldPlacement.X		-= floor( fieldPlacement.X ) + 0.5f;
-			fieldPlacement.Y		-= floor( fieldPlacement.Y ) + 0.5f;
+			fieldPlacement.X		-= floorf( fieldPlacement.X ) + 0.5f;
+			fieldPlacement.Y		-= floorf( fieldPlacement.Y ) + 0.5f;
 			// vector [ -0.5..0.5, -0.5..0.5 ]
 			accumulativeRepultion	+= fieldPlacement * (weight * 2.0f);		// * 2.f - is normalization factor
 		}
@@ -160,7 +160,7 @@ void CHumbleCritterAI::Update( const SSwarmMemberStateData& currState, SSwarmMem
 		{
 			if ( lenSq > 1.f )
 			{
-				accumulativeRepultion *= 1.f / sqrt( lenSq );
+				accumulativeRepultion *= 1.f / sqrtf( lenSq );
 			}
 			CREATE_RANDOMIZED_VAR( mutualRepultion, params.m_mutualRepultion, params.m_individualRandomization );
 			gravityMutualRep = accumulativeRepultion * mutualRepultion;
@@ -423,7 +423,7 @@ void CHumbleCritterAI::Update( const SSwarmMemberStateData& currState, SSwarmMem
 					applyClosestPoi	= false;
 					if ( closestSpawnPointSq != NumericLimits< Float >::Max() )
 					{
-						spawnPointGravity = closestSpawnPointDist * ( 1.f / sqrt(closestSpawnPointSq) );			// normalize and set ratio
+						spawnPointGravity = closestSpawnPointDist * ( 1.f / sqrtf(closestSpawnPointSq) );			// normalize and set ratio
 					}
 
 					done = true;
@@ -501,7 +501,7 @@ void CHumbleCritterAI::Update( const SSwarmMemberStateData& currState, SSwarmMem
 	m_targetActor = closestActorId;
 	if ( actorFound && closestActorDistSq > NumericLimits< Float >::Epsilon() )
 	{
-		const Float closestDist			= sqrt( closestActorDistSq );
+		const Float closestDist			= sqrtf( closestActorDistSq );
 		//  C---Desired-----------------Max
 		//  1------1---------------------0
 		const Float gravityRatio		= closestDist <= actorRangeDesired ? 1.0f :
@@ -544,7 +544,7 @@ void CHumbleCritterAI::Update( const SSwarmMemberStateData& currState, SSwarmMem
 	{
 		closestOnlyPoiGravity	= applyClosestPoi ? closestOnlyPoiGravity : Vector2( 0.0f, 0.0f );
 		poiGravity				= applyPoi ? poiGravity : Vector2( 0.0f, 0.0f );
-		const Float poiDot		= fabs( closestOnlyPoiGravity.Dot( poiGravity ) );
+		const Float poiDot		= fabsf( closestOnlyPoiGravity.Dot( poiGravity ) );
 		Vector2 genPoiGravity	= (closestOnlyPoiGravity + poiGravity) * (1.0f - poiDot) + poiGravity * poiDot;
 		gravityMutualRep		= applyMutualRepulsion ? gravityMutualRep : Vector2( 0.0f, 0.0f );
 		Vector2 acceleration	= genPoiGravity + actorGravity + randomGravity + spawnPointGravity + gravityWalls + gravityMutualRep;
@@ -571,7 +571,7 @@ void CHumbleCritterAI::Update( const SSwarmMemberStateData& currState, SSwarmMem
 			const Float velocitySqMag	= m_velocity.SquareMag();
 			if ( velocitySqMag > maxVelocity * maxVelocity )
 			{
-				m_velocity = m_velocity / sqrt( velocitySqMag ) * maxVelocity;
+				m_velocity = m_velocity / sqrtf( velocitySqMag ) * maxVelocity;
 			}
 
 			destPosition	= destPosition + m_velocity * deltaTime;
@@ -772,10 +772,10 @@ Float CHumbleCritterAI::ComputeZ( const Vector2& pos ) const
 
 	// TODO: Check if algorithm produces smooth output on quad edges
 	Float xRatio = normVec.X - 0.5f;
-	xRatio = xRatio - floor( xRatio );
+	xRatio = xRatio - floorf( xRatio );
 
 	Float yRatio = normVec.Y - 0.5f;
-	yRatio = yRatio - floor( yRatio );
+	yRatio = yRatio - floorf( yRatio );
 
 	Float zComponentLL = enviroment->GetChannel( coordXLow, coordYLow ).m_z;
 	Float zComponentHL = enviroment->GetChannel( coordXHigh, coordYLow ).m_z;
@@ -902,7 +902,7 @@ Vector2 CHumbleCritterAI::ComputeGravityForCircle( const CPointOfInterestSpecies
 		{
 			if ( sqDist < gravityRangeMax * gravityRangeMax )
 			{
-				const Float dist			= sqrt( sqDist );
+				const Float dist			= sqrtf( sqDist );
 				// If gravity < 0
 				// C = Center, mD = minDist, MD = maxDist
 				//
@@ -936,7 +936,7 @@ Vector2 CHumbleCritterAI::ComputeGravityForCircle( const CPointOfInterestSpecies
 				// No matter how far the boid is gravity will affect it the same :
 				CREATE_RANDOMIZED_VAR( randGravity , poiSpeciesConfig->m_gravity, randomisation );
 				// normalising dist vector :
-				const Float dist					= sqrt( sqDist );
+				const Float dist					= sqrtf( sqDist );
 				const Vector2 normedDistVector2D	= distVector / dist;
 				Input += normedDistVector2D *  randGravity ;
 			}
@@ -958,8 +958,8 @@ Vector2 CHumbleCritterAI::ComputeGravityForCone( const CPointOfInterestSpeciesCo
 		{
 			Vector2 normedDistToMinConeVect, normedDistToMaxConeVect;
 			Vector2 minConePushVector, maxConePushVector;
-			const Float distToMinCone = fabs( minRangeCone.ComputeDistanceToCone( boidPosition, normedDistToMinConeVect, minConePushVector ) );
-			const Float distToMaxCone = fabs( maxRangeCone.ComputeDistanceToCone( boidPosition, normedDistToMaxConeVect, maxConePushVector ) );
+			const Float distToMinCone = fabsf( minRangeCone.ComputeDistanceToCone( boidPosition, normedDistToMinConeVect, minConePushVector ) );
+			const Float distToMaxCone = fabsf( maxRangeCone.ComputeDistanceToCone( boidPosition, normedDistToMaxConeVect, maxConePushVector ) );
 			
 
 			Float mult = poiSpeciesConfig->m_gravity > 0.0f ? 0.0f : 1.0f ;

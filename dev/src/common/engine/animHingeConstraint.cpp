@@ -163,7 +163,7 @@ void CAnimDangleConstraint_Hinge::draw_ellipse( const Matrix & mat, Float from, 
 	Vector p0 = mat.TransformPoint(Vector( cosf(from)*scale, sinf(from)*scale, 0.0f ) );
 	frame->AddDebugLine( p0, mat.GetTranslation(), Color::YELLOW );
 	Int32 num = Int32( (fabs(to-from)/0.1f)+1.0f );
-	Float delta = (fabs(to-from)/Float(num));
+	Float delta = (fabsf(to-from)/Float(num));
 	for( Float a = from; a <= to; a += delta )
 	{
 		Vector p = mat.TransformPoint(Vector( cosf(a)*scale, sinf(a)*scale, 0.0f ));
