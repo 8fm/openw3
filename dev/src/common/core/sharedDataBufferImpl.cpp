@@ -23,7 +23,7 @@ SharedDataBufferData::~SharedDataBufferData()
 	RED_FATAL_ASSERT( m_data != nullptr, "Invalid buffer being freed" );
 	RED_MEMORY_FREE( MemoryPool_Default, MC_SharedBuffer, m_data );
 
-	m_data = (void*)0xDEADF00D;
+	m_data = reinterpret_cast<void*>(static_cast<Uint64>(0xDEADF00D));
 	m_size = 0xDEADF00D;
 	m_hash = 0xDEADF00D;
 }
