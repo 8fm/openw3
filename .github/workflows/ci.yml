@@ -73,3 +73,32 @@ jobs:
       with:
         name: Witcher3.${{ matrix.Configuration }}.${{ matrix.Platform }}.cmake.ci-${{ github.run_number }}
         path: bin\upload
+
+  linux-cmake:
+    name: linux cmake ${{ matrix.Configuration }} ${{ matrix.Platform }}
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        Configuration: [Final]
+        Platform: [x64]
+        BuildType: [Release]
+        include:
+          - Configuration: Debug
+            Platform: x64
+            BuildType: Debug
+    steps:
+    - uses: actions/checkout@main
+      with:
+        submodules: recursive
+
+    - name: Install libs
+      run: |
+        sudo apt-get update && sudo apt-get install libsdl2-dev libvulkan-dev glslang-tools clang meson ninja-build
+    - name: Build
+      run: |
+        export CC=clang && export CXX=clang
+        ${CXX} --version
+        mkdir build && cd build
+        cmake .. -DGAME_CONFIG=${{ matrix.Configuration }} -DGAME_PLATFORM=${{ matrix.Platform }} -DCMAKE_BUILD_TYPE=${{ matrix.BuildType }} -G Ninja
+        ninja
