@@ -10,7 +10,6 @@ set(SRC_FILES
     "crc.cpp"
     "crtWindows.cpp"
     "error.cpp"
-    "errorWindows.cpp"
     "guid.cpp"
     "logCommonOutputDevice.cpp"
     "logFile.cpp"
@@ -19,8 +18,15 @@ set(SRC_FILES
     "unitTestMode.cpp"
     "windowsDebuggerWriter.cpp"
     "log.cpp"
-    "timerWindows.cpp"
 )
+
+if (WIN32)
+    list(APPEND SRC_FILES "errorWindows.cpp")
+    list(APPEND SRC_FILES "timerWindows.cpp")
+else()
+    list(APPEND SRC_FILES "errorLinux.cpp")
+    list(APPEND SRC_FILES "timerLinux.cpp")
+endif()
 
 add_library(${PROJECT_NAME} STATIC ${SRC_FILES})
 

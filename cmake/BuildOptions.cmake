@@ -18,7 +18,7 @@ elseif (${GAME_CONFIG} STREQUAL "ReleaseGame")
     add_definitions(-DRED_CONFIGURATION_RELEASEGAME -DNDEBUG -DNO_SECUROM -DNO_EDITOR -DRELEASE)
 endif()
 
-if (${GAME_PLATFORM} STREQUAL "x64")
+if (WIN32 AND ${GAME_PLATFORM} STREQUAL "x64")
     add_definitions(-D_WIN64 -D_WINDOWS -DWIN32_LEAN_AND_MEAN)
 endif()
 
@@ -63,6 +63,15 @@ if (MSVC)
             add_link_options(/STACK:33554432) # StackReserveSize
         endif()
     endif()
+else()
+    add_compile_options(-std=c++14)
+
+    add_compile_options(-fPIC -ffast-math -finput-charset=UTF-8 -fshort-wchar)
+    add_compile_options(-ffunction-sections -fdata-sections)
+
+    # Verbose output
+    add_compile_options(-v)
+    add_link_options(-v)
 endif()
 
 #Shared.targets
