@@ -11,6 +11,8 @@
 #	include "redThreadsAtomicWinAPI.inl"
 #elif defined ( RED_PLATFORM_ORBIS )
 #	include "redThreadsAtomicOrbisAPI.inl"
+#elif defined ( RED_PLATFORM_LINUX )
+#	include "redThreadsAtomicLinuxAPI.inl"
 #else
 #	error Platform not supported
 #endif

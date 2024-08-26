@@ -24,6 +24,7 @@ Int32 Red::System::SNPrintF( UniChar* buffer, size_t count, const UniChar* forma
 	return retval;
 }
 
+#ifndef RED_PLATFORM_LINUX
 Int32 Internal::FilePrintF( FILE* handle, const AnsiChar* format, ... )
 {
 	va_list arglist;
@@ -41,3 +42,4 @@ Int32 Internal::FilePrintF( FILE* handle, const UniChar* format, ... )
 	va_end( arglist );
 	return retval;
 }
+#endif

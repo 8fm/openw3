@@ -7,172 +7,114 @@
 
 #define RED_THREADS_ATOMIC_MEMORDER __ATOMIC_RELAXED
 
-namespace red
-{
-	namespace LinuxAPI
+namespace Red { namespace Threads { namespace LinuxAPI {
+
+	struct SAtomicOps32
 	{
+		typedef int32_t TAtomic32 __attribute__( ( aligned( 4 ) ) );
 
-		struct AtomicOps8
+		// Conform to Win32 InterlockedIncrement by returning the new value
+		inline static TAtomic32		Increment( TAtomic32 volatile* addend ) { return __atomic_add_fetch( addend, 1, RED_THREADS_ATOMIC_MEMORDER ); }
+		inline static TAtomic32		Decrement( TAtomic32 volatile* addend ) { return __atomic_add_fetch( addend, -1, RED_THREADS_ATOMIC_MEMORDER ); }
+
+		// Conform to Win32 Interlocked* by returning the old value
+		inline static TAtomic32		Exchange( TAtomic32 volatile* target, TAtomic32 value ) { return __atomic_exchange_n( target, value, RED_THREADS_ATOMIC_MEMORDER ); }
+		inline static TAtomic32		CompareExchange( TAtomic32 volatile* destination, TAtomic32 exchange, TAtomic32 comparand )
 		{
-			typedef char TAtomic8;
-
-			// Conform to Win32 InterlockedIncrement by returning the new value
-			RED_FORCE_INLINE static TAtomic8		Increment( TAtomic8 volatile* addend ) { return __atomic_add_fetch( addend, 1, RED_THREADS_ATOMIC_MEMORDER ); }
-			RED_FORCE_INLINE static TAtomic8		Decrement( TAtomic8 volatile* addend ) { return __atomic_add_fetch( addend, -1, RED_THREADS_ATOMIC_MEMORDER ); }
-
-			// Conform to Win32 Interlocked* by returning the old value
-			RED_FORCE_INLINE static TAtomic8		Exchange( TAtomic8 volatile* target, TAtomic8 value ) { return __atomic_exchange_n( target, value, RED_THREADS_ATOMIC_MEMORDER ); }
-			RED_FORCE_INLINE static TAtomic8		CompareExchange( TAtomic8 volatile* destination, TAtomic8 exchange, TAtomic8 comparand )
-			{
-				__atomic_compare_exchange_n( destination, &comparand, exchange, false, RED_THREADS_ATOMIC_MEMORDER, RED_THREADS_ATOMIC_MEMORDER ); return comparand;
-			}
-			RED_FORCE_INLINE static TAtomic8		ExchangeAdd( TAtomic8 volatile* addend, TAtomic8 value ) { return __atomic_fetch_add( addend, value, RED_THREADS_ATOMIC_MEMORDER ); }
-			RED_FORCE_INLINE static TAtomic8		Or( TAtomic8 volatile* destination, TAtomic8 value ) { return __atomic_fetch_or( destination, value, RED_THREADS_ATOMIC_MEMORDER ); }
-			RED_FORCE_INLINE static TAtomic8		And( TAtomic8 volatile* destination, TAtomic8 value ) { return __atomic_fetch_and( destination, value, RED_THREADS_ATOMIC_MEMORDER ); }
-			RED_FORCE_INLINE static TAtomic8		FetchValue( TAtomic8 volatile* destination ) { return *( volatile TAtomic8* )( destination ); }
-		};
-
-		struct AtomicOps16
-		{
-			typedef short TAtomic16 __attribute__( ( aligned( 2 ) ) );
-
-			// Conform to Win32 InterlockedIncrement by returning the new value
-			RED_FORCE_INLINE static TAtomic16		Increment( TAtomic16 volatile* addend ) { return __atomic_add_fetch( addend, 1, RED_THREADS_ATOMIC_MEMORDER ); }
-			RED_FORCE_INLINE static TAtomic16		Decrement( TAtomic16 volatile* addend ) { return __atomic_add_fetch( addend, -1, RED_THREADS_ATOMIC_MEMORDER ); }
-
-			// Conform to Win32 Interlocked* by returning the old value
-			RED_FORCE_INLINE static TAtomic16		Exchange( TAtomic16 volatile* target, TAtomic16 value ) { return __atomic_exchange_n( target, value, RED_THREADS_ATOMIC_MEMORDER ); }
-			RED_FORCE_INLINE static TAtomic16		CompareExchange( TAtomic16 volatile* destination, TAtomic16 exchange, TAtomic16 comparand )
-			{
-				__atomic_compare_exchange_n( destination, &comparand, exchange, false, RED_THREADS_ATOMIC_MEMORDER, RED_THREADS_ATOMIC_MEMORDER ); return comparand;
-			}
-			RED_FORCE_INLINE static TAtomic16		ExchangeAdd( TAtomic16 volatile* addend, TAtomic16 value ) { return __atomic_fetch_add( addend, value, RED_THREADS_ATOMIC_MEMORDER ); }
-			RED_FORCE_INLINE static TAtomic16		Or( TAtomic16 volatile* destination, TAtomic16 value ) { return __atomic_fetch_or( destination, value, RED_THREADS_ATOMIC_MEMORDER ); }
-			RED_FORCE_INLINE static TAtomic16		And( TAtomic16 volatile* destination, TAtomic16 value ) { return __atomic_fetch_and( destination, value, RED_THREADS_ATOMIC_MEMORDER ); }
-			RED_FORCE_INLINE static TAtomic16		FetchValue( TAtomic16 volatile* destination ) { return *( volatile TAtomic16* )( destination ); }
-		};
-
-		struct AtomicOps32
-		{
-			typedef int32_t TAtomic32 __attribute__( ( aligned( 4 ) ) );
-
-			// Conform to Win32 InterlockedIncrement by returning the new value
-			RED_FORCE_INLINE static TAtomic32		Increment( TAtomic32 volatile* addend ) { return __atomic_add_fetch( addend, 1, RED_THREADS_ATOMIC_MEMORDER ); }
-			RED_FORCE_INLINE static TAtomic32		Decrement( TAtomic32 volatile* addend ) { return __atomic_add_fetch( addend, -1, RED_THREADS_ATOMIC_MEMORDER ); }
-
-			// Conform to Win32 Interlocked* by returning the old value
-			RED_FORCE_INLINE static TAtomic32		Exchange( TAtomic32 volatile* target, TAtomic32 value ) { return __atomic_exchange_n( target, value, RED_THREADS_ATOMIC_MEMORDER ); }
-			RED_FORCE_INLINE static TAtomic32		CompareExchange( TAtomic32 volatile* destination, TAtomic32 exchange, TAtomic32 comparand )
-			{
-				__atomic_compare_exchange_n( destination, &comparand, exchange, false, RED_THREADS_ATOMIC_MEMORDER, RED_THREADS_ATOMIC_MEMORDER ); return comparand;
-			}
-			RED_FORCE_INLINE static TAtomic32		ExchangeAdd( TAtomic32 volatile* addend, TAtomic32 value ) { return __atomic_fetch_add( addend, value, RED_THREADS_ATOMIC_MEMORDER ); }
-			RED_FORCE_INLINE static TAtomic32		Or( TAtomic32 volatile* destination, TAtomic32 value ) { return __atomic_fetch_or( destination, value, RED_THREADS_ATOMIC_MEMORDER ); }
-			RED_FORCE_INLINE static TAtomic32		And( TAtomic32 volatile* destination, TAtomic32 value ) { return __atomic_fetch_and( destination, value, RED_THREADS_ATOMIC_MEMORDER ); }
-			RED_FORCE_INLINE static TAtomic32		FetchValue( TAtomic32 volatile* destination ) { return *( volatile TAtomic32* )( destination ); }
-		};
+			__atomic_compare_exchange_n( destination, &comparand, exchange, false, RED_THREADS_ATOMIC_MEMORDER, RED_THREADS_ATOMIC_MEMORDER ); return comparand;
+		}
+		inline static TAtomic32		ExchangeAdd( TAtomic32 volatile* addend, TAtomic32 value ) { return __atomic_fetch_add( addend, value, RED_THREADS_ATOMIC_MEMORDER ); }
+		inline static TAtomic32		Or( TAtomic32 volatile* destination, TAtomic32 value ) { return __atomic_fetch_or( destination, value, RED_THREADS_ATOMIC_MEMORDER ); }
+		inline static TAtomic32		And( TAtomic32 volatile* destination, TAtomic32 value ) { return __atomic_fetch_and( destination, value, RED_THREADS_ATOMIC_MEMORDER ); }
+		inline static TAtomic32		FetchValue( TAtomic32 volatile* destination ) { return *( volatile TAtomic32* )( destination ); }
+	};
 
 #ifdef RED_ARCH_X64
-		struct AtomicOps64
+	struct SAtomicOps64
+	{
+		typedef int64_t TAtomic64 __attribute__( ( aligned( 8 ) ) );
+
+		// Conform to Win32 InterlockedIncrement by returning the new value
+		inline static TAtomic64		Increment( TAtomic64 volatile* addend ) { return __atomic_add_fetch( addend, 1, RED_THREADS_ATOMIC_MEMORDER ); }
+		inline static TAtomic64		Decrement( TAtomic64 volatile* addend ) { return __atomic_add_fetch( addend, -1, RED_THREADS_ATOMIC_MEMORDER ); }
+
+		// Conform to Win32 Interlocked* by returning the old value
+		inline static TAtomic64		Exchange( TAtomic64 volatile* target, TAtomic64 value ) { return __atomic_exchange_n( target, value, RED_THREADS_ATOMIC_MEMORDER ); }
+		inline static TAtomic64		CompareExchange( TAtomic64 volatile* destination, TAtomic64 exchange, TAtomic64 comparand )
 		{
-			typedef int64_t TAtomic64 __attribute__( ( aligned( 8 ) ) );
-
-			// Conform to Win32 InterlockedIncrement by returning the new value
-			RED_FORCE_INLINE static TAtomic64		Increment( TAtomic64 volatile* addend ) { return __atomic_add_fetch( addend, 1, RED_THREADS_ATOMIC_MEMORDER ); }
-			RED_FORCE_INLINE static TAtomic64		Decrement( TAtomic64 volatile* addend ) { return __atomic_add_fetch( addend, -1, RED_THREADS_ATOMIC_MEMORDER ); }
-
-			// Conform to Win32 Interlocked* by returning the old value
-			RED_FORCE_INLINE static TAtomic64		Exchange( TAtomic64 volatile* target, TAtomic64 value ) { return __atomic_exchange_n( target, value, RED_THREADS_ATOMIC_MEMORDER ); }
-			RED_FORCE_INLINE static TAtomic64		CompareExchange( TAtomic64 volatile* destination, TAtomic64 exchange, TAtomic64 comparand )
-			{
-				__atomic_compare_exchange_n( destination, &comparand, exchange, false, RED_THREADS_ATOMIC_MEMORDER, RED_THREADS_ATOMIC_MEMORDER ); return comparand;
-			}
-			RED_FORCE_INLINE static TAtomic64		ExchangeAdd( TAtomic64 volatile* addend, TAtomic64 value ) { return __atomic_fetch_add( addend, value, RED_THREADS_ATOMIC_MEMORDER ); }
-			RED_FORCE_INLINE static TAtomic64		Or( TAtomic64 volatile* destination, TAtomic64 value ) { return __atomic_fetch_or( destination, value, RED_THREADS_ATOMIC_MEMORDER ); }
-			RED_FORCE_INLINE static TAtomic64		And( TAtomic64 volatile* destination, TAtomic64 value ) { return __atomic_fetch_and( destination, value, RED_THREADS_ATOMIC_MEMORDER ); }
-			RED_FORCE_INLINE static TAtomic64		FetchValue( TAtomic64 volatile* destination ) { return *( volatile TAtomic64* )( destination ); }
-		};
+			__atomic_compare_exchange_n( destination, &comparand, exchange, false, RED_THREADS_ATOMIC_MEMORDER, RED_THREADS_ATOMIC_MEMORDER ); return comparand;
+		}
+		inline static TAtomic64		ExchangeAdd( TAtomic64 volatile* addend, TAtomic64 value ) { return __atomic_fetch_add( addend, value, RED_THREADS_ATOMIC_MEMORDER ); }
+		inline static TAtomic64		Or( TAtomic64 volatile* destination, TAtomic64 value ) { return __atomic_fetch_or( destination, value, RED_THREADS_ATOMIC_MEMORDER ); }
+		inline static TAtomic64		And( TAtomic64 volatile* destination, TAtomic64 value ) { return __atomic_fetch_and( destination, value, RED_THREADS_ATOMIC_MEMORDER ); }
+		inline static TAtomic64		FetchValue( TAtomic64 volatile* destination ) { return *( volatile TAtomic64* )( destination ); }
+	};
 #endif
 
-		struct AtomicOpsPtr
+	struct SAtomicOpsPtr
+	{
+		typedef void* TAtomicPtr __attribute__( ( aligned( 8 ) ) );
+
+		inline static TAtomicPtr Exchange( TAtomicPtr volatile* target, TAtomicPtr value )
 		{
-			typedef void* TAtomicPtr __attribute__( ( aligned( 8 ) ) );
+			const SAtomicOps64::TAtomic64 retval =
+				SAtomicOps64::Exchange
+				(
+					reinterpret_cast< SAtomicOps64::TAtomic64 volatile * >( target ),
+					reinterpret_cast< SAtomicOps64::TAtomic64 >( value )
+				);
 
-			RED_FORCE_INLINE static TAtomicPtr Exchange( TAtomicPtr volatile* target, TAtomicPtr value )
-			{
-				const AtomicOps64::TAtomic64 retval =
-					AtomicOps64::Exchange
-					(
-						reinterpret_cast< AtomicOps64::TAtomic64 volatile * >( target ),
-						reinterpret_cast< AtomicOps64::TAtomic64 >( value )
-					);
+			return reinterpret_cast< TAtomicPtr >( retval );
+		}
 
-				return reinterpret_cast< TAtomicPtr >( retval );
-			}
-
-			RED_FORCE_INLINE static TAtomicPtr CompareExchange( TAtomicPtr volatile* destination, TAtomicPtr exchange, TAtomicPtr comparand )
-			{
-				const AtomicOps64::TAtomic64 retval =
-					AtomicOps64::CompareExchange
-					(
-						reinterpret_cast< AtomicOps64::TAtomic64 volatile * >( destination ),
-						reinterpret_cast< AtomicOps64::TAtomic64 >( exchange ),
-						reinterpret_cast< AtomicOps64::TAtomic64 >( comparand )
-					);
-				return reinterpret_cast< TAtomicPtr >( retval );
-			}
-
-			RED_FORCE_INLINE static TAtomicPtr FetchValue( TAtomicPtr volatile* destination )
-			{
-				return *( volatile TAtomicPtr* )( destination );
-			}
-		};
-
-		template <size_t Size>
-		class AtomicIntBase
+		inline static TAtomicPtr CompareExchange( TAtomicPtr volatile* destination, TAtomicPtr exchange, TAtomicPtr comparand )
 		{
-		};
+			const SAtomicOps64::TAtomic64 retval =
+				SAtomicOps64::CompareExchange
+				(
+					reinterpret_cast< SAtomicOps64::TAtomic64 volatile * >( destination ),
+					reinterpret_cast< SAtomicOps64::TAtomic64 >( exchange ),
+					reinterpret_cast< SAtomicOps64::TAtomic64 >( comparand )
+				);
+			return reinterpret_cast< TAtomicPtr >( retval );
+		}
 
-		template <>
-		class AtomicIntBase<1U>
+		inline static TAtomicPtr FetchValue( TAtomicPtr volatile* destination )
 		{
-		protected:
-			typedef AtomicOps8::TAtomic8 TAtomic;
-			typedef AtomicOps8 AtomicOps;
-		};
+			return *( volatile TAtomicPtr* )( destination );
+		}
+	};
 
-		template <>
-		class AtomicIntBase<2U>
-		{
-		protected:
-			typedef AtomicOps16::TAtomic16 TAtomic;
-			typedef AtomicOps16 AtomicOps;
-		};
+	template <size_t Size>
+	class CAtomicIntBase
+	{
+	};
 
-		template <>
-		class AtomicIntBase<4U>
-		{
-		protected:
-			typedef AtomicOps32::TAtomic32 TAtomic;
-			typedef AtomicOps32 AtomicOps;
-		};
+	template <>
+	class CAtomicIntBase<4U>
+	{
+	protected:
+		typedef SAtomicOps32::TAtomic32 TAtomic;
+		typedef SAtomicOps32 SAtomicOps;
+	};
 
-		template <>
-		class AtomicIntBase<8U>
-		{
-		protected:
-			typedef AtomicOps64::TAtomic64 TAtomic;
-			typedef AtomicOps64 AtomicOps;
-		};
+#ifdef RED_ARCH_X64
+	template <>
+	class CAtomicIntBase<8U>
+	{
+	protected:
+		typedef SAtomicOps64::TAtomic64 TAtomic;
+		typedef SAtomicOps64 SAtomicOps;
+	};
+#endif
 
-		class AtomicPtrBase
-		{
-		protected:
-			typedef AtomicOpsPtr::TAtomicPtr TAtomicPtr;
-			typedef AtomicOpsPtr AtomicOps;
-		};
+	class CAtomicPtrBase
+	{
+	protected:
+		typedef SAtomicOpsPtr::TAtomicPtr TAtomicPtr;
+		typedef SAtomicOpsPtr SAtomicOps;
+	};
 
-	}
-} // namespace red { namespace LinuxAPI {
+} } } // namespace Red { namespace Threads { namespace LinuxAPI {
 
 #endif // RED_THREADS_ATOMIC_LINUXAPI_H

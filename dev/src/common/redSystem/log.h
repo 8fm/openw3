@@ -120,7 +120,7 @@ namespace Red { namespace System { namespace Log {
 		Bool m_enabled;
 		EPriority m_priority;
 
-#ifdef RED_PLATFORM_ORBIS
+#if defined( RED_PLATFORM_ORBIS ) || defined( RED_PLATFORM_LINUX )
 		RED_ALIGNED_VAR( Int32, 4 ) m_crashModeStackCount;
 #else
 		RED_ALIGNED_VAR( Uint32, 4 ) m_crashModeStackCount;

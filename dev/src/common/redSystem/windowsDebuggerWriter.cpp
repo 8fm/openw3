@@ -17,5 +17,9 @@ Red::System::Log::WindowsDebuggerWriter::~WindowsDebuggerWriter()
 
 void Red::System::Log::WindowsDebuggerWriter::WriteFormatted( const Char* message )
 {
+#ifdef RED_PLATFORM_LINUX
+	Internal::FilePrint( stdout, message );
+#else
 	OutputDebugString( message );
+#endif
 }

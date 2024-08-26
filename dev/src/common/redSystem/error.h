@@ -221,10 +221,10 @@ namespace Red
 #ifdef RED_ASSERTS_ENABLED
 
 #define RED_FATAL_ASSERT( expression, message, ... ) \
-	do { if( !( expression ) ) { Red::System::Error::HandleAssertion(  MACRO_TXT(__FILE__), __LINE__, MACRO_TXT( #expression ), MACRO_TXT( message ), ##__VA_ARGS__ ); __debugbreak(); } } while ( (void)0,0 )
+	do { if( !( expression ) ) { Red::System::Error::HandleAssertion(  MACRO_TXT(__FILE__), __LINE__, MACRO_TXT( #expression ), MACRO_TXT( message ), ##__VA_ARGS__ ); RED_DEBUG_BREAK(); } } while ( (void)0,0 )
 
 #define RED_FATAL( message, ... ) \
-	do { Red::System::Error::HandleAssertion(  MACRO_TXT(__FILE__), __LINE__, MACRO_TXT( "Fatal" ), MACRO_TXT( message ), ##__VA_ARGS__ ); __debugbreak(); } while ( (void)0,0 )
+	do { Red::System::Error::HandleAssertion(  MACRO_TXT(__FILE__), __LINE__, MACRO_TXT( "Fatal" ), MACRO_TXT( message ), ##__VA_ARGS__ ); RED_DEBUG_BREAK(); } while ( (void)0,0 )
 
 #define RED_WARNING( expression, message, ... ) \
 	do { if( !( expression ) ) { Red::System::Error::HandleWarning( MACRO_TXT(__FILE__), __LINE__, MACRO_TXT( #expression ), MACRO_TXT( message ), ##__VA_ARGS__ ); } } while ( (void)0,0 )

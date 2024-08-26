@@ -34,6 +34,9 @@ namespace Red
 #elif defined( RED_PLATFORM_ORBIS )
 				Uint32 id;
 				ThreadId() : id( static_cast< Uint32 >( ::scePthreadGetthreadid() ) ) {}
+#elif defined( RED_PLATFORM_LINUX )
+				Uint32 id;
+				ThreadId() : id( static_cast< Uint32 >( ::pthread_self() ) ) {}
 #else
 # error Unsupported platform!
 #endif
@@ -59,6 +62,8 @@ namespace Red
 					id = ::GetCurrentThreadId();
 #elif defined( RED_PLATFORM_ORBIS )
 					id = static_cast< Uint32 >( ::scePthreadGetthreadid() );
+#elif defined( RED_PLATFORM_LINUX )
+					id = static_cast< Uint32 >( ::pthread_self() );
 #else
 # error Unsupported platform!
 #endif
