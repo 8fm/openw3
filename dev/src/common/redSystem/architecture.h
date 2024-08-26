@@ -40,6 +40,13 @@ RED_MESSAGE( "SIMD instruction set switched off" );
 #	define RED_PLATFORM_WIN64
 #elif defined( _WIN32 )
 #	define RED_PLATFORM_WIN32
+#elif defined( __linux__ )
+#	define RED_PLATFORM_LINUX
+#	if defined( __x86_64__ )
+#		define RED_PLATFORM_LINUX64
+#	else
+#		define RED_PLATFORM_LINUX32
+#	endif
 #elif defined( __ORBIS__ )
 #	define RED_PLATFORM_ORBIS
 #else

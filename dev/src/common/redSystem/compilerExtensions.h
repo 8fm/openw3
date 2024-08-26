@@ -129,6 +129,14 @@
 
 //////////////////////////////////////////////////////////////////////////
 // Debugging
+
+// portable RED_DEBUG_BREAK macro
+#if defined( RED_PLATFORM_WINPC )
+# define RED_DEBUG_BREAK() __debugbreak()
+#elif defined( RED_PLATFORM_LINUX )
+# define RED_DEBUG_BREAK() asm("int3")
+#endif
+
 #if defined( RED_PLATFORM_WIN32 ) || defined( RED_PLATFORM_WIN64 ) || defined( RED_PLATFORM_DURANGO )
 #	define RED_BREAKPOINT() do{ if( ::IsDebuggerPresent() ){ __debugbreak(); } } while(0,0)
 #elif defined( RED_PLATFORM_ORBIS )
@@ -137,6 +145,14 @@
 # else
 #   define RED_BREAKPOINT()
 # endif
+#elif defined( RED_PLATFORM_LINUX )
+#	include <sys/types.h>
+#	include <sys/ptrace.h>
+
+#	define RED_BREAKPOINT() do {											\
+		bool debuggerPresent = ( ptrace( PTRACE_TRACEME, 0, 1, 0 ) < 0 );	\
+		if ( !debuggerPresent ) { ptrace( PTRACE_DETACH, 0, 1, 0 ); }		\
+		if( debuggerPresent) { RED_DEBUG_BREAK(); } } while((void)0,0)
 #endif
 
 /////////////////////////////////////////////////////////////////

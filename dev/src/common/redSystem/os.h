@@ -44,6 +44,35 @@
 #	define NOMCX
 
 #	include <Windows.h>
+#elif defined( RED_PLATFORM_LINUX )
+#	ifndef _GNU_SOURCE
+#		define _GNU_SOURCE
+#	endif
+#	ifndef _LARGEFILE_SOURCE
+#		define _LARGEFILE_SOURCE
+#	endif
+#	ifndef _LARGEFILE64_SOURCE
+#		define _LARGEFILE64_SOURCE
+#	endif
+#	if defined(_FILE_OFFSET_BITS)
+#		if _FILE_OFFSET_BITS != 64
+#			error _FILE_OFFSET_BITS pre-defined to unsupported value!
+#		endif
+#	else
+#		define _FILE_OFFSET_BITS 64
+#	endif
+#	include <fcntl.h>
+#	include <unistd.h>
+#	include <time.h>
+#	include <sys/types.h>
+#	include <sys/syscall.h>
+#	include <sys/stat.h>
+#	include <sys/time.h>
+	// where should I actually put these?
+#	include <cstdarg>
+#	include <utility>
+#	include <pthread.h>
+
 #else
 #	error Undefined Architecture
 #endif

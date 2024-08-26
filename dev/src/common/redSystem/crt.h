@@ -11,7 +11,7 @@
 // 
 #include "formatMacros.h"
 
-#if defined( RED_PLATFORM_WIN32 ) || defined( RED_PLATFORM_WIN64 ) || defined( RED_PLATFORM_DURANGO )
+#if defined( RED_PLATFORM_WIN32 ) || defined( RED_PLATFORM_WIN64 ) || defined( RED_PLATFORM_DURANGO ) || defined( RED_PLATFORM_LINUX )
 	#include "crtWindows.h"
 #elif defined( RED_PLATFORM_ORBIS )
 	#include "crtOrbis.h"

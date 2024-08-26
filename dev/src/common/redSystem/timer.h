@@ -11,6 +11,8 @@
 	#include "timerWindows.h"
 #elif defined( RED_PLATFORM_ORBIS )
 	#include "timerOrbis.h"
+#elif defined( RED_PLATFORM_LINUX )
+#	include "timerLinux.h"
 #endif
 
 #endif // _RED_TIMER_H_

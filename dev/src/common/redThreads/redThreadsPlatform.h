@@ -41,6 +41,8 @@
 #define RED_THREADS_PLATFORM_WINDOWS_API
 #elif defined( RED_PLATFORM_ORBIS )
 #define RED_THREADS_PLATFORM_ORBIS_API
+#elif defined( RED_PLATFORM_LINUX )
+#define RED_THREADS_PLATFORM_LINUX_API
 #endif
 
 //////////////////////////////////////////////////////////////////////////
@@ -62,6 +64,15 @@ namespace Red { namespace Threads { namespace OrbisAPI {
 namespace Red { namespace Threads {
 	namespace OSAPI = OrbisAPI;
 } } 
+
+#elif defined( RED_THREADS_PLATFORM_LINUX_API )
+
+namespace Red { namespace Threads { namespace LinuxAPI {
+} } } // Red { namespace Threads { namespace LinuxAPI {
+
+namespace Red { namespace Threads {
+	namespace OSAPI = LinuxAPI;
+} }
 
 #endif
 

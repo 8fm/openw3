@@ -1,10 +1,12 @@
 /**
 * Copyright (c) 2018 CDProjekt Red, Inc. All Rights Reserved.
 */
-#include "build.h"
+
 #include "timerLinux.h"
 
 #include <errno.h>
+
+using namespace Red::System;
 
 static const Uint64 NANOSEC_PER_SEC = 1000000000L;
 

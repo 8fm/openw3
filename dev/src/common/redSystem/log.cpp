@@ -115,6 +115,8 @@ namespace Red { namespace System { namespace Log {
 		{
 #ifdef RED_PLATFORM_ORBIS
 			sceAtomicIncrement32( &m_crashModeStackCount );
+#elif defined( RED_PLATFORM_LINUX )
+			__sync_add_and_fetch( &m_crashModeStackCount, 1 );
 #else
 			InterlockedIncrement( &m_crashModeStackCount );
 #endif
@@ -123,6 +125,8 @@ namespace Red { namespace System { namespace Log {
 		{
 #ifdef RED_PLATFORM_ORBIS
 			sceAtomicDecrement32( &m_crashModeStackCount );
+#elif defined( RED_PLATFORM_LINUX )
+			__sync_sub_and_fetch( &m_crashModeStackCount, 1 );
 #else
 			InterlockedDecrement( &m_crashModeStackCount );
 #endif
