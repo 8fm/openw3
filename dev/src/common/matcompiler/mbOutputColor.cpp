@@ -6,8 +6,8 @@
 #include "mbOutputColor.h"
 #include "../matcompiler//materialShaderConstants.h"
 #include "../../../../bin/shaders/include/globalConstants.fx"
-#include "..\..\common\engine\mbParamTexture.h"
-#include "..\engine\renderFragment.h"
+#include "../../common/engine/mbParamTexture.h"
+#include "../engine/renderFragment.h"
 
 #ifndef NO_RUNTIME_MATERIAL_COMPILATION
 

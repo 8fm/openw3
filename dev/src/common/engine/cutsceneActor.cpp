@@ -20,7 +20,7 @@
 #include "behaviorGraphContext.h"
 #include "actorInterface.h"
 #include "mimicComponent.h"
-#include "..\core\mathUtils.h"
+#include "../core/mathUtils.h"
 
 #ifdef DEBUG_CUTSCENES
 #pragma optimize("",off)

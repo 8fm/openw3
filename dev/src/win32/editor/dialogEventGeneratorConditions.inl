@@ -1,5 +1,5 @@
-#include "..\..\common\game\storySceneSection.h"
-#include "..\..\common\game\storySceneLine.h"
+#include "../../common/game/storySceneSection.h"
+#include "../../common/game/storySceneLine.h"
 
 namespace CStorySceneEventGeneratorInternals
 {

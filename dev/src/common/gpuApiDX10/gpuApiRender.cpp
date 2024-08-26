@@ -3,7 +3,7 @@
 */
 #include "gpuApi.h"
 #include "../gpuApiUtils/gpuApiMemory.h"
-#include "..\redSystem\crt.h"
+#include "../redSystem/crt.h"
 #include "../redMath/float16compressor.h"
 
 #include "../gpuApiUtils/gpuApiRenderCommon.h"

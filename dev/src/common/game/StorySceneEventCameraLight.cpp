@@ -1,10 +1,10 @@
 #include "build.h"
 #include "StorySceneEventCameraLight.h"
 #include "storyScenePlayer.h"
-#include "..\engine\entity.h"
-#include "..\engine\layer.h"
-#include "..\engine\world.h"
-#include "..\engine\environmentManager.h"
+#include "../engine/entity.h"
+#include "../engine/layer.h"
+#include "../engine/world.h"
+#include "../engine/environmentManager.h"
 #include "storySceneEventsCollector_events.h"
 
 IMPLEMENT_ENGINE_CLASS( CStorySceneEventCameraLight );

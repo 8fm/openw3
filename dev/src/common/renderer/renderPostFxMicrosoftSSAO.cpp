@@ -5,10 +5,10 @@
 #include "renderPostFxMicrosoftSSAO.h"
 
 #if defined( RED_PLATFORM_DURANGO ) || defined( RED_PLATFORM_WINPC )
-#include "..\gpuApiDX10\gpuApiBase.h"
+#include "../gpuApiDX10/gpuApiBase.h"
 #include "../../common/gpuApiDX10/gpuApiMapping.h"
 #elif defined( RED_PLATFORM_ORBIS )
-#include "..\gpuApiGnm\gpuApiBase.h"
+#include "../gpuApiGnm/gpuApiBase.h"
 #include "../../common/gpuApiGnm/gpuApiMapping.h"
 #else
 #error Unsupported platform

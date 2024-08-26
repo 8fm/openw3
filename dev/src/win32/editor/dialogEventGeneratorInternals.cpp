@@ -3,14 +3,14 @@
 */
 #include "build.h"
 #include "dialogEventGeneratorInternals.h"
-#include "..\..\common\game\storySceneLine.h"
-#include "..\..\common\game\storySceneSection.h"
-#include "..\..\common\game\storyScene.h"
-#include "..\..\common\game\storySceneInput.h"
-#include "..\..\common\game\storySceneChoice.h"
-#include "..\..\common\game\storySceneControlPartsUtil.h"
-#include "..\..\common\game\storyScenePauseElement.h"
-#include "..\..\common\engine\localizationManager.h"
+#include "../../common/game/storySceneLine.h"
+#include "../../common/game/storySceneSection.h"
+#include "../../common/game/storyScene.h"
+#include "../../common/game/storySceneInput.h"
+#include "../../common/game/storySceneChoice.h"
+#include "../../common/game/storySceneControlPartsUtil.h"
+#include "../../common/game/storyScenePauseElement.h"
+#include "../../common/engine/localizationManager.h"
 
 namespace CStorySceneEventGeneratorInternals
 {

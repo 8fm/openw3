@@ -5,7 +5,7 @@
 #include "redMemoryDebugAllocator.h"
 #include "redMemoryAllocatorInfo.h"
 #include "redMemoryPageAllocator.h"
-#include "..\redThreads\redThreadsThread.h"
+#include "../redThreads/redThreadsThread.h"
 
 #ifdef RED_MEMORY_FRAMEWORK_PLATFORM_WINDOWS_API
 

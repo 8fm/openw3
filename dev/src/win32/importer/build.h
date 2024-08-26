@@ -2,11 +2,11 @@
 * Copyright © 2007 CD Projekt Red. All Rights Reserved.
 */
 
-#include "..\..\common\core\core.h"
-#include "..\..\common\engine\engine.h"
-#include "..\..\common\game\game.h"
-#include "..\..\common\gpuApiDX10\gpuApi.h"
-#include "..\..\win32\platform\win32.h"
+#include "../../common/core/core.h"
+#include "../../common/engine/engine.h"
+#include "../../common/game/game.h"
+#include "../../common/gpuApiDX10/gpuApi.h"
+#include "../../win32/platform/win32.h"
 #include "../../common/core/factory.h"
 
 #define LOG_IMPORTER( format, ... ) RED_LOG( Importer, format, ##__VA_ARGS__ )

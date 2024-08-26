@@ -4,8 +4,8 @@
 
 #include "build.h"
 #include "renderParticleEmitter.h"
-#include "..\physics\physicsParticleWrapper.h"
-#include "..\engine\evaluatorVector.h"
+#include "../physics/physicsParticleWrapper.h"
+#include "../engine/evaluatorVector.h"
 
 //////////////////////////////////////////////////////////////////////////
 // Static particle update methods

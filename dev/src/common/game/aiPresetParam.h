@@ -4,7 +4,7 @@
 
 #pragma once
 #include "aiProfile.h"
-#include "..\engine\entityTemplateParams.h"
+#include "../engine/entityTemplateParams.h"
 
 // CAIPresetRedefinitionParam
 class CAIPresetParam : public CAITemplateParam

@@ -7,7 +7,7 @@
 #include "timeline.h"
 #include "dialogEditorCameraCtrl.h"
 #include "dialogTimelineEventsLinker.h"
-#include "..\..\common\game\storySceneEvent.h"
+#include "../../common/game/storySceneEvent.h"
 #include "../../common/game/storySceneSectionVariant.h"
 
 class CEdPropertiesPage;

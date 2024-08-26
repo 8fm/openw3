@@ -3,9 +3,9 @@
 #include "storySceneIncludes.h"
 #include "storyScenePlayer.h"
 #include "storySceneAnimationList.h"
-#include "..\engine\mimicComponent.h"
+#include "../engine/mimicComponent.h"
 #include "storySceneSystem.h"
-#include "..\engine\skeletalAnimationContainer.h"
+#include "../engine/skeletalAnimationContainer.h"
 #include "extAnimItemEvents.h"
 
 #ifdef DEBUG_SCENES_2

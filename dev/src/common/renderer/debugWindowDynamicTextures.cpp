@@ -6,18 +6,18 @@
 #ifndef NO_RED_GUI
 #ifndef NO_DEBUG_WINDOWS
 
-#include "..\engine\redGuiComboBox.h"
-#include "..\engine\redGuiLabel.h"
-#include "..\engine\redGuiPanel.h"
-#include "..\engine\redGuiImage.h"
-#include "..\engine\redGuiManager.h"
-#include "..\engine\redGuiAdvancedSlider.h"
-#include "..\engine\redGuiGraphicContext.h"
-#include "..\engine\redGuiGridLayout.h"
-#include "..\engine\redGuiSpin.h"
+#include "../engine/redGuiComboBox.h"
+#include "../engine/redGuiLabel.h"
+#include "../engine/redGuiPanel.h"
+#include "../engine/redGuiImage.h"
+#include "../engine/redGuiManager.h"
+#include "../engine/redGuiAdvancedSlider.h"
+#include "../engine/redGuiGraphicContext.h"
+#include "../engine/redGuiGridLayout.h"
+#include "../engine/redGuiSpin.h"
 #include "debugWindowDynamicTextures.h"
-#include "..\engine\renderFrame.h"
-#include "..\engine\redGuiCheckBox.h"
+#include "../engine/renderFrame.h"
+#include "../engine/redGuiCheckBox.h"
 
 namespace DebugWindows
 {

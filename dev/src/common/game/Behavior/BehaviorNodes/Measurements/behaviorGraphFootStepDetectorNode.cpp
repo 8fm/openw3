@@ -1,17 +1,17 @@
 #include "build.h"
-#include "..\..\..\build.h" // hack for using precompiled header on PS4 (only the case when you have cpp file in subfolders, hope that engine team will fix this correctly)
+#include "../../../build.h" // hack for using precompiled header on PS4 (only the case when you have cpp file in subfolders, hope that engine team will fix this correctly)
 #include "behaviorGraphFootStepDetectorNode.h"
-#include "..\..\..\..\engine\behaviorIncludes.h"
-#include "..\..\..\..\core\instanceDataLayoutCompiler.h"
-#include "..\..\..\..\engine\behaviorGraphOutput.h"
-#include "..\..\..\..\engine\behaviorGraphContext.h"
-#include "..\..\..\extAnimFootstepEvent.h"
-#include "..\..\..\..\engine\behaviorGraphInstance.h"
-#include "..\..\PostActions\behaviorGraphPostActions.h"
-#include "..\..\..\..\core\object.h"
-#include "..\..\..\..\engine\entity.h"
-#include "..\..\..\..\engine\actorInterface.h"
-#include "..\..\..\..\engine\visualDebug.h"
+#include "../../../../engine/behaviorIncludes.h"
+#include "../../../../core/instanceDataLayoutCompiler.h"
+#include "../../../../engine/behaviorGraphOutput.h"
+#include "../../../../engine/behaviorGraphContext.h"
+#include "../../../extAnimFootstepEvent.h"
+#include "../../../../engine/behaviorGraphInstance.h"
+#include "../../PostActions/behaviorGraphPostActions.h"
+#include "../../../../core/object.h"
+#include "../../../../engine/entity.h"
+#include "../../../../engine/actorInterface.h"
+#include "../../../../engine/visualDebug.h"
 
 IMPLEMENT_ENGINE_CLASS( SFootDetectionBoneInfo );
 IMPLEMENT_ENGINE_CLASS( CBehaviorGraphFootStepDetectorNode );

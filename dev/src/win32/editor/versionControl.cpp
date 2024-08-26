@@ -1,6 +1,6 @@
 #include "build.h"
 #include "wxVersionControlInterface.h"
-#include "..\..\win32\versionControl\versionControlP4.h"
+#include "../../win32/versionControl/versionControlP4.h"
 #include "../../common/core/configVar.h"
 #include "../../common/core/configVarLegacyWrapper.h"
 

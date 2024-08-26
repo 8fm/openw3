@@ -1,6 +1,6 @@
 #pragma once
 
-#include "..\..\common\game\gameplayEntity.h"
+#include "../../common/game/gameplayEntity.h"
 
 //////////////////////////////////////////////////////////////////////////////////////////////
 class W3ToxicCloud : public CGameplayEntity

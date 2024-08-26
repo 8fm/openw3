@@ -5,11 +5,11 @@
 #include "renderInterface.h"
 #include "renderMaterial.h"
 #include "renderShaderPair.h"
-#include "..\engine\renderFragment.h"
+#include "../engine/renderFragment.h"
 
 #ifdef USE_APEX
 
-#include "..\engine\apexMaterialMapping.h"
+#include "../engine/apexMaterialMapping.h"
 
 #include "NxUserRenderResourceDesc.h"
 #include "NxUserRenderVertexBufferDesc.h"

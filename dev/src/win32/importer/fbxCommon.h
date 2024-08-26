@@ -2,9 +2,9 @@
 
 //-----------------------------------------------------------------------------
 
-#include <..\..\..\external\FBX_SDK_2016_1_2\include\fbxsdk.h>
-#include "..\..\common\core\xmlWriter.h"
-#include "..\..\common\core\exporter.h"
+#include <../../../external/FBX_SDK_2016_1_2/include/fbxsdk.h>
+#include "../../common/core/xmlWriter.h"
+#include "../../common/core/exporter.h"
 
 //-----------------------------------------------------------------------------
 

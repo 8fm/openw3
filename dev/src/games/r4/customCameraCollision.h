@@ -1,7 +1,7 @@
 #pragma once
 
 #include "customCameraControllers.h"
-#include "..\..\common\engine\cameraFadeoutHelper.h"
+#include "../../common/engine/cameraFadeoutHelper.h"
 
 class ICustomCameraCollisionController : public ICustomCameraBaseController
 {

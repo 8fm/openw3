@@ -6,8 +6,8 @@
 
 #include "QuestDependencyInfo.h"
 #include "questGraph.h"
-#include "..\core\garbageCollector.h"
-#include "..\core\feedback.h"
+#include "../core/garbageCollector.h"
+#include "../core/feedback.h"
 #include "questPauseConditionBlock.h"
 #include "questCondition.h"
 #include "questTriggerCondition.h"

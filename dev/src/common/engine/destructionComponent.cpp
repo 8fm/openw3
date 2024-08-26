@@ -4,9 +4,9 @@
 
 #include "build.h"
 #include "destructionComponent.h"
-#include "..\physics\physicsSettings.h"
-#include "..\physics\physicsIncludes.h"
-#include "..\physics\physicsWorldPhysXImpl.h"
+#include "../physics/physicsSettings.h"
+#include "../physics/physicsIncludes.h"
+#include "../physics/physicsWorldPhysXImpl.h"
 #include "physicsDestructionWrapper.h"
 #include "physicsDestructionResource.h"
 #include "collisionCache.h"

@@ -61,20 +61,20 @@
 //this is for the temporary solution of releasing constant buffers before destroying the device, please remove as soon as speedtree is fixed
 #include "speedTreeRenderInterface.h"
 
-#include "..\core\diskFile.h"
-#include "..\engine\environmentManager.h"
-#include "..\engine\baseEngine.h"
-#include "..\engine\particleEmitter.h"
-#include "..\engine\renderFence.h"
+#include "../core/diskFile.h"
+#include "../engine/environmentManager.h"
+#include "../engine/baseEngine.h"
+#include "../engine/particleEmitter.h"
+#include "../engine/renderFence.h"
 #include "renderCollector.h"
-#include "..\engine\renderFrame.h"
-#include "..\engine\shaderCacheManager.h"
-#include "..\engine\renderFragment.h"
-#include "..\engine\material.h"
+#include "../engine/renderFrame.h"
+#include "../engine/shaderCacheManager.h"
+#include "../engine/renderFragment.h"
+#include "../engine/material.h"
 #include "../engine/materialGraph.h"
-#include "..\engine\bitmapTexture.h"
-#include "..\engine\textureArray.h"
-#include "..\engine\cubeTexture.h"
+#include "../engine/bitmapTexture.h"
+#include "../engine/textureArray.h"
+#include "../engine/cubeTexture.h"
 #include "renderVideo.h"
 #include "renderLoadingScreenFence.h"
 #include "renderGameplayRenderTarget.h"
@@ -1203,7 +1203,7 @@ Bool CRenderInterface::InitDevice( Uint32 width, Uint32 height, Bool fullscreen,
 		#define RENDER_SHADER_GEOM_GEN(var,name,defines) ++numberOfStaticShaders
 		#define RENDER_SHADER_SO_GEN(var,name,defines,bctOut) ++numberOfStaticShaders
 
-		#include "..\engine\renderShaders.h"
+		#include "../engine/renderShaders.h"
 
 		#undef RENDER_SHADER_GEN
 		#undef RENDER_SHADER_TESS_GEN
@@ -1234,7 +1234,7 @@ Bool CRenderInterface::InitDevice( Uint32 width, Uint32 height, Bool fullscreen,
 		#endif
 
 		CTimeCounter staticShadersTimer;
-		#include "..\engine\renderShaders.h"
+		#include "../engine/renderShaders.h"
 		RED_LOG( RED_LOG_CHANNEL( Shaders ), TXT("Initializing shaders took: %1.3fms"), staticShadersTimer.GetTimePeriodMS() );
 
 		#undef RENDER_SHADER_GEN
@@ -1538,7 +1538,7 @@ void CRenderInterface::CloseDevice()
 #define RENDER_SHADER_GEN_EDITOR(var,name,...)
 #endif
 
-#include "..\engine\renderShaders.h"
+#include "../engine/renderShaders.h"
 
 #undef RENDER_SHADER_GEN
 #undef RENDER_SHADER_TESS_GEN

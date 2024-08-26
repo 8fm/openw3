@@ -4,9 +4,9 @@
 #ifdef USE_NVSSAO
 
 #if defined( RED_PLATFORM_WINPC )
-#include "..\\..\\..\\external\\NvidiaSSAO\\GFSDK_SSAO_PC.h"
+#include "../../../external/NvidiaSSAO/GFSDK_SSAO_PC.h"
 #elif defined( RED_PLATFORM_DURANGO )
-#include "..\\..\\..\\external\\NvidiaSSAO\\GFSDK_SSAO_XboxOne.h"
+#include "../../../external/NvidiaSSAO/GFSDK_SSAO_XboxOne.h"
 #else
 #error Unsupported platform
 #endif
@@ -15,9 +15,9 @@
 
 
 #if defined( RED_PLATFORM_DURANGO ) || defined( RED_PLATFORM_WINPC )
-#include "..\gpuApiDX10\gpuApiBase.h"
+#include "../gpuApiDX10/gpuApiBase.h"
 #elif defined( RED_PLATFORM_ORBIS )
-#include "..\gpuApiGNM\gpuApiBase.h"
+#include "../gpuApiGNM/gpuApiBase.h"
 #else
 #error Unsupported platform
 #endif

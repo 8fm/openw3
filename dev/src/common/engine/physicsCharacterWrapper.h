@@ -2,9 +2,9 @@
 
 //////////////////////////////////////////////////////////////////////////
 // headers
-#include "..\physics\physicsWrapper.h"
-#include "..\physics\physXEngine.h"
-#include "..\physics\physicsWorldPhysXImpl.h"
+#include "../physics/physicsWrapper.h"
+#include "../physics/physXEngine.h"
+#include "../physics/physicsWorldPhysXImpl.h"
 #include "interactionPriority.h"
 #include "springDampers.h"
 #include "showFlags.h"

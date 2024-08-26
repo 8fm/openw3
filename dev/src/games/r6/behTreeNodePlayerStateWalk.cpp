@@ -6,7 +6,7 @@
 
 #include "behTreeNodePlayerStateWalk.h"
 #include "r6behTreeInstance.h"
-#include "..\..\common\game\movingPhysicalAgentComponent.h"
+#include "../../common/game/movingPhysicalAgentComponent.h"
 
 
 //////////////////////////////////////////////////////////////////////////

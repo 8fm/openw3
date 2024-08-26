@@ -1,6 +1,6 @@
 #pragma once
-#include "..\..\..\core\types.h"
-#include "..\..\..\core\memoryMacros.h"
+#include "../../../core/types.h"
+#include "../../../core/memoryMacros.h"
 #include "common.h"
 
 //////////////////////////////////////////////////////////////////////////

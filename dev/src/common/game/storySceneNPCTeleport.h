@@ -6,9 +6,9 @@
 #include "storyScene.h"
 #include "storySceneDirectorPlacementHelper.h"
 #include "storySceneIncludes.h"
-#include "..\engine\cutsceneInstance.h"
-#include "..\engine\pathlibWorld.h"
-#include "..\engine\pathlibWalkableSpotQueryRequest.h"
+#include "../engine/cutsceneInstance.h"
+#include "../engine/pathlibWorld.h"
+#include "../engine/pathlibWalkableSpotQueryRequest.h"
 
 class CStorySceneCutsceneSection;
 class BoxFilter;

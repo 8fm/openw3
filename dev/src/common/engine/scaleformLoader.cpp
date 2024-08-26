@@ -41,7 +41,7 @@
 #  include <GFx_Sound_WWise.h>
 #  include <Video/Video_VideoSoundSystemWWise.h>
 // SHITHACK to avoid recompiling libgfxvideo
-#  include "..\..\..\external\gfx4\Src\Video\Video_VideoSoundSystemWwise.cpp"
+#  include "../../../external/gfx4/Src/Video/Video_VideoSoundSystemWwise.cpp"
 # endif
 # if WITH_SCALEFORM_XA2
 //#  include <Video/Video_VideoSoundSystemXA2.h>

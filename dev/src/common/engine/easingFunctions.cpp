@@ -1,6 +1,6 @@
 #include "build.h"
 #include "easingFunctions.h"
-#include "..\redMath\mathfunctions_fpu.h"
+#include "../redMath/mathfunctions_fpu.h"
 
 //////////////////////////////////////////////////////////////////////////
 

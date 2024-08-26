@@ -4,7 +4,7 @@
 
 #pragma once
 
-#include "sheet\sheet.h"
+#include "sheet/sheet.h"
 
 
 class CTemplateCellRenderer : public wxGridCellStringRenderer

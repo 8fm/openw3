@@ -1,9 +1,9 @@
-#include "..\..\common\game\storySceneEventCustomCameraInstance.h"
-#include "..\..\common\game\storySceneDialogset.h"
-#include "..\..\common\game\storySceneSection.h"
-#include "..\..\common\game\storyScene.h"
-#include "..\..\common\game\storySceneEventAnimation.h"
-#include "..\..\common\game\storySceneAnimationParams.h"
+#include "../../common/game/storySceneEventCustomCameraInstance.h"
+#include "../../common/game/storySceneDialogset.h"
+#include "../../common/game/storySceneSection.h"
+#include "../../common/game/storyScene.h"
+#include "../../common/game/storySceneEventAnimation.h"
+#include "../../common/game/storySceneAnimationParams.h"
 
 
 #include "dialogTimeline.h"

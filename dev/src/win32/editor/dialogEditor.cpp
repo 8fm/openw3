@@ -1,6 +1,6 @@
 
 #include "build.h"
-#include <wx\display.h>
+#include <wx/display.h>
 #include "dialogEditor.h"
 #include "filterPanel.h"
 

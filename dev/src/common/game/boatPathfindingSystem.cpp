@@ -4,15 +4,15 @@
 #include "boatComponent.h"
 
 #include "gameWorld.h"
-#include "..\engine\mesh.h"
+#include "../engine/mesh.h"
 #include "../physics/physicsWrapper.h"
-#include "..\core\mathUtils.h"
-#include "..\engine\rigidMeshComponent.h"
-#include "..\core\gameSave.h"
-#include "..\engine\renderFrame.h"
-#include "..\engine\game.h"
-#include "..\engine\tagManager.h"
-#include "..\engine\pathComponent.h"
+#include "../core/mathUtils.h"
+#include "../engine/rigidMeshComponent.h"
+#include "../core/gameSave.h"
+#include "../engine/renderFrame.h"
+#include "../engine/game.h"
+#include "../engine/tagManager.h"
+#include "../engine/pathComponent.h"
 
 //////////////////////////////////////////////////////////////////////////
 

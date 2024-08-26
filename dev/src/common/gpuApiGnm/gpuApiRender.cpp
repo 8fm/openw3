@@ -3,7 +3,7 @@
 */
 #include "gpuApi.h"
 #include "../gpuApiUtils/gpuApiMemory.h"
-#include "..\redSystem\crt.h"
+#include "../redSystem/crt.h"
 #include "../redMath/mathfunctions_fpu.h"
 
 #include <pm4_dump.h>

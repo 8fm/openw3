@@ -9,8 +9,8 @@
 #pragma warning( pop )
 
 #include "fbxCommon.h"
-#include "..\..\common\core\importer.h"
-#include "..\..\common\engine\furMeshResource.h"
+#include "../../common/core/importer.h"
+#include "../../common/engine/furMeshResource.h"
 
 namespace
 {

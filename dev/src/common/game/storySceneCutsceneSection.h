@@ -1,7 +1,7 @@
 #pragma once
 
 #include "storySceneSection.h"
-#include "..\\..\\common\\engine\\cutscene.h"
+#include "../../common/engine/cutscene.h"
 
 class CStorySceneLinkElement;
 class CStorySceneControlPart;

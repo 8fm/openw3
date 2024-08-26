@@ -5,7 +5,7 @@
 #include "build.h"
 #include <wx/webview.h>
 #include "whatsNewDlg.h"
-#include "..\versionControl\versionControlP4.h"
+#include "../versionControl/versionControlP4.h"
 #include "../../common/core/configFileManager.h"
 #define MAIN_THREAD_CHECK() ASSERT( SIsMainThread(), TXT("Perforce operation should be done only from the main thread") )
 

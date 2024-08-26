@@ -127,7 +127,7 @@
 #include "minimapGeneratorTool.h"
 #include "screenshotEditor.h"
 #include "animationListExporter.h"
-#include "exporters\storySceneValidator.h"
+#include "exporters/storySceneValidator.h"
 #include "interactiveDialogEditor.h"
 #include "dataErrorReporter.h"
 #include "crowdDebugger.h"

@@ -2,7 +2,7 @@
 
 #ifdef USE_UMBRA
 
-#include "..\\..\\..\\external\\umbra3.3.13-change-26-2826-2\\interface\\umbraPlatform.hpp"
+#include "../../../external/umbra3.3.13-change-26-2826-2/interface/umbraPlatform.hpp"
 
 #include "../core/grid.h"
 #include "../core/memoryFileWriter.h"

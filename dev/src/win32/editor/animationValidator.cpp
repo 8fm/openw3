@@ -1,11 +1,11 @@
 #include "build.h"
 #include "animationValidator.h"
-#include "..\..\common\core\directory.h"
-#include "..\..\common\engine\skeleton.h"
-#include "..\..\common\engine\skeletalAnimationSet.h"
+#include "../../common/core/directory.h"
+#include "../../common/engine/skeleton.h"
+#include "../../common/engine/skeletalAnimationSet.h"
 #include "resourceIterator.h"
-#include "..\..\common\engine\skeletalAnimationEntry.h"
-#include "..\..\common\engine\skeletalAnimation.h"
+#include "../../common/engine/skeletalAnimationEntry.h"
+#include "../../common/engine/skeletalAnimation.h"
 
 CAnimationValidator::CAnimationValidator( Bool andFixSourceAnimData )
 : m_fixSourceAnimData( andFixSourceAnimData )

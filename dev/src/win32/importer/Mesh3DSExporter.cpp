@@ -16,10 +16,10 @@
 #include "../../common/engine/baseTree.h"
 #include "../../common/engine/renderer.h"
 #include "../../common/engine/layerInfo.h"
-#include "..\..\common\engine\meshComponent.h"
-#include "..\..\common\engine\entity.h"
-#include "..\..\common\engine\layer.h"
-#include "..\..\common\engine\worldIterators.h"
+#include "../../common/engine/meshComponent.h"
+#include "../../common/engine/entity.h"
+#include "../../common/engine/layer.h"
+#include "../../common/engine/worldIterators.h"
 
 
 /// 3DS mesh exporter

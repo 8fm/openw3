@@ -7,7 +7,7 @@
 #include "renderer.h"
 #include "world.h"
 #include "bitmapTexture.h"
-#include "..\core\depot.h"
+#include "../core/depot.h"
 #include "renderCommands.h"
 
 CLightweightDecalEmitter::CLightweightDecalEmitter()

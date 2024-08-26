@@ -1,6 +1,6 @@
 #pragma once
 #include "customSceneEvents.h"
-#include "..\..\common\engine\extAnimCutsceneEvent.h"
+#include "../../common/engine/extAnimCutsceneEvent.h"
 
 
 class CExtAnimCutsceneSurfaceEffect : public CExtAnimCutsceneEvent

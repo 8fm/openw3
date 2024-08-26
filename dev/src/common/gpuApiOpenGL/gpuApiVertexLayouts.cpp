@@ -2,7 +2,7 @@
 * Copyright © 2013 CD Projekt Red. All Rights Reserved.
 */
 #include "gpuApi.h"
-#include "..\gpuApiUtils\gpuApiVertexFormats.h"
+#include "../gpuApiUtils/gpuApiVertexFormats.h"
 
 
 namespace GpuApi

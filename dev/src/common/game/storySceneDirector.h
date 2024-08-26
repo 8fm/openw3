@@ -6,10 +6,10 @@
 #include "storyScene.h"
 #include "storySceneDirectorPlacementHelper.h"
 #include "storySceneIncludes.h"
-#include "..\engine\cutsceneInstance.h"
-#include "..\engine\pathlibWorld.h"
-#include "..\engine\pathlibWalkableSpotQueryRequest.h"
-#include "..\core\uniquePtr.h"
+#include "../engine/cutsceneInstance.h"
+#include "../engine/pathlibWorld.h"
+#include "../engine/pathlibWalkableSpotQueryRequest.h"
+#include "../core/uniquePtr.h"
 
 
 class CStoryScenePlayer;

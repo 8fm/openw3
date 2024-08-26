@@ -1,8 +1,8 @@
 #pragma once
 
-#include "..\physics\physicsContactListener.h"
+#include "../physics/physicsContactListener.h"
 #include "soundSettings.h"
-#include "..\core\math.h"
+#include "../core/math.h"
 
 class CSoundContactListener : public CPhysicsContactListener
 {

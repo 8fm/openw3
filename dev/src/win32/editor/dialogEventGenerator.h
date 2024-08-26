@@ -6,7 +6,7 @@
 #include "dialogEventGeneratorInternals.h"
 #include "dialogEventGeneratorRuleFactory.h"
 #include "dialogEventGeneratorSetupDialog.h"
-#include "..\..\common\game\storySceneAnimationList.h"
+#include "../../common/game/storySceneAnimationList.h"
 
 class CStorySceneSection;
 class CStoryScenePlayer;

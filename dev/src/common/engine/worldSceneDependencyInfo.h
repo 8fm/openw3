@@ -2,7 +2,7 @@
 * Copyright © 2014 CD Projekt Red. All Rights Reserved.
 */
 #pragma once
-#include "..\..\common\engine\foliageEditionController.h"
+#include "../../common/engine/foliageEditionController.h"
 
 namespace WorldSceneDependencyInfo
 {

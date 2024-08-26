@@ -2,8 +2,8 @@
 * Copyright © 2007 CD Projekt Red. All Rights Reserved.
 */
 #pragma once
-#include "..\engine\renderProxy.h"
-#include "..\engine\globalVisibilityId.h"
+#include "../engine/renderProxy.h"
+#include "../engine/globalVisibilityId.h"
 #include "renderFramePrefetch.h"
 #include "renderFrameTracker.h"
 

@@ -6,11 +6,11 @@
 
 #include "mainMenuController.h"
 
-#include "..\..\common\engine\gameResource.h"
-#include "..\..\common\game\gameSaver.h"
-#include "..\..\common\engine\localizationManager.h"
-#include "..\..\games\r4\r4GuiManager.h"
-#include "..\..\common\core\contentManager.h"
+#include "../../common/engine/gameResource.h"
+#include "../../common/game/gameSaver.h"
+#include "../../common/engine/localizationManager.h"
+#include "../../games/r4/r4GuiManager.h"
+#include "../../common/core/contentManager.h"
 
 RED_DEFINE_STATIC_NAME( PopulateMenuQueueStartupOnce );
 RED_DEFINE_STATIC_NAME( PopulateMenuQueueStartupAlways );

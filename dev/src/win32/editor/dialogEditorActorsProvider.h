@@ -1,7 +1,7 @@
 
 #pragma once
-#include "..\..\common\game\storySceneItems.h"
-#include "..\..\common\game\storySceneVoicetagMapping.h"
+#include "../../common/game/storySceneItems.h"
+#include "../../common/game/storySceneVoicetagMapping.h"
 
 class CEdSceneEditor;
 

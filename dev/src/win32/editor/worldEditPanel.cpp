@@ -59,7 +59,7 @@
 #include "../../common/engine/worldIterators.h"
 #include "markerTools.h"
 #include "../../common/engine/helpTextComponent.h"
-#include "..\..\common\engine\layersEntityCompatibilityChecker.h"
+#include "../../common/engine/layersEntityCompatibilityChecker.h"
 #include "worldEditPanel.h"
 #include "screenshotEditor.h"
 #include "../../common/engine/shadowMeshGenerator.h"
@@ -159,9 +159,9 @@ END_EVENT_TABLE()
 #include "callbackData.h"
 #include "maraudersMap.h"
 #include "localizedStringsEditor.h"
-#include "..\..\common\engine\mbParamTexture.h"
-#include "..\..\common\engine\stickerComponent.h"
-#include "..\..\common\physics\physicsDebugger.h"
+#include "../../common/engine/mbParamTexture.h"
+#include "../../common/engine/stickerComponent.h"
+#include "../../common/physics/physicsDebugger.h"
 
 /// This class is used to populate right click insertion menu 
 class CMenuItem

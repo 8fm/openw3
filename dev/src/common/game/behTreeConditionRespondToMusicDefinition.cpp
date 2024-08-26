@@ -1,7 +1,7 @@
 #include "build.h"
 #include "behTreeConditionRespondToMusicDefinition.h"
-#include "..\engine\soundSystem.h"
-#include "..\engine\game.h"
+#include "../engine/soundSystem.h"
+#include "../engine/game.h"
 
 BEHTREE_STANDARD_SPAWNDECORATOR_FUNCTION( CBehTreeConditionRespondToMusicDefinition )
 

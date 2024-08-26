@@ -8,8 +8,8 @@
 #include "../../common/scripts/Lexer/definition.h"
 #include "../../common/scripts/Memory/allocatorProxy.h"
 
-#include "lexer\context.h"
-#include "solution\slnDeclarations.h"
+#include "lexer/context.h"
+#include "solution/slnDeclarations.h"
 
 class SolutionFile;
 struct SSLexicalData;

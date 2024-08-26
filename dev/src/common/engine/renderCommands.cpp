@@ -15,7 +15,7 @@
 #include "renderVisibilityQuery.h"
 #include "renderObject.h"
 #include "renderProxy.h"
-#include "..\physics\physicsParticleWrapper.h"
+#include "../physics/physicsParticleWrapper.h"
 #include "texture.h"
 #include "globalWaterUpdateParams.h"
 #include "grassCellMask.h"

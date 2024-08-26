@@ -3,8 +3,8 @@
 */
 #pragma once
 
-#include "..\redThreads\redThreadsAtomic.h"
-#include "..\redThreads\redThreadsThread.h"
+#include "../redThreads/redThreadsAtomic.h"
+#include "../redThreads/redThreadsThread.h"
 
 namespace GpuApi
 {

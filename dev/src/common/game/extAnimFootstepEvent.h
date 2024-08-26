@@ -5,7 +5,7 @@
 #pragma once
 
 #include "extAnimSoundEvent.h"
-#include "..\engine\Behavior\SharedHeaders\enumSide.h"
+#include "../engine/Behavior/SharedHeaders/enumSide.h"
 
 /// Animation event that plays footstep sound
 class CExtAnimFootstepEvent : public CExtAnimSoundEvent

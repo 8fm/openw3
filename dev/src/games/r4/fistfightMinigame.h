@@ -1,6 +1,6 @@
 #pragma once
 
-#include "..\..\common\game\minigame.h"
+#include "../../common/game/minigame.h"
 
 class CFistfightMinigameInstanceData : public CMinigameInstanceData
 {

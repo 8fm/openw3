@@ -1,6 +1,6 @@
 #pragma once
 
-#include "..\..\common\engine\gameResource.h"
+#include "../../common/engine/gameResource.h"
 
 #include "../../common/engine/flashPlayer.h"
 

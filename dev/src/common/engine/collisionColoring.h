@@ -2,7 +2,7 @@
 * Copyright © 2007 CD Projekt Red. All Rights Reserved.
 */
 #pragma once
-#include "..\physics\physicsEngine.h"
+#include "../physics/physicsEngine.h"
 
 /// False coloring for collision triangles
 class CollisionFalseColoring

@@ -15,14 +15,14 @@
 
 #ifdef USE_APEX
 
-#include "..\physics\physXEngine.h"
+#include "../physics/physXEngine.h"
 
 #include "NxApexNameSpace.h"
 #include "NxResourceProvider.h"
 #include "NxApexRenderable.h"
-#include "..\engine\apexWrapperBase.h"
-#include "..\engine\destructionSystemComponent.h"
-#include "..\engine\clothComponent.h"
+#include "../engine/apexWrapperBase.h"
+#include "../engine/destructionSystemComponent.h"
+#include "../engine/clothComponent.h"
 
 using namespace physx;
 using namespace physx::apex;

@@ -3,7 +3,7 @@
 */
 #include "build.h"
 #include "classSelectorDialog.h"
-#include "..\classHierarchyMapper.h"
+#include "../classHierarchyMapper.h"
 
 enum EClassIcon
 {

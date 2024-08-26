@@ -11,11 +11,11 @@
 #include "objectReachability.h"
 #include "loadingJobManager.h"
 #include "messagePump.h"
-#include "..\redMemoryFramework\redMemorySystemMemoryStats.h"
+#include "../redMemoryFramework/redMemorySystemMemoryStats.h"
 #include "objectGC_Legacy.h"
 #include "objectGC_MarkAndSweep.h"
 #include "fileSystemProfilerWrapper.h"
-#include "..\gpuApiUtils\gpuApiMemory.h"
+#include "../gpuApiUtils/gpuApiMemory.h"
 #include "configVar.h"
 
 #ifdef RED_USE_NEW_MEMORY_SYSTEM

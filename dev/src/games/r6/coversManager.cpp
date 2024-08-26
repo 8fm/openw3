@@ -4,9 +4,9 @@
 #include "coversManager.h"
 #include "combatUtils.h"
 
-#include "..\..\common\game\nodeStorage.h"
-#include "..\..\common\engine\physicsWorld.h"
-#include "..\..\common\engine\physicsBodyWrapper.h"
+#include "../../common/game/nodeStorage.h"
+#include "../../common/engine/physicsWorld.h"
+#include "../../common/engine/physicsBodyWrapper.h"
 
 CCoversManager::CCoversManager()
 {

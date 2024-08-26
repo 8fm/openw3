@@ -4,7 +4,7 @@
 
 #pragma once
 
-#include "..\core\dynarray.h"
+#include "../core/dynarray.h"
 
 
 class IInputDevice;

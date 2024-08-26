@@ -8,144 +8,144 @@
 #include "../../common/core/feedback.h"
 
 // include compiled XRC resources
-#include  RED_EXPAND_AND_STRINGIFY(res\PROJECT_PLATFORM\PROJECT_CONFIGURATION\editorXRC.hpp)
+#include  RED_EXPAND_AND_STRINGIFY(res/PROJECT_PLATFORM/PROJECT_CONFIGURATION/editorXRC.hpp)
 namespace EditorQuestsXRC
 {
-	#include  RED_EXPAND_AND_STRINGIFY(res\PROJECT_PLATFORM\PROJECT_CONFIGURATION\editor_questsXRC.hpp)
+	#include  RED_EXPAND_AND_STRINGIFY(res/PROJECT_PLATFORM/PROJECT_CONFIGURATION/editor_questsXRC.hpp)
 }
 namespace EditorJournalXRC
 {
-	#include  RED_EXPAND_AND_STRINGIFY(res\PROJECT_PLATFORM\PROJECT_CONFIGURATION\editor_journalXRC.hpp)
+	#include  RED_EXPAND_AND_STRINGIFY(res/PROJECT_PLATFORM/PROJECT_CONFIGURATION/editor_journalXRC.hpp)
 }
 namespace EditorCharacterDbXRC
 {
-	#include  RED_EXPAND_AND_STRINGIFY(res\PROJECT_PLATFORM\PROJECT_CONFIGURATION\editor_character_dbXRC.hpp)
+	#include  RED_EXPAND_AND_STRINGIFY(res/PROJECT_PLATFORM/PROJECT_CONFIGURATION/editor_character_dbXRC.hpp)
 }
 namespace EditorAIXRC
 {
-	#include  RED_EXPAND_AND_STRINGIFY(res\PROJECT_PLATFORM\PROJECT_CONFIGURATION\editor_aiXRC.hpp)
+	#include  RED_EXPAND_AND_STRINGIFY(res/PROJECT_PLATFORM/PROJECT_CONFIGURATION/editor_aiXRC.hpp)
 };
 namespace EditorBehXRC
 {
-#include  RED_EXPAND_AND_STRINGIFY(res\PROJECT_PLATFORM\PROJECT_CONFIGURATION\editor_behXRC.hpp)
+#include  RED_EXPAND_AND_STRINGIFY(res/PROJECT_PLATFORM/PROJECT_CONFIGURATION/editor_behXRC.hpp)
 };
 namespace EditorCutSceneXRC
 {
-#include  RED_EXPAND_AND_STRINGIFY(res\PROJECT_PLATFORM\PROJECT_CONFIGURATION\editor_cutsceneeditorXRC.hpp)
+#include  RED_EXPAND_AND_STRINGIFY(res/PROJECT_PLATFORM/PROJECT_CONFIGURATION/editor_cutsceneeditorXRC.hpp)
 };
 namespace EditorParticleEditorXRC
 {
-#include  RED_EXPAND_AND_STRINGIFY(res\PROJECT_PLATFORM\PROJECT_CONFIGURATION\editor_particleeditorXRC.hpp)
+#include  RED_EXPAND_AND_STRINGIFY(res/PROJECT_PLATFORM/PROJECT_CONFIGURATION/editor_particleeditorXRC.hpp)
 };
 namespace EditorToolsXRC
 {
-#include  RED_EXPAND_AND_STRINGIFY(res\PROJECT_PLATFORM\PROJECT_CONFIGURATION\editor_toolsXRC.hpp)
+#include  RED_EXPAND_AND_STRINGIFY(res/PROJECT_PLATFORM/PROJECT_CONFIGURATION/editor_toolsXRC.hpp)
 };
 namespace EditorJobXRC
 {
-#include  RED_EXPAND_AND_STRINGIFY(res\PROJECT_PLATFORM\PROJECT_CONFIGURATION\editor_jobXRC.hpp)
+#include  RED_EXPAND_AND_STRINGIFY(res/PROJECT_PLATFORM/PROJECT_CONFIGURATION/editor_jobXRC.hpp)
 };
 namespace EditorGUIResourceXRC
 {
-#include  RED_EXPAND_AND_STRINGIFY(res\PROJECT_PLATFORM\PROJECT_CONFIGURATION\editor_guiresourceXRC.hpp)
+#include  RED_EXPAND_AND_STRINGIFY(res/PROJECT_PLATFORM/PROJECT_CONFIGURATION/editor_guiresourceXRC.hpp)
 };
 namespace EditorFoliageGeneratorXRC
 {
-#include  RED_EXPAND_AND_STRINGIFY(res\PROJECT_PLATFORM\PROJECT_CONFIGURATION\editor_foliage_generatorXRC.hpp)
+#include  RED_EXPAND_AND_STRINGIFY(res/PROJECT_PLATFORM/PROJECT_CONFIGURATION/editor_foliage_generatorXRC.hpp)
 };
 namespace EditorDialogsXRC
 {
-#include  RED_EXPAND_AND_STRINGIFY(res\PROJECT_PLATFORM\PROJECT_CONFIGURATION\editor_dialogsXRC.hpp)
+#include  RED_EXPAND_AND_STRINGIFY(res/PROJECT_PLATFORM/PROJECT_CONFIGURATION/editor_dialogsXRC.hpp)
 };
 namespace EditorErrorDialogsXRC
 {
-#include  RED_EXPAND_AND_STRINGIFY(res\PROJECT_PLATFORM\PROJECT_CONFIGURATION\editor_errorDialogsXRC.hpp)
+#include  RED_EXPAND_AND_STRINGIFY(res/PROJECT_PLATFORM/PROJECT_CONFIGURATION/editor_errorDialogsXRC.hpp)
 };
 
 // terrain tool V2.0
 namespace EditorTerrainToolXRC
 {
-#include  RED_EXPAND_AND_STRINGIFY(res\PROJECT_PLATFORM\PROJECT_CONFIGURATION\editor_terrainXRC.hpp)
+#include  RED_EXPAND_AND_STRINGIFY(res/PROJECT_PLATFORM/PROJECT_CONFIGURATION/editor_terrainXRC.hpp)
 };
 namespace EditorVegetationToolXRC
 {
-#include  RED_EXPAND_AND_STRINGIFY(res\PROJECT_PLATFORM\PROJECT_CONFIGURATION\editor_vegetationXRC.hpp)
+#include  RED_EXPAND_AND_STRINGIFY(res/PROJECT_PLATFORM/PROJECT_CONFIGURATION/editor_vegetationXRC.hpp)
 }
 namespace EditorTextureArraysViewerXRC
 {
-#include  RED_EXPAND_AND_STRINGIFY(res\PROJECT_PLATFORM\PROJECT_CONFIGURATION\editor_tarraysXRC.hpp)
+#include  RED_EXPAND_AND_STRINGIFY(res/PROJECT_PLATFORM/PROJECT_CONFIGURATION/editor_tarraysXRC.hpp)
 };
 namespace EditorPathlibXRC
 {
-#include  RED_EXPAND_AND_STRINGIFY(res\PROJECT_PLATFORM\PROJECT_CONFIGURATION\editor_pathlibXRC.hpp)
+#include  RED_EXPAND_AND_STRINGIFY(res/PROJECT_PLATFORM/PROJECT_CONFIGURATION/editor_pathlibXRC.hpp)
 };
 
 namespace EditorAssetBrowserXRC
 {
-#include  RED_EXPAND_AND_STRINGIFY(res\PROJECT_PLATFORM\PROJECT_CONFIGURATION\editor_assetbrowserXRC.hpp)
+#include  RED_EXPAND_AND_STRINGIFY(res/PROJECT_PLATFORM/PROJECT_CONFIGURATION/editor_assetbrowserXRC.hpp)
 };
 
 namespace EditorEntityXRC
 {
-#include  RED_EXPAND_AND_STRINGIFY(res\PROJECT_PLATFORM\PROJECT_CONFIGURATION\editor_entityXRC.hpp)
+#include  RED_EXPAND_AND_STRINGIFY(res/PROJECT_PLATFORM/PROJECT_CONFIGURATION/editor_entityXRC.hpp)
 }
 
 namespace EditorSceneImporterXRC
 {
-#include  RED_EXPAND_AND_STRINGIFY(res\PROJECT_PLATFORM\PROJECT_CONFIGURATION\editor_scene_importerXRC.hpp)
+#include  RED_EXPAND_AND_STRINGIFY(res/PROJECT_PLATFORM/PROJECT_CONFIGURATION/editor_scene_importerXRC.hpp)
 };
 
 namespace EditorMaterialEditorXRC
 {
-#include  RED_EXPAND_AND_STRINGIFY(res\PROJECT_PLATFORM\PROJECT_CONFIGURATION\editor_materialeditorXRC.hpp)
+#include  RED_EXPAND_AND_STRINGIFY(res/PROJECT_PLATFORM/PROJECT_CONFIGURATION/editor_materialeditorXRC.hpp)
 };
 
 namespace EditorTextureViewerXRC
 {
-#include  RED_EXPAND_AND_STRINGIFY(res\PROJECT_PLATFORM\PROJECT_CONFIGURATION\editor_textureviewerXRC.hpp)
+#include  RED_EXPAND_AND_STRINGIFY(res/PROJECT_PLATFORM/PROJECT_CONFIGURATION/editor_textureviewerXRC.hpp)
 };
 
 namespace EditorSwfViewerXRC
 {
-#include  RED_EXPAND_AND_STRINGIFY(res\PROJECT_PLATFORM\PROJECT_CONFIGURATION\editor_swfviewerXRC.hpp)
+#include  RED_EXPAND_AND_STRINGIFY(res/PROJECT_PLATFORM/PROJECT_CONFIGURATION/editor_swfviewerXRC.hpp)
 };
 
 namespace EditorMeshEditorXRC
 {
-#include  RED_EXPAND_AND_STRINGIFY(res\PROJECT_PLATFORM\PROJECT_CONFIGURATION\editor_mesheditorXRC.hpp)
+#include  RED_EXPAND_AND_STRINGIFY(res/PROJECT_PLATFORM/PROJECT_CONFIGURATION/editor_mesheditorXRC.hpp)
 };
 
 namespace EditorEnvironmentsXRC
 {
-#include  RED_EXPAND_AND_STRINGIFY(res\PROJECT_PLATFORM\PROJECT_CONFIGURATION\editor_environmentsXRC.hpp)
+#include  RED_EXPAND_AND_STRINGIFY(res/PROJECT_PLATFORM/PROJECT_CONFIGURATION/editor_environmentsXRC.hpp)
 };
 
 namespace EditorScreenshotXRC
 {
-#include  RED_EXPAND_AND_STRINGIFY(res\PROJECT_PLATFORM\PROJECT_CONFIGURATION\editor_screenshotXRC.hpp)
+#include  RED_EXPAND_AND_STRINGIFY(res/PROJECT_PLATFORM/PROJECT_CONFIGURATION/editor_screenshotXRC.hpp)
 };
 
 namespace EditorEncountersXRC
 {
-#include RED_EXPAND_AND_STRINGIFY(res\PROJECT_PLATFORM\PROJECT_CONFIGURATION\editor_encountersXRC.hpp)
+#include RED_EXPAND_AND_STRINGIFY(res/PROJECT_PLATFORM/PROJECT_CONFIGURATION/editor_encountersXRC.hpp)
 }
 
 namespace EditorLootXRC
 {
-#include  RED_EXPAND_AND_STRINGIFY(res\PROJECT_PLATFORM\PROJECT_CONFIGURATION\editor_lootXRC.hpp)
+#include  RED_EXPAND_AND_STRINGIFY(res/PROJECT_PLATFORM/PROJECT_CONFIGURATION/editor_lootXRC.hpp)
 }
 
 #ifndef NO_MARKER_SYSTEMS
 namespace EditorReviewSystemXRC
 {
-#include  RED_EXPAND_AND_STRINGIFY(res\PROJECT_PLATFORM\PROJECT_CONFIGURATION\editor_review_systemXRC.hpp)
+#include  RED_EXPAND_AND_STRINGIFY(res/PROJECT_PLATFORM/PROJECT_CONFIGURATION/editor_review_systemXRC.hpp)
 };
 #endif // NO_MARKER_SYSTEMS
 
 #ifndef NO_DATA_VALIDATION
 namespace EditorDataErrorReporterXRC
 {
-#include  RED_EXPAND_AND_STRINGIFY(res\PROJECT_PLATFORM\PROJECT_CONFIGURATION\editor_dataErrorReporterXRC.hpp)
+#include  RED_EXPAND_AND_STRINGIFY(res/PROJECT_PLATFORM/PROJECT_CONFIGURATION/editor_dataErrorReporterXRC.hpp)
 };
 
 #include "dataError.h"
@@ -154,37 +154,37 @@ namespace EditorDataErrorReporterXRC
 
 namespace EditorMaterialMapping
 {
-#include  RED_EXPAND_AND_STRINGIFY(res\PROJECT_PLATFORM\PROJECT_CONFIGURATION\editor_materialMappingXRC.hpp)
+#include  RED_EXPAND_AND_STRINGIFY(res/PROJECT_PLATFORM/PROJECT_CONFIGURATION/editor_materialMappingXRC.hpp)
 };
 
 namespace EditorWorldSceneDebugger
 {
-#include  RED_EXPAND_AND_STRINGIFY(res\PROJECT_PLATFORM\PROJECT_CONFIGURATION\editor_worldSceneDebuggerXRC.hpp)
+#include  RED_EXPAND_AND_STRINGIFY(res/PROJECT_PLATFORM/PROJECT_CONFIGURATION/editor_worldSceneDebuggerXRC.hpp)
 };
 
 namespace EditorUmbraXRC
 {
-#include  RED_EXPAND_AND_STRINGIFY(res\PROJECT_PLATFORM\PROJECT_CONFIGURATION\editor_umbraXRC.hpp)
+#include  RED_EXPAND_AND_STRINGIFY(res/PROJECT_PLATFORM/PROJECT_CONFIGURATION/editor_umbraXRC.hpp)
 }
 
 namespace EditorObjectInspectorXRC
 {
-#include  RED_EXPAND_AND_STRINGIFY(res\PROJECT_PLATFORM\PROJECT_CONFIGURATION\editor_objectInspectorXRC.hpp)
+#include  RED_EXPAND_AND_STRINGIFY(res/PROJECT_PLATFORM/PROJECT_CONFIGURATION/editor_objectInspectorXRC.hpp)
 }
 
 namespace EditorStripesXRC
 {
-#include  RED_EXPAND_AND_STRINGIFY(res\PROJECT_PLATFORM\PROJECT_CONFIGURATION\editor_stripesXRC.hpp)
+#include  RED_EXPAND_AND_STRINGIFY(res/PROJECT_PLATFORM/PROJECT_CONFIGURATION/editor_stripesXRC.hpp)
 }
 
 namespace EditorEntityMeshGenXRC
 {
-#include RED_EXPAND_AND_STRINGIFY(res\PROJECT_PLATFORM\PROJECT_CONFIGURATION\editor_entityMeshGenXRC.hpp)
+#include RED_EXPAND_AND_STRINGIFY(res/PROJECT_PLATFORM/PROJECT_CONFIGURATION/editor_entityMeshGenXRC.hpp)
 }
 
 namespace EditorEntityProxySetupXRC
 {
-#include RED_EXPAND_AND_STRINGIFY(res\PROJECT_PLATFORM\PROJECT_CONFIGURATION\editor_entityProxySetupXRC.hpp)
+#include RED_EXPAND_AND_STRINGIFY(res/PROJECT_PLATFORM/PROJECT_CONFIGURATION/editor_entityProxySetupXRC.hpp)
 }
 
 #include "textCtrlExXmlHandler.h"

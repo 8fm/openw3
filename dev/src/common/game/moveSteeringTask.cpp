@@ -5,7 +5,7 @@
 #include "movableRepresentationPathAgent.h"
 #include "gameplayStorage.h"
 #include "actorsManager.h"
-#include "..\engine\behaviorGraphUtils.inl"
+#include "../engine/behaviorGraphUtils.inl"
 #include "movementAdjustor.h"
 
 IMPLEMENT_ENGINE_CLASS( IMoveSteeringTask );

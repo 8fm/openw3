@@ -3,7 +3,7 @@
 #include "behTreeNode.h"
 #include "behTreeInstance.h"
 #include "actorActionWork.h"
-#include "..\engine\behaviorGraphStack.h"
+#include "../engine/behaviorGraphStack.h"
 
 IBehTreeNodeInstance* CBehTreeNodeFinishAnimationsDefinition::SpawnInstance( CBehTreeInstance* owner, CBehTreeSpawnContext& context, IBehTreeNodeInstance* parent ) const
 {

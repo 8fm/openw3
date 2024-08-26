@@ -2,17 +2,17 @@
  * Copyright © 2008 CD Projekt Red. All Rights Reserved.
  */
 #include "build.h"
-#include <wx\display.h>
+#include <wx/display.h>
 #include "particleEditor.h"
 #include "particlePreviewPanel.h"
 #include "particlePropertiesBrowser.h"
 #include "shortcutsEditor.h"
 #include "assetBrowser.h"
 #include "emitterGraphEditor.h"
-#include "..\..\common\engine\particleSystem.h"
-#include "..\..\common\engine\particleEmitter.h"
-#include "..\..\common\engine\curve.h"
-#include "..\..\common\engine\renderCommands.h"
+#include "../../common/engine/particleSystem.h"
+#include "../../common/engine/particleEmitter.h"
+#include "../../common/engine/curve.h"
+#include "../../common/engine/renderCommands.h"
 
 CEdParticleMaterialList::CEdParticleMaterialList( wxWindow* parent, CParticleSystem* particleSystem, CEdEmitterGraphEditor* graphEditor, CEdParticleEditor* editor )
 	: CEdMaterialListManager( parent, particleSystem, TXT("fx\\shaders\\"), nullptr )

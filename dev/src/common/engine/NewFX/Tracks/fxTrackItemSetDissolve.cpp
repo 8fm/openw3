@@ -1,6 +1,6 @@
 #include "build.h"
 #include "fxTrackItemSetDissolve.h"
-#include "..\..\entity.h"
+#include "../../entity.h"
 
 IMPLEMENT_ENGINE_CLASS( CFXTrackItemSetDissolve );
 

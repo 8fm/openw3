@@ -1,7 +1,7 @@
 #pragma once
-#include "..\engine\floatDamper.h"
-#include "..\core\configVar.h"
-#include "..\engine\vectorDamper.h"
+#include "../engine/floatDamper.h"
+#include "../core/configVar.h"
+#include "../engine/vectorDamper.h"
 
 //////////////////////////////////////////////////////////////////////////
 

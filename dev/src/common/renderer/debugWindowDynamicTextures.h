@@ -6,7 +6,7 @@
 #ifndef NO_RED_GUI
 #ifndef NO_DEBUG_WINDOWS
 
-#include "..\engine\redGuiWindow.h"
+#include "../engine/redGuiWindow.h"
 
 namespace DebugWindows
 {

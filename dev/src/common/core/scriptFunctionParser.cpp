@@ -105,7 +105,7 @@ struct YYSTYPE_Function
 	CScriptSyntaxNode*		m_node;
 }; 
 
-#include RED_EXPAND_AND_STRINGIFY(PROJECT_PLATFORM\PROJECT_CONFIGURATION\scriptFunctionParser_bison.cxx)
+#include RED_EXPAND_AND_STRINGIFY(PROJECT_PLATFORM/PROJECT_CONFIGURATION/scriptFunctionParser_bison.cxx)
 
 CScriptFunctionParser::CScriptFunctionParser( CScriptCompiler* compiler )
 : m_compiler( compiler )

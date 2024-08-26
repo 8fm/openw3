@@ -5,7 +5,7 @@
 #include "build.h"
 #include "behTreeNodePlayerState.h"
 #include "aiTreeComponent.h"
-#include "..\..\common\game\movingPhysicalAgentComponent.h"
+#include "../../common/game/movingPhysicalAgentComponent.h"
 #include "../../common/core/dataError.h"
 #include "../../common/engine/utils.h"
 

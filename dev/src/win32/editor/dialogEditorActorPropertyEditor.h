@@ -5,7 +5,7 @@
 #pragma once
 
 #include "selectionEditor.h"
-#include "..\..\common\redSystem\utility.h"
+#include "../../common/redSystem/utility.h"
 
 class CEdDialogEditorActorPropertyEditor : public ISelectionEditor
 {

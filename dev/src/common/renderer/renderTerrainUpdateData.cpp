@@ -4,7 +4,7 @@
 #include "build.h"
 #include "renderTerrainUpdateData.h"
 
-#include "..\..\common\engine\clipMap.h"
+#include "../../common/engine/clipMap.h"
 
 CRenderTerrainUpdateData::CRenderTerrainUpdateData( const TDynArray< SClipmapLevelUpdate* >& updates, const STerrainTextureParameters* textureParameters, SClipmapStampDataUpdate* stampDataUpdate, Vector* colormapParams )
 	: m_update( updates )

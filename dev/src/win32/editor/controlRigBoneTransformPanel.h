@@ -2,7 +2,7 @@
 #pragma once
 
 #include "aaEditorIncludes.h"
-#include "wx\generic\treectlg.h"
+#include "wx/generic/treectlg.h"
 
 class CEdControlRigPanel;
 

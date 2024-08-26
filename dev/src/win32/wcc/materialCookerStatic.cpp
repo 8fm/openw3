@@ -8,8 +8,8 @@
 #include "wccStats.h"
 
 #include "../../common/renderer/renderHelpers.h"
-#include "..\..\common\engine\shaderCacheManager.h"
-#include "..\..\common\engine\materialCompilerDefines.h"
+#include "../../common/engine/shaderCacheManager.h"
+#include "../../common/engine/materialCompilerDefines.h"
 
 static CStaticShadersStats m_shaderCacheStats;
 
@@ -85,7 +85,7 @@ Bool CMaterialCooker::CompileStaticShaders( const MaterialCookingOptions& option
 			#define RENDER_SHADER_GEN_EDITOR(var,name,defines)
 		#endif
 
-		#include "..\..\common\engine\renderShaders.h"
+		#include "../../common/engine/renderShaders.h"
 
 		#undef RENDER_SHADER_GEN
 		#undef RENDER_SHADER_TESS_GEN

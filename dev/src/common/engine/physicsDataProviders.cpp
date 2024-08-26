@@ -2,10 +2,10 @@
 #include "physicsDataProviders.h"
 #include "renderer.h"
 #include "component.h"
-#include "..\core\scriptStackFrame.h"
+#include "../core/scriptStackFrame.h"
 #include "staticMeshComponent.h"
-#include "..\physics\physicsDebugger.h"
-#include "..\core\dataError.h"
+#include "../physics/physicsDebugger.h"
+#include "../core/dataError.h"
 #include "utils.h"
 #include "renderVertices.h"
 #include "physicsCharacterWrapper.h"
@@ -17,9 +17,9 @@
 #include "apexDestructionWrapper.h"
 #include "apexDebugVisualizer.h"
 
-#include "..\physics\physicsWrapper.h"
-#include "..\physics\physicsChainedRagdollWrapper.h"
-#include "..\physics\physicsJointedRagdollWrapper.h"
+#include "../physics/physicsWrapper.h"
+#include "../physics/physicsChainedRagdollWrapper.h"
+#include "../physics/physicsJointedRagdollWrapper.h"
 #endif
 
 //HACKS TO SIMPLY REMOVAL 

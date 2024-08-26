@@ -3,7 +3,7 @@
 */
 
 #pragma once
-#include "..\engine\characterControllerParam.h"
+#include "../engine/characterControllerParam.h"
 #include "actorsManager.h"
 
 class CMRPhysicalCharacter;

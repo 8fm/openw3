@@ -1,8 +1,8 @@
 #pragma once
 
-#include "..\..\common\engine\controlRigIncludes.h"
-//#include "..\..\common\engine\behaviorGraphNodeControlRig.h"
-#include "..\..\common\engine\controlRig.h"
+#include "../../common/engine/controlRigIncludes.h"
+//#include "../../common/engine/behaviorGraphNodeControlRig.h"
+#include "../../common/engine/controlRig.h"
 
 class CEdControlRigPanel;
 

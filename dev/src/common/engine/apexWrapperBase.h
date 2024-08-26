@@ -1,5 +1,5 @@
 #pragma once
-#include "..\physics\physicsWrapper.h"
+#include "../physics/physicsWrapper.h"
 #include "renderObject.h"
 
 

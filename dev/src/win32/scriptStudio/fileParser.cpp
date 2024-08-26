@@ -8,7 +8,7 @@
 #include "lexData.h"
 
 // Include generated bison file
-#include RED_EXPAND_AND_STRINGIFY(PROJECT_PLATFORM\PROJECT_CONFIGURATION\fileParser_bison.cxx)
+#include RED_EXPAND_AND_STRINGIFY(PROJECT_PLATFORM/PROJECT_CONFIGURATION/fileParser_bison.cxx)
 
 SSFileParser::SSFileParser()
 :	m_stub( nullptr )

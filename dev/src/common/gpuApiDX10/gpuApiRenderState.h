@@ -2,8 +2,8 @@
 * Copyright © 2010 CD Projekt Red. All Rights Reserved.
 */
 #pragma once
-#include "..\redSystem\crt.h"
-#include "..\redSystem\types.h"
+#include "../redSystem/crt.h"
+#include "../redSystem/types.h"
 
 namespace GpuApi
 {

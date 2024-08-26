@@ -4,8 +4,8 @@
 
 #pragma once
 
-#include "..\physics\physicsWrapper.h"
-#include "..\core\dataBuffer.h"
+#include "../physics/physicsWrapper.h"
+#include "../core/dataBuffer.h"
 
 struct BoneInfo
 {

@@ -1,5 +1,5 @@
 #pragma once
-#include "..\..\common\game\storySceneEvent.h"
+#include "../../common/game/storySceneEvent.h"
 
 //////////////////////////////////////////////////////////////////////////
 //copy of CGameplayEffects::ESurfacePostFXType in renderer

@@ -8,7 +8,7 @@
 
 #ifdef USE_INTEL_ITT
 
-#include "..\\..\\..\\external\\IntelITT\\include\\ittnotify.h"
+#include "../../../external/IntelITT/include/ittnotify.h"
 
 class CIntelITTProfiler : public IProfilerTool
 {

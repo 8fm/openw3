@@ -10,7 +10,7 @@
 #include "renderInterface.h"
 #include "renderPostFxHBSSAO.h"
 
-#include "..\gpuApiUtils\gpuApiMemory.h"
+#include "../gpuApiUtils/gpuApiMemory.h"
 
 
 CPostFXHorizonBasedSSAO::CPostFXHorizonBasedSSAO()

@@ -3,23 +3,23 @@
 */
 
 // Core
-#include "..\..\common\core\core.h"
-#include "..\..\common\core\version.h"
+#include "../../common/core/core.h"
+#include "../../common/core/version.h"
 #include "../../common/core/diskFile.h"
 
 // Engine
-#include "..\..\common\engine\engine.h"
+#include "../../common/engine/engine.h"
 
 // Win32 platform
-#include "..\..\win32\platform\win32.h"
+#include "../../win32/platform/win32.h"
 
 // Game
 #include "../../common/game/game.h"
 
-#include "..\..\games\r4\r4.h"
-#include "..\..\games\r6\r6.h"
-#include "..\..\games\r6\r6TypeRegistry.h"
-#include "..\..\games\r6\r6game.h"
+#include "../../games/r4/r4.h"
+#include "../../games/r6/r6.h"
+#include "../../games/r6/r6TypeRegistry.h"
+#include "../../games/r6/r6game.h"
 
 #define LOG_EDITOR( format, ... ) RED_LOG( Editor, format, ##__VA_ARGS__ )
 #define ERR_EDITOR( format, ... ) RED_LOG_ERROR( Editor, format, ##__VA_ARGS__ )

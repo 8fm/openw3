@@ -1,10 +1,10 @@
 #include "build.h"
-#include "..\physics\physicsWrapper.h"
+#include "../physics/physicsWrapper.h"
 #include "physicsWorld.h"
 #include "physicsSettings.h"
 #include "physicsContactListener.h"
-#include "..\core\object.h"
-#include "..\core\scriptable.h"
+#include "../core/object.h"
+#include "../core/scriptable.h"
 
 CPhysicsWorld* CPhysicsWorld::m_top = 0;
 

@@ -3,7 +3,7 @@
 */
 #include "build.h"
 #include "redGuiEmbeddedResources.h"
-#include "..\core\gatheredResource.h"
+#include "../core/gatheredResource.h"
 
 #ifndef NO_RED_GUI 
 

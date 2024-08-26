@@ -3,14 +3,14 @@
 */
 
 #include "build.h"
-#include "..\..\common\engine\drawableComponent.h"
-#include "..\..\common\engine\materialBlock.h"
-#include "..\..\common\engine\materialGraph.h"
-#include "..\..\common\engine\materialOutputSocket.h"
-#include "..\..\common\engine\materialOutputTextureSocket.h"
-#include "..\..\common\engine\materialOutputCubeSocket.h"
-#include "..\..\common\engine\graphConnection.h"
-#include "..\..\common\engine\materialInstance.h"
+#include "../../common/engine/drawableComponent.h"
+#include "../../common/engine/materialBlock.h"
+#include "../../common/engine/materialGraph.h"
+#include "../../common/engine/materialOutputSocket.h"
+#include "../../common/engine/materialOutputTextureSocket.h"
+#include "../../common/engine/materialOutputCubeSocket.h"
+#include "../../common/engine/graphConnection.h"
+#include "../../common/engine/materialInstance.h"
 
 CMaterialGroupItem::CMaterialGroupItem( CEdPropertiesPage* page, CBasePropItem* parent, IMaterial* material, CName paramGroup )
 	: CBaseGroupItem( page, parent )

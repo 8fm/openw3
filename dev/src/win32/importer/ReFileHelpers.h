@@ -1,6 +1,6 @@
 #pragma once
 
-#include "..\..\common\core\importer.h"
+#include "../../common/core/importer.h"
 #include "re_archive/include/reFileNodes.h"
 #include "re_archive/include/reFileArchive.h"
 #include "re_archive/include/reFileBaseNode.h"

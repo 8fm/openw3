@@ -3,7 +3,7 @@
 #include "npcMovementControllerComponent.h"
 #include "enemyAwareComponent.h"
 
-#include "..\..\common\game\movableRepresentationPathAgent.h"
+#include "../../common/game/movableRepresentationPathAgent.h"
 
 IMPLEMENT_ENGINE_CLASS( CNPCMovementControllerComponent );
 

@@ -1,6 +1,6 @@
 #pragma once
-#include "..\engine\vectorDamper.h"
-#include "..\engine\floatDamper.h"
+#include "../engine/vectorDamper.h"
+#include "../engine/floatDamper.h"
 #include "boatConfig.h"
 
 //////////////////////////////////////////////////////////////////////////

@@ -37,7 +37,7 @@
 #include "debugWindowMemoryBudgets.h"
 #include "debugWindowMemoryClassPanel.h"
 #include "memoryClassDebugColourPalette.h"
-#include "..\core\2darray.h"
+#include "../core/2darray.h"
 #include "../core/memoryAdapter.h"
 
 namespace

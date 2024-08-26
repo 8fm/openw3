@@ -1,13 +1,13 @@
 #include "build.h"
-#include "..\..\build.h" // hack for using precompiled header on PS4 (only the case when you have cpp file in subfolders, hope that engine team will fix this correctly)
+#include "../../build.h" // hack for using precompiled header on PS4 (only the case when you have cpp file in subfolders, hope that engine team will fix this correctly)
 #include "behaviorGraphPostActions.h"
-#include "..\..\movingAgentComponent.h"
-#include "..\..\..\engine\decalEmitter.h"
-#include "..\..\commonGame.h"
-#include "..\..\..\redSystem\error.h"
-#include "..\..\..\engine\visualDebug.h"
-#include "..\..\..\engine\game.h"
-#include "..\..\..\engine\bitmapTexture.h"
+#include "../../movingAgentComponent.h"
+#include "../../../engine/decalEmitter.h"
+#include "../../commonGame.h"
+#include "../../../redSystem/error.h"
+#include "../../../engine/visualDebug.h"
+#include "../../../engine/game.h"
+#include "../../../engine/bitmapTexture.h"
 
 void CFootStepAction::Process( CAnimatedComponent* ac, const SBehaviorGraphOutput& pose )
 {

@@ -6,19 +6,19 @@
 #include "extAnimFootstepEvent.h"
 
 #include "actorAnimationEventFilter.h"
-#include "..\engine\soundStartData.h"
-#include "..\engine\soundSystem.h"
-#include "..\engine\dynamicDecal.h"
-#include "..\engine\decalEmitter.h"
-#include "..\engine\decalEmitter.h"
+#include "../engine/soundStartData.h"
+#include "../engine/soundSystem.h"
+#include "../engine/dynamicDecal.h"
+#include "../engine/decalEmitter.h"
+#include "../engine/decalEmitter.h"
 
-#include "..\engine\baseTree.h"
-#include "..\engine\foliageBroker.h"
-#include "..\engine\foliageCell.h"
-#include "..\engine\foliageResource.h"
-#include "..\engine\foliageScene.h"
+#include "../engine/baseTree.h"
+#include "../engine/foliageBroker.h"
+#include "../engine/foliageCell.h"
+#include "../engine/foliageResource.h"
+#include "../engine/foliageScene.h"
 
-#include "..\engine\game.h"
+#include "../engine/game.h"
 #include "vehicle.h"
 
 IMPLEMENT_ENGINE_CLASS( CExtAnimFootstepEvent );

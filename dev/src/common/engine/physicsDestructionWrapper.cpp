@@ -4,8 +4,8 @@
 
 #include "build.h"
 #include "physicsDestructionWrapper.h"
-#include "..\physics\physicsWorldPhysXImpl.h"
-#include "..\physics\compiledCollision.h"
+#include "../physics/physicsWorldPhysXImpl.h"
+#include "../physics/compiledCollision.h"
 #include "physicsDestructionResource.h"
 
 #ifdef USE_PHYSX
@@ -13,9 +13,9 @@
 
 using namespace physx;
 #endif
-#include "..\core\dataError.h"
-#include "..\physics\physicsEngine.h"
-#include "..\physics\physicsSettings.h"
+#include "../core/dataError.h"
+#include "../physics/physicsEngine.h"
+#include "../physics/physicsSettings.h"
 #include "collisionCache.h"
 #include "collisionMesh.h"
 #include "destructionComponent.h"

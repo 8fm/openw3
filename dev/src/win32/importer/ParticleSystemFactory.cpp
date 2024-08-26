@@ -3,9 +3,9 @@
  */
 
 #include "build.h"
-#include "..\..\common\engine\particleInitializerLifeTime.h"
-#include "..\..\common\engine\particleSystem.h"
-#include "..\..\common\engine\particleEmitter.h"
+#include "../../common/engine/particleInitializerLifeTime.h"
+#include "../../common/engine/particleSystem.h"
+#include "../../common/engine/particleEmitter.h"
 
 /// Factory for animation set
 class CParticleSystemFactory : public IFactory

@@ -502,7 +502,7 @@ SCachedGeometry& CCompiledCollision::InsertGeometry()
 #ifndef NO_EDITOR
 
 #ifdef USE_PHYSX
-//#include "../../../external\PhysX3\Source\PhysXExtensions\src\ExtRigidBodyExt.cpp"
+//#include "../../../external/PhysX3/Source/PhysXExtensions/src/ExtRigidBodyExt.cpp"
 #endif
 
 Float CCompiledCollision::GetMassFromResource() const

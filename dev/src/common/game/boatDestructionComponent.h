@@ -1,6 +1,6 @@
 #pragma once
-#include "..\engine\component.h"
-#include "..\engine\dropPhysicsComponent.h"
+#include "../engine/component.h"
+#include "../engine/dropPhysicsComponent.h"
 #include "boatDestructionVolume.h"
 #include "boatConfig.h"
 

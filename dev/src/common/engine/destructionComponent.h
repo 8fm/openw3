@@ -3,7 +3,7 @@
 */
 #pragma once
 #include "pathlibComponent.h"
-#include "..\physics\physicalCallbacks.h"
+#include "../physics/physicalCallbacks.h"
 #include "physicsDestructionWrapper.h"
 #include "pathlib.h"
 #include "meshTypeComponent.h"

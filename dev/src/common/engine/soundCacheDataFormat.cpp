@@ -3,7 +3,7 @@
 */
 #include "build.h"
 #include "soundCacheDataFormat.h"
-#include "..\core\ioTags.h"
+#include "../core/ioTags.h"
 
 const Uint32 CSoundCacheData::HEADER_MAGIC = 'W3SC'; // Wither3 Sound Cache
 const Uint32 CSoundCacheData::HEADER_VERSION = 2;

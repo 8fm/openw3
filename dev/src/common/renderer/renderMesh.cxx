@@ -6,9 +6,9 @@
 #include "renderSkinningData.h"
 #include "renderMeshBufferWriter.h"
 
-#include "..\gpuApiUtils\gpuApiVertexFormats.h"
-#include "..\gpuApiUtils\gpuApiVertexPacking.h"
-#include "..\gpuApiUtils\gpuApiMemory.h"
+#include "../gpuApiUtils/gpuApiVertexFormats.h"
+#include "../gpuApiUtils/gpuApiVertexPacking.h"
+#include "../gpuApiUtils/gpuApiMemory.h"
 #include <stddef.h> // for offsetof
 #include "../engine/mesh.h"
 #include "../engine/material.h"

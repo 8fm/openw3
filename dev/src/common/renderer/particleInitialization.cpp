@@ -5,9 +5,9 @@
 #include "build.h"
 #include "renderParticleEmitter.h"
 #include "renderParticleBuffer.h"
-#include "..\physics\physicsParticleWrapper.h"
-#include "..\engine\baseEngine.h"
-#include "..\engine\evaluatorVector.h"
+#include "../physics/physicsParticleWrapper.h"
+#include "../engine/baseEngine.h"
+#include "../engine/evaluatorVector.h"
 
 //////////////////////////////////////////////////////////////////////////
 // Static particle initialization methods

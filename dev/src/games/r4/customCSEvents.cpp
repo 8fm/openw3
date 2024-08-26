@@ -1,7 +1,7 @@
 #include "build.h"
 #include "customCSEvents.h"
 #include "gameplayFXSurfacePost.h"
-#include "..\..\common\engine\cutsceneInstance.h"
+#include "../../common/engine/cutsceneInstance.h"
 
 IMPLEMENT_ENGINE_CLASS( CExtAnimCutsceneSurfaceEffect );
 

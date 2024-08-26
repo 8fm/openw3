@@ -14,7 +14,7 @@
 #endif
 
 #ifndef NO_GPU_LOGGING
-	#include "..\\redSystem\\log.h"
+	#include "../redSystem/log.h"
 	#define GPUAPI_LOG( format, ... )		RED_LOG( RED_LOG_CHANNEL( GpuApi ), format, ##__VA_ARGS__ )
 	#define GPUAPI_LOG_WARNING( format, ... )	RED_LOG_WARNING( RED_LOG_CHANNEL( GpuApi ), format, ##__VA_ARGS__ )
 	#define GPUAPI_ERROR( format, ... )		RED_LOG_ERROR( RED_LOG_CHANNEL( GpuApi ), format, ##__VA_ARGS__ )

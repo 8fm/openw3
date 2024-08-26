@@ -2,9 +2,9 @@
 #include "world.h"
 #include "simpleBuoyancyComponent.h"
 #include "../physics/physicsWrapper.h"
-#include "..\engine\tickManager.h"
-#include "..\engine\renderFrame.h"
-#include "..\engine\renderVisibilityQuery.h"
+#include "../engine/tickManager.h"
+#include "../engine/renderFrame.h"
+#include "../engine/renderVisibilityQuery.h"
 #include "globalWater.h"
 
 

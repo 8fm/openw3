@@ -5,10 +5,10 @@
 #include "build.h"
 #include "mbOutputColorEyeOverlay.h"
 #include "../matcompiler//materialShaderConstants.h"
-#include "..\..\common\engine\mbParamTexture.h"
-#include "..\engine\renderFragment.h"
-#include "..\engine\graphBlock.h"
-#include "..\engine\graphConnectionRebuilder.h"
+#include "../../common/engine/mbParamTexture.h"
+#include "../engine/renderFragment.h"
+#include "../engine/graphBlock.h"
+#include "../engine/graphConnectionRebuilder.h"
 
 #ifndef NO_RUNTIME_MATERIAL_COMPILATION
 

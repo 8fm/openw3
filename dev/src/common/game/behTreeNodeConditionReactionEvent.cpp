@@ -2,7 +2,7 @@
 
 #include "behTreeNodeConditionReactionEvent.h"
 #include "behTreeInstance.h"
-#include "..\engine\game.h"
+#include "../engine/game.h"
 #include "behTreeReactionData.h"
 #include "reactionSceneActor.h"
 

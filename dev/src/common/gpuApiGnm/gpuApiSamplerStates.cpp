@@ -318,4 +318,4 @@ namespace GpuApi
 	}
 }
 
-#include "..\gpuApiUtils\gpuApiSamplerCommon.h"
+#include "../gpuApiUtils/gpuApiSamplerCommon.h"
