@@ -3,7 +3,7 @@
 */
 #pragma once
 #include "dialogEventGeneratorInternals.h"
-#include "..\..\common\core\xmlFileReader.h"
+#include "../../common/core/xmlFileReader.h"
 
 namespace CStorySceneEventGeneratorInternals
 {

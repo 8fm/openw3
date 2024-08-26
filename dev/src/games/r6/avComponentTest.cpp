@@ -4,9 +4,9 @@
 
 #include "build.h"
 #include "avComponentTest.h"
-#include "..\..\common\core\algorithms.h"
-#include "..\..\common\core\mathUtils.h"
-#include "..\..\common\engine\renderFrame.h"
+#include "../../common/core/algorithms.h"
+#include "../../common/core/mathUtils.h"
+#include "../../common/engine/renderFrame.h"
 
 
 

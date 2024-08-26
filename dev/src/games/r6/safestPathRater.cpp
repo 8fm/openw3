@@ -3,9 +3,9 @@
 #include "coversManager.h"
 #include "enemyAwareComponent.h"
 
-#include "..\..\common\engine\pathlibGraph.h"
-#include "..\..\common\game\nodeStorage.h"
-#include "..\..\common\core\mathUtils.h"
+#include "../../common/engine/pathlibGraph.h"
+#include "../../common/game/nodeStorage.h"
+#include "../../common/core/mathUtils.h"
 
 const Float	CSafestParhRater::DISTANCE_MULTIPLER	= 100;	
 const Float	CSafestParhRater::COVER_SEARCH_MARGIN	= 0.5f;

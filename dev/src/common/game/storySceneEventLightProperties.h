@@ -2,8 +2,8 @@
 #pragma once
 
 #include "storySceneEvent.h"
-#include "..\engine\lightComponent.h"
-#include "..\engine\dimmerComponent.h"
+#include "../engine/lightComponent.h"
+#include "../engine/dimmerComponent.h"
 
 class CStorySceneLight;
 

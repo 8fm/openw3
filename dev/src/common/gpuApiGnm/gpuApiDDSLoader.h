@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include "..\\gpuApiUtils\\gpuApiUtils.h"
+#include "../gpuApiUtils/gpuApiUtils.h"
 #include "gpuApiBase.h"
 
 namespace GpuApi

@@ -5,7 +5,7 @@
 #include "build.h"
 #include "errorsListDlg.h"
 #include "missingTemplatesErrorsDisplayer.h"
-#include "..\versionControl\versionControlP4.h"
+#include "../versionControl/versionControlP4.h"
 
 CEdMissingTemplatesErrorsDisplayer::CEdMissingTemplatesErrorsDisplayer( wxWindow* parent )
 	: m_parent( parent )

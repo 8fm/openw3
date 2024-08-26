@@ -18,7 +18,7 @@
 #include "../core/frustum.h"
 
 #if defined( RED_PLATFORM_DURANGO )
-#include "..\gpuApiDX10\gpuApiBase.h"
+#include "../gpuApiDX10/gpuApiBase.h"
 #endif
 
 CRenderMeshBatcher::CRenderMeshBatcher( Uint32 maxFragmentsPerBatch )

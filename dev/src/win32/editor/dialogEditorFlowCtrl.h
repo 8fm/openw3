@@ -1,7 +1,7 @@
 
 #pragma once
 
-#include "..\..\common\game\storySceneEventsCollector.h"
+#include "../../common/game/storySceneEventsCollector.h"
 
 class CEdSceneEditor;
 class CStorySceneLinkElement;

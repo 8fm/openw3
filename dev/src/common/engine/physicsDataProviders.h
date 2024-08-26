@@ -7,8 +7,8 @@
 #ifndef PHYSICS_DATA_PROVIDERS_H
 #define PHYSICS_DATA_PROVIDERS_H
 
-#include "..\physics\physicsWrapper.h"
-#include "..\physics\physicsWorld.h"
+#include "../physics/physicsWrapper.h"
+#include "../physics/physicsWorld.h"
 
 class CPhysicsWrapperParentComponentProvider : public IPhysicsWrapperParentProvider
 {

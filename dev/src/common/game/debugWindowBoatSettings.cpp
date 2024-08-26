@@ -7,20 +7,20 @@
 
 #ifndef FINAL
 
-#include "..\engine\redGuiPanel.h"
-#include "..\engine\redGuiAdvancedSlider.h"
-#include "..\engine\redGuiLabel.h"
-#include "..\engine\redGuiTab.h"
-#include "..\engine\redGuiControl.h"
-#include "..\engine\redGuiScrollPanel.h"
+#include "../engine/redGuiPanel.h"
+#include "../engine/redGuiAdvancedSlider.h"
+#include "../engine/redGuiLabel.h"
+#include "../engine/redGuiTab.h"
+#include "../engine/redGuiControl.h"
+#include "../engine/redGuiScrollPanel.h"
 #include "boatComponent.h"
-#include "..\engine\redGuiGraphicContext.h"
-#include "..\engine\redGuiManager.h"
-#include "..\engine\redGuiCheckBox.h"
+#include "../engine/redGuiGraphicContext.h"
+#include "../engine/redGuiManager.h"
+#include "../engine/redGuiCheckBox.h"
 #include "boatBuoyancySystem.h"
-#include "..\core\configVar.h"
-#include "..\engine\redGuiButton.h"
-#include "..\core\configVarSystem.h"
+#include "../core/configVar.h"
+#include "../engine/redGuiButton.h"
+#include "../core/configVarSystem.h"
 
 //////////////////////////////////////////////////////////////////////////
 

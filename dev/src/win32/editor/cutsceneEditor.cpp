@@ -3,7 +3,7 @@
 */
 
 #include "build.h"
-#include <wx\display.h>
+#include <wx/display.h>
 #include <shellapi.h>
 #include "viewportWidgetMoveAxis.h"
 #include "viewportWidgetRotateAxis.h"

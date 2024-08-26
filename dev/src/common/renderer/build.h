@@ -2,9 +2,9 @@
 * Copyright © 2007 CD Projekt Red. All Rights Reserved.
 */
 
-#include "..\..\common\core\core.h"
-#include "..\..\common\engine\engine.h"
-#include "..\..\common\matcompiler\matcompiler.h"
+#include "../../common/core/core.h"
+#include "../../common/engine/engine.h"
+#include "../../common/matcompiler/matcompiler.h"
 
 #include "rendererNamesRegistry.h"
 

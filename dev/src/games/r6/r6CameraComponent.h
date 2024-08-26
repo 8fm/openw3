@@ -5,7 +5,7 @@
 #pragma once
 
 
-#include "..\..\common\engine\cameraComponent.h"
+#include "../../common/engine/cameraComponent.h"
 
 
 

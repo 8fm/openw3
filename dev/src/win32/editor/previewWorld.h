@@ -2,7 +2,7 @@
 * Copyright © 2013 CD Projekt Red. All Rights Reserved.
 */
 #pragma once
-#include "..\..\common\game\gameWorld.h"
+#include "../../common/game/gameWorld.h"
 
 
 /// World class used by default by the CEdPreviewPanel. Some editors might override with their own world, but the default one will

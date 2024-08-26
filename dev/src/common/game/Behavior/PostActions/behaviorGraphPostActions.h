@@ -1,5 +1,5 @@
 #pragma once
-#include "..\..\..\engine\behaviorGraphContext.h"
+#include "../../../engine/behaviorGraphContext.h"
 
 //////////////////////////////////////////////////////////////////////////
 class CFootStepAction : public IAnimationPostAction

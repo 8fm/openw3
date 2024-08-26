@@ -6,8 +6,8 @@
 
 #include "behTreeNodePlayerStateJump.h"
 #include "r6behTreeInstance.h"
-#include "..\..\common\game\movingPhysicalAgentComponent.h"
-#include "..\..\common\game\movableRepresentationPhysicalCharacter.h"
+#include "../../common/game/movingPhysicalAgentComponent.h"
+#include "../../common/game/movableRepresentationPhysicalCharacter.h"
 #include "../../common/core/dataError.h"
 #include "../../common/engine/utils.h"
 

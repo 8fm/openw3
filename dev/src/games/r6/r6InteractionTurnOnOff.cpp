@@ -1,9 +1,9 @@
 #include "build.h"
 
 #include "r6InteractionTurnOnOff.h"
-#include "..\..\common\engine\appearanceComponent.h"
-#include "..\..\common\game\factsDB.h"
-#include "..\..\common\engine\soundEmitter.h"
+#include "../../common/engine/appearanceComponent.h"
+#include "../../common/game/factsDB.h"
+#include "../../common/engine/soundEmitter.h"
 #include "../../common/core/dataError.h"
 #include "../../common/engine/gameTimeManager.h"
 #include "../../common/engine/utils.h"

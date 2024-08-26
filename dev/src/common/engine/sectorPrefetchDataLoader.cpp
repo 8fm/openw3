@@ -4,7 +4,7 @@
 
 #include "build.h"
 #include "sectorPrefetchDataLoader.h"
-#include "..\core\ioTags.h"
+#include "../core/ioTags.h"
 
 CSectorPrefetchDataLoader::CSectorPrefetchDataLoader( const String& absolutePath )
 	: m_numLoadingBuffers( 0 )

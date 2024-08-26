@@ -3,8 +3,8 @@
 */
 
 #include "../core/core.h"
-#include "..\core\engineTransform.h"
-#include "..\redMath\redmathbase.h"
+#include "../core/engineTransform.h"
+#include "../redMath/redmathbase.h"
 
 #include "physicsIncludes.h"
 

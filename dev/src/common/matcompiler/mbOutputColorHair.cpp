@@ -8,10 +8,10 @@
 #ifndef NO_RUNTIME_MATERIAL_COMPILATION
 
 #include "../matcompiler//materialShaderConstants.h"
-#include "..\..\common\engine\mbParamTexture.h"
-#include "..\engine\baseEngine.h"
-#include "..\engine\renderFragment.h"
-#include "..\engine\materialBlock.h"
+#include "../../common/engine/mbParamTexture.h"
+#include "../engine/baseEngine.h"
+#include "../engine/renderFragment.h"
+#include "../engine/materialBlock.h"
 
 RED_DEFINE_STATIC_NAME( SubsurfaceScattering )
 RED_DEFINE_STATIC_NAME( Data0 )

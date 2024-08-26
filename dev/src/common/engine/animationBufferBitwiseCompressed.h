@@ -6,7 +6,7 @@
 
 #include "animationBuffer.h"
 #include "../redMath/redmathbase.h"
-#include "..\core\deferredDataBuffer.h"
+#include "../core/deferredDataBuffer.h"
 
 #define USE_RED_ANIM_COMPRESSION
 

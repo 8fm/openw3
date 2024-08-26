@@ -3,10 +3,10 @@
 */
 #pragma once
 
-#include "..\redSystem\crt.h"
+#include "../redSystem/crt.h"
 
 // GpuAPI Utilities
-#include "..\\gpuApiUtils\\gpuApiUtils.h"
+#include "../gpuApiUtils/gpuApiUtils.h"
 
 // GpuApi base
 #include "gpuApiBase.h"

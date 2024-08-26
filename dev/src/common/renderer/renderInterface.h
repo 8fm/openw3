@@ -803,7 +803,7 @@ public:
 #define RENDER_SHADER_GEN_EDITOR(var,name,...)
 #endif
 
-#include "..\engine\renderShaders.h"
+#include "../engine/renderShaders.h"
 
 #undef RENDER_SHADER_GEN
 #undef RENDER_SHADER_TESS_GEN

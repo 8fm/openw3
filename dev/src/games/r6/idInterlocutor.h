@@ -3,7 +3,7 @@
  */
 #pragma once
 
-#include "..\..\common\game\selfUpdatingComponent.h"
+#include "../../common/game/selfUpdatingComponent.h"
 
 #include "idGraphBlockText.h"
 #include "idEventSenderDataStructs.h"

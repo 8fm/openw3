@@ -4,10 +4,10 @@
 
 #include "build.h"
 #include "2dArrayEditor.h"
-#include "sheet\sheet.h"
+#include "sheet/sheet.h"
 #include "assetBrowser.h"
-#include "..\..\common\core\diskFile.h"
-#include "..\..\common\core\feedback.h"
+#include "../../common/core/diskFile.h"
+#include "../../common/core/feedback.h"
 
 // Event table
 BEGIN_EVENT_TABLE( CEd2dArrayEditor, wxSmartLayoutPanel )

@@ -3,7 +3,7 @@
 */
 
 #pragma once
-#include "..\core\object.h"
+#include "../core/object.h"
 #include "behaviorIncludes.h"
 
 struct STeleportBone

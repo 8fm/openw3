@@ -4,7 +4,7 @@
 
 #include "build.h"
 #include "propertyItemPointer.h"
-#include "itemSelectionDialogs\classSelectorDialog.h"
+#include "itemSelectionDialogs/classSelectorDialog.h"
 #include "../../common/core/garbageCollector.h"
 #include "../../common/engine/curve.h"
 #include "../../common/core/xmlFile.h"

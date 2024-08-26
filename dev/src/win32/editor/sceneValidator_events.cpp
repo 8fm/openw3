@@ -1,14 +1,14 @@
 #include "build.h"
 #include "sceneValidator.h"
-#include "..\..\common\game\storySceneEventCustomCameraInstance.h"
-#include "..\..\common\game\storySceneEvent.h"
-#include "..\..\common\game\storySceneElement.h"
-#include "..\..\common\game\storySceneSection.h"
-#include "..\..\common\game\storySceneEventCustomCamera.h"
-#include "..\..\common\game\storySceneCutsceneSection.h"
-#include "..\..\common\game\storySceneAbstractLine.h"
-#include "..\..\common\game\StorySceneEventCameraLight.h"
-#include "..\..\common\game\storySceneEventModifyEnv.h"
+#include "../../common/game/storySceneEventCustomCameraInstance.h"
+#include "../../common/game/storySceneEvent.h"
+#include "../../common/game/storySceneElement.h"
+#include "../../common/game/storySceneSection.h"
+#include "../../common/game/storySceneEventCustomCamera.h"
+#include "../../common/game/storySceneCutsceneSection.h"
+#include "../../common/game/storySceneAbstractLine.h"
+#include "../../common/game/StorySceneEventCameraLight.h"
+#include "../../common/game/storySceneEventModifyEnv.h"
 
 
 #define VALIDATOR_ERROR( s ) context.result.m_messages.PushBack( SValidationOutputMessage( Error, s ) ); 

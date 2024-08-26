@@ -5,7 +5,7 @@
 #include "build.h"
 #include "storySceneEvent.h"
 #include "storySceneEventSound.h"
-#include "..\..\common\engine\soundStartData.h"
+#include "../../common/engine/soundStartData.h"
 #include "storyScenePlayer.h"
 
 #ifdef DEBUG_SCENES

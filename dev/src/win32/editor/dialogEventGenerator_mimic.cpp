@@ -3,11 +3,11 @@
 
 #include "dialogEventGeneratorInternals.h"
 #include "dialogEventGeneratorSetupDialog.h"
-#include "..\..\common\game\storySceneEventMimicsAnim.h"
-#include "..\..\common\game\storySceneAnimationList.h"
-#include "..\..\common\game\storySceneSystem.h"
-#include "..\..\common\game\storySceneEventMimics.h"
-#include "..\..\common\engine\localizationManager.h"
+#include "../../common/game/storySceneEventMimicsAnim.h"
+#include "../../common/game/storySceneAnimationList.h"
+#include "../../common/game/storySceneSystem.h"
+#include "../../common/game/storySceneEventMimics.h"
+#include "../../common/engine/localizationManager.h"
 #include "../../common/engine/mimicComponent.h"
 
 CName CStorySceneEventGenerator::GetSentenceInfoAt( SContext& context, const SPositionInSection& atPos, CName actorName )

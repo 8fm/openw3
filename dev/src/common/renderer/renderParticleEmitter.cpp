@@ -6,7 +6,7 @@
 #include "renderMesh.h"
 #include "renderScene.h"
 #include "../../common/engine/decalSpawner.h"
-#include "..\physics\physicsParticleWrapper.h"
+#include "../physics/physicsParticleWrapper.h"
 #include "../engine/mesh.h"
 #include "../engine/evaluatorFloat.h"
 #include "../engine/particleEmitter.h"

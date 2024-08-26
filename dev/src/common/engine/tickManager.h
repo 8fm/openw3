@@ -12,7 +12,7 @@
 #include "entityTickManager.h"
 #include "entity.h"
 #include "fxState.h"
-#include "..\core\taskBatch.h"
+#include "../core/taskBatch.h"
 
 // Forward declarations
 class CComponent;

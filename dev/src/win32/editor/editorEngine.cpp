@@ -24,11 +24,11 @@
 #include "../../games/r4/r4Telemetry.h"
 #endif // NO_TELEMETRY
 
-#include "..\..\common\engine\debugConsole.h"
-#include "..\..\common\engine\renderer.h"
-#include "..\..\common\engine\renderSettings.h"
+#include "../../common/engine/debugConsole.h"
+#include "../../common/engine/renderer.h"
+#include "../../common/engine/renderSettings.h"
 
-#include "..\..\common\engine\soundSystem.h"
+#include "../../common/engine/soundSystem.h"
 
 CEditorEngine::CEditorEngine()
 {

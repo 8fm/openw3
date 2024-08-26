@@ -6,14 +6,14 @@
 #include "renderElementParticleEmitter.h"
 #include "renderElementMap.h"
 #include "renderScene.h"
-#include "..\engine\renderer.h"
+#include "../engine/renderer.h"
 #include "renderParticleBatcher.h"
 #include "renderVisibilityQueryManager.h"
-#include "..\physics\physicsParticleWrapper.h"
-#include "..\engine\particleSystem.h"
-#include "..\engine\particleComponent.h"
+#include "../physics/physicsParticleWrapper.h"
+#include "../engine/particleSystem.h"
+#include "../engine/particleComponent.h"
 #include "renderParticleEmitter.h"
-#include "..\engine\material.h"
+#include "../engine/material.h"
 
 #ifdef USE_ANSEL
 extern Bool isAnselSessionActive;

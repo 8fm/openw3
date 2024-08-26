@@ -4,10 +4,10 @@
 
 #include "build.h"
 #include "physicsTileWrapper.h"
-#include "..\physics\physicsWorldPhysXImpl.h"
-#include "..\physics\physicsSettings.h"
+#include "../physics/physicsWorldPhysXImpl.h"
+#include "../physics/physicsSettings.h"
 #include "foliageInstance.h"
-#include "..\core\dataError.h"
+#include "../core/dataError.h"
 #include "../physics/PhysicsWrappersDefinition.h"
 #include "physicsDataProviders.h"
 

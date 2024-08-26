@@ -1,13 +1,13 @@
 #include "build.h"
 #include "r4HumanoidCombatComponent.h"
 
-#include "..\..\common\engine\mesh.h"
-#include "..\..\common\engine\meshTypeComponent.h"
-#include "..\..\common\engine\component.h"
-#include "..\..\common\engine\skeleton.h"
-#include "..\..\common\core\gatheredResource.h"
-#include "..\..\common\core\handleMap.h"
-#include "..\..\common\core\indexed2dArray.h"
+#include "../../common/engine/mesh.h"
+#include "../../common/engine/meshTypeComponent.h"
+#include "../../common/engine/component.h"
+#include "../../common/engine/skeleton.h"
+#include "../../common/core/gatheredResource.h"
+#include "../../common/core/handleMap.h"
+#include "../../common/core/indexed2dArray.h"
 
 IMPLEMENT_ENGINE_CLASS( CR4HumanoidCombatComponent );
 IMPLEMENT_ENGINE_CLASS( SSoundInfoMapping );

@@ -1,7 +1,7 @@
 #pragma once
 
-#include "..\core\hashmap.h"
-#include "..\engine\idTag.h"
+#include "../core/hashmap.h"
+#include "../engine/idTag.h"
 
 
 

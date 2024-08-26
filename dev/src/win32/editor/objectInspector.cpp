@@ -4,16 +4,16 @@
 
 #include "build.h"
 #include "objectInspector.h"
-#include "..\..\common\engine\component.h"
-#include "..\..\common\engine\mesh.h"
-#include "..\..\common\engine\umbraScene.h"
-#include "..\..\common\engine\umbraStructures.h"
-#include "..\..\common\engine\meshComponent.h"
-#include "..\..\common\engine\decalComponent.h"
-#include "..\..\common\engine\stripeComponent.h"
-#include "..\..\common\engine\dimmerComponent.h"
-#include "..\..\common\engine\lightComponent.h"
-#include "..\..\common\engine\bitmapTexture.h"
+#include "../../common/engine/component.h"
+#include "../../common/engine/mesh.h"
+#include "../../common/engine/umbraScene.h"
+#include "../../common/engine/umbraStructures.h"
+#include "../../common/engine/meshComponent.h"
+#include "../../common/engine/decalComponent.h"
+#include "../../common/engine/stripeComponent.h"
+#include "../../common/engine/dimmerComponent.h"
+#include "../../common/engine/lightComponent.h"
+#include "../../common/engine/bitmapTexture.h"
 
 BEGIN_EVENT_TABLE( CEdObjectInspector, wxFrame )
 END_EVENT_TABLE()

@@ -1,8 +1,8 @@
 #include "build.h"
 #include "storySceneItems.h"
 #include "commonGame.h"
-#include "..\engine\world.h"
-#include "..\engine\environmentManager.h"
+#include "../engine/world.h"
+#include "../engine/environmentManager.h"
 
 IMPLEMENT_ENGINE_CLASS( IStorySceneItem )
 IMPLEMENT_ENGINE_CLASS( CStorySceneActor )

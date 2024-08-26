@@ -1,11 +1,11 @@
 #include "build.h"
 #include "controlRigPresetsPanel.h"
-#include "..\..\common\game\storySceneEventPoseKey.h"
+#include "../../common/game/storySceneEventPoseKey.h"
 #include "controlRigPanel.h"
-#include "..\..\common\engine\pathlibSimpleBuffers.h"
-#include "..\..\common\core\depot.h"
+#include "../../common/engine/pathlibSimpleBuffers.h"
+#include "../../common/core/depot.h"
 #include "editorDataPresets.h"
-#include "..\..\common\core\factory.h"
+#include "../../common/core/factory.h"
 
 
 //////////////////////////////////////////////////////////////////////////

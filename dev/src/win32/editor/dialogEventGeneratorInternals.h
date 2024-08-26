@@ -2,9 +2,9 @@
 * Copyright c 2013 CD Projekt Red. All Rights Reserved.
 */
 #pragma once
-#include "..\..\common\game\storyScenePlayerInterface.h"
-#include "..\..\common\game\storySceneCameraDefinition.h"
-#include "..\..\common\game\storySceneLine.h"
+#include "../../common/game/storyScenePlayerInterface.h"
+#include "../../common/game/storySceneCameraDefinition.h"
+#include "../../common/game/storySceneLine.h"
 #include "dialogEditor.h"
 
 class CStorySceneSection;

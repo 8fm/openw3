@@ -1,7 +1,7 @@
 #include "build.h"
 #include "editorDataPresets.h"
-#include "..\..\common\core\factory.h"
-#include "..\..\common\engine\environmentManager.h"
+#include "../../common/core/factory.h"
+#include "../../common/engine/environmentManager.h"
 
 
 class CDataPresetsFactory : public IFactory

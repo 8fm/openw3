@@ -4,10 +4,10 @@
 #include "build.h"
 #include "encounterEditTool.h"
 #include "cascadePropertyEditor.h"
-#include "..\..\common\game\encounter.h"
+#include "../../common/game/encounter.h"
 #include "toolsPanel.h"
 #include "frame.h"
-#include "..\..\common\engine\hitProxyObject.h"
+#include "../../common/engine/hitProxyObject.h"
 
 IMPLEMENT_ENGINE_CLASS( CEdEncounterEditTool );
 

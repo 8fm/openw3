@@ -3,7 +3,7 @@
  */
 
 #pragma once
-#include "..\..\common\game\moveLocomotion.h"
+#include "../../common/game/moveLocomotion.h"
 #include "directMovementLocomotionSegment.h"
 
 

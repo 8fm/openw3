@@ -1,7 +1,7 @@
 #pragma once
 
 #include "textControl.h"
-#include "..\..\common\game\storySceneAbstractLine.h"
+#include "../../common/game/storySceneAbstractLine.h"
 
 class CStoryScene;
 

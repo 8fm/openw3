@@ -4,7 +4,7 @@
 
 #include "build.h"
 
-#include "..\engine\appearanceComponent.h"
+#include "../engine/appearanceComponent.h"
 #include "jobSpawnFromPool.h"
 
 

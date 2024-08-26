@@ -4,7 +4,7 @@
 #include "build.h"
 #include "profiler.h"
 
-#include "..\..\common\core\functionFlags.h"
+#include "../../common/core/functionFlags.h"
 
 wxIMPLEMENT_CLASS( CSSProfiler, wxPanel );
 

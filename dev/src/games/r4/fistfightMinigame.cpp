@@ -1,10 +1,10 @@
 #include "build.h"
 #include "fistfightMinigame.h"
 
-#include "..\..\common\engine\tagManager.h"
+#include "../../common/engine/tagManager.h"
 
-#include "..\..\common\game\behTreeReactionManager.h"
-#include "..\..\common\game\deniedAreaSaveable.h"
+#include "../../common/game/behTreeReactionManager.h"
+#include "../../common/game/deniedAreaSaveable.h"
 
 
 RED_DEFINE_STATIC_NAME( OnEndFistfightMinigame )

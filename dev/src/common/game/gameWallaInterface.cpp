@@ -1,6 +1,6 @@
 #include "build.h"
 #include "gameWallaInterface.h"
-#include "..\engine\soundSystem.h"
+#include "../engine/soundSystem.h"
 
 
 CGameWallaInterface CGameWallaInterface::sm_WallaInterface;

@@ -6,9 +6,9 @@
 #ifndef NO_RED_GUI
 #ifndef NO_DEBUG_WINDOWS
 
-#include "..\engine\redGuiWindow.h"
-#include "..\engine\redGuiDelegate2.h"
-#include "..\engine\redGuiEventPackage.h"
+#include "../engine/redGuiWindow.h"
+#include "../engine/redGuiDelegate2.h"
+#include "../engine/redGuiEventPackage.h"
 #include "renderTextureBase.h"
 
 namespace DebugWindows

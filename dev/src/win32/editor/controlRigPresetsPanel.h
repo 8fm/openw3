@@ -1,5 +1,5 @@
 #pragma once
-#include "..\..\common\game\storySceneEventPoseKey.h"
+#include "../../common/game/storySceneEventPoseKey.h"
 
 class CEdControlRigPanel;
 class CStorySceneEventPoseKey;

@@ -4,12 +4,12 @@
 #pragma once
 
 // Core
-#include "..\..\common\core\core.h"
+#include "../../common/core/core.h"
 
 // Engine
-#include "..\..\common\engine\engine.h"
+#include "../../common/engine/engine.h"
 
 // Common game
-#include "..\..\common\game\game.h"
+#include "../../common/game/game.h"
 
 #include "r6.h"

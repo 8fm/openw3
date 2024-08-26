@@ -3,10 +3,10 @@
 */
 #pragma once
 
-#include "..\..\common\engine\renderObject.h"
-#include "..\..\common\engine\renderVisibilityQuery.h"
-#include "..\..\common\core\staticarray.h"
-#include "..\..\common\core\idAllocator.h"
+#include "../../common/engine/renderObject.h"
+#include "../../common/engine/renderVisibilityQuery.h"
+#include "../../common/core/staticarray.h"
+#include "../../common/core/idAllocator.h"
 
 /// Rendering side manager for visibility queries
 /// NOTE: this has nothing to do with occlusion query or Umbra

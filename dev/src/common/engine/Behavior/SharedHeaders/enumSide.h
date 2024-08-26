@@ -1,5 +1,5 @@
 #pragma once
-#include "..\..\..\core\enumBuilder.h"
+#include "../../../core/enumBuilder.h"
 
 
 enum ESide

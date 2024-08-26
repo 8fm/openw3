@@ -4,7 +4,7 @@
 
 #include "build.h"
 #include "avCameraTest.h"
-#include "..\..\common\game\pilotComponent.h"
+#include "../../common/game/pilotComponent.h"
 #include "avComponentTest.h"
 
 

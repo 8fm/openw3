@@ -1,7 +1,7 @@
 #pragma once
 
 #include "r4JournalManager.h"
-//#include "..\..\..\common\core\names.h"
+//#include "../../../common/core/names.h"
 
 // ----------------------------------------------------------------------------------
 

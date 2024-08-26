@@ -1,6 +1,6 @@
 #pragma once
-#include "..\..\common\game\gameplayentity.h"
-#include "..\..\common\engine\vectorDamper.h"
+#include "../../common/game/gameplayentity.h"
+#include "../../common/engine/vectorDamper.h"
 
 //////////////////////////////////////////////////////////////////////////
 

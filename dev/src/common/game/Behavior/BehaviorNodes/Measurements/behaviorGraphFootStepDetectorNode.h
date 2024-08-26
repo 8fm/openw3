@@ -1,7 +1,7 @@
 #pragma once
-#include "..\..\..\..\engine\behaviorGraphNode.h"
-#include "..\..\..\..\engine\Behavior\Tools\common.h"
-#include "..\..\..\..\engine\Behavior\SharedHeaders\enumSide.h"
+#include "../../../../engine/behaviorGraphNode.h"
+#include "../../../../engine/Behavior/Tools/common.h"
+#include "../../../../engine/Behavior/SharedHeaders/enumSide.h"
 
 //////////////////////////////////////////////////////////////////////////
 struct SFootDetectionBoneInfo

@@ -3,11 +3,11 @@
 #ifdef USE_UMBRA
 
 	#define UMBRA_DIR "external\\umbra3.3.13-change-26-2826-2\\"
-	#include "..\\..\\..\\..\\external\\umbra3.3.13-change-26-2826-2\\interface\\optimizer\\umbraScene.hpp"
-	#include "..\\..\\..\\..\\external\\umbra3.3.13-change-26-2826-2\\interface\\optimizer\\umbraTask.hpp"
-	#include "..\\..\\..\\..\\external\\umbra3.3.13-change-26-2826-2\\interface\\optimizer\\\umbraBuilder.hpp"
-	#include "..\\..\\..\\..\\external\\umbra3.3.13-change-26-2826-2\\interface\\runtime\\umbraTome.hpp"
-	#include "..\\..\\..\\..\\external\\umbra3.3.13-change-26-2826-2\\interface\\runtime\\umbraQuery.hpp"
+	#include "../../../../external/umbra3.3.13-change-26-2826-2/interface/optimizer/umbraScene.hpp"
+	#include "../../../../external/umbra3.3.13-change-26-2826-2/interface/optimizer/umbraTask.hpp"
+	#include "../../../../external/umbra3.3.13-change-26-2826-2/interface/optimizer/umbraBuilder.hpp"
+	#include "../../../../external/umbra3.3.13-change-26-2826-2/interface/runtime/umbraTome.hpp"
+	#include "../../../../external/umbra3.3.13-change-26-2826-2/interface/runtime/umbraQuery.hpp"
 
 #if defined( RED_PLATFORM_WIN64 )
 # define UMBRA_LIB_PATH			UMBRA_DIR "\\lib\\win64\\"

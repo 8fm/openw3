@@ -4,7 +4,7 @@
 
 #pragma once
 
-#include "..\..\common\redSystem\logCommonOutputDevice.h"
+#include "../../common/redSystem/logCommonOutputDevice.h"
 
 
 class CWccTTYWriter : public Red::System::Log::CommonOutputDevice

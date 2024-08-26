@@ -4,9 +4,9 @@
 #pragma once
 
 // Core
-#include "..\core\core.h"
+#include "../core/core.h"
 
 // Engine
-#include "..\engine\engine.h"
+#include "../engine/engine.h"
 
 #include "game.h"

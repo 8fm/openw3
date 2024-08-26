@@ -3,7 +3,7 @@
 
 #include "dialogEditorPage.h"
 #include "textControl.h"
-#include "..\..\common\engine\localizedContent.h"
+#include "../../common/engine/localizedContent.h"
 
 CEdDialogScrollOnFocusHandler::CEdDialogScrollOnFocusHandler( CEdSceneEditorScreenplayPanel* dialogEditor )
 	: m_storySceneEditor( dialogEditor )

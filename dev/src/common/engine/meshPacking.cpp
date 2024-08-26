@@ -11,11 +11,11 @@
 #include "materialCompiler.h"
 #include "meshDataBuilder.h"
 
-#include "..\renderer\renderMeshBufferWriter.h"
+#include "../renderer/renderMeshBufferWriter.h"
 
-#include "..\gpuApiUtils\gpuApiVertexFormats.h"
-#include "..\gpuApiUtils\gpuApiVertexPacking.h"
-#include "..\gpuApiUtils\gpuApiMemory.h"
+#include "../gpuApiUtils/gpuApiVertexFormats.h"
+#include "../gpuApiUtils/gpuApiVertexPacking.h"
+#include "../gpuApiUtils/gpuApiMemory.h"
 
 namespace Helper
 {

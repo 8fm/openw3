@@ -3,9 +3,9 @@
 */
 
 #pragma once
-#include "..\physics\physicsWrapper.h"
-#include "..\physics\physicalCollision.h"
-#include "..\physics\physicsWrapperPool.h"
+#include "../physics/physicsWrapper.h"
+#include "../physics/physicalCollision.h"
+#include "../physics/physicsWrapperPool.h"
 #include "apexWrapperBase.h"
 
 #ifndef PHYSICS_DESTRUCTION_WRAPPER_H

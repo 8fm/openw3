@@ -1,6 +1,6 @@
 #include "build.h"
 #include "staticAnimationSelection.h"
-#include "..\..\common\game\extAnimGameplayMimicEvent.h"
+#include "../../common/game/extAnimGameplayMimicEvent.h"
 
 CEdStaticAnimationSelection::CEdStaticAnimationSelection( CPropertyItem* item )
 	: CListSelection( item )

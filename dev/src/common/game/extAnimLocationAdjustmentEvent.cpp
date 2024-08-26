@@ -6,7 +6,7 @@
 #include "extAnimLocationAdjustmentEvent.h"
 #include "movingAgentComponent.h"
 #include "movementAdjustor.h"
-#include "..\engine\behaviorGraphStack.h"
+#include "../engine/behaviorGraphStack.h"
 
 IMPLEMENT_ENGINE_CLASS( CExtAnimLocationAdjustmentEvent );
 

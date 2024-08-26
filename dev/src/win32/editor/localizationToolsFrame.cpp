@@ -11,7 +11,7 @@
 #include "exporters/gameplayEntityLocalizationExporter.h"
 #include "exporters/locStringsWithKeysLocalizationExporter.h"
 #include "exporters/customSceneExporters.h"
-#include "..\..\common\engine\localizationManager.h"
+#include "../../common/engine/localizationManager.h"
 
 #include "lipsyncDataSceneExporter.h"
 #include "sceneUsageExporter.h"

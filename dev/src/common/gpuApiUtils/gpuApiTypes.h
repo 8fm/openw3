@@ -3,8 +3,8 @@
 */
 #pragma once
 
-#include "..\redSystem\types.h"
-#include "..\redSystem\utility.h"
+#include "../redSystem/types.h"
+#include "../redSystem/utility.h"
 
 namespace GpuApi
 {

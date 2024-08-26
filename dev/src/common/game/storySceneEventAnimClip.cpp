@@ -4,9 +4,9 @@
 #include "build.h"
 #include "storySceneEventAnimClip.h"
 #include "storyScenePlayer.h"
-#include "..\engine\behaviorGraphAnimationManualSlot.h"
-#include "..\engine\animatedComponent.h"
-#include "..\engine\behaviorGraphStack.h"
+#include "../engine/behaviorGraphAnimationManualSlot.h"
+#include "../engine/animatedComponent.h"
+#include "../engine/behaviorGraphStack.h"
 #include "storySceneEvent.h"
 
 IMPLEMENT_ENGINE_CLASS( CStorySceneEventAnimClip );

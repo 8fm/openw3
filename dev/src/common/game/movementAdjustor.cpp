@@ -8,8 +8,8 @@
 
 #include "movementAdjustor.h"
 #include "movingAgentComponent.h"
-#include "..\engine\behaviorGraphUtils.inl"
-#include "..\engine\skeleton.h"
+#include "../engine/behaviorGraphUtils.inl"
+#include "../engine/skeleton.h"
 
 ///////////////////////////////////////////////////////////////////////////////
 

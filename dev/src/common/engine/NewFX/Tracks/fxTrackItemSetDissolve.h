@@ -1,5 +1,5 @@
 #pragma once
-#include "..\..\fxTrackItem.h"
+#include "../../fxTrackItem.h"
 
 //////////////////////////////////////////////////////////////////////////
 // Allows to enable/disable dissolves on all entity's drawable components.

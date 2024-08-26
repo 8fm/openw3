@@ -1,6 +1,6 @@
 #pragma once
 
-#include "..\core\dataBuffer.h"
+#include "../core/dataBuffer.h"
 
 // we need specialized data buffer allocator because we use custom pool and alignment
 template< EMemoryClass memoryClass >

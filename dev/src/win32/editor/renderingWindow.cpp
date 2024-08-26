@@ -7,10 +7,10 @@
 
 #include "googleanalytics.h"
 
-#include <wx\display.h>
-#include "..\..\common\engine\renderer.h"
-#include "..\..\common\engine\viewport.h"
-#include "..\..\common\engine\renderSettings.h"
+#include <wx/display.h>
+#include "../../common/engine/renderer.h"
+#include "../../common/engine/viewport.h"
+#include "../../common/engine/renderSettings.h"
 
 BEGIN_EVENT_TABLE( CEdRenderingWindow, wxPanel )
 	EVT_ERASE_BACKGROUND( CEdRenderingWindow::OnEraseBackground )

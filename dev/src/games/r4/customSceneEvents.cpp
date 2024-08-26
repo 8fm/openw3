@@ -1,7 +1,7 @@
 #include "build.h"
 #include "customSceneEvents.h"
-#include "..\..\common\game\storyScenePlayer.h"
-#include "..\..\common\game\commonGame.h"
+#include "../../common/game/storyScenePlayer.h"
+#include "../../common/game/commonGame.h"
 #include "gameplayFXSurfacePost.h"
 
 

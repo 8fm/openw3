@@ -4,9 +4,9 @@
 
 #include "build.h"
 
-#include "..\redIO\redIOAsyncIO.h" // async
-#include "..\redIO\redIOAsyncFileHandleCache.h" // async
-#include "..\redIO\redIOAsyncReadToken.h"
+#include "../redIO/redIOAsyncIO.h" // async
+#include "../redIO/redIOAsyncFileHandleCache.h" // async
+#include "../redIO/redIOAsyncReadToken.h"
 
 /// Data prefetcher for sectorized shit
 /// TEMPORARY SOLUTION FOR W3 ONLY

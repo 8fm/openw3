@@ -31,7 +31,7 @@ amain ICON "editor.ico"
 //
 
 #include "resource.h"
-#include "..\..\platform\assert.customrc"
+#include "../../platform/assert.customrc"
 
 #include "afxres.h"
 

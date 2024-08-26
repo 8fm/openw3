@@ -9,7 +9,7 @@
 #include "apexDestructionResource.h"
 #include "renderCommands.h"
 #include "performableAction.h"
-#include "..\physics\physicsWorld.h"
+#include "../physics/physicsWorld.h"
 #ifdef USE_APEX
 #include <NxDestructibleActor.h>
 #endif
@@ -26,7 +26,7 @@
 #include "layer.h"
 #include "soundEmitter.h"
 #include "entity.h"
-#include "..\physics\physicsWorld.h"
+#include "../physics/physicsWorld.h"
 #include "meshEnum.h"
 #include "physicsDataProviders.h"
 

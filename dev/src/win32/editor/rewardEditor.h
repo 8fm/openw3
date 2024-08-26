@@ -4,7 +4,7 @@
 
 #pragma once
 
-#include "..\..\common\game\rewards.h"
+#include "../../common/game/rewards.h"
 #include "rewardsSummary.h"
 
 enum ERewardTreeDataType

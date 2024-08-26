@@ -44,7 +44,7 @@ END
 
 #endif    // APSTUDIO_INVOKED
 
-#include "..\platform\assert.customrc"
+#include "../platform/assert.customrc"
 
 /////////////////////////////////////////////////////////////////////////////
 //

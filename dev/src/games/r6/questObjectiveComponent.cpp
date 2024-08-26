@@ -1,6 +1,6 @@
 #include "build.h"
 
-#include "..\..\common\game\selfUpdatingComponent.h"
+#include "../../common/game/selfUpdatingComponent.h"
 #include "questObjectiveComponent.h"
 #include "followerPOIComponent.h"
 

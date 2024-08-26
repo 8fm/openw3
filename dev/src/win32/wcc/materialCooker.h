@@ -1,6 +1,6 @@
 #pragma once
 
-#include "..\..\common\matcompiler\build.h"
+#include "../../common/matcompiler/build.h"
 
 #include "../../common/core/cooker.h"
 #include "../../common/core/dependencyMapper.h"

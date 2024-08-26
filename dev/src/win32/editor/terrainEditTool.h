@@ -1,7 +1,7 @@
 #pragma once
 
 // terrain edit tool V2.0
-#include "..\..\common\engine\clipMap.h"
+#include "../../common/engine/clipMap.h"
 #include "terrainBrush.h"
 #include "terrainCursor.h"
 #include "textureArrayGrid.h"

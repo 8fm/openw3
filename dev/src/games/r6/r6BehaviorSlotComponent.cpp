@@ -1,8 +1,8 @@
 #include "build.h"
 
 #include "r6BehaviorSlotComponent.h"
-#include "..\..\common\engine\behaviorGraphStack.h"
-#include "..\..\common\engine\animatedComponent.h"
+#include "../../common/engine/behaviorGraphStack.h"
+#include "../../common/engine/animatedComponent.h"
 #include "../../common/core/dataError.h"
 #include "../../common/engine/utils.h"
 

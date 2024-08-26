@@ -4,19 +4,19 @@
 #pragma once
 
 // Core
-#include "..\..\common\core\core.h"
+#include "../../common/core/core.h"
 
 // Engine
-#include "..\..\common\engine\engine.h"
+#include "../../common/engine/engine.h"
 
 // Game
-#include "..\..\common\game\game.h"
+#include "../../common/game/game.h"
 
 // R4
-#include "..\..\games\r4\r4.h"
+#include "../../games/r4/r4.h"
 
 // R6
-#include "..\..\games\r6\r6.h"
+#include "../../games/r6/r6.h"
 
 // THE COOKER CANNOT BE COMPILED WITHOUT EDITOR SUPPORT
 #ifdef NO_EDITOR

@@ -7,7 +7,7 @@
 #include "frame.h"
 
 // include compiled XRC resources
-#include RED_EXPAND_AND_STRINGIFY(res\PROJECT_PLATFORM\PROJECT_CONFIGURATION\scriptStudioXRC.hpp)
+#include RED_EXPAND_AND_STRINGIFY(res/PROJECT_PLATFORM/PROJECT_CONFIGURATION/scriptStudioXRC.hpp)
 
 #define SOLUTION_IMAGE_SIZE 16
 #define LOG_FILE TXT( "scriptstudio.log" )

@@ -14,8 +14,8 @@
 #include "fileDecompression.h"
 #include "ioTagResolver.h"
 #include "../redIO/redIO.h"
-#include "..\redMemoryFramework\redMemorySystemMemoryStats.h"
-#include "..\redMemoryFramework\redMemoryAllocatorInfo.h"
+#include "../redMemoryFramework/redMemorySystemMemoryStats.h"
+#include "../redMemoryFramework/redMemoryAllocatorInfo.h"
 #include "hashset.h"
 #include "resourceLoading.h"
 

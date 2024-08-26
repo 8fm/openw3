@@ -4,7 +4,7 @@
 #include "storySceneIncludes.h"
 #include "storySceneLookAtController.h"
 #include "storySceneActorsEyesTracker.h"
-#include "..\engine\behaviorGraphAnimationMixerSlot.h"
+#include "../engine/behaviorGraphAnimationMixerSlot.h"
 
 class CStoryScenePlayer;
 class CStorySceneEventsCollector;
