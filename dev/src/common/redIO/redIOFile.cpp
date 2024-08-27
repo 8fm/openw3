@@ -35,7 +35,12 @@ Bool CNativeFileHandle::Open( const Char* path, Uint32 openFlags )
 		RedIOProfiler::ProfileSyncIOOpenFileStart( path );
 #endif
 
+#ifdef RED_PLATFORM_LINUX // FIX_LINUX open wchar_t
+	RED_LOG_ERROR( RED_LOG_CHANNEL( RedIO ), TXT("FIX_LINUX open wchar_t in CNativeFileHandle::Open"));
+	const Bool ret = false;
+#else
 	const Bool ret = m_file.Open( path, openFlags );
+#endif
 
 #ifdef RED_PROFILE_FILE_SYSTEM
 	if ( m_async )

@@ -10,6 +10,8 @@
 # include "redIOSystemFileWinAPI.h"
 #elif defined( RED_PLATFORM_ORBIS )
 # include "redIOFiosFileOrbisAPI.h"
+#elif defined( RED_PLATFORM_LINUX )
+# include "redIOSystemFileLinuxAPI.h"
 #else
 # error Platform unsupported
 #endif
@@ -27,7 +29,7 @@ REDIO_NAMESPACE_BEGIN
 class CNativeFileHandle
 {
 private:
-#if defined( RED_PLATFORM_WINPC ) || defined( RED_PLATFORM_DURANGO )
+#if defined( RED_PLATFORM_WINPC ) || defined( RED_PLATFORM_DURANGO ) || defined( RED_PLATFORM_LINUX )
 	OSAPI::CSystemFile						m_file;
 #elif defined( RED_PLATFORM_ORBIS )
 	OSAPI::CFiosFile						m_file;
