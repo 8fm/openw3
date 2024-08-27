@@ -262,6 +262,9 @@ namespace Red { namespace Threads {
 		return static_cast< Uint32 >( ::GetCurrentThreadId() );
 #elif defined( RED_PLATFORM_ORBIS )
 		return static_cast< Uint32 >( ::scePthreadGetthreadid() );
+#elif defined( RED_PLATFORM_LINUX )
+		// Hope to avoid a syscall just to get an ID. otherwise syscall(SYS_gettid). Should be unqiue enough on Linux.
+		return static_cast< Uint32 >( ::pthread_self() );
 #else
 # error Unsupported platform!
 #endif

@@ -14,7 +14,7 @@
 // Memory barriers
 #if defined ( RED_COMPILER_MSC )
 #	define RED_THREADS_MEMORY_BARRIER() do{ _ReadWriteBarrier(); MemoryBarrier(); }while(false)
-#elif defined ( RED_COMPILER_CLANG ) && defined ( RED_PLATFORM_ORBIS )
+#elif defined ( RED_COMPILER_CLANG )
 #	include <x86intrin.h>
 #	define RED_THREADS_MEMORY_BARRIER() _mm_mfence()
 #else

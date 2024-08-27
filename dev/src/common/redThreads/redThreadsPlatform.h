@@ -108,4 +108,24 @@ namespace Red { namespace Threads {
 #	define REDTHR_WIN_CHECK( expression ) (void)(expression)
 #endif
 
+#if defined( RED_PLATFORM_LINUX )
+#	ifdef RED_ASSERTS_ENABLED
+#		define REDTHR_PTHREAD_CHECK( expression ) do{ int ret_ = (expression); (void)ret_; RED_ASSERT( ret_ == 0, MACRO_TXT( #expression ) TXT("\nReturn value: 0x%08X"), ret_ ); }while(false)
+#	else
+#		define REDTHR_PTHREAD_CHECK( expression ) RED_VERIFY( (expression), "" )
+#	endif
+#else
+#	define REDTHR_PTHREAD_CHECK( expression ) (void)(expression)
+#endif
+
+#if defined( RED_PLATFORM_LINUX )
+#	ifdef RED_ASSERTS_ENABLED
+#		define REDTHR_SEMA_CHECK( expression ) do{ int ret_ = (expression); int err_ = errno; (void)ret_; (void)err_; RED_ASSERT( ret_ != -1, MACRO_TXT( #expression ) TXT("\nError code: 0x%08X"), err_ ); }while(false)
+#	else
+#		define REDTHR_SEMA_CHECK( expression ) RED_VERIFY( (expression), "" )
+#	endif
+#else
+#	define REDTHR_SEMA_CHECK( expression ) (void)(expression)
+#endif
+
 #endif // RED_THREADS_PLATFORM_H
