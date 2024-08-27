@@ -11,6 +11,7 @@ set(SRC_FILES
     "redIOFiosFileOrbisAPI.cpp"
     "redIOProactorGenericAPI.cpp"
     "redIOProactorOrbisAPI.cpp"
+    "redIOSystemFileLinuxAPI.cpp"
     "redIOSystemFileWinAPI.cpp"
 )
 
