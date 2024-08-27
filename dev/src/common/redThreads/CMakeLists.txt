@@ -5,6 +5,7 @@ include(${CMAKE_SOURCE_DIR}/cmake/BuildOptions.cmake)
 
 set(SRC_FILES
     "redThreadsThread.cpp"
+    "redThreadsThreadLinuxAPI.cpp"
     "redThreadsThreadOrbisAPI.cpp"
     "redThreadsThreadWinAPI.cpp"
 )

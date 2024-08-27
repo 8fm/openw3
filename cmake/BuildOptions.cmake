@@ -69,6 +69,9 @@ else()
     add_compile_options(-fPIC -ffast-math -finput-charset=UTF-8 -fshort-wchar)
     add_compile_options(-ffunction-sections -fdata-sections)
 
+    add_compile_options(-fno-finite-math-only) # for isnan in redMath
+    add_compile_options(-mfpmath=sse -msse3)
+
     # Verbose output
     add_compile_options(-v)
     add_link_options(-v)
