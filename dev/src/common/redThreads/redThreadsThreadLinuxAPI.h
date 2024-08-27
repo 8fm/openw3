@@ -13,158 +13,136 @@
 //////////////////////////////////////////////////////////////////////////
 // Forward declarations
 //////////////////////////////////////////////////////////////////////////
-namespace red
-{
+namespace Red { namespace Threads {
 
-	class Thread;
+	class CThread;
 
-} // namespace red
+} } // namespace Red { namespace Threads {
 
-  //////////////////////////////////////////////////////////////////////////
-  // Synchronization object implementation decls
-  //////////////////////////////////////////////////////////////////////////
-namespace red
-{
-	namespace LinuxAPI
+//////////////////////////////////////////////////////////////////////////
+// Namespace functions
+//////////////////////////////////////////////////////////////////////////
+namespace Red { namespace Threads { namespace LinuxAPI {
+
+void InitializeFrameworkImpl( TAffinityMask mainThreadAffinityMask );
+void ShutdownFrameworkImpl();
+
+} } } // namespace Red { namespace Threads { namespace LinuxAPI {
+
+//////////////////////////////////////////////////////////////////////////
+// Synchronization object implementation decls
+//////////////////////////////////////////////////////////////////////////
+namespace Red { namespace Threads { namespace LinuxAPI {
+
+	class CMutexImpl
 	{
+		friend class CConditionVariableImpl;
 
-		class MutexImpl
-		{
-			friend class ConditionVariableImpl;
+	private:
+		pthread_mutex_t m_mutex;
 
-		private:
-			pthread_mutex_t m_mutex;
+	protected:
+		CMutexImpl();
+		~CMutexImpl();
 
-		protected:
-			MutexImpl();
-			~MutexImpl();
+	protected:
+		void		AcquireImpl();
+		Bool		TryAcquireImpl();
+		void		ReleaseImpl();
+		void		SetSpinCountImpl( TSpinCount count );
+	};
 
-		protected:
-			void		AcquireImpl();
-			Bool		TryAcquireImpl();
-			void		ReleaseImpl();
-			void		SetSpinCountImpl( TSpinCount count );
-		};
-
-		class RWLockImpl
-		{
-		private:
-			pthread_rwlock_t m_rwlock;
-
-		protected:
-			RWLockImpl();
-			~RWLockImpl();
-
-		protected:
-			void AcquireReadSharedImpl();
-			void AcquireWriteExclusiveImpl();
-
-			void ReleaseReadSharedImpl();
-			void ReleaseWriteExclusiveImpl();
-
-			// 		Bool TryAcquireReadSharedImpl();
-			// 		Bool TryAcquireWriteExclusiveImpl();
-		};
-
-		class SemaphoreImpl
-		{
-		private:
-			sem_t		m_semaphore;
-
-		protected:
-			SemaphoreImpl( Int32 initialCount, Int32 maximumCount );
-			~SemaphoreImpl();
-
-		protected:
-			void		AcquireImpl();
-			Bool		TryAcquireImpl( TTimespec timeoutMs );
-			void		ReleaseImpl( Int32 count );
-			const void* GetOSHandleImpl() const;
-		};
-
-		class ConditionVariableImpl
-		{
-		private:
-			pthread_cond_t 				m_cond;
-
-		protected:
-			ConditionVariableImpl();
-			~ConditionVariableImpl();
-
-		protected:
-			void WaitImpl( MutexImpl& mutexImpl );
-			void WaitWithTimeoutImpl( MutexImpl& mutexImpl, TTimespec timeoutMs );
-
-			void WakeAnyImpl();
-			void WakeAllImpl();
-		};
-
-		class ManualResetEventImpl
-		{
-		private:
-			pthread_mutex_t m_mutex;
-			pthread_cond_t m_cond;
-			bool m_triggered;
-
-		protected:
-			explicit ManualResetEventImpl( Bool startSignalled );
-			~ManualResetEventImpl();
-
-		protected:
-			void SetEventImpl();
-			void ResetEventImpl();
-			void WaitImpl();
-			Bool TryWaitImpl( TTimespec timeoutMs );
-			const void* GetOSHandleImpl() const;
-		};
-
-	}
-} // namespace red { namespace LinuxAPI {
-
- //////////////////////////////////////////////////////////////////////////
- // Thread object implementation
- //////////////////////////////////////////////////////////////////////////
-namespace red
-{
-	namespace LinuxAPI
+	class CRWLockImpl
 	{
+	private:
+		pthread_rwlock_t m_rwlock;
 
-		void YieldCurrentThreadImpl();
-		void SleepOnCurrentThreadImpl( TTimespec sleepTimeInMS );
-		void SetCurrentThreadAffinityImpl( TAffinityMask affinityMask );
-		void SetCurrentThreadNameImpl( const char* threadName );
-		Uint32 GetMaxHardwareConcurrencyImpl();
+	protected:
+		CRWLockImpl();
+		~CRWLockImpl();
 
-		class ThreadImpl
-		{
-		private:
-			Thread*				m_debug;
+	protected:
+		void AcquireReadSharedImpl();
+		void AcquireWriteExclusiveImpl();
 
-		private:
-			ThreadMemParams		m_memParams;
+		void ReleaseReadSharedImpl();
+		void ReleaseWriteExclusiveImpl();
 
-		private:
-			pthread_t			m_thread;
+// 		Bool TryAcquireReadSharedImpl();
+// 		Bool TryAcquireWriteExclusiveImpl();
+	};
 
-		public:
-			ThreadImpl( const ThreadMemParams& memParams );
-			~ThreadImpl();
+	class CSemaphoreImpl
+	{
+	private:
+		sem_t		m_semaphore;
 
-			void					InitThread( Thread* context );
-			void					JoinThread();
-			void					DetachThread();
+	protected:
+		CSemaphoreImpl( Int32 initialCount, Int32 maximumCount );
+		~CSemaphoreImpl();
 
-		public:
-			void					SetAffinityMask( Uint64 mask );
-			void					SetPriority( EThreadPriority priority );
+		void		AcquireImpl();
+		Bool		TryAcquireImpl( TTimespec timeoutMs );
+		void		ReleaseImpl( Int32 count );
+	};
 
-		public:
-			Bool					operator==( const ThreadImpl& rhs ) const;
-			RED_INLINE Bool			IsValid() const { return m_thread != pthread_t(); }
-		};
+	class CConditionVariableImpl
+	{
+	private:
+		pthread_cond_t 				m_cond;
 
-	}
-} // namespace red { namespace LinuxAPI {
+	protected:
+		CConditionVariableImpl();
+		~CConditionVariableImpl();
+
+	protected:
+		void WaitImpl( CMutexImpl& mutexImpl );
+
+		void WakeAnyImpl();
+		void WakeAllImpl();
+	};
+
+} } } // namespace Red { namespace Threads { namespace LinuxAPI {
+
+//////////////////////////////////////////////////////////////////////////
+// Thread object implementation
+//////////////////////////////////////////////////////////////////////////
+namespace Red { namespace Threads { namespace LinuxAPI {
+
+	void YieldCurrentThreadImpl();
+	void SleepOnCurrentThreadImpl( TTimespec sleepTimeInMS );
+
+	class CThreadImpl
+	{
+	private:
+		CThread*				m_debug;
+
+	private:
+		SThreadMemParams		m_memParams;
+
+	private:
+		pthread_t				m_thread;
+
+	public:
+		CThreadImpl( const SThreadMemParams& memParams );
+		~CThreadImpl();
+
+		void					InitThread( CThread* context );
+		void					JoinThread();
+		void					DetachThread();
+
+	public:
+		void					SetAffinityMask( Uint64 mask );
+		void					SetPriority( EThreadPriority priority );
+
+	public:
+		Bool					operator==( const CThreadImpl& rhs ) const;
+
+	private:
+		RED_INLINE Bool			IsValid() const { return m_thread != pthread_t(); }
+	};
+
+} } } // namespace Red { namespace Threads { namespace LinuxAPI {
 
 #include "redThreadsThreadLinuxAPI.inl"
 

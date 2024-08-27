@@ -41,6 +41,8 @@ namespace Red { namespace Threads {
 #	include "redThreadsThreadWinAPI.h"
 #elif defined( RED_THREADS_PLATFORM_ORBIS_API )
 #	include "redThreadsThreadOrbisAPI.h"
+#elif defined( RED_THREADS_PLATFORM_LINUX_API )
+#	include "redThreadsThreadLinuxAPI.h"
 #else
 #	error No thread implementation for platform
 #endif
@@ -260,6 +262,8 @@ namespace Red { namespace Threads {
 #	include "redThreadsThreadWinAPI.inl"
 #elif defined( RED_THREADS_PLATFORM_ORBIS_API )
 #	include "redThreadsThreadOrbisAPI.inl"
+#elif defined( RED_THREADS_PLATFORM_LINUX_API )
+#	include "redThreadsThreadLinuxAPI.inl"
 #else
 #	error No thread implementation for platform
 #endif

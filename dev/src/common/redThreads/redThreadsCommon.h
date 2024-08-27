@@ -45,6 +45,14 @@ const TStackSize				g_kDefaultSpawnedThreadStackSize = 2 * 1024 * 1024;
 
 } } } // namespace Red { namespace Threads { namespace OrbisAPI {
 
+#elif defined( RED_THREADS_PLATFORM_LINUX_API )
+
+namespace Red { namespace Threads { namespace LinuxAPI {
+
+const TStackSize				g_kDefaultSpawnedThreadStackSize = 2 * 1024 * 1024;
+
+} } } // namespace Red { namespace Threads { namespace LinuxAPI {
+
 #endif
 
 #endif // RED_THREADS_CONSTS_H
