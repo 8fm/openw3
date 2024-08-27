@@ -10,7 +10,7 @@
 
 #if defined( RED_PLATFORM_WIN32 ) || defined( RED_PLATFORM_WIN64 ) || defined( RED_PLATFORM_DURANGO )
 # include <float.h> // For _isnan
-#elif defined( RED_PLATFORM_ORBIS )
+#elif defined( RED_PLATFORM_ORBIS ) || defined( RED_PLATFORM_LINUX )
 # include <math.h> // For isnan
 #endif
 
@@ -22,7 +22,7 @@ namespace Red
 		{
 			RED_INLINE Red::System::Bool IsNan( Red::System::Float r )
 			{
-#ifdef RED_PLATFORM_ORBIS
+#if defined( RED_PLATFORM_ORBIS ) || defined( RED_PLATFORM_LINUX )
 				return ::isnan( r ) != 0;
 #elif defined( RED_PLATFORM_WIN32 ) || defined( RED_PLATFORM_WIN64 ) || defined( RED_PLATFORM_DURANGO )
 				return ::_isnan( r ) != 0;
@@ -34,7 +34,7 @@ namespace Red
 
 			RED_INLINE Red::System::Bool IsNan( Red::System::Double r )
 			{
-#ifdef RED_PLATFORM_ORBIS
+#if defined( RED_PLATFORM_ORBIS ) || defined( RED_PLATFORM_LINUX )
 				return ::isnan( r ) != 0;
 #elif defined( RED_PLATFORM_WIN32 ) || defined( RED_PLATFORM_WIN64 ) || defined( RED_PLATFORM_DURANGO )
  				return ::_isnan( r ) != 0;

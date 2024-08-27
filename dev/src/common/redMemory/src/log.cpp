@@ -20,7 +20,7 @@ namespace memory
 		Red::System::VSNPrintF( buffer, 255, message, arglist );
 		va_end( arglist );
 
-		auto messageLength = Strlen( buffer, sizeof( buffer ) );
+		auto messageLength = Red::System::StringLength( buffer, sizeof( buffer ) );
 
 		u64 retval = 0;
 		mbstowcs_s( &retval, ouputBuffer, messageLength + 1, buffer, messageLength );

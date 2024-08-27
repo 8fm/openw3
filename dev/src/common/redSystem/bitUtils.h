@@ -73,8 +73,10 @@ namespace Red
 				{
 					return 0;
 				}
-#else
+#elif defined(__BMI__)
 				return mask == 0 ? 0 : __tzcnt_u32( mask );
+#else
+				return mask == 0 ? 0 : __builtin_ctz( mask );
 #endif
 			}
 
@@ -95,8 +97,10 @@ namespace Red
 				{
 					return 0;
 				}
-#else
+#elif defined(__BMI__)
 				return mask == 0 ? 0 : __tzcnt_u64( mask );
+#else
+				return mask == 0 ? 0 : __builtin_ctzll( mask );
 #endif
 			}
 #endif
@@ -117,8 +121,10 @@ namespace Red
 				{
 					return 0;
 				}
-#else
+#elif defined(__LZCNT__)
 				return mask == 0 ? 0 : ( 31 - __lzcnt32( mask ) );
+#else
+				return mask == 0 ? 0 : ( 31 - __builtin_clz( mask ) );
 #endif
 			}
 
@@ -139,8 +145,10 @@ namespace Red
 				{
 					return 0;
 				}
-#else
+#elif defined(__LZCNT__)
 				return mask == 0 ? 0 : ( 63 - __lzcnt64( mask ) );
+#else
+				return mask == 0 ? 0 : ( 63 - __builtin_clzll( mask ) );
 #endif
 			}
 

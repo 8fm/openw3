@@ -15,8 +15,10 @@
 #include "../../redSystem/os.h"
 #include "../../redSystem/types.h"
 
+#ifndef RED_PLATFORM_LINUX
 #include <xutility>
 //#include <xstddef>
+#endif
 #include <type_traits>
 #include <array>
 #include <new>

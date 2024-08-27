@@ -754,7 +754,7 @@ String CUserProfileManagerWindowsSaving::BuildFullDisplayNameForSave( const SSav
 
 		if ( arabicHack )
 		{
-			Uint32 lastCharPos = Uint32( red::Strlen( buffer ) ) - 1;
+			Uint32 lastCharPos = Uint32( Red::System::StringLength( buffer ) ) - 1;
 			if ( lastCharPos < BUF_SIZE - 5 )
 			{
 				if ( 1589 == buffer[ lastCharPos ] ) // arabic equivalent of "AM"

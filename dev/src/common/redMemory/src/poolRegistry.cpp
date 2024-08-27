@@ -79,7 +79,7 @@ namespace memory
 		{
 			info.storage = param.storage;
 			info.budget = param.budget;
-			Memcpy( info.name, name, std::min( c_poolNameMaxSize - 1, static_cast< u32 >( Strlen( name ) ) ) );
+			Memcpy( info.name, name, std::min( c_poolNameMaxSize - 1, static_cast< u32 >( Red::System::StringLength( name ) ) ) );
 			if( param.parentHandle != c_poolNodeInvalid )
 			{
 				PoolInfo & parent = m_nodes[ param.parentHandle ];

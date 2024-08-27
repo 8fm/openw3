@@ -504,7 +504,13 @@ CAsyncFileHandleCache::SCacheEntry* CAsyncFileHandleCache::OpenCacheEntry_NoSync
 	RedIOProfiler::ProfileAsyncIOOpenFileStart( absoluteFilePath );
 #endif
 	CAsyncFile* file = ::new( buf ) CAsyncFile;
+
+#ifdef RED_PLATFORM_LINUX // FIX_LINUX open wchar_t
+	RED_LOG_ERROR( RED_LOG_CHANNEL( RedIO ), TXT("FIX_LINUX open wchar_t in CAsyncFileHandleCache::OpenCacheEntry_NoSync"));
+	if ( true )
+#else
 	if ( ! file->Open( absoluteFilePath, eOpenFlag_Read | eOpenFlag_Async ) )
+#endif
 	{
 #ifdef RED_PROFILE_FILE_SYSTEM
 		RedIOProfiler::ProfileAsyncIOOpenFileEnd( 0 );

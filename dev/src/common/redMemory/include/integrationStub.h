@@ -125,11 +125,6 @@ namespace red
 	inline void Memzero( void* buffer, size_t size ) { Red::System::MemoryZero( buffer, size ); }
 	inline void Memset( void* buffer, Int32 value, size_t size ) { Red::System::MemorySet( buffer, value, size ); }
 
-	inline size_t Strlen( const AnsiChar* str )												{ return std::strlen( str ); }
-	inline size_t Strlen( const UniChar* str )												{ return ::wcslen( str ); }
-	inline size_t Strlen( const AnsiChar* str, size_t maxBufferSize )							{ return ::strnlen_s( str, maxBufferSize ); }
-	inline size_t Strlen( const UniChar* str, size_t maxBufferSize )							{ return ::wcsnlen_s( str, maxBufferSize ); }
-
 	inline bool UnitTestMode() { return Red::System::UnitTestMode(); }
 
 	namespace Log
