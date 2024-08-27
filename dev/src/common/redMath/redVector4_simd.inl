@@ -465,10 +465,11 @@ namespace RedMath
 		//////////////////////////////////////////////////////////////////////////
 		Red::System::Bool RedVector4::IsOk() const
 		{
-			return ( ( Xi & __inf[0] ) != __inf[0] && 
-					 ( Yi & __inf[0] ) != __inf[0] &&
-					 ( Zi & __inf[0] ) != __inf[0] &&
-					 ( Wi & __inf[0] ) != __inf[0] );
+#if defined( RED_PLATFORM_WINPC ) && ( _MSC_VER == 1700 )
+			return _finitef( X ) && _finitef( Y ) && _finitef( Z ) && _finitef( W );
+#else
+			return std::isfinite( X ) && std::isfinite( Y ) && std::isfinite( Z ) && std::isfinite( W );
+#endif
 		}
 
 		//////////////////////////////////////////////////////////////////////////

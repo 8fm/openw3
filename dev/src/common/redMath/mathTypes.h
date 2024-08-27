@@ -6,7 +6,10 @@
 #define _REDMATH_LIB_TYPES_H
 #include "../redSystem/error.h"
 #include <tmmintrin.h>
+#ifndef RED_PLATFORM_LINUX
 #include <xutility>
+#endif
+#include <climits>
 #include <float.h>
 #include <math.h>
 #include "../redSystem/compilerExtensions.h"
@@ -15,13 +18,11 @@
 #define RED_EPSILON FLT_EPSILON
 #define RED_ISNAN( x ) _isnan(x)
 #define RED_ISFINITE( x ) isfinite<float>( x )
-static const unsigned int __nan[2] = { 0x7ff00000, 0xffffffff };
-static const unsigned int __inf[2] = { 0x7f800000, 0xff800000 };
 
-#define RED_INFINITY (*(const float *)__inf)
-#define RED_NEG_INFINITY (*(const float *) ( &__inf[1] ) )
-#define RED_NAN (*(const float *)__nan)
-#define RED_NEG_NAN (*(const float *) ( &__nan[1] ) )
+#define RED_INFINITY      std::numeric_limits<float>::infinity()
+#define RED_NEG_INFINITY -std::numeric_limits<float>::infinity()
+#define RED_NAN      std::numeric_limits<float>::quiet_NaN()
+#define RED_NEG_NAN -std::numeric_limits<float>::quiet_NaN()
 
 #ifndef RED_FINAL_BUILD
 	#define RED_MATH_MEM_ALIGNMENT_CHECK(ptr, alignment) \

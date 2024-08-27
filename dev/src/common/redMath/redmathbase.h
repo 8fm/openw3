@@ -7,7 +7,7 @@
 #include "../redSystem/os.h"
 #include "../redSystem/error.h"
 #include <float.h>
-#include <math.h>
+#include <cmath>
 #include "numericalutils.h"
 #include "mathfunctions_fpu.h"
 
