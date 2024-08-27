@@ -8,6 +8,7 @@
 #include "types.h"
 
 #include <cfloat>
+#include <climits>
 #include <limits>
 
 namespace Red
