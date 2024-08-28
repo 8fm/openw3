@@ -11,6 +11,8 @@
 #	include "platform/platformWindows.h"
 #elif defined( RED_PLATFORM_ORBIS )
 #	include "platform/platformOrbis.h"
+#elif defined( RED_PLATFORM_LINUX )
+#	include "platform/platformLinux.h"
 #else
 #	error No red network implementation for current platform
 #endif

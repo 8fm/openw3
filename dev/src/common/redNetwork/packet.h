@@ -9,6 +9,7 @@
 #include "../redSystem/os.h"
 
 #include "network.h"
+#include <climits>
 
 namespace Red
 {
