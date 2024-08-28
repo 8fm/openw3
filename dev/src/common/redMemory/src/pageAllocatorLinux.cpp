@@ -3,7 +3,7 @@
 */
 
 #include "build.h"
-#include "systemPageAllocatorLinux.h"
+#include "pageAllocatorLinux.h"
 #include "assert.h"
 #include "utils.h"
 
@@ -13,13 +13,13 @@ namespace red
 {
 namespace memory
 {
-	SystemPageAllocatorLinux::SystemPageAllocatorLinux()
+	PageAllocatorLinux::PageAllocatorLinux()
 	{}
 	
-	SystemPageAllocatorLinux::~SystemPageAllocatorLinux()
+	PageAllocatorLinux::~PageAllocatorLinux()
 	{}
 
-	void SystemPageAllocatorLinux::OnInitialize()
+	void PageAllocatorLinux::OnInitialize()
 	{
 		// has to use real page size as this is the allocation granularity on Linux
 		const long pageSize = sysconf( _SC_PAGESIZE );
@@ -33,7 +33,7 @@ namespace memory
 		SetPageSize( pageSize );
 	}
 
-	VirtualRange SystemPageAllocatorLinux::OnReserveRange( u64 size, u32 pageSize, u32 ) 
+	VirtualRange PageAllocatorLinux::OnReserveRange( u64 size, u32 pageSize, u32 )
 	{
 		const u64 sizeRoundedToPageSize = RoundUp( size, static_cast< u64 >( pageSize ) );
 		void* pages = ::mmap( nullptr, sizeRoundedToPageSize, PROT_NONE, MAP_PRIVATE | MAP_ANONYMOUS, -1, 0 );
@@ -50,20 +50,7 @@ namespace memory
 		return range;
 	}
 
-	VirtualRange SystemPageAllocatorLinux::OnReserveAlignedRange( u64 size, u32 pageSize, u32 flags, u32 alignment ) 
-	{
-		if ( alignment == pageSize )
-		{
-			return OnReserveRange( size, pageSize, flags );
-		}
-		else
-		{
-			RED_MEMORY_HALT( "OnReserveAlignedRange with alignment different than page size is not available on Linux" );
-			return NullVirtualRange();
-		}
-	}
-
-	void SystemPageAllocatorLinux::OnReleaseRange( const VirtualRange & range )
+	void PageAllocatorLinux::OnReleaseRange( const VirtualRange & range )
 	{
 		void * ptr = reinterpret_cast< void* >( range.start );
 

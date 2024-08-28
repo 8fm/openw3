@@ -11,6 +11,8 @@
 #include "pageAllocatorDurango.h"
 #elif defined( RED_PLATFORM_ORBIS )
 #include "pageAllocatorOrbis.h"
+#elif defined( RED_PLATFORM_LINUX )
+#include "pageAllocatorLinux.h"
 #endif
 
 namespace red
@@ -23,6 +25,8 @@ namespace memory
 	typedef PageAllocatorDurango PlatformPageAllocator;
 #elif defined( RED_PLATFORM_ORBIS )
 	typedef PageAllocatorOrbis PlatformPageAllocator;
+#elif defined( RED_PLATFORM_LINUX )
+	typedef PageAllocatorLinux PlatformPageAllocator;
 #endif
 }
 }

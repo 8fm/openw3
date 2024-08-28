@@ -7,7 +7,11 @@
 #include "debugAllocatorConstant.h"
 #include "utils.h"
 #include "../../redSystem/unitTestMode.h"
+#ifdef RED_PLATFORM_LINUX
+#include <malloc.h> // for malloc_usable_size()
+#else
 #include <xutility>
+#endif
 
 namespace red
 {
@@ -36,6 +40,49 @@ namespace
 #endif
 		RED_UNUSED( block );
 	} 
+
+	const u32 c_offset = sizeof( void* );
+
+	void* AlignedAlloc( u32 size, u32 alignment )
+	{
+		RED_MEMORY_ASSERT( IsPowerOf2( alignment ), "Alignment must be power of 2." );
+
+		size += alignment - 1 + c_offset;
+		void* ptr = std::malloc( size );
+		if ( ptr )
+		{
+			u64 userPtr = red::memory::AlignAddress( reinterpret_cast< u64 >( ptr ) + c_offset, alignment );
+			RED_MEMORY_ASSERT( IsAligned( userPtr, alignment ), "Allocated memory is not properly aligned" );
+
+			// store the address of the actual allocation
+			*reinterpret_cast< void** >( userPtr - c_offset ) = ptr;
+
+			return reinterpret_cast< void* >( userPtr );
+		}
+
+		return nullptr;
+	}
+
+	void AlignedFree( u64 address )
+	{
+		RED_MEMORY_ASSERT( address > c_offset, "Given address is invalid." );
+		void* ptr = *reinterpret_cast< void** >( address - c_offset );
+		std::free( ptr );
+	}
+
+	u32 GetAllocatedMemorySize( u64 address )
+	{
+		RED_MEMORY_ASSERT( address > c_offset, "Given address is invalid." );
+
+		void* ptr = *reinterpret_cast< void** >( address - c_offset );
+		const u32 diff = static_cast< u32 >( address - reinterpret_cast< u64 >( ptr ) );
+#if defined( RED_COMPILER_CLANG )
+		size_t blockSize = malloc_usable_size( ptr );
+#else
+		size_t blockSize = _msize( ptr );
+#endif
+		return static_cast< u32 >( blockSize ) - diff;
+	}
 }
 
 	DebugAllocator::DebugAllocator()
@@ -52,11 +99,12 @@ namespace
 	Block DebugAllocator::AllocateAligned( u32 size, u32 alignment )
 	{
 		alignment = std::max( c_debugAllocatorDefaultAlignment, alignment ); 
-		void * ptr = _aligned_malloc( size, alignment );
+		void * ptr = AlignedAlloc( size, alignment );
+		const u64 address = AddressOf( ptr );
 		Block block =
 		{
-			AddressOf( ptr ),
-			static_cast< u32 >( _aligned_msize( ptr, alignment, 0 ) )
+			address,
+			GetBlockSize( address )
 		};
 
 		MarkAllocatedBlock( block );
@@ -77,9 +125,7 @@ namespace
 			return NullBlock();
 		}
 
-		void * ptr = reinterpret_cast< void * >( block.address );
-
-		u64 oldSize = _aligned_msize( ptr, c_debugAllocatorDefaultAlignment, 0 );
+		u64 oldSize = GetBlockSize( block.address );
 		block.size = oldSize;
 
 		Block newBlock = AllocateAligned( size, c_debugAllocatorDefaultAlignment );
@@ -97,12 +143,11 @@ namespace
 	{
 		if( block.address )
 		{
-			void * ptr = reinterpret_cast< void* >( block.address );
-			block.size = static_cast< u32 >( _aligned_msize( ptr, c_debugAllocatorDefaultAlignment, 0 ) );
+			block.size = GetBlockSize( block.address );
 			
 			MarkFreeBlock( block );
 			
-			_aligned_free( ptr );
+			AlignedFree( block.address );
 		}	
 	}
 
@@ -119,8 +164,7 @@ namespace
 
 	u64 DebugAllocator::GetBlockSize( u64 address ) const
 	{
-		void * ptr = reinterpret_cast< void* >( address );
-		return _aligned_msize( ptr, c_debugAllocatorDefaultAlignment, 0 );
+		return GetAllocatedMemorySize( address );
 	}
 
 	DebugAllocator & AcquireDebugAllocator()

@@ -10,7 +10,9 @@
 #include "tlsfConstant.h"
 #include "tlsfBlock.h"
 
+#ifndef RED_PLATFORM_LINUX
 #include <xutility>
+#endif
 
 namespace red
 {

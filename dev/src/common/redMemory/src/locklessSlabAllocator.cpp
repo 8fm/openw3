@@ -10,7 +10,11 @@
 #include "slabHeader.h"
 #include "threadMonitor.h"
 
+#ifdef RED_PLATFORM_LINUX
+#include <algorithm>
+#else
 #include <xutility>
+#endif
 #include "flags.h"
 
 namespace red

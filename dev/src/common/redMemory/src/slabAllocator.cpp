@@ -11,7 +11,9 @@
 
 #include "../../redSystem/unitTestMode.h"
 
+#ifndef RED_PLATFORM_LINUX
 #include <xutility>
+#endif
 
 RED_DISABLE_WARNING_CLANG( "-Wunused-private-field" ) // Ignore warning due to padding not being used.
 

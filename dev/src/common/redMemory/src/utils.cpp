@@ -7,7 +7,9 @@
 #include "utils.h"
 #include "block.h"
 #include "defaultAllocator.h"
+#ifndef RED_PLATFORM_LINUX
 #include <xutility>
+#endif
 
 namespace red
 {
