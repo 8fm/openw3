@@ -5,7 +5,11 @@
 #include "build.h"
 #include "threadMonitor.h"
 
+#ifdef RED_PLATFORM_LINUX
+#include <algorithm>
+#else
 #include <xutility>
+#endif
 
 namespace red
 {
@@ -28,6 +32,18 @@ namespace
 	{
 		auto result = scePthreadKeyCreate( &s_orbisThreadKey, NotifyThreadDied );
 		RED_FATAL_ASSERT( result == SCE_OK, "scePthreadKeyCreate failed. Code: %d", result );
+		RED_UNUSED( result );
+	}
+
+#elif defined( RED_PLATFORM_LINUX )
+
+	static pthread_once_t s_linuxOnceControl = PTHREAD_ONCE_INIT;
+	static pthread_key_t s_linuxThreadKey;
+
+	void ThreadKeyIntialization()
+	{
+		auto result = pthread_key_create( &s_linuxThreadKey, NotifyThreadDied );
+		RED_FATAL_ASSERT( result == 0, "pthread_key_create failed. Code: %d", result );
 		RED_UNUSED( result );
 	}
 
@@ -59,6 +75,11 @@ namespace
 		scePthreadOnce( &s_orbisOnceControl, ThreadKeyIntialization ); 
 		auto result = scePthreadSetspecific( s_orbisThreadKey, this );
 		RED_FATAL_ASSERT( result == SCE_OK, "scePthreadSetspecific failed. Code: %d", result );
+		RED_UNUSED( result );
+#elif defined( RED_PLATFORM_LINUX )
+		pthread_once( &s_linuxOnceControl, ThreadKeyIntialization );
+		auto result = pthread_setspecific( s_linuxThreadKey, this  );
+		RED_FATAL_ASSERT( result == 0, "pthread_setspecific failed. Code: %d", result );
 		RED_UNUSED( result );
 #else
 		static_assert( 0, "Unknown Platform. Lockless allocators won't work correctly." );

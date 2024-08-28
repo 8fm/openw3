@@ -11,7 +11,7 @@
 #define RED_MEGA_BYTE( count ) ( count << 20 )
 #define RED_GIGA_BYTE( count ) ( static_cast< red::memory::u64 >( count ) << 30 )
 
-#ifdef RED_PLATFORM_ORBIS
+#if defined( RED_PLATFORM_ORBIS ) || defined( RED_PLATFORM_LINUX )
 	#define RED_ALIGN( alignment ) alignas( alignment )
 	#define RED_STATIC_PRIORITY( number ) __attribute__ ((init_priority (number)))
 #else

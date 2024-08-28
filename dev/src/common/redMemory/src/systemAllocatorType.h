@@ -12,6 +12,8 @@
 #elif defined( RED_PLATFORM_ORBIS )
 #include "systemAllocatorOrbis.h"
 #include "flexibleSystemAllocator.h"
+#elif defined( RED_PLATFORM_LINUX )
+#include "systemAllocatorLinux.h"
 #endif
 
 namespace red
@@ -27,6 +29,9 @@ namespace memory
 #elif defined( RED_PLATFORM_ORBIS )
 	typedef SystemAllocatorOrbis PlatformSystemAllocator;
 	typedef FlexibleSystemAllocator PlatformFlexibleAllocator;
+#elif defined( RED_PLATFORM_LINUX )
+	typedef SystemAllocatorLinux PlatformSystemAllocator;
+	typedef SystemAllocatorLinux PlatformFlexibleAllocator;
 #endif
 
 	RED_MEMORY_API SystemAllocator & AcquireSystemAllocator();

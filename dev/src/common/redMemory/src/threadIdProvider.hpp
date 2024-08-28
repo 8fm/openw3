@@ -16,6 +16,8 @@ namespace memory
 
 		const ThreadId id = static_cast< ThreadId >( ::scePthreadGetthreadid() );
 
+#elif defined( RED_PLATFORM_LINUX )
+		const ThreadId id = static_cast< ThreadId >( ::pthread_self() );
 #else
 		// Don't ask ... 
 		// I simply manually inlined ::GetCurrentThreadId().
