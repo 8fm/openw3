@@ -256,8 +256,8 @@ namespace Red
 			RED_INLINE void Clear()
 			{
 				m_size = 0;
-				m_start = nullptr;
-				m_end = nullptr;
+				m_start = 0;
+				m_end = 0;
 
 				for( System::Uint32 i = 0; i < m_pool.GetCapacity(); ++i )
 				{

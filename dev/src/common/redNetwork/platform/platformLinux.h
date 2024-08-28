@@ -2,7 +2,13 @@
 * Copyright (c) 2013 CDProjekt Red, Inc. All Rights Reserved.
 */
 
-#pragma once
+#ifndef __RED_NETWORK_LINUX_WRAPPERS_H__
+#define __RED_NETWORK_LINUX_WRAPPERS_H__
+
+//
+#include "../../redSystem/types.h"
+#include "../../redSystem/crt.h"
+#include "../../redSystem/error.h"
 
 // System Includes
 #include <sys/socket.h>
@@ -41,19 +47,11 @@
 #define RED_NET_ERR_ACCEPT_OK	EWOULDBLOCK
 #define RED_NET_ERR_RECEIVE_OK	EWOULDBLOCK
 #define RED_NET_ERR_SEND_OK		EWOULDBLOCK
-#define RED_NET_ERR_SEND_NO_BUF	ENOBUFS
-
-#define RED_NET_ERR_CONNECT_INPROGRESS EALREADY
-#define RED_NET_ERR_ALREADY_CONNECTED EISCONN
 
 #define RED_NET_ERR_ADDR_IN_USE	EADDRINUSE
 
-#define RED_NET_SHUTDOWN_RECEIVE	SHUT_RD
-#define RED_NET_SHUTDOWN_SEND		SHUT_WR
-#define RED_NET_SHUTDOWN_BOTH		SHUT_RDWR 
-
 // Structs
-namespace red
+namespace Red
 {
 	namespace Network
 	{
@@ -83,7 +81,8 @@ namespace red
 
 		typedef socklen_t			SockaddrLen;
 
-		extern const struct in6_addr&	RED_INADDR6_ANY;
+		const struct in6_addr& RED_INADDR6_ANY = in6addr_any;
+		const int c_SocketError = -1;
 
 		typedef sa_family_t			AddressFamily;
 
@@ -93,30 +92,30 @@ namespace red
 		{
 			RED_INLINE SockaddrStorage()
 			{
-				red::Memzero( this, sizeof( SockaddrStorage ) );
+				System::MemoryZero( this, sizeof( SockaddrStorage ) );
 			}
 
 			RED_INLINE const SockaddrStorage& operator=( const SockaddrStorage& other )
 			{
-				red::Memcpy( this, &other, sizeof( sockaddr_storage ) );
+				System::MemoryCopy( this, &other, sizeof( sockaddr_storage ) );
 				return *this;
 			}
 
 			RED_INLINE const SockaddrStorage& operator=( const Sockaddr& other )
 			{
-				red::Memcpy( this, &other, sizeof( Sockaddr ) );
+				System::MemoryCopy( this, &other, sizeof( Sockaddr ) );
 				return *this;
 			}
 
 			RED_INLINE const SockaddrStorage& operator=( const SockaddrIpv4& other )
 			{
-				red::Memcpy( this, &other, sizeof( SockaddrIpv4 ) );
+				System::MemoryCopy( this, &other, sizeof( SockaddrIpv4 ) );
 				return *this;
 			}
 
 			RED_INLINE const SockaddrStorage& operator=( const SockaddrIpv6& other )
 			{
-				red::Memcpy( this, &other, sizeof( SockaddrIpv6 ) );
+				System::MemoryCopy( this, &other, sizeof( SockaddrIpv6 ) );
 				return *this;
 			}
 		};
@@ -127,76 +126,139 @@ namespace red
 
 		namespace Base
 		{
-			extern REDNETWORK_API SocketId Socket( ProtocolFamily family, Int32 type, Int32 protocol );
+			RED_INLINE SocketId Socket( ProtocolFamily family, System::Int32 type, System::Int32 protocol )
+			{
+				return socket( family, type, protocol );
+			}
 
-			extern REDNETWORK_API Bool SetNonBlocking( SocketId socketDescriptor );
+			RED_INLINE System::Bool SetNonBlocking( SocketId socketDescriptor )
+			{
+				int flags = fcntl( socketDescriptor, F_GETFL, 0 );
+				if ( flags < 0 )
+					return false;
 
-			extern REDNETWORK_API Bool Bind( SocketId socketDescriptor, const Sockaddr* address, SockaddrLen size );
+				flags = ( flags | O_NONBLOCK );
+				int result = fcntl( socketDescriptor, F_SETFL, flags );
+				return result > c_SocketError;
+			}
 
-			extern REDNETWORK_API Bool Listen( SocketId socketDescriptor );
+			RED_INLINE System::Bool Bind( SocketId socketDescriptor, const Sockaddr* address, SockaddrLen size )
+			{
+				return bind( socketDescriptor, address, size ) != c_SocketError;
+			}
 
-			extern REDNETWORK_API Bool Accept( SocketId listenSocketDescriptor, SocketId& newSocketDescriptor, Sockaddr* address, SockaddrLen* size );
+			RED_INLINE System::Bool Listen( SocketId socketDescriptor )
+			{
+				return listen( socketDescriptor, SOMAXCONN ) != c_SocketError;
+			}
 
-			extern REDNETWORK_API Bool Connect( SocketId socketDescriptor, const Sockaddr* address, SockaddrLen size );
+			RED_INLINE System::Bool Accept( SocketId listenSocketDescriptor, SocketId& newSocketDescriptor, Sockaddr* address, SockaddrLen* size )
+			{
+				newSocketDescriptor = accept( listenSocketDescriptor, address, size );
+				return newSocketDescriptor != InvalidSocket;
+			}
 
-			extern REDNETWORK_API Bool Shutdown( SocketId socketDescriptor, int how );
+			RED_INLINE System::Bool Connect( SocketId socketDescriptor, const Sockaddr* address, SockaddrLen size )
+			{
+				return connect( socketDescriptor, address, size ) != c_SocketError;
+			}
 
-			extern REDNETWORK_API Bool Close( SocketId socketDescriptor );
+			RED_INLINE System::Bool Close( SocketId socketDescriptor )
+			{
+				return close( socketDescriptor ) != c_SocketError;
+			}
 
-			extern REDNETWORK_API Int32 Send( SocketId socketDescriptor, const void* buffer, Uint32 size );
+			RED_INLINE System::Int32 Send( SocketId socketDescriptor, const void* buffer, System::Uint32 size )
+			{
+				return send( socketDescriptor, static_cast< const char* >( buffer ), size, 0 );
+			}
 
-			extern REDNETWORK_API Int32 Recv( SocketId socketDescriptor, void* buffer, Uint32 size );
+			RED_INLINE System::Int32 Recv( SocketId socketDescriptor, void* buffer, System::Uint32 size )
+			{
+				return recv( socketDescriptor, static_cast< char* >( buffer ), size, 0 );
+			}
 
-			extern REDNETWORK_API Int32 SendTo( SocketId socketDescriptor, const void* buffer, Uint32 bufferSize, const Sockaddr* address, SockaddrLen addressSize );
+			RED_INLINE System::Int32 SendTo( SocketId socketDescriptor, const void* buffer, System::Uint32 bufferSize, const Sockaddr* address, SockaddrLen addressSize )
+			{
+				return sendto( socketDescriptor, static_cast< const char* >( buffer ), bufferSize, 0, address, addressSize );
+			}
 
-			extern REDNETWORK_API Int32 RecvFrom( SocketId socketDescriptor, void* buffer, Uint32 bufferSize, Sockaddr* address, SockaddrLen* addressSize );
+			RED_INLINE System::Int32 RecvFrom( SocketId socketDescriptor, void* buffer, System::Uint32 bufferSize, Sockaddr* address, SockaddrLen* addressSize )
+			{
+				return recvfrom( socketDescriptor, static_cast< char* >( buffer ), bufferSize, 0, address, addressSize );
+			}
 
-			extern REDNETWORK_API Bool GetPeerName( SocketId socketDescriptor, Sockaddr* address, SockaddrLen* size );
+			RED_INLINE System::Bool GetPeerName( SocketId socketDescriptor, Sockaddr* address, SockaddrLen* size )
+			{
+				return getpeername( socketDescriptor, address, size ) != c_SocketError;
+			}
 
-			extern REDNETWORK_API Bool SetSocketOption( SocketId socketDescriptor, Int32 level, Int32 option, const void* value, SocketOptionLength length );
+			RED_INLINE System::Bool SetSocketOption( SocketId socketDescriptor, System::Int32 level, System::Int32 option, const void* value, SocketOptionLength length )
+			{
+				return setsockopt( socketDescriptor, level, option, value, length ) != c_SocketError;
+			}
 
-			extern REDNETWORK_API Bool GetSocketOption( SocketId socketDescriptor, Int32 level, Int32 option, void* value, SocketOptionLength* length );
+			RED_INLINE ErrorCode GetLastError()
+			{
+				return errno;
+			}
 
-			extern REDNETWORK_API ErrorCode GetLastError();
+			RED_INLINE System::Bool Initialize()
+			{
+				return true;
+			}
 
-			extern REDNETWORK_API Bool Initialize();
-
-			extern REDNETWORK_API Bool Shutdown();
+			RED_INLINE System::Bool Shutdown()
+			{
+				return true;
+			}
 		}
 
 		//////////////////////////////////////////////////////////////////////////
 		// Ip string <-> Data Conversion
 		//////////////////////////////////////////////////////////////////////////
-		extern REDNETWORK_API red::Int32 INetPtoN( AddressFamily family, const red::AnsiChar* source, void* destination );
-		extern REDNETWORK_API red::Int32 INetPtoN( AddressFamily family, const red::UniChar* source, void* destination );
+		RED_INLINE Red::System::Int32 INetPtoN( AddressFamily family, const Red::System::AnsiChar* source, void* destination ) { return inet_pton( family, source, destination ); }
+		RED_INLINE Red::System::Int32 INetPtoN( AddressFamily family, const Red::System::UniChar* source, void* destination )
+		{
+			Red::System::AnsiChar convertedIp[RED_NET_MAX_ADDRSTRLEN];
+			Red::System::WideCharToStdChar( convertedIp, source, RED_NET_MAX_ADDRSTRLEN );
 
-		extern REDNETWORK_API red::Bool INetNtoP( AddressFamily family, const void* source, red::AnsiChar* destination, red::Uint32 destinationSize );
-		extern REDNETWORK_API red::Bool INetNtoP( AddressFamily family, const void* source, red::UniChar* destination, red::Uint32 destinationSize );
+			return inet_pton( family, convertedIp, destination );
+		}
+
+		RED_INLINE Red::System::Bool INetNtoP( AddressFamily family, const void* source, Red::System::AnsiChar* destination, Red::System::Uint32 destinationSize ) { return inet_ntop( family,  source, destination, destinationSize ) != nullptr; }
+		RED_INLINE Red::System::Bool INetNtoP( AddressFamily family, const void* source, Red::System::UniChar* destination, Red::System::Uint32 destinationSize )
+		{
+			RED_HALT( "wchar INetNtoP not implemented" );
+			return false;
+		}
 
 		//////////////////////////////////////////////////////////////////////////
 		// Endian Conversion
 		//////////////////////////////////////////////////////////////////////////
-		RED_INLINE Int8		NetworkToHost( const Int8 data )			{ return data; }
-		RED_INLINE Int16	NetworkToHost( const Int16 data )			{ return bswap_16( data ); }
-		RED_INLINE Int32	NetworkToHost( const Int32 data )			{ return bswap_32( data ); }
-		RED_INLINE Int64	NetworkToHost( const Int64 data )			{ return bswap_64( data ); }
+		RED_INLINE System::Int8		NetworkToHost( const System::Int8 data )	{ return data; }
+		RED_INLINE System::Int16	NetworkToHost( const System::Int16 data )	{ return bswap_16( data ); }
+		RED_INLINE System::Int32	NetworkToHost( const System::Int32 data )	{ return bswap_32( data ); }
+		RED_INLINE System::Int64	NetworkToHost( const System::Int64 data )	{ return bswap_64( data ); }
 
-		RED_INLINE Int8		HostToNetwork( const Int8 data )			{ return data; }
-		RED_INLINE Int16	HostToNetwork( const Int16 data )			{ return bswap_16( data ); }
-		RED_INLINE Int32	HostToNetwork( const Int32 data )			{ return bswap_32( data ); }
-		RED_INLINE Int64	HostToNetwork( const Int64 data )			{ return bswap_64( data ); }
+		RED_INLINE System::Int8		HostToNetwork( const System::Int8 data )	{ return data; }
+		RED_INLINE System::Int16	HostToNetwork( const System::Int16 data )	{ return bswap_16( data ); }
+		RED_INLINE System::Int32	HostToNetwork( const System::Int32 data )	{ return bswap_32( data ); }
+		RED_INLINE System::Int64	HostToNetwork( const System::Int64 data )	{ return bswap_64( data ); }
 
-		RED_INLINE Uint8	NetworkToHost( const Uint8 data )			{ return data; }
-		RED_INLINE Uint16	NetworkToHost( const Uint16 data )			{ return bswap_16( data ); }
-		RED_INLINE Uint32	NetworkToHost( const Uint32 data )			{ return bswap_32( data ); }
-		RED_INLINE Uint64	NetworkToHost( const Uint64 data )			{ return bswap_64( data ); }
+		RED_INLINE System::Uint8	NetworkToHost( const System::Uint8 data )	{ return data; }
+		RED_INLINE System::Uint16	NetworkToHost( const System::Uint16 data )	{ return bswap_16( data ); }
+		RED_INLINE System::Uint32	NetworkToHost( const System::Uint32 data )	{ return bswap_32( data ); }
+		RED_INLINE System::Uint64	NetworkToHost( const System::Uint64 data )	{ return bswap_64( data ); }
 
-		RED_INLINE Uint8	HostToNetwork( const Uint8 data )			{ return data; }
-		RED_INLINE Uint16	HostToNetwork( const Uint16 data )			{ return bswap_16( data ); }
-		RED_INLINE Uint32	HostToNetwork( const Uint32 data )			{ return bswap_32( data ); }
-		RED_INLINE Uint64	HostToNetwork( const Uint64 data )			{ return bswap_64( data ); }
+		RED_INLINE System::Uint8	HostToNetwork( const System::Uint8 data )	{ return data; }
+		RED_INLINE System::Uint16	HostToNetwork( const System::Uint16 data )	{ return bswap_16( data ); }
+		RED_INLINE System::Uint32	HostToNetwork( const System::Uint32 data )	{ return bswap_32( data ); }
+		RED_INLINE System::Uint64	HostToNetwork( const System::Uint64 data )	{ return bswap_64( data ); }
 
-		RED_INLINE UniChar	NetworkToHost( const UniChar data )			{ return bswap_16( data ); }
-		RED_INLINE UniChar	HostToNetwork( const UniChar data )			{ return bswap_16( data ); }
+		RED_INLINE System::UniChar	NetworkToHost( const System::UniChar data )	{ return bswap_16( data ); }
+		RED_INLINE System::UniChar	HostToNetwork( const System::UniChar data )	{ return bswap_16( data ); }
 	}
 }
+
+#endif // __RED_NETWORK_LINUX_WRAPPERS_H__
