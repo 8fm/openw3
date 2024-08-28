@@ -10,11 +10,14 @@ set(SRC_FILES
     "memory.cpp"
     "packet.cpp"
     "ping.cpp"
-    "platform/platformWindows.cpp"
     "rawManager.cpp"
     "simpleDynArray.cpp"
     "socket.cpp"
 )
+
+if (WIN32)
+    list(APPEND SRC_FILES "platform/platformWindows.cpp")
+endif()
 
 add_library(${PROJECT_NAME} STATIC ${SRC_FILES})
 
