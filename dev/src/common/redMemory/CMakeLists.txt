@@ -34,7 +34,6 @@ set(SRC_FILES
     "src/oomHandlerIgnore.cpp"
     "src/operatorsLegacy.cpp"
     "src/pageAllocator.cpp"
-    "src/pageAllocatorWin.cpp"
     "src/pool.cpp"
     "src/poolStorage.cpp"
     "src/poolMetrics.cpp"
@@ -51,7 +50,6 @@ set(SRC_FILES
     "src/staticTlsfAllocator.cpp"
     "src/systemAllocator.cpp"
     "src/systemAllocatorType.cpp"
-    "src/systemAllocatorWin.cpp"
     "src/systemBlock.cpp"
     "src/threadIdProvider.cpp"
     "src/threadMonitor.cpp"
@@ -61,6 +59,14 @@ set(SRC_FILES
     "src/vault.cpp"
     "src/virtualRange.cpp"
 )
+
+if (WIN32)
+    list(APPEND SRC_FILES "src/pageAllocatorWin.cpp")
+    list(APPEND SRC_FILES "src/systemAllocatorWin.cpp")
+else()
+    list(APPEND SRC_FILES "src/pageAllocatorLinux.cpp")
+    list(APPEND SRC_FILES "src/systemAllocatorLinux.cpp")
+endif()
 
 add_library(${PROJECT_NAME} STATIC ${SRC_FILES})
 
