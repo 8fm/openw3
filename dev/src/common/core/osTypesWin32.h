@@ -12,7 +12,9 @@ struct FindFileObject
 
 
 typedef HANDLE				FileObject;
+#if 0 // class_CTime is not used anywhere
 typedef FILETIME			FileTimeObject;
+#endif
 
 #if defined( RED_PLATFORM_WIN32 ) || defined( RED_PLATFORM_WIN64 ) || defined( RED_PLATFORM_DURANGO )
 #	ifdef UNICODE

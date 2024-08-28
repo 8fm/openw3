@@ -150,6 +150,7 @@ Uint64 CSystemIO::GetFileSize( const Char* pathName ) const
 
 CSystemFile* CSystemFile::m_first = 0;
 
+#if 0 // class_CTime is not used anywhere
 CSystemFile::CTime::CTime()
 {
 	//FIXME>>>>
@@ -229,6 +230,7 @@ Bool CSystemFile::CTime::operator >(const CSystemFile::CTime& time) const
 #endif
 	return false;
 }
+#endif // class_CTime is not used anywhere
 
 CSystemFile::CSystemFile()
 	: m_file(INVALID_FD_VALUE )
@@ -377,6 +379,7 @@ Uint64 CSystemFile::GetSize() const
 	return 0;
 }
 
+#if 0 // class_CTime is not used anywhere
 CSystemFile::CTime CSystemFile::GetCreationTime() const
 {
 
@@ -411,6 +414,7 @@ CSystemFile::CTime CSystemFile::GetLastWriteTime() const
 
 	return out;
 }
+#endif // class_CTime is not used anywhere
 
 size_t CSystemFile::Read( void* buf, size_t bytesToRead )
 {

@@ -262,8 +262,10 @@ public:
 	String GetLocalizedText( Uint32 stringId, const String& locale, Bool* isFallback = NULL );
 	String GetLocalizedText( Uint32 stringId );
 
+#if 0 // class_CTime is not used anywhere
 	// Get date string based on current locale
 	String GetDateString( CSystemFile::CTime& fileTime ) const;
+#endif // class_CTime is not used anywhere
 
 	// Get all strings
 	virtual void GetPacksToCook( Uint32 locale, const String& stringsView, THashMap< Uint32, LanguagePack* >& packs );

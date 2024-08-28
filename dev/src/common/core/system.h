@@ -91,6 +91,7 @@ class CSystemFile
 	static CSystemFile* m_first;
 	CSystemFile*		m_next;
 
+#if 0 // class_CTime is not used anywhere
 public:
 	class CTime
 	{
@@ -107,6 +108,7 @@ public:
 		String ToString();
 		void   Extract( Int32& year, Int32& month, Int32& day, Int32& hour, Int32& minute, Int32& second );
 	};
+#endif // class_CTime is not used anywhere
 
 public:
 	CSystemFile();
@@ -128,11 +130,13 @@ public:
 
 	Uint64 GetSize() const;
 
+#if 0 // class_CTime is not used anywhere
 	CTime GetCreationTime() const;
 
 	CTime GetLastAccessTime() const;
 
 	CTime GetLastWriteTime() const;
+#endif
 
 	size_t Read(void* buf, size_t bytesToRead);
 
