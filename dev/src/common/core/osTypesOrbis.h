@@ -6,7 +6,9 @@
 #ifdef RED_PLATFORM_ORBIS
 
 typedef SceInt32			 FileObject;
+#if 0 // class_CTime is not used anywhere
 typedef SceKernelTimespec	 FileTimeObject;
+#endif
 
 class COrbisDirWalker;
 typedef COrbisDirWalker* FindFileObject;

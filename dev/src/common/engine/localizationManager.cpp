@@ -1650,6 +1650,7 @@ void CLocalizationManager::SetLanguageInUserSettings( const String& textLang, co
 	Config::cvSpeechLanguage.Set( speechLang );
 }
 
+#if 0 // class_CTime is not used anywhere
 String CLocalizationManager::GetDateString( CSystemFile::CTime& fileTime ) const
 {
 	// Get data from CTime structure
@@ -1708,6 +1709,7 @@ String CLocalizationManager::GetDateString( CSystemFile::CTime& fileTime ) const
 		return String::Printf( TXT( "%d/%02d/%02d  %02d:%02d" ), year, month, day, hour, minute );
 	}
 }
+#endif // class_CTime is not used anywhere
 
 String CLocalizationManager::GetVoiceoverFilename( Uint32 stringId )
 {
