@@ -13,7 +13,7 @@ namespace Red { namespace MemoryFramework {
 
 ////////////////////////////////////////////////////////////////////
 // Platform-specific flags for default pools
-#if defined( RED_MEMORY_FRAMEWORK_PLATFORM_WINDOWS_API )
+#if defined( RED_MEMORY_FRAMEWORK_PLATFORM_WINDOWS_API ) || defined( RED_MEMORY_FRAMEWORK_PLATFORM_LINUX_API )
 	const Red::System::Uint32 c_DefaultStaticPoolFlags = Allocator_NoPhysicalReserved | Allocator_StaticSize;
 	const Red::System::Uint32 c_DefaultOverflowPoolFlags = Allocator_NoPhysicalReserved | Allocator_StaticSize;
 #elif defined( RED_MEMORY_FRAMEWORK_PLATFORM_ORBIS_API )

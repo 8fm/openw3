@@ -13,6 +13,8 @@
 #include "redMemoryFileWriterOrbis.h"
 #elif defined( RED_MEMORY_FRAMEWORK_PLATFORM_DURANGO_API )
 #include "redMemoryFileWriterDurango.h"
+#elif defined( RED_MEMORY_FRAMEWORK_PLATFORM_LINUX_API )
+#include "redMemoryFileWriterLinux.h"
 #endif
 
 #endif

@@ -10,7 +10,7 @@
 	#include "crashReportDataBufferDurango.h"
 #elif defined( RED_PLATFORM_WIN32 ) || defined( RED_PLATFORM_WIN64 )
 	#include "crashReportDataBufferWindows.h"
-#elif defined( RED_PLATFORM_ORBIS )
+#elif defined( RED_PLATFORM_ORBIS ) || defined( RED_PLATFORM_LINUX )
 	#include "crashReportDataBufferOrbis.h"
 #endif
 
