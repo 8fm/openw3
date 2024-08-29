@@ -13,6 +13,8 @@
 #include "redMemoryAtomicsOrbis.inl"
 #elif defined( RED_MEMORY_FRAMEWORK_PLATFORM_DURANGO_API )
 #include "redMemoryAtomicsDurango.inl"
+#elif defined( RED_MEMORY_FRAMEWORK_PLATFORM_LINUX_API )
+#include "redMemoryAtomicsLinux.inl"
 #endif
 
 #endif

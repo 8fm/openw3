@@ -15,6 +15,8 @@
 	#define RED_MEMORY_FRAMEWORK_PLATFORM_WINDOWS_API
 #elif defined( RED_PLATFORM_ORBIS )
 	#define RED_MEMORY_FRAMEWORK_PLATFORM_ORBIS_API
+#elif defined( RED_PLATFORM_LINUX )
+	#define RED_MEMORY_FRAMEWORK_PLATFORM_LINUX_API
 #endif
 
 //////////////////////////////////////////////////////////////////////////
@@ -44,6 +46,15 @@
 
 	namespace Red { namespace MemoryFramework {
 		namespace OSAPI = DurangoAPI;
+	} }
+
+#elif defined( RED_MEMORY_FRAMEWORK_PLATFORM_LINUX_API )
+
+	namespace Red { namespace MemoryFramework { namespace LinuxAPI {
+	} } }
+
+	namespace Red { namespace MemoryFramework {
+		namespace OSAPI = LinuxAPI;
 	} }
 
 #endif

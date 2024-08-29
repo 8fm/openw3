@@ -14,6 +14,8 @@
 	#include "redMemoryPageAllocatorOrbis.h"
 #elif defined( RED_MEMORY_FRAMEWORK_PLATFORM_DURANGO_API )
 	#include "redMemoryPageAllocatorDurango.h"
+#elif defined( RED_MEMORY_FRAMEWORK_PLATFORM_LINUX_API )
+	#include "redMemoryPageAllocatorLinux.h"
 #endif
 
 #include "../redSystem/types.h"

@@ -71,7 +71,7 @@ enum EAllocatorFlags : Red::System::Uint32		// Flags that can be attached to any
 	Allocator_NoBreakOnOOM = FLAG( 1 ),			// Don't assert / break / crash on OOM, just report
 
 	// Platform-specific pool flags
-#if defined( RED_PLATFORM_WIN32 ) || defined( RED_PLATFORM_WIN64 )
+#if defined( RED_PLATFORM_WIN32 ) || defined( RED_PLATFORM_WIN64 ) || defined( RED_PLATFORM_LINUX )
 	Allocator_NoPhysicalReserved = FLAG( 2 ),	// Do not explicitly reserve physical memory for this allocator (when used with virtual memory)
 #elif defined RED_PLATFORM_ORBIS
 	Allocator_DirectMemory = FLAG( 2 ),			// Use direct (i.e. physical) memory - 4.5gb max

@@ -14,6 +14,8 @@
 	#include "redMemoryThreadsOrbis.h"
 #elif defined( RED_MEMORY_FRAMEWORK_PLATFORM_DURANGO_API )
 	#include "redMemoryThreadsDurango.h"
+#elif defined( RED_MEMORY_FRAMEWORK_PLATFORM_LINUX_API )
+	#include "redMemoryThreadsLinux.h"
 #endif
 
 #include "redMemoryAtomics.h"
@@ -86,7 +88,7 @@ private:
 		return (ret == 0);
 	}
 
-#ifdef RED_PLATFORM_ORBIS
+#if defined( RED_PLATFORM_ORBIS ) || defined( RED_PLATFORM_LINUX )
 	int32_t __attribute__((aligned (4) )) m_lock;
 #else
 	__declspec(align(4)) uint32_t m_lock;
