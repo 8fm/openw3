@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../redio/redIO.h"
+#include "../redIO/redIO.h"
 
 #include "staticarray.h"
 #include "ioTags.h"

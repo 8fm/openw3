@@ -4,7 +4,7 @@
 
 #pragma once
 
-#include "staticArray.h"
+#include "staticarray.h"
 #include "basicURL.h"
 #include "basicDataBlob.h"
 #include "debugPageHandler.h"

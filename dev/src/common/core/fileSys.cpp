@@ -2,7 +2,7 @@
 * Copyright © 2007 CD Projekt Red. All Rights Reserved.
 */
 #include "build.h"
-#include "filesys.h"
+#include "fileSys.h"
 #include "filePath.h"
 #include "rawFileReader.h"
 #include "rawFileSearcher.h"

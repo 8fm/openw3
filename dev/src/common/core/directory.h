@@ -4,7 +4,7 @@
 #pragma once
 
 #include "dynarray.h"
-#include "sortedMap.h"
+#include "sortedmap.h"
 #include "hashmap.h"
 #include "diskFile.h"
 #include "directoryEntries.h"

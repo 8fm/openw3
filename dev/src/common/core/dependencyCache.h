@@ -5,7 +5,7 @@
 #pragma once
 
 #include "string.h"
-#include "hashMap.h"
+#include "hashmap.h"
 #include "resourceid.h"
 #include "bitset.h"
 

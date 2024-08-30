@@ -7,7 +7,7 @@
 
 #include "string.h"
 #include "dynarray.h"
-#include "filesys.h"
+#include "fileSys.h"
 #include "memory.h"
 
 class CFilePath

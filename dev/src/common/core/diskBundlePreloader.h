@@ -3,7 +3,7 @@
 */
 #pragma once
 
-#include "../redio/redIO.h"
+#include "../redIO/redIO.h"
 
 /// Preloader for disk bundles
 class CDiskBundlePreloader

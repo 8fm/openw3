@@ -13,7 +13,7 @@
 
 #include "fileSys.h"
 
-#include "../core/xmlreader.h"
+#include "../core/xmlReader.h"
 
 // Ticking quests can hammer saving configs...
 // Use sparingly.

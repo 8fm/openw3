@@ -3,7 +3,7 @@
 */
 #include "build.h"
 #include "filePath.h"
-#include "hashSet.h"
+#include "hashset.h"
 #include "depot.h"
 #include "debugPageHandler.h"
 #include "debugPageHTMLDoc.h"

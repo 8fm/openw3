@@ -13,7 +13,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 #if defined NON_BLOCKING_QUEUE_SUQ
-#	include "NonBlockingLIFOQueue_SceUltQueue.h"
+#	include "nonBlockingLIFOQueue_SceUltQueue.h"
 #elif defined NON_BLOCKING_QUEUE_INT
-#	include "NonBlockingLIFOQueue_InterlockedSList.h"
+#	include "nonBlockingLIFOQueue_InterlockedSList.h"
 #endif

@@ -7,7 +7,7 @@
 #include "dynarray.h"
 #include "hashmap.h"
 #include "handleMap.h"
-#include "sortedMap.h"
+#include "sortedmap.h"
 #include "resource.h"
 #include "dependencyCache.h"
 #include "contentListener.h"
