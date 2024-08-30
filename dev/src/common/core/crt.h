@@ -10,7 +10,7 @@
 /* String functions                                                     */
 /************************************************************************/
 
-#ifdef RED_PLATFORM_ORBIS
+#if defined( RED_PLATFORM_ORBIS ) || defined( RED_PLATFORM_LINUX )
 #	include <ctype.h>
 #endif
 

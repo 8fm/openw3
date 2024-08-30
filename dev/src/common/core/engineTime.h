@@ -23,6 +23,9 @@ private:
 #elif defined( RED_PLATFORM_ORBIS )
 	Int64					m_time;
 	static SceInt32			s_timerFreq;
+#elif defined( RED_PLATFORM_LINUX )
+	Int64					m_time;
+	static  Int32			s_timerFreq;
 #endif
 	static Double			s_timerFreqDbl;
 
@@ -76,7 +79,7 @@ public:
 
 	RED_INLINE operator Float() const { return Float( Double( m_time.QuadPart ) / s_timerFreqDbl ); }
 	RED_INLINE operator Double() const { return Double( m_time.QuadPart ) / s_timerFreqDbl; }
-#elif defined( RED_PLATFORM_ORBIS )
+#elif defined( RED_PLATFORM_ORBIS ) || defined( RED_PLATFORM_LINUX )
 	RED_INLINE Bool IsValid() const { return m_time != 0; }
 
 	RED_INLINE EngineTime() { m_time = 0; }

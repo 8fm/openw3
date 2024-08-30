@@ -21,7 +21,7 @@
 
 #if defined( RED_PLATFORM_WIN32 ) || defined( RED_PLATFORM_WIN64 )
 #	include <intrin.h> 
-#elif defined( RED_PLATFORM_ORBIS )
+#elif defined( RED_PLATFORM_ORBIS ) || defined( RED_PLATFORM_LINUX )
 #	include <x86intrin.h>
 #endif
 
@@ -128,11 +128,19 @@ RED_INLINE Float MLog10( Float val )
 
 RED_INLINE Uint64 MCountLeadingZeros( Uint64 val )
 {
-#ifndef _M_X64
+#ifndef RED_ARCH_X64
 	const Uint32 loWord = *( ( Uint32* ) &val ); 
 	const Uint32 hiWord = *( ( ( Uint32* ) &val ) + 1 ); 
+	#if !defined( RED_PLATFORM_LINUX ) || defined(__LZCNT__)
 	return ( loWord == 0 ) ? __lzcnt( hiWord ) + 32 : __lzcnt( loWord );
+	#else
+	return ( loWord == 0 ) ? __builtin_clz( hiWord ) + 32 : __builtin_clz( loWord );
+	#endif
 #else
+	#if !defined( RED_PLATFORM_LINUX ) || defined(__LZCNT__)
 	return __lzcnt64( val );
+	#else
+	return __builtin_clzll( val );
+	#endif
 #endif
 }

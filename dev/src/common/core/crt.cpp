@@ -102,7 +102,7 @@ void ReplaceUnicodeCharsWithAscii( Char buffer[], size_t length )
 	RED_UNUSED( buffer );
 	RED_UNUSED( length );
 //RED_MESSAGE("FIXME>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
-#ifndef RED_PLATFORM_ORBIS
+#if !(defined( RED_PLATFORM_ORBIS ) || defined( RED_PLATFORM_LINUX ))
 	for( size_t i = 0; i < length; ++i )
 	{
 		switch( buffer[ i ] )

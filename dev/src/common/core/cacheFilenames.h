@@ -12,13 +12,13 @@ const String SPEECH_FILE_PATH_POSTFIX_PC = TXT( "pc.w3speech" );
 const String CURRENT_SPEECH_FILE_PATH_POSTFIX = SPEECH_FILE_PATH_POSTFIX_DURANGO;
 #elif defined(RED_PLATFORM_ORBIS)
 const String CURRENT_SPEECH_FILE_PATH_POSTFIX = SPEECH_FILE_PATH_POSTFIX_ORBIS;
-#elif defined(RED_PLATFORM_WINPC)
+#elif defined(RED_PLATFORM_WINPC) || defined( RED_PLATFORM_LINUX )
 const String CURRENT_SPEECH_FILE_PATH_POSTFIX = SPEECH_FILE_PATH_POSTFIX_PC;
 #elif
 #error Unsupported platform!
 #endif
 
-#if defined( RED_PLATFORM_WINPC )
+#if defined( RED_PLATFORM_WINPC ) || defined( RED_PLATFORM_LINUX )
 # define STATIC_SHADER_CACHE_FILENAME TXT("staticshader.cache")
 # define SHADER_CACHE_FILENAME TXT("shader.cache")
 #elif defined( RED_PLATFORM_ORBIS )

@@ -36,7 +36,7 @@ CFileManager::CFileManager( const Char* rootDirectory, const Char* baseDirectory
 {
 	// temp directory should exist only on PC platform
 	m_tempDirectory = m_baseDirectory;
-	m_tempDirectory += TXT("..\\temp\\");
+	m_tempDirectory += TXT("../temp/");
 
 	// log the paths
 	LOG_CORE( TXT("Read only mode: %ls"), m_readOnly ? TXT("yes") : TXT("no") );
@@ -449,7 +449,7 @@ Bool CFileManager::SaveStringToFileWithUTF8( const String& absoluteFilePath, con
 {
 	RED_UNUSED( absoluteFilePath );
 	RED_UNUSED( toSaveString );
-#ifndef RED_PLATFORM_CONSOLE
+#if !(defined( RED_PLATFORM_CONSOLE ) || defined( RED_PLATFORM_LINUX ))
 	IFile* saver = CreateFileWriter( absoluteFilePath, FOF_Buffered|FOF_AbsolutePath );
 	if ( saver )
 	{
@@ -529,8 +529,12 @@ Red::System::DateTime CFileManager::GetFolderTimestamp( const String& absoluteFi
 #ifndef RED_PLATFORM_CONSOLE
 String CFileManager::GenerateTemporaryFilePath() const
 {
+#ifdef RED_PLATFORM_WINPC
 	Char path[256];
 	GetTempPath(256, path);
+#else
+	Char path[256] = TXT( "/tmp/" );
+#endif
 	Red::System::GUID guid = Red::System::GUID::Create();
 	Char filename[256];
 	guid.ToString( filename, 256 );

@@ -57,7 +57,7 @@ void CLoadingProfiler::Start()
 #if !defined( RED_FINAL_BUILD ) || defined( RED_PROFILE_BUILD )
 	#undef LOG_CORE
 
-# ifdef RED_PLATFORM_ORBIS
+# if defined( RED_PLATFORM_ORBIS ) || defined( RED_PLATFORM_LINUX )
 	#define LOG_CORE(...) { fwprintf( stdout, __VA_ARGS__ ); fwprintf( stdout, L"\n" ); }
 # else
 	#define LOG_CORE(...) { Char tempArray[1024]; swprintf( tempArray, 1024, __VA_ARGS__ ); OutputDebugString(tempArray); OutputDebugString(TXT("\n")); }

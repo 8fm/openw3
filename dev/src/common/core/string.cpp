@@ -1171,7 +1171,11 @@ TString< char > TString< char >::Printf( const char* format, ... )
 	va_list arglist;
 	va_start(arglist, format);
 	char formattedBuf[ 4096 ];
+#ifdef RED_PLATFORM_LINUX
+	vsprintf( formattedBuf, format, arglist );
+#else
 	vsprintf_s( formattedBuf, ARRAY_COUNT(formattedBuf), format, arglist ); 
+#endif
 	va_end(arglist);
 	return formattedBuf;
 }

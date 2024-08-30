@@ -13,7 +13,7 @@
 
 #ifdef RED_PLATFORM_WINPC
 #include <sysinfoapi.h>
-#elif RED_PLATFORM_LINUX
+#elif defined(RED_PLATFORM_LINUX)
 #include <unistd.h>
 #endif
 

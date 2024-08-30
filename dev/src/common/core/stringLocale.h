@@ -54,7 +54,7 @@ public:
 		//FIXME> Use redSystem...
 #if defined( RED_COMPILER_MSC )
 		mbstate_t mbst = { 0 };
-#elif defined( RED_PLATFORM_ORBIS ) && defined( RED_COMPILER_CLANG )
+#elif defined( RED_COMPILER_CLANG )
 		mbstate_t mbst; // has a ctor for C++
 #else
 #error Unsupported platform
