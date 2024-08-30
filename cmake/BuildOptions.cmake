@@ -68,6 +68,7 @@ else()
 
     add_compile_options(-fPIC -ffast-math -finput-charset=UTF-8 -fshort-wchar)
     add_compile_options(-ffunction-sections -fdata-sections)
+    add_compile_options(-Wno-inconsistent-missing-override) # TODO fix warnings later
 
     add_compile_options(-fno-finite-math-only) # for isnan in redMath
     add_compile_options(-mfpmath=sse -msse3)

@@ -30,7 +30,6 @@ set(SRC_FILES
     "configVarHierarchy.cpp"
     "configVarRegistry.cpp"
     "contentManifestParser.cpp"
-    "cpuRecognizer.cpp"
     "crypto.cpp"
     "debugPageBundles.cpp"
     "debugPageDepot.cpp"
@@ -45,7 +44,6 @@ set(SRC_FILES
     "dependencyFileUnpacker.cpp"
     "diskBundleCache.cpp"
     "diskBundleCacheEntry.cpp"
-    "diskInstrumentationPC.cpp"
     "htmlDocument.cpp"
     "httpHeader.cpp"
     "httpRequestParser.cpp"
@@ -329,6 +327,11 @@ set(SRC_FILES
     "build.cpp"
     "singleton.cpp"
 )
+
+if (WIN32)
+    list(APPEND SRC_FILES "cpuRecognizer.cpp")
+    list(APPEND SRC_FILES "diskInstrumentationPC.cpp")
+endif()
 
 set(BISON_FILES
     "scriptFileParser.bison"
