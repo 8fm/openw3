@@ -151,7 +151,7 @@ const Bool CDepotBundles::IsBundleMounted( const Red::Core::Bundle::BundleID bun
 {
 	// index out of range
 	if ( bundleID > m_bundles.Size() )
-		return nullptr;
+		return false;
 
 	// check in the merged mask
 	return m_mergedFilter.IsBundleEnabled( bundleID );

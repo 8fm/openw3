@@ -174,6 +174,7 @@ namespace Red
 		RED_FORCE_INLINE Int32 StringCompare( const UniChar* a, const UniChar* b )							{ return ::wcscmp( a, b ); }
 #ifdef RED_PLATFORM_LINUX
 		RED_FORCE_INLINE Int32 StringCompareNoCase( const AnsiChar* a, const AnsiChar* b )					{ return ::strcasecmp( a, b ); }
+		RED_FORCE_INLINE Int32 StringCompareNoCase( const UniChar* a, const UniChar* b )					{ return ::wcscasecmp( a, b ); }
 #else
 		RED_FORCE_INLINE Int32 StringCompareNoCase( const AnsiChar* a, const AnsiChar* b )					{ return ::_stricmp( a, b ); }
 		RED_FORCE_INLINE Int32 StringCompareNoCase( const UniChar* a, const UniChar* b )					{ return ::_wcsicmp( a, b ); }
@@ -184,6 +185,7 @@ namespace Red
 		RED_FORCE_INLINE Int32 StringCompare( const UniChar* a, const UniChar* b, size_t max )				{ return ::wcsncmp( a, b, max ); }
 #ifdef RED_PLATFORM_LINUX
 		RED_FORCE_INLINE Int32 StringCompareNoCase( const AnsiChar* a, const AnsiChar* b, size_t max )		{ return ::strncasecmp( a, b, max ); }
+		RED_FORCE_INLINE Int32 StringCompareNoCase( const UniChar* a, const UniChar* b, size_t max )		{ return ::wcsncasecmp( a, b, max ); }
 #else
 		RED_FORCE_INLINE Int32 StringCompareNoCase( const AnsiChar* a, const AnsiChar* b, size_t max )		{ return ::_strnicmp( a, b, max ); }
 		RED_FORCE_INLINE Int32 StringCompareNoCase( const UniChar* a, const UniChar* b, size_t max )		{ return ::_wcsnicmp( a, b, max ); }
@@ -238,7 +240,9 @@ namespace Red
 		}
 
 		RED_FORCE_INLINE Double	StringToDouble( const AnsiChar* str )										{ return ::atof( str ); }
-#ifndef RED_PLATFORM_LINUX
+#ifdef RED_PLATFORM_LINUX
+		RED_FORCE_INLINE Double	StringToDouble( const Char* str )											{ return ::wcstod( str, nullptr ); }
+#else
 		RED_FORCE_INLINE Double	StringToDouble( const Char* str )											{ return ::_wtof( str ); }
 #endif
 

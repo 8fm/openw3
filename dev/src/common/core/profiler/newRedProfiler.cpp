@@ -155,7 +155,7 @@ namespace DebugProfiler
 		LOG_CORE( TXT("Dumping profiling data to '%ls'..."), fileName );
 
 		// open file writer
-#if defined(RED_PLATFORM_ORBIS)
+#if defined(RED_PLATFORM_ORBIS) || defined(RED_PLATFORM_LINUX)
 		FILE* f = fopen( UNICODE_TO_ANSI(fileName), "w" );
 #else
 		FILE* f = _wfopen( fileName, L"w" );

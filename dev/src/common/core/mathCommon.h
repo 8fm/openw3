@@ -2,8 +2,7 @@
 * Copyright © 2007 CD Projekt Red. All Rights Reserved.
 */
 
-#ifndef _MATH_H
-#define _MATH_H
+#pragma once
 
 #include "classBuilder.h"
 #include "coreTypeRegistry.h"
@@ -1986,5 +1985,3 @@ END_CLASS_RTTI();
 /* Inline implementation                                                */
 /************************************************************************/
 #include "math.inl"
-
-#endif // _MATH_H

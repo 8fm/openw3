@@ -5,6 +5,10 @@
 #ifndef _NUMERICLIMITS_H_
 #define _NUMERICLIMITS_H_
 
+#include <climits> // for SCHAR_*, UCHAR_*, SHRT_*, INT_*, UINT_*, ...
+#include <limits>  // for std::numeric_limits
+#include <float.h> // for FLT_*, DBL_*
+
 template<class _Type>
 class NumericLimits
 {

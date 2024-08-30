@@ -9,6 +9,8 @@
 # include "osTypesWin32.h"
 #elif defined( RED_PLATFORM_ORBIS )
 # include "osTypesOrbis.h"
+#elif defined( RED_PLATFORM_LINUX )
+# include "osTypesLinux.h"
 #endif
 
 /************************************************************************/
