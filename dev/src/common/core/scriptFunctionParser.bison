@@ -596,11 +596,11 @@ string_const
 //////////////////////////////// 
 
 basic_type
-	: TOKEN_TYPE_STRING	{ $<m_string>$ = GetTypeName<String>().AsString() }
-	| TOKEN_TYPE_BYTE	{ $<m_string>$ = GetTypeName<Uint8>().AsString() }
-	| TOKEN_TYPE_BOOL	{ $<m_string>$ = GetTypeName<Bool>().AsString() }
-	| TOKEN_TYPE_INT	{ $<m_string>$ = GetTypeName<Int32>().AsString() }
-	| TOKEN_TYPE_FLOAT	{ $<m_string>$ = GetTypeName<Float>().AsString() }
+	: TOKEN_TYPE_STRING	{ $<m_string>$ = GetTypeName<String>().AsString(); }
+	| TOKEN_TYPE_BYTE	{ $<m_string>$ = GetTypeName<Uint8>().AsString(); }
+	| TOKEN_TYPE_BOOL	{ $<m_string>$ = GetTypeName<Bool>().AsString(); }
+	| TOKEN_TYPE_INT	{ $<m_string>$ = GetTypeName<Int32>().AsString(); }
+	| TOKEN_TYPE_FLOAT	{ $<m_string>$ = GetTypeName<Float>().AsString(); }
 	| TOKEN_TYPE_NAME	{ $<m_string>$ = GetTypeName<CName>().AsString(); }
 	| TOKEN_CLASS_TYPE	{ $<m_string>$ = $<m_token>1; }
 	| TOKEN_ENUM_TYPE	{ $<m_string>$ = $<m_token>1; }

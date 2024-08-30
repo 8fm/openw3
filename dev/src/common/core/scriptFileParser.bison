@@ -12,7 +12,7 @@ RED_DISABLE_WARNING_MSC( 4702 )	// Unreachable code
 
 /// The parsing token
 #define YYSTYPE YYSTYPE_File
-#include "scriptfileparser_bison.cxx.h"
+#include "scriptFileParser_bison.cxx.h"
 
 /// Spawning info
 struct TempSpawnInfo
@@ -706,11 +706,11 @@ full_type
 	;
 
 basic_type
-	: TOKEN_TYPE_STRING	{ $<m_typeName>$ = GetTypeName<String>().AsString() }
-	| TOKEN_TYPE_BYTE	{ $<m_typeName>$ = GetTypeName<Uint8>().AsString() }
-	| TOKEN_TYPE_BOOL	{ $<m_typeName>$ = GetTypeName<Bool>().AsString() }
-	| TOKEN_TYPE_INT	{ $<m_typeName>$ = GetTypeName<Int32>().AsString() }
-	| TOKEN_TYPE_FLOAT	{ $<m_typeName>$ = GetTypeName<Float>().AsString() }
+	: TOKEN_TYPE_STRING	{ $<m_typeName>$ = GetTypeName<String>().AsString(); }
+	| TOKEN_TYPE_BYTE	{ $<m_typeName>$ = GetTypeName<Uint8>().AsString(); }
+	| TOKEN_TYPE_BOOL	{ $<m_typeName>$ = GetTypeName<Bool>().AsString(); }
+	| TOKEN_TYPE_INT	{ $<m_typeName>$ = GetTypeName<Int32>().AsString(); }
+	| TOKEN_TYPE_FLOAT	{ $<m_typeName>$ = GetTypeName<Float>().AsString(); }
 	| TOKEN_TYPE_NAME	{ $<m_typeName>$ = GetTypeName<CName>().AsString(); }
 	| TOKEN_TYPE_VOID	{ $<m_typeName>$ = String::EMPTY; }
 	;

@@ -1,7 +1,10 @@
 
 if (WIN32)
     set(BISON_BIN ${CMAKE_SOURCE_DIR}/dev/external/bison/bin/bison.exe)
-    set(BISON_DIR ${CMAKE_SOURCE_DIR}/dev/external/bison/bin)
+    set(BISON_GENERATION_DIR ${CMAKE_SOURCE_DIR}/dev/external/bison/bin)
+else()
+    set(BISON_BIN bison)
+    set(BISON_GENERATION_DIR ${CMAKE_CURRENT_SOURCE_DIR})
 endif()
 
 set(OUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/${GAME_PLATFORM}/${GAME_CONFIG})
@@ -26,7 +29,7 @@ foreach(BISON_FILE ${BISON_FILES})
             OUTPUT "${OUT_CXX_H}"
                    "${OUT_CXX}"
             COMMAND "${BISON_BIN}" ${BISON_ARGS} --defines="${OUT_CXX_H}" -o "${OUT_CXX}" "${CMAKE_CURRENT_SOURCE_DIR}/${BISON_SRC}"
-            WORKING_DIRECTORY "${BISON_DIR}"
+            WORKING_DIRECTORY "${BISON_GENERATION_DIR}"
         )
         list(APPEND SRC_FILES "${OUT_CXX_H}")
     endif()
