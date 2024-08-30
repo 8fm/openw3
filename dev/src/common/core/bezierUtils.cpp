@@ -2,7 +2,7 @@
 
 #include "build.h"
 #include "bezierUtils.h"
-#include "math.h"
+#include "mathCommon.h"
 
 // =================================================================================================
 namespace {

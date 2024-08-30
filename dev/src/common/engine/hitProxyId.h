@@ -4,7 +4,7 @@
 
 #pragma once
 
-#include "../core/math.h"
+#include "../core/mathCommon.h"
 
 /// RGB encoded hit ID
 class CHitProxyID

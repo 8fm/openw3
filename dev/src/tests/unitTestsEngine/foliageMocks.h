@@ -18,7 +18,7 @@
 #include "../../common/core/objectMap.h"
 #include "../../common/engine/baseTree.h"
 #include "../../common/engine/grassCellMask.h"
-#include "../../common/core/math.h"
+#include "../../common/core/mathCommon.h"
 
 
 class CFoliageBrokerMock : public CFoliageBroker

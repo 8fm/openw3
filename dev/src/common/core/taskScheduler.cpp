@@ -9,7 +9,7 @@
 #include "taskRunner.h"
 #include "taskScheduler.h"
 #include "taskThread.h"
-#include "math.h"
+#include "mathCommon.h"
 
 #define SLOW_WORK_SEMAPHORE
 

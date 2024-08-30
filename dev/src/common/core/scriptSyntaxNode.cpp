@@ -4,7 +4,7 @@
 #include "build.h"
 #include "scriptSyntaxNode.h"
 #include "scriptFunctionCompiler.h"
-#include "math.h"
+#include "mathCommon.h"
 #include "function.h"
 
 /// Syntax node types

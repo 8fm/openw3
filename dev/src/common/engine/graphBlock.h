@@ -3,7 +3,7 @@
 */
 #pragma once
 
-#include "../core/math.h"
+#include "../core/mathCommon.h"
 #include "../core/enum.h"
 #include "../core/object.h"
 #include "graphSocket.h"

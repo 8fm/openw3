@@ -5,7 +5,7 @@
 
 #include "dynarray.h"
 #include "names.h"
-#include "math.h"
+#include "mathCommon.h"
 
 /// List of tags
 class TagList

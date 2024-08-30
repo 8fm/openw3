@@ -6,7 +6,7 @@
 #include "storySceneInstanceBuffer.h"
 
 #include "../core/enumBuilder.h"
-#include "../core/math.h"
+#include "../core/mathCommon.h"
 
 #include "../engine/behaviorIncludes.h"
 #include "../engine/cameraDirector.h"

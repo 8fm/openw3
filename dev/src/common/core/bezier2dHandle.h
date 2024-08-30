@@ -2,7 +2,7 @@
 
 #pragma once
 
-#include "math.h"
+#include "mathCommon.h"
 
 /*
 Bezier 2d handle.

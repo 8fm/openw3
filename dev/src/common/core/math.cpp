@@ -2,7 +2,7 @@
 * Copyright © 2007 CD Projekt Red. All Rights Reserved.
 */
 #include "build.h"
-#include "math.h"
+#include "mathCommon.h"
 #include "object.h"
 #include "../redMath/redmathbase.h"
 #include "mathUtils.h"

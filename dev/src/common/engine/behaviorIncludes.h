@@ -6,7 +6,7 @@
 
 #include "../engine/animMath.h"
 #include "../core/classBuilder.h"
-#include "../core/math.h"
+#include "../core/mathCommon.h"
 #include "../core/instanceBuffer.h"
 #include "../core/enumBuilder.h"
 #include "../core/engineTransform.h"

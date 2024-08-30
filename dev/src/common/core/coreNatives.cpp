@@ -5,7 +5,7 @@
 #include "build.h"
 #include "object.h"
 #include "engineQsTransform.h"
-#include "math.h"
+#include "mathCommon.h"
 #include "scriptStackFrame.h"
 
 #include "../redMath/redmathbase.h"

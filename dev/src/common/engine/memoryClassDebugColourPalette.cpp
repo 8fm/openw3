@@ -2,7 +2,7 @@
 * Copyright © 2014 CD Projekt Red. All Rights Reserved.
 */
 #include "build.h"
-#include "../core/math.h"
+#include "../core/mathCommon.h"
 
 // Generated optimally-distinct colour palette
 Color GMemoryClassDebugColourPalette[] = {

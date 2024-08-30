@@ -5,7 +5,7 @@
 #pragma once
 
 #include "classBuilder.h"
-#include "math.h"
+#include "mathCommon.h"
 #include "curveBase.h"
 
 struct SSimpleCurvePoint

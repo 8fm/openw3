@@ -5,7 +5,7 @@
 #pragma once
 
 #include "enumBuilder.h"
-#include "math.h"
+#include "mathCommon.h"
 #include "object.h"
 
 class CThumbnail;

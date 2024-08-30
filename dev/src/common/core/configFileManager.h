@@ -5,7 +5,7 @@
 
 #include "sortedmap.h"
 #include "string.h"
-#include "math.h"
+#include "mathCommon.h"
 #include "stringConversion.h"
 
 class CConfigFile;

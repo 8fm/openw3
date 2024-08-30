@@ -779,7 +779,7 @@
     <ClInclude Include="versionControl.h" />
     <ClInclude Include="feedback.h" />
     <ClInclude Include="jobGenericJobs.h" />
-    <ClInclude Include="math.h" />
+    <ClInclude Include="mathCommon.h" />
     <ClInclude Include="mathConversions.h" />
     <ClInclude Include="mathForward.h" />
     <ClInclude Include="mathUtils.h" />

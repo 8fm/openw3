@@ -1,7 +1,7 @@
 #pragma once
 
 #include "../../common/engine/cameraDirector.h"
-#include "../../common/core/math.h"
+#include "../../common/core/mathCommon.h"
 
 
 

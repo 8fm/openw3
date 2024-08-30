@@ -4,7 +4,7 @@
 
 #pragma once
 
-#include "math.h"
+#include "mathCommon.h"
 
 // Align transform data to 16 bytes for SIMD
 #define DEFAULT_ENGINE_TRANSFORM_ALIGNMENT 16

@@ -3,7 +3,7 @@
 #include "enumBuilder.h"
 #include "classBuilder.h"
 #include "dynarray.h"
-#include "math.h"
+#include "mathCommon.h"
 
 enum ECurveValueType
 {

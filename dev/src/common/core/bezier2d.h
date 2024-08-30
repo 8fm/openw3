@@ -2,7 +2,7 @@
 #pragma once
 
 #include "classBuilder.h"
-#include "math.h"
+#include "mathCommon.h"
 
 /*
 Cubic Bezier 2d.

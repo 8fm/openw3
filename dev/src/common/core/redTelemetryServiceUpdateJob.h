@@ -5,7 +5,7 @@
 #pragma once
 
 #include "task.h"
-#include "math.h"
+#include "mathCommon.h"
 
 class IRedTelemetryServiceInterface;
 

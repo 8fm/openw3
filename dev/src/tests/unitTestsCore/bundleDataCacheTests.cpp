@@ -4,7 +4,7 @@
 
 #include "build.h"
 #include "../../common/core/bundleDataCache.h"
-#include "../../common/core/math.h"
+#include "../../common/core/mathCommon.h"
 
 
 struct BundleDataCacheFixture : ::testing::Test
