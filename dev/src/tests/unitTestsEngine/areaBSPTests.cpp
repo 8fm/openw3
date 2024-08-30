@@ -5,7 +5,7 @@
 #include "build.h"
 
 #include "../../common/engine/areaBSP.h"
-#include "../../common/core/math.h"
+#include "../../common/core/mathCommon.h"
 
 TEST( Polygon, planeBasedPolygonCreation )
 {

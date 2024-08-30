@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../core/math.h"
+#include "../core/mathCommon.h"
 
 /// Debug stats for sector streaming
 struct SSectorStreamingDebugData

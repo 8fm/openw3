@@ -7,7 +7,7 @@
 #include "string.h"
 #include "dependencyLinker.h"
 #include "softHandle.h"
-#include "math.h"
+#include "mathCommon.h"
 #include "object.h"
 #include "resourceid.h"
 #include "deferredDataBuffer.h"

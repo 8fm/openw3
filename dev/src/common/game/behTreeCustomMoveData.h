@@ -1,7 +1,7 @@
 #pragma once
 
 #include "aiStorage.h"
-#include "../core/math.h"
+#include "../core/mathCommon.h"
 
 class CBehTreeInstance;
 

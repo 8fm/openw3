@@ -4,7 +4,7 @@
 
 #pragma once
 
-#include "math.h"
+#include "mathCommon.h"
 
 namespace MathUtils
 {

@@ -1,6 +1,6 @@
 #include "build.h"
 
-#include "../../common/core/math.h"
+#include "../../common/core/mathCommon.h"
 
 TEST( RectTestsWorldSpace, RectInRectSameQuarters )
 {

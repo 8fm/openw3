@@ -1,6 +1,6 @@
 #pragma once
 
-#include "math.h"		// for Vector, etc.
+#include "mathCommon.h"		// for Vector, etc.
 #include "longBitField.h"
 
 // TODO this should be moved to the math.h and fully implemented

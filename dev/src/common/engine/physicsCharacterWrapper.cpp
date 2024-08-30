@@ -18,7 +18,7 @@
 #endif
 
 #include "../core/dataError.h"
-#include "../core/math.h"
+#include "../core/mathCommon.h"
 #include "../engine/gameTimeManager.h"
 #include "../engine/debugServerManager.h"
 

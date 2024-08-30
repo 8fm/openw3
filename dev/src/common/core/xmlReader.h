@@ -5,7 +5,7 @@
 #pragma once
 
 #include "xmlFile.h"
-#include "math.h"
+#include "mathCommon.h"
 
 /// XML reader/writer interface
 class CXMLReader : public IXMLFile

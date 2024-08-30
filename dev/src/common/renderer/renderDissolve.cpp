@@ -6,7 +6,7 @@
 #include "renderDissolve.h"
 #include "renderMesh.h"
 #include "renderHelpers.h"
-#include "../core/math.h"
+#include "../core/mathCommon.h"
 #include "../core/configVar.h"
 
 namespace Config

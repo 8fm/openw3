@@ -24,7 +24,7 @@
 #include "../core/objectDiscardList.h"
 #include "events.h"
 #include "enum.h"
-#include "math.h"
+#include "mathCommon.h"
 #include "scriptDefaultValue.h"
 #include "defaultValue.h"
 #include "fileSys.h"

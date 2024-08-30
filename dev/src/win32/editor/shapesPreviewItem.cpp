@@ -1,6 +1,6 @@
 #include "build.h"
 #include "shapesPreviewItem.h"
-#include "../../common/core/math.h"
+#include "../../common/core/mathCommon.h"
 #include "../../common/core/curveData.h"
 #include "../../common/core/curve3DData.h"
 #include "../../common/engine/hitProxyObject.h"

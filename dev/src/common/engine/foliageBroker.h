@@ -10,7 +10,7 @@
 
 #include "../core/scopedPtr.h"
 #include "../core/uniquePtr.h"
-#include "../core/math.h"
+#include "../core/mathCommon.h"
 
 class IRenderScene;
 class CPhysicsWorld;

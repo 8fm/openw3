@@ -3,7 +3,7 @@
 */
 #include "build.h"
 #include "bitField.h"
-#include "math.h"
+#include "mathCommon.h"
 
 CBitField::CBitField( const CName& name, Uint32 size )
 	: m_name( name )

@@ -3,7 +3,7 @@
 */
 
 #include "build.h"
-#include "math.h"
+#include "mathCommon.h"
 #include "basicURL.h"
 #include "object.h"
 #include "resource.h"

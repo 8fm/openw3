@@ -2,7 +2,7 @@
 
 #include "../physics/physicsContactListener.h"
 #include "soundSettings.h"
-#include "../core/math.h"
+#include "../core/mathCommon.h"
 
 class CSoundContactListener : public CPhysicsContactListener
 {

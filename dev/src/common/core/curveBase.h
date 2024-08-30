@@ -4,7 +4,7 @@
 #pragma once
 
 #include "enumBuilder.h"
-#include "math.h"
+#include "mathCommon.h"
 #include "curveData.h"
 
 class IXMLFile;

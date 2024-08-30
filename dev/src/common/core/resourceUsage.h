@@ -6,7 +6,7 @@
 #ifndef NO_RESOURCE_USAGE_INFO
 
 #include "names.h"
-#include "math.h"
+#include "mathCommon.h"
 
 // Resource spatial usage collector
 // This is in core but is closely tied with the CLayer/CEntity/CComponent system

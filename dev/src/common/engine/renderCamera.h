@@ -3,7 +3,7 @@
 */
 #pragma once
 
-#include "../core/math.h"
+#include "../core/mathCommon.h"
 
 /// Camera vectors
 enum ECameraVector

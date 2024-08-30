@@ -3,7 +3,7 @@
 */
 #pragma once
 
-#include "math.h"
+#include "mathCommon.h"
 #include "handleMap.h"
 #include "object.h"
 
