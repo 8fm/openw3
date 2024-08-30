@@ -4,7 +4,7 @@
 
 #pragma once
 
-#include "sortedMap.h"
+#include "sortedmap.h"
 #include "staticarray.h"
 #include "basicURL.h"
 #include "basicTextBuilder.h"

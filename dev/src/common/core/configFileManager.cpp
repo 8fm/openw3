@@ -6,7 +6,7 @@
 
 #include "configFileManager.h"
 #include "filePath.h"
-#include "filesys.h"
+#include "fileSys.h"
 
 CConfigManager* GConfig = NULL;
 

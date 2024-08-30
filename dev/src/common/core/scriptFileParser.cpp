@@ -115,7 +115,7 @@ struct YYSTYPE_File
 	Idents					m_idents;
 }; 
 
-#include RED_EXPAND_AND_STRINGIFY(PROJECT_PLATFORM/PROJECT_CONFIGURATION/scriptfileparser_bison.cxx)
+#include RED_EXPAND_AND_STRINGIFY(PROJECT_PLATFORM/PROJECT_CONFIGURATION/scriptFileParser_bison.cxx)
 
 CScriptFileParser::CScriptFileParser( CScriptSystemStub& outputStubs, CScriptCompiler* compiler )
 	: m_compiler( compiler )

@@ -2,7 +2,7 @@
 * Copyright © 2013 CD Projekt Red. All Rights Reserved.
 */
 #pragma once
-#include "sortedArray.h"
+#include "sortedarray.h"
 #include "hashmap.h"
 
 #ifndef NO_DATA_VALIDATION

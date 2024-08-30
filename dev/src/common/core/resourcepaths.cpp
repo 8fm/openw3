@@ -3,7 +3,7 @@
 */
 
 #include "build.h"
-#include "resourcePaths.h"
+#include "resourcepaths.h"
 #include "directory.h"
 #include "filePath.h"
 

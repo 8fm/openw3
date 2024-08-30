@@ -4,7 +4,7 @@
 
 #pragma once
 
-#include "hashSet.h"
+#include "hashset.h"
 #include "serializationStreamData.h"
 
 /// Helper class to build serialization stream
