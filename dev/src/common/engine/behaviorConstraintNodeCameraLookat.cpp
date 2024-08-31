@@ -2,7 +2,7 @@
 * Copyright © 2009 CD Projekt Red. All Rights Reserved.
 */
 #include "build.h"
-#include "behaviorConstraintNodeCameraLookAt.h"
+#include "behaviorConstraintNodeCameraLookat.h"
 #include "behaviorGraphInstance.h"
 #include "behaviorGraphOutput.h"
 #include "../engine/animatedComponent.h"

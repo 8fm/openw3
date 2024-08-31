@@ -3,7 +3,7 @@
 */
 #pragma once
 
-#include "../core/sortedSet.h"
+#include "../core/sortedset.h"
 #include "../core/scopedPtr.h"
 #include "skeletalAnimationEntry.h"
 #include "skeletalAnimationSet.h"

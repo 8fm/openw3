@@ -4,7 +4,7 @@
 #include "behaviorGraphOutput.h"
 #include "behaviorGraphContext.h"
 #include "behaviorGraphStack.h"
-#include "../physics/PhysicsRagdollWrapper.h"
+#include "../physics/physicsRagdollWrapper.h"
 #include "../core/taskManager.h"
 #include "skeletalAnimationContainer.h"
 #include "game.h"

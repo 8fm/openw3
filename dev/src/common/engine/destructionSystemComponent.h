@@ -3,7 +3,7 @@
 */
 #pragma once
 
-#include "ApexDestructionWrapper.h"
+#include "apexDestructionWrapper.h"
 #include "drawableComponent.h"
 #include "pathlib.h"
 #include "pathlibComponent.h"

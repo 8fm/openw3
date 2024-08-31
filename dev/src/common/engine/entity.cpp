@@ -7,7 +7,7 @@
 #include "appearanceComponent.h"
 #include "behaviorGraphStack.h"
 #include "fxTrackItemParameterFloat.h"
-#include "../physics/PhysicsRagdollWrapper.h"
+#include "../physics/physicsRagdollWrapper.h"
 #include "renderCommands.h"
 #include "soundEntityParam.h"
 #include "animDangleComponent.h"

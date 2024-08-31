@@ -24,7 +24,7 @@
 #ifdef USE_APEX
 #include <PxRigidActor.h>
 #include "../physics/physXEngine.h"
-#include "ApexDestructionWrapper.h"
+#include "apexDestructionWrapper.h"
 #endif
 #include "destructionComponent.h"
 

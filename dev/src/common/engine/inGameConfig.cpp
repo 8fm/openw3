@@ -1,7 +1,7 @@
 #include "build.h"
 #include "inGameConfig.h"
 #include "inGameConfigSpecialization.h"
-#include "InGameConfigParser.h"
+#include "inGameConfigParser.h"
 #include "inputMappingInGameConfig.h"
 
 namespace Config

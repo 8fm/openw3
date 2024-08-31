@@ -6,7 +6,7 @@
 #ifndef NO_RED_GUI 
 
 #include "redGuiManager.h"
-#include "redguiScrollBar.h"
+#include "redGuiScrollBar.h"
 #include "redGuiButton.h"
 #include "redGuiPanel.h"
 #include "redGuiListItem.h"

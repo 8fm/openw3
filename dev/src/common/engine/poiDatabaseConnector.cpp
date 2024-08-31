@@ -3,7 +3,7 @@
 */
 
 #include "build.h"
-#include "POIDatabaseConnector.h"
+#include "poiDatabaseConnector.h"
 #include "poiSystem.h"
 #include "entity.h"
 #include "../core/configFileManager.h"

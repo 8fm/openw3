@@ -2,7 +2,7 @@
 * Copyright © 2007 CD Projekt Red. All Rights Reserved.
 */
 #include "build.h"
-#include "../physics/PhysicsRagdollWrapper.h"
+#include "../physics/physicsRagdollWrapper.h"
 #include "debugPageParam.h"
 #include "../physics/physicsEngine.h"
 #include "../physics/physicsWorld.h"
