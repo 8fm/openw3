@@ -56,7 +56,7 @@ public:
 		}
 
 		RED_MESSAGE("FIXME>>>>>")
-#ifndef RED_PLATFORM_ORBIS
+#if !(defined( RED_PLATFORM_ORBIS ) || defined( RED_PLATFORM_LINUX ))
 		FILE *f = _wfopen( m_path.AsChar(), TXT("a") );
 #else
 		FILE *f = fopen( UNICODE_TO_ANSI(m_path.AsChar() ), "a" );
@@ -70,7 +70,7 @@ public:
 private:
 	void ClearFile()
 	{
-#ifndef RED_PLATFORM_ORBIS
+#if !(defined( RED_PLATFORM_ORBIS ) || defined( RED_PLATFORM_LINUX ))
 		FILE *f = _wfopen( m_path.AsChar(), TXT("w") );
 #else
 		FILE *f = fopen( UNICODE_TO_ANSI( m_path.AsChar() ), "w" );

@@ -322,7 +322,7 @@ Bool CHud::CreateHudModule( const String& moduleName, Int32 userData /*=-1*/ )
 	ASSERT( ! m_isInTick );
 	if ( m_isInTick )
 	{
-		return nullptr;
+		return false;
 	}
 
 	ASSERT( m_flashHudAdapter );
