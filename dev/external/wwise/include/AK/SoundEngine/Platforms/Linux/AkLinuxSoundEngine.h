@@ -40,6 +40,17 @@ the specific language governing permissions and limitations under the License.
 #include <AK/SoundEngine/Common/AkTypes.h>
 #include <AK/Tools/Common/AkPlatformFuncs.h>
 
+///< API used for audio output (PC only).
+enum AkSinkType
+{
+	AkSink_Main	= 0,		///< Main device.  When initializing, the proper sink is instantiated based on system's capabilities (PulseAudio first, then ALSA).
+	AkSink_Main_PulseAudio,	///< Main device PulseAudio sink (this is the preferred API on Linux).
+	AkSink_Main_ALSA,		///< Main device ALSA sink (for backward compatibility).
+	AkSink_Dummy,			///< No output.  Used internally.
+	AkSink_MergeToMain,		///< Secondary output.  This sink will output to the main sink.
+	AkSink_NumSinkTypes
+};
+
 /// Platform specific initialization settings
 /// \sa AK::SoundEngine::Init
 /// \sa AK::SoundEngine::GetDefaultPlatformInitSettings
