@@ -7,6 +7,8 @@
 #define SPEEDTREE_VERSION_NAME		"speedtree"
 #define SPEEDTREE_VERSION			"_v7.0_"
 
+#ifndef RED_PLATFORM_LINUX
+
 #if defined( RED_PLATFORM_WINPC )
 # define SPEEDTREE_PLATFORM_NAME	"Windows"
 
@@ -70,3 +72,5 @@
 
 #pragma comment(lib, SPEEDTREE_CORE_LIB )
 #pragma comment(lib, SPEEDTREE_FOREST_LIB )
+
+#endif // RED_PLATFORM_LINUX

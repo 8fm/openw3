@@ -57,6 +57,8 @@
 
 using namespace AK;
  
+#ifndef RED_PLATFORM_LINUX
+
 #if defined( RED_PLATFORM_WIN32 ) || defined( RED_PLATFORM_WIN64 )
 	#if _MSC_VER == 1700
 		#define LIB_DIRSUFFIX "vc110"
@@ -150,6 +152,8 @@ using namespace AK;
 #pragma comment(lib, WWISE_LIB_PATH "iZTrashFiltersFX")
 #pragma comment(lib, WWISE_LIB_PATH "iZTrashMultibandDistortionFX")*/
 #endif
+
+#endif // RED_PLATFORM_LINUX
 //////////////////////////////////////////////////////////////////////////
 
 #ifndef NO_LOG

@@ -9,6 +9,8 @@
 
 #ifdef USE_SCALEFORM
 
+#ifndef RED_PLATFORM_LINUX
+
 #if defined ( RED_PLATFORM_WINPC )
 # ifdef RED_ARCH_X64
 #	define SCALEFORM_ARCH "x64"
@@ -100,5 +102,6 @@
 //# error Recompile Scaleform to exclude AIR already!
 //#endif
 
+#endif // RED_PLATFORM_LINUX
 
 #endif // USE_SCALEFORM
