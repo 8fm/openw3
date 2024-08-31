@@ -6,10 +6,10 @@
 #include "../core/xmlFile.h"
 #include "../core/xmlFileWriter.h"
 #include "../core/xmlWriter.h"
-#include "../core/xmlreader.h"
+#include "../core/xmlReader.h"
 #include "../core/configFileManager.h"
 #include "../core/filePath.h"
-#include "../core/filesys.h"
+#include "../core/fileSys.h"
 #include "../core/depot.h"
 
 #include "../core/configVar.h"

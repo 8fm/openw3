@@ -16,7 +16,7 @@
 #include "../../common/engine/pathlibInstanceMap.h"
 #include "../../common/engine/pathlibVisualizer.h"
 #include "../../common/engine/pathlib.h"
-#include "../../common/engine/pathlibnavmesh.h"
+#include "../../common/engine/pathlibNavmesh.h"
 #include "../../common/engine/pathlibNavmeshArea.h"
 #include "../../common/engine/pathlibStreamingManager.h"
 #include "../../common/engine/triggerAreaComponent.h"

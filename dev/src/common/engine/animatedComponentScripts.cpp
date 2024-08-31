@@ -8,7 +8,7 @@
 #include "behaviorGraphStack.h"
 #include "animatedComponentScripts.h"
 #include "behaviorGraphAnimationSlotNode.h"
-#include "../physics/PhysicsRagdollWrapper.h"
+#include "../physics/physicsRagdollWrapper.h"
 #include "../core/scriptStackFrame.h"
 #include "skeleton.h"
 #include "entity.h"

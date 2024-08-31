@@ -5,7 +5,7 @@
 #pragma once
 
 #include "fxTrackItemCurveBase.h"
-#include "fxphysicalforce.h"
+#include "fxPhysicalForce.h"
 
 /// Particle emitter spawner
 class CFXTrackItemGlobalSpacePhysicalForce : public CFXTrackItemCurveBase

@@ -1,5 +1,5 @@
 #include "build.h"
-#include "FloatDamper.h"
+#include "floatDamper.h"
 #include "../core/gameSave.h"
 
 /////////////////////////////////////////////////////////////////////

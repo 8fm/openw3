@@ -3,7 +3,7 @@
 */
 
 #include "build.h"
-#include "fxphysicalforce.h"
+#include "fxPhysicalForce.h"
 #include "fxTrackItemGlobalSpacePhysicalForce.h"
 #include "dynamicCollisionCollector.h"
 #include "phantomComponent.h"

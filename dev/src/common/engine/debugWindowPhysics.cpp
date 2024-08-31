@@ -6,7 +6,7 @@
 #ifndef NO_RED_GUI
 #ifndef NO_DEBUG_WINDOWS
 
-#include "../physics/PhysicsRagdollWrapper.h"
+#include "../physics/physicsRagdollWrapper.h"
 #include "../physics/physicsEngine.h"
 #include "../physics/physicsWorld.h"
 

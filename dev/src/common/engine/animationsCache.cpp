@@ -1,5 +1,5 @@
 #include "build.h"
-#include "AnimationsCache.h"
+#include "animationsCache.h"
 
 /*CAnimationsCache::CAnimationsCache(void) :
 	 m_currentSize(0)

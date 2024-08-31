@@ -3,7 +3,7 @@
 */
 
 #include "build.h"
-#include "ReviewDatabaseConnector.h"
+#include "reviewDatabaseConnector.h"
 #include "reviewSystem.h"
 #include "entity.h"
 #include "bitmapTexture.h"

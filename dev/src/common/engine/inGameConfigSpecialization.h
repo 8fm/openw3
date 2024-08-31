@@ -6,7 +6,7 @@
 #include "../core/configVarSystem.h"
 #include "boolExpression.h"
 #include "inGameConfigInterface.h"
-#include "ingameConfigListingFunction.h"
+#include "inGameConfigListingFunction.h"
 
 namespace InGameConfig
 {
