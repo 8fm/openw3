@@ -250,7 +250,7 @@ protected:
 
 		Red::IO::CAsyncFileHandleCache::TFileHandle handle = Red::IO::CAsyncFileHandleCache::INVALID_FILE_HANDLE;
 		String fileNameWithPath;
-#ifdef RED_PLATFORM_ORBIS
+#if defined( RED_PLATFORM_ORBIS ) || defined( RED_PLATFORM_LINUX )
 		fileNameWithPath += ANSI_TO_UNICODE( in_pszFileName );
 #else
 		fileNameWithPath += in_pszFileName;
@@ -301,7 +301,7 @@ protected:
 
 	AKRESULT Open( AkFileID in_fileID, AkOpenMode in_eOpenMode, AkFileSystemFlags* in_pFlags, bool& io_bSyncOpen, AkFileDesc& out_fileDesc )
 	{
-#ifdef RED_PLATFORM_ORBIS
+#if defined( RED_PLATFORM_ORBIS ) || defined( RED_PLATFORM_LINUX )
 		StringAnsi name = StringAnsi::Printf( "%i.wem", in_fileID );
 #else
 		String name = String::Printf( TXT( "%i.wem" ), in_fileID );
@@ -317,7 +317,7 @@ protected:
 			return AK_Success;
 		}
 
-#ifdef RED_PLATFORM_ORBIS
+#if defined( RED_PLATFORM_ORBIS ) || defined( RED_PLATFORM_LINUX )
 		Red::IO::CAsyncFileHandleCache::TFileHandle handle = ( Uint64 ) in_fileDesc.pCustomParam;
 #else
 		Red::IO::CAsyncFileHandleCache::TFileHandle handle = ( Uint32 ) in_fileDesc.pCustomParam;
@@ -360,7 +360,7 @@ protected:
 		if( !io_transferInfo.pBuffer )
 			return AK_Success;
 			
-#ifdef RED_PLATFORM_ORBIS
+#if defined( RED_PLATFORM_ORBIS ) || defined( RED_PLATFORM_LINUX )
 		Red::IO::CAsyncFileHandleCache::TFileHandle handle = ( Uint64 ) in_fileDesc.pCustomParam;
 #else
 		Red::IO::CAsyncFileHandleCache::TFileHandle handle = ( Uint32 ) in_fileDesc.pCustomParam;

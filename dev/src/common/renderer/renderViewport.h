@@ -25,7 +25,7 @@ protected:
 protected:
 	class CViewportWindow*				m_window;					//!< Internal window
 	Uint32								m_suppressSceneRendering;	//!< Suppress scene rendering
-#ifndef RED_PLATFORM_ORBIS
+#if !(defined( RED_PLATFORM_ORBIS ) || defined( RED_PLATFORM_LINUX ))
 	POINT								m_capturedCursorPosition;	//!< Mouse position when captured
 #endif
 #ifdef RED_ASSERTS_ENABLED
@@ -94,7 +94,7 @@ public:
 	virtual void RestoreSize() override;
 
 	virtual void SetFocus();
-#ifndef RED_PLATFORM_ORBIS
+#if !(defined( RED_PLATFORM_ORBIS ) || defined( RED_PLATFORM_LINUX ))
 	virtual void SetTopLevelWindow( HWND handle );
 #endif
 	virtual void ResizeBackBuffer( Uint32 width, Uint32 height );

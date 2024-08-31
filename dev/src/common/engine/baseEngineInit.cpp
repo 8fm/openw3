@@ -351,6 +351,7 @@ namespace ScriptCompilationHelpers
 	static ECompileScriptsReturnValue DefaultScriptFailureDlgFunc( const CScriptCompilationMessages& errorCollector )
 	{
 		ECompileScriptsReturnValue retVal = CSRV_Quit;
+#ifndef RED_PLATFORM_LINUX // FIX_LINUX MessageBox
 		const String message = TXT( "There were errors compiling scripts. Try again?" );
 		if( MessageBox( NULL, message.AsChar(), TXT("Script compilation error"), MB_ICONHAND | MB_YESNO | MB_TASKMODAL | MB_SETFOREGROUND ) == IDYES )
 		{
@@ -365,6 +366,7 @@ namespace ScriptCompilationHelpers
 				retVal = CSRV_Skip;
 			}
 		}
+#endif // RED_PLATFORM_LINUX
 
 		return retVal;
 	}

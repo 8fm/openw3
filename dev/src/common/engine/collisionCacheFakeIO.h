@@ -32,6 +32,8 @@ public:
 #ifdef RED_PLATFORM_ORBIS
 		RED_FATAL_ASSERT( false, "Not implemented on Orbis" );
 		return (Uint64)-1;
+#elif defined( RED_PLATFORM_LINUX )
+		return ftell( m_file );
 #else
 		return _ftelli64( m_file );
 #endif
@@ -40,7 +42,7 @@ public:
 	// Get size of the file stream
 	virtual Uint64 GetSize() const
 	{
-#ifdef RED_PLATFORM_ORBIS
+#if defined( RED_PLATFORM_ORBIS ) || defined( RED_PLATFORM_LINUX )
 		Uint64 pos = ftell( m_file );
 		fseek( m_file, 0, SEEK_END );
 		unsigned int size = ftell( m_file );
@@ -59,6 +61,8 @@ public:
 	virtual void Seek( Int64 offset )
 	{
 #ifdef RED_PLATFORM_ORBIS
+#elif defined( RED_PLATFORM_LINUX )
+		fseek( m_file, offset, SEEK_SET );
 #else
 		_fseeki64( m_file, offset, SEEK_SET );
 #endif
@@ -87,7 +91,7 @@ public:
 	// Get position in file stream
 	virtual Uint64 GetOffset() const
 	{
-#ifdef RED_PLATFORM_ORBIS
+#if defined( RED_PLATFORM_ORBIS ) || defined( RED_PLATFORM_LINUX )
 		return ftell( m_file );
 #else
 		return _ftelli64( m_file );
@@ -97,7 +101,7 @@ public:
 	// Get size of the file stream
 	virtual Uint64 GetSize() const
 	{
-#ifdef RED_PLATFORM_ORBIS
+#if defined( RED_PLATFORM_ORBIS ) || defined( RED_PLATFORM_LINUX )
 		Uint64 pos = ftell( m_file );
 		fseek( m_file, 0, SEEK_END );
 		unsigned int size = ftell( m_file );
@@ -116,6 +120,8 @@ public:
 	virtual void Seek( Int64 offset )
 	{
 #ifdef RED_PLATFORM_ORBIS
+#elif defined( RED_PLATFORM_LINUX )
+		fseek( m_file, offset, SEEK_SET );
 #else
 		_fseeki64( m_file, offset, SEEK_SET );
 #endif

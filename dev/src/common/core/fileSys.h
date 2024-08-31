@@ -38,7 +38,7 @@ public:
 
 	static const Char ALTERNATIVE_DIRECTORY_SEPARATOR;
 
-#if defined( RED_PLATFORM_ORBIS )
+#if defined( RED_PLATFORM_ORBIS ) || defined( RED_PLATFORM_LINUX )
 #	define DIRECTORY_SEPARATOR_LITERAL						'/'
 #	define ALTERNATIVE_DIRECTORY_SEPARATOR_LITERAL			'\\'
 

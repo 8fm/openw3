@@ -21,7 +21,7 @@
 
 #include "../core/deferredDataBufferOOMQueue.h"
 
-#if defined( RED_PLATFORM_WINPC ) || defined( RED_PLATFORM_DURANGO )
+#if defined( RED_PLATFORM_WINPC ) || defined( RED_PLATFORM_DURANGO ) || defined( RED_PLATFORM_LINUX )
 	#include "../redSystem/windowsDebuggerWriter.h"
 	typedef Red::System::Log::WindowsDebuggerWriter LogTTYWriter;
 #elif defined( RED_PLATFORM_ORBIS )

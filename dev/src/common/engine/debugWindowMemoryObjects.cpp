@@ -129,11 +129,11 @@ void CDebugWindowMemoryObjects::CreateControls()
 		(*captureButtonToolTip).AddChild( whiteInfo );
 
 		RedGui::CRedGuiLabel* greenInfo = new RedGui::CRedGuiLabel(10, 25, 10, 15);
-		greenInfo->SetText(TXT(" - there are less objects of type than in a snapshot"), Color::Color(151, 255, 151));
+		greenInfo->SetText(TXT(" - there are less objects of type than in a snapshot"), Color(151, 255, 151));
 		(*captureButtonToolTip).AddChild( greenInfo );
 
 		RedGui::CRedGuiLabel* redInfo = new RedGui::CRedGuiLabel(10, 40, 10, 15);
-		redInfo->SetText(TXT(" - there are more objects of type than in a snapshot"), Color::Color(255, 157, 111));
+		redInfo->SetText(TXT(" - there are more objects of type than in a snapshot"), Color(255, 157, 111));
 		redInfo->SetMargin(Box2(0, 0, 0, 10));
 		(*captureButtonToolTip).AddChild( redInfo );
 
@@ -355,11 +355,11 @@ void CDebugWindowMemoryObjects::ClassNode::UpdateCaption()
 	buffer.Appendf( TXT("%d"), balance);
 	if( balance > 0 )
 	{
-		m_node->SetTextColor(Color::Color(255, 157, 111));
+		m_node->SetTextColor(Color(255, 157, 111));
 	}
 	else if( balance < 0)
 	{
-		m_node->SetTextColor(Color::Color(151, 255, 151));
+		m_node->SetTextColor(Color(151, 255, 151));
 	}
 	else
 	{
@@ -403,11 +403,11 @@ void CDebugWindowMemoryObjects::ClassEntry::UpdateCaption()
 		buffer.Appendf( TXT("%d"), balance);
 		if( balance > 0 )
 		{
-			m_item->SetTextColor(Color::Color(255, 157, 111));
+			m_item->SetTextColor(Color(255, 157, 111));
 		}
 		else if( balance < 0 )
 		{
-			m_item->SetTextColor(Color::Color(151, 255, 151));
+			m_item->SetTextColor(Color(151, 255, 151));
 		}
 		else
 		{

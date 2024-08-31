@@ -200,7 +200,7 @@ void CRenderViewport::SuppressSceneRendering( Bool state )
 
 void CRenderViewport::SetFocus()
 {
-#ifndef RED_PLATFORM_CONSOLE
+#if !(defined( RED_PLATFORM_CONSOLE ) || defined( RED_PLATFORM_LINUX ))
 	::SetFocus( m_window->GetWindowHandle() );
 #endif
 }
@@ -401,7 +401,7 @@ void CRenderViewport::Present( Bool multiplane )
 		GpuApi::Present( &sourceRect, &destRect, m_swapChain, m_useVsync, (Uint32)Config::cvVSyncThreshold.Get() );
 	}
 
-#ifndef RED_PLATFORM_CONSOLE
+#if !(defined( RED_PLATFORM_CONSOLE ) || defined( RED_PLATFORM_LINUX ))
 	// Refresh window
 	::InvalidateRect( m_window->GetWindowHandle(), nullptr, true );
 #endif
@@ -468,7 +468,7 @@ void CRenderViewport::SetCheatedSize( Uint32 rendererWidth, Uint32 rendererHeigh
 
 void CRenderViewport::SetMouseMode( EMouseMode mode, Bool notRestoreMousePosition /*= false*/ )
 {
-#ifndef RED_PLATFORM_CONSOLE
+#if !(defined( RED_PLATFORM_CONSOLE ) || defined( RED_PLATFORM_LINUX ))
 	if( mode == m_mouseMode && m_forceMouseModeRefresh == false )
 	{
 		return;
@@ -539,7 +539,7 @@ void CRenderViewport::SetTopLevelWindow( HWND handle )
 #include "../engine/hwCursorManager.h"
 void CRenderViewport::SetCursorVisibility( Bool state, Bool notRestoreMousePosition )
 {
-#ifndef RED_PLATFORM_CONSOLE
+#if !(defined( RED_PLATFORM_CONSOLE ) || defined( RED_PLATFORM_LINUX ))
 	if ( state )
 	{
 		if ( !notRestoreMousePosition )
