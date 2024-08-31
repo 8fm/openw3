@@ -64,6 +64,8 @@
 	#define PHYSICS_NAN_CHECKS
 //#endif
 
+#ifndef RED_PLATFORM_LINUX
+
 #ifdef RED_PLATFORM_WIN64
 	#if _MSC_VER == 1700
 		#define PHYSX_LIB_PATH "external\\PhysX3\\lib\\win64\\"
@@ -180,6 +182,8 @@
 #endif
 
 #endif
+
+#endif // RED_PLATFORM_LINUX
 
 #endif
 
