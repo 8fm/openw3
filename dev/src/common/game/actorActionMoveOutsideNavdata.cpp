@@ -7,7 +7,7 @@
 
 #include "movementTargeter.h"
 #include "moveSteeringLocomotionSegment.h"
-#include "../physics/PhysicsWorld.h"
+#include "../physics/physicsWorld.h"
 #include "../physics/physicsWorldUtils.h"
 
 ///////////////////////////////////////////////////////////////////////////////

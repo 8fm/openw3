@@ -1,4 +1,4 @@
-#include "Build.h"
+#include "build.h"
 #include "boidAreaComponent.h"
 #include "boidLairEntity.h"
 #include "boidManager.h"

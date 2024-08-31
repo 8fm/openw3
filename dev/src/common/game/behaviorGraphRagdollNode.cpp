@@ -11,7 +11,7 @@
 #include "../engine/behaviorGraphSocket.h"
 #include "../engine/behaviorGraphValueNode.h"
 #include "../engine/graphConnectionRebuilder.h"
-#include "../physics/PhysicsRagdollWrapper.h"
+#include "../physics/physicsRagdollWrapper.h"
 #include "../core/instanceDataLayoutCompiler.h"
 #include "movingPhysicalAgentComponent.h"
 #include "../engine/behaviorProfiler.h"

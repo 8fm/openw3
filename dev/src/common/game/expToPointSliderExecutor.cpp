@@ -1,6 +1,6 @@
 
 #include "build.h"
-#include "ExpToPointSliderExecutor.h"
+#include "expToPointSliderExecutor.h"
 #include "expEvents.h"
 #include "../../common/game/movingPhysicalAgentComponent.h"
 #include "../physics/physicsWorldUtils.h"

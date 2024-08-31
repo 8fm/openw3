@@ -12,8 +12,8 @@
 
 #include "../engine/behaviorGraphValueNode.h"
 
-#include "../physics/PhysicsRagdollWrapper.h"
-#include "../physics/PhysicsWorld.h"
+#include "../physics/physicsRagdollWrapper.h"
+#include "../physics/physicsWorld.h"
 
 #include "movingPhysicalAgentComponent.h"
 #include "movableRepresentationPhysicalCharacter.h"

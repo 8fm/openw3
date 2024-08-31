@@ -25,7 +25,7 @@
 #include "guiManager.h"
 #include "storySceneActorMap.h"
 #include "storyScenePlayer.h"
-#include "StorySceneVideo.h"
+#include "storySceneVideo.h"
 #include "../../common/core/gatheredResource.h"
 #include "../../common/core/loadingJobManager.h"
 #include "../engine/camera.h"

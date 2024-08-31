@@ -1,6 +1,6 @@
-#include "Build.h"
+#include "build.h"
 #include "swarmAlgorithmData.h"
-#include "baseCrittersAi.h"
+#include "baseCrittersAI.h"
 #include "../core/algorithms.h"
 
 #define INFINITE_SOUND_DISTANCE 10000.0f

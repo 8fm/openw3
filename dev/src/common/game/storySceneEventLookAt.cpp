@@ -3,7 +3,7 @@
  */
 
 #include "build.h"
-#include "storySceneEventLookat.h"
+#include "storySceneEventLookAt.h"
 
 #include "../core/instanceDataLayoutCompiler.h"
 #include "../engine/skeletalAnimationContainer.h"

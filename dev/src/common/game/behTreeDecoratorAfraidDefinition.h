@@ -1,5 +1,5 @@
 #pragma once
-#include "behtreedecorator.h"
+#include "behTreeDecorator.h"
 #include "behTreeNodeAtomicAction.h"
 
 class CBehTreeDecoratorAfraidInstance;

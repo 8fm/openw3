@@ -1,5 +1,5 @@
 #pragma once
-#include "storysceneevent.h"
+#include "storySceneEvent.h"
 
 class CStorySceneAddFactEvent : public CStorySceneEvent
 {
