@@ -1,5 +1,5 @@
 #pragma once
-#include "questcondition.h"
+#include "questCondition.h"
 #include "inventoryComponent.h"
 #include "entityWatcher.h"
 

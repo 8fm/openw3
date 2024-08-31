@@ -3,7 +3,7 @@
 */
 
 #include "build.h"
-#include "newNPCSense.h"
+#include "newNpcSense.h"
 #include "actorsManager.h"
 
 String CNewNPC::GetSensesInfo() const

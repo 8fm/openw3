@@ -8,7 +8,7 @@
 #include "../engine/rigidMeshComponent.h"
 #include "../engine/renderFrame.h"
 #include "boatBodyComponent.h"
-#include "BoatComponent.h"
+#include "boatComponent.h"
 #include "boatConfig.h"
 
 //////////////////////////////////////////////////////////////////////////

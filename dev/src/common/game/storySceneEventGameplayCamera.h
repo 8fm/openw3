@@ -1,5 +1,5 @@
 #pragma once
-#include "storysceneeventcamera.h"
+#include "storySceneEventCamera.h"
 #include "storySceneCameraDefinition.h"
 
 class CStorySceneEventGameplayCamera : public CStorySceneEventCamera

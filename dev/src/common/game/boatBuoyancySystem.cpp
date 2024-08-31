@@ -1,6 +1,6 @@
 #include "build.h"
 #include "boatBuoyancySystem.h"
-#include "BoatComponent.h"
+#include "boatComponent.h"
 
 #include "../../common/game/commonGame.h"
 #include "../../common/game/gameWorld.h"

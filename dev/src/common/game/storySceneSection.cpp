@@ -22,7 +22,7 @@
 #include "storySceneEventAnimation.h"
 #include "storySceneEventEnterActor.h"
 #include "storySceneEventExitActor.h"
-#include "storySceneEventLookat.h"
+#include "storySceneEventLookAt.h"
 #include "storySceneEventCustomCamera.h"
 #include "storySceneEventCustomCameraInstance.h"
 #include "storySceneEventDespawn.h"

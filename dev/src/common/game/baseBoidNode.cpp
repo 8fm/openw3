@@ -1,4 +1,4 @@
-#include "Build.h"
+#include "build.h"
 #include "baseBoidNode.h"
 #include "boidInstance.h"
 #include "atomicBoidNode.h"

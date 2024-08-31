@@ -8,7 +8,7 @@
 #include "../engine/behaviorGraphUtils.inl"
 #include "../engine/traceTool.h"
 #include "../engine/physicsCharacterWrapper.h"
-#include "../physics/PhysicsRagdollWrapper.h"
+#include "../physics/physicsRagdollWrapper.h"
 #include "extAnimOnSlopeEvent.h"
 #include "../core/instanceDataLayoutCompiler.h"
 #include "../engine/skeleton.h"

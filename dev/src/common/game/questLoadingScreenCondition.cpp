@@ -1,5 +1,5 @@
 #include "build.h"
-#include "questLoadingSCreenCondition.h"
+#include "questLoadingScreenCondition.h"
 
 IMPLEMENT_ENGINE_CLASS( CQuestLoadingScreenCondition )
 

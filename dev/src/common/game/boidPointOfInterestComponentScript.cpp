@@ -1,5 +1,5 @@
 #include "build.h"
-#include "boidPointOfInterestComponentscript.h"
+#include "boidPointOfInterestComponentScript.h"
 
 IMPLEMENT_ENGINE_CLASS( CBoidPointOfInterestComponentScript );
 

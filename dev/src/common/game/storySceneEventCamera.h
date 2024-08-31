@@ -1,5 +1,5 @@
 #pragma once
-#include "storysceneevent.h"
+#include "storySceneEvent.h"
 
 class CStorySceneEventCamera : public CStorySceneEvent //Pure virtual abstract class
 {
