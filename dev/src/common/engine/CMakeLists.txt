@@ -1127,7 +1127,7 @@ target_include_directories(${PROJECT_NAME} PRIVATE
     ${CMAKE_SOURCE_DIR}/dev/external/umbra3.3.13-change-26-2826-2/interface
     ${CMAKE_SOURCE_DIR}/dev/external/PhysX3/Source
     ${CMAKE_SOURCE_DIR}/dev/external/PhysX3/Source/foundation/include
-    ${CMAKE_SOURCE_DIR}/dev/external/PhysX3/Source/common/src
+    ${CMAKE_SOURCE_DIR}/dev/external/PhysX3/Source/Common/src
     ${CMAKE_SOURCE_DIR}/dev/external/Apex/module/legacy/public
     ${CMAKE_SOURCE_DIR}/dev/external/speedtree/Include
     ${CMAKE_SOURCE_DIR}/dev/external/Ansel/include
