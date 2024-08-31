@@ -12,8 +12,8 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG ${CMAKE_SOURCE_DIR}/bin/${GAME_CONFIG}-
 
 add_subdirectory(dev/src/common/core)
 add_subdirectory(dev/src/common/engine)
-if (MSVC)
 add_subdirectory(dev/src/common/game)
+if (MSVC)
 add_subdirectory(dev/src/common/gpuApiDX10)
 add_subdirectory(dev/src/common/gpuApiOpenGL)
 add_subdirectory(dev/src/common/gpuApiUtils)
