@@ -72,7 +72,7 @@ public:
 #ifndef RED_FINAL_BUILD
 			DATA_HALT( DES_Major, GetCollisionShapeParentResource( GetParent() ), TXT("Physical collision"), TXT("Fail on creating plane from box ") );
 #endif
-			return nullptr;
+			return false;
 		}
 
 		resultGeometry->AllocateCompiledData( sizeof( PxVec3 ) );

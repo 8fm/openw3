@@ -1218,7 +1218,7 @@ void CAnimatedComponent::OnTickPrePhysicsPost( Float timeDelta )
 	if( !GetLocalToWorld().IsOk() )
 	{
 		RED_FATAL_ASSERT( GetLocalToWorld().IsOk(), "NANS" );
-#ifndef RED_PLATFORM_ORBIS
+#if !(defined( RED_PLATFORM_ORBIS ) || defined( RED_PLATFORM_LINUX ))
 		for( Uint32 i = 0; i != 16; ++i )
 		{
 			const Float* temp = &GetLocalToWorld().V[ 0 ].X;

@@ -132,7 +132,7 @@ namespace RedGui
 
 	void CRedGuiInputManager::OnTick(Float timeDelta)
 	{
-#ifndef RED_PLATFORM_CONSOLE
+#if !(defined( RED_PLATFORM_CONSOLE ) || defined( RED_PLATFORM_LINUX ))
 		if( GetMouseFocusControl() != nullptr )
 		{
 			EMousePointer pointerId = GetMouseFocusControl()->GetPointer();
@@ -831,7 +831,7 @@ namespace RedGui
 			}
 			else
 			{
-#ifndef RED_PLATFORM_CONSOLE
+#if !(defined( RED_PLATFORM_CONSOLE ) || defined( RED_PLATFORM_LINUX ))
 				::SetCursor( m_hardwarePointers[pointerId] );
 #endif
 			}
@@ -862,7 +862,7 @@ namespace RedGui
 		m_pointer = m_pointers[MP_Arrow];
 
 		// load hardware pointers
-#ifndef RED_PLATFORM_CONSOLE
+#if !(defined( RED_PLATFORM_CONSOLE ) || defined( RED_PLATFORM_LINUX ))
 		m_hardwarePointers[MP_Arrow] = ::LoadCursor( nullptr, IDC_ARROW );
 		m_hardwarePointers[MP_Hand] = ::LoadCursor( nullptr, IDC_HAND );
 		m_hardwarePointers[MP_Wait] = ::LoadCursor( nullptr, IDC_WAIT );
@@ -890,7 +890,7 @@ namespace RedGui
 			if( m_pointer != nullptr )
 			{
 				m_pointer->SetVisible( true );
-#ifndef RED_PLATFORM_CONSOLE
+#if !(defined( RED_PLATFORM_CONSOLE ) || defined( RED_PLATFORM_LINUX ))
 				while( ::ShowCursor( false ) >= 0 );
 #endif
 			}
@@ -898,7 +898,7 @@ namespace RedGui
 		else
 		{
 			m_pointer->SetVisible( false );
-#ifndef RED_PLATFORM_CONSOLE
+#if !(defined( RED_PLATFORM_CONSOLE ) || defined( RED_PLATFORM_LINUX ))
 			while( ::ShowCursor( true ) < 0 );
 #endif
 		}
@@ -911,7 +911,7 @@ namespace RedGui
 			if( m_pointer != nullptr )
 			{
 				m_pointer->SetVisible( false );
-#ifndef RED_PLATFORM_CONSOLE
+#if !(defined( RED_PLATFORM_CONSOLE ) || defined( RED_PLATFORM_LINUX ))
 				while( ::ShowCursor( true ) < 0 );
 #endif
 			}
@@ -919,7 +919,7 @@ namespace RedGui
 		else
 		{
 			m_pointer->SetVisible( false );
-#ifndef RED_PLATFORM_CONSOLE
+#if !(defined( RED_PLATFORM_CONSOLE ) || defined( RED_PLATFORM_LINUX ))
 			if( GIsGame == true || GIsEditorGame == true )
 			{
 				while( ::ShowCursor( false ) >= 0 );

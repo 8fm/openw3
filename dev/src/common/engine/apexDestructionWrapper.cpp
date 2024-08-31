@@ -370,7 +370,7 @@ Bool CApexDestructionWrapper::Create( const SDestructionParameters& parameters )
 	while( supportDepth )
 	{
 		char tmpStr[128];
-		sprintf_s(tmpStr, 128, "firstChunkAtDepth[%d]", supportDepth + 1);
+		Red::System::SNPrintF(tmpStr, 128, "firstChunkAtDepth[%d]", supportDepth + 1);
 		Uint32 firstChunkAtDepth = 0;
 		NxParameterized::getParamU32( *asset->getAssetNxParameterized(), tmpStr, firstChunkAtDepth );
 		if( firstChunkAtDepth ) break;
@@ -415,7 +415,7 @@ Bool CApexDestructionWrapper::Create( const SDestructionParameters& parameters )
 	for (int i = 0; i < dpCount; i++)
 	{
 		char tmpStr[128];
-		sprintf_s(tmpStr, 128, "depthParameters[%d].OVERRIDE_IMPACT_DAMAGE", i);
+		Red::System::SNPrintF(tmpStr, 128, "depthParameters[%d].OVERRIDE_IMPACT_DAMAGE", i);
 		NxParameterized::setParamBool(*descParams, tmpStr, false);
 	}
 
@@ -1118,7 +1118,7 @@ float CApexDestructionWrapper::GetThresholdLeft( Uint32 actorIndex )
 	const ::NxParameterized::Interface* runtimeParameters = m_actor->getNxParameterized( NxDestructibleParameterizedType::State );
 
 	char tmpStr[128];
-	sprintf_s(tmpStr, 128, "DestructibleActorChunks.data[%i].damage", actorIndex);
+	Red::System::SNPrintF(tmpStr, 128, "DestructibleActorChunks.data[%i].damage", actorIndex);
 
 	float damage = -1.0f;
 	NxParameterized::getParamF32( *runtimeParameters, tmpStr, damage );

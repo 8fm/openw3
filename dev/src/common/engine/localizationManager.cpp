@@ -36,9 +36,9 @@ const String CLocalizationManager::SPEECH_FILE_PATH_POSTFIX_PC = TXT( "pc.w3spee
 const String CLocalizationManager::CURRENT_SPEECH_FILE_PATH_POSTFIX = CLocalizationManager::SPEECH_FILE_PATH_POSTFIX_DURANGO;
 #elif defined(RED_PLATFORM_ORBIS)
 const String CLocalizationManager::CURRENT_SPEECH_FILE_PATH_POSTFIX = CLocalizationManager::SPEECH_FILE_PATH_POSTFIX_ORBIS;
-#elif defined(RED_PLATFORM_WINPC)
+#elif defined(RED_PLATFORM_WINPC) || defined(RED_PLATFORM_LINUX)
 const String CLocalizationManager::CURRENT_SPEECH_FILE_PATH_POSTFIX = CLocalizationManager::SPEECH_FILE_PATH_POSTFIX_PC;
-#elif
+#else
 #error Unsupported platform!
 #endif
 

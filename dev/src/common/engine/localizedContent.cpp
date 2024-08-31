@@ -292,7 +292,7 @@ void funcFixStringForFont( IScriptable* content, CScriptStackFrame& stack, void*
 	String currentLocale = SLocalizationManager::GetInstance().GetTextLocale();
 	String newString = originalString;
 
-#ifndef RED_PLATFORM_ORBIS
+#if !(defined( RED_PLATFORM_ORBIS ) || defined( RED_PLATFORM_LINUX ))
 	// Some special characters in some fonts don't render properly. Since this is only a problem on user
 	// Generated strings and only a problem on console, we can use this function to fix those rare cases (only one on xbox known at the moment)
 	// Swapping those characters to one thats at least somewhat supported

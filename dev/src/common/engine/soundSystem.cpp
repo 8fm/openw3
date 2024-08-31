@@ -289,7 +289,7 @@ namespace AK
 	{
 		RED_MEMORY_FREE( MemoryPool_Audio, MC_WWise, in_ptr );
 	}
-#ifndef RED_PLATFORM_ORBIS
+#if !(defined( RED_PLATFORM_ORBIS ) || defined( RED_PLATFORM_LINUX ))
 	void * VirtualAllocHook( void * in_pMemAddress, size_t in_size, unsigned long in_dwAllocationType, unsigned long in_dwProtect )
 	{
 		return VirtualAlloc( in_pMemAddress, in_size, in_dwAllocationType, in_dwProtect );
@@ -359,7 +359,7 @@ void OutputFunc( AK::Monitor::ErrorCode in_eErrorCode, const AkOSChar* in_pszErr
 #endif
 	if( in_gameObjID != AK_INVALID_GAME_OBJECT )
 	{
-#ifdef RED_PLATFORM_ORBIS
+#if defined( RED_PLATFORM_ORBIS ) || defined( RED_PLATFORM_LINUX )
 		RED_LOG_ERROR( WWise_GameObject, TXT( "%s at %i game object" ), ANSI_TO_UNICODE( in_pszError ), in_gameObjID );
 #else
 		RED_LOG_ERROR( WWise_GameObject, TXT( "%s at %i game object" ), in_pszError, in_gameObjID );
@@ -367,7 +367,7 @@ void OutputFunc( AK::Monitor::ErrorCode in_eErrorCode, const AkOSChar* in_pszErr
 	}
 	else
 	{
-#ifdef RED_PLATFORM_ORBIS
+#if defined( RED_PLATFORM_ORBIS ) || defined( RED_PLATFORM_LINUX )
 		RED_LOG_ERROR( WWise_Global, ANSI_TO_UNICODE( in_pszError ) );
 #else
 		RED_LOG_ERROR( WWise_Global, in_pszError );

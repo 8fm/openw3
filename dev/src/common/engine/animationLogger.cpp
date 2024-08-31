@@ -122,7 +122,7 @@ Bool AnimationLogger::AddToMap( const CName& animation, const AnimationData& dat
 
 void AnimationLogger::WriteToFile( const CName& str, const AnimationData& data, EAnimationLogType logType )
 {
-#ifndef RED_PLATFORM_ORBIS
+#if !(defined( RED_PLATFORM_ORBIS ) || defined( RED_PLATFORM_LINUX ))
 	FILE* f = _wfopen( m_path.AsChar(), TXT( "a" ) );
 #else
 	FILE* f = fopen( UNICODE_TO_ANSI( m_path.AsChar() ), "a" );
@@ -155,7 +155,7 @@ void AnimationLogger::LoadFile()
 {
 	RED_FATAL_ASSERT( SIsMainThread(), "AnimationLogger can only be called from main thread" );
 
-#ifndef RED_PLATFORM_ORBIS
+#if !(defined( RED_PLATFORM_ORBIS ) || defined( RED_PLATFORM_LINUX ))
 	FILE *f = _wfopen( m_path.AsChar(), TXT("r") );
 #else
 	FILE *f = fopen( UNICODE_TO_ANSI( m_path.AsChar() ), "r" );

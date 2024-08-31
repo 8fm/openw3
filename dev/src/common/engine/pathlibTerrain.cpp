@@ -1603,7 +1603,7 @@ Bool CTerrainMap::TFindWalkablePlace( TQuery* query, Vector2& outPosition ) cons
 			AUTOFAIL = false
 		};
 
-		RED_INLINE Bool OnSuccess( const Vector2& centralPoint ) const
+		RED_INLINE Bool OnSuccess( const Vector2& centralPoint ) // const
 		{
 			m_outPoint = centralPoint;
 			m_success = true;
@@ -2767,7 +2767,7 @@ void CTerrainAreaDescription::GatherPossibleConnectors( AreaId neighbourAreaId, 
 					regionStart[ iterateCoord ] = -1;
 				}
 			}
-			if ( regionStart >= 0 )
+			if ( regionStart[ iterateCoord ] >= 0 ) // regionStart >= 0
 			{
 				coord[ iterateCoord ] = tileResolution-1;
 				Local::HandleRegion( regionStart[ 0 ], regionStart[ 1 ], coord[ 0 ], coord[ 1 ], neighbourAreaId );

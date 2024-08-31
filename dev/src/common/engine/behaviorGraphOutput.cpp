@@ -211,7 +211,9 @@ void SBehaviorGraphOutput::SetPose( const CSkeleton* skeleton, Bool resetTracks 
 
 	if ( resetTracks )
 	{
+#ifndef RED_PLATFORM_LINUX
 		if ( m_floatTracks > 0 )
+#endif
 		{
 			for( Uint32 i=0; i<m_numFloatTracks; ++i )
 			{

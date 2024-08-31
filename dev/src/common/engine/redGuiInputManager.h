@@ -131,7 +131,7 @@ namespace RedGui
 		CRedGuiImage*				m_pointer;					//!< 
 		CRedGuiImage*				m_pointers[ MP_Count ];		//!<
 
-#ifndef RED_PLATFORM_CONSOLE
+#if !(defined( RED_PLATFORM_CONSOLE ) || defined( RED_PLATFORM_LINUX ))
 		HCURSOR						m_hardwarePointers[ MP_Count ];//!<
 #endif
 	};

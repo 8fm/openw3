@@ -390,7 +390,7 @@ RED_INLINE void IGameSaver::SaveObject( T* object )
 // utils for simple save profiling
 #ifdef RED_LOGGING_ENABLED
 #	define TIMER_BLOCK( varName ) Double varName; { Red::System::ScopedStopClock ___clk( varName );
-#	ifdef RED_PLATFORM_ORBIS
+#	if defined( RED_PLATFORM_ORBIS ) || defined( RED_PLATFORM_LINUX )
 #		define END_TIMER_BLOCK( varName ) } RED_LOG( TimerBlock, TXT("%s() took %.2lf msec (%ls) - file %s, line %ld"), __FUNCTION__, varName * 1000.0, TXT(#varName), __FILE__, __LINE__ );
 #	else
 #		define END_TIMER_BLOCK( varName ) } RED_LOG( TimerBlock, TXT("%ls() took %.2lf msec (%ls) - file %ls, line %ld"), __FUNCTIONW__, varName * 1000.0, TXT(#varName), __FILEW__, __LINE__ );

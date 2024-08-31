@@ -24,7 +24,7 @@ namespace IOHelper
 		// Open cache file for both reading and writing
 		if ( !forceNew )
 		{
-#ifndef RED_PLATFORM_ORBIS
+#if !(defined( RED_PLATFORM_ORBIS ) || defined( RED_PLATFORM_LINUX ))
 			file = _wfopen( absoluteFilePath.AsChar(), TXT("rb+") );
 #else
 			file = fopen( UNICODE_TO_ANSI( absoluteFilePath.AsChar() ), "rb+" );
@@ -34,7 +34,7 @@ namespace IOHelper
 		if ( !file )
 		{
 			// Create new file
-#ifndef RED_PLATFORM_ORBIS
+#if !(defined( RED_PLATFORM_ORBIS ) || defined( RED_PLATFORM_LINUX ))
 			file = _wfopen( absoluteFilePath.AsChar(), TXT("wb+") );
 #else
 			file = fopen( UNICODE_TO_ANSI( absoluteFilePath.AsChar() ), "wb+" );

@@ -2016,7 +2016,7 @@ String CLayer::GenerateUniqueEntityName( const String& base )
 //FIXME>>>>> WTF?
 void CLayer::GenerateUniqueEntityNameCheap( CEntity* entity, const String& base, String& outStr )
 {
-#ifndef RED_PLATFORM_ORBIS
+#if !(defined( RED_PLATFORM_ORBIS ) || defined( RED_PLATFORM_LINUX ))
 	Char addressStr[9] = { 0 };	
 	_ultow_s( static_cast< Uint32 >( reinterpret_cast< uintptr_t >( entity ) ), addressStr, ARRAY_COUNT( addressStr ), 16 );
 

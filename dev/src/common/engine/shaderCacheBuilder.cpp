@@ -153,8 +153,8 @@ void CShaderCacheReadWrite::Flush()
 
 #ifndef RED_PLATFORM_CONSOLE
 	// swap temp and proper shader cache files
-	RED_VERIFY( GFileManager->CopyFileW( tempFileName, m_absoluteFilePath, true ) );
-	RED_VERIFY( GFileManager->DeleteFileW( tempFileName ) );
+	RED_VERIFY( GFileManager->CopyFile( tempFileName, m_absoluteFilePath, true ) );
+	RED_VERIFY( GFileManager->DeleteFile( tempFileName ) );
 #endif
 
 	RED_LOG( Shaders, TXT( "MaterialCache: saved %u shaders, %u materials, took %1.2fms" ), m_info.m_numShaderEntries, m_info.m_numMaterialEntries, timer.GetTimePeriodMS() );

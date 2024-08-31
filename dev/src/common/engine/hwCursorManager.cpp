@@ -57,7 +57,7 @@ void CHardwareCursorManager::Update()
 	// will tell us that the cursor is visible.  To avoid that, we use ShowCursor itself
 	// to force the counter to 0 or -1.
 
-#ifndef RED_PLATFORM_CONSOLE
+#if !(defined( RED_PLATFORM_CONSOLE ) || defined( RED_PLATFORM_LINUX ))
 	if ( stateToSet )
 	{
 		int r = ::ShowCursor( true );
