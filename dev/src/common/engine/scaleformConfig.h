@@ -30,7 +30,11 @@
 # define WITH_SCALEFORM_AS3 1
 
 // Scaleform Video support
+# if defined( RED_PLATFORM_LINUX )
+# define WITH_SCALEFORM_VIDEO 0
+# else
 # define WITH_SCALEFORM_VIDEO 1
+# endif
 
 #else
 

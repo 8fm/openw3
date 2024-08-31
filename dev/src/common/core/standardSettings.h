@@ -79,7 +79,7 @@
 	
 #endif
 
-#ifdef RED_PLATFORM_CONSOLE
+#if defined( RED_PLATFORM_CONSOLE ) || defined( RED_PLATFORM_LINUX )
 	
 	#define NO_HEIGHTMAP_EDIT
 	#define NO_TEXTURECACHE_COOKER
@@ -103,6 +103,13 @@
 
 	#define NO_TELEMETRY
 	#define NO_WINDOWS_INPUT // need a better name, but code needs refactoring
+	#define NO_SECOND_SCREEN
+
+#endif
+
+#ifdef RED_PLATFORM_LINUX
+
+	#define NO_WINDOWS_INPUT
 	#define NO_SECOND_SCREEN
 
 #endif

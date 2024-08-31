@@ -32,7 +32,7 @@
 	#define USE_ANSEL
 #endif // RED_PLATFORM_WIN64
 
-#ifndef RED_PLATFORM_CONSOLE
+#if !(defined( RED_PLATFORM_CONSOLE ) || defined( RED_PLATFORM_LINUX ))
 #	define USE_PHYSX_GPU
 //#	define USE_BINK_VIDEO
 #	define USE_NVIDIA_FUR
