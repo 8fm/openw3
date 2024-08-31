@@ -56,5 +56,5 @@ void CStorySceneEventFade::OnProcess( CStorySceneInstanceBuffer& data, CStorySce
 
 void CStorySceneEventFade::GenerateEvent( const CStorySceneInstanceBuffer& instanceBuffer, CStorySceneEventsCollector& collector, const SStorySceneEventTimeInfo& timeInfo ) const
 {
-	collector.AddEvent( StorySceneEventsCollector::Fade::Fade( this, m_in, timeInfo.m_timeLocal, GetInstanceDuration( instanceBuffer ), m_color ) );
+	collector.AddEvent( StorySceneEventsCollector::Fade( this, m_in, timeInfo.m_timeLocal, GetInstanceDuration( instanceBuffer ), m_color ) );
 }

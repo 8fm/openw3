@@ -24,7 +24,7 @@ CName CBehTreeCustomMoveData::CInitializer::GetItemName() const
 // CBehTreeCustomMoveDataPtr
 ////////////////////////////////////////////////////////////////////////
 CBehTreeCustomMoveDataPtr::CBehTreeCustomMoveDataPtr( CAIStorage* storage )
-	: Super( CBehTreeCustomMoveData::CInitializer::CInitializer(), storage )
+	: Super( CBehTreeCustomMoveData::CInitializer(), storage )
 {
 
 }
