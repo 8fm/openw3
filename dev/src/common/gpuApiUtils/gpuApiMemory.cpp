@@ -4,6 +4,7 @@
 #include "gpuApiUtils.h"
 #include "gpuApiMemory.h"
 #include "../redMemoryFramework/redMemoryFillHook.h"
+#include "../redMemory/include/utils.h"
 
 #if defined( RED_PLATFORM_DURANGO )
 # include "d3d11_x.h"
@@ -306,7 +307,8 @@ namespace GpuApi
 	{
 		// This buffer contains the manager eventually. Force it to be aligned to 16 so any internals will not be mis-aligned
 		// Since this is a DirectX lib, we can just use the Microsoft-specific alignment specifier
-		static __declspec( align( 16 ) ) char s_managerBuffer[ sizeof( Red::MemoryFramework::MemoryManager ) ];
+		// static __declspec( align( 16 ) )
+		RED_ALIGN( 16 ) static char s_managerBuffer[ sizeof( Red::MemoryFramework::MemoryManager ) ];
 
 		// This pointer tracks the manager instance
 		static Red::MemoryFramework::MemoryManager* s_memoryManagerInstance = nullptr;

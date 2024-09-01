@@ -1,6 +1,16 @@
 #define __MOJOSHADER_INTERNAL__ 1
 #include "mojoshader_internal.h"
 
+#ifdef __clang__
+# ifdef __linux
+int vsnprintf_s( char* buffer, size_t count, const char * format, va_list arg )	{ if (!buffer) return -1; return vsnprintf( buffer, count, format, arg ); }
+// Not adding return values for even more chance of incompat
+void sscanf_s( const char* buf, const char* fmt, ... ) { va_list arg; va_start( arg, fmt ); vsscanf( buf, fmt, arg ); va_end(arg); };
+void strcpy_s( char* dst, size_t size, const char* src ) { strcpy( dst, src ); }
+void strcat_s( char* dst, size_t size, const char* src ) { strcat( dst, src); }
+# endif
+#endif
+
 typedef struct HashItem
 {
 	const void *key;
