@@ -1,5 +1,5 @@
 #include "build.h"
-#include "humbleCritterslairEntity.h"
+#include "humbleCrittersLairEntity.h"
 #include "humbleCrittersAI.h"
 #include "r4BoidSpecies.h"
 #include "humbleCritterAlgorithmData.h"

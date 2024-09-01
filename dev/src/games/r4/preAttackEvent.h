@@ -1,5 +1,5 @@
 #pragma once
-#include "../../common/engine/extanimdurationevent.h"
+#include "../../common/engine/extAnimDurationEvent.h"
 
 enum EPreAttackFlags
 {

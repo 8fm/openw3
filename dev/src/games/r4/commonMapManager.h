@@ -16,7 +16,7 @@
 #include "r4GameResource.h"
 
 #include "EntityMappinsResource.h"
-#include "questMappinsResource.h"
+#include "questMapPinsResource.h"
 #include "areaMappinsResource.h"
 #include "r4interiorAreaComponent.h"
 #include "minimapManager.h"

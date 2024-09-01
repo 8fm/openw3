@@ -7,7 +7,7 @@
 #include "../../common/core/2darray.h"
 #include "../../common/core/gatheredResource.h"
 
-#include "../../common/game/factsdb.h"
+#include "../../common/game/factsDB.h"
 
 #include "w2saveImporter.h"
 

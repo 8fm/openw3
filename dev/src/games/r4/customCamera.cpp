@@ -3,7 +3,7 @@
 #include "customCamera.h"
 #include "../../common/engine/behaviorGraphUtils.inl"
 #include "../../common/engine/curve.h"
-#include "CameraTools.h"
+#include "cameraTools.h"
 
 // finishers debug staff:
 //#define CAMERA_FINISHER_DEBUG_MODE

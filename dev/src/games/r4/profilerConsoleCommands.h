@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../../Common/Game/scriptRegistrationManager.h"
+#include "../../common/game/scriptRegistrationManager.h"
 
 class CR4ProfilerScriptRegistration: public CScriptRegistration
 {

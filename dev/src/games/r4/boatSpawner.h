@@ -1,5 +1,5 @@
 #pragma once
-#include "../../common/game/gameplayentity.h"
+#include "../../common/game/gameplayEntity.h"
 
 //////////////////////////////////////////////////////////////////////////
 
