@@ -10,7 +10,11 @@ void PhysicsLogger( const char* format, ... )
 	va_start( arglist, format );
 	Red::System::VSNPrintF( buffer, 1024 * 80, format, arglist );
 	va_end( arglist );
+#ifdef RED_PLATFORM_LINUX
+	Red::Internal::FilePrint( stdout, buffer );
+#else
 	OutputDebugStringA( buffer );
+#endif
 }
 
 PcScopePhysicsLogger::PcScopePhysicsLogger( const char* name ) : m_name( name )

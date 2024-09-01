@@ -922,7 +922,7 @@ void CPhysicsChainedRagdollWrapper::SyncToAnimation( const TDynArray<Matrix>& bo
 		if( !localToWorld.IsOk() )
 		{
 			RED_FATAL_ASSERT( localToWorld.IsOk(), "NANS" );
-#ifndef RED_PLATFORM_ORBIS
+#if !(defined( RED_PLATFORM_ORBIS ) || defined( RED_PLATFORM_LINUX ))
 			for( Uint32 i = 0; i != 16; ++i )
 			{
 				const Float* temp = &localToWorld.V[ 0 ].X;
@@ -951,7 +951,7 @@ void CPhysicsChainedRagdollWrapper::SyncToAnimation( const TDynArray<Matrix>& bo
 			if( !mat.GetTranslationRef().IsOk() )
 			{
 				RED_FATAL_ASSERT( mat.IsOk(), "NANS" );
-#ifndef RED_PLATFORM_ORBIS
+#if !(defined( RED_PLATFORM_ORBIS ) || defined( RED_PLATFORM_LINUX ))
 				for( Uint32 i = 0; i != 16; ++i )
 				{
 					const Float* temp = &mat.V[ 0 ].X;
