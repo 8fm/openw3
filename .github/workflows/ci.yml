@@ -97,8 +97,8 @@ jobs:
         sudo apt-get update && sudo apt-get install libsdl2-dev libvulkan-dev glslang-tools clang meson ninja-build
     - name: Build
       run: |
-        export CC=clang && export CXX=clang
-        ${CXX} --version
+        export CC=clang && export CXX=clang++
+        ${CXX} --version && cmake --version
         mkdir build && cd build
         cmake .. -DGAME_CONFIG=${{ matrix.Configuration }} -DGAME_PLATFORM=${{ matrix.Platform }} -DCMAKE_BUILD_TYPE=${{ matrix.BuildType }} -G Ninja
         ninja
