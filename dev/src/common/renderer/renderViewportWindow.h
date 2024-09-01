@@ -5,7 +5,7 @@
 
 class CRenderViewport;
 
-#ifndef RED_PLATFORM_ORBIS
+#if !(defined( RED_PLATFORM_ORBIS ) || defined( RED_PLATFORM_LINUX ))
 
 // Mouse hack for debug pages
 #ifdef RED_PLATFORM_DURANGO
