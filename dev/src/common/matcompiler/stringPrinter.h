@@ -52,7 +52,7 @@ public:
 		va_list arglist;
 		va_start(arglist, text);
 		AnsiChar formattedBuf[ 4096 ];
-		vsprintf_s( formattedBuf,  ARRAY_COUNT(formattedBuf), text, arglist ); 
+		Red::VSPrintF( formattedBuf,  ARRAY_COUNT(formattedBuf), text, arglist );
 		const Uint32 len = static_cast< Uint32 >( Red::System::StringLength( formattedBuf ) );
 		if ( len )
 		{

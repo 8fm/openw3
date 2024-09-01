@@ -262,9 +262,23 @@ namespace Red
 			// FIXME theres no wsnwprintf function available on the standard
 			return ::vswprintf( buffer, count, format, arg );
 		}
+
+		RED_FORCE_INLINE Int32 VSPrintF( AnsiChar* buffer, size_t count, const AnsiChar* format, va_list arg )
+		{
+			if ( buffer == nullptr ) return -1;
+			return ::vsprintf( buffer, format, arg );
+		}
+
+		RED_FORCE_INLINE Int32 VSPrintF( UniChar* buffer, size_t count, const UniChar* format, va_list arg )
+		{
+			if ( buffer == nullptr ) return -1;
+			return ::vswprintf( buffer, count, format, arg );
+		}
 #else
 		RED_FORCE_INLINE Int32 VSNPrintF( AnsiChar* buffer, size_t count, const AnsiChar* format, va_list arg )	{ return ::vsnprintf_s( buffer, count, _TRUNCATE, format, arg ); }
 		RED_FORCE_INLINE Int32 VSNPrintF( UniChar* buffer, size_t count, const UniChar* format, va_list arg )	{ return ::_vsnwprintf_s( buffer, count, _TRUNCATE, format, arg ); }
+		RED_FORCE_INLINE Int32  VSPrintF( AnsiChar* buffer, size_t count, const AnsiChar* format, va_list arg )	{ return ::vsprintf_s( buffer, count, format, arg ); }
+		RED_FORCE_INLINE Int32  VSPrintF( UniChar* buffer, size_t count, const UniChar* format, va_list arg )	{ return ::vswprintf_s( buffer, count, format, arg ); }
 #endif
 
 		                 Int32 SNPrintF( AnsiChar* buffer, size_t count, const AnsiChar* format, ... );
