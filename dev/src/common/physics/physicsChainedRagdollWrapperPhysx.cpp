@@ -1,7 +1,7 @@
 #include "build.h"
 #include "../physics/physicsIncludes.h"
 #include "../physics/physXEngine.h"
-#include "PhysicsChainedRagdollWrapper.h"
+#include "physicsChainedRagdollWrapper.h"
 #include "../physics/physicsWorldPhysXImpl.h"
 #include "../core/dataError.h"
 #include "../physics/physicsSettings.h"

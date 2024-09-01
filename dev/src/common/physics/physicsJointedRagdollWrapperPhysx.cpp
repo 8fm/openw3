@@ -1,6 +1,6 @@
 #include "build.h"
 #include "../physics/physXEngine.h"
-#include "PhysicsJointedRagdollWrapper.h"
+#include "physicsJointedRagdollWrapper.h"
 #include "../physics/physicsWorldPhysXImpl.h"
 #include "../core/dataError.h"
 #include "../physics/physicsSettings.h"
