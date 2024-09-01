@@ -7,7 +7,7 @@
 #include "../../common/core/commandlet.h"
 #include "../../common/core/analyzer.h"
 #include "../../common/core/gatheredResource.h"
-#include "../../common/core/xmlreader.h"
+#include "../../common/core/xmlReader.h"
 
 #ifndef NO_EDITOR
 

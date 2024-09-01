@@ -5,7 +5,7 @@
 
 #include "../../common/game/dlcMounter.h"
 #include "EntityMappinsResource.h"
-#include "QuestMappinsResource.h"
+#include "questMapPinsResource.h"
 
 class CR4MappinsDLCMounter : public IGameplayDLCMounter
 {

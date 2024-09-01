@@ -33,7 +33,7 @@
 #include "r4interiorAreaComponent.h"
 #include "r4MapTracking.h"
 #include "r4Player.h"
-#include "w3boat.h"
+#include "w3Boat.h"
 
 IMPLEMENT_ENGINE_CLASS( SMapPathDefinition )
 IMPLEMENT_ENGINE_CLASS( SMapPathInstance )

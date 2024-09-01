@@ -3,7 +3,7 @@
  */
 #include "build.h"
 
-#include "r4Popup.h"
+#include "r4popup.h"
 #include "../../games/r4/r4GuiManager.h"
 #include "../../common/engine/guiGlobals.h"
 #include "../../common/engine/viewport.h"

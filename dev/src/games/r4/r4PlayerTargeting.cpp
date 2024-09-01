@@ -8,7 +8,7 @@
 
 #include "build.h"
 #include "r4PlayerTargeting.h"
-#include "../../common/engine/pathLibWorld.h"
+#include "../../common/engine/pathlibWorld.h"
 #include "../../common/engine/staticMeshComponent.h"
 #include "../../common/physics/physicsWrapper.h"
 #include "../../common/engine/destructionSystemComponent.h"

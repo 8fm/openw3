@@ -1,5 +1,5 @@
 #pragma once
-#include "../../common/engine/entitytemplateparams.h"
+#include "../../common/engine/entityTemplateParams.h"
 #include "../../common/game/journalPath.h"
 #include "gameplayEffectExecutor.h"
 

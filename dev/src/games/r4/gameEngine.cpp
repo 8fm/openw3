@@ -11,7 +11,7 @@
 
 #include "../../common/engine/inputDeviceManager.h"
 
-#include "../../common/engine/TestFramework.h"
+#include "../../common/engine/testFramework.h"
 #include "../../common/engine/gameResource.h"
 #include "../../common/renderer/renderViewportWindow.h"
 #include "../../common/core/tokenizer.h"

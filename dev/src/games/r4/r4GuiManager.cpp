@@ -14,7 +14,7 @@
 
 #include "r4Hud.h"
 #include "r4Menu.h"
-#include "r4Popup.h"
+#include "r4popup.h"
 #include "r4GuiManager.h"
 #include "r4JournalManager.h"
 #include "journalEvents.h"

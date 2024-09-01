@@ -2,7 +2,7 @@
 #define r4SwarmUtils
 
 #include "../../common/game/swarmUtils.h"
-#include "../../Common/Game/scriptRegistrationManager.h"
+#include "../../common/game/scriptRegistrationManager.h"
 
 #define SWARM_COLLISION_TEST_RADIUS 5.0f
 

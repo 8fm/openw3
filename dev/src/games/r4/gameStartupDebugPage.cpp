@@ -3,7 +3,7 @@
 #ifndef NO_DEBUG_PAGES
 
 #include "../../common/engine/gameResource.h"
-#include "../../common/engine/TestFramework.h"
+#include "../../common/engine/testFramework.h"
 #include "../../common/game/gameSaver.h"
 #include "../../common/core/depot.h"
 #include "../../common/core/2darray.h"

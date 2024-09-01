@@ -1,5 +1,5 @@
 #include "build.h"
-#include "flyingCritterslairEntity.h"
+#include "flyingCrittersLairEntity.h"
 #include "flyingCrittersAI.h"
 #include "r4BoidSpecies.h"
 #include "flyingCritterAlgorithmData.h"

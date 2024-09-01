@@ -1,7 +1,7 @@
 #include "build.h"
 #include "behTreeSailorFollowPath.h"
 #include "../../common/game/behTreeInstance.h"
-#include "../../common/game/BoatComponent.h"
+#include "../../common/game/boatComponent.h"
 #include "../../common/engine/tagManager.h"
 #include "../../common/engine/pathComponent.h"
 

@@ -1,7 +1,7 @@
 #include "build.h"
 #include "behTreeConditionIsEnemyAround.h"
 #include "../../common/game/behTreeInstance.h"
-#include "../../common/game/newNPCNoticedObject.h"
+#include "../../common/game/newNpcNoticedObject.h"
 #include "../../common/game/player.h"
 
 ////////////////////////////////////////////////////////////////////////
