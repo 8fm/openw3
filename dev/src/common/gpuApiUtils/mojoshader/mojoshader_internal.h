@@ -134,6 +134,13 @@ typedef uint64_t uint64;
 #endif
 
 #ifdef __clang__
+# ifdef __linux
+	extern int vsnprintf_s( char* buffer, size_t count, const char * format, va_list arg );
+	// Not adding return values for even more chance of incompat
+	extern void sscanf_s( const char* buf, const char* fmt, ... );
+	extern void strcpy_s( char* dst, size_t size, const char* src );
+	extern void strcat_s( char* dst, size_t size, const char* src );
+# endif
 static inline int snprintf_wrapper( char *str, size_t n, size_t dummy, const char *format, ... )
 {
 	va_list ap;
