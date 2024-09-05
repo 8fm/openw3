@@ -122,7 +122,7 @@ namespace GpuApi
 		GPUAPI_ASSERT( startIndex < D3D11_IA_VERTEX_INPUT_RESOURCE_SLOT_COUNT && startIndex + count <= D3D11_IA_VERTEX_INPUT_RESOURCE_SLOT_COUNT, TXT("Binding vertex buffers out of bounds") );
 		GPUAPI_ASSERT( buffers != nullptr && strides != nullptr && offsets != nullptr, TXT("All data must be provided") );
 
-#ifdef RED_PLATFORM_WINPC
+#if defined( RED_PLATFORM_WINPC ) || defined( RED_PLATFORM_LINUX )
 		ID3D11Buffer* d3dBuffers[D3D11_IA_VERTEX_INPUT_RESOURCE_SLOT_COUNT];
 		for ( Uint32 i = 0; i < count; ++i )
 		{
@@ -202,7 +202,7 @@ namespace GpuApi
 				return;
 			}
 
-#ifdef RED_PLATFORM_WINPC
+#if defined( RED_PLATFORM_WINPC ) || defined( RED_PLATFORM_LINUX )
 			GetDeviceContext()->IASetIndexBuffer( GetD3DBuffer( buffer ), indexFormat, offset );
 #else
 			ID3D11DeviceContextX* contextX = (ID3D11DeviceContextX*)GetDeviceContext();

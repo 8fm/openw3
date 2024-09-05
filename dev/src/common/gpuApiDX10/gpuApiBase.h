@@ -15,6 +15,9 @@ RED_DISABLE_WARNING_MSC( 4005 )
 
 #ifndef RED_PLATFORM_CONSOLE
 
+#ifdef RED_PLATFORM_LINUX
+#define UNREFERENCED_PARAMETER(P) (P)
+#endif
 #include "../../../external/DirectXTex/DirectXTex/DirectXTex.h"
 
 #if _MSC_VER == 1700
@@ -79,6 +82,9 @@ RED_DISABLE_WARNING_MSC( 4005 )
 #	pragma comment (lib, "d3d11_x.lib")
 #	pragma comment (lib, "d3dcompiler.lib")
 #	pragma comment (lib, "xg_x.lib")
+#else
+#	include "d3d11_1.h"
+#	include "d3dcompiler.h"
 #endif
 
 #pragma comment (lib, "dxguid.lib")

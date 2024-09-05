@@ -169,7 +169,7 @@ namespace GpuApi
 		deviceFlags |= D3D11_CREATE_DEVICE_DEBUG;				// Save FPU flags
 #endif
 		// Try to initialize hardware device
-#if defined( RED_PLATFORM_WINPC )
+#if defined( RED_PLATFORM_WINPC ) || defined( RED_PLATFORM_LINUX )
 		ID3D11Device* device = nullptr;
 		ID3D11DeviceContext* context = nullptr;
 		D3D_FEATURE_LEVEL featureLevel;
@@ -607,7 +607,7 @@ namespace GpuApi
 	SwapChainRef CreateSwapChainWithBackBuffer( const SwapChainDesc& swapChainDesc )
 	{
 		SDeviceData &dd = GetDeviceData();
-#if defined( RED_PLATFORM_WINPC )
+#if defined( RED_PLATFORM_WINPC ) || defined( RED_PLATFORM_LINUX )
 		IDXGIDevice * giDevice;
 		HRESULT dxgiHRes = GetDevice()->QueryInterface(__uuidof(IDXGIDevice), (void **)&giDevice);
 
@@ -1263,7 +1263,7 @@ namespace GpuApi
 
 	void BeginProfilerBlock( const Char* name )
 	{
-#if defined( RED_PLATFORM_WINPC )
+#if defined( RED_PLATFORM_WINPC ) || defined( RED_PLATFORM_LINUX )
 		SDeviceData &dd = GetDeviceData();
 		if ( dd.m_pPerformanceInterface )
 		{
@@ -1279,7 +1279,7 @@ namespace GpuApi
 
 	void EndProfilerBlock()
 	{
-#if defined( RED_PLATFORM_WINPC )
+#if defined( RED_PLATFORM_WINPC ) || defined( RED_PLATFORM_LINUX )
 		SDeviceData &dd = GetDeviceData();
 		if ( dd.m_pPerformanceInterface )
 		{
@@ -1295,7 +1295,7 @@ namespace GpuApi
 
 	void SetMarker( const Char* name )
 	{
-#if defined( RED_PLATFORM_WINPC )
+#if defined( RED_PLATFORM_WINPC ) || defined( RED_PLATFORM_LINUX )
 		SDeviceData &dd = GetDeviceData();
 		if ( dd.m_pPerformanceInterface )
 		{
@@ -1783,7 +1783,7 @@ namespace GpuApi
 
 	Bool HasMinimumRequiredGPU()
 	{
-#ifdef RED_PLATFORM_WINPC
+#if defined( RED_PLATFORM_WINPC ) || defined( RED_PLATFORM_LINUX )
 		IDXGIFactory* pFactory;
 		HRESULT hr = CreateDXGIFactory( __uuidof( IDXGIFactory ), (void**)&pFactory );
 
@@ -1822,7 +1822,7 @@ namespace GpuApi
 
 	Bool GetDeviceId( Uint32& vendorId, Uint32& deviceId )
 	{
-#ifdef RED_PLATFORM_WINPC
+#if defined( RED_PLATFORM_WINPC ) || defined( RED_PLATFORM_LINUX )
 		IDXGIFactory* pFactory;
 		HRESULT hr = CreateDXGIFactory( __uuidof( IDXGIFactory ), (void**)&pFactory );
 
@@ -1883,7 +1883,7 @@ namespace GpuApi
 
 	Uint32 MultiGPU_GetNumGPUs()
 	{
-	#ifdef RED_PLATFORM_WINPC
+	#if defined( RED_PLATFORM_WINPC ) || defined( RED_PLATFORM_LINUX )
 		const SDeviceData &dd = GetDeviceData();
 		RED_FATAL_ASSERT( !(dd.m_GPUVendorInterface && dd.m_GPUVendorInterface->GetNumGPUs() < 1), "Expected at least one GPU" );
 		const Uint32 numGPUs = dd.m_GPUVendorInterface ? dd.m_GPUVendorInterface->GetNumGPUs() : 1;
@@ -1895,7 +1895,7 @@ namespace GpuApi
 
 	void MultiGPU_BeginEarlyPushTexture( const TextureRef &tex )
 	{
-	#ifdef RED_PLATFORM_WINPC
+	#if defined( RED_PLATFORM_WINPC ) || defined( RED_PLATFORM_LINUX )
 		if ( MultiGPU_IsActive() )
 		{
 			const SDeviceData &dd = GetDeviceData();
@@ -1906,7 +1906,7 @@ namespace GpuApi
 
 	void MultiGPU_EndEarlyPushTexture( const TextureRef &tex )
 	{
-	#ifdef RED_PLATFORM_WINPC
+	#if defined( RED_PLATFORM_WINPC ) || defined( RED_PLATFORM_LINUX )
 		if ( MultiGPU_IsActive() )
 		{
 			const SDeviceData &dd = GetDeviceData();

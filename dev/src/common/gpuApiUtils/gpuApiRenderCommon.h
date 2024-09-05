@@ -20,7 +20,7 @@ namespace GpuApi
 		return g_frameIndex;
 	}
 
-#if defined( RED_PLATFORM_WINPC )
+#if defined( RED_PLATFORM_WINPC ) || defined( RED_PLATFORM_LINUX )
 
 #define  SHADER_BASE_PATH_ANSI		"./shaders/"
 #define  SHADER_BASE_PATH			TXT("./shaders/")

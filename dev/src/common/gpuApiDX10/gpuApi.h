@@ -267,7 +267,7 @@ namespace GpuApi
 		SSwapChainData ()
 			: m_swapChain( nullptr )
 		{}
-#if defined( RED_PLATFORM_WINPC )
+#if defined( RED_PLATFORM_WINPC ) || defined( RED_PLATFORM_LINUX )
 		IDXGISwapChain*		m_swapChain;
 #elif defined( RED_PLATFORM_DURANGO )
 		IDXGISwapChain1*	m_swapChain;
@@ -310,7 +310,7 @@ namespace GpuApi
 #endif
 	};
 
-#if defined( RED_PLATFORM_WINPC )
+#if defined( RED_PLATFORM_WINPC ) || defined( RED_PLATFORM_LINUX )
 	class GPUVendorApiInterface
 	{
 	public:
@@ -411,7 +411,7 @@ namespace GpuApi
 			 , m_FrequentPSConstantBuffer( nullptr )
 			 , m_CustomPSConstantBuffer( nullptr )
 			 , m_CustomCSConstantBuffer( nullptr )
-		#if defined( RED_PLATFORM_WINPC )
+		#if defined( RED_PLATFORM_WINPC ) || defined( RED_PLATFORM_LINUX )
 			 , m_GPUVendorInterface( nullptr )
 		#endif
 		{
@@ -432,7 +432,7 @@ namespace GpuApi
 		}
 
 		// Device internal data
-#if defined( RED_PLATFORM_WINPC )
+#if defined( RED_PLATFORM_WINPC ) || defined( RED_PLATFORM_LINUX )
 		ID3D11Device*				m_pDevice;
 		ID3D11DeviceContext*		m_pImmediateContext;
 #elif defined( RED_PLATFORM_DURANGO )
@@ -545,11 +545,11 @@ namespace GpuApi
 		Uint32				m_NumConstantBufferUpdates;
 #endif
 
-#ifdef RED_PLATFORM_WINPC
+#if defined( RED_PLATFORM_WINPC ) || defined( RED_PLATFORM_LINUX )
 		QueryRef			m_renderFence;
 #endif
 
-#if defined( RED_PLATFORM_WINPC )
+#if defined( RED_PLATFORM_WINPC ) || defined( RED_PLATFORM_LINUX )
 		GPUVendorApiInterface* m_GPUVendorInterface;
 #endif
 	};

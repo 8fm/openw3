@@ -27,3 +27,11 @@
 #ifdef RED_PLATFORM_CONSOLE
 #	define NO_TEXTURE_IMPORT
 #endif
+
+#ifdef RED_PLATFORM_LINUX
+template < typename T, size_t N >
+size_t _countof( T ( & arr )[ N ] )
+{
+	return N;
+}
+#endif

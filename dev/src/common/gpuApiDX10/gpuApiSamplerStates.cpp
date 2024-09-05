@@ -296,7 +296,7 @@ namespace GpuApi
 
 		for ( Uint32 i = 0; i < MAX_PS_SAMPLER_STATES; ++i )
 		{
-			ID3D11SamplerState* nullSamplerState = NULL;
+			ID3D11SamplerState* nullSamplerState = nullptr;
 			GetDeviceContext()->PSSetSamplers( i, 1, &nullSamplerState );
 			dd.m_PSSamplerStatePresetsCache[ i ] = SAMPSTATEPRESET_Max;
 			dd.m_PSSamplerStateCache[ i ] = SamplerStateRef::Null();
@@ -304,7 +304,7 @@ namespace GpuApi
 
 		for ( Uint32 i = 0; i < MAX_VS_SAMPLER_STATES; ++i )
 		{
-			ID3D11SamplerState* nullSamplerState = NULL;
+			ID3D11SamplerState* nullSamplerState = nullptr;
 			GetDeviceContext()->VSSetSamplers( i, 1, &nullSamplerState );
 			dd.m_VSSamplerStatePresetCache[ i ] = SAMPSTATEPRESET_Max;
 			dd.m_VSSamplerStateCache[ i ] = SamplerStateRef::Null();
