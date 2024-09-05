@@ -321,7 +321,7 @@ namespace GpuApi
 	// Get D3D semantic and index from a given PackingElement. If invalid element usage, outputs are unmodified and return false.
 	inline Bool MapPackingElementToSemanticAndIndex( const VertexPacking::PackingElement& element, const char*& outSemantic, Uint32& outIndex )
 	{
-		const char* semanticName = NULL;
+		const char* semanticName = nullptr;
 		Uint32 semanticIndex = element.m_usageIndex;
 
 		switch ( element.m_usage )

@@ -158,7 +158,7 @@ namespace GpuApi
 
 	RED_INLINE CRenderStateCache::SRasterizerStates::SRasterizerStates ()
 	{
-		Red::System::MemorySet( m_states, NULL, sizeof( ID3D11RasterizerState* ) * RASTERIZERMODE_Max );
+		Red::System::MemorySet( m_states, 0, sizeof( ID3D11RasterizerState* ) * RASTERIZERMODE_Max );
 		m_shadowDepthBiasClamp = 0;
 		m_shadowSlopeScaledDepthBias = 0;
 	}
@@ -174,8 +174,8 @@ namespace GpuApi
 	 , m_forcedTwoSided( false )
 	 , m_isReversedProjection( false )
 	{
-		Red::System::MemorySet( m_blendStates, NULL, sizeof( ID3D11BlendState* ) * BLENDMODE_Max );
-		Red::System::MemorySet( m_depthStencilStates, NULL, sizeof( m_depthStencilStates ) );
+		Red::System::MemorySet( m_blendStates, 0, sizeof( ID3D11BlendState* ) * BLENDMODE_Max );
+		Red::System::MemorySet( m_depthStencilStates, 0, sizeof( m_depthStencilStates ) );
 		GPUAPI_ASSERT( sizeof( ID3D11DepthStencilState* ) * DSSM_Max * 2 == sizeof( m_depthStencilStates ) );
 	}
 
@@ -197,7 +197,7 @@ namespace GpuApi
 					RED_UNUSED( refcount );
 	#endif
 					GPUAPI_ASSERT(refcount==0, TXT( "DepthStencilS leak" ) );
-					m_depthStencilStates[reversed_i][i] = NULL;
+					m_depthStencilStates[reversed_i][i] = nullptr;
 				}
 			}
 		}
@@ -210,7 +210,7 @@ namespace GpuApi
 				RED_UNUSED( refcount );
 				//GPUAPI_ASSERT(refcount==0, TXT( "BlendS leak" ) );
 				// it looks like there are multiple references on the same D3D object but we will release all of them
-				m_blendStates[i] = NULL;
+				m_blendStates[i] = nullptr;
 			}
 		}
 
@@ -225,7 +225,7 @@ namespace GpuApi
 					RED_UNUSED( refcount );
 	#endif
 					GPUAPI_ASSERT(refcount==0, TXT( "RasterizerS leak" ) );
-					m_rasterStates[obj_i]->m_states[i] = NULL;
+					m_rasterStates[obj_i]->m_states[i] = nullptr;
 				}
 			}
 		}

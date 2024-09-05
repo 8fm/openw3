@@ -18,7 +18,7 @@
 #define ARRAY_COUNT(arr)		( sizeof( arr ) / sizeof( ( arr )[ 0 ] ) )
 #define ARRAY_COUNT_U32(arr)	static_cast< Red::System::Uint32 >( ( sizeof( arr ) / sizeof( ( arr )[ 0 ] ) ) )
 
-#define SAFE_RELEASE( x )	{ if ( x ) { (x)->Release(); }; x = NULL; }
+#define SAFE_RELEASE( x )	{ if ( x ) { (x)->Release(); }; x = nullptr; }
 
 
 // Flags

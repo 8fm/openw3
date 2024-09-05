@@ -55,7 +55,7 @@ namespace GpuApi
 
 		g_frameIndex++;
 
-#ifdef RED_PLATFORM_WINPC
+#if defined( RED_PLATFORM_WINPC ) || defined( RED_PLATFORM_LINUX )
 		if ( dd.m_GPUVendorInterface )
 		{
 			dd.m_GPUVendorInterface->Update();
@@ -71,7 +71,7 @@ namespace GpuApi
 
 		((ID3D11DeviceContextX *)GetDeviceContext())->SetGraphicsShaderLimits(&limits);
 #endif
-#ifdef RED_PLATFORM_WINPC
+#if defined( RED_PLATFORM_WINPC ) || defined( RED_PLATFORM_LINUX )
 		dd.m_renderFence = CreateQuery( QT_CommandsFinished );
 		BeginQuery( dd.m_renderFence );
 #endif
@@ -119,7 +119,7 @@ namespace GpuApi
 		GpuApi::SetupBlankRenderTargets();
 
 		SDeviceData &dd = GetDeviceData();
-#ifdef RED_PLATFORM_WINPC
+#if defined( RED_PLATFORM_WINPC ) || defined( RED_PLATFORM_LINUX )
 		EndQuery( dd.m_renderFence );
 		SafeRelease( dd.m_renderFence );
 #endif
@@ -220,7 +220,7 @@ namespace GpuApi
 		dd.m_constantBufferMem.FrameStart();
 #endif
 
-#if defined( RED_PLATFORM_WINPC )
+#if defined( RED_PLATFORM_WINPC ) || defined( RED_PLATFORM_LINUX )
 		GPUAPI_HALT( "Not implemented on PC - we could emulate this by copying into the larger backbuffer and presenting that" );
 		RED_UNUSED( swapChain );
 		RED_UNUSED( swapChainOverlay );
@@ -344,7 +344,7 @@ namespace GpuApi
 
 #ifndef RED_PLATFORM_DURANGO
 		// HACK DX10 constant buffers should be created while initialization
-		if (dd.m_FrequentVSConstantBuffer == NULL)
+		if (dd.m_FrequentVSConstantBuffer == nullptr)
 		{
 			D3D11_BUFFER_DESC cbDesc;
 			cbDesc.Usage = D3D11_USAGE_DYNAMIC;
@@ -352,7 +352,7 @@ namespace GpuApi
 			cbDesc.CPUAccessFlags = D3D11_CPU_ACCESS_WRITE;
 			cbDesc.ByteWidth = ( VSC_Frequent_Last - VSC_Frequent_First + 1 ) * 4 * sizeof(Float);
 			cbDesc.MiscFlags = 0;
-			GetDevice()->CreateBuffer( &cbDesc, NULL, &dd.m_FrequentVSConstantBuffer );
+			GetDevice()->CreateBuffer( &cbDesc, nullptr, &dd.m_FrequentVSConstantBuffer );
 #ifdef GPU_API_DEBUG_PATH
 			dd.m_FrequentVSConstantBuffer->SetPrivateData( WKPDID_D3DDebugObjectName, 8, "globalvs" );
 #endif
@@ -363,7 +363,7 @@ namespace GpuApi
 			GetDeviceContext()->DSSetConstantBuffers( dd.sc_frequentVSConstantBufferReg, 1, &dd.m_FrequentVSConstantBuffer   );
 		}
 
-		if (dd.m_CustomVSConstantBuffer == NULL)
+		if (dd.m_CustomVSConstantBuffer == nullptr)
 		{
 			D3D11_BUFFER_DESC cbDesc;
 			cbDesc.Usage = D3D11_USAGE_DYNAMIC;
@@ -371,7 +371,7 @@ namespace GpuApi
 			cbDesc.CPUAccessFlags = D3D11_CPU_ACCESS_WRITE;
 			cbDesc.ByteWidth = ( VSC_Custom_Last - VSC_Custom_First + 1 ) * 4 * sizeof(Float);
 			cbDesc.MiscFlags = 0;
-			GetDevice()->CreateBuffer( &cbDesc, NULL, &dd.m_CustomVSConstantBuffer );
+			GetDevice()->CreateBuffer( &cbDesc, nullptr, &dd.m_CustomVSConstantBuffer );
 #ifdef GPU_API_DEBUG_PATH
 			dd.m_CustomVSConstantBuffer->SetPrivateData( WKPDID_D3DDebugObjectName, 8, "customvs" );
 #endif
@@ -382,7 +382,7 @@ namespace GpuApi
 			GetDeviceContext()->DSSetConstantBuffers( dd.sc_customVSConstantBufferReg, 1, &dd.m_CustomVSConstantBuffer   );
 		}
 
-		if (dd.m_FrequentPSConstantBuffer == NULL)
+		if (dd.m_FrequentPSConstantBuffer == nullptr)
 		{
 			D3D11_BUFFER_DESC cbDesc;
 			cbDesc.Usage = D3D11_USAGE_DYNAMIC;
@@ -390,7 +390,7 @@ namespace GpuApi
 			cbDesc.CPUAccessFlags = D3D11_CPU_ACCESS_WRITE;
 			cbDesc.ByteWidth = ( PSC_Frequent_Last - PSC_Frequent_First + 1 ) * 4 * sizeof(Float);
 			cbDesc.MiscFlags = 0;
-			GetDevice()->CreateBuffer( &cbDesc, NULL, &dd.m_FrequentPSConstantBuffer );
+			GetDevice()->CreateBuffer( &cbDesc, nullptr, &dd.m_FrequentPSConstantBuffer );
 #ifdef GPU_API_DEBUG_PATH
 			dd.m_FrequentPSConstantBuffer->SetPrivateData( WKPDID_D3DDebugObjectName, 8, "globalps" );
 #endif
@@ -398,7 +398,7 @@ namespace GpuApi
 			GetDeviceContext()->PSSetConstantBuffers( dd.sc_frequentPSConstantBufferReg, 1, &dd.m_FrequentPSConstantBuffer   );
 		}
 
-		if (dd.m_CustomPSConstantBuffer == NULL)
+		if (dd.m_CustomPSConstantBuffer == nullptr)
 		{
 			D3D11_BUFFER_DESC cbDesc;
 			cbDesc.Usage = D3D11_USAGE_DYNAMIC;
@@ -406,7 +406,7 @@ namespace GpuApi
 			cbDesc.CPUAccessFlags = D3D11_CPU_ACCESS_WRITE;
 			cbDesc.ByteWidth = (PSC_Custom_Last - PSC_Custom_First + 1) * 4 * sizeof(Float);
 			cbDesc.MiscFlags = 0;
-			GetDevice()->CreateBuffer( &cbDesc, NULL, &dd.m_CustomPSConstantBuffer );
+			GetDevice()->CreateBuffer( &cbDesc, nullptr, &dd.m_CustomPSConstantBuffer );
 #ifdef GPU_API_DEBUG_PATH
 			dd.m_CustomPSConstantBuffer->SetPrivateData( WKPDID_D3DDebugObjectName, 8, "customps" );
 #endif
@@ -416,7 +416,7 @@ namespace GpuApi
 
 #endif
 
-		if ( dd.m_CustomCSConstantBuffer == NULL )
+		if ( dd.m_CustomCSConstantBuffer == nullptr )
 		{
 			D3D11_BUFFER_DESC cbDesc;
 			cbDesc.Usage = D3D11_USAGE_DYNAMIC;
@@ -424,7 +424,7 @@ namespace GpuApi
 			cbDesc.CPUAccessFlags = D3D11_CPU_ACCESS_WRITE;
 			cbDesc.ByteWidth = 32 * 4 * sizeof(Float);
 			cbDesc.MiscFlags = 0;
-			GetDevice()->CreateBuffer( &cbDesc, NULL, &dd.m_CustomCSConstantBuffer );
+			GetDevice()->CreateBuffer( &cbDesc, nullptr, &dd.m_CustomCSConstantBuffer );
 #ifdef GPU_API_DEBUG_PATH
 			dd.m_CustomCSConstantBuffer->SetPrivateData( WKPDID_D3DDebugObjectName, 8, "customcs" );
 #endif
@@ -441,7 +441,7 @@ namespace GpuApi
 #ifndef RED_PLATFORM_DURANGO
 		
 
-		if ( dd.m_FrequentVSConstantBuffer != NULL)
+		if ( dd.m_FrequentVSConstantBuffer != nullptr)
 		{
 			GetDeviceContext()->VSSetConstantBuffers( dd.sc_frequentVSConstantBufferReg, 1, &dd.m_FrequentVSConstantBuffer   );
 			GetDeviceContext()->GSSetConstantBuffers( dd.sc_frequentVSConstantBufferReg, 1, &dd.m_FrequentVSConstantBuffer   );
@@ -449,7 +449,7 @@ namespace GpuApi
 			GetDeviceContext()->DSSetConstantBuffers( dd.sc_frequentVSConstantBufferReg, 1, &dd.m_FrequentVSConstantBuffer   );
 		}
 
-		if (dd.m_CustomVSConstantBuffer != NULL)
+		if (dd.m_CustomVSConstantBuffer != nullptr)
 		{
 			GetDeviceContext()->VSSetConstantBuffers( dd.sc_customVSConstantBufferReg, 1, &dd.m_CustomVSConstantBuffer   );
 			GetDeviceContext()->GSSetConstantBuffers( dd.sc_customVSConstantBufferReg, 1, &dd.m_CustomVSConstantBuffer   );
@@ -457,12 +457,12 @@ namespace GpuApi
 			GetDeviceContext()->DSSetConstantBuffers( dd.sc_customVSConstantBufferReg, 1, &dd.m_CustomVSConstantBuffer   );
 		}
 
-		if (dd.m_FrequentPSConstantBuffer != NULL)
+		if (dd.m_FrequentPSConstantBuffer != nullptr)
 		{
 			GetDeviceContext()->PSSetConstantBuffers( dd.sc_frequentPSConstantBufferReg, 1, &dd.m_FrequentPSConstantBuffer   );
 		}
 
-		if (dd.m_CustomPSConstantBuffer != NULL)
+		if (dd.m_CustomPSConstantBuffer != nullptr)
 		{
 			GetDeviceContext()->PSSetConstantBuffers( dd.sc_customPSConstantBufferReg, 1, &dd.m_CustomPSConstantBuffer   );
 		}
@@ -811,7 +811,7 @@ namespace GpuApi
 		UpdateConstantBuffers();
 
 		// Unbind streams
-		ID3D11Buffer* nullBuffers[] = { NULL, NULL };
+		ID3D11Buffer* nullBuffers[] = { nullptr, nullptr };
 		Uint32 nullStrideOffset[2] = { 0, 0 };
 		GetDeviceContext()->IASetVertexBuffers( 0, 2, nullBuffers, nullStrideOffset, nullStrideOffset );
 		dd.m_VertexBuffers[0] = dd.m_VertexBuffers[1] = BufferRef::Null();
@@ -820,7 +820,7 @@ namespace GpuApi
 		ID3D11InputLayout* oldInputLayout = nullptr;
 		GetDeviceContext()->IAGetInputLayout( &oldInputLayout );
 
-		GetDeviceContext()->IASetInputLayout( NULL );
+		GetDeviceContext()->IASetInputLayout( nullptr );
 
 		GetDeviceContext()->IASetPrimitiveTopology( Map( primitive ) );
 		GetDeviceContext()->DrawInstanced( vertexCount, instancesCount, 0, 0 );
@@ -1003,14 +1003,14 @@ namespace GpuApi
 		if (!computeShader.isNull())
 		{
 			GPUAPI_ASSERT( GetDeviceData().m_Shaders.Data(computeShader).m_type == ComputeShader );
-			GetDeviceContext()->CSSetShader( (ID3D11ComputeShader*) GetDeviceData().m_Shaders.Data(computeShader).m_pShader, NULL, 0 );
+			GetDeviceContext()->CSSetShader( (ID3D11ComputeShader*) GetDeviceData().m_Shaders.Data(computeShader).m_pShader, nullptr, 0 );
 			GetDeviceContext()->Dispatch( x, y, z );
 		}
 
-		GetDeviceContext()->CSSetShader( NULL, NULL, 0 );
+		GetDeviceContext()->CSSetShader( nullptr, nullptr, 0 );
 	}
 
-#ifndef RED_PLATFORM_CONSOLE
+#if !(defined( RED_PLATFORM_CONSOLE) || defined( RED_PLATFORM_LINUX ))
 
 	Bool ShouldDecompressBeforeSaving( const eTextureFormat format, const eTextureSaveFormat saveFormat )
 	{
@@ -1237,7 +1237,7 @@ namespace GpuApi
 	Bool SaveTextureToFile( const TextureDataDesc& image, const Char* fileName, const eTextureSaveFormat saveFormat )
 	{
 		Bool shouldDecompressBeforeSaving = ShouldDecompressBeforeSaving( image.format, saveFormat );
-		Uint8* decompressedData = NULL;
+		Uint8* decompressedData = nullptr;
 
 		DirectX::Image img;
 		img.width = image.width;
@@ -1583,7 +1583,7 @@ namespace GpuApi
 		ID3D11UnorderedAccessView* uav = GetD3DUnorderedAccessView( computeTaskDesc.m_uav );
 		dc->CSSetUnorderedAccessViews( computeTaskDesc.m_uavIndex, 1, &uav, 0 );
 
-		dc->CSSetShader( (ID3D11ComputeShader*) GetDeviceData().m_Shaders.Data(computeTaskDesc.m_shader).m_pShader, NULL, 0 );
+		dc->CSSetShader( (ID3D11ComputeShader*) GetDeviceData().m_Shaders.Data(computeTaskDesc.m_shader).m_pShader, nullptr, 0 );
 
 #ifdef RED_PLATFORM_DURANGO
 		// No proper dependency tracking but compute tasks can depend on each other so we need this
@@ -1847,12 +1847,12 @@ namespace GpuApi
 	{
 		SDeviceData &dd = GetDeviceData();
 		
-		if ( !dataSize || NULL == dataBuffer )
+		if ( !dataSize || nullptr == dataBuffer )
 		{
 			return;
 		}
 
-		if ( NULL == dd.m_CustomCSConstantBuffer )
+		if ( nullptr == dd.m_CustomCSConstantBuffer )
 		{
 			return;
 		}

@@ -767,7 +767,7 @@ namespace GpuApi
 						return;
 					}
 
-#ifdef RED_PLATFORM_WINPC
+#if defined( RED_PLATFORM_WINPC ) || defined( RED_PLATFORM_LINUX )
 					// On Xbox, cooked data will have gone through the previous section (since it must be immutable).
 					if ( initData->m_isCooked )
 					{
@@ -1233,7 +1233,7 @@ namespace GpuApi
 
 							// create
 							HRESULT res = GetDevice()->CreateRenderTargetView( d3dTex, &rtvDesc, &(data.m_pRenderTargetViewsArray[i]) );
-							if ( FAILED( res ) || data.m_pRenderTargetViewsArray[i] == NULL )
+							if ( FAILED( res ) || data.m_pRenderTargetViewsArray[i] == nullptr )
 							{
 								GPUAPI_HALT( "Failed to create RTV for slice %u", i );
 								return false;
@@ -1282,7 +1282,7 @@ namespace GpuApi
 
 								// create the 
 								HRESULT res = GetDevice()->CreateRenderTargetView( d3dTex, &rtvDesc, &(data.m_pRenderTargetViewsArray[entrySliceIndex]) );
-								if ( FAILED( res ) || data.m_pRenderTargetViewsArray[entrySliceIndex] == NULL )
+								if ( FAILED( res ) || data.m_pRenderTargetViewsArray[entrySliceIndex] == nullptr )
 								{
 									GPUAPI_HALT( "Failed to create RenderTargetView for slice %u, face %u, mip %u", slice_i, face_i, mip_i );
 									return false;
@@ -1334,7 +1334,7 @@ namespace GpuApi
 				{
 					HRESULT res = GetDevice()->CreateDepthStencilView( d3dTex, &dsvDesc, &(data.m_pDepthStencilView) );
 
-					if ( FAILED( res ) || data.m_pDepthStencilView == NULL )
+					if ( FAILED( res ) || data.m_pDepthStencilView == nullptr )
 					{
 						GPUAPI_HALT( "Failed to create DepthStencilView" );
 						return false;
@@ -1369,7 +1369,7 @@ namespace GpuApi
 					{
 						res = GetDevice()->CreateDepthStencilView( d3dTex, &dsvDescReadOnly, &(data.m_pDepthStencilViewReadOnly) );
 
-						if ( FAILED( res ) || data.m_pDepthStencilViewReadOnly == NULL )
+						if ( FAILED( res ) || data.m_pDepthStencilViewReadOnly == nullptr )
 						{
 							GPUAPI_HALT( "Failed to create read-only DepthStencilView" );
 							return false;
@@ -1407,7 +1407,7 @@ namespace GpuApi
 #endif
 					{
 						res = GetDevice()->CreateShaderResourceView( d3dTex, &descStencilSRV, &data.m_pStencilShaderResourceView ); 
-						if ( FAILED( res ) || data.m_pStencilShaderResourceView == NULL )
+						if ( FAILED( res ) || data.m_pStencilShaderResourceView == nullptr )
 						{
 							GPUAPI_HALT( "Failed to create stencil ShaderResourceView" );
 							return false;
@@ -1472,7 +1472,7 @@ namespace GpuApi
 
 							// create
 							HRESULT res = GetDevice()->CreateDepthStencilView( d3dTex, &rtvDesc, &(data.m_pDepthStencilViewsArray[i]) );
-							if ( FAILED( res ) || data.m_pDepthStencilViewsArray[i] == NULL )
+							if ( FAILED( res ) || data.m_pDepthStencilViewsArray[i] == nullptr )
 							{
 								GPUAPI_HALT( "Failed to create DepthStencilView for slice %u", i );
 								return false;
@@ -1576,7 +1576,7 @@ namespace GpuApi
 							srvDesc.TextureCube.MipLevels = 1;
 
 							ID3DShaderResourceView *&refSRV = data.m_ppCubeShaderResourceViewPerMipLevel[ CalculateCubemapPerMipSliceIndex( desc, slice_i, level_i ) ];
-							refSRV = NULL;
+							refSRV = nullptr;
 							HRESULT res = GetDevice()->CreateShaderResourceView( d3dTex, &srvDesc, &refSRV );
 							if ( FAILED( res ) )
 							{
@@ -1637,7 +1637,7 @@ namespace GpuApi
 							srvDesc.Texture2D.MipLevels = 1;
 
 							ID3DShaderResourceView *&refSRV = data.m_ppTex2DShaderResourceViewPerMipLevel[ level_i ];
-							refSRV = NULL;
+							refSRV = nullptr;
 							HRESULT res = GetDevice()->CreateShaderResourceView( d3dTex, &srvDesc, &refSRV );
 							if ( FAILED( res ) )
 							{
@@ -1679,7 +1679,7 @@ namespace GpuApi
 								srvDesc.Texture2DArray.ArraySize = 1;
 
 								ID3DShaderResourceView *&refSRV = data.m_ppCubeShaderResourceViewPerMipFace[ CalculateCubemapSliceIndex( desc, slice_i, face_i, level_i ) ];
-								refSRV = NULL;
+								refSRV = nullptr;
 								HRESULT res = GetDevice()->CreateShaderResourceView( d3dTex, &srvDesc, &refSRV );
 								if ( FAILED( res ) )
 								{
@@ -1739,7 +1739,7 @@ namespace GpuApi
 					for ( Uint32 i=0; i<mip_i; ++i )
 					{
 						GPU_API_FREE( GpuMemoryPool_Textures, MC_TextureData, dataTab[i] );
-						dataTab[i] = NULL;
+						dataTab[i] = nullptr;
 					}
 					return;
 				}
@@ -1774,7 +1774,7 @@ namespace GpuApi
 			}
 
 			// Create texture
-			ID3D11Texture2D* texture2D = NULL;
+			ID3D11Texture2D* texture2D = nullptr;
 			D3D11_SUBRESOURCE_DATA initDataStructTab[MAX_MIPS];
 			D3D11_SHADER_RESOURCE_VIEW_DESC srvDesc;
 			{
@@ -1789,7 +1789,7 @@ namespace GpuApi
 				for ( Uint32 i=0; i<mipLevels; ++i )
 				{
 					GPU_API_FREE( GpuMemoryPool_Textures, MC_TextureData, dataTab[i] );
-					dataTab[i] = NULL;
+					dataTab[i] = nullptr;
 				}
 
 				if ( !textureCreateResult )
@@ -1904,7 +1904,7 @@ namespace GpuApi
 			}
 			else
 			{
-				if ( !SUCCEEDED( GetDevice()->CreateTexture2D( &texDesc, NULL, &textureCube ) ) )
+				if ( !SUCCEEDED( GetDevice()->CreateTexture2D( &texDesc, nullptr, &textureCube ) ) )
 				{
 					return;
 				}
@@ -2196,19 +2196,19 @@ namespace GpuApi
 	ID3D11Resource* GetD3DTextureBase( const TextureRef &ref )
 	{
 		GPUAPI_ASSERT( !(ref && !GetDeviceData().m_Textures.Data(ref).m_pTexture) );
-		return ref ? GetDeviceData().m_Textures.Data(ref).m_pTexture : NULL;
+		return ref ? GetDeviceData().m_Textures.Data(ref).m_pTexture : nullptr;
 	}
 
 	ID3D11Texture2D* GetD3DTexture2D( const TextureRef &ref )
 	{
 		GPUAPI_ASSERT( !(ref && (!GetDeviceData().m_Textures.Data(ref).m_pTexture ) ) );
-		return ref ? static_cast<ID3D11Texture2D*>( GetDeviceData().m_Textures.Data(ref).m_pTexture ) : NULL;
+		return ref ? static_cast<ID3D11Texture2D*>( GetDeviceData().m_Textures.Data(ref).m_pTexture ) : nullptr;
 	}
 
 	ID3D11Texture2D* GetD3DTextureCube( const TextureRef &ref )
 	{
 		GPUAPI_ASSERT( !(ref && (!GetDeviceData().m_Textures.Data(ref).m_pTexture || TEXTYPE_CUBE!=GetDeviceData().m_Textures.Data(ref).m_Desc.type)) );
-		return ref ? static_cast<ID3D11Texture2D*>( GetDeviceData().m_Textures.Data(ref).m_pTexture ) : NULL;
+		return ref ? static_cast<ID3D11Texture2D*>( GetDeviceData().m_Textures.Data(ref).m_pTexture ) : nullptr;
 	}
 
 	ID3D11RenderTargetView* GetD3DRenderTargetView( const TextureRef &ref, int sliceID/*=-1*/ )
@@ -2219,7 +2219,7 @@ namespace GpuApi
 		{
 			if ( sliceID == -1 )
 			{
-				GPUAPI_ASSERT( texData.m_pRenderTargetView != NULL );
+				GPUAPI_ASSERT( texData.m_pRenderTargetView != nullptr );
 				return texData.m_pRenderTargetView;
 			}
 			else if ( texData.m_pp2DRenderTargetViewPerMipLevel )
@@ -2230,7 +2230,7 @@ namespace GpuApi
 			}
 			else if ( 0 == sliceID )
 			{
-				GPUAPI_ASSERT( texData.m_pRenderTargetView != NULL );
+				GPUAPI_ASSERT( texData.m_pRenderTargetView != nullptr );
 				return texData.m_pRenderTargetView;
 			}
 			else
@@ -2242,13 +2242,13 @@ namespace GpuApi
 				}
 
 				GPUAPI_ASSERT( sliceID < texData.m_RenderTargetViewsArraySize );
-				GPUAPI_ASSERT( texData.m_pRenderTargetViewsArray[sliceID] != NULL, TXT( "Rendertarget view not created" ) );
+				GPUAPI_ASSERT( texData.m_pRenderTargetViewsArray[sliceID] != nullptr, TXT( "Rendertarget view not created" ) );
 				return texData.m_pRenderTargetViewsArray[sliceID];
 			}
 		}
 		else
 		{
-			return NULL;
+			return nullptr;
 		}
 		//dex--
 	}
@@ -2256,7 +2256,7 @@ namespace GpuApi
 	ID3D11UnorderedAccessView* GetD3DUnorderedAccessView( const TextureRef &ref )
 	{
 		GPUAPI_ASSERT( !(ref && !GetDeviceData().m_Textures.Data(ref).m_pUnorderedAccessView) );
-		return ref ? GetDeviceData().m_Textures.Data(ref).m_pUnorderedAccessView : NULL;
+		return ref ? GetDeviceData().m_Textures.Data(ref).m_pUnorderedAccessView : nullptr;
 	}
 
 	ID3D11DepthStencilView* GetD3DDepthStencilView( const TextureRef &ref, int sliceID/*=-1*/, Bool isReadOnly/*=false*/ )
@@ -2267,8 +2267,8 @@ namespace GpuApi
 		{
 			if ( sliceID == -1 )
 			{
-				GPUAPI_ASSERT( NULL != texData.m_pDepthStencilView );
-				GPUAPI_ASSERT( NULL != texData.m_pDepthStencilViewReadOnly );
+				GPUAPI_ASSERT( nullptr != texData.m_pDepthStencilView );
+				GPUAPI_ASSERT( nullptr != texData.m_pDepthStencilViewReadOnly );
 
 				return isReadOnly ? texData.m_pDepthStencilViewReadOnly : texData.m_pDepthStencilView;
 			}
@@ -2283,14 +2283,14 @@ namespace GpuApi
 				}
 
 				//GPUAPI_ASSERT( sliceID < texData.m_depthTargetViewsArraySize );
-				GPUAPI_ASSERT( texData.m_pDepthStencilViewsArray[sliceID] != NULL, TXT( "Stencil view not created" ) );
+				GPUAPI_ASSERT( texData.m_pDepthStencilViewsArray[sliceID] != nullptr, TXT( "Stencil view not created" ) );
 				GPUAPI_ASSERT( sliceID >= 0 && sliceID < (int)texData.m_Desc.sliceNum );
 				return texData.m_pDepthStencilViewsArray[sliceID];
 			}
 		}
 		else
 		{
-			return NULL;
+			return nullptr;
 		}
 		//dex--
 	}
@@ -2298,7 +2298,7 @@ namespace GpuApi
 	ID3D11ShaderResourceView* GetD3DShaderResourceView( const TextureRef &ref )
 	{
 		GPUAPI_ASSERT( !(ref && !GetDeviceData().m_Textures.Data(ref).m_pShaderResourceView) );
-		return ref ? GetDeviceData().m_Textures.Data(ref).m_pShaderResourceView : NULL;
+		return ref ? GetDeviceData().m_Textures.Data(ref).m_pShaderResourceView : nullptr;
 	}
 
 	// ----------------------------------------------------------------------
@@ -2756,13 +2756,13 @@ namespace GpuApi
 		switch ( format )
 		{
 		case TIF_DDS:
-			hr = DirectX::LoadFromDDSFile( importPath, DirectX::DDS_FLAGS_NONE, NULL, image );
+			hr = DirectX::LoadFromDDSFile( importPath, DirectX::DDS_FLAGS_NONE, nullptr, image );
 			break;
 		case TIF_TGA:
-			hr = DirectX::LoadFromTGAFile( importPath, NULL, image );
+			hr = DirectX::LoadFromTGAFile( importPath, nullptr, image );
 			break;
 		case TIF_WIC:
-			hr = DirectX::LoadFromWICFile( importPath, DirectX::WIC_FLAGS_FORCE_RGB, NULL, image );
+			hr = DirectX::LoadFromWICFile( importPath, DirectX::WIC_FLAGS_FORCE_RGB, nullptr, image );
 			break;
 		}
 		
@@ -2905,7 +2905,7 @@ namespace GpuApi
 			dd.m_TextureStats.AddTexture( textureSize, group );
 		}
 
-#ifdef RED_PLATFORM_WINPC
+#if defined( RED_PLATFORM_WINPC ) || defined( RED_PLATFORM_LINUX )
 		// Since we can't use in-place creation on PC, we need to free the memory, so the caller doesn't need to worry about the
 		// differences between platforms.
 		if ( desc.IsInPlace() && initData != nullptr && initData->m_isCooked && initData->m_cookedData.IsValid() )
@@ -2989,7 +2989,7 @@ namespace GpuApi
 
 		SDeviceData &dd = GetDeviceData();
 		TextureDesc localDesc;
-		ID3D11Resource	*d3dTexBase	= NULL;
+		ID3D11Resource	*d3dTexBase	= nullptr;
 #ifndef RED_PLATFORM_CONSOLE
 		bool isCube = false;
 		{
@@ -3015,19 +3015,19 @@ namespace GpuApi
 		}
 
 		// Create d3d texture
-		ID3D11Resource		*d3dTex	= NULL;
+		ID3D11Resource		*d3dTex	= nullptr;
 
 		DirectX::TexMetadata metaData;
 		DirectX::ScratchImage* scratchImage = new DirectX::ScratchImage(); //allocate on the heap
 		HRESULT texRes = DirectX::LoadFromDDSMemory( memoryFile, fileSize, DirectX::DDS_FLAGS_NONE, &metaData, *scratchImage);
 		if ( !SUCCEEDED( texRes ) )
 		{
-			GPUAPI_ASSERT( d3dTex == NULL );
+			GPUAPI_ASSERT( d3dTex == nullptr );
 		}
 
 		DirectX::CreateTexture(dd.m_pDevice, scratchImage->GetImages(), scratchImage->GetImageCount(), metaData, &d3dTex);
 		scratchImage->Release();
-		scratchImage = NULL;
+		scratchImage = nullptr;
 
 		d3dTexBase = d3dTex;
 #else
@@ -3127,7 +3127,7 @@ namespace GpuApi
 	{
 		GPUAPI_ASSERT( TEXTYPE_2D == texDesc.type || TEXTYPE_CUBE == texDesc.type || TEXTYPE_ARRAY == texDesc.type, TXT("Unsupported texture type") );
 
-#if defined( RED_PLATFORM_WINPC )
+#if defined( RED_PLATFORM_WINPC ) || defined( RED_PLATFORM_LINUX )
 		Uint32 totalPixels = 0;
 
 		// Calculate number of pixels in texture
@@ -3708,7 +3708,7 @@ namespace GpuApi
 
 	void BindTextureCubeMipLevel( Uint32 slot, const TextureRef &texture, Uint32 sliceIndex, Uint32 mipIndex, eShaderType shaderStage )
 	{
-		ID3D11ShaderResourceView *srv = NULL;
+		ID3D11ShaderResourceView *srv = nullptr;
 
 		if ( texture )
 		{
@@ -3730,7 +3730,7 @@ namespace GpuApi
 
 	void BindTextureCubeMipFace( Uint32 slot, const TextureRef &texture, Uint32 sliceIndex, Uint32 mipIndex, Uint32 faceIndex, eShaderType shaderStage )
 	{
-		ID3D11ShaderResourceView *srv = NULL;
+		ID3D11ShaderResourceView *srv = nullptr;
 
 		if ( texture )
 		{
@@ -3754,7 +3754,7 @@ namespace GpuApi
 	{
 		RED_ASSERT( 0 == sliceIndex );
 
-		ID3D11ShaderResourceView *srv = NULL;
+		ID3D11ShaderResourceView *srv = nullptr;
 
 		if ( texture )
 		{
@@ -3788,7 +3788,7 @@ namespace GpuApi
 
 	void BindTextureStencil( Uint32 slot, const TextureRef &texture, eShaderType shaderStage )
 	{
-		ID3D11ShaderResourceView *srv = NULL;
+		ID3D11ShaderResourceView *srv = nullptr;
 
 		if ( texture )
 		{
@@ -4111,7 +4111,7 @@ namespace GpuApi
 		}
 
 		// Create staging texture
-		ID3D11Texture2D *stagingTexture = NULL;
+		ID3D11Texture2D *stagingTexture = nullptr;
 		D3D11_TEXTURE2D_DESC texDesc;
 		texDesc.Usage = D3D11_USAGE_STAGING;
 		texDesc.CPUAccessFlags = D3D11_CPU_ACCESS_READ;
@@ -4235,7 +4235,7 @@ namespace GpuApi
 		}
 
 		// Create staging texture
-		ID3D11Texture2D *stagingTexture = NULL;
+		ID3D11Texture2D *stagingTexture = nullptr;
 		D3D11_TEXTURE2D_DESC texDesc;
 		texDesc.Usage = D3D11_USAGE_STAGING;
 		texDesc.CPUAccessFlags = D3D11_CPU_ACCESS_READ;
@@ -4797,7 +4797,7 @@ namespace GpuApi
 			if ( !dd.m_InternalTextures[i] )
 			{
 				dd.m_InternalTextures[i] = TextureRef( dd.m_Textures.Create( 1 ) );
-				GPUAPI_ASSERT( dd.m_InternalTextures[i] != NULL );
+				GPUAPI_ASSERT( dd.m_InternalTextures[i] != 0 );
 			}
 		}
 
@@ -4866,7 +4866,7 @@ namespace GpuApi
 				if ( data.m_pTexture )
 				{
 					data.m_pTexture->Release();
-					data.m_pTexture = NULL;
+					data.m_pTexture = nullptr;
 				}
 			}
 		}
@@ -4896,7 +4896,7 @@ namespace GpuApi
 		}
 		else
 		{
-			return NULL;
+			return nullptr;
 		}
 	}
 
@@ -4914,7 +4914,7 @@ namespace GpuApi
 
 	void AddDynamicTexture( TextureRef tex, const char* name )
 	{
-		if ( GetDeviceData().m_NumDynamicTextures < ARRAYSIZE( GetDeviceData().m_DynamicTextures ) )
+		if ( GetDeviceData().m_NumDynamicTextures < _countof( GetDeviceData().m_DynamicTextures ) )
 		{
 			GetDeviceData().m_DynamicTextures[ GetDeviceData().m_NumDynamicTextures ].m_Name = name;
 			GetDeviceData().m_DynamicTextures[ GetDeviceData().m_NumDynamicTextures ].m_Texture = tex;

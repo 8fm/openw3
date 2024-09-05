@@ -549,7 +549,7 @@ namespace GpuApi
 		}
 
 		// Create state object
-		ID3D11DepthStencilState* depthStencilState = NULL;
+		ID3D11DepthStencilState* depthStencilState = nullptr;
 		// CreateDepthStencilState checks for identical states already loaded. If it finds one, it returns pointer to it, instead of having a duplicate.
 		// I'm not sure if the AddRef is called in such case, but I will assume it does for the moment.
 		GPUAPI_MUST_SUCCEED( GetDevice()->CreateDepthStencilState( &desc, &depthStencilState ) );
@@ -606,7 +606,7 @@ namespace GpuApi
 			const Uint32 reversedIndex = m_isReversedProjection ? 1 : 0;
 
 			// Make sure mode created
-			if ( m_depthStencilStates[ reversedIndex ][ offsetMode ] == NULL )
+			if ( m_depthStencilStates[ reversedIndex ][ offsetMode ] == nullptr )
 			{
 				CreateDSMode( newMode, stencilReadMask, stencilWriteMask, m_isReversedProjection );
 			}
@@ -883,7 +883,7 @@ namespace GpuApi
 		}
 
 		// Create state object
-		ID3D11RasterizerState* rasterizerState = NULL;
+		ID3D11RasterizerState* rasterizerState = nullptr;
 		// CreateRasterizerState checks for identical states already loaded. If it finds one, it returns pointer to it, instead of having a duplicate.
 		// I'm not sure if the AddRef is called in such case, but I will assume it does for the moment.
 		GPUAPI_MUST_SUCCEED( GetDevice()->CreateRasterizerState( &desc, &rasterizerState ) );
@@ -923,7 +923,7 @@ namespace GpuApi
 		{
 			if (newMode != RASTERIZERMODE_Max)
 			{
-				if ( m_rasterStates[0]->m_states[ newMode ] == NULL )
+				if ( m_rasterStates[0]->m_states[ newMode ] == nullptr )
 				{
 					CreateRMode(newMode);
 				}
@@ -1896,7 +1896,7 @@ namespace GpuApi
 		}
 
 		// Create state object
-		ID3D11BlendState* blendState = NULL;
+		ID3D11BlendState* blendState = nullptr;
 		// CreateBlendState checks for identical states already loaded. If it finds one, it returns pointer to it, instead of having a duplicate.
 		// I'm not sure if the AddRef is called in such case, but I will assume it does for the moment.
 		GPUAPI_MUST_SUCCEED( GetDevice()->CreateBlendState( &desc, &blendState ) );
@@ -1913,13 +1913,13 @@ namespace GpuApi
 		{
 			if (newMode != BLENDMODE_Max)
 			{
-				if ( m_blendStates[ newMode ] == NULL )
+				if ( m_blendStates[ newMode ] == nullptr )
 				{
 					CreateBMode(newMode);
 				}
 
 				// Set the state
-				GetDeviceContext()->OMSetBlendState( m_blendStates[ newMode ], NULL, 0xFFFFFFFF );
+				GetDeviceContext()->OMSetBlendState( m_blendStates[ newMode ], nullptr, 0xFFFFFFFF );
 			}
 			// Remember current blend mode
 			m_blendMode = newMode;

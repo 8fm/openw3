@@ -329,7 +329,7 @@ namespace GpuApi
 		GPUAPI_ASSERT( !vertexShader.isNull() );
 		if ( vertexShader.isNull() )
 		{
-			return NULL;
+			return nullptr;
 		}
 
 		SDeviceData &dd = GetDeviceData();
@@ -341,11 +341,11 @@ namespace GpuApi
 		GPUAPI_ASSERT( layoutIndex >= 0 && layoutIndex < MAX_SHADER_COUNT );
 		if ( layoutIndex < 0 || layoutIndex >= MAX_SHADER_COUNT )
 		{
-			return NULL;
+			return nullptr;
 		}
 
 		ID3D11InputLayout* layout = layoutData.m_inputLayouts[layoutIndex];
-		if ( layout == NULL )
+		if ( layout == nullptr )
 		{
 			// To make things a little more efficient, we'll cache the size for each slot as we build the DX element descs. Otherwise
 			// figuring out offsets for each D3D element would be either slow or complicated or just annoying.

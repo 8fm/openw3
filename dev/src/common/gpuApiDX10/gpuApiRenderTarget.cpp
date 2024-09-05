@@ -252,9 +252,9 @@ namespace GpuApi
 			{
 				TextureRef ref = rt_i<setup.numColorTargets ? setup.colorTargets[rt_i] : TextureRef::Null();
 				//dex++: added array slice support, also added cube sub-frace support
-				rts[rt_i] = (ref ? GetD3DRenderTargetView(ref, setup.colorTargetsSlices[rt_i]) : NULL);
+				rts[rt_i] = (ref ? GetD3DRenderTargetView(ref, setup.colorTargetsSlices[rt_i]) : nullptr);
 				//dex--
-				GPUAPI_ASSERT( (NULL == rts[rt_i]) == ref.isNull() );
+				GPUAPI_ASSERT( (nullptr == rts[rt_i]) == ref.isNull() );
 			}
 		}
 
@@ -266,15 +266,15 @@ namespace GpuApi
 				TextureRef ref = rt_i<numUavs ? setup.unorderedAccessViews[rt_i] : TextureRef::Null();
 				BufferRef bRef = rt_i<numUavs ? setup.unorderedAccessViewsBuf[rt_i] : BufferRef::Null();
 
-				uav[rt_i] = (ref ? GetD3DUnorderedAccessView(ref) : ( bRef ? (GetDeviceData().m_Buffers.Data(bRef).m_pUnorderedAccessView) : NULL ) );
-				GPUAPI_ASSERT( (NULL == uav[rt_i]) == ref.isNull() && (NULL == uav[rt_i]) == bRef.isNull() );
+				uav[rt_i] = (ref ? GetD3DUnorderedAccessView(ref) : ( bRef ? (GetDeviceData().m_Buffers.Data(bRef).m_pUnorderedAccessView) : nullptr ) );
+				GPUAPI_ASSERT( (nullptr == uav[rt_i]) == ref.isNull() && (nullptr == uav[rt_i]) == bRef.isNull() );
 			}
 		}
 
 		// Depth render targets
 		{
 			//dex++: added slice support
-			depth = (setup.depthTarget ? GetD3DDepthStencilView(setup.depthTarget, setup.depthTargetSlice, setup.depthTargetReadOnly) : NULL);
+			depth = (setup.depthTarget ? GetD3DDepthStencilView(setup.depthTarget, setup.depthTargetSlice, setup.depthTargetReadOnly) : nullptr);
 			//dex--
 		}
 

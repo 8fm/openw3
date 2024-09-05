@@ -12,6 +12,20 @@ namespace GpuApi
 	((Uint32)(uint8_t)(ch2) << 16) | ((Uint32)(uint8_t)(ch3) << 24 ))
 #endif /* defined(MAKEFOURCC) */
 
+#ifdef RED_PLATFORM_LINUX
+	// source url: https://github.com/microsoft/wdkmetadata/blob/723744537b7d9f647090da6900e2896213cbe324/generation/WDK/IdlHeaders/shared/winerror.h
+	#define FACILITY_WIN32                   7
+
+	#define ERROR_INVALID_DATA               13L
+	#define ERROR_HANDLE_EOF                 38L
+	#define ERROR_NOT_SUPPORTED              50L
+
+	inline constexpr HRESULT HRESULT_FROM_WIN32(unsigned long x)
+	{
+		return (HRESULT)(x) <= 0 ? (HRESULT)(x) : (HRESULT) (((x) & 0x0000FFFF) | (FACILITY_WIN32 << 16) | 0x80000000);
+	}
+#endif
+
 	//--------------------------------------------------------------------------------------
 	// DDS file structure definitions
 	//

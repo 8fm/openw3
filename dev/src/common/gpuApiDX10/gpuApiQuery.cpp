@@ -58,7 +58,7 @@ namespace GpuApi
 		SQueryData &data = dd.m_Queries.Data( query );
 
 		// Release resources
-		GPUAPI_ASSERT( NULL != data.m_pQuery );
+		GPUAPI_ASSERT( nullptr != data.m_pQuery );
 		SAFE_RELEASE( data.m_pQuery );
 
 		// Destroy shit
@@ -82,7 +82,7 @@ namespace GpuApi
 		}
 
 		// Create d3d query
-		ID3D11Query *d3dQuery = NULL;
+		ID3D11Query *d3dQuery = nullptr;
 		D3D11_QUERY_DESC qDesc;
 
 		switch ( queryType )
@@ -102,7 +102,7 @@ namespace GpuApi
 			GPUAPI_LOG_WARNING( TXT("Failed to create d3d query: 0x%08x"), (Uint32)hr );
 			return QueryRef::Null();
 		}
-		GPUAPI_ASSERT( NULL != d3dQuery );
+		GPUAPI_ASSERT( nullptr != d3dQuery );
 
 		// Create GpuApi query
 		Uint32 newQueryId = dd.m_Queries.Create( 1 );

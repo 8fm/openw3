@@ -451,7 +451,7 @@ namespace GpuApi
 		case DRAWCONTEXT_PostProcSet_StencilMatchExact:
 			{
 				Uint8 refValue, readMask;
-				UnpackDrawContextRefValue( newRefValue, &refValue, &readMask, NULL );
+				UnpackDrawContextRefValue( newRefValue, &refValue, &readMask, nullptr );
 				rs.SetDepthStencilMode( DSSM_LightsFilterExactMatch_NoDepthAlways, refValue, readMask );
 				rs.SetRasterizerMode( RASTERIZERMODE_DefaultCullCCW );
 				rs.SetBlendMode( BLENDMODE_Set );
@@ -461,7 +461,7 @@ namespace GpuApi
 		case DRAWCONTEXT_PostProcPremulBlend_StencilMatchExact:
 			{
 				Uint8 refValue, readMask;
-				UnpackDrawContextRefValue( newRefValue, &refValue, &readMask, NULL );
+				UnpackDrawContextRefValue( newRefValue, &refValue, &readMask, nullptr );
 				rs.SetDepthStencilMode( DSSM_LightsFilterExactMatch_NoDepthAlways, refValue, readMask );
 				rs.SetRasterizerMode( RASTERIZERMODE_DefaultCullCCW );
 				rs.SetBlendMode( BLENDMODE_PremulBlend );
@@ -471,7 +471,7 @@ namespace GpuApi
 		case DRAWCONTEXT_PostProcAdd_StencilMatchExact:
 			{
 				Uint8 refValue, readMask;
-				UnpackDrawContextRefValue( newRefValue, &refValue, &readMask, NULL );
+				UnpackDrawContextRefValue( newRefValue, &refValue, &readMask, nullptr );
 				rs.SetDepthStencilMode( DSSM_LightsFilterExactMatch_NoDepthAlways, refValue, readMask );
 				rs.SetRasterizerMode( RASTERIZERMODE_DefaultCullCCW );
 				rs.SetBlendMode( BLENDMODE_Add );
@@ -665,7 +665,7 @@ namespace GpuApi
 		case DRAWCONTEXT_NoColor_DepthLE_StencilClear:
 			{
 				Uint8 writeMask;
-				UnpackDrawContextRefValue( newRefValue, NULL, NULL, &writeMask );
+				UnpackDrawContextRefValue( newRefValue, nullptr, nullptr, &writeMask );
 				rs.SetDepthStencilMode( DSSM_DepthLE_StencilSet, 0, 0, writeMask );
 				rs.SetRasterizerMode( RASTERIZERMODE_DefaultNoCull );
 				rs.SetBlendMode( BLENDMODE_NoColorWrite );
