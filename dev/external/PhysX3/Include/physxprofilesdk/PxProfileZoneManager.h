@@ -108,7 +108,7 @@ namespace physx {
 		/**
 		 * Deprecated form of the above function.
 		 */ 
-		virtual PxProfileZone& createProfileZone( const char* inSDKName, PxProfileNameProvider* inProvider = NULL, PxU32 inEventBufferByteSize = 0x4000 /*16k*/ ) = 0;
+		virtual PxProfileZone& createProfileZone( const char* inSDKName, PxProfileNameProvider* inProvider = nullptr, PxU32 inEventBufferByteSize = 0x4000 /*16k*/ ) = 0;
 
 		virtual void setUserCustomProfiler(PxUserCustomProfiler* callback) = 0;
 

@@ -217,7 +217,7 @@ public:
 	{
 		PxU32 len = *(PxU32*)mExtraDataAddress;
 		mExtraDataAddress += sizeof(len);
-		name = len ? (const char*)mExtraDataAddress : NULL;
+		name = len ? (const char*)mExtraDataAddress : nullptr;
 		mExtraDataAddress += len; 
 	}
 

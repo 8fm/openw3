@@ -276,14 +276,14 @@ public:
 	virtual char *strdup(const char *str)
 	{
 		if( !str )
-			return NULL;
+			return nullptr;
 
 		physx::PxU32 strLen = (physx::PxU32)strlen(str) + 1;
 		char *retStr = (char *)this->alloc(strLen, 1);
 		
 		PX_ASSERT( retStr );
 		
-		if( NULL != retStr )
+		if( nullptr != retStr )
 #if defined(PX_WINDOWS) || defined(PX_HAS_SECURE_STRCPY)
 			strcpy_s( retStr, strLen, str );
 #else
@@ -297,7 +297,7 @@ public:
 	*/
 	virtual void strfree(char *str)
 	{
-		if( NULL != str )
+		if( nullptr != str )
 			this->free( str );
 	}
 

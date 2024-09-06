@@ -266,7 +266,7 @@ namespace physx
 	@see PxVehicleDrive4W::setToRestState, PxVehicleDriveNW::setToRestState, PxVehicleDriveTank::setToRestState, PxVehicleNoDrive::setToRestState
 	*/
 	void PxVehicleSuspensionRaycasts
-		(PxBatchQuery* batchQuery, const PxU32 nbVehicles, PxVehicleWheels** vehicles, const PxU32 nbSceneQueryResults, PxRaycastQueryResult* sceneQueryResults, const bool* vehiclesToRaycast = NULL);
+		(PxBatchQuery* batchQuery, const PxU32 nbVehicles, PxVehicleWheels** vehicles, const PxU32 nbSceneQueryResults, PxRaycastQueryResult* sceneQueryResults, const bool* vehiclesToRaycast = nullptr);
 
 
 	/**

@@ -173,7 +173,7 @@ class PxBatchQuery
 		const PxVec3& origin, const PxVec3& unitDir, PxReal distance = PX_MAX_F32, PxU16 maxTouchHits = 0,
 		PxHitFlags hitFlags = PxHitFlag::ePOSITION|PxHitFlag::eNORMAL|PxHitFlag::eDISTANCE,
 		const PxQueryFilterData& filterData = PxQueryFilterData(),
-		void* userData = NULL, const PxQueryCache* cache = NULL) const = 0;
+		void* userData = nullptr, const PxQueryCache* cache = nullptr) const = 0;
 
 
 	/**
@@ -194,7 +194,7 @@ class PxBatchQuery
 	*/
 	virtual void overlap(
 		const PxGeometry& geometry, const PxTransform& pose, PxU16 maxTouchHits = 0,
-		const PxQueryFilterData& filterData = PxQueryFilterData(), void* userData=NULL, const PxQueryCache* cache = NULL) const = 0;
+		const PxQueryFilterData& filterData = PxQueryFilterData(), void* userData=nullptr, const PxQueryCache* cache = nullptr) const = 0;
 
 	/**
 	\brief Sweep returning multiple hits.
@@ -224,7 +224,7 @@ class PxBatchQuery
 	virtual void sweep(
 		const PxGeometry& geometry, const PxTransform& pose, const PxVec3& unitDir, const PxReal distance,
 		PxU16 maxTouchHits = 0, PxHitFlags hitFlags = PxHitFlag::ePOSITION|PxHitFlag::eNORMAL|PxHitFlag::eDISTANCE,
-		const PxQueryFilterData& filterData = PxQueryFilterData(), void* userData=NULL, const PxQueryCache* cache = NULL,
+		const PxQueryFilterData& filterData = PxQueryFilterData(), void* userData=nullptr, const PxQueryCache* cache = nullptr,
 		const PxReal inflation = 0.f) const = 0;
 
 protected:

@@ -242,7 +242,7 @@ DEFINE_PVD_TYPE_ALIAS( const void*, void* );
 		PxU8* mBegin;
 		PxU8* mEnd;
 		PxU8* mCapacity; //>= stop
-		ArrayData( PxU8* beg = NULL, PxU8* end = NULL, PxU8* cap = NULL )
+		ArrayData( PxU8* beg = nullptr, PxU8* end = nullptr, PxU8* cap = nullptr )
 			: mBegin(beg )
 			, mEnd( end )
 			, mCapacity( cap )
@@ -282,7 +282,7 @@ DEFINE_PVD_TYPE_ALIAS( const void*, void* );
 		const T* mEnd;
 	public:
 		DataRef( const T* b, PxU32 count ) : mBegin( b ), mEnd( b + count ) {}
-		DataRef( const T* b = NULL, const T* e = NULL ) : mBegin( b ), mEnd( e ) {}
+		DataRef( const T* b = nullptr, const T* e = nullptr ) : mBegin( b ), mEnd( e ) {}
 		DataRef( const DataRef& o ) : mBegin( o.mBegin ), mEnd( o.mEnd ) {}
 		DataRef& operator=( const DataRef& o ) { mBegin = o.mBegin; mEnd = o.mEnd; return *this; } 
 		PxU32 size() const { return static_cast<PxU32>( mEnd - mBegin ); }
@@ -326,7 +326,7 @@ DEFINE_PVD_TYPE_ALIAS( const void*, void* );
 		{
 			release();
 		}
-		PvdRefPtr( TObjType* obj = NULL ) : mObj( obj ) 
+		PvdRefPtr( TObjType* obj = nullptr ) : mObj( obj )
 		{
 			addRef();
 		}

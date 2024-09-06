@@ -105,7 +105,7 @@ public:
 	\param[in] ptr pointer to element, defaults to NULL.
 	\param[in] stride stride for accessing consecutive elements, defaults to the size of one element.
 	*/
-    explicit PX_INLINE PxStrideIterator(T* ptr = NULL, PxU32 stride = sizeof(T)) :
+    explicit PX_INLINE PxStrideIterator(T* ptr = nullptr, PxU32 stride = sizeof(T)) :
         mPtr(ptr), mStride(stride)
     {
         PX_ASSERT(mStride == 0 || sizeof(T) <= mStride);

@@ -102,7 +102,7 @@ public:
 	\return  Whether the collection is serializable
 	@see PxSerialization::complete, PxSerialization::serializeCollectionToBinary, PxSerialization::serializeCollectionToXml, PxSerializationRegistry
 	*/
-	static	bool			isSerializable(PxCollection& collection, PxSerializationRegistry& sr, const PxCollection* externalReferences = NULL);
+	static	bool			isSerializable(PxCollection& collection, PxSerializationRegistry& sr, const PxCollection* externalReferences = nullptr);
 
 	/**
 	\brief Adds to a collection all objects such that it can be successfully serialized.
@@ -132,7 +132,7 @@ public:
 	\param[in] followJoints Specifies whether joints should be added for jointed actors
 	@see PxCollection, PxSerialization::serializeCollectionToBinary, PxSerialization::serializeCollectionToXml, PxSerializationRegistry
 	*/
-	static	void			complete(PxCollection& collection, PxSerializationRegistry& sr, const PxCollection* exceptFor = NULL, bool followJoints = false);
+	static	void			complete(PxCollection& collection, PxSerializationRegistry& sr, const PxCollection* exceptFor = nullptr, bool followJoints = false);
 	
 	/**
 	\brief Creates PxSerialObjectId values for unnamed objects in a collection.
@@ -159,7 +159,7 @@ public:
 
 	@see PxCollection, PxSerializationRegistry, PxInputData, PxStringTable, PxCooking, PxSerialization::PxXmlMiscParameter
 	*/
-	static	PxCollection*	createCollectionFromXml(PxInputData& inputData, PxCooking& cooking, PxSerializationRegistry& sr, const PxCollection* externalRefs = NULL, PxStringTable* stringTable = NULL, PxXmlMiscParameter* outArgs = NULL);
+	static	PxCollection*	createCollectionFromXml(PxInputData& inputData, PxCooking& cooking, PxSerializationRegistry& sr, const PxCollection* externalRefs = nullptr, PxStringTable* stringTable = nullptr, PxXmlMiscParameter* outArgs = nullptr);
 	
 	/**
 	\brief Deserializes a PxCollection from memory.
@@ -176,7 +176,7 @@ public:
 
 	@see PxCollection, PxSerialization::complete, PxSerialization::serializeCollectionToBinary, PxSerializationRegistry
 	*/
-	static	PxCollection*	createCollectionFromBinary(void* memBlock, PxSerializationRegistry& sr, const PxCollection* externalRefs = NULL);
+	static	PxCollection*	createCollectionFromBinary(void* memBlock, PxSerializationRegistry& sr, const PxCollection* externalRefs = nullptr);
 
 	/**
 	\brief Serializes a physics collection to an XML output stream.
@@ -196,7 +196,7 @@ public:
 
 	@see PxCollection, PxOutputStream, PxSerializationRegistry, PxCooking, PxSerialization::PxXmlMiscParameter
 	*/
-	static	bool			serializeCollectionToXml(PxOutputStream& outputStream, PxCollection& collection,  PxSerializationRegistry& sr, PxCooking* cooking = NULL, const PxCollection* externalRefs = NULL, PxXmlMiscParameter* inArgs = NULL);
+	static	bool			serializeCollectionToXml(PxOutputStream& outputStream, PxCollection& collection,  PxSerializationRegistry& sr, PxCooking* cooking = nullptr, const PxCollection* externalRefs = nullptr, PxXmlMiscParameter* inArgs = nullptr);
 	
 	/**
 	\brief Serializes a collection to a binary stream.
@@ -220,7 +220,7 @@ public:
 
 	@see PxCollection, PxOutputStream, PxSerialization::complete, PxSerialization::createCollectionFromBinary, PxSerializationRegistry
 	*/
-	static	bool			serializeCollectionToBinary(PxOutputStream& outputStream, PxCollection& collection, PxSerializationRegistry& sr, const PxCollection* externalRefs = NULL, bool exportNames = false );
+	static	bool			serializeCollectionToBinary(PxOutputStream& outputStream, PxCollection& collection, PxSerializationRegistry& sr, const PxCollection* externalRefs = nullptr, bool exportNames = false );
 
 	/** 
 	\brief Dumps the binary meta-data to a stream.

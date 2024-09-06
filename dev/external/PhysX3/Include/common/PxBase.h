@@ -79,7 +79,7 @@ public:
 	\brief Returns string name of dynamic type.
 	\return	Class name of most derived type of this object.
 	*/
-	virtual		const char*					getConcreteTypeName() const						{ return NULL; }
+	virtual		const char*					getConcreteTypeName() const						{ return nullptr; }
 
 	/* brief Implements dynamic cast functionality. 
 
@@ -89,7 +89,7 @@ public:
 
 	\return A pointer to the specified type if object matches, otherwise NULL
 	*/
-	template<class T> T*					is()											{ return typeMatch<T>() ? static_cast<T*>(this) : NULL; }
+	template<class T> T*					is()											{ return typeMatch<T>() ? static_cast<T*>(this) : nullptr; }
 
 	/* brief Implements dynamic cast functionality for const objects. 
 
@@ -99,7 +99,7 @@ public:
 
 	\return A pointer to the specified type if object matches, otherwise NULL
 	*/
-	template<class T> const T*				is() const										{ return typeMatch<T>() ? static_cast<const T*>(this) : NULL; }
+	template<class T> const T*				is() const										{ return typeMatch<T>() ? static_cast<const T*>(this) : nullptr; }
 
 	/**
 	\brief	Returns concrete type of object.

@@ -108,7 +108,7 @@ Used with PxVolumeCache iterator and serves as a base class for PxQueryHit.
 */
 struct PxActorShape
 {
-	PX_INLINE PxActorShape() : actor(NULL), shape(NULL) {}
+	PX_INLINE PxActorShape() : actor(nullptr), shape(nullptr) {}
 	PX_INLINE PxActorShape(PxRigidActor* a, PxShape* s) : actor(a), shape(s) {}
 
 	PxRigidActor*	actor;
@@ -326,7 +326,7 @@ struct PxHitBuffer : public PxHitCallback<HitType>
 	\param[in] aMaxNbTouches	Size of touch buffer.
 
 	@see PxHitCallback */
-	PxHitBuffer(HitType* aTouches = NULL, PxU32 aMaxNbTouches = 0) : PxHitCallback<HitType>(aTouches, aMaxNbTouches) {}
+	PxHitBuffer(HitType* aTouches = nullptr, PxU32 aMaxNbTouches = 0) : PxHitCallback<HitType>(aTouches, aMaxNbTouches) {}
 
 	/** \brief Computes the number of any hits in this result, blocking or touching. */
 	PX_INLINE PxU32				getNbAnyHits() const				{ return getNbTouches() + PxU32(this->hasBlock); }

@@ -201,7 +201,7 @@ public:
 	\param[in] elapsedTime	Elapsed time since last call
 	\param[in] cctFilterCb	Filtering callback for CCT-vs-CCT interactions
 	*/
-	virtual	void				computeInteractions(PxF32 elapsedTime, PxControllerFilterCallback* cctFilterCb=NULL) = 0;
+	virtual	void				computeInteractions(PxF32 elapsedTime, PxControllerFilterCallback* cctFilterCb=nullptr) = 0;
 
 	/**
 	\brief Enables or disables runtime tessellation.

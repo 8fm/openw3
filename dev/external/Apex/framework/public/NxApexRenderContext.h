@@ -56,7 +56,7 @@ public:
 	{
 		renderResource = 0;
 		isScreenSpace = false;
-        renderMeshName = NULL;
+        renderMeshName = nullptr;
 	}
 
 public:

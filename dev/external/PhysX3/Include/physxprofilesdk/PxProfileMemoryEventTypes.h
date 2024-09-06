@@ -112,7 +112,7 @@ namespace physx
 		virtual ~PxProfileBulkMemoryEventHandler(){}
 	public:
 		virtual void handleEvents( const PxProfileBulkMemoryEvent* inEvents, PxU32 inBufferSize ) = 0;
-		static void parseEventBuffer( const PxU8* inBuffer, PxU32 inBufferSize, PxProfileBulkMemoryEventHandler& inHandler, bool inSwapBytes, PxAllocatorCallback* inAlloc = NULL );
+		static void parseEventBuffer( const PxU8* inBuffer, PxU32 inBufferSize, PxProfileBulkMemoryEventHandler& inHandler, bool inSwapBytes, PxAllocatorCallback* inAlloc = nullptr );
 	};
 }
 

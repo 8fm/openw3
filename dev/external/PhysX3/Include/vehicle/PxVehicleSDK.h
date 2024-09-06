@@ -56,7 +56,7 @@ Call this before using any of the vehicle functions.
 
 @see PxCloseVehicleSDK
 */
-PX_C_EXPORT bool PX_CALL_CONV PxInitVehicleSDK(PxPhysics& physics, PxSerializationRegistry* serializationRegistry = NULL);
+PX_C_EXPORT bool PX_CALL_CONV PxInitVehicleSDK(PxPhysics& physics, PxSerializationRegistry* serializationRegistry = nullptr);
 
 /**
 \brief Shut down the PhysXVehicle library. 
@@ -70,7 +70,7 @@ Call this function as part of the physx shutdown process.
 
 @see PxInitVehicleSDK
 */
-PX_C_EXPORT void PX_CALL_CONV PxCloseVehicleSDK(PxSerializationRegistry* serializationRegistry = NULL);
+PX_C_EXPORT void PX_CALL_CONV PxCloseVehicleSDK(PxSerializationRegistry* serializationRegistry = nullptr);
 
 
 /**

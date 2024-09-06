@@ -139,7 +139,7 @@ public:
 
         // clear mTm before calling taskCompleted() for safety
 		PxTaskManager* save = mTm;
-		mTm = NULL;
+		mTm = nullptr;
 		save->taskCompleted( *this );
 	}
 
@@ -243,13 +243,13 @@ class PxLightCpuTask : public PxBaseTask
 {
 public:
 	PxLightCpuTask()
-		: mCont( NULL )
+		: mCont( nullptr )
 		, mRefCount( 0 )
 	{
 	}
 	virtual ~PxLightCpuTask()
 	{
-		mTm = NULL;
+		mTm = nullptr;
 	}
 
     /**

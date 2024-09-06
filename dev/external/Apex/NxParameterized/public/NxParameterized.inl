@@ -60,8 +60,8 @@ PX_INLINE TokenizerResultType getStructMemberToken(const char *long_name,
                                                 physx::PxU32 max_token_len,
                                                 physx::PxU32 &offset)
 {
-    PX_ASSERT(long_name != NULL);
-    PX_ASSERT(token != NULL);
+    PX_ASSERT(long_name != nullptr);
+    PX_ASSERT(token != nullptr);
     PX_ASSERT(max_token_len > 1);
     PX_ASSERT(IS_IDENTCHAR(long_name[0]) || long_name[0] == '.');
 
@@ -95,8 +95,8 @@ PX_INLINE TokenizerResultType getArrayMemberToken(const char *long_name,
                                                physx::PxU32 max_token_len,
                                                physx::PxU32 &offset)
 {
-    PX_ASSERT(long_name != NULL);
-    PX_ASSERT(token != NULL);
+    PX_ASSERT(long_name != nullptr);
+    PX_ASSERT(token != nullptr);
     PX_ASSERT(max_token_len > 1);
     PX_ASSERT(long_name[0] == '[');
 
@@ -129,8 +129,8 @@ PX_INLINE TokenizerResultType getNextToken(const char *long_name,
                                         physx::PxU32 max_token_len,
                                         physx::PxU32 &offset)
 {
-    PX_ASSERT(long_name != NULL);
-    PX_ASSERT(token != NULL);
+    PX_ASSERT(long_name != nullptr);
+    PX_ASSERT(token != nullptr);
     PX_ASSERT(max_token_len > 1);
 
     if(long_name[0] == 0)
@@ -164,8 +164,8 @@ PX_INLINE int local_strcat_s(char* dest, size_t size, const char* src)
 {
 	size_t d, destStringLen, srcStringLen;
 
-	if (	dest		== NULL ||
-			src			== NULL ||
+	if (	dest		== nullptr ||
+			src			== nullptr ||
 			size		== 0	)
 	{
 		return -1;
@@ -191,7 +191,7 @@ PX_INLINE int local_strcat_s(char* dest, size_t size, const char* src)
 */
 PX_INLINE physx::PxI32 local_sprintf_s( char * _DstBuf, size_t _DstSize, const char * _Format, ...)
 {
-	if ( _DstBuf == NULL || _Format == NULL )
+	if ( _DstBuf == nullptr || _Format == nullptr )
 	{
 		return -1;
 	}
@@ -210,7 +210,7 @@ PX_INLINE Handle::Handle(::NxParameterized::Interface *iface)
 	reset();
 	mInterface = iface;
 	mIsConst = false;
-	if (mInterface != NULL)
+	if (mInterface != nullptr)
 		mParameterDefinition = mInterface->rootParameterDefinition();
 }
 
@@ -266,7 +266,7 @@ PX_INLINE ErrorType Handle::getChildHandle(const ::NxParameterized::Interface *i
                                                          Handle &handle)
 {
     handle = *this;
-    handle.mUserData = NULL;
+    handle.mUserData = nullptr;
     return(handle.set(instance,child_long_name));
 }
 
@@ -282,7 +282,7 @@ PX_INLINE ErrorType Handle::getParameter(const char *longName)
 
 PX_INLINE ErrorType  Handle::set(const ::NxParameterized::Interface *instance,const Definition *root,const char *child_long_name)
 {
-    PX_ASSERT(root->parent() == NULL);
+    PX_ASSERT(root->parent() == nullptr);
 
     reset();
     mParameterDefinition = root;
@@ -293,13 +293,13 @@ PX_INLINE ErrorType  Handle::set(const ::NxParameterized::Interface *instance,co
 
 PX_INLINE ErrorType Handle::set(const ::NxParameterized::Interface *instance,const char *child_long_name)
 {
-    PX_ASSERT(mParameterDefinition != NULL);
-    PX_ASSERT(child_long_name != NULL);
+    PX_ASSERT(mParameterDefinition != nullptr);
+    PX_ASSERT(child_long_name != nullptr);
 
     if(!isValid())
         return(ERROR_INVALID_PARAMETER_HANDLE);
 
-    mUserData = NULL;
+    mUserData = nullptr;
 
     if(child_long_name[0] == 0)
     {
@@ -338,7 +338,7 @@ PX_INLINE ErrorType Handle::set(const ::NxParameterized::Interface *instance,con
 
                     physx::PxI32 index;
                     mParameterDefinition = mParameterDefinition->child(token, index);
-                    if(mParameterDefinition == NULL)
+                    if(mParameterDefinition == nullptr)
                         return(ERROR_INVALID_PARAMETER_NAME);
 
                     pushIndex(index);
@@ -390,7 +390,7 @@ no_error:
 
 PX_INLINE ErrorType Handle::set(physx::PxI32 child_index)
 {
-    PX_ASSERT(mParameterDefinition != NULL);
+    PX_ASSERT(mParameterDefinition != nullptr);
     PX_ASSERT(child_index >= 0);
 
     switch(parameterDefinition()->type())
@@ -437,12 +437,12 @@ PX_INLINE ErrorType Handle::getChildHandle(physx::PxI32 index, Handle &handle)
     handle.pushIndex(index);
     if(parameterDefinition()->type() == TYPE_STRUCT)
     {
-        PX_ASSERT(parameterDefinition()->child(index) != NULL);
+        PX_ASSERT(parameterDefinition()->child(index) != nullptr);
 		handle.mParameterDefinition = parameterDefinition()->child(index);
     }
     else
     {
-        PX_ASSERT(parameterDefinition()->child(0) != NULL);
+        PX_ASSERT(parameterDefinition()->child(0) != nullptr);
         handle.mParameterDefinition = parameterDefinition()->child(0);
     }
 
@@ -451,7 +451,7 @@ PX_INLINE ErrorType Handle::getChildHandle(physx::PxI32 index, Handle &handle)
 
 PX_INLINE bool Handle::getLongName(char *str, physx::PxU32 max_str_len) const
 {
-    PX_ASSERT(parameterDefinition() != NULL);
+    PX_ASSERT(parameterDefinition() != nullptr);
 
     if(!isValid())
         return(false);
@@ -466,13 +466,13 @@ PX_INLINE bool Handle::getLongName(char *str, physx::PxU32 max_str_len) const
     char tmpStr[32];
     for(physx::PxI32 i=1; i <= numIndexes(); ++i)
     {
-        PX_ASSERT(node != NULL);
-        PX_ASSERT(node->parent() != NULL);
+        PX_ASSERT(node != nullptr);
+        PX_ASSERT(node->parent() != nullptr);
 
         switch(node->parent()->type())
         {
             case TYPE_STRUCT:
-                if(node->parent()->parent() != NULL)
+                if(node->parent()->parent() != nullptr)
 				{
 					local_strcat_s(str, max_str_len, ".");
 				}
@@ -503,7 +503,7 @@ PX_INLINE bool Handle::getLongName(char *str, physx::PxU32 max_str_len) const
                 break;
 
             default:
-                node = NULL;
+                node = nullptr;
         }
     }
 
@@ -513,8 +513,8 @@ PX_INLINE bool Handle::getLongName(char *str, physx::PxU32 max_str_len) const
 PX_INLINE void Handle::reset(void)
 {
     mNumIndexes = 0;
-    mParameterDefinition = NULL;
-    mUserData = NULL;
+    mParameterDefinition = nullptr;
+    mUserData = nullptr;
     mIsValid = false;
 }
 
@@ -531,7 +531,7 @@ PX_INLINE physx::PxI32 Handle::popIndex(physx::PxI32 levels)
 {
     PX_ASSERT(levels > 0);
     PX_ASSERT(mNumIndexes >= levels);
-    PX_ASSERT(mParameterDefinition != NULL);
+    PX_ASSERT(mParameterDefinition != nullptr);
 
     if(mNumIndexes >= levels )
     {

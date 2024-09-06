@@ -68,7 +68,7 @@ struct PxGpuTaskHint
 class PxGpuTask : public PxTask
 {
 public:
-	PxGpuTask() : mComp(NULL) {}
+	PxGpuTask() : mComp(nullptr) {}
 
 	/**
 	 * \brief iterative "run" function for a PxGpuTask
@@ -102,7 +102,7 @@ public:
 		if (mComp)
 		{
 			mComp->removeReference();
-			mComp = NULL;
+			mComp = nullptr;
 		}
 		PxTask::release();
 	}

@@ -66,13 +66,13 @@ namespace physx
 		\brief Id given to this object at some point
 		*/
 		PxSerialObjectId 	id;
-		PxRepXObject( const char* inTypeName = "", const void* inSerializable = NULL, const PxSerialObjectId inId = 0 )
+		PxRepXObject( const char* inTypeName = "", const void* inSerializable = nullptr, const PxSerialObjectId inId = 0 )
 			: typeName( inTypeName )
 			, serializable( inSerializable )
 			, id( inId )
 		{
 		}
-		bool isValid() const { return serializable != NULL; }
+		bool isValid() const { return serializable != nullptr; }
 	};
 
 	/**
@@ -87,7 +87,7 @@ namespace physx
 		PxPhysics&			physics;
 		PxCooking*			cooker;
 		PxStringTable*		stringTable;
-		PxRepXInstantiationArgs( PxPhysics& inPhysics, PxCooking* inCooking = NULL , PxStringTable* inStringTable = NULL ) 
+		PxRepXInstantiationArgs( PxPhysics& inPhysics, PxCooking* inCooking = nullptr , PxStringTable* inStringTable = nullptr )
 			: physics( inPhysics )
 			, cooker( inCooking )
 			, stringTable( inStringTable )

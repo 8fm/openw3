@@ -72,25 +72,25 @@ public:
 	///If it is a box, cast to box class, return NULL otherwise
 	virtual const NxApexBoxShape* 			isBoxGeom() const
 	{
-		return NULL;
+		return nullptr;
 	}
 
 	///If it is a sphere, cast to sphere class, return NULL otherwise
 	virtual const NxApexSphereShape* 		isSphereGeom() const
 	{
-		return NULL;
+		return nullptr;
 	}
 
 	///If it is a capsule, cast to the capsule class, return NULL otherwise
 	virtual const NxApexCapsuleShape* 		isCapsuleGeom() const
 	{
-		return NULL;
+		return nullptr;
 	}
 
 	///If it is a half space, cast to half space class, return NULL otherwise
 	virtual const NxApexHalfSpaceShape* 	isHalfSpaceGeom() const
 	{
-		return NULL;
+		return nullptr;
 	}
 
 	///Release shape

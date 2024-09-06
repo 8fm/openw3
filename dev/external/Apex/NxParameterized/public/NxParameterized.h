@@ -1133,7 +1133,7 @@ class SerializationCallback
 {
 public:
 	/// Callback method
-    virtual void preSerialize(void* userData = NULL) = 0;
+    virtual void preSerialize(void* userData = nullptr) = 0;
 };
 
 
@@ -1246,7 +1246,7 @@ public:
     virtual ErrorType getParameterHandle(const char *longName, Handle  &handle) = 0;
 
     /// An application may set a callback function that is called immediately before serialization
-    virtual void setSerializationCallback(SerializationCallback *cb, void *userData = NULL) = 0;
+    virtual void setSerializationCallback(SerializationCallback *cb, void *userData = nullptr) = 0;
 
 	/// Called prior by Serializer to serialization
     virtual ErrorType callPreSerializeCallback() const = 0;
@@ -1260,7 +1260,7 @@ public:
 	\param [in] doCompareNotSerialized If false differences of parameters with DONOTSERIALIZE-hint are ignored.
     \returns true if parameter definition tree is equal as well as parameter values
     */
-    virtual bool equals(const ::NxParameterized::Interface &obj, Handle* handlesOfInequality = NULL, physx::PxU32 numHandlesOfInequality = 0, bool doCompareNotSerialized = true) const = 0;
+    virtual bool equals(const ::NxParameterized::Interface &obj, Handle* handlesOfInequality = nullptr, physx::PxU32 numHandlesOfInequality = 0, bool doCompareNotSerialized = true) const = 0;
 
     /**
     \brief Checks if object satisfies schema constraints
@@ -1268,7 +1268,7 @@ public:
     \param [in] numInvalidHandles The number of handles that can be written to.
     \returns true if all values satisfy constraints
     */
-    virtual bool areParamsOK(Handle *invalidHandles = NULL, physx::PxU32 numInvalidHandles = 0) = 0;
+    virtual bool areParamsOK(Handle *invalidHandles = nullptr, physx::PxU32 numInvalidHandles = 0) = 0;
 
     /**
     \brief Copies an NxParameterized object

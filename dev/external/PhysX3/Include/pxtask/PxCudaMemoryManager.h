@@ -204,7 +204,7 @@ public:
 	/// Returns true if successful. Fails if the operation would change the address and need a memcopy.
 	/// In that case the user has to allocate, copy and free the memory with separate steps.
 	/// Realloc to size 0 always returns false and doesn't change the state.
-	virtual	bool						realloc(size_t size, NV_ALLOC_INFO_PARAMS_DECL(NULL, 0, NULL, UNASSIGNED)) = 0;
+	virtual	bool						realloc(size_t size, NV_ALLOC_INFO_PARAMS_DECL(nullptr, 0, nullptr, UNASSIGNED)) = 0;
 
 	/// Returns the type of the allocated memory.
 	virtual	const PxCudaBufferType&		getType() const = 0;
@@ -226,16 +226,16 @@ class PxCudaMemoryManager
 {
 public:
 	/// Allocate memory of given type and size. Returns a CudaBuffer if successful. Returns NULL if failed.
-	virtual PxCudaBuffer*				alloc(const PxCudaBufferType& type, size_t size, NV_ALLOC_INFO_PARAMS_DECL(NULL, 0, NULL, UNASSIGNED)) = 0;
+	virtual PxCudaBuffer*				alloc(const PxCudaBufferType& type, size_t size, NV_ALLOC_INFO_PARAMS_DECL(nullptr, 0, nullptr, UNASSIGNED)) = 0;
 
 	/// Basic heap allocator without PxCudaBuffer
-	virtual PxCudaBufferPtr				alloc(PxCudaBufferMemorySpace::Enum memorySpace, size_t size, NV_ALLOC_INFO_PARAMS_DECL(NULL, 0, NULL, UNASSIGNED)) = 0;
+	virtual PxCudaBufferPtr				alloc(PxCudaBufferMemorySpace::Enum memorySpace, size_t size, NV_ALLOC_INFO_PARAMS_DECL(nullptr, 0, nullptr, UNASSIGNED)) = 0;
 
 	/// Basic heap deallocator without PxCudaBuffer
 	virtual bool						free(PxCudaBufferMemorySpace::Enum memorySpace, PxCudaBufferPtr addr) = 0;
 
 	/// Basic heap realloc without PxCudaBuffer
-	virtual bool						realloc(PxCudaBufferMemorySpace::Enum memorySpace, PxCudaBufferPtr addr, size_t size, NV_ALLOC_INFO_PARAMS_DECL(NULL, 0, NULL, UNASSIGNED)) = 0;
+	virtual bool						realloc(PxCudaBufferMemorySpace::Enum memorySpace, PxCudaBufferPtr addr, size_t size, NV_ALLOC_INFO_PARAMS_DECL(nullptr, 0, nullptr, UNASSIGNED)) = 0;
 
 	/// Retrieve stats for the memory of given type. See PxCudaMemoryManagerStats.
 	virtual void						getStats(const PxCudaBufferType& type, PxCudaMemoryManagerStats& outStats) = 0;

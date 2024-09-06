@@ -90,7 +90,7 @@ public:
 
 	@see PxRigidBody::setMassLocalPose PxRigidBody::setMassSpaceInertia PxRigidBody::setMass
 	*/
-	static		bool			updateMassAndInertia(PxRigidBody& body, const PxReal* shapeDensities, PxU32 shapeDensityCount, const PxVec3* massLocalPose = NULL);
+	static		bool			updateMassAndInertia(PxRigidBody& body, const PxReal* shapeDensities, PxU32 shapeDensityCount, const PxVec3* massLocalPose = nullptr);
 
 
 	/**
@@ -105,7 +105,7 @@ public:
 
 	@see PxRigidBody::setMassLocalPose PxRigidBody::setMassSpaceInertia PxRigidBody::setMass
 	*/
-	static		bool			updateMassAndInertia(PxRigidBody& body, PxReal density, const PxVec3* massLocalPose = NULL);
+	static		bool			updateMassAndInertia(PxRigidBody& body, PxReal density, const PxVec3* massLocalPose = nullptr);
 	
 
 	/**
@@ -128,7 +128,7 @@ public:
 
 	@see PxRigidBody::setCMassLocalPose PxRigidBody::setMassSpaceInertia PxRigidBody::setMass
 	*/
-	static		bool			setMassAndUpdateInertia(PxRigidBody& body, const PxReal* shapeMasses, PxU32 shapeMassCount, const PxVec3* massLocalPose = NULL);
+	static		bool			setMassAndUpdateInertia(PxRigidBody& body, const PxReal* shapeMasses, PxU32 shapeMassCount, const PxVec3* massLocalPose = nullptr);
 
 
 	/**
@@ -148,7 +148,7 @@ public:
 
 	@see PxRigidBody::setCMassLocalPose PxRigidBody::setMassSpaceInertia PxRigidBody::setMass
 	*/
-	static		bool			setMassAndUpdateInertia(PxRigidBody& body, PxReal mass, const PxVec3* massLocalPose = NULL);
+	static		bool			setMassAndUpdateInertia(PxRigidBody& body, PxReal mass, const PxVec3* massLocalPose = nullptr);
 	
 
 	/**
@@ -333,8 +333,8 @@ public:
 									PxHitFlags outputFlags,
 									PxSweepHit& closestHit, PxU32& shapeIndex,
 									const PxQueryFilterData& filterData = PxQueryFilterData(),
-									PxQueryFilterCallback* filterCall = NULL,
-									const PxQueryCache* cache = NULL,
+									PxQueryFilterCallback* filterCall = nullptr,
+									const PxQueryCache* cache = nullptr,
 									const PxReal inflation=0.0f);
 
 	/**
@@ -375,8 +375,8 @@ public:
 									PxSweepHit* touchHitBuffer, PxU32* touchHitShapeIndices, PxU32 touchHitBufferSize,
 									PxSweepHit& block, PxI32& blockingShapeIndex, bool& overflow,
 									const PxQueryFilterData& filterData = PxQueryFilterData(),
-									PxQueryFilterCallback* filterCall = NULL,
-									const PxQueryCache* cache = NULL, const PxReal inflation = 0.0f);
+									PxQueryFilterCallback* filterCall = nullptr,
+									const PxQueryCache* cache = nullptr, const PxReal inflation = 0.0f);
 
 
 	/**

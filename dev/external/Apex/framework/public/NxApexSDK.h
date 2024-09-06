@@ -322,15 +322,15 @@ public:
 	{
 		bool retVal = NxApexDesc::isValid();
 
-		if (renderResourceManager == NULL)
+		if (renderResourceManager == nullptr)
 		{
 			return false;
 		}
-		if (physXSDK == NULL)
+		if (physXSDK == nullptr)
 		{
 			return false;
 		}
-		if (cooking == NULL)
+		if (cooking == nullptr)
 		{
 			return false;
 		}
@@ -339,7 +339,7 @@ public:
 			return false;
 		}
 #if NX_SDK_VERSION_MAJOR == 2
-		if (outputStream == NULL)
+		if (outputStream == nullptr)
 		{
 			return false;
 		}
@@ -350,21 +350,21 @@ public:
 private:
 	PX_INLINE void init()
 	{
-		renderResourceManager = NULL;
+		renderResourceManager = nullptr;
 #if NX_SDK_VERSION_MAJOR == 2
-		allocator = NULL;
-		outputStream = NULL;
+		allocator = nullptr;
+		outputStream = nullptr;
 #endif
 		physXSDKVersion = NX_PHYSICS_SDK_VERSION;
-		physXSDK = NULL;
-		cooking = NULL;
-		resourceCallback = NULL;
-		dllLoadPath = NULL;
+		physXSDK = nullptr;
+		cooking = nullptr;
+		resourceCallback = nullptr;
+		dllLoadPath = nullptr;
 		solidShadedMaterial = "ApexSolidShaded";
 		wireframeMaterial = "ApexWireframe";
 		renderMeshActorLoadMaterialsLazily = true;
-		dllNamePostfix = NULL;
-		appGuid = NULL;
+		dllNamePostfix = nullptr;
+		appGuid = nullptr;
 		resourceProviderIsCaseSensitive = false;
 		physXObjDescTableAllocationIncrement = 128;
 	}
@@ -453,7 +453,7 @@ public:
 	/**
 	\brief Create/Load a module
 	*/
-	virtual NxModule* createModule(const char* name, NxApexCreateError* err = NULL) = 0;
+	virtual NxModule* createModule(const char* name, NxApexCreateError* err = nullptr) = 0;
 
 	/**
 	\brief Return an object describing how APEX is using the PhysX Actor.
@@ -786,7 +786,7 @@ PX_POP_PACK
 /**
 \brief Global function to create the SDK object.  NX_APEX_SDK_VERSION must be passed for the APEXsdkVersion.
 */
-NXAPEX_API NxApexSDK*	NX_CALL_CONV NxCreateApexSDK(const NxApexSDKDesc& desc, NxApexCreateError* errorCode = NULL, physx::PxU32 APEXsdkVersion = NX_APEX_SDK_VERSION);
+NXAPEX_API NxApexSDK*	NX_CALL_CONV NxCreateApexSDK(const NxApexSDKDesc& desc, NxApexCreateError* errorCode = nullptr, physx::PxU32 APEXsdkVersion = NX_APEX_SDK_VERSION);
 
 /**
 \brief Returns global SDK pointer.

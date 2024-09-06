@@ -299,7 +299,7 @@ class PxControllerFilters
 	//
 	//*********************************************************************
 
-	PX_INLINE					PxControllerFilters(const PxFilterData* filterData=NULL, PxQueryFilterCallback* cb=NULL, PxControllerFilterCallback* cctFilterCb=NULL) :
+	PX_INLINE					PxControllerFilters(const PxFilterData* filterData=nullptr, PxQueryFilterCallback* cb=nullptr, PxControllerFilterCallback* cctFilterCb=nullptr) :
 									mFilterData			(filterData),
 									mFilterCallback		(cb),
 									mFilterFlags		(PxQueryFlag::eSTATIC|PxQueryFlag::eDYNAMIC|PxQueryFlag::ePREFILTER),
@@ -563,15 +563,15 @@ PX_INLINE PxControllerDesc::PxControllerDesc(PxControllerShapeType::Enum t) : ty
 	density				= 10.0f;
 	scaleCoeff			= 0.8f;
 	volumeGrowth		= 1.5f;
-	reportCallback		= NULL;
-	callback			= NULL;
-	behaviorCallback	= NULL;
-	userData			= NULL;
+	reportCallback		= nullptr;
+	callback			= nullptr;
+	behaviorCallback	= nullptr;
+	userData			= nullptr;
 	nonWalkableMode		= PxControllerNonWalkableMode::ePREVENT_CLIMBING;
 	position.x			= PxExtended(0.0);
 	position.y			= PxExtended(0.0);
 	position.z			= PxExtended(0.0);
-	material			= NULL;
+	material			= nullptr;
 	invisibleWallHeight	= 0.0f;
 	maxJumpHeight		= 0.0f;
 }
@@ -651,7 +651,7 @@ public:
 	\param[in] obstacles Potential additional obstacles the CCT should collide with.
 	\return Collision flags, collection of ::PxControllerCollisionFlags
 	*/
-	virtual		PxControllerCollisionFlags	move(const PxVec3& disp, PxF32 minDist, PxF32 elapsedTime, const PxControllerFilters& filters, const PxObstacleContext* obstacles=NULL) = 0;
+	virtual		PxControllerCollisionFlags	move(const PxVec3& disp, PxF32 minDist, PxF32 elapsedTime, const PxControllerFilters& filters, const PxObstacleContext* obstacles=nullptr) = 0;
 
 	/**
 	\brief Sets controller's position.
