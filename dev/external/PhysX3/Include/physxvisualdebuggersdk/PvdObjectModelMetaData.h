@@ -172,7 +172,7 @@ namespace physx { namespace debugger {
 		bool				canMarshal;		//If canMarshal != needsMarshalling we have a problem.
 		bool				needsMarshalling; 
 		TBlockMarshaller	marshaller;		//Non null if marshalling is possible.
-		MarshalQueryResult( NonNegativeInteger _srcType = -1, NonNegativeInteger _dstType = -1, bool _canMarshal = false, bool _needs = false, TBlockMarshaller _m  = NULL )
+		MarshalQueryResult( NonNegativeInteger _srcType = -1, NonNegativeInteger _dstType = -1, bool _canMarshal = false, bool _needs = false, TBlockMarshaller _m  = nullptr )
 			: srcType( _srcType ), dstType( _dstType ), canMarshal( _canMarshal ), needsMarshalling( _needs ), marshaller( _m ) 
 		{}
 	};

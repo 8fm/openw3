@@ -47,7 +47,7 @@ namespace physx {
 		PxU32							mEventCount;
 		const PxProfileEventName*		mEvents;
 		//Default constructor that doesn't point to any names.
-		PxProfileNames( PxU32 inEventCount = 0, const PxProfileEventName* inSubsystems = NULL )
+		PxProfileNames( PxU32 inEventCount = 0, const PxProfileEventName* inSubsystems = nullptr )
 			: mEventCount( inEventCount )
 			, mEvents( inSubsystems )
 		{

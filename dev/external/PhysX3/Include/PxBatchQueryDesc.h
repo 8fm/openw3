@@ -183,12 +183,12 @@ struct PxBatchQueryMemory
 	PX_FORCE_INLINE	PxU32			getMaxOverlapsPerExecute() const	{ return overlapResultBufferSize; }
 
 	PxBatchQueryMemory(PxU32 raycastResultBufferSize, PxU32 sweepResultBufferSize, PxU32 overlapResultBufferSize) :
-		userRaycastResultBuffer	(NULL),
-		userRaycastTouchBuffer	(NULL),
-		userSweepResultBuffer	(NULL),
-		userSweepTouchBuffer	(NULL),
-		userOverlapResultBuffer	(NULL),
-		userOverlapTouchBuffer	(NULL),
+		userRaycastResultBuffer	(nullptr),
+		userRaycastTouchBuffer	(nullptr),
+		userSweepResultBuffer	(nullptr),
+		userSweepTouchBuffer	(nullptr),
+		userOverlapResultBuffer	(nullptr),
+		userOverlapTouchBuffer	(nullptr),
 		raycastTouchBufferSize	(0),
 		sweepTouchBufferSize	(0),
 		overlapTouchBufferSize	(0),
@@ -346,13 +346,13 @@ public:
 
 
 PX_INLINE PxBatchQueryDesc::PxBatchQueryDesc(PxU32 maxRaycastsPerExecute, PxU32 maxSweepsPerExecute, PxU32 maxOverlapsPerExecute) :
-	filterShaderData		(NULL),
+	filterShaderData		(nullptr),
 	filterShaderDataSize	(0),
-	preFilterShader			(NULL),
-	postFilterShader		(NULL),
-	spuPreFilterShader		(NULL),
+	preFilterShader			(nullptr),
+	postFilterShader		(nullptr),
+	spuPreFilterShader		(nullptr),
 	spuPreFilterShaderSize	(0),
-	spuPostFilterShader		(NULL),
+	spuPostFilterShader		(nullptr),
 	spuPostFilterShaderSize	(0),
 	ownerClient				(PX_DEFAULT_CLIENT),
 	queryMemory				(maxRaycastsPerExecute, maxSweepsPerExecute, maxOverlapsPerExecute),
@@ -363,20 +363,20 @@ PX_INLINE PxBatchQueryDesc::PxBatchQueryDesc(PxU32 maxRaycastsPerExecute, PxU32 
 
 PX_INLINE bool PxBatchQueryDesc::isValid() const
 { 
-	if ( ((filterShaderDataSize == 0) && (filterShaderData != NULL)) ||
-		 ((filterShaderDataSize > 0) && (filterShaderData == NULL)) )
+	if ( ((filterShaderDataSize == 0) && (filterShaderData != nullptr)) ||
+		 ((filterShaderDataSize > 0) && (filterShaderData == nullptr)) )
 		 return false;
 
 #if defined(PX_PS3)
 
-	if ( ((spuPreFilterShaderSize == 0)  && (spuPreFilterShader != NULL))  ||
-		 ((spuPreFilterShaderSize > 0)   && (spuPreFilterShader == NULL))  ||
-		 ((spuPostFilterShaderSize == 0) && (spuPostFilterShader != NULL)) ||
-		 ((spuPostFilterShaderSize > 0)  && (spuPostFilterShader == NULL)) )
+	if ( ((spuPreFilterShaderSize == 0)  && (spuPreFilterShader != nullptr))  ||
+		 ((spuPreFilterShaderSize > 0)   && (spuPreFilterShader == nullptr))  ||
+		 ((spuPostFilterShaderSize == 0) && (spuPostFilterShader != nullptr)) ||
+		 ((spuPostFilterShaderSize > 0)  && (spuPostFilterShader == nullptr)) )
 		 return false;
 
-	if ( ((spuPreFilterShader != NULL)  && (preFilterShader == NULL)) ||
-		 ((spuPostFilterShader != NULL) && (postFilterShader == NULL)))
+	if ( ((spuPreFilterShader != nullptr)  && (preFilterShader == nullptr)) ||
+		 ((spuPostFilterShader != nullptr) && (postFilterShader == nullptr)))
 		 return false;
 
 	if ( ((spuPostFilterShaderSize + spuPreFilterShaderSize)  > 0)  &&

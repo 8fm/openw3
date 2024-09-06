@@ -183,7 +183,7 @@ public:
 
 	@see PxGeometry PxTransform
 	*/
-	PX_PHYSX_COMMON_API static PxReal pointDistance(const PxVec3& point, const PxGeometry& geom, const PxTransform& pose, PxVec3* closestPoint=NULL);
+	PX_PHYSX_COMMON_API static PxReal pointDistance(const PxVec3& point, const PxGeometry& geom, const PxTransform& pose, PxVec3* closestPoint=nullptr);
 
 
 	/**

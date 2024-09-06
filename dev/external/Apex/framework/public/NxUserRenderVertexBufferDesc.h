@@ -114,8 +114,8 @@ public:
 		}
 		moduleIdentifier = 0;
 		numCustomBuffers = 0;
-		customBuffersIdents = NULL;
-		customBuffersRequest = NULL;
+		customBuffersIdents = nullptr;
+		customBuffersRequest = nullptr;
 		uvOrigin         = NxTextureUVOrigin::ORIGIN_TOP_LEFT;
 		canBeShared      = true;
 	}

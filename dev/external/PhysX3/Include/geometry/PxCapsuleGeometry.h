@@ -101,7 +101,7 @@ PX_INLINE bool PxCapsuleGeometry::isValid() const
 \return A PxTransform which will transform the vector (1,0,0) to the capsule axis shrunk by the halfHeight
 */
 
-PX_FOUNDATION_API PxTransform PxTransformFromSegment(const PxVec3& p0, const PxVec3& p1, PxReal* halfHeight = NULL);
+PX_FOUNDATION_API PxTransform PxTransformFromSegment(const PxVec3& p0, const PxVec3& p1, PxReal* halfHeight = nullptr);
 
 
 #ifndef PX_DOXYGEN

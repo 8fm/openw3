@@ -198,12 +198,12 @@ struct PxQueryCache
 	/**
 	\brief constructor sets to default 
 	*/
-	PX_INLINE PxQueryCache() : shape(NULL), actor(NULL), faceIndex(0xffffffff) {}
+	PX_INLINE PxQueryCache() : shape(nullptr), actor(nullptr), faceIndex(0xffffffff) {}
 
 	/**
 	\brief constructor to set properties
 	*/
-	PX_INLINE PxQueryCache(PxShape* s, PxU32 findex) : shape(s), actor(NULL), faceIndex(findex) {}
+	PX_INLINE PxQueryCache(PxShape* s, PxU32 findex) : shape(s), actor(nullptr), faceIndex(findex) {}
 
 	PxShape*		shape;			//!< Shape to test for intersection first
 	PxRigidActor*	actor;			//!< Actor to which the shape belongs
@@ -990,7 +990,7 @@ class PxScene
 
 	@see fetchResults() checkResults()
 	*/
-	virtual	void				simulate(PxReal elapsedTime, physx::PxTask* completionTask = NULL,
+	virtual	void				simulate(PxReal elapsedTime, physx::PxTask* completionTask = nullptr,
 									void* scratchMemBlock = 0, PxU32 scratchMemBlockSize = 0, bool controlSimulation = true) = 0;
 
 
@@ -1313,8 +1313,8 @@ class PxScene
 	virtual bool				raycast(
 									const PxVec3& origin, const PxVec3& unitDir, const PxReal distance,
 									PxRaycastCallback& hitCall, PxHitFlags hitFlags = PxHitFlags(PxHitFlag::eDEFAULT),
-									const PxQueryFilterData& filterData = PxQueryFilterData(), PxQueryFilterCallback* filterCall = NULL,
-									const PxQueryCache* cache = NULL) const = 0;
+									const PxQueryFilterData& filterData = PxQueryFilterData(), PxQueryFilterCallback* filterCall = nullptr,
+									const PxQueryCache* cache = nullptr) const = 0;
 
 	/**
 	\brief Performs a sweep against objects in the scene, returns results in a PxSweepBuffer object
@@ -1345,8 +1345,8 @@ class PxScene
 	*/
 	virtual bool				sweep(const PxGeometry& geometry, const PxTransform& pose, const PxVec3& unitDir, const PxReal distance,
 									PxSweepCallback& hitCall, PxHitFlags hitFlags = PxHitFlags(PxHitFlag::eDEFAULT),
-									const PxQueryFilterData& filterData = PxQueryFilterData(), PxQueryFilterCallback* filterCall = NULL,
-									const PxQueryCache* cache = NULL, const PxReal inflation = 0.f) const = 0;
+									const PxQueryFilterData& filterData = PxQueryFilterData(), PxQueryFilterCallback* filterCall = nullptr,
+									const PxQueryCache* cache = nullptr, const PxReal inflation = 0.f) const = 0;
 
 
 	/**
@@ -1369,7 +1369,7 @@ class PxScene
 	@see PxOverlapCallback PxOverlapBuffer PxHitFlags PxQueryFilterData PxQueryFilterCallback
 	*/
 	virtual bool				overlap(const PxGeometry& geometry, const PxTransform& pose, PxOverlapCallback& hitCall,
-									const PxQueryFilterData& filterData = PxQueryFilterData(), PxQueryFilterCallback* filterCall = NULL
+									const PxQueryFilterData& filterData = PxQueryFilterData(), PxQueryFilterCallback* filterCall = nullptr
 									) const = 0;
 
 	//
@@ -1379,7 +1379,7 @@ class PxScene
 	PX_DEPRECATED PX_INLINE bool raycastAny(
 									const PxVec3& origin, const PxVec3& unitDir, const PxReal distance,
 									PxSceneQueryHit& hit, const PxSceneQueryFilterData& filterData = PxSceneQueryFilterData(),
-									PxSceneQueryFilterCallback* filterCall = NULL, const PxSceneQueryCache* cache = NULL,
+									PxSceneQueryFilterCallback* filterCall = nullptr, const PxSceneQueryCache* cache = nullptr,
 									PxClientID queryClient = PX_DEFAULT_CLIENT) const
 									{
 										PxSceneQueryFilterData fdAny = filterData;
@@ -1396,7 +1396,7 @@ class PxScene
 									const PxVec3& origin, const PxVec3& unitDir, const PxReal distance,
 									PxSceneQueryFlags outputFlags, PxRaycastHit& hit,
 									const PxSceneQueryFilterData& filterData = PxSceneQueryFilterData(),
-									PxSceneQueryFilterCallback* filterCall = NULL, const PxSceneQueryCache* cache = NULL,
+									PxSceneQueryFilterCallback* filterCall = nullptr, const PxSceneQueryCache* cache = nullptr,
 									PxClientID queryClient = PX_DEFAULT_CLIENT)
 									{
 										PxRaycastBuffer buf;
@@ -1412,7 +1412,7 @@ class PxScene
 									PxSceneQueryFlags outputFlags,
 									PxRaycastHit* hitBuffer, PxU32 hitBufferSize, bool& blockingHit,
 									const PxSceneQueryFilterData& filterData = PxSceneQueryFilterData(),
-									PxSceneQueryFilterCallback* filterCall = NULL, const PxSceneQueryCache* cache = NULL,
+									PxSceneQueryFilterCallback* filterCall = nullptr, const PxSceneQueryCache* cache = nullptr,
 									PxClientID queryClient = PX_DEFAULT_CLIENT)
 									{
 										PxRaycastBuffer buf(hitBuffer, hitBufferSize);
@@ -1442,8 +1442,8 @@ class PxScene
 									PxSceneQueryFlags queryFlags,
 									PxSceneQueryHit& hit,
 									const PxSceneQueryFilterData& filterData = PxSceneQueryFilterData(),
-									PxSceneQueryFilterCallback* filterCall = NULL,
-									const PxSceneQueryCache* cache = NULL,
+									PxSceneQueryFilterCallback* filterCall = nullptr,
+									const PxSceneQueryCache* cache = nullptr,
 									PxClientID queryClient = PX_DEFAULT_CLIENT,
 									const PxReal inflation = 0.f)
 									{
@@ -1463,8 +1463,8 @@ class PxScene
 									PxSceneQueryFlags outputFlags,
 									PxSweepHit& hit,
 									const PxSceneQueryFilterData& filterData = PxSceneQueryFilterData(),
-									PxSceneQueryFilterCallback* filterCall = NULL,
-									const PxSceneQueryCache* cache = NULL,
+									PxSceneQueryFilterCallback* filterCall = nullptr,
+									const PxSceneQueryCache* cache = nullptr,
 									PxClientID queryClient = PX_DEFAULT_CLIENT, const PxReal inflation=0.f)
 									{
 										PxSweepBuffer buf;
@@ -1480,7 +1480,7 @@ class PxScene
 									const PxGeometry& geometry, const PxTransform& pose, const PxVec3& unitDir, const PxReal distance,
 									PxSceneQueryFlags outputFlags, PxSweepHit* hitBuffer, PxU32 hitBufferSize, bool& blockingHit,
 									const PxSceneQueryFilterData& filterData = PxSceneQueryFilterData(),
-									PxSceneQueryFilterCallback* filterCall = NULL, const PxSceneQueryCache* cache = NULL,
+									PxSceneQueryFilterCallback* filterCall = nullptr, const PxSceneQueryCache* cache = nullptr,
 									PxClientID queryClient = PX_DEFAULT_CLIENT, const PxReal inflation = 0.f)
 									{
 										PxQueryFilterData fd1 = filterData; fd1.clientId = queryClient;
@@ -1511,7 +1511,7 @@ class PxScene
 									const PxGeometry& geometry, const PxTransform& pose,
 									PxOverlapHit* hitBuffer, PxU32 hitBufferSize,
 									const PxSceneQueryFilterData& filterData = PxSceneQueryFilterData(),
-									PxSceneQueryFilterCallback* filterCall = NULL,
+									PxSceneQueryFilterCallback* filterCall = nullptr,
 									PxClientID queryClient = PX_DEFAULT_CLIENT)
 									{
 										PxQueryFilterData fd1 = filterData; fd1.clientId = queryClient;
@@ -1540,7 +1540,7 @@ class PxScene
 											const PxGeometry& geometry, const PxTransform& pose,
 											PxOverlapHit& hit,
 											const PxSceneQueryFilterData& filterData = PxSceneQueryFilterData(),
-											PxSceneQueryFilterCallback* filterCall = NULL,
+											PxSceneQueryFilterCallback* filterCall = nullptr,
 											PxClientID queryClient = PX_DEFAULT_CLIENT)
 										{
 											PxSceneQueryFilterData fdAny = filterData;
@@ -1665,7 +1665,7 @@ class PxScene
 	\param file String representing the calling file, for debug purposes
 	\param line The source file line number, for debug purposes
 	*/
-	virtual void lockRead(const char* file=NULL, PxU32 line=0) = 0;
+	virtual void lockRead(const char* file=nullptr, PxU32 line=0) = 0;
 
 	/** 
 	\brief Unlock the scene from reading.
@@ -1699,7 +1699,7 @@ class PxScene
 	\param file String representing the calling file, for debug purposes
 	\param line The source file line number, for debug purposes
 	*/
-	virtual void lockWrite(const char* file=NULL, PxU32 line=0) = 0;
+	virtual void lockWrite(const char* file=nullptr, PxU32 line=0) = 0;
 
 	/**
 	\brief Unlock the scene from writing.

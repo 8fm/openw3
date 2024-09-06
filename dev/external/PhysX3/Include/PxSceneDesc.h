@@ -747,16 +747,16 @@ public:
 
 PX_INLINE PxSceneDesc::PxSceneDesc(const PxTolerancesScale& scale):
 	gravity								(PxVec3(0.0f)),
-	simulationEventCallback				(NULL),
-	contactModifyCallback				(NULL),
-	ccdContactModifyCallback			(NULL),
+	simulationEventCallback				(nullptr),
+	contactModifyCallback				(nullptr),
+	ccdContactModifyCallback			(nullptr),
 
-	filterShaderData					(NULL),
+	filterShaderData					(nullptr),
 	filterShaderDataSize				(0),
-	filterShader						(NULL),
-	filterCallback						(NULL),
+	filterShader						(nullptr),
+	filterCallback						(nullptr),
 	broadPhaseType						(PxBroadPhaseType::eSAP),
-	broadPhaseCallback					(NULL),
+	broadPhaseCallback					(nullptr),
 
 	meshContactMargin					(0.01f * scale.length),
 	frictionType						(PxFrictionType::ePATCH),
@@ -766,15 +766,15 @@ PX_INLINE PxSceneDesc::PxSceneDesc(const PxTolerancesScale& scale):
 
 	flags								(0),
 
-	cpuDispatcher						(NULL),
-	gpuDispatcher						(NULL),
-	spuDispatcher						(NULL),
+	cpuDispatcher						(nullptr),
+	gpuDispatcher						(nullptr),
+	spuDispatcher						(nullptr),
 
 	staticStructure						(PxPruningStructure::eSTATIC_AABB_TREE),
 	dynamicStructure					(PxPruningStructure::eDYNAMIC_AABB_TREE),
 	dynamicTreeRebuildRateHint			(100),
 
-	userData							(NULL),
+	userData							(nullptr),
 
 	solverBatchSize						(128),
 
@@ -799,11 +799,11 @@ PX_INLINE void PxSceneDesc::setToDefault(const PxTolerancesScale& scale)
 
 PX_INLINE bool PxSceneDesc::isValid() const
 {
-	if(filterShader == NULL)
+	if(filterShader == nullptr)
 		return false;
 
-	if( ((filterShaderDataSize == 0) && (filterShaderData != NULL)) ||
-		((filterShaderDataSize > 0) && (filterShaderData == NULL)) )
+	if( ((filterShaderDataSize == 0) && (filterShaderData != nullptr)) ||
+		((filterShaderDataSize > 0) && (filterShaderData == nullptr)) )
 		return false;
 
 	if(!limits.isValid())
@@ -824,7 +824,7 @@ PX_INLINE bool PxSceneDesc::isValid() const
 	if(frictionOffsetThreshold < 0.f)
 		return false;
 
-	if(cpuDispatcher == NULL)
+	if(cpuDispatcher == nullptr)
 		return false;
 
 	if(contactReportStreamBufferSize == 0)

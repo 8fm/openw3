@@ -236,7 +236,7 @@ public:
 	virtual bool raycast(
 		const PxVec3& origin, const PxVec3& unitDir, const PxReal distance,
 		PxRaycastCallback& hitCall, PxHitFlags hitFlags = PxHitFlags(PxHitFlag::eDEFAULT),
-		const PxQueryFilterData& filterData = PxQueryFilterData(), PxQueryFilterCallback* filterCall = NULL) const = 0;
+		const PxQueryFilterData& filterData = PxQueryFilterData(), PxQueryFilterCallback* filterCall = nullptr) const = 0;
 
 	/**
 	\brief Sweep against objects in the cache, returning results via PxRaycastCallback callback or PxRaycastBuffer object
@@ -260,7 +260,7 @@ public:
 	virtual bool sweep(
 		const PxGeometry& geometry, const PxTransform& pose, const PxVec3& unitDir, const PxReal distance,
 		PxSweepCallback& hitCall, PxHitFlags hitFlags = PxHitFlags(PxHitFlag::ePOSITION | PxHitFlag::eNORMAL | PxHitFlag::eDISTANCE),
-		const PxQueryFilterData& filterData = PxQueryFilterData(), PxQueryFilterCallback* filterCall = NULL,
+		const PxQueryFilterData& filterData = PxQueryFilterData(), PxQueryFilterCallback* filterCall = nullptr,
 		const PxReal inflation = 0.f) const = 0;
 
 
@@ -280,7 +280,7 @@ public:
 	*/
 	virtual bool overlap(
 		const PxGeometry& geometry, const PxTransform& pose, PxOverlapCallback& hitCall,
-		const PxQueryFilterData& filterData = PxQueryFilterData(), PxQueryFilterCallback* filterCall = NULL) const = 0;
+		const PxQueryFilterData& filterData = PxQueryFilterData(), PxQueryFilterCallback* filterCall = nullptr) const = 0;
 
 protected:
 	virtual ~PxVolumeCache() {};

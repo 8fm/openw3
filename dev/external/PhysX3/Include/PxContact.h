@@ -299,7 +299,7 @@ struct PxContactStreamIterator
 
 		PxU32 pointSize = 0;
 		PxU32 patchHeaderSize = 0;
-		const PxU8* start = NULL;
+		const PxU8* start = nullptr;
 
 		if(size > 0)
 		{

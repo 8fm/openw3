@@ -71,7 +71,7 @@ public:
 	\param[in] numSpus The number of SPU workers this task will run across
 	\param[in] args A pointer to an array of arguments, must be at least kArgsPerSpu*numSpus big
 	*/
-	PxSpuTask(const void* elfStart, PxU32 elfSize, PxU32 numSpus=1, const PxU32* args=NULL) 
+	PxSpuTask(const void* elfStart, PxU32 elfSize, PxU32 numSpus=1, const PxU32* args=nullptr)
 		: mElfStart(elfStart)
 		, mElfSize(elfSize)
 		, mNbSpusToRun(numSpus)

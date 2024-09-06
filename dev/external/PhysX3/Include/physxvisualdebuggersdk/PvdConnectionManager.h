@@ -134,7 +134,7 @@ namespace physx { namespace debugger { namespace comm {
 												, bool doubleBuffered = true )
 		{
 			PvdConnection* theConnection = connectAddRef( inInStream, inOutStream, inConnectionType, doubleBuffered );
-			if ( NULL != theConnection )
+			if ( nullptr != theConnection )
 				theConnection->release();
 		}
 
@@ -160,7 +160,7 @@ namespace physx { namespace debugger { namespace comm {
 		{
 			PvdNetworkOutStream* fileStream = PvdNetworkOutStream::createFromFile( allocator, inFilename );
 			if ( fileStream )
-				connect( NULL, *fileStream, inConnectionType, doubleBuffered );
+				connect( nullptr, *fileStream, inConnectionType, doubleBuffered );
 		}
 
 		/**

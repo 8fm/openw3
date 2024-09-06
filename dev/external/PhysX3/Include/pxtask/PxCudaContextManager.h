@@ -146,11 +146,11 @@ public:
 
 	PX_INLINE PxCudaContextManagerDesc()
 	{
-		ctx = NULL;
+		ctx = nullptr;
 		interopMode = PxCudaInteropMode::NO_INTEROP;
 		graphicsDevice = 0;
 #if defined(PX_WINDOWS)
-		appGUID  = NULL;
+		appGUID  = nullptr;
 #endif
 		for(PxU32 i = 0; i < PxCudaBufferMemorySpace::COUNT; i++)
 		{
@@ -387,7 +387,7 @@ PxCudaContextManager* PxCreateCudaContextManager(PxFoundation& foundation, const
  * \brief get handle of physx GPU module
  */
 #if defined(PX_WINDOWS)
-void* PxLoadPhysxGPUModule(const char* appGUID = NULL);
+void* PxLoadPhysxGPUModule(const char* appGUID = nullptr);
 #else
 void* PxLoadPhysxGPUModule();
 #endif

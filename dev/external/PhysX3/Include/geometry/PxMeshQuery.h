@@ -68,7 +68,7 @@ public:
 
 	@see PxTriangle PxTriangleFlags PxTriangleID findOverlapTriangleMesh()
 	*/
-	PX_PHYSX_COMMON_API static void getTriangle(const PxTriangleMeshGeometry& triGeom, const PxTransform& transform, PxTriangleID triangleIndex, PxTriangle& triangle, PxU32* vertexIndices=NULL, PxU32* adjacencyIndices=NULL);
+	PX_PHYSX_COMMON_API static void getTriangle(const PxTriangleMeshGeometry& triGeom, const PxTransform& transform, PxTriangleID triangleIndex, PxTriangle& triangle, PxU32* vertexIndices=nullptr, PxU32* adjacencyIndices=nullptr);
 
 
 	/**
@@ -85,7 +85,7 @@ public:
 
 	@see PxTriangle PxTriangleFlags PxTriangleID findOverlapHeightField()
 	*/
-	PX_PHYSX_COMMON_API static void getTriangle(const PxHeightFieldGeometry& hfGeom, const PxTransform& transform, PxTriangleID triangleIndex, PxTriangle& triangle, PxU32* vertexIndices=NULL, PxU32* adjacencyIndices=NULL);
+	PX_PHYSX_COMMON_API static void getTriangle(const PxHeightFieldGeometry& hfGeom, const PxTransform& transform, PxTriangleID triangleIndex, PxTriangle& triangle, PxU32* vertexIndices=nullptr, PxU32* adjacencyIndices=nullptr);
 
 
 	/**
@@ -160,7 +160,7 @@ public:
 							const PxTriangle* triangles,
 							PxSweepHit& sweepHit,
 							PxHitFlags hintFlags = PxHitFlag::eDEFAULT,
-							const PxU32* cachedIndex = NULL, const PxReal inflation = 0.f);
+							const PxU32* cachedIndex = nullptr, const PxReal inflation = 0.f);
 };
 
 

@@ -85,12 +85,12 @@ public:
 		userRenderData   = 0;
 
 		numVertexBuffers = 0;
-		vertexBuffers     = NULL;
+		vertexBuffers     = nullptr;
 
 		cullMode         = NxRenderCullMode::CLOCKWISE;
 		primitives       = NxRenderPrimitiveType::UNKNOWN;
 
-		opaqueMesh		= NULL;
+		opaqueMesh       = nullptr;
 	}
 
 	/**

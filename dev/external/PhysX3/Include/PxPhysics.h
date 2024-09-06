@@ -769,7 +769,7 @@ PX_C_EXPORT PX_PHYSX_CORE_API physx::PxPhysics* PX_CALL_CONV PxCreateBasePhysics
 																			     physx::PxFoundation& foundation,
 																			     const physx::PxTolerancesScale& scale,																				 
 																			     bool trackOutstandingAllocations = false,
-																				 physx::PxProfileZoneManager* profileZoneManager = NULL);
+																				 physx::PxProfileZoneManager* profileZoneManager = nullptr);
 
 /**
 \brief Creates an instance of the physics SDK.
@@ -797,11 +797,11 @@ PX_INLINE physx::PxPhysics* PxCreatePhysics(physx::PxU32 version,
 											physx::PxFoundation& foundation,
 											const physx::PxTolerancesScale& scale,											
 											bool trackOutstandingAllocations = false,
-											physx::PxProfileZoneManager* profileZoneManager = NULL)
+											physx::PxProfileZoneManager* profileZoneManager = nullptr)
 {
 	physx::PxPhysics* physics = PxCreateBasePhysics(version, foundation, scale, trackOutstandingAllocations, profileZoneManager);
 	if(!physics)
-		return NULL;
+		return nullptr;
 
 	PxRegisterArticulations(*physics);
 	PxRegisterHeightFields(*physics);

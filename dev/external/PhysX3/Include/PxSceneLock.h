@@ -64,7 +64,7 @@ public:
 	\param file Optional string for debugging purposes
 	\param line Optional line number for debugging purposes
 	*/
-	PxSceneReadLock(PxScene& scene, const char* file=NULL, PxU32 line=0)
+	PxSceneReadLock(PxScene& scene, const char* file=nullptr, PxU32 line=0)
 		: mScene(scene)
 	{
 		mScene.lockRead(file, line);
@@ -103,7 +103,7 @@ public:
 	\param file Optional string for debugging purposes
 	\param line Optional line number for debugging purposes
 	*/
-	PxSceneWriteLock(PxScene& scene, const char* file=NULL, PxU32 line=0)
+	PxSceneWriteLock(PxScene& scene, const char* file=nullptr, PxU32 line=0)
 		: mScene(scene)
 	{
 		mScene.lockWrite(file, line);

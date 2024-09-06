@@ -73,7 +73,7 @@ simulation tasks will be executed on the thread that calls PxScene::simulate()
 
 @see PxDefaultCpuDispatcher
 */
-PxDefaultCpuDispatcher* PxDefaultCpuDispatcherCreate(PxU32 numThreads, PxU32* affinityMasks = NULL);
+PxDefaultCpuDispatcher* PxDefaultCpuDispatcherCreate(PxU32 numThreads, PxU32* affinityMasks = nullptr);
 
 #ifndef PX_DOXYGEN
 } // namespace physx
