@@ -312,7 +312,9 @@ Bool CRenderInterface::Init()
 		m_gameplayFX->Init();
 	}
 
+#ifdef USE_UMBRA
 	RED_VERIFY( CRenderOcclusionData::InitExtraMemory() );
+#endif // USE_UMBRA
 
 #ifdef TEXTURE_MEMORY_DEFRAG_ENABLED
 	auto scratchRegion = GpuApi::AllocateInPlaceMemoryRegion( GpuApi::INPLACE_DefragTemp, 8 * 1024 * 1024, MC_Default );
@@ -1400,7 +1402,9 @@ void CRenderInterface::CloseDevice()
 	}
 #endif
 
+#ifdef USE_UMBRA
 	RED_VERIFY( CRenderOcclusionData::ShutdownExtraMemory() );
+#endif // USE_UMBRA
 
 	// Release shadowmap resources
 	ReleaseShadowmapResources();

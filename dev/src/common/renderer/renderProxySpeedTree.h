@@ -279,9 +279,9 @@ public:
 			return true;
 		}
 #endif // USE_ANSEL
-		Bool visible = false;
 		const Box b( Vector( center.x, center.y, center.z ), radius );
 #ifdef USE_UMBRA
+		Bool visible = false;
 		if ( !m_occlusionData )
 		{
 			// better show too much than crash
@@ -404,7 +404,6 @@ public:
 		}		
 		return visible ? VisibilityTestResult::VISIBLE : VisibilityTestResult::OCCLUDED;
 #else
-		Box b( Vector( extents.Min().x, extents.Min().y, extents.Min().z ), Vector( extents.Max().x, extents.Max().y, extents.Max().z ) );
 		return m_frustum.TestBox( b ) != FR_Outside ? VisibilityTestResult::VISIBLE : VisibilityTestResult::OCCLUDED;
 #endif // USE_UMBRA
 	}
