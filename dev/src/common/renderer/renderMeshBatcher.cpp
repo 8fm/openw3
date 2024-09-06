@@ -739,8 +739,12 @@ public:
 
 		while( m )
 		{
-#if defined( RED_PLATFORM_ORBIS )
+#if defined( RED_PLATFORM_ORBIS ) || defined( RED_PLATFORM_LINUX )
+#if defined(__BMI__)
 			Uint64 id = __tzcnt_u64( m );
+#else
+			Uint64 id = __builtin_ctzll( m );
+#endif
 #else
 			DWORD id;
 			::_BitScanForward64( &id, m );

@@ -25,7 +25,7 @@
 #include "../../win32/platform/inputDeviceManagerWin32.h"
 #endif
 
-#ifndef RED_PLATFORM_ORBIS
+#if !(defined( RED_PLATFORM_ORBIS ) || defined( RED_PLATFORM_LINUX ))
 
 // This is defined in r4game's resource.h and game.rc
 #define WIN32_ICON_RESOURCE_NUMBER 106

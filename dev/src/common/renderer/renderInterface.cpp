@@ -997,7 +997,7 @@ ViewportHandle CRenderInterface::CreateViewport( void* TopLevelWindow, void* Par
 	}
 
 	// Create window
-#ifdef RED_PLATFORM_ORBIS
+#if defined( RED_PLATFORM_ORBIS ) || defined( RED_PLATFORM_LINUX )
 	Red::TUniquePtr< CViewportWindow > window( new CViewportWindow( GViewportWindowRoot, title, width, height, (EViewportWindowMode)windowMode, m_viewportsOwnedByRenderThread ) );
 #else
 	Red::TUniquePtr< CViewportWindow > window(  new CViewportWindow( GViewportWindowRoot, (HWND)TopLevelWindow, (HWND)ParentWindow, title, width, height, (EViewportWindowMode)windowMode, m_viewportsOwnedByRenderThread ) );

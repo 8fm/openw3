@@ -4,7 +4,7 @@
 #include "renderShaderPair.h"
 #include "renderPostFxMicrosoftSSAO.h"
 
-#if defined( RED_PLATFORM_DURANGO ) || defined( RED_PLATFORM_WINPC )
+#if defined( RED_PLATFORM_DURANGO ) || defined( RED_PLATFORM_WINPC ) || defined( RED_PLATFORM_LINUX )
 #include "../gpuApiDX10/gpuApiBase.h"
 #include "../../common/gpuApiDX10/gpuApiMapping.h"
 #elif defined( RED_PLATFORM_ORBIS )
