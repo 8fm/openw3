@@ -91,7 +91,7 @@ namespace SpeedTree
         FORMAT_PRINT,
         FORMAT_CSV_FILE
     };
-    static  void       ST_CALL_CONV Report(EReportFormat eFormat, CString& strReport, SNode* pStart = NULL);
+    static  void       ST_CALL_CONV Report(EReportFormat eFormat, CString& strReport, SNode* pStart = nullptr);
 
 	private:
 	#ifdef SPEEDTREE_INTEL_GPA

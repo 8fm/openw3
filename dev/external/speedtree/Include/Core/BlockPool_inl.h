@@ -27,8 +27,8 @@
 
 template <bool bUseCustomAllocator>
 ST_INLINE CBlockPool<bUseCustomAllocator>::CBlockPool(size_t uiBlockSize, size_t uiNum) :
-	m_pData(NULL),
-	m_pFreeLocations(NULL),
+	m_pData(nullptr),
+	m_pFreeLocations(nullptr),
 	m_uiSize(0),
 	m_uiCurrent(0),
 	m_uiBlockSize(uiBlockSize)
@@ -66,8 +66,8 @@ ST_INLINE void CBlockPool<bUseCustomAllocator>::clear(bool bForce)
 	#endif
 		delete[] m_pFreeLocations;
 
-	m_pData = NULL;
-	m_pFreeLocations = NULL;
+	m_pData = nullptr;
+	m_pFreeLocations = nullptr;
 	m_uiSize = 0;
 	m_uiCurrent = 0;
 }
@@ -106,7 +106,7 @@ ST_INLINE void	CBlockPool<bUseCustomAllocator>::resize(size_t uiSize)
 		#endif
 			new size_t[uiSize];
 
-	if (m_pData != NULL)
+	if (m_pData != nullptr)
 	{
 		memcpy(pNewData, m_pData, m_uiSize * m_uiBlockSize);
 		#ifndef SPEEDTREE_NO_ALLOCATORS
@@ -115,7 +115,7 @@ ST_INLINE void	CBlockPool<bUseCustomAllocator>::resize(size_t uiSize)
 			delete[] m_pData;
 	}
 
-	if (m_pFreeLocations != NULL)
+	if (m_pFreeLocations != nullptr)
 	{
 		if (m_uiCurrent > 0)
 			memcpy(pNewFreeLocations, m_pFreeLocations, m_uiCurrent * sizeof(size_t));
@@ -154,7 +154,7 @@ template <bool bUseCustomAllocator>
 ST_INLINE void	CBlockPool<bUseCustomAllocator>::ReleaseBlock(CReference& cRef)
 {
 	m_pFreeLocations[m_uiCurrent++] = (size_t)cRef;
-	cRef = NULL;
+	cRef = nullptr;
 }
 
 
@@ -165,6 +165,6 @@ template <bool bUseCustomAllocator>
 ST_INLINE void* CBlockPool<bUseCustomAllocator>::ResolveBlock(const CReference& cRef) const
 {
 	assert((size_t)cRef < (m_uiSize * m_uiBlockSize + 4));
-	return (cRef ? m_pData + (size_t)cRef : NULL);
+	return (cRef ? m_pData + (size_t)cRef : nullptr);
 }
 

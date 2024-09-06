@@ -32,7 +32,7 @@ inline CResourceCache_t::CResourceCache(EGfxResourceType eResourceType, st_int32
 CResourceCache_TemplateList
 inline TResource* CResourceCache_t::Retrieve(const TKey& tKey) const
 {
-	TResource* pResource = NULL;
+	TResource* pResource = nullptr;
 
 	// search the cache/map for key
 	typename CCacheMap::iterator iFind = m_mCache.find(tKey);

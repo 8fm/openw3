@@ -113,7 +113,7 @@ namespace SpeedTree
 			return pBlock;
 		}
 
-		return NULL;
+		return nullptr;
 	}
 
 
@@ -152,7 +152,7 @@ namespace SpeedTree
 			return pBlock;
 		}
 		
-		return NULL;
+		return nullptr;
 	}
 
 
@@ -174,7 +174,7 @@ namespace SpeedTree
 				CHeapSystem::Allocator( )->Free(pBlock);
 			else
 				free(pBlock);
-			pBlock = NULL;
+			pBlock = nullptr;
 
 			/* ctremblay ++ WTF!
  			if (CHeapSystem::NumAllocs( ) == 905)
@@ -217,7 +217,7 @@ namespace SpeedTree
 						CHeapSystem::Allocator( )->Free(pHeapHandle);
 					else
 						free(pHeapHandle);
-					pRawBlock = NULL;
+					pRawBlock = nullptr;
 				}
 			}
 		}

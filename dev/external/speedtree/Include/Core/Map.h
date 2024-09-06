@@ -83,7 +83,7 @@ namespace SpeedTree
 					iterator_base&		operator -- (void);
 
 			protected:
-										iterator_base(CNodeReference pNode = NULL, const CPool* pPool = NULL);
+										iterator_base(CNodeReference pNode = nullptr, const CPool* pPool = nullptr);
 					CNode*				Ptr(void) const;
 
 					CNodeReference		m_pNode;
@@ -93,7 +93,7 @@ namespace SpeedTree
 			class ST_DLL_LINK iterator : public iterator_base
 			{
 			public:			
-										iterator(CNodeReference pNode = NULL, const CPool* pPool = NULL);
+										iterator(CNodeReference pNode = nullptr, const CPool* pPool = nullptr);
 										iterator(const iterator& cRight);
 					CNode*				operator -> (void) const;
 			};
@@ -101,7 +101,7 @@ namespace SpeedTree
 			class ST_DLL_LINK const_iterator : public iterator_base
 			{
 			public:				
-										const_iterator(CNodeReference pNode = NULL, const CPool* pPool = NULL);
+										const_iterator(CNodeReference pNode = nullptr, const CPool* pPool = nullptr);
 										const_iterator(const iterator& cRight);
 										const_iterator(const const_iterator& cRight);
 					CNode const*		operator -> (void) const;
@@ -130,7 +130,7 @@ namespace SpeedTree
 
 	protected:
 			void						Rebalance(CNodeReference pCurrent);
-			CNodeReference				Allocate(const TKey& tKey, CNodeReference pParent = NULL);
+			CNodeReference				Allocate(const TKey& tKey, CNodeReference pParent = nullptr);
 			void						Deallocate(CNodeReference& pData);
 			CNode*						Ptr(CNodeReference pNode) const;
 
@@ -143,7 +143,7 @@ namespace SpeedTree
 					TValue				second;
 
 			private:
-										CNode(const TKey& tKey, CNodeReference pParent = NULL);
+										CNode(const TKey& tKey, CNodeReference pParent = nullptr);
 					void				DeleteChildren(CMap* pMap);
 					CNode&				operator = (const CNode& cR) { }
 

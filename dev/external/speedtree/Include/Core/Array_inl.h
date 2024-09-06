@@ -27,10 +27,10 @@
 
 template <class T, bool bUseCustomAllocator>
 ST_INLINE CArray<T, bUseCustomAllocator>::CArray( ) : 
-	m_pData(NULL),
+	m_pData(nullptr),
 	m_uiSize(0),
 	m_uiDataSize(0),
-	m_pHeapDesc(NULL),
+	m_pHeapDesc(nullptr),
 	m_bExternalMemory(false)
 {
 }
@@ -41,10 +41,10 @@ ST_INLINE CArray<T, bUseCustomAllocator>::CArray( ) :
 
 template <class T, bool bUseCustomAllocator>
 ST_INLINE CArray<T, bUseCustomAllocator>::CArray(size_t uiSize, const T& tDefault) : 
-	m_pData(NULL),
+	m_pData(nullptr),
 	m_uiSize(0),
 	m_uiDataSize(0),
-	m_pHeapDesc(NULL),
+	m_pHeapDesc(nullptr),
 	m_bExternalMemory(false)
 {
 	resize(uiSize, tDefault);
@@ -56,7 +56,7 @@ ST_INLINE CArray<T, bUseCustomAllocator>::CArray(size_t uiSize, const T& tDefaul
 
 template <class T, bool bUseCustomAllocator>
 ST_INLINE CArray<T, bUseCustomAllocator>::CArray(const CArray<T, bUseCustomAllocator>& cCopy) :
-	m_pData(NULL),
+	m_pData(nullptr),
 	m_uiSize(0),
 	m_uiDataSize(0),
 	m_bExternalMemory(false)
@@ -72,7 +72,7 @@ template <class T, bool bUseCustomAllocator>
 ST_INLINE CArray<T, bUseCustomAllocator>::~CArray( )
 {
 	if (m_bExternalMemory)
-		SetExternalMemory(NULL, 0);
+		SetExternalMemory(nullptr, 0);
 	clear( );
 }
 
@@ -90,7 +90,7 @@ ST_INLINE void CArray<T, bUseCustomAllocator>::clear(void)
 	else
 	{
 		Deallocate(m_pData);
-		m_pData = NULL;
+		m_pData = nullptr;
 		m_uiSize = m_uiDataSize = 0;
 	}
 }
@@ -435,7 +435,7 @@ template <class T, bool bUseCustomAllocator>
 ST_INLINE typename CArray<T, bUseCustomAllocator>::iterator CArray<T, bUseCustomAllocator>::erase(iterator iterWhere)
 {
 	// make sure iterator is part of this list
-	st_assert(m_pData != NULL, "CArray::erase() called before CArray was propertly initialized");
+	st_assert(m_pData != nullptr, "CArray::erase() called before CArray was propertly initialized");
 	st_assert(iterWhere >= m_pData && iterWhere < m_pData + m_uiSize, "CArray iterator out of bounds");
 
 	if (iterWhere == m_pData + m_uiSize - 1)
@@ -465,8 +465,8 @@ ST_INLINE typename CArray<T, bUseCustomAllocator>::iterator CArray<T, bUseCustom
 {
 	// make sure iterator is part of this list
 	#ifdef SPEEDTREE_ITERATOR_DEBUGGING
-		assert((m_pData != NULL && iterWhere != NULL) || (m_pData == NULL && iterWhere == NULL));
-		if (m_pData != NULL)
+		assert((m_pData != nullptr && iterWhere != nullptr) || (m_pData == nullptr && iterWhere == nullptr));
+		if (m_pData != nullptr)
 		{
 			assert(iterWhere >= m_pData);
 			assert(iterWhere < m_pData + m_uiSize + 1);
@@ -491,7 +491,7 @@ ST_INLINE typename CArray<T, bUseCustomAllocator>::iterator CArray<T, bUseCustom
 		return (m_pData + uiIndex);
 	}
 
-	return NULL;
+	return nullptr;
 }
 
 
@@ -770,10 +770,10 @@ ST_INLINE void CArray<T, bUseCustomAllocator>::SetExternalMemory(unsigned char* 
 			m_pData[i].~T( );
 
 		m_uiDataSize = 0;
-		m_pData = NULL;
+		m_pData = nullptr;
 	}
 
-	if (pMemory == NULL)
+	if (pMemory == nullptr)
 	{
 		m_bExternalMemory = false;
 	}

@@ -499,7 +499,7 @@ ST_INLINE st_bool CCell::operator!=(const CCell& cIn) const
 //  SDetailedCullData::SDetailedCullData
 
 ST_INLINE SDetailedCullData::SDetailedCullData( ) :
-	m_pBaseTree(NULL),
+	m_pBaseTree(nullptr),
 	m_fClosest3dTreeDistanceSquared(FLT_MAX),
 	m_fClosestBillboardCellDistanceSquared(FLT_MAX)
 {
@@ -712,7 +712,7 @@ ST_INLINE const CArray<SDetailedCullData>& CVisibleInstances::Get3dInstanceLods(
 // todo: remove entire function
 ST_INLINE T3dTreeInstanceLodArray* CVisibleInstances::FindInstanceLodArray(const CTree* pBaseTree)
 {
-	T3dTreeInstanceLodArray* p3dInstanceList = NULL;
+	T3dTreeInstanceLodArray* p3dInstanceList = nullptr;
 
 	for (size_t i = 0; i < m_aPerBase3dInstances.size( ); ++i)
 	{
@@ -745,7 +745,7 @@ ST_INLINE T3dTreeInstanceLodArray* CVisibleInstances::FindInstanceLodArray(const
 
 ST_INLINE SDetailedCullData* CVisibleInstances::GetInstaceLodArrayByBase(const CTree* pBaseTree)
 {
-	SDetailedCullData* pReturn = NULL;
+	SDetailedCullData* pReturn = nullptr;
 
 	for (size_t i = 0; i < m_aPerBase3dInstances.size( ); ++i)
 	{

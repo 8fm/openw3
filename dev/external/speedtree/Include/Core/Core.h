@@ -980,7 +980,7 @@ namespace SpeedTree
 													 st_float32 fScalar = 1.0f);
 			const st_char*					GetFilename(void) const;
 	static	size_t			   ST_CALL_CONV	FileSizeInBytes(const st_char* pFilename);
-	static	st_byte*		   ST_CALL_CONV LoadFileIntoBuffer(const st_char* pFilename, size_t& siBufferSize, st_byte* pClientSideBuffer = NULL);
+	static	st_byte*		   ST_CALL_CONV LoadFileIntoBuffer(const st_char* pFilename, size_t& siBufferSize, st_byte* pClientSideBuffer = nullptr);
 
 			// convenience queries
 			st_bool							IsCompiledForDeferred(void) const;

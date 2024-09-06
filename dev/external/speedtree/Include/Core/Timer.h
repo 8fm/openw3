@@ -127,7 +127,7 @@ namespace SpeedTree
 		#elif defined(NDEV)
 			m_tStart = OSGetTick( );
 		#elif defined(__GNUC__)
-			gettimeofday(&m_tStart, NULL);
+			gettimeofday(&m_tStart, nullptr);
 		#endif
 	}
 
@@ -148,7 +148,7 @@ namespace SpeedTree
 		#elif defined(NDEV)
 			m_tStop = OSGetTick( );
 		#elif defined(__GNUC__)
-			gettimeofday(&m_tStop, NULL);
+			gettimeofday(&m_tStop, nullptr);
 		#endif
 
 		return GetMilliSec( );

@@ -83,7 +83,7 @@ namespace SpeedTree
 				COORD_SYS_CUSTOM
 			};
 
-	static	void				   ST_CALL_CONV	SetCoordSys(ECoordSysType eType, const CCoordSysBase* pCustomConverter = NULL);
+	static	void				   ST_CALL_CONV	SetCoordSys(ECoordSysType eType, const CCoordSysBase* pCustomConverter = nullptr);
 	static	const char*			   ST_CALL_CONV CoordSysName(ECoordSysType eType);
 	static	ECoordSysType		   ST_CALL_CONV	GetCoordSysType(void);
 	static	st_bool				   ST_CALL_CONV	IsDefaultCoordSys(void);

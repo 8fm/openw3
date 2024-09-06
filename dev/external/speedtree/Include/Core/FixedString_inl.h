@@ -209,7 +209,7 @@ template <size_t uiDataSize>
 inline void CBasicFixedString<uiDataSize>::operator += (const char* pchData)
 {
 	size_t uiSize = 0;
-	if (pchData != NULL)
+	if (pchData != nullptr)
 		uiSize = strlen(pchData);
 	if (uiSize > 0)
 	{
@@ -309,7 +309,7 @@ inline CBasicFixedString<uiDataSize>& CBasicFixedString<uiDataSize>::operator = 
 template <size_t uiDataSize>
 inline CBasicFixedString<uiDataSize>& CBasicFixedString<uiDataSize>::operator = (const char* pchData)
 {
-	if (pchData == NULL)
+	if (pchData == nullptr)
 	{
 		m_uiSize = 0;
 		m_aData[0] = 0;
@@ -414,7 +414,7 @@ inline CBasicFixedString<uiDataSize> CBasicFixedString<uiDataSize>::Format(const
 {
 	CBasicFixedString strReturn;
 
-	if (pchFormat != NULL)
+	if (pchFormat != nullptr)
 	{
 		va_list vlArgs;
 		va_start(vlArgs, pchFormat);

@@ -382,7 +382,7 @@ namespace SpeedTree
 	class ST_DLL_LINK CGeometryBufferRI
 	{
 	public:
-											CGeometryBufferRI(st_bool bDynamicVB = false, st_bool bDynamicIB = false, const char* pResourceId = NULL);
+											CGeometryBufferRI(st_bool bDynamicVB = false, st_bool bDynamicIB = false, const char* pResourceId = nullptr);
 			virtual							~CGeometryBufferRI( );
 
 			// vertex buffer

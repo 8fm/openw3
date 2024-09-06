@@ -20,7 +20,7 @@
 
 CVisibleInstancesRI_TemplateList
 inline CVisibleInstancesRI_t::SForestInstancingData::SForestInstancingData( ) :
-	m_pBaseTree(NULL)
+	m_pBaseTree(nullptr)
 {
 }
 
@@ -187,7 +187,7 @@ inline st_bool CVisibleInstancesRI_t::GetBaseTreeBillboardVboData(SBillboardVboB
 
 	st_bool bSuccess = true;
 
-	typename CVisibleInstancesRI_t::SForestInstancingData* pInstancingData = NULL;
+	typename CVisibleInstancesRI_t::SForestInstancingData* pInstancingData = nullptr;
 #ifdef _OPENMP
 #pragma omp critical
 #endif
@@ -255,7 +255,7 @@ inline st_bool CVisibleInstancesRI_t::LAVACopyBillboardInstanceDataToInstanceBuf
 
 	st_bool bSuccess = true;
 
-	typename CVisibleInstancesRI_t::SForestInstancingData* pInstancingData = NULL;
+	typename CVisibleInstancesRI_t::SForestInstancingData* pInstancingData = nullptr;
 
 	{
 		// find the instance data associated with this base tree object
@@ -338,7 +338,7 @@ CVisibleInstancesRI_TemplateList
 CVisibleInstancesRI_TemplateList
 inline const typename CVisibleInstancesRI_t::SForestInstancingData* CVisibleInstancesRI_t::FindInstancingDataByBaseTree(const CTree* pTree) const
 {
-	const SForestInstancingData* pData = NULL;
+	const SForestInstancingData* pData = nullptr;
 
 	if (pTree)
 	{
@@ -361,7 +361,7 @@ inline const typename CVisibleInstancesRI_t::SForestInstancingData* CVisibleInst
 CVisibleInstancesRI_TemplateList
 inline typename CVisibleInstancesRI_t::SForestInstancingData* CVisibleInstancesRI_t::FindOrAddInstancingDataByBaseTree(const CTree* pTree)
 {
-	SForestInstancingData* pData = NULL;
+	SForestInstancingData* pData = nullptr;
 
 	if (pTree)
 	{

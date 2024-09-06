@@ -223,7 +223,7 @@ inline st_bool CInstancingMgrRI_t::Update3dTreeInstanceBuffers(st_int32 nNumLods
 			    if (nNumVertices > 0)
 				    bSuccess &= m_atInstanceMgrPolicies[m_nActiveMgrIndex].Update(nLod, (st_byte*) pInstances, nNumVertices/*LAVA++*/, instanceRingBuffer);
 			    else
-				    bSuccess &= m_atInstanceMgrPolicies[m_nActiveMgrIndex].Update(nLod, NULL, 0/*LAVA++*/, instanceRingBuffer);
+				    bSuccess &= m_atInstanceMgrPolicies[m_nActiveMgrIndex].Update(nLod, nullptr, 0/*LAVA++*/, instanceRingBuffer);
             }
 		}
 
