@@ -612,7 +612,7 @@ public:
             const VertexElement* pv = sourceFormat->GetElement(psvf[i].Attr & (VET_Usage_Mask|VET_Index_Mask), VET_Usage_Mask|VET_Index_Mask);
             if (!pv)
             {
-                *batch = *single = *instanced = NULL;
+                *batch = *single = *instanced = nullptr;
                 return;
             }
             outf[j] = *pv;

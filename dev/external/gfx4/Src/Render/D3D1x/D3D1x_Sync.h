@@ -29,8 +29,8 @@ class FenceWrapper : public Render::FenceWrapper
 public:
     FenceWrapper(ID3D1x(Device)* pdevice, ID3D1x(DeviceContext)* pdeviceCtx) : Render::FenceWrapper()
     {
-        SF_DEBUG_ASSERT(pdevice != NULL, "NULL device in FenceWrapper constructor.");
-		SF_DEBUG_ASSERT(pdeviceCtx != NULL, "NULL deviceCtx in FenceWrapper constructor.");
+        SF_DEBUG_ASSERT(pdevice != nullptr, "NULL device in FenceWrapper constructor.");
+		SF_DEBUG_ASSERT(pdeviceCtx != nullptr, "NULL deviceCtx in FenceWrapper constructor.");
 
 #if !defined(SF_DURANGO_MONOLITHIC)
         // D3D1x uses queries, create one for this entry in the wrapper list.
