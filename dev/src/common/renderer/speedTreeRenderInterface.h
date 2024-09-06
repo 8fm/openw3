@@ -456,10 +456,10 @@ namespace SpeedTree
 	void GetSpeedTreeGeneralStats( CTreeRender* treeRender, TDynArray< SSpeedTreeResourceMetrics::SGeneralSpeedTreeStats >& stats );
 	void GatherInformationAboutTextures( const CRenderState &state, TDynArray< SSpeedTreeResourceMetrics::SGeneralSpeedTreeStats > &stats );
 
-#include "Texture_inl.h"
-#include "Shaders_inl.h"
-#include "GeometryBuffer_inl.h"
-#include "InstancingManager_inl.h"
+#include "texture_inl.h"
+#include "shaders_inl.h"
+#include "geometryBuffer_inl.h"
+#include "instancingManager_inl.h"
 
 	// Override speed tree filesystem
 	class ST_DLL_LINK CLavaFileSystem : public CFileSystem

@@ -1,7 +1,7 @@
 
 #include "build.h"
 
-#include "gameplayFXSurface.h"
+#include "gameplayFxSurface.h"
 
 #include "renderCollector.h"
 #include "renderShaderPair.h"
