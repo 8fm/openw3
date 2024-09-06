@@ -31,7 +31,7 @@ otherwise accompanies this software in either electronic or hard copy form.
 #endif
 
 #if !defined(SF_DURANGO_MONOLITHIC)
-    #include <D3Dcommon.h>
+    #include <d3dcommon.h>
 #endif
 
 #if (SF_D3D_VERSION == 10 )
