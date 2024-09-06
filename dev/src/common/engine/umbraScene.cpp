@@ -1,5 +1,6 @@
 #include "build.h"
 
+#ifdef USE_UMBRA
 #include "bitmapTexture.h"
 #include "decalComponent.h"
 #include "dimmerComponent.h"
@@ -115,6 +116,7 @@ void CUmbraSmallestHoleOverrideComponent::OnGenerateEditorFragments( CRenderFram
 }
 //////////////////////////////////////////////////////////////////////////
 
+#endif // USE_UMBRA
 #ifdef USE_UMBRA
 
 RED_DEFINE_STATIC_NAMED_NAME( VAR_NAME_W3NewDoor, "W3NewDoor" );

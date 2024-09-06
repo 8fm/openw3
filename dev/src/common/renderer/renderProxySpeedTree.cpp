@@ -1378,7 +1378,9 @@ void CRenderProxy_SpeedTree::PreRenderUpdate( const CRenderFrameInfo& frameInfo,
 	// Get camera (in game it's the same camera as render camera, in editor the occlusion camera can be detached)
 	const CRenderCamera& camera = frameInfo.m_occlusionCamera;
 
+#ifdef USE_UMBRA
 	const Bool cullFoliageWithUmbra = occlusionData != nullptr && CUmbraScene::IsUsingOcclusionCulling() && frameInfo.IsShowFlagOn( SHOW_UmbraCullFoliage );
+#endif // USE_UMBRA
 
 	if ( m_cachedBaseTrees.Size() > 0 )
 	{

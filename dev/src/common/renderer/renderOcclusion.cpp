@@ -9,6 +9,7 @@
 #include "../engine/umbraScene.h"
 #include "../engine/bitmapTexture.h"
 
+#ifdef USE_UMBRA
 const	MemSize	CRenderOcclusionData::s_extraOcclusionQueryAdditionalMemorySize = 3 * 1024 * 1024; // 3 MB
 Uint8*			CRenderOcclusionData::s_extraOcclusionQueryAdditionalMemory		= nullptr;
 
@@ -29,6 +30,7 @@ Bool CRenderOcclusionData::ShutdownExtraMemory()
 	s_extraOcclusionQueryAdditionalMemory = nullptr;
 	return true;
 }
+#endif // USE_UMBRA
 
 #ifdef USE_UMBRA
 ExtraOcclusionQueryResults::ExtraOcclusionQueryResults( TVisibleChunksIndices&& visibleObjects, UmbraOcclusionBuffer* occlusionBuffer )

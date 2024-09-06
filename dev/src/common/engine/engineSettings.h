@@ -24,7 +24,9 @@
 #define USE_APEX
 #define USE_SPEED_TREE
 #define USE_SCALEFORM
+#ifndef RED_PLATFORM_LINUX
 #define USE_UMBRA
+#endif
 #define USE_MSSSAO
 #define USE_WWISE
 

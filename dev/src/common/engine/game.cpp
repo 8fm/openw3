@@ -1138,8 +1138,10 @@ void CGame::Tick( Float timeDelta )
 				anselCameraTransform.BuildFromQuaternion( quatVec ).Transpose();
 				anselCameraTransform.SetTranslation( cwCamera.position.x, cwCamera.position.y, cwCamera.position.z );
 
+#ifdef USE_UMBRA
 				wasUmbraTurnedOnBeforeAnselToggle = CUmbraScene::IsUsingOcclusionCulling();
 				CUmbraScene::UseOcclusionCulling( false );
+#endif // USE_UMBRA
 
 				//isAnselSessionActive = true;
 				isAnselTurningOn = true;
@@ -1150,7 +1152,9 @@ void CGame::Tick( Float timeDelta )
 
 			auto stopAnselSessionCallback = [](void* userPointer)
 			{
+#ifdef USE_UMBRA
 				CUmbraScene::UseOcclusionCulling( wasUmbraTurnedOnBeforeAnselToggle );
+#endif // USE_UMBRA
 				isAnselTurningOff = true;
 
 				GGame->StartFade( false, TXT("AnselFadeOutEvent"), anselFadeTime, Color::BLACK, false );
