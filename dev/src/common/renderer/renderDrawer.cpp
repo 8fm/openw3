@@ -412,7 +412,7 @@ void CRenderDrawer::DrawPolyList( const Matrix* localToWorld, const DebugVertex*
 
 void CRenderDrawer::DrawText( const Matrix* localToWorld, const DebugVertexUV* points, Uint32 numTriangles, CRenderTexture* texture, bool textureSRGB )
 {
-	if ( NULL == points || 0 == numTriangles )
+	if ( nullptr == points || 0 == numTriangles )
 	{
 		return;
 	}
@@ -588,7 +588,7 @@ void CRenderDrawer::DrawQuad( const Vector &min, const Vector &max, Float z )
 	vertices[3].Set( Vector( min.X, min.Y, z ), Color::WHITE, 0.0f, 0.0f );
 
 	// Set matrices
-	GetRenderer()->GetStateManager().SetLocalToWorld( NULL );
+	GetRenderer()->GetStateManager().SetLocalToWorld( nullptr );
 
 	// Render
 	GpuApi::DrawSystemPrimitive( GpuApi::PRIMTYPE_TriangleStrip, 2, &vertices[0] );

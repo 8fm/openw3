@@ -31,7 +31,7 @@ CRenderProxy_Apex::CRenderProxy_Apex( const RenderProxyInitInfo& initInfo )
 	: IRenderProxyDissolvable( RPT_Apex, initInfo )
 	, IRenderEntityGroupProxy( initInfo.m_entityGroup )
 	, m_apexType( AT_Unknown )
-	, m_renderable( NULL )
+	, m_renderable( nullptr )
 	, m_hasMaterialReplacement( false )
 	, m_drawOriginalMaterials( false )
 	, m_originalElementCount( 0 )
@@ -154,8 +154,8 @@ CRenderProxy_Apex::CRenderProxy_Apex( const RenderProxyInitInfo& initInfo )
 
 			const IMaterialDefinition* definition = material->GetMaterialDefinition();
 
-			CRenderMaterial* renderMaterial = NULL;
-			CRenderMaterialParameters* renderParameters = NULL;
+			CRenderMaterial* renderMaterial = nullptr;
+			CRenderMaterialParameters* renderParameters = nullptr;
 
 			// Extract material settings
 			ExtractRenderResource( definition, renderMaterial ); //calls addref
@@ -184,7 +184,7 @@ CRenderProxy_Apex::~CRenderProxy_Apex()
 	if( m_wrapper && m_renderable )
 	{
 		m_wrapper->ReleaseRenderable( m_renderable );
-		m_renderable = NULL;
+		m_renderable = nullptr;
 	}
 
 	for ( Uint32 i = 0; i < m_renderElements.Size(); ++i )
@@ -197,7 +197,7 @@ CRenderProxy_Apex::~CRenderProxy_Apex()
 	{
 		((IRenderObject*)m_wrapper)->Release();
 	}
-	m_renderable = NULL;
+	m_renderable = nullptr;
 }
 
 

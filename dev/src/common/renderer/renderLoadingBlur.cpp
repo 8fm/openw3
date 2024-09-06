@@ -40,8 +40,8 @@ CLoadingScreenBlur::CLoadingScreenBlur ( )
 	, m_enabled( false )
 	, m_refcount( 0 )
 {
-	m_temporalBuffer[0] = NULL;
-	m_temporalBuffer[1] = NULL;
+	m_temporalBuffer[0] = nullptr;
+	m_temporalBuffer[1] = nullptr;
 }
 
 
@@ -219,13 +219,13 @@ void CLoadingScreenBlur::ReleaseTemporalBuffer( )
 	{
 		m_temporalBuffer[0]->ReleaseResources();
 		delete m_temporalBuffer[0];
-		m_temporalBuffer[0] = NULL;
+		m_temporalBuffer[0] = nullptr;
 	}
 	if( m_temporalBuffer[1] )
 	{
 		m_temporalBuffer[1]->ReleaseResources();
 		delete m_temporalBuffer[1];
-		m_temporalBuffer[1] = NULL;
+		m_temporalBuffer[1] = nullptr;
 	}
 }
 
@@ -369,7 +369,7 @@ void CLoadingScreenBlur::DrawFade( CPostProcessDrawer &drawer, const CRenderFram
 	{
 		if( blendScale < 1.0f )
 		{
-			stateManager.SetLocalToWorld( NULL );
+			stateManager.SetLocalToWorld( nullptr );
 			stateManager.SetCamera2D();
 
 			// GpuApi::TextureDesc desc = GpuApi::GetTextureDesc(sourceTexture);

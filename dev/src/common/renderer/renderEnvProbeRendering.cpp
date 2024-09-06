@@ -41,7 +41,7 @@ void RenderEnvProbeFace( const CRenderCollector &mainRenderCollector, MeshDrawin
 {
 	ASSERT( renderResolution <= renderer.GetSurfaces()->GetWidth() );
 	ASSERT( renderResolution <= renderer.GetSurfaces()->GetHeight() );
-	ASSERT( NULL != tiledConstantBuffer );
+	ASSERT( nullptr != tiledConstantBuffer );
 	
 	const CCascadeShadowResources &cascadeShadowResources = GetRenderer()->GetGlobalCascadesShadowResources();
 	const Uint32 rtFullWidth = CRenderEnvProbeManager::GetMaxProbeTypeResolution();
@@ -60,7 +60,7 @@ void RenderEnvProbeFace( const CRenderCollector &mainRenderCollector, MeshDrawin
 		GetRenderer()->BindSharedConstants( GpuApi::PixelShader );
 
 		// Setup global camera parameters
-		GetRenderer()->GetStateManager().SetLocalToWorld( NULL );
+		GetRenderer()->GetStateManager().SetLocalToWorld( nullptr );
 		GetRenderer()->GetStateManager().SetGlobalShaderConstants( info, rtFullWidth, rtFullHeight, GetRenderer()->GetGameplayFX() );
 		GetRenderer()->GetStateManager().BindGlobalConstants();
 		GetRenderer()->BindGlobalSkyShadowTextures( info, GpuApi::PixelShader );
@@ -131,7 +131,7 @@ void RenderEnvProbeFace( const CRenderCollector &mainRenderCollector, MeshDrawin
 
 			//
 
-			GetRenderer()->BindForwardConsts( info, cascadeShadowResources, NULL, false, GpuApi::PixelShader);
+			GetRenderer()->BindForwardConsts( info, cascadeShadowResources, nullptr, false, GpuApi::PixelShader);
 			// BindForwardConsts for VertexShader not needed here!
 
 			// Render

@@ -256,7 +256,7 @@ namespace ScaleformVideoHelpers
 SFBool CRenderScaleformTexture::Initialize()
 {    
 #ifndef RED_FINAL_BUILD
-	SF_AMP_SCOPE_TIMER(GetManager()->RenderThreadId == SF::GetCurrentThreadId() ? SF::AmpServer::GetInstance().GetDisplayStats() : NULL, __FUNCTION__, SF::Amp_Profile_Level_Medium);
+	SF_AMP_SCOPE_TIMER(GetManager()->RenderThreadId == SF::GetCurrentThreadId() ? SF::AmpServer::GetInstance().GetDisplayStats() : nullptr, __FUNCTION__, SF::Amp_Profile_Level_Medium);
 #endif
 
 	if ( TextureFlags & TF_UserAlloc )
@@ -1289,7 +1289,7 @@ SF::Render::Texture* CRenderScaleformTextureManager::CreateTexture(SF::Render::I
 {
 	SF_UNUSED(allocManager);
 #ifndef RED_FINAL_BUILD
-	SF_AMP_SCOPE_TIMER(RenderThreadId == SF::GetCurrentThreadId() ? AmpServer::GetInstance().GetDisplayStats() : NULL, __FUNCTION__, SF::Amp_Profile_Level_Medium);
+	SF_AMP_SCOPE_TIMER(RenderThreadId == SF::GetCurrentThreadId() ? AmpServer::GetInstance().GetDisplayStats() : nullptr, __FUNCTION__, SF::Amp_Profile_Level_Medium);
 #endif
 	if ( ! GpuApi::IsInit() )
 	{

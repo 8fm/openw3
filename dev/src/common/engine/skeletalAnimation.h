@@ -246,7 +246,7 @@ public:
 	RED_INLINE Bool HasValidId() const { return m_id != INVALID_ID; }
 
 	//! Do we have valid animation buffer
-	RED_INLINE Bool HasAnimBuffer() const { return NULL != m_animBuffer; }
+	RED_INLINE Bool HasAnimBuffer() const { return nullptr != m_animBuffer; }
 
 #ifdef USE_HAVOK_ANIMATION
 	//! Get the animation buffer (read only)
@@ -313,7 +313,7 @@ public:
 #endif
 
 	//! Are we streaming right now ?
-	RED_INLINE Bool HasStreamingPending() const { return m_streamingJob != NULL; }
+	RED_INLINE Bool HasStreamingPending() const { return m_streamingJob != nullptr; }
 
 	// Can animation be streamed
 	Bool CanBeStreamed() const;

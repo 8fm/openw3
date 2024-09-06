@@ -526,7 +526,7 @@ public:
 	void UpdateGrassMask( Uint8* grassMaskUpdate, Uint32 grassMaskResUpdate );
 	RED_INLINE Bool IsGrassMaskedOut( Float worldX, Float worldY )
 	{
-		if ( m_grassMask == NULL ) return false;
+		if ( m_grassMask == nullptr ) return false;
 
 		const Float xNorm = ( worldX - m_terrainCorner.X ) / m_terrainEdgeLength;
 		const Float yNorm = ( worldY - m_terrainCorner.Y ) / m_terrainEdgeLength; 

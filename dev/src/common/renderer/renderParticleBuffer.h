@@ -163,7 +163,7 @@ private:
 template < typename T >
 CParticleBuffer<T>::CParticleBuffer( Uint32 maxParticles )
 : IParticleBuffer( maxParticles )
-, m_particles( NULL )
+, m_particles( nullptr )
 {
 	// Stats
 	g_numBuffers++;
@@ -192,7 +192,7 @@ CParticleBuffer<T>::~CParticleBuffer()
 	if ( m_particles )
 	{
 		GParticlePool->Free( m_particles );
-		m_particles = NULL;
+		m_particles = nullptr;
 		g_numParticlesAllocated -= m_maxParticles;
 	}
 }

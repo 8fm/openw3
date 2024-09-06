@@ -304,10 +304,10 @@ namespace PostProcessUtilities
 	
 	CRenderTexture* ExtractRenderTexture( const CBitmapTexture *bitmapTexture )
 	{
-		if ( NULL == bitmapTexture )
-			return NULL;
+		if ( nullptr == bitmapTexture )
+			return nullptr;
 		IRenderResource *res = bitmapTexture->GetRenderResource();	
-		return res && res->IsRenderTexture() ? static_cast< CRenderTexture* >( res ) : NULL;
+		return res && res->IsRenderTexture() ? static_cast< CRenderTexture* >( res ) : nullptr;
 	}
 
 	CRenderTexture* ExtractRenderTexture( const TSoftHandle< CBitmapTexture > &bitmapTexture )
@@ -653,7 +653,7 @@ CRenderPostProcess::CRenderPostProcess( const CRenderSurfaces* surfaces )
 	// Create drawer
 	m_drawer			= new CPostProcessDrawer ( surfaces );
 
-	m_quadArray = NULL;
+	m_quadArray = nullptr;
 	m_quadArrayWidth = 0;
 	m_quadArrayHeight = 0;
 
@@ -1913,7 +1913,7 @@ ERenderTargetName CRenderPostProcess::DrawFinal( CRenderCollector& collector, co
 	const Int32 octWidthScalable		= fullWidthScalable  / 8;
 	const Int32 octHeightScalable		= fullHeightScalable / 8;
 
-	GetRenderer()->GetStateManager().SetLocalToWorld( NULL );
+	GetRenderer()->GetStateManager().SetLocalToWorld( nullptr );
 	GetRenderer()->GetStateManager().SetCamera2D();
 
 	// Set most commonly used draw context, to limit unnecessary context switches by draw context automatic objects
@@ -2743,13 +2743,13 @@ ERenderTargetName CRenderPostProcess::DrawFinal( CRenderCollector& collector, co
 		Float balanceMapLerpFactor = 0;
 		Float balanceMapAmountFactor = 0;
 		Float balancePostBrightness = 1.f;
-		CRenderTexture *balanceMap0 = NULL;
-		CRenderTexture *balanceMap1 = NULL;
+		CRenderTexture *balanceMap0 = nullptr;
+		CRenderTexture *balanceMap1 = nullptr;
 		Float balanceMapLerpFactorB = 0;
 		Float balanceMapAmountFactorB = 0;
 		Float balancePostBrightnessB = 1.f;
-		CRenderTexture *balanceMap0B = NULL;
-		CRenderTexture *balanceMap1B = NULL;
+		CRenderTexture *balanceMap0B = nullptr;
+		CRenderTexture *balanceMap1B = nullptr;
 		if ( info.m_envParametersGame.m_displaySettings.m_allowColorMod && params.m_activatedBalanceMap )
 		{
 			if ( info.m_envBlendingFactor > 0.f )

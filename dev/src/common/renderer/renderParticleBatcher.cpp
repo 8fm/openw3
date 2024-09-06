@@ -117,8 +117,8 @@ void CRenderPartricleBatcher::RenderParticles( const CRenderCollector& collector
 	Int32 lastVertexFactoryIndex = -1;
 
 	// Reset state cache
-	m_lastMaterial = NULL;
-	m_lastMaterialParameters = NULL;
+	m_lastMaterial = nullptr;
+	m_lastMaterialParameters = nullptr;
 
 	// Init local state cache
 	Vector lastEnvColor ( -1, -1, -1, 0 );
@@ -266,7 +266,7 @@ void CRenderPartricleBatcher::RenderEmitter(const CRenderCollector& collector, c
 
 		// Update effect params
 		const SRenderProxyDrawableEffectParams* effectParams = proxy->GetEffectParams();
-		if ( effectParams != NULL )
+		if ( effectParams != nullptr )
 		{
 			GetRenderer()->GetStateManager().SetPixelConst( PSC_Custom0, effectParams->m_customParam0 );
 		}

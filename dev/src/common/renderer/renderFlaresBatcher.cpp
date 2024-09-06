@@ -109,7 +109,7 @@ void CRenderFlaresBatcher::GrabTransparencyHelpers( CRenderCollector& collector,
 	for ( Uint32 flare_i=0; flare_i<flares.Size(); ++flare_i )
 	{
 		CRenderProxy_Flare *flare = flares[flare_i];
-		ASSERT( NULL != flare );
+		ASSERT( nullptr != flare );
 		flare->DrawOcclusionShape( info );
 	}
 
@@ -186,7 +186,7 @@ void CRenderFlaresBatcher::UpdateOcclusion( CRenderCollector& collector, const T
 		for ( Uint32 flare_i=0; flare_i<flares.Size(); ++flare_i )
 		{
 			CRenderProxy_Flare *flare = flares[flare_i];
-			ASSERT( NULL != flare );
+			ASSERT( nullptr != flare );
 			flare->DrawOcclusion( collector.m_scene, isFullPass, info );
 		}
 	}
@@ -232,7 +232,7 @@ void CRenderFlaresBatcher::DrawDebugOcclusion( CRenderCollector& collector, cons
 	for ( Uint32 flare_i=0; flare_i<flares.Size(); ++flare_i )
 	{
 		CRenderProxy_Flare *flare = flares[flare_i];
-		ASSERT( NULL != flare );
+		ASSERT( nullptr != flare );
 		flare->DrawOcclusionShape( info );
 	}
 }
@@ -291,7 +291,7 @@ void CRenderFlaresBatcher::DrawFlares( CRenderCollector& collector, const Render
 	for ( Uint32 sorted_flare_i=0; sorted_flare_i<m_sortTable.Size(); ++sorted_flare_i )
 	{
 		CRenderProxy_Flare *flare = m_sortTable[sorted_flare_i].flare;
-		ASSERT( NULL != flare );
+		ASSERT( nullptr != flare );
 
 		// If alpha zero then skip flare
 		if ( flare->GetCurrentAlpha() <= 0.0f )
@@ -347,7 +347,7 @@ void CRenderFlaresBatcher::DrawFlares( CRenderCollector& collector, const Render
 		Vector finalColor = collector.GetRenderFrameInfo().m_envParametersArea.GetFlareColor( flare->GetParameters().m_colorGroup, 0 );
 
 		// Setup material parameters
-		if(flare->GetEffectParams() != NULL)
+		if(flare->GetEffectParams() != nullptr)
 		{
 			// Parameter 0
 			if ( flare->GetMaterial()->IsUsingEffectParam0() )
@@ -577,7 +577,7 @@ void CRenderFlaresBatcher::DrawLensFlares( CRenderCollector& collector, const Re
 			Vector finalColor = lensElement.m_colorLinear * collector.GetRenderFrameInfo().m_envParametersArea.GetFlareColor( flare->GetParameters().m_colorGroup, lensElement.m_colorGroupParamsIndex );
 
 			// Setup material parameters
-			if(flare->GetEffectParams() != NULL)
+			if(flare->GetEffectParams() != nullptr)
 			{
 				// Parameter 0
 				if ( material->IsUsingEffectParam0() )

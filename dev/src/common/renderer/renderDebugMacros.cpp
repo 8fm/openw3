@@ -36,17 +36,17 @@ void BatchModifier::AddBatchModifier( IBatchModifier* b )
 	if ( !m_head )
 	{
 		m_head = b;
-		b->m_next = NULL;
+		b->m_next = nullptr;
 	}
 	else
 	{
 		IBatchModifier* curr = m_head;
-		while ( curr->m_next != NULL )
+		while ( curr->m_next != nullptr )
 		{
 			curr = curr->m_next;
 		}
 		curr->m_next = b;
-		b->m_next = NULL;
+		b->m_next = nullptr;
 	}
 }
 
@@ -75,6 +75,6 @@ void BatchModifier::RemoveBatchModifier( IBatchModifier* b )
 
 BatchModifier::BatchModifier()
 {
-	m_head = NULL;
+	m_head = nullptr;
 }
 

@@ -29,7 +29,7 @@ public:
 
 	// Get or speed tree resource
 	SpeedTree::CTreeRender* GetRenderBaseTree() { return m_tree; }
-	void SetRenderBaseTree( SpeedTree::CTreeRender* tree ) { ASSERT( m_tree == NULL ); m_tree = tree; }
+	void SetRenderBaseTree( SpeedTree::CTreeRender* tree ) { ASSERT( m_tree == nullptr ); m_tree = tree; }
 
 	const String& GetSRTPath() const { return m_path; }
 	const String& GetSRTFileName() const { return m_fileName; } 

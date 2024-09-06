@@ -167,7 +167,7 @@ public:
 			if ( res->GetCategory() )
 			{
 				// Get existing category info
-				RenderTypeInfo* info = NULL;
+				RenderTypeInfo* info = nullptr;
 				for ( Uint32 j=0; j<m_types.Size(); j++ )
 				{
 					if ( m_types[j].m_category == res->GetCategory() )
@@ -199,7 +199,7 @@ public:
 					CName textureCategory = texture->GetTextureGroupName();
 
 					// Find matching category
-					TextureCategory* catInfo = NULL;
+					TextureCategory* catInfo = nullptr;
 					for ( Uint32 j=0; j<textureCategories.Size(); j++ )
 					{
 						if ( textureCategories[j].m_category == textureCategory )
@@ -226,7 +226,7 @@ public:
 					CName textureCategory = texture->GetTextureGroupName();
 
 					// Find matching category
-					TextureCategory* catInfo = NULL;
+					TextureCategory* catInfo = nullptr;
 					for ( Uint32 j=0; j<textureArrayCategories.Size(); j++ )
 					{
 						if ( textureArrayCategories[j].m_category == textureCategory )

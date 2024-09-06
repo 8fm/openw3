@@ -15,11 +15,11 @@
 														~enumName##EnumBuilder()															\
 														{																					\
 															delete m_registeredEnum;														\
-															m_registeredEnum = NULL;														\
+															m_registeredEnum = nullptr;														\
 														}																					\
 																																			\
 														enumName##EnumBuilder()																\
-															:  m_registeredEnum( NULL )														\
+															:  m_registeredEnum( nullptr )													\
 														{																					\
 															m_registeredEnum = new CEnum( CNAME( enumName ), sizeof( enumName ), false );	\
 

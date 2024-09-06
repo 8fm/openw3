@@ -57,7 +57,7 @@ CRenderEnvProbe* CRenderEnvProbe::Create( const SEnvProbeParams &params, const E
 
 	if ( !facesDataSource || !facesDataSource->IsLoadable() )
 	{
-		return NULL;
+		return nullptr;
 	}
 
 	probe.InitResource( new CRenderEnvProbe ( params, facesDataSource ) );
@@ -81,7 +81,7 @@ IRenderResource* CRenderInterface::UploadEnvProbe( const CEnvProbeComponent* env
 
 	if ( IsDeviceLost() )
 	{
-		return NULL;
+		return nullptr;
 	}
 	
 	return CRenderEnvProbe::Create( envProbeComponent->BuildProbeParams(), envProbeComponent->GetDataSource() );

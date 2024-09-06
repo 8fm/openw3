@@ -29,7 +29,7 @@ public:
 	RED_INLINE THandle< CResource > GetResource() const { return m_resource; }
 
 	//! Is the resource loaded ?
-	RED_INLINE Bool IsLoaded() const { return m_resource.Get() != NULL; }
+	RED_INLINE Bool IsLoaded() const { return m_resource.Get() != nullptr; }
 
 	//! Is this resource cooked ?
 	RED_INLINE Bool IsCooked() const { return 0 == ( m_flags & RGF_NotCooked ); }

@@ -765,14 +765,14 @@ CRenderEnvProbeManager::~CRenderEnvProbeManager ()
 		if ( m_currLoadingDataSource )
 		{
 			m_currLoadingDataSource->CancelLoading();
-			m_currLoadingDataSource = NULL;
+			m_currLoadingDataSource = nullptr;
 		}
 
 		// Release cancelled data source
 		if ( m_cancelledLoadingDataSource )
 		{
 			m_cancelledLoadingDataSource->CancelLoading();
-			m_cancelledLoadingDataSource = NULL;
+			m_cancelledLoadingDataSource = nullptr;
 		}
 	}
 
@@ -1231,7 +1231,7 @@ Uint32 SelectEnvProbes_AddRef( const Vector &refPosition, Uint32 capacity, Float
 	for ( Uint32 i=0; i<capacity; ++ i )
 	{
 		selectedDistSq[i] = 0;
-		selectedProbes[i] = NULL;
+		selectedProbes[i] = nullptr;
 	}
 
 	// Build selected probes table
@@ -1572,7 +1572,7 @@ void CRenderEnvProbeManager::CancelCurrProbeUpdate()
 
 		m_cancelledLoadingDataSource = m_currLoadingDataSource;
 		m_cancelledLoadingDataSource->RequestFastLoadingFinish();
-		m_currLoadingDataSource = NULL;		
+		m_currLoadingDataSource = nullptr;
 	}
 	
 	SAFE_RELEASE( m_pCurrGenProbe );
@@ -1600,11 +1600,11 @@ void CRenderEnvProbeManager::UpdateEnvProbes( const CRenderCollector &mainRender
 	}
 
 	// Find probe to update
-	if ( NULL == m_pCurrGenProbe )
+	if ( nullptr == m_pCurrGenProbe )
 	{
 		PC_SCOPE_RENDER_LVL1( UpdateEnvProbes_ChooseProbe );
 
-		CRenderEnvProbe *probeToUpdate = NULL;
+		CRenderEnvProbe *probeToUpdate = nullptr;
 		if ( forcedProbeToRender )
 		{
 			if ( ProbeQualifiesForUpdate( info, *forcedProbeToRender ) )
@@ -1626,7 +1626,7 @@ void CRenderEnvProbeManager::UpdateEnvProbes( const CRenderCollector &mainRender
 				}
 
 				const Bool currIsForcedGlobal = currProbe->IsGlobalProbe() && -1 == currProbe->GetDynamicData().m_lastUpdateTime;
-				if ( !currIsForcedGlobal && NULL != probeToUpdate && currProbeTime >= probeToUpdate->GetDynamicData().m_lastUpdateTime )
+				if ( !currIsForcedGlobal && nullptr != probeToUpdate && currProbeTime >= probeToUpdate->GetDynamicData().m_lastUpdateTime )
 				{
 					continue;
 				}
@@ -1653,7 +1653,7 @@ void CRenderEnvProbeManager::UpdateEnvProbes( const CRenderCollector &mainRender
 		{
 			CancelCurrProbeUpdate();
 
-			if ( NULL != probeToUpdate )
+			if ( nullptr != probeToUpdate )
 			{
 				m_pCurrGenProbe = probeToUpdate;
 				m_pCurrGenProbe->AddRef();
@@ -1669,7 +1669,7 @@ void CRenderEnvProbeManager::UpdateEnvProbes( const CRenderCollector &mainRender
 	}
 
 	// Update the probe
-	if ( NULL != m_pCurrGenProbe )
+	if ( nullptr != m_pCurrGenProbe )
 	{
 		PC_SCOPE_RENDER_LVL1( UpdateEnvProbes_UpdateTheProbe );
 
@@ -1715,7 +1715,7 @@ void CRenderEnvProbeManager::UpdateEnvProbes( const CRenderCollector &mainRender
 		// Update the probe
 		if ( adaptedUpdateTimeDelta > 0 ) // timeDelta may be zero in case the game is paused (window out of focus etc).
 		{
-			while ( NULL != m_pCurrGenProbe && allowedUpdatesLeft-- > 0 )
+			while ( nullptr != m_pCurrGenProbe && allowedUpdatesLeft-- > 0 )
 			{
 				if ( !UpdateEnvProbe( mainRenderCollector, *GetRenderer(), adaptedUpdateTimeDelta ) )
 				{
@@ -2125,7 +2125,7 @@ Bool CRenderEnvProbeManager::UpdateCurrEnvProbeFaceTexturesLoading( Bool allowUn
 			case IEnvProbeDataSource::STATE_Loaded:
 			case IEnvProbeDataSource::STATE_NotLoading:
 				m_cancelledLoadingDataSource->Rewind();
-				m_cancelledLoadingDataSource = NULL;
+				m_cancelledLoadingDataSource = nullptr;
 				break;
 
 			default:
@@ -2177,13 +2177,13 @@ Bool CRenderEnvProbeManager::UpdateCurrEnvProbeFaceTexturesLoading( Bool allowUn
 					}
 
 					// Release data source
-					m_currLoadingDataSource = NULL;
+					m_currLoadingDataSource = nullptr;
 				}
 				return false;
 
 			case IEnvProbeDataSource::STATE_Failed:
 				envProbe.RefDynamicData().m_failereRecoveryTimeStamp = -1;
-				m_currLoadingDataSource = NULL;
+				m_currLoadingDataSource = nullptr;
 				return false;
 
 			case IEnvProbeDataSource::STATE_NotLoading:
@@ -2200,7 +2200,7 @@ Bool CRenderEnvProbeManager::UpdateCurrEnvProbeFaceTexturesLoading( Bool allowUn
 				envProbe.RefDynamicData().m_failereRecoveryTimeStamp = -1;
 				envProbe.RefDynamicData().m_isFaceTexturesInit = true;
 				m_currLoadingDataSource->Rewind();
-				m_currLoadingDataSource = NULL;
+				m_currLoadingDataSource = nullptr;
 				break;
 
 			default:

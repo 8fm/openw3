@@ -28,9 +28,9 @@ public:
 		Bool m_doubleRotationQuality;
 
 		RED_INLINE InputPose()
-			: m_bones( NULL )
+			: m_bones( nullptr )
 			, m_bonesNum( 0 )
-			, m_tracks( NULL )
+			, m_tracks( nullptr )
 			, m_tracksNum( 0 )
 			, m_doubleRotationQuality( false )
 		{}
@@ -39,7 +39,7 @@ public:
 public:
 	virtual Bool IsValid() const { return true; }
 
-	virtual ICompressedPose* CreateCompressedPose( CObject* /*parent*/, const CSkeleton* /*skeleton*/, const InputPose& /*poseIn*/ ) const { return NULL; }
+	virtual ICompressedPose* CreateCompressedPose( CObject* /*parent*/, const CSkeleton* /*skeleton*/, const InputPose& /*poseIn*/ ) const { return nullptr; }
 
 	virtual void Recreate() {}
 };

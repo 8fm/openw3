@@ -169,7 +169,7 @@ protected:
 
 		}
 
-		Bool isEmpty() { return m_codeReceiverObject == NULL && m_scriptReciverObject.Get() == NULL; }
+		Bool isEmpty() { return m_codeReceiverObject == nullptr && m_scriptReciverObject.Get() == nullptr; }
 	};
 	TDynArray< SCallbackData >					m_callbacks;
 	CPhysicsWorld*								m_world;
@@ -247,7 +247,7 @@ public:
 		EPCCT_COUNT
 	};
 
-	void SetScriptCallback( EPhysicalScriptCallbackType type, const THandle< IScriptable >& object = NULL, CName onEventName = CNAME( Empty ) );
+	void SetScriptCallback( EPhysicalScriptCallbackType type, const THandle< IScriptable >& object = nullptr, CName onEventName = CNAME( Empty ) );
 	void SetCodeCallback( EPhysicalCodeCallbackType type, IPhysicalCollisionTriggerCallback* callback, const THandle< IScriptable >& object );
 
 	virtual void SwitchToKinematic( Bool decision );

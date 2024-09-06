@@ -17,8 +17,8 @@ protected:
 public:
 	MaterialParameterInstance();
 	MaterialParameterInstance( const MaterialParameterInstance& other );
-	MaterialParameterInstance( const CName& paramName, CClass* paramClass, const void* data = NULL );
-	MaterialParameterInstance( const CName& paramName, const CName& typeName, const void* data = NULL );
+	MaterialParameterInstance( const CName& paramName, CClass* paramClass, const void* data = nullptr );
+	MaterialParameterInstance( const CName& paramName, const CName& typeName, const void* data = nullptr );
 	~MaterialParameterInstance();
 
 	//! Get param name

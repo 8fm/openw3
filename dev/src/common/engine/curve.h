@@ -199,8 +199,8 @@ private:
 	{
 		for ( Uint32 i=0; i<MAX_CURVES; ++i )
 		{
-			m_approx[i] = NULL;
-			m_curves[i] = NULL;
+			m_approx[i] = nullptr;
+			m_curves[i] = nullptr;
 		}
 	}
 
@@ -261,7 +261,7 @@ public:
 				return &m_curveParams[i];
 			}
 		}
-		return NULL;
+		return nullptr;
 	}
 	RED_INLINE const CurveParameter* GetCurveParameter( const CName& curveName ) const
 	{
@@ -272,7 +272,7 @@ public:
 				return &m_curveParams[i];
 			}
 		}
-		return NULL;
+		return nullptr;
 	}
 	RED_INLINE CurveParameter& GetCurveParameter( const Int32 index ) {	return m_curveParams[index]; }
 	RED_INLINE const CurveParameter& GetCurveParameter( const Int32 index ) const {	return m_curveParams[index]; }

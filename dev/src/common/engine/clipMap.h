@@ -429,7 +429,7 @@ public:
 	void GetTiles( const Box& extents, TTerrainTiles& tiles ) const;
 
 	//! Get a set of data blocks, composing the area described with the input rect
-	void GetRectangleOfData( const Rect& rect, TDynArray< SClipmapHMQueryResult >& parts, Rect* outColorRect = NULL );
+	void GetRectangleOfData( const Rect& rect, TDynArray< SClipmapHMQueryResult >& parts, Rect* outColorRect = nullptr );
 
 	//! Get normalized position in texel space
 	RED_INLINE Vector2 GetTexelSpaceNormalizedPosition( const Vector& position, Bool clamp = true ) const
@@ -527,7 +527,7 @@ public:
 
 		if ( tileX < 0 || tileX >= (Int32)m_numTilesPerEdge || tileY < 0 || tileY >= (Int32)m_numTilesPerEdge )
 		{
-			return NULL;
+			return nullptr;
 		}
 
 		return m_terrainGrid[ tileY * m_numTilesPerEdge + tileX ].Get();

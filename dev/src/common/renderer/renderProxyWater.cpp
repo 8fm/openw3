@@ -351,7 +351,7 @@ CRenderProxy_Water::CRenderProxy_Water()
 	: IRenderProxy( RPT_Water )
 	, m_heightmap( nullptr )
 	, m_controlTextureArray( nullptr )	
-	, m_localShapesTextureArray( NULL )	
+	, m_localShapesTextureArray( 0 )
 	, m_simulator()
 	, m_dynamicsimulator()
 	, m_amplitudeScale(1.0f, 1.0f, 1.0f, 1.0f)
@@ -374,7 +374,7 @@ CRenderProxy_Water::CRenderProxy_Water()
 	GpuApi::SetBufferDebugPath( m_instanceData, "waterinstance" );
 	m_numinstances = 0;
 
-	m_qp.ProjectWorldSpace( Vector::ZEROS, Vector::ZEROS, Vector::ZEROS, Vector::ZEROS, 0.0f, 0.0f, 0.0f, NULL);
+	m_qp.ProjectWorldSpace( Vector::ZEROS, Vector::ZEROS, Vector::ZEROS, Vector::ZEROS, 0.0f, 0.0f, 0.0f, nullptr);
 	m_plane.Expand_sq( m_qp.GetVectors()[0],m_qp.GetVectors()[1],m_qp.GetVectors()[2],m_qp.GetVectors()[3] );
 
 	m_shapeWaterLevel_min = 0.0f;

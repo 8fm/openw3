@@ -60,17 +60,17 @@ public:
 	// This is needed to be able to prefetch the next element in a loop
 	RED_INLINE IDynamicRenderResource* Next()
 	{
-		return m_cur ? m_cur->m_nextResource : NULL;
+		return m_cur ? m_cur->m_nextResource : nullptr;
 	}
 
 	RED_INLINE void operator++()
 	{
-		m_cur = m_cur ? m_cur->m_nextResource : NULL;
+		m_cur = m_cur ? m_cur->m_nextResource : nullptr;
 	}
 
 	RED_INLINE operator Bool() const
 	{
-		return m_cur != NULL;
+		return m_cur != nullptr;
 	}
 
 	RED_INLINE IDynamicRenderResource* operator->()

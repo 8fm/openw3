@@ -44,8 +44,8 @@ Vector CalculateTerrainLimitedLightDirection( const Vector &lightDir )
 
 CRenderTerrainShadows::CullingBuffer::CullingBuffer( Uint32 size )
 	: m_size( size )
-	, m_data( NULL )
-	, m_mem( NULL )
+	, m_data( nullptr )
+	, m_mem( nullptr )
 	, m_age( 1 )
 	, m_updating( false )
 {
@@ -66,11 +66,11 @@ CRenderTerrainShadows::CullingBuffer::~CullingBuffer()
 	ASSERT( !m_updating );
 
 	// free temporary buffer
-	if ( m_mem != NULL )
+	if ( m_mem != nullptr )
 	{
 		RED_MEMORY_FREE( MemoryPool_Default, MC_RenderVisibility, (void*)m_mem );
-		m_mem = NULL;
-		m_data = NULL;
+		m_mem = nullptr;
+		m_data = nullptr;
 	}
 }
 
@@ -551,7 +551,7 @@ CRenderTerrainShadows::~CRenderTerrainShadows()
 	{
 		m_cullingBufferUpdateJob->TryCancel();
 		m_cullingBufferUpdateJob->Release();
-		m_cullingBufferUpdateJob = NULL;
+		m_cullingBufferUpdateJob = nullptr;
 	}
 
 	delete m_cullingBuffer;
@@ -567,7 +567,7 @@ void CRenderTerrainShadows::RequestFullUpdate()
 
 bool CRenderTerrainShadows::IsValidForScene( const CRenderSceneEx* scene ) const
 {
-	return (m_terrainProxy != NULL) && (scene == m_terrainScene);
+	return (m_terrainProxy != nullptr) && (scene == m_terrainScene);
 }
 
 void CRenderTerrainShadows::BindToTerrainProxy( CRenderProxy_Terrain* proxy, CRenderSceneEx* scene )
@@ -687,7 +687,7 @@ void CRenderTerrainShadows::PrepareShadows( const CRenderCollector& collector )
 		{
 			// Realase job pointer
 			m_cullingBufferUpdateJob->Release();
-			m_cullingBufferUpdateJob = NULL;
+			m_cullingBufferUpdateJob = nullptr;
 
 			// Unmap the stating buffer
 			GpuApi::UnlockLevel( m_copyBuffer, 0, 0 );
@@ -710,7 +710,7 @@ void CRenderTerrainShadows::PrepareShadows( const CRenderCollector& collector )
 			// Try to lock(map) the staging buffer
 			Uint32 srcDataPitch = 0;
 			void* srcDataPtr = GpuApi::LockLevel( m_copyBuffer, 0, 0, GpuApi::BLF_Read | GpuApi::BLF_DoNotWait, srcDataPitch );
-			if ( srcDataPtr != NULL )
+			if ( srcDataPtr != nullptr )
 			{
 				// Create update job
 				const Box& worldRect = m_shadowTextureWindows[0].m_worldRect;
@@ -949,7 +949,7 @@ void CRenderTerrainShadows::PrepareShadowMap( const CRenderCollector& collector,
 	GetRenderer()->ClearDepthTarget( m_shadowDepthBufferEsram, 1.0f );
 
 	// Setup global camera parameters
-	GetRenderer()->GetStateManager().SetLocalToWorld( NULL );
+	GetRenderer()->GetStateManager().SetLocalToWorld( nullptr );
 	GetRenderer()->GetStateManager().SetCamera( outSunCamera );
 
 	// Draw the regions that contribute to the shadowmap
@@ -959,7 +959,7 @@ void CRenderTerrainShadows::PrepareShadowMap( const CRenderCollector& collector,
 	{	
 		// when drawing make sure that the are already covered by higher quality slicdes
 		// are not being redrawn
-		DrawTerrainLevel( outSunCamera, drawLevel, (drawLevel > level) ? &excludedAreaRect : NULL );
+		DrawTerrainLevel( outSunCamera, drawLevel, (drawLevel > level) ? &excludedAreaRect : nullptr );
 		excludedAreaRect = m_shadowTextureWindows[ level ].m_worldRect;
 	}
 }
@@ -1054,7 +1054,7 @@ CRenderProxyShadowCulling::CRenderProxyShadowCulling( CRenderTerrainShadows* ter
 	, m_shadowCulledByTerrain( 0 )
 	, m_worldBox( initialBox )	
 	, m_terrainShadows( terrainShadows )
-	, m_job( NULL )
+	, m_job( nullptr )
 {
 }
 
@@ -1070,7 +1070,7 @@ void CRenderProxyShadowCulling::UpdateBoundingBox( const Box& newBox )
 	{
 		m_job->TryCancel();
 		m_job->Release();
-		m_job = NULL;
+		m_job = nullptr;
 	}
 
 	// Invalidate result
@@ -1101,7 +1101,7 @@ bool CRenderProxyShadowCulling::IsShadowCulledByTerrain()
 
 		// Release the job
 		m_job->Release();
-		m_job = NULL;
+		m_job = nullptr;
 	}
 
 	// Invalidate when the height buffer changed

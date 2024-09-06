@@ -129,7 +129,7 @@ class className##ClassBuilder : public IClassBuilder																		\
 	CClass		*m_registeredClass;																							\
 public:																														\
 	className##ClassBuilder()																								\
-	: m_registeredClass( NULL )																								\
+	: m_registeredClass( nullptr )																							\
 	{																														\
 		m_registeredClass = new TTypedClass																					\
 			<className, (EMemoryClass)className::MemoryClass, className::MemoryPool>										\
@@ -141,8 +141,8 @@ public:																														\
 	~className##ClassBuilder()																								\
 	{																														\
 		delete m_registeredClass;																							\
-		m_registeredClass = NULL;																							\
-		className::sm_classDesc = NULL;																						\
+		m_registeredClass = nullptr;																						\
+		className::sm_classDesc = nullptr;																					\
 	}																														\
 																															\
 	virtual void DeinitClass()																								\
@@ -165,7 +165,7 @@ class className##ClassBuilder : public IClassBuilder												\
 	CClass		*m_registeredClass;																	\
 public:																								\
 	className##ClassBuilder()																		\
-		:  m_registeredClass( NULL )																\
+		:  m_registeredClass( nullptr )																\
 	{																								\
 		m_registeredClass = new TTypedClass															\
 		<className, (EMemoryClass)className::MemoryClass, className::MemoryPool>					\
@@ -181,8 +181,8 @@ public:																								\
 	~className##ClassBuilder()																		\
 	{																								\
 		delete m_registeredClass;																	\
-		m_registeredClass = NULL;																	\
-		className::sm_classDesc = NULL;																\
+		m_registeredClass = nullptr;																\
+		className::sm_classDesc = nullptr;															\
 	}																								\
 																									\
 	virtual void DeinitClass()																		\
@@ -204,7 +204,7 @@ class className##ClassBuilder : public IClassBuilder													\
 	CClass		*m_registeredClass;																		\
 public:																									\
 	className##ClassBuilder()																			\
-		:  m_registeredClass( NULL )																	\
+		:  m_registeredClass( nullptr )																	\
 	{																									\
 		m_registeredClass = new CAbstractClass(  CName( TXT(#className) ), sizeof( className ), 0 );	\
 		className::sm_classDesc = m_registeredClass;													\
@@ -214,8 +214,8 @@ public:																									\
 	~className##ClassBuilder()																			\
 	{																									\
 		delete m_registeredClass;																		\
-		m_registeredClass = NULL;																		\
-		className::sm_classDesc = NULL;																	\
+		m_registeredClass = nullptr;																	\
+		className::sm_classDesc = nullptr;																\
 	}																									\
 																										\
 	virtual void DeinitClass()																			\
@@ -236,7 +236,7 @@ class className##ClassBuilder : public IClassBuilder																\
 	CClass *m_registeredClass;																						\
 public:																												\
 	className##ClassBuilder()																						\
-		:  m_registeredClass( NULL )																				\
+		:  m_registeredClass( nullptr )																				\
 	{																												\
 		m_registeredClass = new TTypedClassNoCopy																	\
 			<className, (EMemoryClass)className::MemoryClass, className::MemoryPool>								\
@@ -248,8 +248,8 @@ public:																												\
 	~className##ClassBuilder()																						\
 	{																												\
 		delete m_registeredClass;																					\
-		m_registeredClass = NULL;																					\
-		className::sm_classDesc = NULL;																				\
+		m_registeredClass = nullptr;																				\
+		className::sm_classDesc = nullptr;																			\
 	}																												\
 																													\
 	virtual void DeinitClass()																						\
@@ -790,4 +790,4 @@ CProperty::InstallPropertySetter								\
 
 
 #define IMPLEMENT_RTTI_CLASS(className) static className##ClassBuilder UNIQUE_NAME( classRegistrator ) ;													\
-										CClass* className::sm_classDesc = NULL;
+										CClass* className::sm_classDesc = nullptr;

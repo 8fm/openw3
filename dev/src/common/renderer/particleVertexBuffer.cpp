@@ -6,8 +6,8 @@
 #include "particleVertexBuffer.h"
 
 GpuApi::BufferRef					CParticleVertexBuffer::s_vertexBufferRef;
-Int8* RESTRICT						CParticleVertexBuffer::s_currentWritePtr			= NULL;	
-Int8* RESTRICT						CParticleVertexBuffer::s_bufferPtr					= NULL;	
+Int8* RESTRICT						CParticleVertexBuffer::s_currentWritePtr			= nullptr;
+Int8* RESTRICT						CParticleVertexBuffer::s_bufferPtr					= nullptr;
 Int32								CParticleVertexBuffer::s_currentVBOffset			= 0;
 
 CParticleVertexBuffer::SBindInfo	CParticleVertexBuffer::s_lastBindInfo				= CParticleVertexBuffer::SBindInfo();

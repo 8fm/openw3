@@ -77,7 +77,7 @@ inline st_bool CShaderConstant::SetTexture(st_int32 nSampler, const CTexture& cT
 }
 
 inline CShaderTechniqueGPUAPI::CVertexShader::CVertexShader( ) 
-	: m_compiledShaderCode( NULL )
+	: m_compiledShaderCode( nullptr )
 	, m_compiledShaderCodeSize( 0 )
 {
 }
@@ -108,7 +108,7 @@ inline st_bool CShaderTechniqueGPUAPI::CVertexShader::Load(const char* pFilename
 				else
 				{
 					pFileSystem->Release((st_byte*) m_compiledShaderCode);
-					m_compiledShaderCode = NULL;
+					m_compiledShaderCode = nullptr;
 					m_compiledShaderCodeSize = 0;
 				}
 			}
@@ -134,7 +134,7 @@ inline void CShaderTechniqueGPUAPI::CVertexShader::ReleaseGfxResources()
 		CFileSystem* pFileSystem = CFileSystemInterface::Get( );
 		assert(pFileSystem);
 		pFileSystem->Release((st_byte*) m_compiledShaderCode);
-		m_compiledShaderCode = NULL;
+		m_compiledShaderCode = nullptr;
 		m_compiledShaderCodeSize = 0;
 	}
 }

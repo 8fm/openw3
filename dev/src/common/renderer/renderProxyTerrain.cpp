@@ -175,7 +175,7 @@ static CRenderTextureArray* ExtractTerrainDiffuseTextureArray( CRenderMaterial *
 {
 	if ( !material )
 	{
-		return NULL;
+		return nullptr;
 	}
 
 	Int32 diffuseTexParamOffset = -1;
@@ -496,25 +496,25 @@ const Int64 g_stagingCopyFramesDelay = 3;
 
 CRenderProxy_Terrain::CRenderProxy_Terrain( const CRenderTerrainUpdateData* initData, const SClipmapParameters& clipmapParams )
 	: IRenderProxy( RPT_Terrain )
-	, m_templateMesh( NULL )
-	, m_skirtTemplateMesh( NULL )
-	, m_material( NULL )
+	, m_templateMesh( nullptr )
+	, m_skirtTemplateMesh( nullptr )
+	, m_material( nullptr )
 #ifndef NO_HEIGHTMAP_EDIT
 	, m_renderStampVisualization( false )
-	, m_heightmapStamp( NULL )
-	, m_colorStamp( NULL )
-	, m_controlStamp( NULL )
+	, m_heightmapStamp( nullptr )
+	, m_colorStamp( nullptr )
+	, m_controlStamp( nullptr )
 #endif
 #ifdef ENABLE_SPEEDTREE_DENSITY_VISUALISER
 	, m_grassVisualiserEnable( false )
 #endif
-	, m_heightmapArray( NULL )
-	, m_controlMapArray( NULL )
-	, m_colorMapArray( NULL )
-	, m_instanceData( NULL )
+	, m_heightmapArray( 0 )
+	, m_controlMapArray( 0 )
+	, m_colorMapArray( 0 )
+	, m_instanceData( 0 )
 	, m_screenSpaceErrorThresholdOverride( -1.0f )
-	, m_level0Heightmap( NULL )
-	, m_level0ControlMap( NULL )
+	, m_level0Heightmap( nullptr )
+	, m_level0ControlMap( nullptr )
 	, m_grassMask( nullptr )
 	, m_grassMaskRes( 0 )
 	, m_requestIntermediateMapsUpdate( false )
@@ -538,7 +538,7 @@ CRenderProxy_Terrain::CRenderProxy_Terrain( const CRenderTerrainUpdateData* init
 {
 	ASSERT( initData );
 
-	m_instancedPtr = NULL;
+	m_instancedPtr = nullptr;
 
 	m_isColorMapCompressed = clipmapParams.useCompressedColorMap;
 
@@ -1664,7 +1664,7 @@ void CRenderProxy_Terrain::ReadBackGrassMapMemoryFromStaging()
 	// Try to lock(map) the staging buffer
 	Uint32 srcDataPitch = 0;
 	void* srcDataPtr = GpuApi::LockLevel( m_grassMap_Staging, 0, 0, GpuApi::BLF_Read | GpuApi::BLF_DoNotWait, srcDataPitch );
-	if ( srcDataPtr != NULL )
+	if ( srcDataPtr != nullptr )
 	{
 		const Uint32 grassMapMemorySize = m_windowResolution * m_windowResolution * sizeof( Uint8 );
 		if ( !m_grassMapData )
@@ -1760,7 +1760,7 @@ const SAutomaticGrassDesc* CRenderProxy_Terrain::GetGrassDescriptor( Int32 texIn
 		++it;
 	}
 
-	return NULL;
+	return nullptr;
 }
 
 void CRenderProxy_Terrain::UpdateGrassMask( Uint8* grassMaskUpdate, Uint32 grassMaskResUpdate )
@@ -2393,9 +2393,9 @@ void CRenderProxy_Terrain::PerformTerrainUpdate(CRenderTerrainUpdateData* update
 	{
 		m_renderStampVisualization = true;
 
-		bool haveStampHeight = ( updateData->GetStampData() != NULL );
-		bool haveStampColor = ( updateData->GetStampColorData() != NULL );
-		bool haveStampControl = ( updateData->GetStampControlData() != NULL );
+		bool haveStampHeight = ( updateData->GetStampData() != nullptr );
+		bool haveStampColor = ( updateData->GetStampColorData() != nullptr );
+		bool haveStampControl = ( updateData->GetStampControlData() != nullptr );
 
 		Float stampRotation = updateData->GetStampRotation();
 		Float stampSize = updateData->GetStampSize();

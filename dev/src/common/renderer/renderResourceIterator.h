@@ -302,8 +302,8 @@ private:
 		
 		if ( obj->m_nextObject ) obj->m_nextObject->m_prevObject = obj->m_prevObject;
 		if ( obj->m_prevObject ) *obj->m_prevObject = obj->m_nextObject;
-		obj->m_prevObject = NULL;
-		obj->m_nextObject = NULL;
+		obj->m_prevObject = nullptr;
+		obj->m_nextObject = nullptr;
 		
 		const Int32 newStCount = st_count.Decrement();
 		RED_UNUSED( newStCount );

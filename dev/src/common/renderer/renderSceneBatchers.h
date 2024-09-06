@@ -19,9 +19,9 @@ public:
 public:
 	//! Group fragments by material
 	RED_INLINE CRenderBatchByMaterialParams( T* batchList )
-		: m_firstMaterial( NULL )
+		: m_firstMaterial( nullptr )
 	{
-		T* next = NULL;
+		T* next = nullptr;
 		for ( T* cur = batchList; cur; cur = next )
 		{
 			// Keep the loop going, get the next fragment while the link is still valid
@@ -47,7 +47,7 @@ public:
 
 	//! Group fragments by material, from input array
 	RED_INLINE CRenderBatchByMaterialParams( const TDynArray< T* >& batchList )
-		: m_firstMaterial( NULL )
+		: m_firstMaterial( nullptr )
 	{
 		const Uint32 size = batchList.Size();
 		for ( Uint32 i=0; i<size; ++i )
@@ -88,8 +88,8 @@ public:
 
 			// Walk the list, unlink
 			CRenderMaterialParameters* next = m_firstMaterial->m_batchNext;
-			m_firstMaterial->m_batchNext = NULL;
-			m_firstMaterial->m_batchList = NULL;
+			m_firstMaterial->m_batchNext = nullptr;
+			m_firstMaterial->m_batchList = nullptr;
 			m_firstMaterial = next;
 			return true;
 		}
@@ -110,9 +110,9 @@ public:
 	//! Group fragments by particle/non-particle materials.
 	RED_INLINE CRenderBatchByParticleMaterial( T* batchList )
 	{
-		m_particles = m_nonParticles = NULL;
+		m_particles = m_nonParticles = nullptr;
 
-		T* next = NULL;
+		T* next = nullptr;
 		for ( T* cur = batchList; cur; cur = next )
 		{
 			next = static_cast< T* >( cur->GetBatchNext() );
@@ -142,7 +142,7 @@ public:
 		{
 			isParticleMaterial = true;
 			batchList = m_particles;
-			m_particles = NULL;
+			m_particles = nullptr;
 			return true;
 		}
 
@@ -150,7 +150,7 @@ public:
 		{
 			isParticleMaterial = false;
 			batchList = m_nonParticles;
-			m_nonParticles = NULL;
+			m_nonParticles = nullptr;
 			return true;
 		}
 
@@ -223,10 +223,10 @@ public:
 public:
 	//! Group fragments by material
 	RED_INLINE CRenderBatchBySelection( T* batchList, Bool supportsSelection )
-		: m_selectedList( NULL )
-		, m_unselectedList( NULL )
+		: m_selectedList( nullptr )
+		, m_unselectedList( nullptr )
 	{
-		T* next = NULL;
+		T* next = nullptr;
 		for ( T* cur = batchList; cur; cur = next )
 		{
 			// Keep the loop going, get the next fragment while the link is still valid
@@ -255,7 +255,7 @@ public:
 		{
 			isSelected = false;
 			batchList = m_unselectedList;
-			m_unselectedList = NULL;
+			m_unselectedList = nullptr;
 			return true;
 		}
 
@@ -264,7 +264,7 @@ public:
 		{
 			isSelected = true;
 			batchList = m_selectedList;
-			m_selectedList = NULL;
+			m_selectedList = nullptr;
 			return true;
 		}
 
@@ -349,9 +349,9 @@ public:
 public:
 	//! Group fragments by mesh
 	RED_INLINE CRenderBatchByMesh( CRenderElement_MeshChunk* batchList )
-		: m_firstMesh( NULL )	
+		: m_firstMesh( nullptr )
 	{
-		CRenderElement_MeshChunk* next = NULL;
+		CRenderElement_MeshChunk* next = nullptr;
 		for ( CRenderElement_MeshChunk* cur = batchList; cur; cur = next )
 		{
 			// Keep the loop going, get the next fragment while the link is still valid
@@ -387,8 +387,8 @@ public:
 
 			// Walk the list, unlink
 			CRenderMesh* next = m_firstMesh->m_batchNext;
-			m_firstMesh->m_batchNext = NULL;
-			m_firstMesh->m_batchList = NULL;
+			m_firstMesh->m_batchNext = nullptr;
+			m_firstMesh->m_batchList = nullptr;
 			m_firstMesh = next;
 			return true;
 		}
@@ -409,8 +409,8 @@ public:
 		EMaterialVertexFactory		m_vertexFactory;
 
 		RED_INLINE FactoryInfo()
-			: m_batchList( NULL )
-			, m_batchNext( NULL )
+			: m_batchList( nullptr )
+			, m_batchNext( nullptr )
 			, m_vertexFactory( MVF_Invalid )
 		{};
 	};
@@ -435,12 +435,12 @@ public:
 public:
 	//! Group fragments by factory
 	RED_INLINE CRenderBatchByMeshVertexFactory( CRenderElement_MeshChunk* batchList )
-		: m_firstFactory( NULL )
+		: m_firstFactory( nullptr )
 	{
 		static FactoryInfoList theFactoryMap;
 
 		// Distribute fragments
-		CRenderElement_MeshChunk* next = NULL;
+		CRenderElement_MeshChunk* next = nullptr;
 		for ( CRenderElement_MeshChunk* cur = batchList; cur; cur = next )
 		{
 			// Keep the loop going, get the next fragment while the link is still valid
@@ -476,8 +476,8 @@ public:
 
 			// Walk the list, unlink
 			FactoryInfo* next = m_firstFactory->m_batchNext;
-			m_firstFactory->m_batchNext = NULL;
-			m_firstFactory->m_batchList = NULL;
+			m_firstFactory->m_batchNext = nullptr;
+			m_firstFactory->m_batchList = nullptr;
 			m_firstFactory = next;
 			return true;
 		}
@@ -499,8 +499,8 @@ public:
 		Uint32						m_fragCount;
 
 		RED_INLINE ChunkInfo()
-			: m_batchList( NULL )
-			, m_batchNext( NULL )
+			: m_batchList( nullptr )
+			, m_batchNext( nullptr )
 			, m_chunkIndex( 0xFFFF )
 			, m_fragCount( 0 )
 		{};
@@ -533,12 +533,12 @@ public:
 public:
 	//! Group fragments by mesh
 	RED_INLINE CRenderBatchByMeshChunkIndex( CRenderElement_MeshChunk* batchList )
-		: m_firstChunk( NULL )
+		: m_firstChunk( nullptr )
 	{
 		static ChunkList< CHUNK_INDICES_RANGE >	theChunkMap;
 
 		// Distribute fragments
-		CRenderElement_MeshChunk* next = NULL;
+		CRenderElement_MeshChunk* next = nullptr;
 		for ( CRenderElement_MeshChunk* cur = batchList; cur; cur = next )
 		{
 			// Keep the loop going, get the next fragment while the link is still valid
@@ -576,8 +576,8 @@ public:
 
 			// Walk the list, unlink
 			ChunkInfo* next = m_firstChunk->m_batchNext;
-			m_firstChunk->m_batchNext = NULL;
-			m_firstChunk->m_batchList = NULL;
+			m_firstChunk->m_batchNext = nullptr;
+			m_firstChunk->m_batchList = nullptr;
 			m_firstChunk->m_fragCount = 0;
 			m_firstChunk = next;
 			return true;
@@ -672,7 +672,7 @@ public:
 
 			// Go to next fragment
 			IRenderElement* next = m_list->GetBatchNext();
-			m_list->SetBatchNext( NULL );
+			m_list->SetBatchNext( nullptr );
 			m_list = next;
 			return true;
 		}
@@ -693,8 +693,8 @@ public:
 		Uint8						m_lightChannel;
 
 		RED_INLINE LightGroupInfo()
-			: m_batchList( NULL )
-			, m_batchNext( NULL )
+			: m_batchList( nullptr )
+			, m_batchNext( nullptr )
 			, m_lightChannel( 0 )
 		{};
 	};
@@ -719,12 +719,12 @@ public:
 public:
 	//! Group fragments by mesh
 	RED_INLINE CRenderBatchByLightChannel( CRenderElement_MeshChunk* batchList, Bool useLightChannels )
-		: m_firstChunk( NULL )
+		: m_firstChunk( nullptr )
 	{
 		static LightGroupList	theChunkMap;
 
 		// Distribute fragments
-		CRenderElement_MeshChunk* next = NULL;
+		CRenderElement_MeshChunk* next = nullptr;
 		for ( CRenderElement_MeshChunk* cur = batchList; cur; cur = next )
 		{
 			// Keep the loop going, get the next fragment while the link is still valid
@@ -760,8 +760,8 @@ public:
 
 			// Walk the list, unlink
 			LightGroupInfo* next = m_firstChunk->m_batchNext;
-			m_firstChunk->m_batchNext = NULL;
-			m_firstChunk->m_batchList = NULL;
+			m_firstChunk->m_batchNext = nullptr;
+			m_firstChunk->m_batchList = nullptr;
 			m_firstChunk = next;
 			return true;
 		}

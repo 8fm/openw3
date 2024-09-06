@@ -77,7 +77,7 @@ CRenderDebugMesh* CRenderDebugMesh::Create( const TDynArray< DebugVertex >& vert
 	// No vertices or indices, no mesh to create	
 	if ( vertices.Empty() || indices.Empty() )
 	{
-		return NULL;
+		return nullptr;
 	}
 
 	// Create vertex buffer
@@ -87,7 +87,7 @@ CRenderDebugMesh* CRenderDebugMesh::Create( const TDynArray< DebugVertex >& vert
 	GpuApi::BufferRef vertexBuffer = GpuApi::CreateBuffer( sizeof(DebugVertex) * vertices.Size(), GpuApi::BCC_Vertex, GpuApi::BUT_Immutable, 0, &bufInitData );
 	if ( !vertexBuffer )
 	{
-		return NULL;
+		return nullptr;
 	}
 	GpuApi::SetBufferDebugPath( vertexBuffer, "debugMeshVB" );
 
@@ -97,7 +97,7 @@ CRenderDebugMesh* CRenderDebugMesh::Create( const TDynArray< DebugVertex >& vert
 	if ( !indexBuffer )
 	{
 		GpuApi::SafeRelease( vertexBuffer );
-		return NULL;
+		return nullptr;
 	}
 	GpuApi::SetBufferDebugPath( indexBuffer, "debugMeshIB" );
 
@@ -137,7 +137,7 @@ IRenderResource* CRenderInterface::UploadDebugMesh( const TDynArray< DebugVertex
 
 	if ( IsDeviceLost() )
 	{
-		return NULL;
+		return nullptr;
 	}
 
 	return CRenderDebugMesh::Create( vertices, indices );

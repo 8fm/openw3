@@ -9,7 +9,7 @@
 const Int32 MaxInstanceBatchSize = 50;
 
 inline CInstancingMgrGPUAPI::CInstancingMgrGPUAPI( ) :
-	m_pObjectBuffers(NULL),
+	m_pObjectBuffers(nullptr),
 	m_siSizeOfPerInstanceData(0)
 
 {
@@ -34,7 +34,7 @@ inline st_bool CInstancingMgrGPUAPI::Init(SVertexDecl::EInstanceType eInstanceTy
 
 	if (eInstanceType != SVertexDecl::INSTANCES_NONE && pGeometryBuffers && nNumGeometryBuffers > 0)
 	{
-		const SVertexDecl::SAttribDesc* pInstanceVertexDesc = NULL;
+		const SVertexDecl::SAttribDesc* pInstanceVertexDesc = nullptr;
 
 		// determine size of instance vertex based on the type of geometry being instanced
 		switch (eInstanceType)
@@ -131,7 +131,7 @@ inline st_bool CInstancingMgrGPUAPI::UpdateWithFrustumTest(st_int32 nLod, const 
 			if( SphereOutsideViewFrustum( pos, radius, sseFustrumPlanes ))
 				continue;
 
-			SGrassInstance* grassInst = NULL;
+			SGrassInstance* grassInst = nullptr;
 			bSuccess = instanceRingBuffer.GetCurrentInstancePtr( (Uint8*&)grassInst, m_siSizeOfPerInstanceData );
 			grassInst->m_fLodTransition = sInstance.m_fLodTransition;
 			grassInst->m_fLodValue = sInstance.m_fLodValue;
@@ -192,7 +192,7 @@ inline st_bool CInstancingMgrGPUAPI::UpdateWithFrustumTest(st_int32 nLod, const 
 			if( SphereOutsideViewFrustum( pos, radius, sseFustrumPlanes ))
 				continue;
 
-			SBillboardInstanceVertex* billboardInst = NULL;
+			SBillboardInstanceVertex* billboardInst = nullptr;
 			bSuccess = instanceRingBuffer.GetCurrentInstancePtr( (Uint8*&)billboardInst, m_siSizeOfPerInstanceData );
 			billboardInst->m_vPos = sInstance.m_vPos;
 			billboardInst->m_fScalar = sInstance.m_fScalar;

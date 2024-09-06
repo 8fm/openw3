@@ -19,7 +19,7 @@ public:
 
 	RED_INLINE operator Bool () const
 	{
-		return m_cur != NULL;
+		return m_cur != nullptr;
 	}
 
 	RED_INLINE void operator++ ()

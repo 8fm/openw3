@@ -321,7 +321,7 @@ void CRenderCollector::Setup( CRenderFrame* frame, CRenderSceneEx* scene, CRende
 	PC_SCOPE_LV0( RenderCollector_Setup, PBC_CPU )
 
 	m_frameIndex = 100;
-	m_renderFoliage = nullptr;
+	m_renderFoliage = false;
 	m_renderTerrain = true;
 	m_renderSunLighting = true;
 	m_renderSky = true;
@@ -811,7 +811,7 @@ Uint32 CollectEntityrGroupHiResShadowsElements( CRenderEntityGroup &entityGroup,
 
 	// Calculate projection vectors (U and V)
 	Vector projU, projV;
-	shadowCameraRotation.ToAngleVectors( NULL, &projU, &projV );
+	shadowCameraRotation.ToAngleVectors( nullptr, &projU, &projV );
 
 	// We do not use LOD0 here (we should but it would create differences between the GBuffer)
 	// TODO: this can be enforced once the defered rendering is removed
@@ -1394,7 +1394,7 @@ void CRenderCollector::CalculateCascadesData( const CCascadeShadowResources &cas
 {
 	PC_SCOPE_PIX( CalculateCascadesData );
 
-	ASSERT( NULL != m_scene && "Assert because previously in cascades.init function there was a condition NULL!=scene - imo always satisfied" );
+	ASSERT( nullptr != m_scene && "Assert because previously in cascades.init function there was a condition NULL!=scene - imo always satisfied" );
 	m_cascades.Init( this, *m_info, cascadeShadowResources );
 }
 

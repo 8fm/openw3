@@ -162,7 +162,7 @@ IRenderProxy* CRenderInterface::CreateProxy( const RenderProxyInitInfo& info )
 	}
 
 	// No proxy created
-	return NULL;
+	return nullptr;
 }
 
 #ifdef USE_SPEED_TREE

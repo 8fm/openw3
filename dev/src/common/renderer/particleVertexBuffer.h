@@ -51,7 +51,7 @@ public:
 		GpuApi::SetBufferDebugPath( s_vertexBufferRef, "ParticleVB" );
 
 		// Zero vertex buffer memory ptr.
-		s_currentWritePtr = NULL;
+		s_currentWritePtr = nullptr;
 
 #ifdef USE_INTERMEDIATE_VERTEX_BUFFER
 		// This buffer only needs to accomodate as much vertex data as one emitter can generate.
@@ -69,10 +69,10 @@ public:
 
 #ifdef USE_INTERMEDIATE_VERTEX_BUFFER
 		RED_MEMORY_FREE( MemoryPool_Default, MC_ParticlesRendering, s_bufferPtr );
-		s_bufferPtr = NULL;
+		s_bufferPtr = nullptr;
 #endif
 		s_currentVBOffset = 0;
-		s_currentWritePtr = NULL;
+		s_currentWritePtr = nullptr;
 	}
 
 	// Check if vertex buffer is ready

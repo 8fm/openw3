@@ -37,7 +37,7 @@ CRenderShadowStaticAllocator::~CRenderShadowStaticAllocator()
 	// Release local references
 	for ( Uint32 i=0; i<m_allocatedCubes.Size(); ++i )
 	{
-		m_allocatedCubes[i]->m_allocator = NULL;
+		m_allocatedCubes[i]->m_allocator = nullptr;
 		m_allocatedCubes[i]->Release();
 	}
 }
@@ -63,7 +63,7 @@ CRenderShadowStaticCube* CRenderShadowStaticAllocator::AllocateCube( Uint32 curr
 	}
 
 	// Find cube that is old enough ( at least 2 frames old )
-	CRenderShadowStaticCube* oldestCube = NULL;
+	CRenderShadowStaticCube* oldestCube = nullptr;
 	for ( Uint32 i=0; i<m_allocatedCubes.Size(); ++i )
 	{
 		CRenderShadowStaticCube* cube = m_allocatedCubes[i];
@@ -78,14 +78,14 @@ CRenderShadowStaticCube* CRenderShadowStaticAllocator::AllocateCube( Uint32 curr
 	}
 
 	// We have a cube we can liberate
-	if ( oldestCube != NULL )
+	if ( oldestCube != nullptr )
 	{
 		// Get the actual cube index
 		const Uint16 cubeIndex = oldestCube->m_index;
-		ASSERT( oldestCube->m_allocator != NULL );
+		ASSERT( oldestCube->m_allocator != nullptr );
 
 		// Liberate the cube
-		oldestCube->m_allocator = NULL;
+		oldestCube->m_allocator = nullptr;
 		oldestCube->m_index = 0;
 
 		// Remove from list of allocated cubes
@@ -104,7 +104,7 @@ CRenderShadowStaticCube* CRenderShadowStaticAllocator::AllocateCube( Uint32 curr
 	}
 
 	// No cube allocated
-	return NULL;
+	return nullptr;
 }
 
 void CRenderShadowStaticAllocator::ReleaseCube( CRenderShadowStaticCube& cube )
@@ -116,7 +116,7 @@ void CRenderShadowStaticAllocator::ReleaseCube( CRenderShadowStaticCube& cube )
 	// give back the cube to the cache
 	m_allocatedCubes.Remove( &cube );
 	m_freeIndices.PushBackUnique( cube.GetIndex() );
-	cube.m_allocator = NULL;
+	cube.m_allocator = nullptr;
 }
 
 void CRenderShadowStaticAllocator::InvalidateBounds( const Box& box )
@@ -130,7 +130,7 @@ void CRenderShadowStaticAllocator::InvalidateBounds( const Box& box )
 			m_freeIndices.PushBack( cube->GetIndex() );
 
 			// Reset cube
-			cube->m_allocator = NULL;
+			cube->m_allocator = nullptr;
 			cube->m_index = 0;
 
 			// Remove from list of allocated cubes

@@ -25,7 +25,7 @@ void CRenderTerrainLogicMap::AddChunk( CRenderProxy_TerrainChunk* chunk, Int32 l
 		for ( Int32 x=0; x<logicSize; ++x )
 		{
 			CRenderProxy_TerrainChunk*& slot = m_chunks[ y + logicY ][ x + logicX ];
-			ASSERT( slot == NULL );
+			ASSERT( slot == nullptr );
 			slot = chunk;
 		}
 	}
@@ -44,7 +44,7 @@ void CRenderTerrainLogicMap::RemoveChunk( CRenderProxy_TerrainChunk* chunk, Int3
 		{
 			CRenderProxy_TerrainChunk*& slot = m_chunks[ y + logicY ][ x + logicX ];
 			ASSERT( slot == chunk );
-			slot = NULL;
+			slot = nullptr;
 		}
 	}
 }
@@ -57,5 +57,5 @@ CRenderProxy_TerrainChunk* CRenderTerrainLogicMap::GetChunk( Int32 logicX, Int32
 		return slot;
 	}
 
-	return NULL;
+	return nullptr;
 }

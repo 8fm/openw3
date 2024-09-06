@@ -49,9 +49,9 @@ void IParticleBuffer::SortBackToFront( void* buf, Int32 numElements, Int32 elemS
 
 CParticleBuffer< TrailParticle >::CParticleBuffer( Uint32 maxParticles )
 : IParticleBuffer( maxParticles )
-, m_particles( NULL )
-, m_usedParticles( NULL )
-, m_freeParticles( NULL )
+, m_particles( nullptr )
+, m_usedParticles( nullptr )
+, m_freeParticles( nullptr )
 {
 	// Stats
 	g_numBuffers++;
@@ -67,7 +67,7 @@ CParticleBuffer< TrailParticle >::CParticleBuffer( Uint32 maxParticles )
 		m_freeParticles = static_cast< TrailParticle** >( GParticlePool->Alloc( maxParticles * sizeof(TrailParticle*) ) );
 		for( Uint32 i = 0; i < maxParticles; i++ )
 		{
-			m_usedParticles[ i ] = NULL;
+			m_usedParticles[ i ] = nullptr;
 			m_freeParticles[ i ] = &m_particles[ i ];
 		}
 	}
@@ -86,20 +86,20 @@ CParticleBuffer< TrailParticle >::~CParticleBuffer()
 	if ( m_particles )
 	{
 		GParticlePool->Free( m_particles );
-		m_particles = NULL;
+		m_particles = nullptr;
 		g_numParticlesAllocated -= m_maxParticles;
 	}
 
 	if ( m_usedParticles )
 	{
 		GParticlePool->Free( m_usedParticles );
-		m_usedParticles = NULL;
+		m_usedParticles = nullptr;
 	}
 
 	if ( m_freeParticles )
 	{
 		GParticlePool->Free( m_freeParticles );
-		m_freeParticles = NULL;
+		m_freeParticles = nullptr;
 	}
 }
 
@@ -168,9 +168,9 @@ void CParticleBuffer< TrailParticle >::SortBackToFront( const Vector& cameraPosi
 
 CParticleBuffer< FacingTrailParticle >::CParticleBuffer( Uint32 maxParticles )
 	: IParticleBuffer( maxParticles )
-	, m_particles( NULL )
-	, m_usedParticles( NULL )
-	, m_freeParticles( NULL )
+	, m_particles( nullptr )
+	, m_usedParticles( nullptr )
+	, m_freeParticles( nullptr )
 {
 	// Stats
 	g_numBuffers++;
@@ -186,7 +186,7 @@ CParticleBuffer< FacingTrailParticle >::CParticleBuffer( Uint32 maxParticles )
 		m_freeParticles = static_cast< FacingTrailParticle** >( GParticlePool->Alloc( maxParticles * sizeof(FacingTrailParticle*) ) );
 		for( Uint32 i = 0; i < maxParticles; i++ )
 		{
-			m_usedParticles[ i ] = NULL;
+			m_usedParticles[ i ] = nullptr;
 			m_freeParticles[ i ] = &m_particles[ i ];
 		}
 	}
@@ -205,20 +205,20 @@ CParticleBuffer< FacingTrailParticle >::~CParticleBuffer()
 	if ( m_particles )
 	{
 		GParticlePool->Free( m_particles );
-		m_particles = NULL;
+		m_particles = nullptr;
 		g_numParticlesAllocated -= m_maxParticles;
 	}
 
 	if ( m_usedParticles )
 	{
 		GParticlePool->Free( m_usedParticles );
-		m_usedParticles = NULL;
+		m_usedParticles = nullptr;
 	}
 
 	if ( m_freeParticles )
 	{
 		GParticlePool->Free( m_freeParticles );
-		m_freeParticles = NULL;
+		m_freeParticles = nullptr;
 	}
 }
 
@@ -289,9 +289,9 @@ void CParticleBuffer< FacingTrailParticle >::SortBackToFront( const Vector& came
 
 CParticleBuffer< BeamParticle >::CParticleBuffer( Uint32 maxParticles )
 : IParticleBuffer( maxParticles )
-, m_particles( NULL )
-, m_usedParticles( NULL )
-, m_freeParticles( NULL )
+, m_particles( nullptr )
+, m_usedParticles( nullptr )
+, m_freeParticles( nullptr )
 {
 	// Stats
 	g_numBuffers++;
@@ -307,7 +307,7 @@ CParticleBuffer< BeamParticle >::CParticleBuffer( Uint32 maxParticles )
 		m_freeParticles = static_cast< BeamParticle** >( GParticlePool->Alloc( maxParticles * sizeof(BeamParticle*) ) );
 		for( Uint32 i = 0; i < maxParticles; i++ )
 		{
-			m_usedParticles[ i ] = NULL;
+			m_usedParticles[ i ] = nullptr;
 			m_freeParticles[ i ] = &m_particles[ i ];
 		}
 	}
@@ -326,20 +326,20 @@ CParticleBuffer< BeamParticle >::~CParticleBuffer()
 	if ( m_particles )
 	{
 		GParticlePool->Free( m_particles );
-		m_particles = NULL;
+		m_particles = nullptr;
 		g_numParticlesAllocated -= m_maxParticles;
 	}
 
 	if ( m_usedParticles )
 	{
 		GParticlePool->Free( m_usedParticles );
-		m_usedParticles = NULL;
+		m_usedParticles = nullptr;
 	}
 
 	if ( m_freeParticles )
 	{
 		GParticlePool->Free( m_freeParticles );
-		m_freeParticles = NULL;
+		m_freeParticles = nullptr;
 	}
 }
 

@@ -175,7 +175,7 @@ void TSpeedTreeGrid<CELL, INST>::Init( Float cellSize )
 template < class CELL, class INST >
 CELL* TSpeedTreeGrid<CELL, INST>::GetCellByKey( const SCellKey& key )
 {
-	CELL* data = NULL;
+	CELL* data = nullptr;
 	m_perCellData.Find( SRowCol( key.m_nRow, key.m_nCol ), data );
 	return data;
 }
@@ -183,7 +183,7 @@ CELL* TSpeedTreeGrid<CELL, INST>::GetCellByKey( const SCellKey& key )
 template < class CELL, class INST >
 const CELL* TSpeedTreeGrid<CELL, INST>::GetCellByKey(const SpeedTree::SCellKey& key) const
 {
-	CELL* data = NULL;
+	CELL* data = nullptr;
 	m_perCellData.Find( SRowCol( key.m_nRow, key.m_nCol ), data );
 	return data;
 }
@@ -791,7 +791,7 @@ void CRenderProxy_SpeedTree::SPerCellData::GetUsedBaseTrees( TreeContainer& base
 
 CGrassLayer::CGrassLayer()
 	: m_visibleGrass( POPULATION_GRASS )
-	, m_renderTree( NULL )
+	, m_renderTree( nullptr )
 	, m_grassCullRadius( 0.0f )
 	, m_numInstances( 0 )
 	, m_numMaxInstances( (Int32)Config::cvGrassInstancesCount.Get() )
@@ -807,7 +807,7 @@ void CGrassLayer::ReleaseGfxResources()
 	if ( m_renderTree )
 	{
 		m_renderTree->Release();
-		m_renderTree = NULL;
+		m_renderTree = nullptr;
 	}
 }
 
@@ -860,7 +860,7 @@ CGrassLayer::SPerCellData* CGrassLayer::GetCellByKey( const SpeedTree::SCellKey&
 void CGrassLayer::SetBaseGrass( CRenderSpeedTreeResource* renderTree )
 {
 	ASSERT( renderTree );
-	ASSERT( m_renderTree == NULL ); // Set it only once
+	ASSERT( m_renderTree == nullptr ); // Set it only once
 	m_renderTree = renderTree;
 	m_renderTree->AddRef();
 	CTreeRender* baseTree = m_renderTree->GetRenderBaseTree();
@@ -901,7 +901,7 @@ CRenderProxy_SpeedTree::CRenderProxy_SpeedTree()
 	: m_longestCellOverhang( 0.0f )
 	, m_staticFoliageBalance( 0 )
 	, m_dynamicFoliageBalance( 0 )
-	, m_cachedTerrainProxy( NULL )
+	, m_cachedTerrainProxy( nullptr )
 	, m_genericGrassOn( true )
 	, m_visible( true )
 	, m_densityDebugger( nullptr )
@@ -2790,7 +2790,7 @@ CGrassLayer* CRenderProxy_SpeedTree::GetGrassLayer( CRenderSpeedTreeResource* re
 		}
 	}
 
-	return NULL;
+	return nullptr;
 }
 
 void CRenderProxy_SpeedTree::RemoveGrassInstances( CGrassLayer* layer, const Vector& position, Float radius )
