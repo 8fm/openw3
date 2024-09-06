@@ -842,7 +842,7 @@ void CRenderCommand_ToggleContinuousScreenshot::Execute()
 	if ( GScreenshotSequence )
 	{
 		delete GScreenshotSequence;
-		GScreenshotSequence = NULL;
+		GScreenshotSequence = nullptr;
 	}
 
 	// Create new grabber
@@ -870,7 +870,7 @@ public:
 
 public:
 	BatchModifierMeshSectionHighlight()
-		: m_mesh( NULL )
+		: m_mesh( nullptr )
 		, m_isEnabled( false )
 	{};
 
@@ -887,7 +887,7 @@ public:
 		if ( m_mesh )
 		{
 			m_mesh->Release();
-			m_mesh = NULL;
+			m_mesh = nullptr;
 		}
 
 		// Setup
@@ -914,7 +914,7 @@ public:
 		if ( m_mesh )
 		{
 			m_mesh->Release();
-			m_mesh = NULL;
+			m_mesh = nullptr;
 		}
 	}
 
@@ -1718,7 +1718,7 @@ void CRenderCommand_HandleResizeEvent::Execute()
 
 void CRenderCommand_SetEntityGroupHiResShadows::Execute()
 {
-	if ( m_group != NULL )
+	if ( m_group != nullptr )
 	{
 		CRenderEntityGroup* entityGroup = static_cast<CRenderEntityGroup*>( m_group );
 		entityGroup->SetUseHiResShadows( m_flag );
@@ -1727,7 +1727,7 @@ void CRenderCommand_SetEntityGroupHiResShadows::Execute()
 
 void CRenderCommand_SetEntityGroupShadows::Execute()
 {
-	if ( m_group != NULL )
+	if ( m_group != nullptr )
 	{
 		CRenderEntityGroup* entityGroup = static_cast<CRenderEntityGroup*>( m_group );
 		entityGroup->SetUseShadows( m_flag );
@@ -1736,7 +1736,7 @@ void CRenderCommand_SetEntityGroupShadows::Execute()
 
 void CRenderCommand_BindEntityGroupToProxy::Execute()
 {
-	if ( NULL == m_proxy )
+	if ( nullptr == m_proxy )
 	{
 		return;
 	}
@@ -1844,7 +1844,7 @@ void CRenderCommand_UpdateStripeProperties::Execute()
 		CRenderProxy_Stripe* stripeProxy = static_cast< CRenderProxy_Stripe* >( m_proxy );
 		stripeProxy->UpdateProperties( *m_properties );
 		delete m_properties;
-		m_properties = NULL;
+		m_properties = nullptr;
 	}
 }
 

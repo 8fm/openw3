@@ -308,8 +308,8 @@ CRenderSurfaces::CRenderSurfaces( Uint32 width, Uint32 height, Uint32 msaaLevelX
 	, m_msaaLevelX( msaaLevelX )
 	, m_msaaLevelY( msaaLevelY )
 	, m_temporalAASupported( false )
-	, m_depthBuffer( NULL )
-	, m_depthBufferMSAA( NULL )
+	, m_depthBuffer( 0 )
+	, m_depthBufferMSAA( 0 )
 	, m_highPrecisionEnabled( false )
 	, m_dirtyPersistentSurfacesFlags( 0xffffffff )
 {
@@ -466,7 +466,7 @@ Bool CRenderSurfaces::IsPersistentSurfaceDirty( ePersistentSurface surface ) con
 CRenderTarget* CRenderSurfaces::GetRenderTarget( ERenderTargetName renderTargetName ) const
 {
 	ASSERT( renderTargetName < RTN_Max );
-	ASSERT ( NULL != m_renderTargets[ renderTargetName ] );
+	ASSERT ( nullptr != m_renderTargets[ renderTargetName ] );
 	return m_renderTargets[ renderTargetName ];
 }
 

@@ -13,7 +13,7 @@
 using namespace SpeedTree;
 
 CRenderSpeedTreeResource::CRenderSpeedTreeResource()
-	: m_tree( NULL ),
+	: m_tree( nullptr ),
 	m_initialized(false)
 {
 }
@@ -88,9 +88,9 @@ IRenderObject* CRenderSpeedTreeResource::Create( const CSRTBaseTree* baseTreeRes
 	{
 		// failed to load
 		delete sptTree;
-		sptTree = NULL;
+		sptTree = nullptr;
 
-		return NULL;
+		return nullptr;
 	}
 }
 

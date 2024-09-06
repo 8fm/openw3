@@ -20,7 +20,7 @@ void CSkeletalAnimationSetEntry::GetEventsOfType( TDynArray< EventType* >& list 
 
 #ifdef USE_EXT_ANIM_EVENTS
 
-	if( GetAnimSet() != NULL )
+	if( GetAnimSet() != nullptr )
 	{
 		GetAnimSet()->GetExternalEventsOfType( GetName(), list );
 	}
@@ -44,7 +44,7 @@ void CSkeletalAnimationSetEntry::GetEventsOfType( Collector& collector ) const
 
 #ifdef USE_EXT_ANIM_EVENTS
 
-	if( GetAnimSet() != NULL )
+	if( GetAnimSet() != nullptr )
 	{
 		GetAnimSet()->GetExternalEventsOfType< EventType >( GetName(), collector );
 	}
@@ -64,7 +64,7 @@ void CSkeletalAnimationSet::GetExternalEventsOfType( const CName& animName, TDyn
 		const CExtAnimEventsFile* file = (*fileIter).Get();
 
 		// Skip broken entries
-		if( file == NULL )
+		if( file == nullptr )
 		{
 			continue;
 		}
@@ -83,7 +83,7 @@ void CSkeletalAnimationSet::GetExternalEventsOfType( const CName& animName, Coll
 		const CExtAnimEventsFile* file = (*fileIter).Get();
 
 		// Skip broken entries
-		if( file == NULL )
+		if( file == nullptr )
 		{
 			continue;
 		}

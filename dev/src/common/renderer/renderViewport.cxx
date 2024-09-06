@@ -167,7 +167,7 @@ CRenderViewport::~CRenderViewport()
 	if ( m_window )
 	{
 		delete m_window;
-		m_window = NULL;
+		m_window = nullptr;
 	}
 
 	// Notify that viewport has been close

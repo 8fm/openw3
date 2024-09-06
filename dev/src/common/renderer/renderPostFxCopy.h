@@ -299,7 +299,7 @@ public:
 		CGpuApiScopedDrawContext scopedDrawContext( drawContext );
 		
 		// Choose shader
-		CRenderShaderPair* shader = NULL;
+		CRenderShaderPair* shader = nullptr;
 		ASSERT( !(balanceMap1 && !balanceMap0) );
 		ASSERT( !(balanceMap1B && !balanceMap0B) );
 		ASSERT( !(balanceMap0B && !balanceMap0) );
@@ -328,13 +328,13 @@ public:
 		GpuApi::TextureRef sampleTargetRef = surfaces->GetRenderTargetTex( sampleTarget );
 		GpuApi::BindTextures( 0, 1, &sampleTargetRef, GpuApi::PixelShader );
 		GpuApi::SetSamplerStatePreset( 0, GpuApi::SAMPSTATEPRESET_ClampLinearNoMip );
-		if ( NULL != balanceMap0 )
+		if ( nullptr != balanceMap0 )
 			balanceMap0->Bind( 1, GpuApi::SAMPSTATEPRESET_ClampLinearNoMip );
-		if ( NULL != balanceMap1 )
+		if ( nullptr != balanceMap1 )
 			balanceMap1->Bind( 2, GpuApi::SAMPSTATEPRESET_ClampLinearNoMip );
-		if ( NULL != balanceMap0B )
+		if ( nullptr != balanceMap0B )
 			balanceMap0B->Bind( 3, GpuApi::SAMPSTATEPRESET_ClampLinearNoMip );
-		if ( NULL != balanceMap1B )
+		if ( nullptr != balanceMap1B )
 			balanceMap1B->Bind( 4, GpuApi::SAMPSTATEPRESET_ClampLinearNoMip );
 
 		// Render

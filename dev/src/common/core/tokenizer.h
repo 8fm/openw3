@@ -50,7 +50,7 @@ public:
 		ASSERT( (length+3) < _SIZE );
 
 		m_delimiters = delimiters;
-		m_currentToken = NULL;
+		m_currentToken = nullptr;
 
 		Uint32 readIndex = 0;
 		Uint32 writeIndex = 0;
@@ -71,7 +71,7 @@ public:
 				continue;
 			}
 			outsideToken = false;
-			if( m_currentToken == NULL )
+			if( m_currentToken == nullptr )
 				m_currentToken = &m_toTokenize[ writeIndex ];
 			m_toTokenize[ writeIndex++ ] = c;
 		}
@@ -84,7 +84,7 @@ public:
 		Char* result = m_currentToken;
 		Uint32 length = static_cast< Uint32 >( Red::System::StringLength( result ) );
 		if( length == 0 )
-			return NULL;
+			return nullptr;
 		m_currentToken = &m_currentToken[ length + 1 ];
 		return result;
 	}

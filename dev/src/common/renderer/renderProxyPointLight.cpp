@@ -14,7 +14,7 @@
 CRenderProxy_PointLight::CRenderProxy_PointLight( const RenderProxyInitInfo& initInfo )
 	: IRenderProxyLight( RPT_PointLight, initInfo )
 	, m_cubeFaceMask( 0xFF )
-	, m_staticShadowCube( NULL )
+	, m_staticShadowCube( nullptr )
 {
 	// reset the dynamic shadows region
 	Red::System::MemoryZero( m_dynamicShadowRegions, sizeof(m_dynamicShadowRegions) );
@@ -97,7 +97,7 @@ Bool CRenderProxy_PointLight::PrepareDynamicShadowmaps( const CRenderCollector& 
 	// If we can cache the static shadows AND we sucessfully allocated a cube 
 	// for that than we can skip putting them in dynamic shadows
 	Bool canDrawDynamicShadowsFromStaticGeometry = m_isCastingStaticShadows;
-	if ( m_staticShadowsCached && ( m_staticShadowCube != NULL ) )
+	if ( m_staticShadowsCached && ( m_staticShadowCube != nullptr ) )
 	{
 		canDrawDynamicShadowsFromStaticGeometry = false;
 	}
@@ -225,9 +225,9 @@ void CRenderProxy_PointLight::Relink( const Box& boundingBox, const Matrix& loca
 	IRenderProxyLight::Relink( boundingBox, localToWorld );
 
 	// Release any cached static shadows
-	if ( m_staticShadowCube != NULL )
+	if ( m_staticShadowCube != nullptr )
 	{
 		m_staticShadowCube->Release();
-		m_staticShadowCube = NULL;
+		m_staticShadowCube = nullptr;
 	}
 }

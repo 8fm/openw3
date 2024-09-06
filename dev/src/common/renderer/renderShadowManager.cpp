@@ -298,7 +298,7 @@ void CRenderShadowManager::RenderDynamicShadowmaps( const CRenderCollector& coll
 		
 					// Bind camera
 					GetRenderer()->GetStateManager().SetCamera( camera );
-					GetRenderer()->GetStateManager().SetLocalToWorld( NULL );
+					GetRenderer()->GetStateManager().SetLocalToWorld( nullptr );
 
 					// Draw fragments
 					RenderingContext theShadowDrawingContext( entry.m_camera );
@@ -479,7 +479,7 @@ void CRenderShadowManager::RenderStaticShadowmaps( const CRenderCollector& colle
 		
 				// Bind camera
 				GetRenderer()->GetStateManager().SetCamera( camera );
-				GetRenderer()->GetStateManager().SetLocalToWorld( NULL );
+				GetRenderer()->GetStateManager().SetLocalToWorld( nullptr );
 
 				// Draw fragments
 				RenderingContext theShadowDrawingContext( camera );

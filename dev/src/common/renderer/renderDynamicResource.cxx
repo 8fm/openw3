@@ -6,7 +6,7 @@
 #include "renderTexture.h"
 
 Red::Threads::CLightMutex		 IDynamicRenderResource::s_resourceMutex;
-IDynamicRenderResource*	IDynamicRenderResource::s_allResources = NULL;
+IDynamicRenderResource*	IDynamicRenderResource::s_allResources = nullptr;
 
 IDynamicRenderResource::IDynamicRenderResource()
 {
@@ -26,8 +26,8 @@ IDynamicRenderResource::~IDynamicRenderResource()
 	// Unlink
 	if ( m_nextResource ) m_nextResource->m_prevResource = m_prevResource;
 	if ( m_prevResource ) *m_prevResource = m_nextResource;
-	m_prevResource = NULL;
-	m_nextResource = NULL;
+	m_prevResource = nullptr;
+	m_nextResource = nullptr;
 }
 
 

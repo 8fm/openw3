@@ -291,7 +291,7 @@ struct LightParams
 		}
 
 		// optional static shadows
-		if ( proxy.GetStaticShadowCube() != NULL )
+		if ( proxy.GetStaticShadowCube() != nullptr )
 		{
 			staticShadowmapRegion.Set4( 1.0f, (Float)proxy.GetStaticShadowCube()->GetIndex(), 0.0f, 0.0f );
 		}
@@ -343,7 +343,7 @@ struct LightParams
 
 		// does this spot have any shadows ?
 		const CRenderShadowDynamicRegion* region = proxy.GetDynamicShadowsRegion();
-		if ( renderShadows && (proxy.GetCurrentShadowResolution() > 0) && (region != NULL) )
+		if ( renderShadows && (proxy.GetCurrentShadowResolution() > 0) && (region != nullptr) )
 		{
 			BuildPackedShadowProjection( shadowProjection, proxy.m_outerAngle, 0.05f, proxy.GetRadius() );
 			dynamicShadowmapRegions[0] = BuildShadowmapRegion( region );
@@ -732,7 +732,7 @@ void CRenderInterface::CalculateTiledDeferredConstants_CascadeShadows( const CRe
 
 	ComputeConstantBuffer* cbuff = static_cast<ComputeConstantBuffer*>( m_computeConstantShadowBuffer.Get() );
 
-	if ( NULL != mergedShadowCascades )
+	if ( nullptr != mergedShadowCascades )
 	{
 		const SMergedShadowCascades &cascades = *mergedShadowCascades;
 

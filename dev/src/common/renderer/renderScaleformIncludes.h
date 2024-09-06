@@ -48,7 +48,7 @@ namespace GFx = SF::GFx;
 # endif
 #endif
 
-#if defined( RED_PLATFORM_WINPC ) || defined( RED_PLATFORM_DURANGO )
+#if defined( RED_PLATFORM_WINPC ) || defined( RED_PLATFORM_DURANGO ) || defined( RED_PLATFORM_LINUX )
  // Defines for lexical substitution (vs namespace aliases,consts, etc) because I don't want to drag in SF D3D1x implementation crap
  // for stuff that'll going away soon.
 # define ScaleformGpuApi SF::Render::D3D1x

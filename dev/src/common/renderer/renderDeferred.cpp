@@ -591,7 +591,7 @@ void CRenderInterface::RenderShadows( const CRenderFrameInfo &info, const SMerge
 				RenderingContext rc( biasedCamera );
 
 				// Setup global camera parameters
-				m_stateManager->SetLocalToWorld( NULL );
+				m_stateManager->SetLocalToWorld( nullptr );
 				m_stateManager->SetCamera( rc.GetCamera() );
 
 				// Render solid merged meshes

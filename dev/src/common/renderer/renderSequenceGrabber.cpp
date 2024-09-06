@@ -7,7 +7,7 @@
 #include "../engine/screenshotSystem.h"
 #include "../engine/renderFrame.h"
 
-CRenderScreenshotSequnceGrabber* GScreenshotSequence = NULL;
+CRenderScreenshotSequnceGrabber* GScreenshotSequence = nullptr;
 
 CRenderScreenshotSequnceGrabber::CRenderScreenshotSequnceGrabber( ESaveFormat saveFormat, Bool ubersampling )
 	: m_frameIndex( 0 )
@@ -98,7 +98,7 @@ void CRenderScreenshotSequnceGrabber::GrabScreenshot( CRenderFrame* frame, CRend
 	}
 	else
 	{
-		SScreenshotParameters parameters( frame->GetFrameInfo().m_width, frame->GetFrameInfo().m_height, frameName, m_saveFormat, superSamplingSize, fov, SRF_PlainScreenshot, NULL, true );
+		SScreenshotParameters parameters( frame->GetFrameInfo().m_width, frame->GetFrameInfo().m_height, frameName, m_saveFormat, superSamplingSize, fov, SRF_PlainScreenshot, nullptr, true );
 
 		GetRenderer()->TakeOneRegularScreenshotNow( parameters );
 	}

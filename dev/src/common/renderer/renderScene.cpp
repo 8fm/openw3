@@ -104,9 +104,9 @@ CRenderSceneEx::CRenderSceneEx( Bool isWorldScene )
 	, m_frameCounter( 1 )
 	, m_updateTerrainLOD( false )
 	, m_forcedLOD( -1 )
-	, m_terrain( NULL )
-	, m_water( NULL )
-	, m_skybox( NULL )
+	, m_terrain( nullptr )
+	, m_water( nullptr )
+	, m_skybox( nullptr )
 	, m_isWorldScene( isWorldScene )
 	, m_visibilityQueryManager( nullptr )
 #ifdef USE_UMBRA
@@ -831,7 +831,7 @@ void CRenderSceneEx::SetTerrainProxy( IRenderProxy* proxy )
 	if ( m_terrain )
 	{
 		m_terrain->Release();
-		m_terrain = NULL;
+		m_terrain = nullptr;
 	}
 
 	// Set proxy
@@ -848,7 +848,7 @@ void CRenderSceneEx::RemoveTerrainProxy( IRenderProxy* proxy )
 	{
 		// Release this proxy
 		m_terrain->Release();
-		m_terrain = NULL;
+		m_terrain = nullptr;
 	}
 }
 
@@ -865,7 +865,7 @@ void CRenderSceneEx::SetWaterProxy( IRenderProxy* proxy )
 	if ( m_water )
 	{
 		m_water->Release();
-		m_water = NULL;
+		m_water = nullptr;
 	}
 
 	// Set proxy
@@ -884,7 +884,7 @@ void CRenderSceneEx::RemoveWaterProxy( IRenderProxy* proxy )
 	{
 		// Release this proxy
 		m_water->Release();
-		m_water = NULL;
+		m_water = nullptr;
 	}
 }
 

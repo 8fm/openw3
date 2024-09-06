@@ -143,7 +143,7 @@ public:
 
 #ifdef USE_APEX
 
-	RED_INLINE Bool								HasResource() const { return m_parameters.m_resource.Get() != NULL; }
+	RED_INLINE Bool								HasResource() const { return m_parameters.m_resource.Get() != nullptr; }
 
 	RED_INLINE const TDynArray< String >&		GetApexMaterialNames() const { return m_parameters.m_resource.Get()->GetApexMaterialNames(); }
 	RED_INLINE const CMeshTypeResource::TMaterials&	GetMaterials() const { return m_parameters.m_resource.Get()->GetMaterials(); }

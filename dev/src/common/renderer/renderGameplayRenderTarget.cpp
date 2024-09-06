@@ -28,7 +28,7 @@ RED_INLINE Uint32 NextPowerOfTwo(Uint32 x)
 
 CRenderGameplayRenderTarget::CRenderGameplayRenderTarget( const AnsiChar* tag )
 	: m_tag( tag )
-	, m_renderTexture( NULL )
+	, m_renderTexture( 0 )
 {
 
 }
@@ -168,7 +168,7 @@ void CRenderGameplayRenderTarget::CopyFromRenderTarget( ERenderTargetName source
 
 			CRenderStateManager& stateManager = GetRenderer()->GetStateManager();
 
-			stateManager.SetLocalToWorld( NULL );
+			stateManager.SetLocalToWorld( nullptr );
 			stateManager.SetCamera2D();
 
 			GetRenderer()->m_shaderSingleColor->Bind();

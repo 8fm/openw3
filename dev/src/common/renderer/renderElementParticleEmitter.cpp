@@ -15,7 +15,7 @@ CRenderElement_ParticleEmitter::CRenderElement_ParticleEmitter( IRenderProxyDraw
 	, m_sortingKey( 0 )
 	, m_emitter( renderEmitter )
 	, m_envColorGroup( envColorGroup )
-	, m_data( NULL )
+	, m_data( nullptr )
 {
 	m_emitter->AddRef();
 	m_vertexFactory = ParticleVertexDrawerToMaterialVertexFactory( m_emitter->GetVertexType() );
@@ -28,7 +28,7 @@ CRenderElement_ParticleEmitter::CRenderElement_ParticleEmitter( IRenderProxyDraw
 	, m_sortingKey( 0 )
 	, m_emitter( renderEmitter )
 	, m_envColorGroup( envColorGroup )
-	, m_data( NULL )
+	, m_data( nullptr )
 {
 	m_emitter->AddRef();
 	m_vertexFactory = ParticleVertexDrawerToMaterialVertexFactory( m_emitter->GetVertexType() );
@@ -40,12 +40,12 @@ CRenderElement_ParticleEmitter::~CRenderElement_ParticleEmitter()
 	if ( m_data )
 	{
 		delete m_data;
-		m_data = NULL;
+		m_data = nullptr;
 	}
 	if ( m_emitter )
 	{
 		m_emitter->Release();
-		m_emitter = NULL;
+		m_emitter = nullptr;
 	}
 }
 
@@ -70,7 +70,7 @@ void CRenderElement_ParticleEmitter::CreateParticleData()
 	if ( m_data )
 	{
 		delete m_data;
-		m_data = NULL;
+		m_data = nullptr;
 	}
 
 	// Create buffer to contain specific particles type
@@ -112,7 +112,7 @@ void CRenderElement_ParticleEmitter::ReplaceEmitter( CRenderParticleEmitter* ren
 	if ( m_emitter )
 	{
 		m_emitter->Release();
-		m_emitter = NULL;
+		m_emitter = nullptr;
 	}
 
 	// Assign new emitter

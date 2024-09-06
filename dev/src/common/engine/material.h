@@ -62,7 +62,7 @@ public:
 	RED_INLINE IMaterial* GetBaseMaterial() const { return m_baseMaterial.Get(); }
 
 	// Is this material compiled
-	RED_INLINE Bool IsCompiled() const { return m_renderResource != NULL; }
+	RED_INLINE Bool IsCompiled() const { return m_renderResource != nullptr; }
 
 #ifndef NO_EDITOR
 	virtual Bool HasAnyBlockParameters() const { return false; }

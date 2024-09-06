@@ -50,7 +50,7 @@ public:
 	void ApplySimple( CPostProcessDrawer &drawer, class CRenderSurfaces* surfaces, Bool displayDebugCurve, ERenderTargetName sampleTarget, ERenderTargetName averageTarget, const CRenderFrameInfo& info )
 	{
 		// Choose shader
-		CRenderShaderPair *shader = NULL;
+		CRenderShaderPair *shader = nullptr;
 		const Bool blending = info.m_envBlendingFactor > 0.f;
 		const Bool fixedLuminance = info.m_tonemapFixedLumiance > 0.0f;
 		const Float blendFactor = blending ? info.m_envBlendingFactor : 0.0f;

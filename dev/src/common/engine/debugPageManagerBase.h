@@ -43,7 +43,7 @@ public:
 	//! Unregister debug page
 	void UnregisterDebugPage( IDebugPage* page );
 
-	Bool IsDebugPageActive() const { return m_activePage != NULL; }
+	Bool IsDebugPageActive() const { return m_activePage != nullptr; }
 
 	Bool IsDebugPageActive( const String& pageName ) const { return m_activePage && m_activePage->GetPageName() == pageName; }
 

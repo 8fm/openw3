@@ -252,13 +252,13 @@ CRenderParticleEmitter::~CRenderParticleEmitter()
 	if ( m_initializerFunctions )
 	{
 		delete [] m_initializerFunctions;
-		m_initializerFunctions = NULL;
+		m_initializerFunctions = nullptr;
 	}
 
 	if ( m_modifierFunctions )
 	{
 		delete [] m_modifierFunctions;
-		m_modifierFunctions = NULL;
+		m_modifierFunctions = nullptr;
 	}
 
 	if (m_decalSpawner)
@@ -281,7 +281,7 @@ template< typename PARTICLE_TYPE >
 void CRenderParticleEmitter::SpawnParticles( CParticleData< PARTICLE_TYPE >* data, const SSimulationContext& simulationContext, Uint32 count, Float startTime, Float spawnTimeRange ) const
 {
 	// See if we can use sub-frame spawning position :)
-	const CSubframeInterpolator* subframeInterpolator = NULL;
+	const CSubframeInterpolator* subframeInterpolator = nullptr;
 	if ( m_useSubFrameEmission )
 	{
 		subframeInterpolator = simulationContext.m_interpolator;
@@ -1151,7 +1151,7 @@ Bool CRenderParticleEmitter::UpdateParticles< TrailParticle, ParticleTrailVertex
 
 			if( onScreen )
 			{
-				ParticleTrailVertex* vertex = NULL;
+				ParticleTrailVertex* vertex = nullptr;
 				// Vertex 0
 				CParticleVertexBuffer::GetNextVertexPtrIncrement< ParticleTrailVertex >( vertex );
 				COPY_FIELD_AS_INT32( vertex->m_position[0], vertex0Pos.A[0] );
@@ -1389,7 +1389,7 @@ Bool CRenderParticleEmitter::UpdateParticles< FacingTrailParticle, ParticleFacin
 
 			if( onScreen )
 			{
-				ParticleFacingTrail_Beam_Vertex* vertex = NULL;
+				ParticleFacingTrail_Beam_Vertex* vertex = nullptr;
 				// Vertex 0
 				CParticleVertexBuffer::GetNextVertexPtrIncrement< ParticleFacingTrail_Beam_Vertex >( vertex );
 				COPY_FIELD_AS_INT32( vertex->m_position[0], particle->m_position.A[0] );
@@ -1615,7 +1615,7 @@ Bool CRenderParticleEmitter::UpdateParticles< BeamParticle, ParticleFacingTrail_
 
 				if( onScreen )
 				{
-					ParticleFacingTrail_Beam_Vertex* vertex = NULL;
+					ParticleFacingTrail_Beam_Vertex* vertex = nullptr;
 					// Vertex 0
 					CParticleVertexBuffer::GetNextVertexPtrIncrement< ParticleFacingTrail_Beam_Vertex >( vertex );
 					COPY_FIELD_AS_INT32( vertex->m_position[0], particle->m_position.A[0] );
@@ -1709,7 +1709,7 @@ void CRenderParticleEmitter::CompileInitializersList()
 	if ( m_initializerFunctions )
 	{
 		delete m_initializerFunctions;
-		m_initializerFunctions = NULL;
+		m_initializerFunctions = nullptr;
 	}
 	m_initializerFunctions = new InitializerFunc[ m_numInitializers ];
 	Uint32 funcIndex = 0;
@@ -1863,7 +1863,7 @@ void CRenderParticleEmitter::CompileModifiersList()
 	if ( m_modifierFunctions )
 	{
 		delete m_modifierFunctions;
-		m_modifierFunctions = NULL;
+		m_modifierFunctions = nullptr;
 	}
 	m_modifierFunctions = new ModifierFunc[ m_numModifiers ];
 	Uint32 funcIndex = 0;

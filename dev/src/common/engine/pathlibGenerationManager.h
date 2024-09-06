@@ -124,7 +124,7 @@ public:
 	CPathLibWorld& GetOwner()												{ return m_owner; }
 
 	void RegisterStatusListener( CStatusListener* lisener );
-	void UnregisterStatusListener()											{ m_statusListener = NULL; }
+	void UnregisterStatusListener()											{ m_statusListener = nullptr; }
 
 	void RequestSynchronousProcessing() override;
 	void FinishSynchronousProcessing() override;

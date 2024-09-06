@@ -70,7 +70,7 @@ struct SScreenshotParameters
 	Red::Threads::CAtomic< Bool >* m_completionFlag;
 	Bool		m_noWatermark;
 
-	SScreenshotParameters( Uint32 width = 1920, Uint32 height = 1080, const String& fileName = TXT(""), ESaveFormat saveFormat = SF_BMP, Uint32 superSamplingSize = 4, Float fov = 70.0f, Uint32 flags = 0, Uint32* buffer = NULL, Bool noWatermark = false )
+	SScreenshotParameters( Uint32 width = 1920, Uint32 height = 1080, const String& fileName = TXT(""), ESaveFormat saveFormat = SF_BMP, Uint32 superSamplingSize = 4, Float fov = 70.0f, Uint32 flags = 0, Uint32* buffer = nullptr, Bool noWatermark = false )
 		: m_width( width )
 		, m_height( height )
 		, m_superSamplingSize( superSamplingSize )
@@ -123,7 +123,7 @@ public:
 	virtual ~CScreenshotSystem();
 
 public:
-	RED_FORCE_INLINE Bool IsTakingScreenshot() const { return m_currentRequest != NULL; }
+	RED_FORCE_INLINE Bool IsTakingScreenshot() const { return m_currentRequest != nullptr; }
 
 public:
 	void	RequestSimpleScreenshot( );

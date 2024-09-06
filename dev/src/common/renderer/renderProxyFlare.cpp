@@ -72,8 +72,8 @@ CRenderProxy_Flare::SFlareState::SFlareState ()
 	, m_currentAlphaSpeed( 0.f )
 	, m_occlusionTestActiveState( -2 )
 	, m_targetAlpha( 0.f )
-	, m_queryRefFull( NULL )
-	, m_queryRefPart( NULL )
+	, m_queryRefFull( nullptr )
+	, m_queryRefPart( nullptr )
 	, m_useMultipleQueryObjects( false )
 {}
 
@@ -166,7 +166,7 @@ CRenderQuery* CRenderProxy_Flare::SFlareState::RequestQueryToDraw( Bool fullShap
 		}
 	}
 
-	return NULL;
+	return nullptr;
 }
 
 void CRenderProxy_Flare::SFlareState::SimulateAlpha( const SFlareParameters &params, Float timeDelta )
@@ -250,8 +250,8 @@ void CRenderProxy_Flare::SFlareState::Update( const SFlareParameters &params, Fl
 
 CRenderProxy_Flare::CRenderProxy_Flare( const RenderProxyInitInfo& initInfo )
 	: IRenderProxyDrawable( RPT_Flare, initInfo )
-	, m_materialParams( NULL )
-	, m_material( NULL )
+	, m_materialParams( nullptr )
+	, m_material( nullptr )
 	, m_activeFlareIndex( -1 )
 {
 	if ( initInfo.m_component && initInfo.m_component->IsA< CFlareComponent >() )
@@ -281,13 +281,13 @@ CRenderProxy_Flare::~CRenderProxy_Flare()
 	if ( m_materialParams )
 	{
 		m_materialParams->Release();
-		m_materialParams = NULL;
+		m_materialParams = nullptr;
 	}
 
 	if ( m_material )
 	{
 		m_material->Release();
-		m_material = NULL;
+		m_material = nullptr;
 	}
 }
 

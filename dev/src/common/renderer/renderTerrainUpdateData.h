@@ -39,13 +39,13 @@ public:
 	const Vector								GetColormapParams() const { return m_colormapParams; }
 
 	Bool					IsStampUpdateValid()		const { return m_stampUpdate && m_stampUpdate->IsValid(); }
-	const Uint16*			GetStampData()				const { return m_stampUpdate ? m_stampUpdate->m_heightData			: NULL;			}
+	const Uint16*			GetStampData()				const { return m_stampUpdate ? m_stampUpdate->m_heightData			: nullptr;			}
 	Uint32					GetStampDataPitch()			const { return m_stampUpdate ? m_stampUpdate->m_heightDataPitch		: 0;			}
 	Bool					IsStampDataDirty()			const { return m_stampUpdate ? m_stampUpdate->m_heightDataDirty		: false;		}
-	const TColorMapType*	GetStampColorData()			const { return m_stampUpdate ? m_stampUpdate->m_colorData			: NULL;			}
+	const TColorMapType*	GetStampColorData()			const { return m_stampUpdate ? m_stampUpdate->m_colorData			: nullptr;			}
 	Uint32					GetStampColorDataPitch()	const { return m_stampUpdate ? m_stampUpdate->m_colorPitch			: 0;			}
 	Bool					IsStampColorDataDirty()		const { return m_stampUpdate ? m_stampUpdate->m_colorDataDirty		: false;		}
-	const TControlMapType*	GetStampControlData()		const { return m_stampUpdate ? m_stampUpdate->m_controlData			: NULL;			}
+	const TControlMapType*	GetStampControlData()		const { return m_stampUpdate ? m_stampUpdate->m_controlData			: nullptr;			}
 	Uint32					GetStampControlDataPitch()	const { return m_stampUpdate ? m_stampUpdate->m_controlPitch		: 0;			}
 	Bool					IsStampControlDataDirty()	const { return m_stampUpdate ? m_stampUpdate->m_controlDataDirty	: false;		}
 	Vector2					GetStampCenter()			const { return m_stampUpdate ? m_stampUpdate->m_center				: Vector2( 0.0f, 0.0f ); }

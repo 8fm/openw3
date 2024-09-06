@@ -149,7 +149,7 @@ st_bool CTextureGPUAPI::LoadColor(st_uint32 uiColor)
 
 	// Delete image
 	delete [] texels;
-	texels = NULL;
+	texels = nullptr;
 
 	if ( gpuTexture )
 	{
@@ -227,7 +227,7 @@ st_bool CTextureGPUAPI::LoadNoise(st_int32 nWidth, st_int32 nHeight, st_float32 
 
 		// Delete image
 		delete [] texels;
-		texels = NULL;
+		texels = nullptr;
 
 		if ( gpuTexture )
 		{

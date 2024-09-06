@@ -1666,7 +1666,7 @@ void CRenderInterface::RenderNormalFrame( CRenderCollector& collector )
 		GpuApi::SetCustomDrawContext( GpuApi::DSSM_NoStencilDepthTestEqual, GpuApi::RASTERIZERMODE_DefaultNoCull, GpuApi::BLENDMODE_Set );
 
 		// Setup global camera parameters
-		m_stateManager->SetLocalToWorld( NULL );
+		m_stateManager->SetLocalToWorld( nullptr );
 		m_stateManager->SetCamera2D();
 
 		GetRenderer()->m_shaderSingleColor->Bind();
@@ -2246,7 +2246,7 @@ void CRenderInterface::RenderDebugOverlay( CRenderCollector& collector, CRenderF
 	}
 
 	// Setup global camera parameters
-	m_stateManager->SetLocalToWorld( NULL );
+	m_stateManager->SetLocalToWorld( nullptr );
 	m_stateManager->SetCamera2D();
 }
 
@@ -2256,7 +2256,7 @@ void CRenderInterface::RenderHitProxyFrame( CRenderCollector& collector )
 	ASSERT( info.m_renderingMode == RM_HitProxies );
 
 	// Setup global camera parameters
-	m_stateManager->SetLocalToWorld( NULL );
+	m_stateManager->SetLocalToWorld( nullptr );
 	m_stateManager->SetCamera( info.m_camera );
 
 	// Setup camera reversed projection
@@ -2356,7 +2356,7 @@ void CRenderInterface::RenderDebug( CRenderCollector& collector )
 	const Bool hitProxies = info.m_renderingMode == RM_HitProxies;
 
 	// Setup global camera parameters
-	m_stateManager->SetLocalToWorld( NULL );
+	m_stateManager->SetLocalToWorld( nullptr );
 	m_stateManager->SetCamera( info.m_camera );
 
 	// Setup camera reversed projection
@@ -2380,7 +2380,7 @@ void CRenderInterface::RenderDebug( CRenderCollector& collector )
 	}
 
 	// Setup global camera parameters
-	m_stateManager->SetLocalToWorld( NULL );
+	m_stateManager->SetLocalToWorld( nullptr );
 	m_stateManager->SetCamera( info.m_camera );
 
 	// Render overlay fragments ( editor mostly )
@@ -2536,7 +2536,7 @@ void CRenderInterface::Render2D( CRenderCollector& collector, Bool supressSceneR
 		const GpuApi::RenderTargetSetup& rtSetup = GpuApi::GetRenderTargetSetup();
 
 		// Setup global camera parameters
-		m_stateManager->SetLocalToWorld( NULL );
+		m_stateManager->SetLocalToWorld( nullptr );
 		m_stateManager->SetCamera2D();
 
 		// Set draw context
@@ -2592,7 +2592,7 @@ void CRenderInterface::Render2D( CRenderCollector& collector, Bool supressSceneR
 	{
 		PC_SCOPE_RENDER_LVL1( Render Blackscreen );
 		// Setup global camera parameters
-		m_stateManager->SetLocalToWorld( NULL );
+		m_stateManager->SetLocalToWorld( nullptr );
 		m_stateManager->SetCamera2D();
 
 		// Draw full screen fade
@@ -2605,7 +2605,7 @@ void CRenderInterface::Render2D( CRenderCollector& collector, Bool supressSceneR
 		const GpuApi::RenderTargetSetup& rtSetup = GpuApi::GetRenderTargetSetup();
 
 		// Setup global camera parameters
-		m_stateManager->SetLocalToWorld( NULL );
+		m_stateManager->SetLocalToWorld( nullptr );
 		m_stateManager->SetCamera2D();
 
 		// Set draw context
@@ -2686,7 +2686,7 @@ void CRenderInterface::Render2D( CRenderCollector& collector, Bool supressSceneR
 		CGpuApiScopedDrawContext drawContext( GpuApi::DRAWCONTEXT_2D );
 
 		// Setup global camera parameters
-		m_stateManager->SetLocalToWorld( NULL );
+		m_stateManager->SetLocalToWorld( nullptr );
 		m_stateManager->SetCamera2D();
 
 		// Setup render context
@@ -2699,7 +2699,7 @@ void CRenderInterface::Render2D( CRenderCollector& collector, Bool supressSceneR
 	}
 
 	// Setup global camera parameters
-	m_stateManager->SetLocalToWorld( NULL );
+	m_stateManager->SetLocalToWorld( nullptr );
 	m_stateManager->SetCamera2D();
 }
 
@@ -2811,7 +2811,7 @@ void CRenderInterface::RenderFinal2D( CRenderFrame* frame, CRenderFrameInfo& inf
 			GpuApi::SetCustomDrawContext( GpuApi::DSSM_NoStencilNoDepth, GpuApi::RASTERIZERMODE_DefaultNoCull, GpuApi::BLENDMODE_Set );
 
 			// Setup global camera parameters
-			m_stateManager->SetLocalToWorld( NULL );
+			m_stateManager->SetLocalToWorld( nullptr );
 			m_stateManager->SetCamera2D();
 
 			GetRenderer()->m_shaderSingleColor->Bind();
@@ -2836,7 +2836,7 @@ void CRenderInterface::RenderFinal2D( CRenderFrame* frame, CRenderFrameInfo& inf
 			GetPostProcess()->DrawFrozenFrame( m_collector, info, surfaces, viewport, postProcess );
 
 			// Setup global camera parameters
-			m_stateManager->SetLocalToWorld( NULL );
+			m_stateManager->SetLocalToWorld( nullptr );
 			m_stateManager->SetCamera2D();
 		}
 		else

@@ -31,7 +31,7 @@ template<> void CRenderParticleEmitter::GenerateVertexData< SimpleParticle, Part
 
 	// be cache friendly and write members in order they are defined (so write-combine can kick in)
 
-	ParticleSimpleVertex* RESTRICT vertex = NULL;
+	ParticleSimpleVertex* RESTRICT vertex = nullptr;
 	// Vertex 0
 	CParticleVertexBuffer::GetNextVertexPtrIncrement< ParticleSimpleVertex >( vertex );
 	COPY_FIELD_AS_INT32( vertex->m_position[0], particle->m_position.X );
@@ -127,7 +127,7 @@ template<> void CRenderParticleEmitter::GenerateVertexData< SimpleParticle, Part
 
 	// be cache friendly and write members in order they are defined (so write-combine can kick in)
 
-	ParticleMotionVertex* RESTRICT vertex = NULL;
+	ParticleMotionVertex* RESTRICT vertex = nullptr;
 	// Vertex 0
 	CParticleVertexBuffer::GetNextVertexPtrIncrement< ParticleMotionVertex >( vertex );
 	//Red::System::MemoryCopy( (void*)&vertex->m_position, (void*)&particle->m_position, 3*sizeof( Float ) );

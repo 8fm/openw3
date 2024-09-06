@@ -21,7 +21,7 @@ public:
 	~CRenderShaderPair();
 
 	// Returns true if the pair is valid
-	RED_INLINE Bool IsValid() const { return m_pixelShader != NULL && m_vertexShader != NULL; }
+	RED_INLINE Bool IsValid() const { return m_pixelShader != nullptr && m_vertexShader != nullptr; }
 
 	// Describe resource
 	virtual CName GetCategory() const;

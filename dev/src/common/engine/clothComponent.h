@@ -139,7 +139,7 @@ public:
 	virtual void OnResetClothAndDangleSimulation() override;
 
 #ifdef USE_APEX
-	RED_INLINE Bool HasResource() const { return m_parameters.m_resource.Get() != NULL; }
+	RED_INLINE Bool HasResource() const { return m_parameters.m_resource.Get() != nullptr; }
 
 	class CPhysicsWrapperInterface* GetPhysicsRigidBodyWrapper() const { return m_triggerWrapper; }
 	class CApexClothWrapper* GetClothWrapper() const { return m_clothWrapper; }

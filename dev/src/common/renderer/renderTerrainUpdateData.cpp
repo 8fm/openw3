@@ -8,8 +8,8 @@
 
 CRenderTerrainUpdateData::CRenderTerrainUpdateData( const TDynArray< SClipmapLevelUpdate* >& updates, const STerrainTextureParameters* textureParameters, SClipmapStampDataUpdate* stampDataUpdate, Vector* colormapParams )
 	: m_update( updates )
-	, m_material( NULL )
-	, m_stampUpdate( NULL )
+	, m_material( nullptr )
+	, m_stampUpdate( nullptr )
 	, m_colormapParams( *colormapParams )
 #ifndef NO_EDITOR
 	, m_isEditing( false )
@@ -26,9 +26,9 @@ CRenderTerrainUpdateData::CRenderTerrainUpdateData( const TDynArray< SClipmapLev
 		// Can use copy constructor to do most data
 		m_stampUpdate = new SClipmapStampDataUpdate( *stampDataUpdate );
 		// Now just need to re-allocate and copy data buffers. Only copy if that buffer is dirty, to avoid extra copies when nothing has changed.
-		m_stampUpdate->m_heightData = NULL;
-		m_stampUpdate->m_controlData = NULL;
-		m_stampUpdate->m_colorData = NULL;
+		m_stampUpdate->m_heightData = nullptr;
+		m_stampUpdate->m_controlData = nullptr;
+		m_stampUpdate->m_colorData = nullptr;
 		if ( stampDataUpdate->m_heightData && stampDataUpdate->m_heightDataDirty )
 		{
 			m_stampUpdate->m_heightData = (Uint16*)RED_MEMORY_ALLOCATE( MemoryPool_Default, MC_RenderData, stampDataUpdate->m_heightDataSize );
@@ -64,20 +64,20 @@ CRenderTerrainUpdateData::~CRenderTerrainUpdateData()
 		if ( m_stampUpdate->m_heightData )
 		{
 			RED_MEMORY_FREE( MemoryPool_Default, MC_RenderData, m_stampUpdate->m_heightData );
-			m_stampUpdate->m_heightData = NULL;
+			m_stampUpdate->m_heightData = nullptr;
 		}
 		if ( m_stampUpdate->m_controlData )
 		{
 			RED_MEMORY_FREE( MemoryPool_Default, MC_RenderData, m_stampUpdate->m_controlData );
-			m_stampUpdate->m_controlData = NULL;
+			m_stampUpdate->m_controlData = nullptr;
 		}
 		if ( m_stampUpdate->m_colorData )
 		{
 			RED_MEMORY_FREE( MemoryPool_Default, MC_RenderData, m_stampUpdate->m_colorData );
-			m_stampUpdate->m_colorData = NULL;
+			m_stampUpdate->m_colorData = nullptr;
 		}
 		delete m_stampUpdate;
-		m_stampUpdate = NULL;
+		m_stampUpdate = nullptr;
 	}
 }
 

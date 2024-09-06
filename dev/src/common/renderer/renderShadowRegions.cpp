@@ -7,7 +7,7 @@
 #include "renderShadowManager.h"
 
 CRenderShadowStaticCube::CRenderShadowStaticCube()
-	: m_allocator( NULL )
+	: m_allocator( nullptr )
 	, m_index( 0 )
 	, m_lastFrame( 0 )
 {
@@ -15,17 +15,17 @@ CRenderShadowStaticCube::CRenderShadowStaticCube()
 
 CRenderShadowStaticCube::~CRenderShadowStaticCube()
 {
-	if ( m_allocator != NULL )
+	if ( m_allocator != nullptr )
 	{
 		m_allocator->ReleaseCube( *this );
-		m_allocator = NULL;
+		m_allocator = nullptr;
 		m_index = 0;
 	}
 }
 
 Bool CRenderShadowStaticCube::IsValid() const
 {
-	return m_allocator != NULL;
+	return m_allocator != nullptr;
 }
 
 void CRenderShadowStaticCube::UpdateFrameIndex( Uint32 frame )

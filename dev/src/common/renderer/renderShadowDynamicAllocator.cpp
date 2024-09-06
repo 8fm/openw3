@@ -81,5 +81,5 @@ CRenderShadowDynamicRegion* CRenderShadowDynamicAllocator::Allocate( Uint16 size
 	}
 
 	// Not allocated
-	return NULL;
+	return nullptr;
 }

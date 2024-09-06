@@ -252,14 +252,14 @@ public:
 	// Methods reading and updating localizable objects / localized strings
 
 	void UpdateStringDatabase( /*const */ILocalizableObject* localizableObject, Bool updateInfo = false );
-	void UpdateCopiedStrings( TDynArray< LocalizedStringEntry >* localizedEntries = NULL );
+	void UpdateCopiedStrings( TDynArray< LocalizedStringEntry >* localizedEntries = nullptr );
 	void UpdateStringDatabase( const THashMap< Uint32, String > &strings, const String &lang );
 	Bool UpdateStringDatabase( Uint32 stringId );
 	void ResetIDs( /*const */ILocalizableObject* localizableObject );
 	void UpdateStringId(Uint32 oldStringId, Uint32 newStringId);
 
 	// Gets string directly from DB
-	String GetLocalizedText( Uint32 stringId, const String& locale, Bool* isFallback = NULL );
+	String GetLocalizedText( Uint32 stringId, const String& locale, Bool* isFallback = nullptr );
 	String GetLocalizedText( Uint32 stringId );
 
 #if 0 // class_CTime is not used anywhere
@@ -315,7 +315,7 @@ public:
 	String			GetStringByStringKeyCachedWithFallback( const String &stringKey );
 	void			ReadAllStringsWithStringKeys( TDynArray< Uint32 > &stringsIds /* out */, TDynArray< String > &stringsKeys /* out */, TDynArray< String > &stringsCategories /* out */ );
 	void			ReadAllStringsCategories( TDynArray< String > &stringsCategories /* out */, Bool OnlyKeys = true /* in */ );
-	void			SearchForStringsByCategory( const String& searchQuery, const TDynArray< String > &categories /* in */, TDynArray< Uint32 > &ids /* out */, TDynArray< String >* keys = NULL /* out */, TDynArray< String >* strings = NULL /* out */, Bool searchKeys = false /* in */, ESearchOrder order = SearchOrder_Ids /* in */ );
+	void			SearchForStringsByCategory( const String& searchQuery, const TDynArray< String > &categories /* in */, TDynArray< Uint32 > &ids /* out */, TDynArray< String >* keys = nullptr /* out */, TDynArray< String >* strings = nullptr /* out */, Bool searchKeys = false /* in */, ESearchOrder order = SearchOrder_Ids /* in */ );
 
 	bool			IsSQLConnectionValid();
 

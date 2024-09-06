@@ -73,7 +73,7 @@ private:
 	void ResetBlurParametersToDefaults();
 
 	//
-	RED_INLINE Bool IsInitialized() const { return m_temporalBuffer[0] != NULL && m_temporalBuffer[1] != NULL; }
+	RED_INLINE Bool IsInitialized() const { return m_temporalBuffer[0] != nullptr && m_temporalBuffer[1] != nullptr; }
 
 	// Create new buffer for bluring
 	void CreateTemporalBuffer( const CRenderFrameInfo& frameInfo );

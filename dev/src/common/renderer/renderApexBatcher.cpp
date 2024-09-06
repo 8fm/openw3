@@ -31,7 +31,7 @@ void CRenderApexBatcher::RenderApex( const CRenderFrameInfo& info, const Renderi
 	if ( !info.IsShowFlagOn( SHOW_Apex ) ) return;
 
 	// Construct list
-	CRenderElement_Apex* list = NULL;
+	CRenderElement_Apex* list = nullptr;
 
 	for ( Uint32 i=0; i<batchList.Size(); i++ )
 	{
@@ -124,9 +124,9 @@ void CRenderApexBatcher::RenderApex( const CRenderFrameInfo& info, const Renderi
 	}
 
 	// Not strictly required, but these objects are likely about to be destroyed, so we'll be safe.
-	m_renderer.m_context = NULL;
+	m_renderer.m_context = nullptr;
 #ifndef RED_FINAL_BUILD
-	m_renderer.m_meshStats = NULL;
+	m_renderer.m_meshStats = nullptr;
 #endif
 }
 
@@ -141,7 +141,7 @@ void CRenderApexBatcher::RenderBatch( const RenderingContext& context, CRenderEl
 	// The Apex docs say that the results of the dispatchRenderResources call (render resources, buffers, etc)
 	// are valid until the next time updateRenderResources() is called. Could maybe have the Proxy call dispatch
 	// when collecting elements, and store out the render data into the element for later use...
-	for ( CRenderElement_Apex* elem = batch; elem != NULL; elem = static_cast< CRenderElement_Apex* >( elem->GetBatchNext() ) )
+	for ( CRenderElement_Apex* elem = batch; elem != nullptr; elem = static_cast< CRenderElement_Apex* >( elem->GetBatchNext() ) )
 	{
 		NxApexRenderable* renderable = elem->GetApexRenderable();
 		if ( !renderable ) continue;
@@ -203,7 +203,7 @@ void CRenderApexBatcher::RenderBatch( const RenderingContext& context, CRenderEl
 
 		// Update effect parameters
 		const SRenderProxyDrawableEffectParams* effectParams = elem->GetProxy()->GetEffectParams();
-		if ( effectParams != NULL )
+		if ( effectParams != nullptr )
 		{
 			// First parameter
 			if ( elem->GetMaterial()->IsUsingEffectParam0() )
@@ -279,7 +279,7 @@ void CRenderApexBatcher::SortBackToFront( const RenderingContext& context, CRend
 {
 	// Stick elements into an array so we can sort them. Also need to find out where they are relative to the camera.
 	TDynArray< RenderElementWithDistance > elements;
-	for ( CRenderElement_Apex* elem = batch; elem != NULL; elem = static_cast< CRenderElement_Apex* >( elem->GetBatchNext() ) )
+	for ( CRenderElement_Apex* elem = batch; elem != nullptr; elem = static_cast< CRenderElement_Apex* >( elem->GetBatchNext() ) )
 	{
 		elements.PushBack( RenderElementWithDistance( elem, context ) );
 	}
@@ -291,7 +291,7 @@ void CRenderApexBatcher::SortBackToFront( const RenderingContext& context, CRend
 	{
 		elements[i].m_element->SetBatchNext( elements[i + 1].m_element );
 	}
-	elements.Back().m_element->SetBatchNext( NULL );
+	elements.Back().m_element->SetBatchNext( nullptr );
 	batch = elements[0].m_element;
 }
 

@@ -16,8 +16,8 @@ protected:
 
 public:
 	RED_INLINE TLatentLoader()
-		: m_data( NULL )
-		, m_token( NULL )
+		: m_data( nullptr )
+		, m_token( nullptr )
 	{};
 
 	RED_INLINE ~TLatentLoader()
@@ -28,12 +28,12 @@ public:
 
 	RED_INLINE Bool IsLoaded() const
 	{
-		return m_data != NULL;
+		return m_data != nullptr;
 	}
 
 	RED_INLINE Bool IsLinked() const
 	{
-		return m_token != NULL;
+		return m_token != nullptr;
 	}
 
 	RED_INLINE T& GetAndUnlink()
@@ -76,13 +76,13 @@ protected:
 		if ( m_data )
 		{
 			delete m_data;
-			m_data = NULL;
+			m_data = nullptr;
 		}
 
 		if ( m_token )
 		{
 			delete m_token;
-			m_token = NULL;
+			m_token = nullptr;
 		}
 	}
 
@@ -93,7 +93,7 @@ protected:
 			ASSERT( m_data );
 
 			delete m_token;
-			m_token = NULL;
+			m_token = nullptr;
 		}
 	}
 
@@ -125,7 +125,7 @@ protected:
 			if ( m_token )
 			{
 				delete m_data;
-				m_data = NULL;
+				m_data = nullptr;
 			}
 		}
 	}

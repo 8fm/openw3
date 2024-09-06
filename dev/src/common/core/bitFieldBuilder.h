@@ -14,11 +14,11 @@
 														~bitFieldName##BitFieldBuilder()																					\
 														{																													\
 															delete m_registeredBitField;																					\
-															m_registeredBitField = NULL;																					\
+															m_registeredBitField = nullptr;																					\
 														}																													\
 																																											\
 														bitFieldName##BitFieldBuilder()																						\
-															:  m_registeredBitField( NULL )																					\
+															:  m_registeredBitField( nullptr )																				\
 														{																													\
 															m_registeredBitField = new CBitField( CNAME( bitFieldName ), size );											
 

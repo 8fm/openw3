@@ -12,13 +12,13 @@ protected:
 	T*								m_ptr;
 public:
 	TRefCountPointer()
-		: m_ptr( NULL )																			{}
+		: m_ptr( nullptr )																			{}
 	TRefCountPointer( T* ptr )
 		: m_ptr( ptr )																			{ if ( m_ptr ) { m_ptr->AddRef(); } }
 	TRefCountPointer( const TRefCountPointer& p )
 		: m_ptr( p.m_ptr )																		{ if ( m_ptr ) { m_ptr->AddRef(); } }
 	TRefCountPointer( TRefCountPointer&& p )
-		: m_ptr( p.m_ptr )																		{ p.m_ptr = NULL; }
+		: m_ptr( p.m_ptr )																		{ p.m_ptr = nullptr; }
 	~TRefCountPointer()																			{ if ( m_ptr ) { m_ptr->Release(); } }
 
 	TRefCountPointer& operator=( const TRefCountPointer& ptr )
@@ -47,7 +47,7 @@ public:
 				m_ptr->Release();
 			}
 			m_ptr = ptr.m_ptr;
-			ptr.m_ptr = NULL;
+			ptr.m_ptr = nullptr;
 		}
 		return *this;
 	}
@@ -57,7 +57,7 @@ public:
 		if ( m_ptr )
 		{
 			m_ptr->Release();
-			m_ptr = NULL;
+			m_ptr = nullptr;
 		}
 	}
 

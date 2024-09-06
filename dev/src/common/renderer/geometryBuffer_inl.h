@@ -261,7 +261,7 @@ inline st_bool CGeometryBufferGPUAPI::OverwriteIndices(const void* pIndexData, s
 	assert(IndexBufferIsValid( ));
 
 	// lock and fill the buffer
-	void* pIndexBufferContents = NULL;
+	void* pIndexBufferContents = nullptr;
 	const st_uint32 c_uiOffsetInBytes = uiOffset * IndexSize( );
 	const st_uint32 c_uiSizeInBytes = uiNumIndices * IndexSize( );
 	assert(c_uiOffsetInBytes + c_uiSizeInBytes <= m_uiCurrentIndexBufferSize);

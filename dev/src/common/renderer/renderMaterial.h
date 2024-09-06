@@ -164,7 +164,7 @@ public:
 		TSamplerStateArray			m_vsSamplerStates;			//!< Sampler states to bind for VS stage
 
 	public:
-		CompiledTechnique( CRenderShader* pixelShader, CRenderShader* vertexShader, const TUsedParameterArray& pixelParameters, const TUsedParameterArray& vertexParameters, const TSamplerStateArray& psSamplerStates, const TSamplerStateArray& vsSamplerStates, CRenderShader* hullShader = NULL, CRenderShader* domainShader = NULL );
+		CompiledTechnique( CRenderShader* pixelShader, CRenderShader* vertexShader, const TUsedParameterArray& pixelParameters, const TUsedParameterArray& vertexParameters, const TSamplerStateArray& psSamplerStates, const TSamplerStateArray& vsSamplerStates, CRenderShader* hullShader = nullptr, CRenderShader* domainShader = nullptr );
 		~CompiledTechnique();
 
 		// Bind shader and parameters

@@ -59,7 +59,7 @@ IRenderProxyLight::IRenderProxyLight( ERenderProxyType type, const RenderProxyIn
 	, m_autoHideRange( 7.5f )			// keep in sync with autoHideInvRange
 	, m_autoHideInvRange( 1.f / 7.5f )	// keep in sync with autoHideRange
 	, m_shadowBlendFactor( 1.0f )
-	, m_lightFlickerInfo( NULL )
+	, m_lightFlickerInfo( nullptr )
 	, m_allowDistantFade( true )
 	, m_forcedDynamic( false )
 	, m_isCastingStaticShadows( false )
@@ -241,7 +241,7 @@ IRenderProxyLight::~IRenderProxyLight()
 	if ( m_lightFlickerInfo )
 	{
 		delete m_lightFlickerInfo;
-		m_lightFlickerInfo = NULL;
+		m_lightFlickerInfo = nullptr;
 	}
 }
 

@@ -78,10 +78,10 @@ Uint64 SSpeedTreeRenderStats::s_treeDrawcalls[ SSpeedTreeRenderStats::c_bufferCo
 Uint64 SSpeedTreeRenderStats::s_billboardDrawcalls[ SSpeedTreeRenderStats::c_bufferCount ];
 Uint64 SSpeedTreeRenderStats::s_grassDrawcalls[ SSpeedTreeRenderStats::c_bufferCount ];
 
-template<> CShaderTechnique::CVertexShaderCache* CShaderTechnique::m_pVertexShaderCache = NULL;
-template<> CShaderTechnique::CPixelShaderCache* CShaderTechnique::m_pPixelShaderCache = NULL;
-template<> CTexture::CTextureCache* CTexture::m_pCache = NULL;
-template<> CStateBlock::CStateBlockCache* CStateBlock::m_pCache = NULL;
+template<> CShaderTechnique::CVertexShaderCache* CShaderTechnique::m_pVertexShaderCache = nullptr;
+template<> CShaderTechnique::CPixelShaderCache* CShaderTechnique::m_pPixelShaderCache = nullptr;
+template<> CTexture::CTextureCache* CTexture::m_pCache = nullptr;
+template<> CStateBlock::CStateBlockCache* CStateBlock::m_pCache = nullptr;
 template<> st_bool CRenderState::m_bFallbackTexturesInited = false;
 
 template<> CTexture CRenderState::m_atLastBoundTextures[TL_NUM_TEX_LAYERS] = { CTexture( ) };

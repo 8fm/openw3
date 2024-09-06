@@ -28,7 +28,7 @@
 // 1/32.f isn't quite enough to keep from dipping under 30fps
 #define VSYNC_FRAME (1/35.0f)
 
-CRenderThread *GRenderThread = NULL;
+CRenderThread *GRenderThread = nullptr;
 
 CRenderThread::CRenderThread( CRenderInterface* renderer, Bool hasMessagePump )
 	: m_renderer( renderer )
@@ -110,10 +110,10 @@ void CRenderThread::ProcessLoadingScreenBlur( Float timeDelta )
 #endif
 
 	// Create frame to render
-	CRenderFrame* fakeFrame = GetRenderer()->CreateFrame( NULL, info );
+	CRenderFrame* fakeFrame = GetRenderer()->CreateFrame( nullptr, info );
 	if ( fakeFrame )
 	{
-		GetRenderer()->RenderFrame( fakeFrame, NULL );
+		GetRenderer()->RenderFrame( fakeFrame, nullptr );
 
 		m_loadingScreenBlur->Tick( timeDelta );
 
@@ -169,7 +169,7 @@ void CRenderThread::ProcessNonInteractiveRendering( Float timeDelta, Float uncla
 	}
 
 	// Create frame to render
-	CRenderFrame* fakeFrame = GetRenderer()->CreateFrame( NULL, info );
+	CRenderFrame* fakeFrame = GetRenderer()->CreateFrame( nullptr, info );
 	if ( fakeFrame )
 	{
 #ifndef RED_FINAL_BUILD
@@ -258,7 +258,7 @@ void CRenderThread::ProcessNonInteractiveRendering( Float timeDelta, Float uncla
 		}
 
 		// Draw fake frame
-		GetRenderer()->RenderFrame( fakeFrame, NULL );
+		GetRenderer()->RenderFrame( fakeFrame, nullptr );
 		fakeFrame->Release();
 	}
 }
@@ -535,7 +535,7 @@ void CRenderThread::ThreadFunc()
 	}
 
 	// Delete thread
-	GRenderThread = NULL;
+	GRenderThread = nullptr;
 }
 
 

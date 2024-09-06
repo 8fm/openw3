@@ -145,7 +145,7 @@ private:
 		if ( !m_asyncHandle )
 		{
 			ASSERT( !"invalid" );
-			m_pTargetFaceTextures = NULL;
+			m_pTargetFaceTextures = nullptr;
 			m_state = STATE_Failed;
 			return;
 		}
@@ -155,7 +155,7 @@ private:
 		switch ( state )
 		{
 		case BufferAsyncData::eResult_Failed:
-			m_pTargetFaceTextures = NULL;
+			m_pTargetFaceTextures = nullptr;
 			m_state = STATE_Failed;
 			break;
 
@@ -170,7 +170,7 @@ private:
 				const Bool initResult = InitFaceTextures( m_pTargetFaceTextures, handle->GetData(), handle->GetSize(), tempBuffer );
 
 				m_asyncHandle.Reset();
-				m_pTargetFaceTextures = NULL;
+				m_pTargetFaceTextures = nullptr;
 				m_state = initResult ? STATE_Loaded : STATE_Failed;
 			}
 			break;
@@ -183,7 +183,7 @@ private:
 public:
 	CEnvProbeDataSourceNonCooked ( const DeferredDataBuffer* latentBuffer )
 		: m_pLatentBuffer ( latentBuffer )
-		, m_pTargetFaceTextures ( NULL )
+		, m_pTargetFaceTextures ( nullptr )
 		, m_state ( STATE_NotLoading )
 	{}
 
@@ -221,7 +221,7 @@ public:
 	virtual	void CancelLoading() override
 	{
 		m_asyncHandle.Reset();
-		m_pTargetFaceTextures = NULL;
+		m_pTargetFaceTextures = nullptr;
 		m_state = STATE_NotLoading;
 	}
 
