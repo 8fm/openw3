@@ -4,7 +4,7 @@
 
 #pragma once
 
-#if defined( RED_PLATFORM_WINPC ) || defined( RED_PLATFORM_DURANGO )
+#if defined( RED_PLATFORM_WINPC ) || defined( RED_PLATFORM_DURANGO ) || defined( RED_PLATFORM_LINUX )
 # include "renderScaleformTempD3D11.h"
 #elif defined( RED_PLATFORM_ORBIS )
 # include "renderScaleformTempOrbis.h"

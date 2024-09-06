@@ -297,7 +297,7 @@ bool CRenderScaleformShaderManager::HasInstancingSupport() const
 #if defined( RED_PLATFORM_DURANGO )
 	// Durango has instancing.
 	return true;
-#elif defined( RED_PLATFORM_ORBIS )
+#elif defined( RED_PLATFORM_ORBIS ) || defined( RED_PLATFORM_LINUX )
 	return true;
 #elif defined( RED_PLATFORM_WINPC )
 	// Only FeatureLevel 10.0+ has instancing (but it always has it).

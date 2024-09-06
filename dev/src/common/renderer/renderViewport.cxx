@@ -88,7 +88,7 @@ CRenderViewport::CRenderViewport( Uint32 width, Uint32 height, EViewportWindowMo
 	scDesc.fullscreen = false;			// Always create swap chain in windowed mode and change fullscreen state later, otherwise DXGI has troubles with switching between window modes
 	scDesc.overlay = false;
 
-#ifndef RED_PLATFORM_ORBIS
+#if !(defined( RED_PLATFORM_ORBIS ) || defined( RED_PLATFORM_LINUX ))
 	m_capturedCursorPosition.x = 0;
 	m_capturedCursorPosition.y = 0;
 
@@ -529,7 +529,7 @@ void CRenderViewport::SetMouseMode( EMouseMode mode, Bool notRestoreMousePositio
 
 	m_mouseMode = mode;
 }
-#ifndef RED_PLATFORM_ORBIS
+#if !(defined( RED_PLATFORM_ORBIS ) || defined( RED_PLATFORM_LINUX ))
 void CRenderViewport::SetTopLevelWindow( HWND handle )
 {
 	m_window->SetTopLevelWindow( handle );
@@ -741,7 +741,7 @@ void CRenderViewport::PerformToggleFullscreen()
 
 void CRenderViewport::PerformChangeWindowMode()
 {
-#ifndef RED_PLATFORM_CONSOLE
+#if !(defined( RED_PLATFORM_CONSOLE ) || defined( RED_PLATFORM_LINUX ))
 	m_window->AdjustStyleToWindowMode( m_expectedProperties.windowMode );
 	m_windowMode = m_expectedProperties.windowMode;
 #endif
