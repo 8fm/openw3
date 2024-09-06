@@ -97,6 +97,10 @@ namespace Config
 #define USE_LODEPNG
 #ifdef USE_LODEPNG
 #include "../../../external/lodepng/lodepng.h"
+#ifdef RED_PLATFORM_LINUX // HACK: fix NULL in fstream/gthr-default.h
+#undef NULL
+#define NULL 0
+#endif
 #include "../../../external/lodepng/lodepng.cpp"
 #endif
 
