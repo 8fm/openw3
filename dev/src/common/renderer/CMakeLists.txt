@@ -206,6 +206,12 @@ target_include_directories(${PROJECT_NAME} PRIVATE
     ${CMAKE_SOURCE_DIR}/dev/external/gfx4/Include
 )
 
+if (NOT WIN32)
+    target_include_directories(${PROJECT_NAME} PRIVATE
+        ${DIRECTX_INCLUDE_DIRS}
+    )
+endif()
+
 target_link_libraries(${PROJECT_NAME})
 
 target_precompile_headers(${PROJECT_NAME}
