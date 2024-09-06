@@ -142,7 +142,7 @@ namespace SpeedTree
 			targetArray.~CArray();
 
 			targetArray.m_pData = sourceArray.m_pData;
-			sourceArray.m_pData = NULL;
+			sourceArray.m_pData = nullptr;
 
 			targetArray.m_uiSize = sourceArray.m_uiSize;                                               
 			sourceArray.m_uiSize = 0;
@@ -151,7 +151,7 @@ namespace SpeedTree
 			sourceArray.m_uiDataSize = 0;
 
 			targetArray.m_pHeapDesc = sourceArray.m_pHeapDesc;
-			sourceArray.m_pHeapDesc = NULL;
+			sourceArray.m_pHeapDesc = nullptr;
 			
 			targetArray.m_bExternalMemory = sourceArray.m_bExternalMemory;
 			sourceArray.m_bExternalMemory = false;

@@ -27,7 +27,7 @@
 
 template <class T, class TCompare, bool bUseCustomAllocator>
 ST_INLINE CSet<T, TCompare, bUseCustomAllocator>::CSet(size_t uiStartingPoolSize) :
-	m_pRoot(NULL),
+	m_pRoot(nullptr),
 	m_uiSize(0),
 	m_cPool(sizeof(CNode), uiStartingPoolSize)
 {
@@ -39,7 +39,7 @@ ST_INLINE CSet<T, TCompare, bUseCustomAllocator>::CSet(size_t uiStartingPoolSize
 
 template <class T, class TCompare, bool bUseCustomAllocator>
 ST_INLINE CSet<T, TCompare, bUseCustomAllocator>::CSet(const CSet& cRight) :
-	m_pRoot(NULL),
+	m_pRoot(nullptr),
 	m_uiSize(0),
 	m_cPool(sizeof(CNode), cRight.m_cPool.size( ))
 {
@@ -63,11 +63,11 @@ ST_INLINE CSet<T, TCompare, bUseCustomAllocator>::~CSet(void)
 template <class T, class TCompare, bool bUseCustomAllocator>
 ST_INLINE void CSet<T, TCompare, bUseCustomAllocator>::clear(void)
 {
-	if (m_pRoot != NULL)
+	if (m_pRoot != nullptr)
 	{
 		Ptr(m_pRoot)->DeleteChildren(this);
 		Deallocate(m_pRoot);
-		m_pRoot = NULL;
+		m_pRoot = nullptr;
 	}
 
 	m_uiSize = 0;
@@ -112,9 +112,9 @@ ST_INLINE CSet<T, TCompare, bUseCustomAllocator>& CSet<T, TCompare, bUseCustomAl
 {
 	clear( );
 
-	if (cRight.m_pRoot != NULL)
+	if (cRight.m_pRoot != nullptr)
 	{
-		m_pRoot = Allocate(cRight.Ptr(cRight.m_pRoot)->m_tData, NULL);
+		m_pRoot = Allocate(cRight.Ptr(cRight.m_pRoot)->m_tData, nullptr);
 		Ptr(m_pRoot)->m_uiLevel = cRight.Ptr(cRight.m_pRoot)->m_uiLevel;
 		++m_uiSize;
 
@@ -130,7 +130,7 @@ ST_INLINE CSet<T, TCompare, bUseCustomAllocator>& CSet<T, TCompare, bUseCustomAl
 			aThis.pop_back( );
 			aRight.pop_back( );
 
-			if (cRight.Ptr(pRight)->m_pLeft != NULL)
+			if (cRight.Ptr(pRight)->m_pLeft != nullptr)
 			{
 				Ptr(pThis)->m_pLeft = Allocate(cRight.Ptr(cRight.Ptr(pRight)->m_pLeft)->m_tData, pThis);
 				Ptr(Ptr(pThis)->m_pLeft)->m_uiLevel = cRight.Ptr(cRight.Ptr(pRight)->m_pLeft)->m_uiLevel;
@@ -139,7 +139,7 @@ ST_INLINE CSet<T, TCompare, bUseCustomAllocator>& CSet<T, TCompare, bUseCustomAl
 				++m_uiSize;
 			}
 
-			if (cRight.Ptr(pRight)->m_pRight != NULL)
+			if (cRight.Ptr(pRight)->m_pRight != nullptr)
 			{
 				Ptr(pThis)->m_pRight = Allocate(cRight.Ptr(cRight.Ptr(pRight)->m_pRight)->m_tData, pThis);
 				Ptr(Ptr(pThis)->m_pRight)->m_uiLevel = cRight.Ptr(cRight.Ptr(pRight)->m_pRight)->m_uiLevel;
@@ -160,11 +160,11 @@ ST_INLINE CSet<T, TCompare, bUseCustomAllocator>& CSet<T, TCompare, bUseCustomAl
 template <class T, class TCompare, bool bUseCustomAllocator>
 ST_INLINE typename CSet<T, TCompare, bUseCustomAllocator>::iterator CSet<T, TCompare, bUseCustomAllocator>::begin(void) const
 { 
-	if (m_pRoot == NULL)
+	if (m_pRoot == nullptr)
 		return iterator( );
 	
 	CNodeReference pCurrent = m_pRoot;
-	while (Ptr(pCurrent)->m_pLeft != NULL)
+	while (Ptr(pCurrent)->m_pLeft != nullptr)
 		pCurrent = Ptr(pCurrent)->m_pLeft;
 
 	return iterator(pCurrent, &m_cPool); 
@@ -177,11 +177,11 @@ ST_INLINE typename CSet<T, TCompare, bUseCustomAllocator>::iterator CSet<T, TCom
 template <class T, class TCompare, bool bUseCustomAllocator>
 ST_INLINE typename CSet<T, TCompare, bUseCustomAllocator>::iterator CSet<T, TCompare, bUseCustomAllocator>::rbegin(void) const
 { 
-	if (m_pRoot == NULL)
+	if (m_pRoot == nullptr)
 		return iterator( );
 	
 	CNodeReference pCurrent = m_pRoot;
-	while (Ptr(pCurrent)->m_pRight != NULL)
+	while (Ptr(pCurrent)->m_pRight != nullptr)
 		pCurrent = Ptr(pCurrent)->m_pRight;
 
 	return iterator(pCurrent, &m_cPool); 
@@ -207,7 +207,7 @@ ST_INLINE typename CSet<T, TCompare, bUseCustomAllocator>::iterator CSet<T, TCom
 	TCompare tCompare;
 
 	CNodeReference pCurrent = m_pRoot;
-	while (pCurrent != NULL && Ptr(pCurrent)->m_tData != tData)
+	while (pCurrent != nullptr && Ptr(pCurrent)->m_tData != tData)
 	{
 		if (tCompare(tData, Ptr(pCurrent)->m_tData))
 			pCurrent = Ptr(pCurrent)->m_pLeft;
@@ -228,8 +228,8 @@ ST_INLINE typename CSet<T, TCompare, bUseCustomAllocator>::iterator CSet<T, TCom
 	TCompare tCompare;
 
 	CNodeReference pCurrent = m_pRoot;
-	CNodeReference pParent = NULL;
-	while (pCurrent != NULL && tData != Ptr(pCurrent)->m_tData)
+	CNodeReference pParent = nullptr;
+	while (pCurrent != nullptr && tData != Ptr(pCurrent)->m_tData)
 	{
 		pParent = pCurrent;
 		if (tCompare(tData, Ptr(pCurrent)->m_tData))
@@ -238,11 +238,11 @@ ST_INLINE typename CSet<T, TCompare, bUseCustomAllocator>::iterator CSet<T, TCom
 			pCurrent = Ptr(pCurrent)->m_pRight;
 	}
 
-	if (pCurrent == NULL)
+	if (pCurrent == nullptr)
 	{
 		pCurrent = Allocate(tData, pParent);
 
-		if (pParent == NULL)
+		if (pParent == nullptr)
 			m_pRoot = pCurrent;
 		else if (tCompare(tData, Ptr(pParent)->m_tData))
 			Ptr(pParent)->m_pLeft = pCurrent;
@@ -265,9 +265,9 @@ ST_INLINE typename CSet<T, TCompare, bUseCustomAllocator>::iterator CSet<T, TCom
 {
 	#ifdef SPEEDTREE_ITERATOR_DEBUGGING
 		// make sure iterator is part of this Set
-		assert(iterWhere.m_pNode != NULL);
+		assert(iterWhere.m_pNode != nullptr);
 		CNodeReference pRoot = iterWhere.m_pNode;
-		while (Ptr(pRoot)->m_pParent != NULL)
+		while (Ptr(pRoot)->m_pParent != nullptr)
 			pRoot = Ptr(pRoot)->m_pParent;
 		assert(pRoot == m_pRoot);
 	#endif
@@ -277,29 +277,29 @@ ST_INLINE typename CSet<T, TCompare, bUseCustomAllocator>::iterator CSet<T, TCom
 
 	// delete like a normal binary search tree
 	bool bRootDelete = (pRemove == m_pRoot);
-	CNodeReference pBalance = NULL;
-	if (Ptr(pRemove)->m_pLeft == NULL && Ptr(pRemove)->m_pRight == NULL)
+	CNodeReference pBalance = nullptr;
+	if (Ptr(pRemove)->m_pLeft == nullptr && Ptr(pRemove)->m_pRight == nullptr)
 	{
 		// has no children
 		pBalance = Ptr(pRemove)->m_pParent;
-		if (Ptr(pRemove)->m_pParent != NULL)
+		if (Ptr(pRemove)->m_pParent != nullptr)
 		{
 			if (Ptr(Ptr(pRemove)->m_pParent)->m_pLeft == pRemove)
-				Ptr(Ptr(pRemove)->m_pParent)->m_pLeft = NULL;
+				Ptr(Ptr(pRemove)->m_pParent)->m_pLeft = nullptr;
 			else
-				Ptr(Ptr(pRemove)->m_pParent)->m_pRight = NULL;
+				Ptr(Ptr(pRemove)->m_pParent)->m_pRight = nullptr;
 		}
 		if (bRootDelete)
-			m_pRoot = NULL;
+			m_pRoot = nullptr;
 	}
-	else if (Ptr(pRemove)->m_pLeft == NULL || Ptr(pRemove)->m_pRight == NULL)
+	else if (Ptr(pRemove)->m_pLeft == nullptr || Ptr(pRemove)->m_pRight == nullptr)
 	{
 		// has only one child
 		CNodeReference pChild = Ptr(pRemove)->m_pLeft;
-		if (pChild == NULL)
+		if (pChild == nullptr)
 			pChild = Ptr(pRemove)->m_pRight;
 		pBalance = pChild;
-		if (Ptr(pRemove)->m_pParent != NULL)
+		if (Ptr(pRemove)->m_pParent != nullptr)
 		{
 			if (Ptr(Ptr(pRemove)->m_pParent)->m_pLeft == pRemove)
 				Ptr(Ptr(pRemove)->m_pParent)->m_pLeft = pChild;
@@ -314,13 +314,13 @@ ST_INLINE typename CSet<T, TCompare, bUseCustomAllocator>::iterator CSet<T, TCom
 	{
 		// has both children
 		CNodeReference pSwitch = Ptr(pRemove)->m_pLeft;
-		while (Ptr(pSwitch)->m_pRight != NULL)
+		while (Ptr(pSwitch)->m_pRight != nullptr)
 			pSwitch = Ptr(pSwitch)->m_pRight;
 		
 		if (pSwitch == Ptr(pRemove)->m_pLeft)
 		{
 			Ptr(pSwitch)->m_pRight = Ptr(pRemove)->m_pRight;
-			if (Ptr(pSwitch)->m_pRight != NULL)
+			if (Ptr(pSwitch)->m_pRight != nullptr)
 				Ptr(Ptr(pSwitch)->m_pRight)->m_pParent = pSwitch;
 			pBalance = pSwitch;
 		}
@@ -328,18 +328,18 @@ ST_INLINE typename CSet<T, TCompare, bUseCustomAllocator>::iterator CSet<T, TCom
 		{
 			CNodeReference pParent = Ptr(pSwitch)->m_pParent;
 			Ptr(pParent)->m_pRight = Ptr(pSwitch)->m_pLeft;
-			if (Ptr(pParent)->m_pRight != NULL)
+			if (Ptr(pParent)->m_pRight != nullptr)
 				Ptr(Ptr(pParent)->m_pRight)->m_pParent = pParent;
 
 			Ptr(pSwitch)->m_pLeft = Ptr(pRemove)->m_pLeft;
 			Ptr(pSwitch)->m_pRight = Ptr(pRemove)->m_pRight;
 			Ptr(Ptr(pSwitch)->m_pLeft)->m_pParent = pSwitch;
-			if (Ptr(pSwitch)->m_pRight != NULL)
+			if (Ptr(pSwitch)->m_pRight != nullptr)
 				Ptr(Ptr(pSwitch)->m_pRight)->m_pParent = pSwitch;
 			pBalance = pParent;
 		}
 
-		if (Ptr(pRemove)->m_pParent != NULL)
+		if (Ptr(pRemove)->m_pParent != nullptr)
 		{
 			if (Ptr(Ptr(pRemove)->m_pParent)->m_pLeft == pRemove)
 				Ptr(Ptr(pRemove)->m_pParent)->m_pLeft = pSwitch;
@@ -355,19 +355,19 @@ ST_INLINE typename CSet<T, TCompare, bUseCustomAllocator>::iterator CSet<T, TCom
 	Deallocate(pRemove);
 
 	// re-level and balance
-	if (pBalance != NULL)
+	if (pBalance != nullptr)
 	{
 		CNodeReference pLower = pBalance;
-		while (pLower != NULL)
+		while (pLower != nullptr)
 		{
-			if ((Ptr(pLower)->m_pLeft != NULL && Ptr(Ptr(pLower)->m_pLeft)->m_uiLevel < Ptr(pLower)->m_uiLevel - 1) ||
-				(Ptr(pLower)->m_pRight != NULL && Ptr(Ptr(pLower)->m_pRight)->m_uiLevel < Ptr(pLower)->m_uiLevel - 1))
+			if ((Ptr(pLower)->m_pLeft != nullptr && Ptr(Ptr(pLower)->m_pLeft)->m_uiLevel < Ptr(pLower)->m_uiLevel - 1) ||
+				(Ptr(pLower)->m_pRight != nullptr && Ptr(Ptr(pLower)->m_pRight)->m_uiLevel < Ptr(pLower)->m_uiLevel - 1))
 			{
 				--pLower->m_uiLevel;
 				pLower = Ptr(pLower)->m_pParent;
 			}
 			else
-				pLower = NULL;
+				pLower = nullptr;
 		}
 
 		Rebalance(pBalance);
@@ -387,12 +387,12 @@ ST_INLINE void CSet<T, TCompare, bUseCustomAllocator>::Rebalance(CNodeReference 
 	const unsigned char c_ucTestSteps = 5;
 	unsigned char ucSteps = c_ucTestSteps;
 
-	while (pCurrent != NULL)
+	while (pCurrent != nullptr)
 	{
-		if (Ptr(pCurrent)->m_pLeft != NULL && Ptr(Ptr(pCurrent)->m_pLeft)->m_uiLevel == Ptr(pCurrent)->m_uiLevel) 
+		if (Ptr(pCurrent)->m_pLeft != nullptr && Ptr(Ptr(pCurrent)->m_pLeft)->m_uiLevel == Ptr(pCurrent)->m_uiLevel)
 		{
 			// skew
-			if (Ptr(pCurrent)->m_pRight != NULL && Ptr(Ptr(pCurrent)->m_pRight)->m_uiLevel == Ptr(pCurrent)->m_uiLevel) 
+			if (Ptr(pCurrent)->m_pRight != nullptr && Ptr(Ptr(pCurrent)->m_pRight)->m_uiLevel == Ptr(pCurrent)->m_uiLevel)
 			{
 				// combo skew/split
 				++Ptr(pCurrent)->m_uiLevel;
@@ -401,11 +401,11 @@ ST_INLINE void CSet<T, TCompare, bUseCustomAllocator>::Rebalance(CNodeReference 
 			{
 				CNodeReference pSave = Ptr(pCurrent)->m_pLeft;
 				Ptr(pCurrent)->m_pLeft = Ptr(pSave)->m_pRight;
-				if (Ptr(pCurrent)->m_pLeft != NULL)
+				if (Ptr(pCurrent)->m_pLeft != nullptr)
 					Ptr(Ptr(pCurrent)->m_pLeft)->m_pParent = pCurrent;
 				Ptr(pSave)->m_pRight = pCurrent;
 				Ptr(pSave)->m_pParent = Ptr(pCurrent)->m_pParent;
-				if (Ptr(pSave)->m_pParent == NULL)
+				if (Ptr(pSave)->m_pParent == nullptr)
 					m_pRoot = pSave;
 				else if (Ptr(Ptr(pSave)->m_pParent)->m_pRight == pCurrent)
 					Ptr(Ptr(pSave)->m_pParent)->m_pRight = pSave;
@@ -417,16 +417,16 @@ ST_INLINE void CSet<T, TCompare, bUseCustomAllocator>::Rebalance(CNodeReference 
 			
 			ucSteps = c_ucTestSteps;
 		}
-		else if (Ptr(pCurrent)->m_pRight != NULL && Ptr(Ptr(pCurrent)->m_pRight)->m_pRight != NULL && Ptr(Ptr(Ptr(pCurrent)->m_pRight)->m_pRight)->m_uiLevel == Ptr(pCurrent)->m_uiLevel) 
+		else if (Ptr(pCurrent)->m_pRight != nullptr && Ptr(Ptr(pCurrent)->m_pRight)->m_pRight != nullptr && Ptr(Ptr(Ptr(pCurrent)->m_pRight)->m_pRight)->m_uiLevel == Ptr(pCurrent)->m_uiLevel)
 		{
 			// split
 			CNodeReference pSave = Ptr(pCurrent)->m_pRight;
 			Ptr(pCurrent)->m_pRight = Ptr(pSave)->m_pLeft;
-			if (Ptr(pCurrent)->m_pRight != NULL)
+			if (Ptr(pCurrent)->m_pRight != nullptr)
 				Ptr(Ptr(pCurrent)->m_pRight)->m_pParent = pCurrent;
 			Ptr(pSave)->m_pLeft = pCurrent;
 			Ptr(pSave)->m_pParent = Ptr(pCurrent)->m_pParent;
-			if (Ptr(pSave)->m_pParent == NULL)
+			if (Ptr(pSave)->m_pParent == nullptr)
 				m_pRoot = pSave;
 			else if (Ptr(Ptr(pSave)->m_pParent)->m_pRight == pCurrent)
 				Ptr(Ptr(pSave)->m_pParent)->m_pRight = pSave;
@@ -456,8 +456,8 @@ ST_INLINE typename CSet<T, TCompare, bUseCustomAllocator>::iterator CSet<T, TCom
 	TCompare tCompare;
 
 	CNodeReference pCurrent = m_pRoot;
-	CNodeReference pParent = NULL;
-	while (pCurrent != NULL && tData != Ptr(pCurrent)->m_tData)
+	CNodeReference pParent = nullptr;
+	while (pCurrent != nullptr && tData != Ptr(pCurrent)->m_tData)
 	{
 		pParent = pCurrent;
 		if (tCompare(tData, Ptr(pCurrent)->m_tData))
@@ -466,9 +466,9 @@ ST_INLINE typename CSet<T, TCompare, bUseCustomAllocator>::iterator CSet<T, TCom
 			pCurrent = Ptr(pCurrent)->m_pRight;
 	}
 
-	if (pCurrent == NULL)
+	if (pCurrent == nullptr)
 	{
-		while (pParent != NULL && tCompare(tData, Ptr(pParent)->m_tData))
+		while (pParent != nullptr && tCompare(tData, Ptr(pParent)->m_tData))
 			pParent = Ptr(pParent)->m_pParent;
 		return iterator(pParent, &m_cPool);
 	}
@@ -595,12 +595,12 @@ ST_INLINE bool CSet<T, TCompare, bUseCustomAllocator>::iterator::operator != (co
 template <class T, class TCompare, bool bUseCustomAllocator>
 ST_INLINE typename CSet<T, TCompare, bUseCustomAllocator>::iterator& CSet<T, TCompare, bUseCustomAllocator>::iterator::operator ++ (void) 
 { 
-	assert(m_pNode != NULL); 
+	assert(m_pNode != nullptr);
 
-	if (Ptr( )->m_pRight == NULL)
+	if (Ptr( )->m_pRight == nullptr)
 	{
-		CNodeReference pLastNode = NULL;
-		while (m_pNode != NULL && pLastNode == Ptr( )->m_pRight)
+		CNodeReference pLastNode = nullptr;
+		while (m_pNode != nullptr && pLastNode == Ptr( )->m_pRight)
 		{	
 			pLastNode = m_pNode;
 			m_pNode = Ptr( )->m_pParent;
@@ -609,7 +609,7 @@ ST_INLINE typename CSet<T, TCompare, bUseCustomAllocator>::iterator& CSet<T, TCo
 	else
 	{
 		m_pNode = Ptr( )->m_pRight;
-		while (Ptr( )->m_pLeft != NULL)
+		while (Ptr( )->m_pLeft != nullptr)
 			m_pNode = Ptr( )->m_pLeft;
 	}
 
@@ -623,12 +623,12 @@ ST_INLINE typename CSet<T, TCompare, bUseCustomAllocator>::iterator& CSet<T, TCo
 template <class T, class TCompare, bool bUseCustomAllocator>
 ST_INLINE typename CSet<T, TCompare, bUseCustomAllocator>::iterator& CSet<T, TCompare, bUseCustomAllocator>::iterator::operator -- (void) 
 { 
-	assert(m_pNode != NULL); 
+	assert(m_pNode != nullptr);
 
-	if (Ptr( )->m_pLeft == NULL)
+	if (Ptr( )->m_pLeft == nullptr)
 	{
-		CNodeReference pLastNode = NULL;
-		while (m_pNode != NULL && pLastNode == Ptr( )->m_pLeft)
+		CNodeReference pLastNode = nullptr;
+		while (m_pNode != nullptr && pLastNode == Ptr( )->m_pLeft)
 		{	
 			pLastNode = m_pNode;
 			m_pNode = Ptr( )->m_pParent;
@@ -637,7 +637,7 @@ ST_INLINE typename CSet<T, TCompare, bUseCustomAllocator>::iterator& CSet<T, TCo
 	else
 	{
 		m_pNode = Ptr( )->m_pLeft;
-		while (Ptr( )->m_pRight != NULL)
+		while (Ptr( )->m_pRight != nullptr)
 			m_pNode = Ptr( )->m_pRight;
 	}
 
@@ -671,7 +671,7 @@ ST_INLINE T* CSet<T, TCompare, bUseCustomAllocator>::iterator::operator -> (void
 template <class T, class TCompare, bool bUseCustomAllocator>
 ST_INLINE typename CSet<T, TCompare, bUseCustomAllocator>::CNode* CSet<T, TCompare, bUseCustomAllocator>::iterator::Ptr(void) const 
 { 
-	return (m_pPool ? (CNode*)m_pPool->ResolveBlock(m_pNode) : NULL);
+	return (m_pPool ? (CNode*)m_pPool->ResolveBlock(m_pNode) : nullptr);
 }
 
 
@@ -682,8 +682,8 @@ ST_INLINE typename CSet<T, TCompare, bUseCustomAllocator>::CNode* CSet<T, TCompa
 template <class T, class TCompare, bool bUseCustomAllocator>
 ST_INLINE CSet<T, TCompare, bUseCustomAllocator>::CNode::CNode(const T& tData, CNodeReference pParent) :
 	m_tData(tData),
-	m_pLeft(NULL),
-	m_pRight(NULL),
+	m_pLeft(nullptr),
+	m_pRight(nullptr),
 	m_pParent(pParent),
 	m_uiLevel(0)
 {
@@ -696,18 +696,18 @@ ST_INLINE CSet<T, TCompare, bUseCustomAllocator>::CNode::CNode(const T& tData, C
 template <class T, class TCompare, bool bUseCustomAllocator>
 ST_INLINE void CSet<T, TCompare, bUseCustomAllocator>::CNode::DeleteChildren(CSet* pSet)
 {	
-	if (m_pLeft != NULL)
+	if (m_pLeft != nullptr)
 	{
 		((CNode*)pSet->m_cPool.ResolveBlock(m_pLeft))->DeleteChildren(pSet);
 		pSet->Deallocate(m_pLeft);
 	}
-	m_pLeft = NULL;
+	m_pLeft = nullptr;
 
-	if (m_pRight != NULL)
+	if (m_pRight != nullptr)
 	{
 		((CNode*)pSet->m_cPool.ResolveBlock(m_pRight))->DeleteChildren(pSet);
 		pSet->Deallocate(m_pRight);
 	}
-	m_pRight = NULL;
+	m_pRight = nullptr;
 }
 

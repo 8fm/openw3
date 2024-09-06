@@ -27,7 +27,7 @@
 
 template <class TKey, class TValue, class TCompare, bool bUseCustomAllocator>
 ST_INLINE CMap<TKey, TValue, TCompare, bUseCustomAllocator>::CMap(size_t uiStartingPoolSize) :
-	m_pRoot(NULL),
+	m_pRoot(nullptr),
 	m_uiSize(0),
 	m_cPool(sizeof(CNode), uiStartingPoolSize)
 {
@@ -39,7 +39,7 @@ ST_INLINE CMap<TKey, TValue, TCompare, bUseCustomAllocator>::CMap(size_t uiStart
 
 template <class TKey, class TValue, class TCompare, bool bUseCustomAllocator>
 ST_INLINE CMap<TKey, TValue, TCompare, bUseCustomAllocator>::CMap(const CMap& cRight) :
-	m_pRoot(NULL),
+	m_pRoot(nullptr),
 	m_uiSize(0),
 	m_cPool(sizeof(CNode), cRight.m_cPool.size( ))
 {
@@ -63,11 +63,11 @@ ST_INLINE CMap<TKey, TValue, TCompare, bUseCustomAllocator>::~CMap(void)
 template <class TKey, class TValue, class TCompare, bool bUseCustomAllocator>
 ST_INLINE void CMap<TKey, TValue, TCompare, bUseCustomAllocator>::clear(void)
 {
-	if (m_pRoot != NULL)
+	if (m_pRoot != nullptr)
 	{
 		Ptr(m_pRoot)->DeleteChildren(this);
 		Deallocate(m_pRoot);
-		m_pRoot = NULL;
+		m_pRoot = nullptr;
 	}
 
 	m_uiSize = 0;
@@ -113,8 +113,8 @@ ST_INLINE TValue& CMap<TKey, TValue, TCompare, bUseCustomAllocator>::operator[](
 	TCompare tCompare;
 
 	CNodeReference pCurrent = m_pRoot;
-	CNodeReference pParent = NULL;
-	while (pCurrent != NULL && tKey != Ptr(pCurrent)->first)
+	CNodeReference pParent = nullptr;
+	while (pCurrent != nullptr && tKey != Ptr(pCurrent)->first)
 	{
 		pParent = pCurrent;
 		if (tCompare(tKey, Ptr(pCurrent)->first))
@@ -123,11 +123,11 @@ ST_INLINE TValue& CMap<TKey, TValue, TCompare, bUseCustomAllocator>::operator[](
 			pCurrent = Ptr(pCurrent)->m_pRight;
 	}
 
-	if (pCurrent == NULL)
+	if (pCurrent == nullptr)
 	{
 		pCurrent = Allocate(tKey, pParent);
 
-		if (pParent == NULL)
+		if (pParent == nullptr)
 			m_pRoot = pCurrent;
 		else if (tCompare(tKey, Ptr(pParent)->first))
 			Ptr(pParent)->m_pLeft = pCurrent;
@@ -150,9 +150,9 @@ ST_INLINE CMap<TKey, TValue, TCompare, bUseCustomAllocator>& CMap<TKey, TValue, 
 {
 	clear( );
 
-	if (cRight.m_pRoot != NULL)
+	if (cRight.m_pRoot != nullptr)
 	{
-		m_pRoot = Allocate(cRight.Ptr(cRight.m_pRoot)->first, NULL);
+		m_pRoot = Allocate(cRight.Ptr(cRight.m_pRoot)->first, nullptr);
 		Ptr(m_pRoot)->second = cRight.Ptr(cRight.m_pRoot)->second;
 		Ptr(m_pRoot)->m_uiLevel = cRight.Ptr(cRight.m_pRoot)->m_uiLevel;
 		++m_uiSize;
@@ -169,7 +169,7 @@ ST_INLINE CMap<TKey, TValue, TCompare, bUseCustomAllocator>& CMap<TKey, TValue, 
 			aThis.pop_back( );
 			aRight.pop_back( );
 
-			if (cRight.Ptr(pRight)->m_pLeft != NULL)
+			if (cRight.Ptr(pRight)->m_pLeft != nullptr)
 			{
 				Ptr(pThis)->m_pLeft = Allocate(cRight.Ptr(cRight.Ptr(pRight)->m_pLeft)->first, pThis);
 				Ptr(Ptr(pThis)->m_pLeft)->second = cRight.Ptr(cRight.Ptr(pRight)->m_pLeft)->second;
@@ -179,7 +179,7 @@ ST_INLINE CMap<TKey, TValue, TCompare, bUseCustomAllocator>& CMap<TKey, TValue, 
 				++m_uiSize;
 			}
 
-			if (cRight.Ptr(pRight)->m_pRight != NULL)
+			if (cRight.Ptr(pRight)->m_pRight != nullptr)
 			{
 				Ptr(pThis)->m_pRight = Allocate(cRight.Ptr(cRight.Ptr(pRight)->m_pRight)->first, pThis);
 				Ptr(Ptr(pThis)->m_pRight)->second = cRight.Ptr(cRight.Ptr(pRight)->m_pRight)->second;
@@ -201,11 +201,11 @@ ST_INLINE CMap<TKey, TValue, TCompare, bUseCustomAllocator>& CMap<TKey, TValue, 
 template <class TKey, class TValue, class TCompare, bool bUseCustomAllocator>
 ST_INLINE typename CMap<TKey, TValue, TCompare, bUseCustomAllocator>::iterator CMap<TKey, TValue, TCompare, bUseCustomAllocator>::begin(void) 
 { 
-	if (m_pRoot == NULL)
+	if (m_pRoot == nullptr)
 		return iterator( );
 	
 	CNodeReference pCurrent = m_pRoot;
-	while (Ptr(pCurrent)->m_pLeft != NULL)
+	while (Ptr(pCurrent)->m_pLeft != nullptr)
 		pCurrent = Ptr(pCurrent)->m_pLeft;
 
 	return iterator(pCurrent, &m_cPool); 
@@ -218,11 +218,11 @@ ST_INLINE typename CMap<TKey, TValue, TCompare, bUseCustomAllocator>::iterator C
 template <class TKey, class TValue, class TCompare, bool bUseCustomAllocator>
 ST_INLINE typename CMap<TKey, TValue, TCompare, bUseCustomAllocator>::iterator CMap<TKey, TValue, TCompare, bUseCustomAllocator>::rbegin(void) 
 { 
-	if (m_pRoot == NULL)
+	if (m_pRoot == nullptr)
 		return iterator( );
 	
 	CNodeReference pCurrent = m_pRoot;
-	while (Ptr(pCurrent)->m_pRight != NULL)
+	while (Ptr(pCurrent)->m_pRight != nullptr)
 		pCurrent = Ptr(pCurrent)->m_pRight;
 
 	return iterator(pCurrent, &m_cPool); 
@@ -278,7 +278,7 @@ ST_INLINE typename CMap<TKey, TValue, TCompare, bUseCustomAllocator>::iterator C
 	TCompare tCompare;
 	CNodeReference pCurrent = m_pRoot;
 
-	while (pCurrent != NULL && Ptr(pCurrent)->first != tKey)
+	while (pCurrent != nullptr && Ptr(pCurrent)->first != tKey)
 	{
 		if (tCompare(tKey, Ptr(pCurrent)->first))
 			pCurrent = Ptr(pCurrent)->m_pLeft;
@@ -298,9 +298,9 @@ ST_INLINE typename CMap<TKey, TValue, TCompare, bUseCustomAllocator>::iterator C
 {
 	#ifdef SPEEDTREE_ITERATOR_DEBUGGING
 		// make sure iterator is part of this map
-		assert(iterWhere.m_pNode != NULL);
+		assert(iterWhere.m_pNode != nullptr);
 		CNodeReference pRoot = iterWhere.m_pNode;
-		while (Ptr(pRoot)->m_pParent != NULL)
+		while (Ptr(pRoot)->m_pParent != nullptr)
 			pRoot = Ptr(pRoot)->m_pParent;
 		assert(pRoot == m_pRoot);
 	#endif
@@ -310,29 +310,29 @@ ST_INLINE typename CMap<TKey, TValue, TCompare, bUseCustomAllocator>::iterator C
 
 	// delete like a normal binary search tree
 	bool bRootDelete = (pRemove == m_pRoot);
-	CNodeReference pBalance = NULL;
-	if (Ptr(pRemove)->m_pLeft == NULL && Ptr(pRemove)->m_pRight == NULL)
+	CNodeReference pBalance = nullptr;
+	if (Ptr(pRemove)->m_pLeft == nullptr && Ptr(pRemove)->m_pRight == nullptr)
 	{
 		// has no children
 		pBalance = Ptr(pRemove)->m_pParent;
-		if (Ptr(pRemove)->m_pParent != NULL)
+		if (Ptr(pRemove)->m_pParent != nullptr)
 		{
 			if (Ptr(Ptr(pRemove)->m_pParent)->m_pLeft == pRemove)
-				Ptr(Ptr(pRemove)->m_pParent)->m_pLeft = NULL;
+				Ptr(Ptr(pRemove)->m_pParent)->m_pLeft = nullptr;
 			else
-				Ptr(Ptr(pRemove)->m_pParent)->m_pRight = NULL;
+				Ptr(Ptr(pRemove)->m_pParent)->m_pRight = nullptr;
 		}
 		if (bRootDelete)
-			m_pRoot = NULL;
+			m_pRoot = nullptr;
 	}
-	else if (Ptr(pRemove)->m_pLeft == NULL || Ptr(pRemove)->m_pRight == NULL)
+	else if (Ptr(pRemove)->m_pLeft == nullptr || Ptr(pRemove)->m_pRight == nullptr)
 	{
 		// has only one child
 		CNodeReference pChild = Ptr(pRemove)->m_pLeft;
-		if (pChild == NULL)
+		if (pChild == nullptr)
 			pChild = Ptr(pRemove)->m_pRight;
 		pBalance = pChild;
-		if (Ptr(pRemove)->m_pParent != NULL)
+		if (Ptr(pRemove)->m_pParent != nullptr)
 		{
 			if (Ptr(Ptr(pRemove)->m_pParent)->m_pLeft == pRemove)
 				Ptr(Ptr(pRemove)->m_pParent)->m_pLeft = pChild;
@@ -347,13 +347,13 @@ ST_INLINE typename CMap<TKey, TValue, TCompare, bUseCustomAllocator>::iterator C
 	{
 		// has both children
 		CNodeReference pSwitch = Ptr(pRemove)->m_pLeft;
-		while (Ptr(pSwitch)->m_pRight != NULL)
+		while (Ptr(pSwitch)->m_pRight != nullptr)
 			pSwitch = Ptr(pSwitch)->m_pRight;
 
 		if (pSwitch == Ptr(pRemove)->m_pLeft)
 		{
 			Ptr(pSwitch)->m_pRight = Ptr(pRemove)->m_pRight;
-			if (Ptr(pSwitch)->m_pRight != NULL)
+			if (Ptr(pSwitch)->m_pRight != nullptr)
 				Ptr(Ptr(pSwitch)->m_pRight)->m_pParent = pSwitch;
 			pBalance = pSwitch;
 		}
@@ -361,18 +361,18 @@ ST_INLINE typename CMap<TKey, TValue, TCompare, bUseCustomAllocator>::iterator C
 		{
 			CNodeReference pParent = Ptr(pSwitch)->m_pParent;
 			Ptr(pParent)->m_pRight = Ptr(pSwitch)->m_pLeft;
-			if (Ptr(pParent)->m_pRight != NULL)
+			if (Ptr(pParent)->m_pRight != nullptr)
 				Ptr(Ptr(pParent)->m_pRight)->m_pParent = pParent;
 
 			Ptr(pSwitch)->m_pLeft = Ptr(pRemove)->m_pLeft;
 			Ptr(pSwitch)->m_pRight = Ptr(pRemove)->m_pRight;
 			Ptr(Ptr(pSwitch)->m_pLeft)->m_pParent = pSwitch;
-			if (Ptr(pSwitch)->m_pRight != NULL)
+			if (Ptr(pSwitch)->m_pRight != nullptr)
 				Ptr(Ptr(pSwitch)->m_pRight)->m_pParent = pSwitch;
 			pBalance = pParent;
 		}
 
-		if (Ptr(pRemove)->m_pParent != NULL)
+		if (Ptr(pRemove)->m_pParent != nullptr)
 		{
 			if (Ptr(Ptr(pRemove)->m_pParent)->m_pLeft == pRemove)
 				Ptr(Ptr(pRemove)->m_pParent)->m_pLeft = pSwitch;
@@ -388,19 +388,19 @@ ST_INLINE typename CMap<TKey, TValue, TCompare, bUseCustomAllocator>::iterator C
 	Deallocate(pRemove);
 
 	// re-level and balance
-	if (pBalance != NULL)
+	if (pBalance != nullptr)
 	{
 		CNodeReference pLower = pBalance;
-		while (pLower != NULL)
+		while (pLower != nullptr)
 		{
-			if ((Ptr(pLower)->m_pLeft != NULL && Ptr(Ptr(pLower)->m_pLeft)->m_uiLevel < Ptr(pLower)->m_uiLevel - 1) ||
-				(Ptr(pLower)->m_pRight != NULL && Ptr(Ptr(pLower)->m_pRight)->m_uiLevel < Ptr(pLower)->m_uiLevel - 1))
+			if ((Ptr(pLower)->m_pLeft != nullptr && Ptr(Ptr(pLower)->m_pLeft)->m_uiLevel < Ptr(pLower)->m_uiLevel - 1) ||
+				(Ptr(pLower)->m_pRight != nullptr && Ptr(Ptr(pLower)->m_pRight)->m_uiLevel < Ptr(pLower)->m_uiLevel - 1))
 			{
 				--Ptr(pLower)->m_uiLevel;
 				pLower = Ptr(pLower)->m_pParent;
 			}
 			else
-				pLower = NULL;
+				pLower = nullptr;
 		}
 
 		Rebalance(pBalance);
@@ -420,8 +420,8 @@ ST_INLINE typename CMap<TKey, TValue, TCompare, bUseCustomAllocator>::iterator C
 	TCompare tCompare;
 
 	CNodeReference pCurrent = m_pRoot;
-	CNodeReference pParent = NULL;
-	while (pCurrent != NULL && tKey != Ptr(pCurrent)->first)
+	CNodeReference pParent = nullptr;
+	while (pCurrent != nullptr && tKey != Ptr(pCurrent)->first)
 	{
 		pParent = pCurrent;
 		if (tCompare(tKey, Ptr(pCurrent)->first))
@@ -430,9 +430,9 @@ ST_INLINE typename CMap<TKey, TValue, TCompare, bUseCustomAllocator>::iterator C
 			pCurrent = Ptr(pCurrent)->m_pRight;
 	}
 
-	if (pCurrent == NULL)
+	if (pCurrent == nullptr)
 	{
-		while (pParent != NULL && tCompare(tKey, Ptr(pParent)->first))
+		while (pParent != nullptr && tCompare(tKey, Ptr(pParent)->first))
 			pParent = Ptr(pParent)->m_pParent;
 		return iterator(pParent, &m_cPool);
 	}
@@ -581,12 +581,12 @@ ST_INLINE void CMap<TKey, TValue, TCompare, bUseCustomAllocator>::Rebalance(CNod
 	const unsigned char c_ucTestSteps = 5;
 	unsigned char ucSteps = c_ucTestSteps;
 
-	while (pCurrent != NULL)
+	while (pCurrent != nullptr)
 	{
-		if (Ptr(pCurrent)->m_pLeft != NULL && Ptr(Ptr(pCurrent)->m_pLeft)->m_uiLevel == Ptr(pCurrent)->m_uiLevel) 
+		if (Ptr(pCurrent)->m_pLeft != nullptr && Ptr(Ptr(pCurrent)->m_pLeft)->m_uiLevel == Ptr(pCurrent)->m_uiLevel)
 		{
 			// skew
-			if (Ptr(pCurrent)->m_pRight != NULL && Ptr(Ptr(pCurrent)->m_pRight)->m_uiLevel == Ptr(pCurrent)->m_uiLevel) 
+			if (Ptr(pCurrent)->m_pRight != nullptr && Ptr(Ptr(pCurrent)->m_pRight)->m_uiLevel == Ptr(pCurrent)->m_uiLevel)
 			{
 				// combo skew/split
 				++Ptr(pCurrent)->m_uiLevel;
@@ -595,11 +595,11 @@ ST_INLINE void CMap<TKey, TValue, TCompare, bUseCustomAllocator>::Rebalance(CNod
 			{
 				CNodeReference pSave = Ptr(pCurrent)->m_pLeft;
 				Ptr(pCurrent)->m_pLeft = Ptr(pSave)->m_pRight;
-				if (Ptr(pCurrent)->m_pLeft != NULL)
+				if (Ptr(pCurrent)->m_pLeft != nullptr)
 					Ptr(Ptr(pCurrent)->m_pLeft)->m_pParent = pCurrent;
 				Ptr(pSave)->m_pRight = pCurrent;
 				Ptr(pSave)->m_pParent = Ptr(pCurrent)->m_pParent;
-				if (Ptr(pSave)->m_pParent == NULL)
+				if (Ptr(pSave)->m_pParent == nullptr)
 					m_pRoot = pSave;
 				else if (Ptr(Ptr(pSave)->m_pParent)->m_pRight == pCurrent)
 					Ptr(Ptr(pSave)->m_pParent)->m_pRight = pSave;
@@ -611,16 +611,16 @@ ST_INLINE void CMap<TKey, TValue, TCompare, bUseCustomAllocator>::Rebalance(CNod
 			
 			ucSteps = c_ucTestSteps;
 		}
-		else if (Ptr(pCurrent)->m_pRight != NULL && Ptr(Ptr(pCurrent)->m_pRight)->m_pRight != NULL && Ptr(Ptr(Ptr(pCurrent)->m_pRight)->m_pRight)->m_uiLevel == Ptr(pCurrent)->m_uiLevel) 
+		else if (Ptr(pCurrent)->m_pRight != nullptr && Ptr(Ptr(pCurrent)->m_pRight)->m_pRight != nullptr && Ptr(Ptr(Ptr(pCurrent)->m_pRight)->m_pRight)->m_uiLevel == Ptr(pCurrent)->m_uiLevel)
 		{
 			// split
 			CNodeReference pSave = Ptr(pCurrent)->m_pRight;
 			Ptr(pCurrent)->m_pRight = Ptr(pSave)->m_pLeft;
-			if (Ptr(pCurrent)->m_pRight != NULL)
+			if (Ptr(pCurrent)->m_pRight != nullptr)
 				Ptr(Ptr(pCurrent)->m_pRight)->m_pParent = pCurrent;
 			Ptr(pSave)->m_pLeft = pCurrent;
 			Ptr(pSave)->m_pParent = Ptr(pCurrent)->m_pParent;
-			if (Ptr(pSave)->m_pParent == NULL)
+			if (Ptr(pSave)->m_pParent == nullptr)
 				m_pRoot = pSave;
 			else if (Ptr(Ptr(pSave)->m_pParent)->m_pRight == pCurrent)
 				Ptr(Ptr(pSave)->m_pParent)->m_pRight = pSave;
@@ -658,12 +658,12 @@ ST_INLINE CMap<TKey, TValue, TCompare, bUseCustomAllocator>::iterator_base::iter
 template <class TKey, class TValue, class TCompare, bool bUseCustomAllocator>
 ST_INLINE typename CMap<TKey, TValue, TCompare, bUseCustomAllocator>::iterator_base& CMap<TKey, TValue, TCompare, bUseCustomAllocator>::iterator_base::operator ++ (void) 
 { 
-	assert(m_pNode != NULL); 
+	assert(m_pNode != nullptr);
 
-	if (Ptr( )->m_pRight == NULL)
+	if (Ptr( )->m_pRight == nullptr)
 	{
-		CNodeReference pLastNode = NULL;
-		while (m_pNode != NULL && pLastNode == Ptr( )->m_pRight)
+		CNodeReference pLastNode = nullptr;
+		while (m_pNode != nullptr && pLastNode == Ptr( )->m_pRight)
 		{	
 			pLastNode = m_pNode;
 			m_pNode = Ptr( )->m_pParent;
@@ -672,7 +672,7 @@ ST_INLINE typename CMap<TKey, TValue, TCompare, bUseCustomAllocator>::iterator_b
 	else
 	{
 		m_pNode = Ptr( )->m_pRight;
-		while (Ptr( )->m_pLeft != NULL)
+		while (Ptr( )->m_pLeft != nullptr)
 			m_pNode = Ptr( )->m_pLeft;
 	}
 
@@ -686,12 +686,12 @@ ST_INLINE typename CMap<TKey, TValue, TCompare, bUseCustomAllocator>::iterator_b
 template <class TKey, class TValue, class TCompare, bool bUseCustomAllocator>
 ST_INLINE typename CMap<TKey, TValue, TCompare, bUseCustomAllocator>::iterator_base& CMap<TKey, TValue, TCompare, bUseCustomAllocator>::iterator_base::operator -- (void) 
 { 
-	assert(m_pNode != NULL); 
+	assert(m_pNode != nullptr);
 
-	if (Ptr( )->m_pLeft == NULL)
+	if (Ptr( )->m_pLeft == nullptr)
 	{
-		CNodeReference pLastNode = NULL;
-		while (m_pNode != NULL && pLastNode == Ptr( )->m_pLeft)
+		CNodeReference pLastNode = nullptr;
+		while (m_pNode != nullptr && pLastNode == Ptr( )->m_pLeft)
 		{	
 			pLastNode = m_pNode;
 			m_pNode = Ptr( )->m_pParent;
@@ -700,7 +700,7 @@ ST_INLINE typename CMap<TKey, TValue, TCompare, bUseCustomAllocator>::iterator_b
 	else
 	{
 		m_pNode = Ptr( )->m_pLeft;
-		while (Ptr( )->m_pRight != NULL)
+		while (Ptr( )->m_pRight != nullptr)
 			m_pNode = Ptr( )->m_pRight;
 	}
 
@@ -734,7 +734,7 @@ ST_INLINE bool CMap<TKey, TValue, TCompare, bUseCustomAllocator>::iterator_base:
 template <class TKey, class TValue, class TCompare, bool bUseCustomAllocator>
 ST_INLINE typename CMap<TKey, TValue, TCompare, bUseCustomAllocator>::CNode* CMap<TKey, TValue, TCompare, bUseCustomAllocator>::iterator_base::Ptr(void) const 
 { 
-	return (m_pPool ? (CNode*)m_pPool->ResolveBlock(m_pNode) : NULL);
+	return (m_pPool ? (CNode*)m_pPool->ResolveBlock(m_pNode) : nullptr);
 }
 
 
@@ -814,8 +814,8 @@ ST_INLINE typename CMap<TKey, TValue, TCompare, bUseCustomAllocator>::CNode cons
 template <class TKey, class TValue, class TCompare, bool bUseCustomAllocator>
 ST_INLINE CMap<TKey, TValue, TCompare, bUseCustomAllocator>::CNode::CNode(const TKey& tKey, CNodeReference pParent) :
 	first(tKey),
-	m_pLeft(NULL),
-	m_pRight(NULL),
+	m_pLeft(nullptr),
+	m_pRight(nullptr),
 	m_pParent(pParent),
 	m_uiLevel(0)
 {
@@ -828,13 +828,13 @@ ST_INLINE CMap<TKey, TValue, TCompare, bUseCustomAllocator>::CNode::CNode(const 
 template <class TKey, class TValue, class TCompare, bool bUseCustomAllocator>
 inline void CMap<TKey, TValue, TCompare, bUseCustomAllocator>::CNode::DeleteChildren(CMap* pMap)
 {	
-	if (m_pLeft != NULL)
+	if (m_pLeft != nullptr)
 	{
 		((CNode*)pMap->m_cPool.ResolveBlock(m_pLeft))->DeleteChildren(pMap);
 		pMap->Deallocate(m_pLeft);
 	}
 
-	if (m_pRight != NULL)
+	if (m_pRight != nullptr)
 	{
 		((CNode*)pMap->m_cPool.ResolveBlock(m_pRight))->DeleteChildren(pMap);
 		pMap->Deallocate(m_pRight);

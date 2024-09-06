@@ -76,7 +76,7 @@ namespace SpeedTree
 			{
 			friend class CSet;
 			public:
-									iterator(CNodeReference pNode = NULL, const CPool* pPool = NULL);
+									iterator(CNodeReference pNode = nullptr, const CPool* pPool = nullptr);
 				bool				operator == (const iterator& cRight) const;
 				bool				operator != (const iterator& cRight) const;
 				iterator&			operator ++ (void);
@@ -108,7 +108,7 @@ namespace SpeedTree
 
 	protected:
 			void					Rebalance(CNodeReference pCurrent);
-			CNodeReference			Allocate(const T& tData, CNodeReference pParent = NULL);
+			CNodeReference			Allocate(const T& tData, CNodeReference pParent = nullptr);
 			void					Deallocate(CNodeReference pData);
 			CNode*					Ptr(CNodeReference pNode) const;
 
@@ -117,7 +117,7 @@ namespace SpeedTree
 			friend class CSet;
 			friend class iterator;
 			public:
-								CNode(const T& tData, CNodeReference pParent = NULL);
+								CNode(const T& tData, CNodeReference pParent = nullptr);
 				T				m_tData;
 
 			private:

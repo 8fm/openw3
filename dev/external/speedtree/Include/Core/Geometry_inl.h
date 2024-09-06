@@ -19,12 +19,12 @@
 
 ST_INLINE SVerticalBillboards::SVerticalBillboards( ) :
 	m_nNumBillboards(0),
-	m_pTexCoords(NULL),
-	m_pRotated(NULL),
+	m_pTexCoords(nullptr),
+	m_pRotated(nullptr),
 	m_nNumCutoutVertices(0),
-    m_pCutoutVertices(NULL),
+	m_pCutoutVertices(nullptr),
 	m_nNumCutoutIndices(0),
-	m_pCutoutIndices(NULL)
+	m_pCutoutIndices(nullptr)
 {
 	m_fWidth = m_fTopPos = m_fBottomPos = -1.0f;
 }
@@ -36,8 +36,8 @@ ST_INLINE SVerticalBillboards::SVerticalBillboards( ) :
 ST_INLINE SVerticalBillboards::~SVerticalBillboards( )
 {
 	#ifndef NDEBUG
-		m_pRotated = NULL; // allocated elsewhere
-		m_pTexCoords = NULL; // allocated elsewhere
+		m_pRotated = nullptr; // allocated elsewhere
+		m_pTexCoords = nullptr; // allocated elsewhere
 		m_fWidth = m_fTopPos = m_fBottomPos = -1.0f;
 		m_nNumBillboards = 0;
 	#endif
@@ -96,13 +96,13 @@ ST_INLINE SCollisionObject::~SCollisionObject( )
 //  SDrawCall::SDrawCall
 
 ST_INLINE SDrawCall::SDrawCall( ) :
-	m_pRenderState(NULL),
+	m_pRenderState(nullptr),
 	m_nRenderStateIndex(-1),
 	m_nNumVertices(0),
-	m_pVertexData(NULL),
+	m_pVertexData(nullptr),
 	m_nNumIndices(0),
 	m_b32BitIndices(false),
-	m_pIndexData(NULL)
+	m_pIndexData(nullptr)
 {
 }
 
@@ -134,9 +134,9 @@ ST_INLINE SBone::SBone( ) :
 
 ST_INLINE SLod::SLod( ) :
 	m_nNumDrawCalls(0),
-	m_pDrawCalls(NULL),
+	m_pDrawCalls(nullptr),
 	m_nNumBones(0),
-	m_pBones(NULL)
+	m_pBones(nullptr)
 {
 }
 
@@ -156,7 +156,7 @@ ST_INLINE SGeometry::SGeometry( ) :
 	m_nNum3dRenderStates(0),
 	m_bShadowCastIncluded(false),
 	m_nNumLods(0),
-	m_pLods(NULL)
+	m_pLods(nullptr)
 {
 	memset(m_p3dRenderStates, 0, sizeof(m_p3dRenderStates));
 }

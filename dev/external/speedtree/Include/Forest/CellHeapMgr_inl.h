@@ -59,7 +59,7 @@ inline void CCellHeapMgr<T>::Init(st_int32 nMaxNumCells, st_int32 nMaxNumInstanc
 template <typename T>
 inline T* CCellHeapMgr<T>::CheckOut(void)
 {
-	T* pOutgoingCell = NULL;
+	T* pOutgoingCell = nullptr;
 
 	// LAVA++
 	// We need the ability to disable instance buffer reservations, since they use too much memory when lots of cells are visible

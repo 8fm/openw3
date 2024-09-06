@@ -101,7 +101,7 @@ namespace SpeedTree
 			bSuccess = (fopen_s(pFile, szFilename, szMode) == 0);
 		#else
 			*pFile = fopen(szFilename, szMode);
-			bSuccess = (*pFile != NULL);
+			bSuccess = (*pFile != nullptr);
 		#endif
 
 		return bSuccess;

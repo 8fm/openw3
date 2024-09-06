@@ -28,7 +28,7 @@ inline CGeometryBufferRI_t::CGeometryBufferRI(st_bool bDynamicVB, st_bool bDynam
 	, m_nVertexHeapHandle(-1)
 	, m_nIndexHeapHandle(-1)
 	, m_pResourceId(pResourceId)
-	, m_pTechnique(NULL)
+	, m_pTechnique(nullptr)
 {
 	m_aVertexData.SetHeapDescription("CGeometryBufferRI::CArray (vertices)");
 	m_aIndexData.SetHeapDescription("CGeometryBufferRI::CArray (indices)");
@@ -148,7 +148,7 @@ inline st_bool CGeometryBufferRI_t::CreateUninitializedVertexBuffer(st_uint32 ui
 	#endif
 
             // always pass true for dynamic when creating an unitialized buffer
-			bSuccess = m_tGeometryBufferPolicy.CreateVertexBuffer(true, NULL, uiNumVertices, m_sVertexDecl.m_uiVertexSize);
+			bSuccess = m_tGeometryBufferPolicy.CreateVertexBuffer(true, nullptr, uiNumVertices, m_sVertexDecl.m_uiVertexSize);
 			if (bSuccess)
 			{
 				m_uiNumVertices = uiNumVertices;
@@ -199,7 +199,7 @@ inline st_bool CGeometryBufferRI_t::OverwriteVertices(const void* pVertexData, s
 CGeometryBufferRI_TemplateList
 	inline void* CGeometryBufferRI_t::LockForWrite(st_int32 uiBufferSize)
 {
-	void* pBuffer = NULL;
+	void* pBuffer = nullptr;
 
 	if (m_tGeometryBufferPolicy.VertexBufferIsValid( ))
 		pBuffer = m_tGeometryBufferPolicy.LockForWrite(uiBufferSize);
@@ -439,7 +439,7 @@ inline st_bool CGeometryBufferRI_t::CreateUninitializedIndexBuffer(st_uint32 uiN
 			if (m_uiIndexSize > 0)
 			{
                 // always pass true for dynamic when creating an unitialized buffer
-				bSuccess = m_tGeometryBufferPolicy.CreateIndexBuffer(true, NULL, uiNumIndices);
+				bSuccess = m_tGeometryBufferPolicy.CreateIndexBuffer(true, nullptr, uiNumIndices);
 
 				if (bSuccess)
 				{

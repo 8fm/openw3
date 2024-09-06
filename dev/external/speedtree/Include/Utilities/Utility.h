@@ -273,7 +273,7 @@ namespace SpeedTree
 	///////////////////////////////////////////////////////////////////////
 	//  PrintSpeedTreeError
 
-	inline void PrintSpeedTreeErrors(const char* pLocation = NULL)
+	inline void PrintSpeedTreeErrors(const char* pLocation = nullptr)
 	{
 		const char* pError = SpeedTree::CCore::GetError( );
 		while (pError)
@@ -292,7 +292,7 @@ namespace SpeedTree
 		///////////////////////////////////////////////////////////////////////
 		//  PrintOpenGLErrors
 
-		inline void PrintOpenGLErrors(const char* pLocation = NULL)
+		inline void PrintOpenGLErrors(const char* pLocation = nullptr)
 		{
 			// query and print opengl errors
 			GLenum eError = glGetError( );

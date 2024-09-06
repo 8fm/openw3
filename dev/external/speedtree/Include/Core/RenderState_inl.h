@@ -76,11 +76,11 @@ ST_INLINE SRenderState::SRenderState( ) :
 	m_bFacingLeavesPresent(false),
 	m_bRigidMeshesPresent(false),
 	// misc
-	m_pDescription(NULL),
-	m_pUserData(NULL)
+	m_pDescription(nullptr),
+	m_pUserData(nullptr)
 {
 	for (st_int32 i = 0; i < TL_NUM_TEX_LAYERS; ++i)
-		m_apTextures[i] = NULL;
+		m_apTextures[i] = nullptr;
 }
 
 
