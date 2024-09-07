@@ -77,7 +77,7 @@ add_subdirectory(dev/src/games/r4)
 if (WIN32)
 add_subdirectory(dev/src/win32/platform)
 else()
-#add_subdirectory(dev/src/linux/platform)
+add_subdirectory(dev/src/linux/platform)
 endif()
 
 add_subdirectory(dev/src/games/r4Launcher)
