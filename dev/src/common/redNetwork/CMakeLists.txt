@@ -17,6 +17,8 @@ set(SRC_FILES
 
 if (WIN32)
     list(APPEND SRC_FILES "platform/platformWindows.cpp")
+else()
+    list(APPEND SRC_FILES "platform/platformLinux.cpp")
 endif()
 
 add_library(${PROJECT_NAME} STATIC ${SRC_FILES})
