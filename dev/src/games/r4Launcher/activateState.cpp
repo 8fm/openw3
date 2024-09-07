@@ -20,7 +20,7 @@
 #elif defined( RED_PLATFORM_DURANGO )
 	#include "r4MemoryDurango.h"
 	#define COMMAND_LINE_FILEPATH TXT( "g:\\bin\\commandline.txt" )
-#elif defined( RED_PLATFORM_WINPC )
+#elif defined( RED_PLATFORM_WINPC ) || defined( RED_PLATFORM_LINUX )
 	#include "r4MemoryWindows.h"
 	#define COMMAND_LINE_FILEPATH TXT( "commandline.txt" )
 #endif

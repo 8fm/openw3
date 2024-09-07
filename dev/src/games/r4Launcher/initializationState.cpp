@@ -3,7 +3,7 @@
 */
 
 #include "build.h"
-#include "InitializationState.h"
+#include "initializationState.h"
 #include "states.h"
 #include "../../common/redMemoryFramework/redMemoryCrt.h"
 #include "../../common/core/loadingProfiler.h"
