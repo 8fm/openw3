@@ -501,9 +501,9 @@ CRenderProxy_Terrain::CRenderProxy_Terrain( const CRenderTerrainUpdateData* init
 	, m_material( nullptr )
 #ifndef NO_HEIGHTMAP_EDIT
 	, m_renderStampVisualization( false )
-	, m_heightmapStamp( nullptr )
-	, m_colorStamp( nullptr )
-	, m_controlStamp( nullptr )
+	, m_heightmapStamp( 0 )
+	, m_colorStamp( 0 )
+	, m_controlStamp( 0 )
 #endif
 #ifdef ENABLE_SPEEDTREE_DENSITY_VISUALISER
 	, m_grassVisualiserEnable( false )
