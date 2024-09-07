@@ -1133,7 +1133,9 @@ target_include_directories(${PROJECT_NAME} PRIVATE
     ${CMAKE_SOURCE_DIR}/dev/external/Ansel/include
 )
 
-target_link_libraries(${PROJECT_NAME})
+target_link_libraries(${PROJECT_NAME} PRIVATE
+    core
+)
 
 target_precompile_headers(${PROJECT_NAME}
     PRIVATE

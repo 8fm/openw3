@@ -212,7 +212,9 @@ if (NOT WIN32)
     )
 endif()
 
-target_link_libraries(${PROJECT_NAME})
+target_link_libraries(${PROJECT_NAME} PRIVATE
+    gpuApiDX10
+)
 
 target_precompile_headers(${PROJECT_NAME}
     PRIVATE
