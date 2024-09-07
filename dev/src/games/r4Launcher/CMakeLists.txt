@@ -19,14 +19,21 @@ set(SRC_FILES
     "gameConstrainedState.cpp"
     "gameRunningState.cpp"
     "initializationState.cpp"
-    "mainRed.cpp"
-    "mainWindows.cpp"
     "operatorNewDelete_orbis.cpp"
     "shutdownState.cpp"
     "utility.cpp"
-    "utilityWindows.cpp"
     "r4Launcher.rc"
 )
+
+if (WIN32)
+    list(APPEND SRC_FILES "mainRed.cpp")
+    list(APPEND SRC_FILES "mainWindows.cpp")
+    list(APPEND SRC_FILES "utilityWindows.cpp")
+else()
+    list(APPEND SRC_FILES "gameApplicationLinux.cpp")
+    list(APPEND SRC_FILES "mainLinux.cpp")
+    list(APPEND SRC_FILES "utilityLinux.cpp")
+endif()
 
 add_executable(${PROJECT_NAME} WIN32 ${SRC_FILES})
 
