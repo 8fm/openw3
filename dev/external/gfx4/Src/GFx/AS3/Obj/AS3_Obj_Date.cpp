@@ -835,7 +835,7 @@ namespace Instances { namespace fl
 
     Double Date::TimeClip(Double time)
     {
-        if (NumberUtil::IsNaNOrInfinity(time) || (abs(time) > 8.64e15))
+        if (NumberUtil::IsNaNOrInfinity(time) || (fabs(time) > 8.64e15))
             return NumberUtil::NaN();
         return (time > 0.0) ? floor(time) : ceil(time);
     }
