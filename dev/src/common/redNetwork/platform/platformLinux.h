@@ -81,7 +81,7 @@ namespace Red
 
 		typedef socklen_t			SockaddrLen;
 
-		const struct in6_addr& RED_INADDR6_ANY = in6addr_any;
+		extern const in6_addr&		RED_INADDR6_ANY;
 		const int c_SocketError = -1;
 
 		typedef sa_family_t			AddressFamily;
