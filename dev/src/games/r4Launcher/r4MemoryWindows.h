@@ -17,11 +17,11 @@ const MemSize c_umbraTomeCollectionPoolSize = 2u * ( c_umbraTomeCollectionMaxSiz
 const MemSize c_umbraPoolSize = 170u * c_oneMegabyte - c_umbraTomeCollectionPoolSize;
 const MemSize c_gameSavePoolSize = 10u * c_oneMegabyte;
 
-#ifdef RED_PLATFORM_WIN32
+#if defined( RED_PLATFORM_WIN32 ) || defined( RED_PLATFORM_LINUX32 )
 	const MemSize c_defaultPoolInitialSize = c_oneMegabyte * 512u;
 	const MemSize c_defaultPoolMaxSize = c_oneGigabyte * 2 + (c_oneGigabyte / 2);
 	const MemSize c_defaultPoolGranularity = c_oneMegabyte * 32u;
-#elif defined( RED_PLATFORM_WIN64 )
+#elif defined( RED_PLATFORM_WIN64 ) || defined( RED_PLATFORM_LINUX64 )
 	const MemSize c_defaultPoolInitialSize = c_oneGigabyte;
 	const MemSize c_defaultPoolMaxSize = c_oneGigabyte * 3;
 	const MemSize c_defaultPoolGranularity = c_oneMegabyte * 128u;
