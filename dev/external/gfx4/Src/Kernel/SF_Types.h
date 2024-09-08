@@ -541,6 +541,9 @@ typedef u64             UInt64;
 
 } // Scaleform
 #include <sys/types.h>
+#ifdef SF_OS_LINUX
+#include <cstdint>
+#endif
 namespace Scaleform {
 
 // 8 bit Integer (Byte)
