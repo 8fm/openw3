@@ -29,7 +29,7 @@ otherwise accompanies this software in either electronic or hard copy form.
 #include "GFx/AS3/Obj/Net/AS3_Obj_Net_URLVariables.h"
 #include "GFx/AS3/Obj/Utils/AS3_Obj_Utils_ByteArray.h"
 #include "GFx/AS3/AS3_AvmBitmap.h"
-#include "GFx/AS3/Obj/Gfx/AS3_Obj_Gfx_MouseCursorEvent.h"
+#include "GFx/AS3/Obj/GFx/AS3_Obj_Gfx_MouseCursorEvent.h"
 #include "GFx/AS3/Obj/Events/AS3_Obj_Events_Event.h"
 #include "GFx/AS3/Obj/Utils/AS3_Obj_Utils_ByteArray.h"
 #include "GFx/AS3/Obj/System/AS3_Obj_System_ApplicationDomain.h"

@@ -16,7 +16,7 @@ otherwise accompanies this software in either electronic or hard copy form.
 #include "Render/Text/Text_DocView.h"
 #include "GFx/AS3/AS3_MovieRoot.h"
 #include "GFx/AS3/Obj/Events/AS3_Obj_Events_TextEvent.h"
-#include "GFx/AS3/Obj/Gfx/AS3_Obj_Gfx_TextEventEx.h"
+#include "GFx/AS3/Obj/GFx/AS3_Obj_Gfx_TextEventEx.h"
 #include "GFx/AS3/Obj/Display/AS3_Obj_Display_BitmapData.h"
 
 namespace Scaleform {
