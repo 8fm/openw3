@@ -7,7 +7,7 @@
 #ifdef USE_SCALEFORM
 //////////////////////////////////////////////////////////////////////////
 
-#if defined( RED_PLATFORM_WINPC ) || defined( RED_PLATFORM_DURANGO )
+#if defined( RED_PLATFORM_WINPC ) || defined( RED_PLATFORM_DURANGO ) || defined( RED_PLATFORM_LINUX )
 
 // TBD: Included here again because hackishly, we don't include the .h here
 #include "renderScaleformIncludes.h"
@@ -20,7 +20,7 @@
 #	error "Scaleform needs either DX10 or 11 at the moment"
 #endif
 
-#if defined( RED_PLATFORM_WINPC )
+#if defined( RED_PLATFORM_WINPC ) || defined( RED_PLATFORM_LINUX )
 #include "../../../external/gfx4/Src/Render/D3D1x/D3D1x_ShaderDescs.cpp"
 #include "../../../external/gfx4/Src/Render/D3D1x/D3D1x_ShaderBinary.cpp"
 #elif defined( RED_PLATFORM_DURANGO )
@@ -30,7 +30,7 @@
 #error Unsupported platform
 #endif
 
-#endif // #if defined( RED_PLATFORM_WINPC ) || defined( RED_PLATFORM_DURANGO )
+#endif // #if defined( RED_PLATFORM_WINPC ) || defined( RED_PLATFORM_DURANGO ) || defined( RED_PLATFORM_LINUX )
 
 /////////////////////////////////////////////////////////////////////////
 #endif // USE_SCALEFORM
