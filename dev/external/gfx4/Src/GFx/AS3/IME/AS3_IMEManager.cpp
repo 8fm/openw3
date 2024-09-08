@@ -27,7 +27,7 @@ otherwise accompanies this software in either electronic or hard copy form.
 #include "GFx/AS3/Obj/Net/AS3_Obj_Net_URLRequest.h"
 #include "GFx/AS3/Obj/Display/AS3_Obj_Display_Loader.h"
 #include "GFx/AS3/IME/AS3_IMEManager.h"
-#include "GFx/AS3/Obj/Gfx/AS3_Obj_Gfx_IMEEventEx.h"
+#include "GFx/AS3/Obj/GFx/AS3_Obj_Gfx_IMEEventEx.h"
 #include "GFxConfig.h"
 #include "GFx/GFx_DisplayObject.h"
 
