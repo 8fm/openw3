@@ -1,5 +1,9 @@
 # 3rdParty
+if (WIN32)
 add_subdirectory(3rdParty/expat-2.1.0)
+else()
+# use CMakeLists.txt from dev/external/gfx4/3rdParty/expat-2.1.0
+endif()
 add_subdirectory(3rdParty/jpeg-8d)
 add_subdirectory(3rdParty/libpng-1.5.13)
 add_subdirectory(3rdParty/pcre)

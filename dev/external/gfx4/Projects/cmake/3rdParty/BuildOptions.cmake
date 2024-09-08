@@ -17,8 +17,6 @@ if (MSVC)
         add_compile_options(/GS /Zc:wchar_t /Z7 /Gm- /Od /Zc:inline /fp:precise /errorReport:prompt /WX- /Zc:forScope /RTC1 /GR- /Gd /MTd /FC /nologo /Zl /diagnostics:column)
     endif()
 else()
-    add_compile_options(-std=c++14)
-
     add_compile_options(-fPIC -ffast-math -finput-charset=UTF-8 -fshort-wchar)
     add_compile_options(-ffunction-sections -fdata-sections)
     add_compile_options(-mfpmath=sse -msse3)

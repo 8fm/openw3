@@ -31,4 +31,7 @@ set(SRC_FILES
 
 include(../BuildOptions.cmake)
 
-target_link_libraries(${PROJECT_NAME})
+target_link_libraries(${PROJECT_NAME} PRIVATE
+    pcre
+    zlib
+)

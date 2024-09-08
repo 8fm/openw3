@@ -17,7 +17,6 @@ set(SRC_FILES
     "../../../../Src/Kernel/HeapPT/HeapPT_Starter.cpp"
     "../../../../Src/Kernel/HeapPT/HeapPT_SysAllocMapper.cpp"
     "../../../../Src/Kernel/HeapPT/HeapPT_SysAllocStatic.cpp"
-    "../../../../Src/Kernel/HeapPT/HeapPT_SysAllocWinAPI.cpp"
     "../../../../Src/Kernel/HeapMH/HeapMH_AllocBitSet2.cpp"
     "../../../../Src/Kernel/HeapMH/HeapMH_AllocEngine.cpp"
     "../../../../Src/Kernel/HeapMH/HeapMH_DebugInfo.cpp"
@@ -49,7 +48,6 @@ set(SRC_FILES
     "../../../../Src/Kernel/SF_Timer.cpp"
     "../../../../Src/Kernel/SF_UTF8Util.cpp"
     "../../../../Src/Kernel/SF_WString.cpp"
-    "../../../../Src/Kernel/SF_ThreadsWinAPI.cpp"
     "../../../../Src/GFx/AMP/Amp_Message.cpp"
     "../../../../Src/GFx/AMP/Amp_MessageRegistry.cpp"
     "../../../../Src/GFx/AMP/Amp_ObjectsLog.cpp"
@@ -60,7 +58,6 @@ set(SRC_FILES
     "../../../../Src/GFx/AMP/Amp_ThreadMgr.cpp"
     "../../../../Src/GFx/AMP/Amp_ViewStats.cpp"
     "../../../../Src/GFx/Net/GFx_Socket.cpp"
-    "../../../../Src/GFx/Net/GFx_Socket_Win32.cpp"
     "../../../../Src/GFx/Audio/GFx_Sound.cpp"
     "../../../../Src/GFx/Audio/GFx_SoundResource.cpp"
     "../../../../Src/GFx/Audio/GFx_SoundTagsReader.cpp"
@@ -125,7 +122,6 @@ set(SRC_FILES
     "../../../../Src/GFx/GFx_TextureFont.cpp"
     "../../../../Src/GFx/GFx_ZLibFile.cpp"
     "../../../../Src/GFx/GFx_ZlibSupport.cpp"
-    "../../../../Src/GFx/GFx_FontProviderWin32.cpp"
     "../../../../Src/Render/ImageFiles/DDS_ImageReader.cpp"
     "../../../../Src/Render/ImageFiles/JPEG_ImageCommon.cpp"
     "../../../../Src/Render/ImageFiles/JPEG_ImageReader.cpp"
@@ -147,7 +143,6 @@ set(SRC_FILES
     "../../../../Src/Render/Text/Text_StyledText.cpp"
     "../../../../Src/Render/Text/Text_WWHelper.cpp"
     "../../../../Src/Render/FontProvider/Render_FontProviderHUD.cpp"
-    "../../../../Src/Render/FontProvider/Render_FontProviderWinAPI.cpp"
     "../../../../Src/Render/Render_BufferGeneric.cpp"
     "../../../../Src/Render/Render_Bundle.cpp"
     "../../../../Src/Render/Render_CacheEffect.cpp"
@@ -216,6 +211,24 @@ set(SRC_FILES
     "../../../../Src/Render/Renderer2DImpl.cpp"
 )
 
+if (WIN32)
+list(APPEND SRC_FILES
+    "../../../../Src/Kernel/HeapPT/HeapPT_SysAllocWinAPI.cpp"
+    "../../../../Src/Kernel/SF_ThreadsWinAPI.cpp"
+    "../../../../Src/GFx/Net/GFx_Socket_Win32.cpp"
+    "../../../../Src/GFx/GFx_FontProviderWin32.cpp"
+    "../../../../Src/Render/FontProvider/Render_FontProviderWinAPI.cpp"
+)
+else()
+list(APPEND SRC_FILES
+    "../../../../Src/Kernel/SF_ThreadsPthread.cpp"
+    "../../../../Src/GFx/Net/GFx_Socket_Std.cpp"
+)
+endif()
+
 include(../BuildOptions.cmake)
 
-target_link_libraries(${PROJECT_NAME})
+target_link_libraries(${PROJECT_NAME} PRIVATE
+    libjpeg
+    libpng
+)
