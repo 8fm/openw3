@@ -48,6 +48,14 @@ target_link_directories(${PROJECT_NAME} PRIVATE
 
 if (WIN32)
     set(SYSTEM_DEPS "legacy_stdio_definitions")
+else()
+    set(SYSTEM_DEPS
+        libgfx_air
+        libgfx_as2
+        libgfx_as3
+        libgfxexpat
+        libgfx
+    )
 endif()
 
 target_link_libraries(${PROJECT_NAME} PRIVATE

@@ -49,6 +49,17 @@ if (NOT WIN32)
         "${dxmath_SOURCE_DIR}/Inc"
     )
     message("DIRECTX_INCLUDE_DIRS=${DIRECTX_INCLUDE_DIRS}")
+
+    ### dev/external ###
+    # gfx4 - expat
+    option(BUILD_tools "" OFF)
+    option(BUILD_examples "" OFF)
+    option(BUILD_tests "" OFF)
+    option(BUILD_shared "" OFF)
+    add_subdirectory(dev/external/gfx4/3rdParty/expat-2.1.0)
+
+    # gfx4 - all other
+    add_subdirectory(dev/external/gfx4/Projects/cmake)
 endif()
 
 add_subdirectory(dev/src/common/core)
