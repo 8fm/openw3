@@ -60,6 +60,8 @@ if (NOT WIN32)
 
     # gfx4 - all other
     add_subdirectory(dev/external/gfx4/Projects/cmake)
+    # speedtree
+    add_subdirectory(dev/external/speedtree/Source)
 endif()
 
 add_subdirectory(dev/src/common/core)

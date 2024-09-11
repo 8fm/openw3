@@ -1133,8 +1133,13 @@ target_include_directories(${PROJECT_NAME} PRIVATE
     ${CMAKE_SOURCE_DIR}/dev/external/Ansel/include
 )
 
+if (NOT WIN32)
+    set(SYSTEM_DEPS SpeedTreeCore SpeedTreeForest)
+endif()
+
 target_link_libraries(${PROJECT_NAME} PRIVATE
     core
+    ${SYSTEM_DEPS}
 )
 
 target_precompile_headers(${PROJECT_NAME}
