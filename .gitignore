@@ -1,0 +1,90 @@
+# ignore temp files
+.vs/
+ipch/
+temp/*
+
+*.opensdf
+*.ncb
+*.sdf
+*.suo
+*.user
+
+# ignore src builded files
+bin/*
+!bin/shaders
+build*/*
+dev/src/common/core/x64/
+dev/src/win32/editor/res/x64/
+dev/src/win32/scriptStudio/res/x64/
+dev/src/win32/scriptStudio/x64/
+
+# ignore internal builded files
+dev/internal/MarkersSystemDB/*.dll
+dev/internal/MarkersSystemDB/*.lib
+dev/internal/ReTech/re_archive/lib/
+dev/internal/ReTech/re_math/lib/
+dev/internal/TestTrackConnection/Debug/
+dev/internal/TestTrackConnection/Release/
+dev/internal/telemetry/Durango/
+dev/internal/telemetry/Win32/
+dev/internal/telemetry/Win64/
+
+# ignore external builded files
+dev/external/aaLib/dev/lib/
+dev/external/AMDGPUServices_v2_2/AGS Lib/lib/
+dev/external/Ansel/lib/
+dev/external/Ansel/redist/
+dev/external/Apex/bin/
+dev/external/Apex/lib/
+dev/external/BC6HBC7 DirectCompute Encoder Tool/C++/Win32/
+dev/external/BC6HBC7 DirectCompute Encoder Tool/C++/x64/
+dev/external/BC6HBC7 DirectCompute Encoder Tool/lib/
+dev/external/compression/doboz/bin/
+dev/external/compression/lz4/msvc/bin/
+dev/external/compression/snappy/msvc/bin/
+dev/external/compression/snappy/msvc17/bin/
+dev/external/compression/zlib/lib/
+dev/external/cryptopp562/vs2022/
+dev/external/cryptopp562/x64/
+dev/external/dexzip/*.lib
+dev/external/dexzip/vs2022/
+dev/external/DirectXTex/DirectXTex/*/
+dev/external/dxsdk(June2010)/Lib/
+dev/external/FBX_SDK_2016_1_2/lib/
+dev/external/freetype/objs/
+dev/external/gfx4/3rdParty/expat-2.1.0/lib/*/
+dev/external/gfx4/3rdParty/jpeg-8d/.libs/
+dev/external/gfx4/3rdParty/jpeg-8d/Lib/
+dev/external/gfx4/3rdParty/libpng-1.5.13/Lib/
+dev/external/gfx4/3rdParty/pcre/Lib/
+dev/external/gfx4/3rdParty/zlib-1.2.7/Lib/
+dev/external/gfx4/Lib/
+dev/external/glew/bin/
+dev/external/glew/lib/
+dev/external/harfbuzz-0.9.33/lib/
+dev/external/IntelITT/libs/
+dev/external/lib3ds/debug*
+dev/external/lib3ds/release*
+dev/external/libcubemapgen/*.lib
+dev/external/libcubemapgen/CubeMapGen-1.4-Source/CubeMapGen-1.4-Source/lib/
+dev/external/loopbackAPI/x64/
+dev/external/nvapi/amd64/
+dev/external/nvapi/x86/
+dev/external/NvidiaSSAO/*
+!dev/external/NvidiaSSAO/*.h
+dev/external/nvToolsExt/lib/
+dev/external/P4V/**/lib/
+dev/external/PhysX3/Bin/
+dev/external/PhysX3/Lib/
+dev/external/ps4padpc/lib/
+dev/external/recast/lib/
+dev/external/speedtree/lib/
+dev/external/stringdb/x64/
+dev/external/stringdb/x86/
+dev/external/telemetry-2.0/lib/
+dev/external/umbra3.3.13-change-26-2826-2/bin/
+dev/external/umbra3.3.13-change-26-2826-2/lib/
+dev/external/wintab/LIB/
+dev/external/wwise/lib/
+dev/external/wxWidgets-2.9.4/lib/**/*.lib
+dev/external/wxWidgets-2.9.4/lib/**/*.pdb
