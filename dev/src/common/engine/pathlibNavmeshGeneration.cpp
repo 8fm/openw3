@@ -57,6 +57,12 @@
 	#else
 		#pragma comment(lib, RECAST_LIB_PATH "Recast.lib")
 	#endif
+#elif _MSC_VER >= 1900
+	#ifdef _WIN64
+		#pragma comment(lib, RECAST_LIB_PATH "RecastVC170_x64.lib")
+	#else
+		#pragma comment(lib, RECAST_LIB_PATH "RecastVC170.lib")
+	#endif
 #else
 #error Unsupported compiler
 #endif
