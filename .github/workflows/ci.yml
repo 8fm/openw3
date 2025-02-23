@@ -9,7 +9,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        Configuration: [Final]
+        Configuration: [Debug, Profiling, Final]
         Platform: [x64]
     steps:
     - uses: actions/checkout@main
