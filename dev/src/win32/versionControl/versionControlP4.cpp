@@ -8,7 +8,7 @@
 #include <strsafe.h>
 
 // P4V Libs
-#if _MSC_VER == 1700
+#if _MSC_VER >= 1700
 	#ifdef _WIN64
 		#ifdef _DEBUG
 		#define P4V_LIB_PATH "external\\P4V\\x64\\lib\\VS2012\\debug\\"

@@ -7,11 +7,13 @@
     <ProjectName>wcc_lite</ProjectName>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <PlatformToolset Condition="'$(Platform)'=='x64'">v143</PlatformToolset>
+  </PropertyGroup>
   <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Shared2022.props))\Shared2022.props" />
   <PropertyGroup Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <CharacterSet>Unicode</CharacterSet>
-    <PlatformToolset Condition="'$(Platform)'=='x64'">v143</PlatformToolset>
     <SubSystem>Console</SubSystem>
     <ProjectPreprocessorDefines>$(SharedPreprocessorDefines);WCC_LITE;</ProjectPreprocessorDefines>
     <ProjectClDirs>$(SolutionDir)../external/freetype/include;$(SolutionDir)../external/harfbuzz-0.9.33/src;$(SolutionDir)../external/gfx4/Src;$(SolutionDir)../external/gfx4/Include;$(SolutionDir)../external/hk650r1/Source;$(SolutionDir)../external/speedtree/Include;$(SCE_ORBIS_SDK_DIR)/target/include_common;$(SolutionDir)../internal/ReTech;</ProjectClDirs>

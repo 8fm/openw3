@@ -256,7 +256,8 @@ public:
 		// Please see:
 		// http://stackoverflow.com/questions/123758/how-do-i-remove-code-duplication-between-similar-const-and-non-const-member-func 
 		
-		const_cast< vector< TDoc* > >( static_cast< const CSSFrame* >( this )->GetDocuments( documents ) );
+		//const_cast< vector< TDoc* > >( static_cast< const CSSFrame* >( this )->GetDocuments( documents ) );
+		static_cast< const CSSFrame* >( this )->GetDocuments( documents );
 	}
 
 	bool IsAnyDocumentModified() const;

@@ -22,7 +22,7 @@
 #include "fbxsdk/scene/animation/fbxanimcurve.h"
 #include "fbxsdk/scene/geometry/fbxcluster.h"
 
-#if _MSC_VER == 1700
+#if _MSC_VER >= 1700
 #ifdef _DEBUG
 #ifdef _WIN64
 #	pragma comment ( lib, "external\\FBX_SDK_2016_1_2\\lib\\vs2012\\x64\\debug\\libfbxsdk-mt.lib" )

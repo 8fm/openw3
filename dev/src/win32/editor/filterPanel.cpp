@@ -148,7 +148,7 @@ void CEdFilterPanel::AddClassOptions( THashMap< CClass*, wxCheckBox* >& opts, TH
 
 			SRTTI::GetInstance().EnumClasses( classObj, m_classes );
 
-			struct pred { bool operator()( const CClass* a, const CClass* b ) const { return a->GetName().AsString() < b->GetName().AsString(); } } pred;
+			struct sPred { bool operator()( const CClass* a, const CClass* b ) const { return a->GetName().AsString() < b->GetName().AsString(); } } pred;
 
 			Sort( m_classes.Begin(), m_classes.End(), pred );
 		}

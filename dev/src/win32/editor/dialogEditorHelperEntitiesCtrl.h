@@ -68,6 +68,35 @@ struct SSceneHelperReferenceFrameSettings
 	SSceneHelperReferenceFrameSettings( EReferenceFrame frame = RF_SceneFrame )
 		: m_frameType( frame)
 	{}
+
+	SSceneHelperReferenceFrameSettings& operator=(const SSceneHelperReferenceFrameSettings& other)
+	{
+		if (this != &other)
+		{
+			m_frameType = other.m_frameType;
+			switch (m_frameType)
+			{
+			case RF_BoneFrame:
+				m_parentComp = other.m_parentComp;
+				m_boneName = other.m_boneName;
+				m_attachmentFlags = other.m_attachmentFlags;
+				break;
+			case RF_ActorFrame:
+				m_parentActor = other.m_parentActor;
+				break;
+			case RF_SlotFrame:
+				m_slotOwner = other.m_slotOwner;
+				m_slotName = other.m_slotName;
+				break;
+			default:
+				break;
+			}
+		}
+		return *this;
+	}
+
+	~SSceneHelperReferenceFrameSettings()
+	{}
 };
 
 //////////////////////////////////////////////////////////////////////////
