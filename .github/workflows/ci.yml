@@ -60,8 +60,8 @@ jobs:
     - uses: ilammy/msvc-dev-cmd@v1
     - name: Build
       run: |
-        cmake --preset='ninja-${{ matrix.Configuration }}-${{ matrix.Platform }}'
-        cmake --build --preset='${{ matrix.Configuration }}-${{ matrix.Platform }}'
+        cmake --preset='ninja-${{ matrix.Configuration }}'
+        cmake --build --preset='${{ matrix.Configuration }}'
 
     - name: Prepare artifacts
       shell: cmd
@@ -75,18 +75,15 @@ jobs:
         path: bin\upload
 
   linux-cmake:
-    name: linux cmake ${{ matrix.Configuration }} ${{ matrix.Platform }}
-    runs-on: ubuntu-24.04
+    name: linux cmake ${{ matrix.Configuration }} ${{ matrix.os.Platform }}
     strategy:
       fail-fast: false
       matrix:
-        Configuration: [Final]
-        Platform: [x64]
-        BuildType: [Release]
-        include:
-          - Configuration: Debug
-            Platform: x64
-            BuildType: Debug
+        Configuration: [Debug, Final]
+        os:
+          - Platform: x64
+            CI: ubuntu-24.04
+    runs-on: ${{ matrix.os.CI }}
     steps:
     - uses: actions/checkout@main
       with:
@@ -94,11 +91,10 @@ jobs:
 
     - name: Install libs
       run: |
-        sudo apt-get update && sudo apt-get install libsdl2-dev libvulkan-dev glslang-tools clang meson ninja-build
+        sudo apt-get update && sudo apt-get install libsdl2-dev libpulse-dev libvulkan-dev glslang-tools clang meson ninja-build
     - name: Build
       run: |
         export CC=clang && export CXX=clang++
         ${CXX} --version && cmake --version
-        mkdir build && cd build
-        cmake .. -DGAME_CONFIG=${{ matrix.Configuration }} -DGAME_PLATFORM=${{ matrix.Platform }} -DCMAKE_BUILD_TYPE=${{ matrix.BuildType }} -G Ninja
-        ninja
+        cmake --preset='ninja-${{ matrix.Configuration }}'
+        cmake --build --preset='${{ matrix.Configuration }}'
