@@ -5,48 +5,38 @@
     "minor": 20,
     "patch": 0
   },
+  "buildPresets": [
+    { "name": "Final", "configurePreset": "ninja-Final", "configuration": "Release" },
+    { "name": "Profiling", "configurePreset": "ninja-Profiling",  "configuration": "RelWithDebInfo" },
+    { "name": "Debug", "configurePreset": "ninja-Debug", "configuration": "Debug" }
+  ],
   "configurePresets": [
     {
-      "name": "ninja-Final-x64",
+      "name": "ninja-Final",
       "generator": "Ninja Multi-Config",
       "binaryDir": "${sourceDir}/build/${presetName}",
-      "architecture": {
-        "value": "x64",
-        "strategy": "external"
-      },
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release",
-        "GAME_CONFIG": "Final",
-        "GAME_PLATFORM": "x64"
+        "GAME_CONFIG": "Final"
       }
     },
     {
-      "name": "ninja-Debug-x64",
+      "name": "ninja-Profiling",
       "generator": "Ninja Multi-Config",
       "binaryDir": "${sourceDir}/build/${presetName}",
-      "architecture": {
-        "value": "x64",
-        "strategy": "external"
-      },
       "cacheVariables": {
-        "CMAKE_BUILD_TYPE": "Debug",
-        "GAME_CONFIG": "Debug",
-        "GAME_PLATFORM": "x64"
+        "CMAKE_BUILD_TYPE": "RelWithDebInfo",
+        "GAME_CONFIG": "Profiling"
       }
-    }
-  ],
-  "buildPresets": [
-    {
-      "name": "Final-x64",
-      "displayName": "Final x64",
-      "configurePreset": "ninja-Final-x64",
-      "configuration": "Release"
     },
     {
-      "name": "Debug-x64",
-      "displayName": "Debug x64",
-      "configurePreset": "ninja-Debug-x64",
-      "configuration": "Debug"
+      "name": "ninja-Debug",
+      "generator": "Ninja Multi-Config",
+      "binaryDir": "${sourceDir}/build/${presetName}",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "GAME_CONFIG": "Debug"
+      }
     }
   ]
 }
