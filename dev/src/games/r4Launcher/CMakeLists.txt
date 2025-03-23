@@ -56,6 +56,37 @@ else()
         libgfxexpat
         libgfx
     )
+    set(WWISE_DEPS
+        AkTremoloFX
+        AkMemoryMgr
+        AkMotionGenerator
+        AkSineSource
+        AkStereoDelayFX
+        AkGuitarDistortionFX
+        AkSoundEngine
+        AkRoomVerbFX
+        AkParametricEQFX
+        AkToneSource
+        AkFlangerFX
+        AkCompressorFX
+        AkAudioInputSource
+        AkMusicEngine
+        AkDelayFX
+        AkPitchShifterFX
+        AkSilenceSource
+        AkGainFX
+        AkVorbisDecoder
+        AkTimeStretchFX
+        AkMatrixReverbFX
+        AkMeterFX
+        AkStreamMgr
+        AkHarmonizerFX
+        AkPeakLimiterFX
+        AkExpanderFX
+    )
+    if (NOT ${GAME_CONFIG} STREQUAL "Final") # CommunicationCentral
+        list(APPEND WWISE_DEPS CommunicationCentral)
+    endif()
 endif()
 
 target_link_libraries(${PROJECT_NAME} PRIVATE
@@ -79,6 +110,7 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
     r4
     platform
     ${SYSTEM_DEPS}
+    "$<LINK_GROUP:RESCAN,${WWISE_DEPS}>"
 )
 
 target_precompile_headers(${PROJECT_NAME}
