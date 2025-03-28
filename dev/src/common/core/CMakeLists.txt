@@ -329,8 +329,22 @@ set(SRC_FILES
 )
 
 if (WIN32)
-    list(APPEND SRC_FILES "cpuRecognizer.cpp")
-    list(APPEND SRC_FILES "diskInstrumentationPC.cpp")
+    list(APPEND SRC_FILES
+        "cpuRecognizer.cpp"
+        "diskInstrumentationPC.cpp"
+    )
+else()
+    set(COMP_SRC
+        "${CMAKE_SOURCE_DIR}/dev/external/compression/doboz/Source/Doboz/Compressor.cpp"
+        "${CMAKE_SOURCE_DIR}/dev/external/compression/doboz/Source/Doboz/Decompressor.cpp"
+        "${CMAKE_SOURCE_DIR}/dev/external/compression/doboz/Source/Doboz/Dictionary.cpp"
+        "${CMAKE_SOURCE_DIR}/dev/external/compression/lz4/lz4.c"
+        "${CMAKE_SOURCE_DIR}/dev/external/compression/lz4/lz4hc.c"
+        "${CMAKE_SOURCE_DIR}/dev/external/compression/snappy/snappy.cc"
+        "${CMAKE_SOURCE_DIR}/dev/external/compression/snappy/snappy-sinksource.cc"
+    )
+    set_source_files_properties(${COMP_SRC} PROPERTIES LANGUAGE CXX)
+    list(APPEND SRC_FILES ${COMP_SRC})
 endif()
 
 set(BISON_FILES
