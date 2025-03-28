@@ -213,7 +213,9 @@ if (NOT WIN32)
 endif()
 
 target_link_libraries(${PROJECT_NAME} PRIVATE
+    engine
     gpuApiDX10
+    redMath
 )
 
 target_precompile_headers(${PROJECT_NAME}

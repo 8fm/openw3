@@ -341,7 +341,10 @@ include(${CMAKE_SOURCE_DIR}/cmake/BisonGenerator.cmake)
 
 add_library(${PROJECT_NAME} STATIC ${SRC_FILES})
 
-target_link_libraries(${PROJECT_NAME})
+target_link_libraries(${PROJECT_NAME} PRIVATE
+    game
+    redNetwork
+)
 
 target_precompile_headers(${PROJECT_NAME}
     PRIVATE

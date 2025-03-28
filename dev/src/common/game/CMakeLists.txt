@@ -858,7 +858,9 @@ target_include_directories(${PROJECT_NAME} PRIVATE
     ${CMAKE_SOURCE_DIR}/dev/external/PhysX3/Include/foundation
 )
 
-target_link_libraries(${PROJECT_NAME})
+target_link_libraries(${PROJECT_NAME} PRIVATE
+    engine
+)
 
 target_precompile_headers(${PROJECT_NAME}
     PRIVATE

@@ -291,7 +291,9 @@ target_include_directories(${PROJECT_NAME} PRIVATE
     ${CMAKE_SOURCE_DIR}/dev/external/gfx4/Include
 )
 
-target_link_libraries(${PROJECT_NAME})
+target_link_libraries(${PROJECT_NAME} PRIVATE
+    game
+)
 
 target_precompile_headers(${PROJECT_NAME}
     PRIVATE
