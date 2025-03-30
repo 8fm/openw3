@@ -28,7 +28,7 @@
 // Copyright (c) 2001-2004 NovodeX AG. All rights reserved.  
 
 #include "GuBoxPruning.h"
-#include "./Ice/IceRevisitedRadix2.h"
+#include "Ice/IceRevisitedRadix2.h"
 
 using namespace physx;
 using namespace Gu;

@@ -27,6 +27,6 @@ void physx::PhysXIndicator::setIsGpu(bool isGpu)
 {
 }
 
-PX_INLINE void physx::PhysXIndicator::updateCounter(int delta)
+void physx::PhysXIndicator::updateCounter(int delta)
 {
 }

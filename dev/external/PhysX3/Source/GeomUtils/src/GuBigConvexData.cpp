@@ -51,7 +51,7 @@
 #include "PsIntrinsics.h"
 #include "PsUserAllocated.h"
 #include "GuSerialize.h"
-#include "./Ice/IceSerialize.h"
+#include "Ice/IceSerialize.h"
 #include "GuBigConvexData2.h"
 #include "GuCubeIndex.h"
 #include "PsIntrinsics.h"

@@ -409,7 +409,7 @@ struct SubSort
 				Interval old = splits[maxSplit];
 				PX_ASSERT(old.count > 1);
 				PxU32 splitLocal = split(permute+old.start, old.count, boundsPerLeaf); // relative split pos
-				PX_ASSERT(splitPos > 0);
+				//PX_ASSERT(splitPos > 0);
 				PX_ASSERT(splitLocal >= 1);
 				PX_ASSERT(old.count-splitLocal >= 1);
 				splits.pushBack(Interval(old.start, splitLocal));

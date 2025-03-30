@@ -93,7 +93,7 @@ namespace Gu
 		}
 
 
-		PX_FORCE_INLINE Element* deleteTop() PX_RESTRICT
+		PX_FORCE_INLINE Element* deleteTop()
 		{
 			PX_ASSERT(heapSize > 0);
 			PxI32 i, child;

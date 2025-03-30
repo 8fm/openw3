@@ -210,7 +210,7 @@ namespace Gu
 		{
 		}
 
-		Edge* Insert(const Edge& edge) PX_RESTRICT
+		Edge* Insert(const Edge& edge)
 		{
 			PX_ASSERT(m_Size < MaxEdges);
 			Edge* PX_RESTRICT pEdge = &m_pEdges[m_Size++];
@@ -218,7 +218,7 @@ namespace Gu
 			return pEdge;
 		}
 
-		Edge* Insert(Facet* PX_RESTRICT  facet, const PxU32 index)  PX_RESTRICT
+		Edge* Insert(Facet* PX_RESTRICT  facet, const PxU32 index)
 		{
 			//const Edge edge(facet, index);
 			PX_ASSERT(m_Size < MaxEdges);
@@ -228,7 +228,7 @@ namespace Gu
 			return pEdge;
 		}
 
-		Edge* Get(const PxU32 index)  PX_RESTRICT
+		Edge* Get(const PxU32 index)
 		{
 			PX_ASSERT(index < m_Size);
 			return &m_pEdges[index];
