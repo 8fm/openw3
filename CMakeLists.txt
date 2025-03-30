@@ -66,15 +66,20 @@ if (NOT WIN32)
     message("DIRECTX_INCLUDE_DIRS=${DIRECTX_INCLUDE_DIRS}")
 
     ### dev/external ###
+    # Apex
+    set(APEX_DIR "${CMAKE_CURRENT_SOURCE_DIR}/dev/external/Apex")
+    set(PHYSX_DIR "${CMAKE_CURRENT_SOURCE_DIR}/dev/external/PhysX3")
+    add_subdirectory(dev/external/Apex)
     # gfx4 - expat
     option(BUILD_tools "" OFF)
     option(BUILD_examples "" OFF)
     option(BUILD_tests "" OFF)
     option(BUILD_shared "" OFF)
     add_subdirectory(dev/external/gfx4/3rdParty/expat-2.1.0)
-
     # gfx4 - all other
     add_subdirectory(dev/external/gfx4/Projects/cmake)
+    # PhysX3
+    add_subdirectory(dev/external/PhysX3)
     # speedtree
     add_subdirectory(dev/external/speedtree/Source)
     # wwise

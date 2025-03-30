@@ -53,4 +53,34 @@ target_include_directories(${PROJECT_NAME} PRIVATE
     ${CMAKE_SOURCE_DIR}/dev/external/Apex/module/legacy/public
 )
 
-target_link_libraries(${PROJECT_NAME})
+if (WIN32)
+    target_link_libraries(${PROJECT_NAME})
+else()
+    set(SYSTEM_DEPS
+        ### Apex libs
+        ApexCommon
+        ApexFramework
+        ApexShared
+        APEX_Clothing
+        APEX_Destructible
+        APEX_Legacy
+        ### PhysX libs
+        LowLevel
+        LowLevelCloth
+        PhysX3
+        PhysX3CharacterKinematic
+        PhysX3Common
+        PhysX3Cooking
+        PhysX3Extensions
+        #PhysX3Vehicle
+        PhysXProfileSDK
+        PhysXVisualDebuggerSDK
+        PvdRuntime
+        PxTask
+        SceneQuery
+        SimulationController
+    )
+    target_link_libraries(${PROJECT_NAME}
+        "$<LINK_GROUP:RESCAN,${SYSTEM_DEPS}>"
+    )
+endif()
