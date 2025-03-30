@@ -90,6 +90,8 @@ const SerializePlatform &GetCurrentPlatform()
 	platform.osType = SerializePlatform::OS_PS4;
 #	elif defined PX_ANDROID
 		platform.osType = SerializePlatform::OS_ANDROID;
+#	elif defined PX_LINUX
+		platform.osType = SerializePlatform::OS_LINUX;
 #	else
 #		error "Undefined OS"
 #	endif

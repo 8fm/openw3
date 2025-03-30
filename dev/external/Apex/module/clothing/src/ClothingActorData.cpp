@@ -31,11 +31,10 @@
 #include "PsUtilities.h"
 #include "NxAbstractMeshDescription.h"
 #include "foundation/PxMemory.h"
-#include "psVecMath.h"
+#include "PsVecMath.h"
 #include "foundation/PxMat44.h"
 
 #include "PlatformMemory.h"
-#include "PsVecMath.h"
 
 #include "ClothingGlobals.h"
 

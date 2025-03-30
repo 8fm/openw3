@@ -32,7 +32,7 @@
 # define CUT_SAFE_CALL(call)  call
 # define CUT_CHECK_ERROR(errorMessage)
 #else
-# include "NiApexSdk.h"
+# include "NiApexSDK.h"
 
 # define CUT_SAFE_CALL(call)  { CUresult ret = call;                         \
 		if( CUDA_SUCCESS != ret ) {                                              \

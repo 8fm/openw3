@@ -54,7 +54,7 @@
 #include "PxGpuDispatcher.h"
 #endif
 
-#include "PvdBinding.h"
+#include "PVDBinding.h"
 
 namespace physx
 {

@@ -29,7 +29,7 @@
 
 #ifndef WITHOUT_PVD
 
-#include "PvdBinding.h"
+#include "PVDBinding.h"
 #include "PvdDataStream.h"
 #include "NxParameterized.h"
 #include "NxParameters.h"

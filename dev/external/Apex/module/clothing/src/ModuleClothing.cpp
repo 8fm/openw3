@@ -58,7 +58,7 @@
 
 #include "CookingPhysX.h"
 #include "CookingPhysX3.h"
-#include "SimulationPhysx3.h"
+#include "SimulationPhysX3.h"
 
 #if NX_SDK_VERSION_MAJOR == 2
 #include "SimulationNxCloth.h"

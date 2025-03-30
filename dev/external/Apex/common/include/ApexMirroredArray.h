@@ -33,7 +33,7 @@
 #include "ApexMirrored.h"
 #include <new>
 
-#if defined(__CUDACC__) || defined(PX_PS3) || defined(PX_ANDROID) || defined(PX_PS4)
+#if defined(__CUDACC__) || defined(PX_PS3) || defined(PX_ANDROID) || defined(PX_PS4) || defined(PX_LINUX)
 #define DEFAULT_NAME "unassigned"
 #else
 #include <typeinfo>

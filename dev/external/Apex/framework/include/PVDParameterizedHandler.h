@@ -32,7 +32,7 @@
 #ifndef WITHOUT_PVD
 
 #include "PsUserAllocated.h"
-#include "PvdBinding.h"
+#include "PVDBinding.h"
 
 #include "PsHashSet.h"
 #include "PsHashMap.h"
