@@ -290,6 +290,7 @@ namespace Red
 		{
 #ifdef RED_PLATFORM_LINUX
 			RED_FORCE_INLINE Bool FileOpen( FILE** handle, const AnsiChar* filename, const AnsiChar* mode )	{ *handle = fopen(filename, mode); auto result = !( *handle ); return result == 0; }
+			RED_FORCE_INLINE Bool FileOpen( FILE** handle, const UniChar* filename, const UniChar* mode );
 #else
 			RED_FORCE_INLINE Bool FileOpen( FILE** handle, const AnsiChar* filename, const AnsiChar* mode )	{ *handle = ::_fsopen( filename, mode, _SH_DENYNO ); return *handle != NULL; }
 			RED_FORCE_INLINE Bool FileOpen( FILE** handle, const UniChar* filename, const UniChar* mode )	{ *handle = ::_wfsopen( filename, mode, _SH_DENYNO ); return *handle != NULL; }

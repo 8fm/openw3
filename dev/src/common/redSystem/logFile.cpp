@@ -13,7 +13,7 @@ Red::System::Log::File::File( const Char* filename, Bool isPrimaryLogFile )
 {
 	SetSafeToCallOnCrash();
 
-#ifdef RED_PLATFORM_LINUX
+#if 0 //RED_PLATFORM_LINUX
 	size_t size = StringLength(filename) + 1;
 	AnsiChar* filenameAnsi = static_cast< AnsiChar* >( RED_ALLOCA( size * sizeof( AnsiChar ) ) );
 	WideCharToStdChar( filenameAnsi, filename, size );

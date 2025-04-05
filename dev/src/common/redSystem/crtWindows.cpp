@@ -24,7 +24,25 @@ Int32 Red::System::SNPrintF( UniChar* buffer, size_t count, const UniChar* forma
 	return retval;
 }
 
-#ifndef RED_PLATFORM_LINUX
+#ifdef RED_PLATFORM_LINUX
+
+#include "utility.h"
+
+Red::System::Bool Red::System::Internal::FileOpen( FILE** handle, const UniChar* filename, const UniChar* mode )
+{
+	AnsiChar ansiFilename[ 256 ];
+	AnsiChar ansiMode[ 16 ];
+
+	WideCharToStdChar( ansiFilename, filename, ARRAY_COUNT( ansiFilename ) );
+	WideCharToStdChar( ansiMode, mode, ARRAY_COUNT( ansiMode ) );
+
+	*handle = fopen(ansiFilename, ansiMode);
+	auto result = !( *handle );
+	return result == 0;
+}
+
+#else
+
 Int32 Internal::FilePrintF( FILE* handle, const AnsiChar* format, ... )
 {
 	va_list arglist;
@@ -42,4 +60,5 @@ Int32 Internal::FilePrintF( FILE* handle, const UniChar* format, ... )
 	va_end( arglist );
 	return retval;
 }
+
 #endif
