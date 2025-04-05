@@ -18,4 +18,10 @@ struct FindFileObject
 
 typedef int				FileObject;
 
+#ifdef UNICODE
+# define TO_PLATFORMCODE(str)	UNICODE_TO_ANSI( str )
+#else
+# define TO_PLATFORMCODE(str)	str
+#endif
+
 #endif // RED_PLATFORM_LINUX

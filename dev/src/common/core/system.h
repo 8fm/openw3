@@ -171,6 +171,9 @@ public:
 	void operator ++();
 
 	const Char* GetFileName();
+#ifdef RED_PLATFORM_LINUX
+	const char* GetAnsiFileName();
+#endif
 
 	Bool IsDirectory() const;
 
