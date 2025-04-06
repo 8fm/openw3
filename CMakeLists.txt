@@ -28,29 +28,33 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG ${CMAKE_SOURCE_DIR}/bin/${GAME_CONFIG}-
 if (NOT WIN32)
     message("Using DXVK 2.4 for D3D11 API")
     include(ExternalProject)
+    set(DXVK_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/build/dxvk-src")
+    set(DXVK_BINARY_DIR "${CMAKE_CURRENT_SOURCE_DIR}/build/dxvk-bin")
+    set(DIRECTX_INCLUDE_DIRS
+        "${DXVK_SOURCE_DIR}/include/native/directx"
+        "${DXVK_SOURCE_DIR}/include/native/windows"
+    )
+    set(DIRECTX_LIBS
+        "${DXVK_BINARY_DIR}/src/d3d11/libdxvk_d3d11.so"
+        "${DXVK_BINARY_DIR}/src/dxgi/libdxvk_dxgi.so"
+    )
     ExternalProject_Add(dxvk
         GIT_REPOSITORY    https://github.com/doitsujin/dxvk
-        GIT_TAG           008afc1c5f287e82a553108790da6e10b1159200 # 2.4
+        GIT_TAG           ad253b8a7e20b7cf16fce7d1c505928a434eac29 # 2.6
         GIT_SHALLOW       OFF
         BUILD_ALWAYS      OFF
+        SOURCE_DIR        ${DXVK_SOURCE_DIR}
+        BINARY_DIR        ${DXVK_BINARY_DIR}
         CONFIGURE_HANDLED_BY_BUILD ON
-        CONFIGURE_COMMAND meson setup ../dxvk --buildtype=release -Denable_d3d8=false -Denable_d3d9=false -Denable_d3d10=false -Denable_d3d11=true -Denable_dxgi=true
+        CONFIGURE_COMMAND meson setup ../dxvk-src --buildtype=release -Denable_d3d8=false -Denable_d3d9=false -Denable_d3d10=false -Denable_d3d11=true -Denable_dxgi=true
         BUILD_COMMAND     ninja
         INSTALL_COMMAND   ""
-        BUILD_BYPRODUCTS  <BINARY_DIR>/src/d3d11/libdxvk_d3d11.so
+        BUILD_BYPRODUCTS  ${DIRECTX_LIBS}
     )
-    ExternalProject_Get_property(dxvk SOURCE_DIR BINARY_DIR)
-
-    set(DIRECTX_INCLUDE_DIRS
-        "${SOURCE_DIR}/include/native/directx"
-        "${SOURCE_DIR}/include/native/windows"
-    )
-    set(DIRECTX_LIBS ${BINARY_DIR}/src/d3d11/libdxvk_d3d11.so)
 
     message("Getting DirectXMath 3.1.9")
     include(FetchContent)
     FetchContent_Declare(dxmath
-      googletest
       GIT_REPOSITORY https://github.com/microsoft/DirectXMath
       GIT_TAG        d837578297c6c93849573858182350ede04987dc # 3.1.9
       GIT_SHALLOW    OFF

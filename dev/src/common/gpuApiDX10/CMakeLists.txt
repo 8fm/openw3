@@ -23,11 +23,12 @@ set(SRC_FILES
 
 add_library(${PROJECT_NAME} STATIC ${SRC_FILES})
 
-if (NOT WIN32)
-    add_dependencies(${PROJECT_NAME} dxvk)
+if (WIN32)
+    target_link_libraries(${PROJECT_NAME})
+else()
     target_include_directories(${PROJECT_NAME} PRIVATE
         ${DIRECTX_INCLUDE_DIRS}
     )
+    target_link_libraries(${PROJECT_NAME} PRIVATE ${DIRECTX_LIBS})
 endif()
 
-target_link_libraries(${PROJECT_NAME})
