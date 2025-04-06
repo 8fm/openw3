@@ -5,7 +5,11 @@
 #include "standardRand.h"
 #include <cstdlib>
 
+#ifdef RED_PLATFORM_LINUX
+#define RED_STANDARD_RAND_MAX32 0x7fffffff
+#else
 #define RED_STANDARD_RAND_MAX32 0x3fffffff
+#endif
 
 #if RAND_MAX == RED_STANDARD_RAND_MAX32
 
