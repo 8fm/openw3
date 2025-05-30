@@ -60,8 +60,8 @@ jobs:
     - uses: ilammy/msvc-dev-cmd@v1
     - name: Build
       run: |
-        cmake --preset='ninja-${{ matrix.Configuration }}'
-        cmake --build --preset='${{ matrix.Configuration }}'
+        cmake --preset=Windows-${{ matrix.Configuration }}
+        cmake --build build/Windows-${{ matrix.Configuration }}
 
     - name: Prepare artifacts
       shell: cmd
@@ -75,7 +75,7 @@ jobs:
         path: bin\upload
 
   linux-cmake:
-    name: linux cmake ${{ matrix.Configuration }} ${{ matrix.os.Platform }}
+    name: Linux cmake ${{ matrix.Configuration }} ${{ matrix.os.Platform }}
     strategy:
       fail-fast: false
       matrix:
@@ -91,10 +91,12 @@ jobs:
 
     - name: Install libs
       run: |
-        sudo apt-get update && sudo apt-get install libsdl2-dev libpulse-dev libvulkan-dev glslang-tools clang meson ninja-build
+        vcpkg install directxmath directxtex
+        sudo apt-get update && sudo apt-get install libsdl2-dev libpulse-dev libvulkan-dev glslang-tools libomp-dev clang meson ninja-build
     - name: Build
       run: |
+        export VCPKG_ROOT=/usr/local/share/vcpkg
         export CC=clang && export CXX=clang++
         ${CXX} --version && cmake --version
-        cmake --preset='ninja-${{ matrix.Configuration }}'
-        cmake --build --preset='${{ matrix.Configuration }}'
+        cmake --preset=Linux-${{ matrix.Configuration }}
+        cmake --build build/Linux-${{ matrix.Configuration }}

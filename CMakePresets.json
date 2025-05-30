@@ -1,42 +1,45 @@
 {
-  "version": 3,
-  "cmakeMinimumRequired": {
-    "major": 3,
-    "minor": 20,
-    "patch": 0
-  },
-  "buildPresets": [
-    { "name": "Final", "configurePreset": "ninja-Final", "configuration": "Release" },
-    { "name": "Profiling", "configurePreset": "ninja-Profiling",  "configuration": "RelWithDebInfo" },
-    { "name": "Debug", "configurePreset": "ninja-Debug", "configuration": "Debug" }
-  ],
+  "version": 2,
   "configurePresets": [
     {
-      "name": "ninja-Final",
-      "generator": "Ninja Multi-Config",
-      "binaryDir": "${sourceDir}/build/${presetName}",
+      "name": "base", "hidden": true, "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/${presetName}"
+    },
+    {
+      "name": "VCPKG", "hidden": true,
+      "cacheVariables": {
+        "CMAKE_TOOLCHAIN_FILE": {
+          "value": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
+          "type": "FILEPATH"
+        }
+      }
+    },
+    {
+      "name": "Final", "hidden": true,
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release",
         "GAME_CONFIG": "Final"
       }
     },
     {
-      "name": "ninja-Profiling",
-      "generator": "Ninja Multi-Config",
-      "binaryDir": "${sourceDir}/build/${presetName}",
+      "name": "Profiling", "hidden": true,
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "RelWithDebInfo",
         "GAME_CONFIG": "Profiling"
       }
     },
     {
-      "name": "ninja-Debug",
-      "generator": "Ninja Multi-Config",
-      "binaryDir": "${sourceDir}/build/${presetName}",
+      "name": "Debug", "hidden": true,
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Debug",
         "GAME_CONFIG": "Debug"
       }
-    }
+    },
+    { "name": "Linux-Final",     "inherits": [ "base", "Final", "VCPKG" ] },
+    { "name": "Linux-Profiling", "inherits": [ "base", "Profiling", "VCPKG" ] },
+    { "name": "Linux-Debug",     "inherits": [ "base", "Debug", "VCPKG" ] },
+    { "name": "Windows-Final",     "inherits": [ "base", "Final" ] },
+    { "name": "Windows-Profiling", "inherits": [ "base", "Profiling" ] },
+    { "name": "Windows-Debug",     "inherits": [ "base", "Debug" ] }
   ]
 }
