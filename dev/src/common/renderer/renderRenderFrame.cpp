@@ -2986,7 +2986,7 @@ GpuApi::eTextureSaveFormat Map( ESaveFormat saveFormat )
 
 void CRenderInterface::TakeOneUberScreenshot( CRenderFrame* frame, CRenderSceneEx* scene, const SScreenshotParameters& screenshotParameters, Bool* status )
 {
-#ifndef RED_PLATFORM_CONSOLE
+#if !(defined( RED_PLATFORM_CONSOLE ) || defined( RED_PLATFORM_LINUX ))
 	// Prepare viewport for rendering
 	CRenderFrameInfo& frameInfo = frame->GetFrameInfo();
 	// override flags

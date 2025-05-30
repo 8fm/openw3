@@ -28,7 +28,7 @@ bool g_DSRTestPerFrameChangeDynamicScaleIndex = false;
 #include "../../../external/BC6HBC7 DirectCompute Encoder Tool/C++/BC7EncoderCS10.h"
 #endif
 
-#ifdef RED_PLATFORM_CONSOLE
+#if defined( RED_PLATFORM_CONSOLE ) || defined( RED_PLATFORM_LINUX )
 #	include "gpuApiDDSLoader.h"
 #endif
 
@@ -2722,7 +2722,11 @@ namespace GpuApi
 			break;
 		case TIF_WIC:
 			// PNGs (and possibly others?) can be imported in BGR order, but WIC_FLAGS_FORCE_RGB forces it into RGB, which is good for us!
+#ifdef RED_PLATFORM_LINUX
+			GPUAPI_HALT( "Lin: DirectX::GetMetadataFromWICFile" );
+#else
 			hr = DirectX::GetMetadataFromWICFile( importPath, DirectX::WIC_FLAGS_FORCE_RGB, metadata );
+#endif
 			break;
 		}
 		
@@ -2762,7 +2766,11 @@ namespace GpuApi
 			hr = DirectX::LoadFromTGAFile( importPath, nullptr, image );
 			break;
 		case TIF_WIC:
+#ifdef RED_PLATFORM_LINUX
+			GPUAPI_HALT( "Lin: DirectX::LoadFromWICFile" );
+#else
 			hr = DirectX::LoadFromWICFile( importPath, DirectX::WIC_FLAGS_FORCE_RGB, nullptr, image );
+#endif
 			break;
 		}
 		
@@ -2955,7 +2963,11 @@ namespace GpuApi
 		TextureDesc localDesc;
 		{
 			DirectX::TexMetadata metaData;
+#ifdef RED_PLATFORM_LINUX
+			HRESULT res = DirectX::GetMetadataFromDDSMemory(static_cast<uint8_t const*>(memoryFile), fileSize, DirectX::DDS_FLAGS_NONE, metaData);
+#else
 			HRESULT res = DirectX::GetMetadataFromDDSMemory(memoryFile, fileSize, DirectX::DDS_FLAGS_NONE, metaData);
+#endif
 			RED_UNUSED(res);
 
 			localDesc.initLevels = static_cast< GpuApi::Uint16 >( metaData.mipLevels );
@@ -2990,7 +3002,7 @@ namespace GpuApi
 		SDeviceData &dd = GetDeviceData();
 		TextureDesc localDesc;
 		ID3D11Resource	*d3dTexBase	= nullptr;
-#ifndef RED_PLATFORM_CONSOLE
+#if !(defined( RED_PLATFORM_CONSOLE ) || defined( RED_PLATFORM_LINUX ))
 		bool isCube = false;
 		{
 			DirectX::TexMetadata metaData;
@@ -4479,6 +4491,12 @@ namespace GpuApi
 			hr = DirectX::SaveToDDSMemory(tempImage->GetImages(), tempImage->GetImageCount(), tempImage->GetMetadata(), DirectX::DDS_FLAGS_NONE, blob);
 			break;
 		case SAVE_FORMAT_BMP:
+#ifdef RED_PLATFORM_LINUX
+		case SAVE_FORMAT_JPG:
+		case SAVE_FORMAT_PNG:
+			GPUAPI_HALT( "Lin: DirectX::SaveToWICMemory, DirectX::GetWICCodec" );
+			break;
+#else
 			hr = DirectX::SaveToWICMemory(tempImage->GetImages(), tempImage->GetImageCount(),DirectX::WIC_FLAGS_NONE, DirectX::GetWICCodec(DirectX::WIC_CODEC_BMP), blob );
 			break;
 		case SAVE_FORMAT_JPG:
@@ -4487,6 +4505,7 @@ namespace GpuApi
 		case SAVE_FORMAT_PNG:
 			hr = DirectX::SaveToWICMemory(tempImage->GetImages(), tempImage->GetImageCount(),DirectX::WIC_FLAGS_NONE, DirectX::GetWICCodec(DirectX::WIC_CODEC_PNG), blob );
 			break;
+#endif
 		case SAVE_FORMAT_TGA:
 			hr = DirectX::SaveToTGAMemory(*tempImage->GetImage(0,0,0), blob );
 			break;
@@ -4511,7 +4530,7 @@ namespace GpuApi
 
 	Bool SaveTextureToMemory( const TextureRef &texture, eTextureSaveFormat format, const Rect* sourceRect, void** buffer, Uint32& size )
 	{
-#ifndef RED_PLATFORM_CONSOLE
+#if !(defined( RED_PLATFORM_CONSOLE ) || defined( RED_PLATFORM_LINUX ))
 		Uint32 width = sourceRect->right - sourceRect->left;
 		Uint32 height = sourceRect->bottom - sourceRect->top;
 
@@ -4686,7 +4705,11 @@ namespace GpuApi
 		image.slicePitch = srcImage.slicePitch;
 
 		// build flags
+#ifdef RED_PLATFORM_LINUX
+		DirectX::TEX_COMPRESS_FLAGS compressionFlags = DirectX::TEX_COMPRESS_DEFAULT;
+#else
 		DWORD compressionFlags = DirectX::TEX_COMPRESS_DEFAULT;
+#endif
 		if ( CIH_NormalmapRGB == compressionHint )
 		{
 			compressionFlags |= DirectX::TEX_COMPRESS_UNIFORM;

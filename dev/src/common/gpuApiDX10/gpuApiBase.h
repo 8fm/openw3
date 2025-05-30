@@ -17,8 +17,10 @@ RED_DISABLE_WARNING_MSC( 4005 )
 
 #ifdef RED_PLATFORM_LINUX
 #define UNREFERENCED_PARAMETER(P) (P)
-#endif
+#include "DirectXTex.h"
+#else
 #include "../../../external/DirectXTex/DirectXTex/DirectXTex.h"
+#endif
 
 #if _MSC_VER == 1700
 	#define LIB_SUBFOLDER ""
