@@ -52,22 +52,9 @@ if (NOT WIN32)
         BUILD_BYPRODUCTS  ${DIRECTX_LIBS}
     )
 
-    message("Getting DirectXMath 3.1.9")
-    include(FetchContent)
-    FetchContent_Declare(dxmath
-      GIT_REPOSITORY https://github.com/microsoft/DirectXMath
-      GIT_TAG        d837578297c6c93849573858182350ede04987dc # 3.1.9
-      GIT_SHALLOW    OFF
-    )
-    FetchContent_MakeAvailable(dxmath)
-    FetchContent_GetProperties(dxmath)
-    if(NOT EXISTS "${dxmath_SOURCE_DIR}/Inc/sal.h")
-        file(DOWNLOAD https://raw.githubusercontent.com/dotnet/runtime/v8.0.8/src/coreclr/pal/inc/rt/sal.h "${dxmath_SOURCE_DIR}/Inc/sal.h")
-    endif()
-    list(APPEND DIRECTX_INCLUDE_DIRS
-        "${dxmath_SOURCE_DIR}/Inc"
-    )
-    message("DIRECTX_INCLUDE_DIRS=${DIRECTX_INCLUDE_DIRS}")
+    find_package(directxtex CONFIG REQUIRED)
+    find_package(directxmath CONFIG REQUIRED)
+    set(DIRECTX_MATH_LIBS Microsoft::DirectXMath)
 
     ### dev/external ###
     # Apex

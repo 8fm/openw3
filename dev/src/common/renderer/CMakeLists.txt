@@ -213,6 +213,7 @@ if (NOT WIN32)
 endif()
 
 target_link_libraries(${PROJECT_NAME} PRIVATE
+    ${DIRECTX_MATH_LIBS}
     engine
     gpuApiDX10
     matcompiler

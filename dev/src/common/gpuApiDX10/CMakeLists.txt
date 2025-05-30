@@ -29,6 +29,9 @@ else()
     target_include_directories(${PROJECT_NAME} PRIVATE
         ${DIRECTX_INCLUDE_DIRS}
     )
-    target_link_libraries(${PROJECT_NAME} PRIVATE ${DIRECTX_LIBS})
+    target_link_libraries(${PROJECT_NAME} PRIVATE
+        ${DIRECTX_MATH_LIBS}
+        ${DIRECTX_LIBS}
+    )
 endif()
 
