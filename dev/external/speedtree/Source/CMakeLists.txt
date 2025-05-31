@@ -1,10 +1,10 @@
 # Common
 
 add_definitions(-DSPEEDTREE_EXPOSE_REGISTRY_FUNCTIONS -D_MBCS)
-if (${CMAKE_BUILD_TYPE} STREQUAL "Release")
-    add_definitions(-DNDEBUG)
-else()
+if (${CMAKE_BUILD_TYPE} STREQUAL "Debug")
     add_definitions(-D_DEBUG)
+else()
+    add_definitions(-DNDEBUG)
 endif()
 
 if (WIN32)

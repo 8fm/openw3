@@ -1,3 +1,10 @@
+
+if (${CMAKE_BUILD_TYPE} STREQUAL "Debug")
+    add_definitions(-D_DEBUG)
+else()
+    add_definitions(-DNDEBUG)
+endif()
+
 # 3rdParty
 if (WIN32)
 add_subdirectory(3rdParty/expat-2.1.0)
