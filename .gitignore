@@ -9,10 +9,14 @@ temp/*
 *.suo
 *.user
 
+# ignore files from DMCAs
+dev/external/wwise/
+
 # ignore src builded files
 bin/*
 !bin/shaders
 build*/*
+cmake-build*
 dev/src/common/core/x64/
 dev/src/win32/editor/res/x64/
 dev/src/win32/scriptStudio/res/x64/
