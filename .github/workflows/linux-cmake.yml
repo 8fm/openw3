@@ -1,0 +1,31 @@
+name: linux-cmake
+
+on: [push, pull_request]
+
+jobs:
+  linux-cmake:
+    name: Linux cmake ${{ matrix.Configuration }} ${{ matrix.os.Platform }}
+    strategy:
+      fail-fast: false
+      matrix:
+        Configuration: [Debug, Final]
+        os:
+          - Platform: x64
+            CI: ubuntu-24.04
+    runs-on: ${{ matrix.os.CI }}
+    steps:
+    - uses: actions/checkout@main
+      with:
+        submodules: recursive
+
+    - name: Install libs
+      run: |
+        vcpkg install directxmath directxtex
+        sudo apt-get update && sudo apt-get install libsdl2-dev libpulse-dev libvulkan-dev glslang-tools libomp-dev clang meson ninja-build
+    - name: Build
+      run: |
+        export VCPKG_ROOT=/usr/local/share/vcpkg
+        export CC=clang && export CXX=clang++
+        ${CXX} --version && cmake --version
+        cmake --preset=Linux-${{ matrix.Configuration }}
+        cmake --build build/Linux-${{ matrix.Configuration }}

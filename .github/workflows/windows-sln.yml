@@ -1,0 +1,38 @@
+name: windows-sln
+
+on: [push, pull_request]
+
+jobs:
+  windows-sln:
+    name: Windows sln ${{ matrix.Configuration }} ${{ matrix.Platform }}
+    runs-on: windows-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        Configuration: [Debug, Profiling, Final]
+        Platform: [x64]
+    steps:
+    - uses: actions/checkout@main
+      with:
+        submodules: recursive
+
+    - name: Get Windows libs
+      shell: cmd
+      run: |
+        curl -LJO https://github.com/8fm/openw3/releases/download/1.60-dev2/openw3-libs-windows-Final-Debug-x64.7z
+        7z x openw3-libs-windows-Final-Debug-x64.7z
+        dir bin
+
+    - uses: microsoft/setup-msbuild@main
+    - name: Build
+      working-directory: dev/src
+      run: msbuild /m /p:Configuration="${{ matrix.Configuration }}" /p:Platform="${{ matrix.Platform }}" LavaEngineVS2022.sln
+
+    - name: Prepare artifacts
+      shell: cmd
+      run: dir bin\x64 && copy bin\x64\*.exe bin\upload
+    - name: Upload artifacts
+      uses: actions/upload-artifact@main
+      with:
+        name: Witcher3.${{ matrix.Configuration }}.${{ matrix.Platform }}.sln.ci-${{ github.run_number }}
+        path: bin\upload

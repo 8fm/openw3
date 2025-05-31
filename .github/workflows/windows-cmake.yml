@@ -1,0 +1,41 @@
+name: windows-cmake
+
+on: [push, pull_request]
+
+jobs:
+  windows-cmake:
+    name: Windows cmake ${{ matrix.Configuration }} ${{ matrix.Platform }}
+    runs-on: windows-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        Configuration: [Debug, Final]
+        Platform: [x64]
+    steps:
+    - uses: actions/checkout@main
+      with:
+        submodules: recursive
+
+    - name: Get Windows libs
+      shell: cmd
+      run: |
+        curl -LJO https://github.com/8fm/openw3/releases/download/1.60-dev2/openw3-libs-windows-Final-Debug-x64.7z
+        7z x openw3-libs-windows-Final-Debug-x64.7z
+        dir bin
+
+    - uses: ilammy/msvc-dev-cmd@v1
+    - name: Build
+      run: |
+        cmake --preset=Windows-${{ matrix.Configuration }}
+        cmake --build build/Windows-${{ matrix.Configuration }}
+
+    - name: Prepare artifacts
+      shell: cmd
+      run: |
+        dir bin\${{ matrix.Configuration }}-${{ matrix.Platform }}
+        copy bin\${{ matrix.Configuration }}-${{ matrix.Platform }}\*.exe bin\upload
+    - name: Upload artifacts
+      uses: actions/upload-artifact@main
+      with:
+        name: Witcher3.${{ matrix.Configuration }}.${{ matrix.Platform }}.cmake.ci-${{ github.run_number }}
+        path: bin\upload
