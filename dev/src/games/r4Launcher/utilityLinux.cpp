@@ -7,6 +7,7 @@
 #ifdef RED_PLATFORM_LINUX
 
 #include "../../common/game/configParser.h"
+#include "../../common/engine/scriptCompilationHelper.h"
 
 bool InitializeGameConfiguration()
 {
@@ -31,6 +32,20 @@ Red::System::Error::EAssertAction AssertMessage( const Red::System::Char* cppFil
 	RED_UNUSED( expression );
 	RED_UNUSED( details );
 	return Red::System::Error::AA_Continue;
+}
+
+namespace ScriptCompilationHelpers
+{
+	ECompileScriptsReturnValue LauncherScriptCompilationErrorMessage( const CScriptCompilationMessages& errorCollector )
+	{
+		RED_UNUSED( errorCollector );
+		return ECompileScriptsReturnValue::CSRV_Skip;
+	}
+
+	void ShowHideSplash( Bool show )
+	{
+		RED_UNUSED( show );
+	}
 }
 
 #endif
