@@ -59,7 +59,14 @@ public:
 #else
 #error Unsupported platform
 #endif
+#ifdef RED_PLATFORM_LINUX
+		mbsrtowcs( m_buf, &src, len - 1, &mbst );
+		// if no null character was written to dst after len wide characters were written, then
+		// L'\0' is stored in dst[len], which means len+1 total wide characters are written
+		m_buf[ len - 1 ] = L'\0';
+#else
 		mbsrtowcs( m_buf, &src, len, &mbst );
+#endif
 	}
 
 	operator UniChar* () const
