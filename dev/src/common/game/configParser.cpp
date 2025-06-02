@@ -11,6 +11,10 @@ bool GameConfig::LoadConfig( const String& game )
 	configPath = TXT( "..\\gameconf.cfg" );
 	GetFullPathName( configPath.AsChar(), MAX_PATH, basePath, NULL );
 	configPath = basePath;
+#elif defined( RED_PLATFORM_LINUX )
+	AnsiChar basePath[ PATH_MAX ];
+	realpath( "../gameconf.cfg", basePath );
+	configPath = ANSI_TO_UNICODE(basePath);
 #elif defined( RED_PLATFORM_ORBIS )
 	configPath = TXT("/app0/bin/gameconf.cfg");
 #else
