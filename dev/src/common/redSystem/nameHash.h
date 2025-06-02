@@ -27,11 +27,17 @@ using namespace System;
 class CNameHash
 {
 public:
+#if 0 // TODO: enable for Linux if the current version is not suitable. I.e. #ifdef RED_PLATFORM_LINUX
+	static const Uint64 HASH_OFFSET = 14695981039346656037ull;
+	static const Uint64 HASH_PRIME = 1099511628211ull;
+	typedef Uint64 TValue;
+#else
 	static const Uint32 HASH_OFFSET = 2166136261u;
 	static const Uint32 HASH_PRIME = 16777619u;
 
 public:
 	typedef Uint32 TValue;
+#endif
 
 public:
 	static const TValue INVALID_HASH_VALUE = 0;

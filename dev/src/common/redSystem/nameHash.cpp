@@ -38,7 +38,13 @@ CNameHash CNameHash::Hash( const AnsiChar* name )
 // Assumes endianness
 CNameHash CNameHash::Hash( const UniChar* name )
 {
+#if 0 // TODO: enable for Linux if the current version is not suitable. I.e. #ifdef RED_PLATFORM_LINUX
+	static_assert( sizeof( UniChar ) == sizeof( Uint32 ), "Create another hash function." );
+	static_assert( ((Uint32)L'A' & 0x00FF) == (Uint32)'A' && ((Uint32)L'A' & 0xFF00) == 0, "Bad hi/lo" );
+#endif
+#ifndef RED_PLATFORM_LINUX
 	static_assert( sizeof( UniChar ) == sizeof( Uint16 ), "Create another hash function." );
+#endif
 	static_assert( ((Uint16)L'A' & 0x00FF) == (Uint16)'A' && ((Uint16)L'A' & 0xFF00) == 0, "Bad hi/lo" );
 
 	if ( ! name )
