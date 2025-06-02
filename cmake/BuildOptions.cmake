@@ -66,7 +66,7 @@ if (MSVC)
 else()
     add_compile_options(-std=c++14)
 
-    add_compile_options(-ggdb -fPIC -ffast-math -finput-charset=UTF-8 -fshort-wchar)
+    add_compile_options(-ggdb -fPIC -ffast-math -finput-charset=UTF-8)
     add_compile_options(-ffunction-sections -fdata-sections)
     add_compile_options(-Wno-inconsistent-missing-override) # TODO fix warnings later
 
