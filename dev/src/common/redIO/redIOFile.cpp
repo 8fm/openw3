@@ -9,6 +9,9 @@
 using namespace Red;
 #include "../redThreads/redThreadsAtomic.h"
 #include "../core/fileSystemProfilerWrapper.h"
+#ifdef RED_PLATFORM_LINUX
+#include "../core/coreInternal.h"
+#endif
 
 REDIO_NAMESPACE_BEGIN
 
@@ -35,9 +38,8 @@ Bool CNativeFileHandle::Open( const Char* path, Uint32 openFlags )
 		RedIOProfiler::ProfileSyncIOOpenFileStart( path );
 #endif
 
-#ifdef RED_PLATFORM_LINUX // FIX_LINUX open wchar_t
-	RED_LOG_ERROR( RED_LOG_CHANNEL( RedIO ), TXT("FIX_LINUX open wchar_t in CNativeFileHandle::Open"));
-	const Bool ret = false;
+#ifdef RED_PLATFORM_LINUX
+	const Bool ret = m_file.Open( UNICODE_TO_ANSI(path), openFlags );
 #else
 	const Bool ret = m_file.Open( path, openFlags );
 #endif

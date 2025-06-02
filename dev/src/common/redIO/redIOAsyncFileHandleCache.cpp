@@ -10,6 +10,9 @@
 #include "redIOFile.h"
 
 #include "../core/fileSystemProfilerWrapper.h"
+#ifdef RED_PLATFORM_LINUX
+#include "../core/coreInternal.h"
+#endif
 
 #include <new>
 
@@ -505,9 +508,8 @@ CAsyncFileHandleCache::SCacheEntry* CAsyncFileHandleCache::OpenCacheEntry_NoSync
 #endif
 	CAsyncFile* file = ::new( buf ) CAsyncFile;
 
-#ifdef RED_PLATFORM_LINUX // FIX_LINUX open wchar_t
-	RED_LOG_ERROR( RED_LOG_CHANNEL( RedIO ), TXT("FIX_LINUX open wchar_t in CAsyncFileHandleCache::OpenCacheEntry_NoSync"));
-	if ( true )
+#ifdef RED_PLATFORM_LINUX
+	if ( ! file->Open( UNICODE_TO_ANSI(absoluteFilePath), eOpenFlag_Read | eOpenFlag_Async ) )
 #else
 	if ( ! file->Open( absoluteFilePath, eOpenFlag_Read | eOpenFlag_Async ) )
 #endif
