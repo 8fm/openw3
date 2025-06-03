@@ -40,6 +40,8 @@
 #include "../../linux/platform/userProfileManagerLinux.h"
 //#include "../../win32/platform/inputDeviceManagerWin32.h"
 
+#include <SDL2/SDL.h>
+
 RED_DECLARE_DEBUG_CALLBACK_TAG( ScriptCallstack );
 
 RED_DECLARE_NAME( graphics );
@@ -127,18 +129,15 @@ static void SetupPlatformPathsWithOverride( const String& overridePath, String &
 	rootPath = overridePath;
 
 	RED_LOG_ERROR(CPlatform, TXT("FIX_LINUX SetupPlatformPathsWithOverride"));
-#if 0 // FIX_LINUX userPath
-	SetCurrentDirectory( workingPath.AsChar() );
+	chdir( UNICODE_TO_ANSI(workingPath.AsChar()) );
 
 	// Set user data path
-	Char myDocumentsPath[MAX_PATH];
-	HRESULT userPathResult = SHGetFolderPath( NULL, CSIDL_MYDOCUMENTS, NULL, SHGFP_TYPE_CURRENT, myDocumentsPath );
-	if ( userPathResult == S_OK )
+	char* homeLocalSharePath = SDL_GetPrefPath(nullptr, UNICODE_TO_ANSI(GGameConfig::GetInstance().GetUserPathSuffix().AsChar()));
+	if ( homeLocalSharePath )
 	{
-		userPath = String::Printf( TXT( "%ls/%ls/" ), myDocumentsPath, GGameConfig::GetInstance().GetUserPathSuffix().AsChar() );
+		userPath = ANSI_TO_UNICODE(homeLocalSharePath);
 	}
 	else
-#endif
 	{
 		userPath = dataPath;
 	}
@@ -150,17 +149,11 @@ static void SetupPlatformPathsWithOverride( const String& overridePath, String &
 //	Sets up and retrieves engine paths
 void CPlatform::SetupPlatformPaths( String &rootPath, String &workingPath, String &dataPath, String &bundlePath, String &userPath, String &partPath, String &configPath, String &scriptPath )
 {
-#if 0
-	Char moduleFileName[MAX_PATH];
-	Char moduleFullPath[MAX_PATH];
-	GetModuleFileName( NULL, moduleFileName, MAX_PATH );
-	GetFullPathName( moduleFileName, MAX_PATH, moduleFullPath, NULL);
+	char moduleFileName[PATH_MAX];
+	readlink("/proc/self/exe", moduleFileName, PATH_MAX);
+	Char* moduleFullPath = ANSI_TO_UNICODE(moduleFileName);
 
-	partPath = moduleFileName;
-#else
-	Char moduleFullPath[PATH_MAX];
-	RED_LOG_ERROR(CPlatform, TXT("FIX_LINUX CPlatform::SetupPlatformPaths"));
-#endif
+	partPath = moduleFullPath;
 
 	// Strip EXE name
 	Char* pEnd = Red::System::StringSearchLast( moduleFullPath, '/' );
@@ -184,16 +177,14 @@ void CPlatform::SetupPlatformPaths( String &rootPath, String &workingPath, Strin
 	}
 	rootPath = moduleFullPath;
 
-#if 0 // FIX_LINUX userPath
 	// Set new current directory to the directory of binary file
-	SetCurrentDirectory( workingPath.AsChar() );
+	chdir( UNICODE_TO_ANSI(workingPath.AsChar()) );
 
 	// Set user data path
-	Char myDocumentsPath[MAX_PATH];
-	HRESULT userPathResult = SHGetFolderPath( NULL, CSIDL_MYDOCUMENTS, NULL, SHGFP_TYPE_CURRENT, myDocumentsPath );
-	if ( userPathResult == S_OK )
+	char* homeLocalSharePath = SDL_GetPrefPath(nullptr, UNICODE_TO_ANSI(GGameConfig::GetInstance().GetUserPathSuffix().AsChar()));
+	if ( homeLocalSharePath )
 	{
-		userPath = String::Printf( TXT( "%ls/%ls/" ), myDocumentsPath, GGameConfig::GetInstance().GetUserPathSuffix().AsChar() );
+		userPath = ANSI_TO_UNICODE(homeLocalSharePath);
 	}
 	else
 	{
@@ -202,9 +193,9 @@ void CPlatform::SetupPlatformPaths( String &rootPath, String &workingPath, Strin
 
 	// Set config path
 #if defined( RED_FINAL_BUILD )
-	if ( userPathResult == S_OK )
+	if ( homeLocalSharePath )
 	{
-		configPath = String::Printf( TXT( "%ls/%ls/" ), userPath.AsChar(), GGameConfig::GetInstance().GetConfigDirName().AsChar() );
+		configPath = String::Printf( TXT( "%ls%ls/" ), userPath.AsChar(), GGameConfig::GetInstance().GetConfigDirName().AsChar() );
 	}
 	else
 	{
@@ -212,7 +203,6 @@ void CPlatform::SetupPlatformPaths( String &rootPath, String &workingPath, Strin
 	}
 #else
 	configPath = String::Printf( TXT( "%ls/%ls/" ), rootPath.AsChar(), GGameConfig::GetInstance().GetConfigDirName().AsChar() );
-#endif
 #endif
 
 	// Fix paths with / on the end
