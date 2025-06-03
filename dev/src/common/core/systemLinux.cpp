@@ -19,7 +19,7 @@ void LogLastError( const Char* action, const Char* target )
 	char errorBuffer[256];
 	strerror_r( errorCode, errorBuffer, 256 );
 
-	LOG_CORE( TXT("[IO]: %s failed: target=%s. error=%s"), action, target, errorBuffer );
+	LOG_CORE( TXT("[IO]: %ls failed: target=%ls. error=%ls"), action, target, errorBuffer );
 }
 
 /************************************************************************/
@@ -31,7 +31,7 @@ Bool CSystemIO::CopyFile(const Char* existingFileName, const Char* newFileName, 
 	Bool exists = FileExist( newFileName );
 	if ( exists  && failIfExists )
 	{
-		LOG_CORE( TXT("[IO]: Low level copy file failed: origin=%s target=%s. Error=file already exists"), existingFileName, newFileName );
+		LOG_CORE( TXT("[IO]: Low level copy file failed: origin=%ls target=%ls. Error=file already exists"), existingFileName, newFileName );
 		return false;
 	}
 
@@ -45,7 +45,7 @@ Bool CSystemIO::CopyFile(const Char* existingFileName, const Char* newFileName, 
 		return true;
 	}
 
-	LOG_CORE( TXT("[IO]: Low level copy file failed: origin=%s target=%s."), existingFileName, newFileName );
+	LOG_CORE( TXT("[IO]: Low level copy file failed: origin=%ls target=%ls."), existingFileName, newFileName );
 	return false;
 }
 
@@ -334,7 +334,7 @@ size_t CSystemFile::Read( void* buf, size_t bytesToRead )
 			char errorBuffer[256];
 			strerror_r( errorCode, errorBuffer, 256 );
 
-			LOG_CORE( TXT("[IO]: Low level file pointer change to %I64u failed, error: %s"), m_currentPointer, errorBuffer );
+			LOG_CORE( TXT("[IO]: Low level file pointer change to %I64u failed, error: %ls"), m_currentPointer, errorBuffer );
 			return 0;
 		}
 		m_lastPointer = m_currentPointer;
@@ -346,7 +346,7 @@ size_t CSystemFile::Read( void* buf, size_t bytesToRead )
 		//Int32 errorCode = errno;
 		//char errorBuffer[256];
 		//strerror_r( errorCode, errorBuffer, 256 );
-		//LOG_CORE( TXT("[IO]: Low level read failed for descriptor %d, error: %s"), m_file, errorBuffer );
+		//LOG_CORE( TXT("[IO]: Low level read failed for descriptor %d, error: %ls"), m_file, errorBuffer );
 		return 0;
 	}
 
@@ -366,7 +366,7 @@ uintptr_t CSystemFile::Write( const void* buf, size_t bytesToWrite )
 			char errorBuffer[256];
 			strerror_r( errorCode, errorBuffer, 256 );
 
-			LOG_CORE( TXT("[IO]: Low level file pointer change to %I64u failed, error: %s"), m_currentPointer, errorBuffer );
+			LOG_CORE( TXT("[IO]: Low level file pointer change to %I64u failed, error: %ls"), m_currentPointer, errorBuffer );
 			return 0;
 		}
 		m_lastPointer = m_currentPointer;

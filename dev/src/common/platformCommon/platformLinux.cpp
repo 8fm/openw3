@@ -119,11 +119,11 @@ static void SetupPlatformPathsWithOverride( const String& overridePath, String &
 		safeOverridePath.Replace(TXT("/"), TXT(""), true );
 	}
 
-	dataPath = String::Printf( TXT( "%s/%s/" ), safeOverridePath.AsChar(), GGameConfig::GetInstance().GetDataPathSuffix().AsChar() );
-	bundlePath = String::Printf( TXT( "%s/%s/" ), safeOverridePath.AsChar(), GGameConfig::GetInstance().GetBundlePathSuffix().AsChar() );
-	scriptPath = String::Printf( TXT( "%s/%s/" ), safeOverridePath.AsChar(), GGameConfig::GetInstance().GetScriptsPathSuffix().AsChar() );
-	workingPath = String::Printf( TXT( "%s/bin/" ), safeOverridePath.AsChar() );
-	configPath = String::Printf( TXT( "%s/%s/" ), safeOverridePath.AsChar(), GGameConfig::GetInstance().GetConfigDirName().AsChar() );
+	dataPath = String::Printf( TXT( "%ls/%ls/" ), safeOverridePath.AsChar(), GGameConfig::GetInstance().GetDataPathSuffix().AsChar() );
+	bundlePath = String::Printf( TXT( "%ls/%ls/" ), safeOverridePath.AsChar(), GGameConfig::GetInstance().GetBundlePathSuffix().AsChar() );
+	scriptPath = String::Printf( TXT( "%ls/%ls/" ), safeOverridePath.AsChar(), GGameConfig::GetInstance().GetScriptsPathSuffix().AsChar() );
+	workingPath = String::Printf( TXT( "%ls/bin/" ), safeOverridePath.AsChar() );
+	configPath = String::Printf( TXT( "%ls/%ls/" ), safeOverridePath.AsChar(), GGameConfig::GetInstance().GetConfigDirName().AsChar() );
 	rootPath = overridePath;
 
 	RED_LOG_ERROR(CPlatform, TXT("FIX_LINUX SetupPlatformPathsWithOverride"));
@@ -135,7 +135,7 @@ static void SetupPlatformPathsWithOverride( const String& overridePath, String &
 	HRESULT userPathResult = SHGetFolderPath( NULL, CSIDL_MYDOCUMENTS, NULL, SHGFP_TYPE_CURRENT, myDocumentsPath );
 	if ( userPathResult == S_OK )
 	{
-		userPath = String::Printf( TXT( "%s/%s/" ), myDocumentsPath, GGameConfig::GetInstance().GetUserPathSuffix().AsChar() );
+		userPath = String::Printf( TXT( "%ls/%ls/" ), myDocumentsPath, GGameConfig::GetInstance().GetUserPathSuffix().AsChar() );
 	}
 	else
 #endif
@@ -174,7 +174,7 @@ void CPlatform::SetupPlatformPaths( String &rootPath, String &workingPath, Strin
 	{
 		*pEnd = '\0';
 	}
-	workingPath = String::Printf( TXT( "%s/" ), moduleFullPath );
+	workingPath = String::Printf( TXT( "%ls/" ), moduleFullPath );
 
 	// Strip the binary folder and get the root.
 	pEnd = Red::System::StringSearchLast( moduleFullPath, '/' );
@@ -193,7 +193,7 @@ void CPlatform::SetupPlatformPaths( String &rootPath, String &workingPath, Strin
 	HRESULT userPathResult = SHGetFolderPath( NULL, CSIDL_MYDOCUMENTS, NULL, SHGFP_TYPE_CURRENT, myDocumentsPath );
 	if ( userPathResult == S_OK )
 	{
-		userPath = String::Printf( TXT( "%s/%s/" ), myDocumentsPath, GGameConfig::GetInstance().GetUserPathSuffix().AsChar() );
+		userPath = String::Printf( TXT( "%ls/%ls/" ), myDocumentsPath, GGameConfig::GetInstance().GetUserPathSuffix().AsChar() );
 	}
 	else
 	{
@@ -204,23 +204,23 @@ void CPlatform::SetupPlatformPaths( String &rootPath, String &workingPath, Strin
 #if defined( RED_FINAL_BUILD )
 	if ( userPathResult == S_OK )
 	{
-		configPath = String::Printf( TXT( "%s/%s/" ), userPath.AsChar(), GGameConfig::GetInstance().GetConfigDirName().AsChar() );
+		configPath = String::Printf( TXT( "%ls/%ls/" ), userPath.AsChar(), GGameConfig::GetInstance().GetConfigDirName().AsChar() );
 	}
 	else
 	{
-		configPath = String::Printf( TXT( "%s/%s/" ), rootPath.AsChar(),GGameConfig::GetInstance().GetConfigDirName().AsChar() );
+		configPath = String::Printf( TXT( "%ls/%ls/" ), rootPath.AsChar(),GGameConfig::GetInstance().GetConfigDirName().AsChar() );
 	}
 #else
-	configPath = String::Printf( TXT( "%s/%s/" ), rootPath.AsChar(), GGameConfig::GetInstance().GetConfigDirName().AsChar() );
+	configPath = String::Printf( TXT( "%ls/%ls/" ), rootPath.AsChar(), GGameConfig::GetInstance().GetConfigDirName().AsChar() );
 #endif
 #endif
 
 	// Fix paths with / on the end
-	dataPath = String::Printf( TXT( "%s/%s/" ), rootPath.AsChar(), GGameConfig::GetInstance().GetDataPathSuffix().AsChar() );
-	bundlePath = String::Printf( TXT( "%s/%s/" ), rootPath.AsChar(), GGameConfig::GetInstance().GetBundlePathSuffix().AsChar() );
+	dataPath = String::Printf( TXT( "%ls/%ls/" ), rootPath.AsChar(), GGameConfig::GetInstance().GetDataPathSuffix().AsChar() );
+	bundlePath = String::Printf( TXT( "%ls/%ls/" ), rootPath.AsChar(), GGameConfig::GetInstance().GetBundlePathSuffix().AsChar() );
 
 	// Set script path
-	scriptPath = String::Printf( TXT( "%s/%s/" ), rootPath.AsChar(), GGameConfig::GetInstance().GetScriptsPathSuffix().AsChar() );
+	scriptPath = String::Printf( TXT( "%ls/%ls/" ), rootPath.AsChar(), GGameConfig::GetInstance().GetScriptsPathSuffix().AsChar() );
 }
 
 namespace GpuApi
@@ -532,7 +532,7 @@ void CPlatform::Initialize( const String& commandLine, const Core::CommandLineAr
 #ifndef RED_PLATFORM_CONSOLE
 	if ( !rootOverride.Empty() && !GSystemIO.FileExist( rootOverride.AsChar() ) )
 	{
-		ERR_CORE(TXT("Root override path %s not found"), rootOverride.AsChar() );
+		ERR_CORE(TXT("Root override path %ls not found"), rootOverride.AsChar() );
 	}
 #endif
 
@@ -541,16 +541,16 @@ void CPlatform::Initialize( const String& commandLine, const Core::CommandLineAr
 		SGameConfigurationParameter params = GGameConfig::GetInstance().GetConfigParameters();
 
 		const String newDataPathSuffix = TXT("content/content0");
-		LOG_CORE(TXT("Overriding data path for split cook to %s"), newDataPathSuffix.AsChar() );
+		LOG_CORE(TXT("Overriding data path for split cook to %ls"), newDataPathSuffix.AsChar() );
 		params.dataPathSuffix = newDataPathSuffix;
 
 		// If you need to recompile scripts
 		const String newScriptsPathSuffix = TXT("content/content0/scripts");
-		LOG_CORE(TXT("Overriding scripts path for split cook to %s"), newScriptsPathSuffix.AsChar() );
+		LOG_CORE(TXT("Overriding scripts path for split cook to %ls"), newScriptsPathSuffix.AsChar() );
 		params.scriptsPathSuffix = newScriptsPathSuffix;
 
 		const String newBundlesPathSuffix = TXT("content");
-		LOG_CORE(TXT("Overriding bundles path for split cook to %s"), newBundlesPathSuffix.AsChar() );
+		LOG_CORE(TXT("Overriding bundles path for split cook to %ls"), newBundlesPathSuffix.AsChar() );
 		params.bundlePathSuffix = newBundlesPathSuffix;
 
 		GGameConfig::GetInstance().Initialize( params );
