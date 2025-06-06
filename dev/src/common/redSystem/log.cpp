@@ -56,6 +56,48 @@ bool YouMayLogOMightyThread()
 }
 #endif // RED_LOGGING_ENABLED && RED_PLATFORM_ORBIS
 
+#if defined( RED_LOGGING_ENABLED ) && defined( RED_PLATFORM_LINUX )
+static const size_t MIGHTY_STACK_SIZE = 1024 * 1024;
+bool YouMayLogOMightyThread()
+{
+	pthread_attr_t attr;
+	if ( ::pthread_attr_init(&attr) != 0 )
+	{
+		return false;
+	}
+
+	if ( ::pthread_getattr_np( ::pthread_self(), &attr ) != 0 )
+	{
+		::pthread_attr_destroy(&attr);
+		return false;
+	}
+
+	void* stackaddr = nullptr;
+	size_t stacksize = 0;
+	if ( ::pthread_attr_getstack( &attr, &stackaddr, &stacksize ) != 0 )
+	{
+		::pthread_attr_destroy( &attr );
+		return false;
+	}
+
+	// Don't risk it. Clang uses VMOVAPS for xmm* in varargs.
+	if ( reinterpret_cast<uintptr_t>( stackaddr ) & 15 )
+	{
+		::pthread_attr_destroy( &attr );
+		return false;
+	}
+
+	if ( stacksize < MIGHTY_STACK_SIZE )
+	{
+		::pthread_attr_destroy( &attr );
+		return false;
+	}
+
+	::pthread_attr_destroy( &attr );
+	return true;
+}
+#endif // RED_LOGGING_ENABLED && RED_PLATFORM_LINUX
+
 namespace Red { namespace System { namespace Log {
 
 	Manager* Manager::m_instance = nullptr;

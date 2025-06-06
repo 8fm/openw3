@@ -14,7 +14,7 @@
 #include "threads.h"
 #include "crt.h"
 
-#if defined( RED_LOGGING_ENABLED ) && defined( RED_PLATFORM_ORBIS )
+#if defined( RED_LOGGING_ENABLED ) && ( defined( RED_PLATFORM_ORBIS ) || defined( RED_PLATFORM_LINUX ) )
 	extern bool YouMayLogOMightyThread();
 #	define THREAD_CHECK() if ( !YouMayLogOMightyThread() ) break;
 #else
