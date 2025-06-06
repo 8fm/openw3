@@ -10,9 +10,6 @@
 #include "redIOFile.h"
 
 #include "../core/fileSystemProfilerWrapper.h"
-#ifdef RED_PLATFORM_LINUX
-#include "../core/coreInternal.h"
-#endif
 
 #include <new>
 
@@ -508,11 +505,7 @@ CAsyncFileHandleCache::SCacheEntry* CAsyncFileHandleCache::OpenCacheEntry_NoSync
 #endif
 	CAsyncFile* file = ::new( buf ) CAsyncFile;
 
-#ifdef RED_PLATFORM_LINUX
-	if ( ! file->Open( UNICODE_TO_ANSI(absoluteFilePath), eOpenFlag_Read | eOpenFlag_Async ) )
-#else
 	if ( ! file->Open( absoluteFilePath, eOpenFlag_Read | eOpenFlag_Async ) )
-#endif
 	{
 #ifdef RED_PROFILE_FILE_SYSTEM
 		RedIOProfiler::ProfileAsyncIOOpenFileEnd( 0 );

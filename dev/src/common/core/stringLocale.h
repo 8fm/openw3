@@ -4,6 +4,14 @@
 
 #pragma once
 
+#if defined( RED_PLATFORM_ORBIS ) || defined( RED_PLATFORM_LINUX )
+#	define DIRECTORY_SEPARATOR_CHAR					'/'
+#	define ALTERNATIVE_DIRECTORY_SEPARATOR_CHAR		'\\'
+#else
+#	define DIRECTORY_SEPARATOR_CHAR					'\\'
+#	define ALTERNATIVE_DIRECTORY_SEPARATOR_CHAR		'/'
+#endif
+
 static const int MAX_STATIC_CONV_LEN = 256;
 
 RED_WARNING_PUSH()
@@ -81,10 +89,10 @@ class CUnicodeToAnsi
 	AnsiChar*	m_buf;
 
 public:
-	CUnicodeToAnsi(const UniChar* src)
+	CUnicodeToAnsi(const UniChar* src, Bool changeSlash = false)
 		: m_buf(0)
 	{
-		convert(src);
+		convert(src, changeSlash);
 	}
 
 	~CUnicodeToAnsi()
@@ -95,7 +103,7 @@ public:
 		}
 	}
 
-	void convert( const UniChar* src )
+	void convert( const UniChar* src, Bool changeSlash )
 	{
 		if ( src == NULL )
 		{
@@ -116,6 +124,19 @@ public:
 		}
 
 		wcsrtombs( m_buf, &src, len, NULL );
+
+		if ( changeSlash )
+		{
+			AnsiChar* temp = m_buf;
+			while (*temp != '\0')
+			{
+				if ( *temp == ALTERNATIVE_DIRECTORY_SEPARATOR_CHAR )
+				{
+					*temp = DIRECTORY_SEPARATOR_CHAR;
+				}
+				temp++;
+			}
+		}
 	}
 
 	operator AnsiChar* () const
@@ -126,6 +147,8 @@ public:
 
 #define ANSI_TO_UNICODE(str)	(UniChar*)CAnsiToUnicode((const AnsiChar*)(str))
 #define UNICODE_TO_ANSI(str)	(AnsiChar*)CUnicodeToAnsi((const UniChar*)(str))
+
+#define UNICODE_TO_ANSIPATH(str)	(AnsiChar*)CUnicodeToAnsi((const UniChar*)(str), true)
 
 #ifdef RED_PLATFORM_ORBIS
 # ifdef UNICODE

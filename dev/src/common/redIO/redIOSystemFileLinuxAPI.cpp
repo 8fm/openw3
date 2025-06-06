@@ -6,6 +6,7 @@
 
 #if defined( RED_PLATFORM_LINUX )
 
+#include "../core/coreInternal.h"
 #include <utility>
 #include <string.h>
 
@@ -31,7 +32,7 @@ CSystemFile::~CSystemFile()
 	Close();
 }
 
-Bool CSystemFile::Open( const char* path, Uint32 openFlags )
+Bool CSystemFile::Open( const Char* path, Uint32 openFlags )
 {
 	REDIO_ASSERT( m_fileDescriptor == c_invalidDescriptor );
 
@@ -68,11 +69,12 @@ Bool CSystemFile::Open( const char* path, Uint32 openFlags )
 		descriptorFlags |= O_TRUNC;
 	}
 
-	m_fileDescriptor = ::open( path, descriptorFlags, S_IRUSR | S_IWUSR );
+	AnsiChar* sysPath = UNICODE_TO_ANSIPATH(path);
+	m_fileDescriptor = ::open( sysPath, descriptorFlags, S_IRUSR | S_IWUSR );
 	if ( m_fileDescriptor == c_invalidDescriptor )
 	{
 		ERROR_MESSAGE( errorBuffer );
-		RED_LOG_ERROR( RED_LOG_CHANNEL( RedIO ), TXT("open failed to open '%hs', openFlags=%d, error=%hs"), path, descriptorFlags, errorBuffer );
+		RED_LOG_ERROR( RED_LOG_CHANNEL( RedIO ), TXT("open failed to open '%hs', openFlags=%d, error=%hs"), sysPath, descriptorFlags, errorBuffer );
 		return false;
 	}
 

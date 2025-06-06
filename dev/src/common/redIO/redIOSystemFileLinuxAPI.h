@@ -18,7 +18,7 @@ class CSystemFile
 public:
 	CSystemFile();
 	~CSystemFile();
-	Bool Open( const char* path, Uint32 openFlags );
+	Bool Open( const Char* path, Uint32 openFlags );
 	Bool Close();
 
 	Bool Read( void* dest, Uint32 length, Uint32& outNumberOfBytesRead );
