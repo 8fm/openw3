@@ -11,6 +11,7 @@ struct FindFileObject
 {
 	DIR* m_folder;
 	struct dirent* m_currentEntry;
+	Char m_currentEntryName[ NAME_MAX ];
 	AnsiChar m_path[ PATH_MAX ];
 	AnsiChar m_pattern[ PATH_MAX ];
 	Bool m_usePattern;

@@ -52,7 +52,7 @@ Bool CSystemIO::CopyFile(const Char* existingFileName, const Char* newFileName, 
 Bool CSystemIO::CreateDirectory(const Char* pathName) const
 {
 	Int32 status = mkdir( TO_PLATFORMCODE(pathName), S_IRWXU );
-	if ( status != 0 )
+	if ( status != 0 && errno != EEXIST )
 	{
 		LogLastError( TXT("Low level create directory"), pathName );
 		return false;
@@ -454,7 +454,8 @@ CSystemFindFile::operator Bool() const
 
 const Char* CSystemFindFile::GetFileName()
 {
-	return ANSI_TO_UNICODE(m_findFile.m_currentEntry->d_name);
+	Red::System::StringCopy( m_findFile.m_currentEntryName, ANSI_TO_UNICODE(m_findFile.m_currentEntry->d_name), NAME_MAX );
+	return m_findFile.m_currentEntryName;
 }
 
 const char* CSystemFindFile::GetAnsiFileName()

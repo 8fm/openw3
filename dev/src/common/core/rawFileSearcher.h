@@ -22,8 +22,9 @@ public:
 		{
 			// Important on the PS4 when running from local disk!
 			// Otherwise infinite recursion on the current directory.
-			if ( (Red::System::StringCompare( findFile.GetFileName(), TXT(".") ) == 0) ||
-				 (Red::System::StringCompare( findFile.GetFileName(), TXT("..") ) == 0) )
+			const Char* fileName = findFile.GetFileName();
+			if ( (Red::System::StringCompare( fileName, TXT(".") ) == 0) ||
+				 (Red::System::StringCompare( fileName, TXT("..") ) == 0) )
 			{
 				continue;
 			}
@@ -31,11 +32,11 @@ public:
 			if (findFile.IsDirectory())
 			{
 				// Unique cause on PS4 sceKernelGetdents returns duplicated directories when patch (like overlay APP_HOME) is applied
-				m_directories.PushBackUnique(findFile.GetFileName());
+				m_directories.PushBackUnique(fileName);
 			}
 			else
 			{
-				m_files.PushBack(findFile.GetFileName());
+				m_files.PushBack(fileName);
 			}
 		}
 #if 0
