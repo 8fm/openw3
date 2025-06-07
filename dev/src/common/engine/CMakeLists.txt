@@ -1133,7 +1133,9 @@ target_include_directories(${PROJECT_NAME} PRIVATE
     ${CMAKE_SOURCE_DIR}/dev/external/Ansel/include
 )
 
-if (NOT WIN32)
+if (WIN32)
+    set(SYSTEM_DEPS "")
+else()
     set(SYSTEM_DEPS SpeedTreeCore SpeedTreeForest)
 endif()
 

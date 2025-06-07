@@ -52,6 +52,7 @@ if (NOT WIN32)
         BUILD_BYPRODUCTS  ${DIRECTX_LIBS}
     )
 
+    find_package(SDL2 CONFIG REQUIRED)
     find_package(directxtex CONFIG REQUIRED)
     find_package(directxmath CONFIG REQUIRED)
     set(DIRECTX_MATH_LIBS Microsoft::DirectXMath)

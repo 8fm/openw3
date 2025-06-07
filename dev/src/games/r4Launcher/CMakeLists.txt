@@ -51,6 +51,7 @@ if (WIN32)
 else()
     set(SYSTEM_DEPS
         Microsoft::DirectXTex
+        SDL2::SDL2
         libgfx_air
         libgfx_as2
         libgfx_as3
