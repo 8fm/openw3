@@ -588,6 +588,7 @@ endif()
 
 add_subdirectory (pal)
 
+if (0)
 # build the rest with NO_PAL_MINMAX and PAL_STDCPP_COMPAT
 add_definitions(
     -DNO_PAL_MINMAX
@@ -613,3 +614,4 @@ add_subdirectory (lib)
 add_subdirectory (bin)
 
 add_subdirectory(test)
+endif()

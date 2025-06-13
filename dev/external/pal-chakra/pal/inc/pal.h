@@ -242,6 +242,7 @@ PAL_IsDebuggerPresent();
 
 #define MAXIMUM_SUSPEND_COUNT  MAXCHAR
 
+#if !defined(__CLANG_LIMITS_H) || !defined(_LIBC_LIMITS_H_)
 #define CHAR_BIT      8
 
 #define SCHAR_MIN   (-128)
@@ -271,6 +272,7 @@ PAL_IsDebuggerPresent();
 #define ULONG64_MAX     0xffffffffffffffffui64
 #define DWORD64_MAX     0xffffffffffffffffui64
 #define UINT64_MAX      0xffffffffffffffffui64
+#endif // #if !defined(__CLANG_LIMITS_H) || !defined(_LIBC_LIMITS_H_)
 
 #define FLT_MAX 3.402823466e+38F
 #define DBL_MAX 1.7976931348623157e+308

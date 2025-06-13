@@ -226,7 +226,7 @@ extern Volatile<BOOL> dbg_master_switch ;
 #ifndef ENABLE_CC_XPLAT_TRACE
 
 /* compile out these trace levels; see the definition of NOTRACE */
-#if !defined(DEBUG)
+#if 1 // !defined(DEBUG)
 #define TRACE     NOTRACE
 #else
 #define TRACE     {if (!PAL_InitializeChakraCoreCalled) abort();}
