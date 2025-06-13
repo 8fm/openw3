@@ -1595,7 +1595,7 @@ PathLib::AreaId CPathLibWorld::GetInstanceAreaIdFromFileName( const String& file
 
 	return PathLib::AreaId( id );
 }
-RED_INLINE PathLib::CAreaDescription* CPathLibWorld::GetAreaAtPosition( const Vector3& v ) const
+PathLib::CAreaDescription* CPathLibWorld::GetAreaAtPosition( const Vector3& v ) const
 {
 	// instances
 	{
