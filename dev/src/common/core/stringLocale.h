@@ -68,10 +68,10 @@ public:
 #error Unsupported platform
 #endif
 #ifdef RED_PLATFORM_LINUX
-		mbsrtowcs( m_buf, &src, len - 1, &mbst );
-		// if no null character was written to dst after len wide characters were written, then
-		// L'\0' is stored in dst[len], which means len+1 total wide characters are written
-		m_buf[ len - 1 ] = L'\0';
+		size_t charsWritten;
+		for (charsWritten = 0; charsWritten < len - 1 && *src; src++)
+			charsWritten += std::mbrtoc16(m_buf + charsWritten, src, MB_CUR_MAX, nullptr);
+		m_buf[ len - 1 ] = TXT( '\0' );
 #else
 		mbsrtowcs( m_buf, &src, len, &mbst );
 #endif
@@ -112,7 +112,13 @@ public:
 			return;
 		}
 
+#ifdef RED_PLATFORM_LINUX
+		size_t len = 1; // 1 for null terminator
+		for (size_t i = 0; src[i] != TXT('\0'); i++)
+			len += std::c16rtomb(m_staticBuf, src[i], nullptr);
+#else
 		const size_t len = wcsrtombs( NULL, &src, 0, NULL ) + 1;
+#endif
 
 		if (len > (size_t) MAX_STATIC_CONV_LEN)
 		{
@@ -123,7 +129,14 @@ public:
 			m_buf = m_staticBuf;
 		}
 
+#ifdef RED_PLATFORM_LINUX
+		size_t charsWritten;
+		for (charsWritten = 0; charsWritten < len - 1 && *src; src++)
+			charsWritten += std::c16rtomb(m_buf + charsWritten, *src, nullptr);
+		m_buf[ len - 1 ] = '\0';
+#else
 		wcsrtombs( m_buf, &src, len, NULL );
+#endif
 
 		if ( changeSlash )
 		{

@@ -37,7 +37,11 @@ namespace red
 	typedef float				Float;
 	typedef double				Double;
 
+#ifdef RED_PLATFORM_LINUX
+	typedef char16_t			UniChar;
+#else
 	typedef wchar_t				UniChar;
+#endif
 	typedef char				AnsiChar;
 
 	typedef size_t				MemSize;
@@ -50,7 +54,11 @@ namespace red
 #if defined( UNICODE )
 
 	typedef UniChar				Char;
+#ifdef RED_PLATFORM_LINUX
+#	define TXT(s)				u##s
+#else
 #	define TXT(s)				L##s
+#endif
 
 #else
 	// Prevent mix and matching across projects.

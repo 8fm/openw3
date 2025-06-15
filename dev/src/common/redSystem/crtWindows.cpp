@@ -28,7 +28,10 @@ Int32 Red::System::SNPrintF( UniChar* buffer, size_t count, const UniChar* forma
 
 #include "utility.h"
 
-Red::System::Bool Red::System::Internal::FileOpen( FILE** handle, const UniChar* filename, const UniChar* mode )
+#include <codecvt>
+#include <locale>
+
+Bool Internal::FileOpen( FILE** handle, const UniChar* filename, const UniChar* mode )
 {
 	AnsiChar ansiFilename[ 256 ];
 	AnsiChar ansiMode[ 16 ];
@@ -39,6 +42,15 @@ Red::System::Bool Red::System::Internal::FileOpen( FILE** handle, const UniChar*
 	*handle = fopen(ansiFilename, ansiMode);
 	auto result = !( *handle );
 	return result == 0;
+}
+
+void Internal::FilePrint( FILE* handle, const UniChar* buffer )
+{
+	std::u16string u16str(buffer);
+	std::wstring_convert<std::codecvt_utf8<char16_t>, char16_t> converter;
+	std::string utf8str = converter.to_bytes(u16str);
+
+	::fputs( utf8str.c_str(), handle );
 }
 
 #else
