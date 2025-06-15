@@ -3,13 +3,13 @@ project(LavaEngine)
 
 #set(CMAKE_VERBOSE_MAKEFILE ON)
 if (NOT CMAKE_BUILD_TYPE)
-    set(CMAKE_BUILD_TYPE "Release" CACHE STRING "" FORCE)
+    set(CMAKE_BUILD_TYPE "Debug" CACHE STRING "" FORCE)
 endif()
 message("CMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE}")
 
 # GAME_CONFIG
 if (NOT GAME_CONFIG)
-    set(GAME_CONFIG "Final" CACHE STRING "" FORCE)
+    set(GAME_CONFIG "Debug" CACHE STRING "" FORCE)
 endif()
 message("GAME_CONFIG=${GAME_CONFIG}")
 
@@ -70,6 +70,8 @@ if (NOT WIN32)
     add_subdirectory(dev/external/gfx4/3rdParty/expat-2.1.0)
     # gfx4 - all other
     add_subdirectory(dev/external/gfx4/Projects/cmake)
+    # Chakra.Pal.Singular
+    add_subdirectory(dev/external/pal-chakra)
     # PhysX3
     add_subdirectory(dev/external/PhysX3)
     # speedtree
@@ -79,6 +81,7 @@ if (NOT WIN32)
 endif()
 
 add_subdirectory(dev/src/common/core)
+if (WIN32)
 add_subdirectory(dev/src/common/engine)
 add_subdirectory(dev/src/common/game)
 add_subdirectory(dev/src/common/gpuApiDX10)
@@ -96,7 +99,9 @@ add_subdirectory(dev/src/common/redMath)
 add_subdirectory(dev/src/common/redMemory)
 add_subdirectory(dev/src/common/redMemoryFramework)
 add_subdirectory(dev/src/common/redNetwork)
+endif()
 add_subdirectory(dev/src/common/redSystem)
+if (WIN32)
 add_subdirectory(dev/src/common/redThreads)
 add_subdirectory(dev/src/common/renderer)
 add_subdirectory(dev/src/common/scripts)
@@ -108,3 +113,4 @@ add_subdirectory(dev/src/linux/platform)
 endif()
 
 add_subdirectory(dev/src/games/r4Launcher)
+endif()

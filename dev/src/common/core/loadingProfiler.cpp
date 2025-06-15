@@ -54,10 +54,10 @@ void CLoadingProfiler::Start()
 	FinishStage( TXT("<base>") );
 }
 
-#if !defined( RED_FINAL_BUILD ) || defined( RED_PROFILE_BUILD )
+#if ( !defined( RED_FINAL_BUILD ) || defined( RED_PROFILE_BUILD ) ) && !defined( RED_PLATFORM_LINUX )
 	#undef LOG_CORE
 
-# if defined( RED_PLATFORM_ORBIS ) || defined( RED_PLATFORM_LINUX )
+# ifdef RED_PLATFORM_ORBIS
 	#define LOG_CORE(...) { fwprintf( stdout, __VA_ARGS__ ); fwprintf( stdout, L"\n" ); }
 # else
 	#define LOG_CORE(...) { Char tempArray[1024]; swprintf( tempArray, 1024, __VA_ARGS__ ); OutputDebugString(tempArray); OutputDebugString(TXT("\n")); }

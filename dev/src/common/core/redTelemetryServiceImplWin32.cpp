@@ -327,7 +327,11 @@ void CRedTelemetryServiceImplWin32::LogVL_WS( const String& eventName, const Str
 
 void CRedTelemetryServiceImplWin32::LogEx	( const String& ex )
 {
+#ifdef RED_PLATFORM_LINUX
+	m_libInterface->SendExceptionCategoryA( "w3exception", UNICODE_TO_ANSI( ex.AsChar() ) );
+#else
 	m_libInterface->SendExceptionCategoryW( "w3exception", ex.AsChar() );
+#endif
 }
 
 void CRedTelemetryServiceImplWin32::SetCommonStatValue( const String& name, Float value )

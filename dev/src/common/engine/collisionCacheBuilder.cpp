@@ -328,23 +328,23 @@ ICollisionCache::EResult CCollisionCacheBuilder::Compile( CompiledCollisionPtr& 
 	newToken.m_boundingArea = compiledMesh->GetBoundingArea();
 
 	{
-		if ( name.EndsWith( L"w2mesh") )
+		if ( name.EndsWith( TXT("w2mesh")) )
 		{
 			newToken.m_collisionType = RTT_Mesh;
 		}
-		else if ( name.EndsWith( L"w2ter") )
+		else if ( name.EndsWith( TXT("w2ter")) )
 		{
 			newToken.m_collisionType = RTT_Terrain;
 		}
-		else if ( name.EndsWith( L"redapex") )
+		else if ( name.EndsWith( TXT("redapex")) )
 		{
 			newToken.m_collisionType = RTT_ApexDestruction;
 		}
-		else if ( name.EndsWith( L"redcloth") )
+		else if ( name.EndsWith( TXT("redcloth")) )
 		{
 			newToken.m_collisionType = RTT_ApexCloth;
 		}
-		else if ( name.EndsWith( L"reddest") )
+		else if ( name.EndsWith( TXT("reddest")) )
 		{
 			newToken.m_collisionType = RTT_Destruction;
 		}

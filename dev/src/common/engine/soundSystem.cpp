@@ -354,7 +354,7 @@ void TempAssertHook( const char * in_pszExpression,	const char * in_pszFileName,
 #if defined(USE_WWISE)
 void OutputFunc( AK::Monitor::ErrorCode in_eErrorCode, const AkOSChar* in_pszError, AK::Monitor::ErrorLevel in_eErrorLevel, AkPlayingID in_playingID, AkGameObjectID in_gameObjID )
 {
-#ifdef RED_PLATFORM_ORBIS
+#if defined( RED_PLATFORM_ORBIS ) || defined( RED_PLATFORM_LINUX )
 	return;
 #endif
 	if( in_gameObjID != AK_INVALID_GAME_OBJECT )

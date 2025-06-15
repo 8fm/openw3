@@ -8,6 +8,10 @@
 #ifdef USE_SCALEFORM
 //////////////////////////////////////////////////////////////////////////
 
+#ifdef RED_PLATFORM_LINUX
+#include <string>
+#endif
+
 namespace // anonymous
 {
 	const SF::SPInt DEFAULT_STRING_DECODE_STACK_CHARS = 256;
@@ -40,7 +44,11 @@ namespace // anonymous
 				m_dstBuf = m_stackMem;
 			}
 
+#ifdef RED_PLATFORM_LINUX
+			Red::System::StdCharToWideChar( m_dstBuf, src, len + 1 );
+#else
 			SF::UTF8Util::DecodeString( m_dstBuf, src );
+#endif
 		}
 
 	public:
@@ -82,7 +90,13 @@ namespace // anonymous
 				return;
 			}
 
+#ifdef RED_PLATFORM_LINUX
+			SF::SPInt len = 0;
+			for (size_t i = 0; src[i] != TXT('\0'); i++)
+				len += std::c16rtomb(m_stackMem, src[i], nullptr);
+#else
 			SF::SPInt len = SF::UTF8Util::GetEncodeStringSize( src );
+#endif
 			if ( len + 1 > StackChars )
 			{
 				m_dstBuf = static_cast< SFChar* >( RED_MEMORY_ALLOCATE( MemoryPool_Strings, MC_String, ( len + 1 ) * sizeof( SFChar) ) );
@@ -93,7 +107,11 @@ namespace // anonymous
 				m_dstBuf = m_stackMem;
 			}
 
+#ifdef RED_PLATFORM_LINUX
+			Red::System::WideCharToStdChar( m_dstBuf, src, len + 1 );
+#else
 			SF::UTF8Util::EncodeString( m_dstBuf, src );
+#endif
 		}
 
 	public:
@@ -141,7 +159,13 @@ RED_INLINE String ToString( const GFx::Value& value )
 {
 	if ( value.IsStringW() )
 	{
+#ifdef RED_PLATFORM_LINUX
+		std::wstring w_temp(value.GetStringW());
+		std::u16string u16_temp(w_temp.begin(), w_temp.end());
+		return u16_temp.c_str();
+#else
 		return value.GetStringW();
+#endif
 	}
 
 	if ( value.IsString() )

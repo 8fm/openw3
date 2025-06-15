@@ -429,7 +429,9 @@ CSystemFindFile::CSystemFindFile(const Char* fileName)
 	m_findFile.m_folder = ::opendir( m_findFile.m_path );
 	if ( m_findFile.m_folder == nullptr )
 	{
+#if 0
 		LogLastError( TXT("CSystemFindFile"), fileName );
+#endif
 		return;
 	}
 

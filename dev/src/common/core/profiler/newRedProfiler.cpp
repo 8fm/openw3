@@ -173,7 +173,11 @@ namespace DebugProfiler
 			Uint64 startTicks[ MAX_DEBUG_PROFILER_DEPTH ];
 
 			// process entries
+#ifdef RED_PLATFORM_LINUX
+			fprintf( f, "%d profiling entries\n", m_numEntries );
+#else
 			fwprintf( f, TXT("%d profiling entries\n"), m_numEntries );
+#endif
 			for ( Uint32 i=0; i<m_numEntries; ++i )
 			{
 				const Entry& info = m_entries[ i ];

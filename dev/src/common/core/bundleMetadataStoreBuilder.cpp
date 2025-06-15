@@ -634,7 +634,7 @@ Bool CBundleMetadataStoreBuilder::ProcessBundle( const String& rootPath, const S
 		m_rawBundles.PushBack( bundleData );
 
 		// FIXME: Platform paths
-#ifdef RED_PLATFORM_ORBIS
+#if defined( RED_PLATFORM_ORBIS ) || defined( RED_PLATFORM_LINUX )
 		bundleData->m_name.ReplaceAll("/","\\");
 #endif
 

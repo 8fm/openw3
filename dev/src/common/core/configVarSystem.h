@@ -135,7 +135,7 @@ namespace Config
 	template< typename TChar >
 	RED_INLINE const TChar* GetPlatformString()
 	{
-#if defined(RED_PLATFORM_WINPC)
+#if defined(RED_PLATFORM_WINPC) || defined(RED_PLATFORM_LINUX)
 		return RED_TEMPLATE_TXT( TChar, "pc" );
 #elif defined(RED_PLATFORM_DURANGO)
 		return RED_TEMPLATE_TXT( TChar, "xbox1" );
@@ -149,7 +149,7 @@ namespace Config
 	// Returns active platform enum
 	RED_INLINE const EPlatform GetPlatform()
 	{
-#if defined(RED_PLATFORM_WINPC)
+#if defined(RED_PLATFORM_WINPC) || defined(RED_PLATFORM_LINUX)
 		return ePlatform_PC;
 #elif defined(RED_PLATFORM_DURANGO)
 		return ePlatform_XB1;

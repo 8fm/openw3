@@ -53,7 +53,7 @@ bool GameConfig::LoadConfig( const String& game )
 	cfgParams.telemetryClassName		= gameParamsMap[ TXT("telemetryClass") ];
 	cfgParams.cameraDirectorClassName	= gameParamsMap[ TXT("cameraDirClassName") ];
 
-#ifdef RED_PLATFORM_ORBIS
+#if defined( RED_PLATFORM_ORBIS ) || defined( RED_PLATFORM_LINUX )
 	cfgParams.userPathSuffix.ReplaceAll(TXT("\\"),TXT("/"));
 	cfgParams.dataPathSuffix.ReplaceAll(TXT("\\"),TXT("/"));
 	cfgParams.bundlePathSuffix.ReplaceAll(TXT("\\"),TXT("/"));

@@ -103,7 +103,7 @@ template <>						RED_INLINE const Red::System::AnsiChar SelectCharType< Red::Sys
 // template< typename TChar >
 // TChar* TestFunc() { return RED_TEMPLATE_TXT( TChar, "Some Text" ); }
 // One level of indirection exists in this macro to allow for the txt parameter to itself also be a macro
-#define _RED_TEMPLATE_TXT( type, txt ) SelectCharType< type >( txt, L##txt )
+#define _RED_TEMPLATE_TXT( type, txt ) SelectCharType< type >( txt, MACRO_TXT(txt) )
 #define RED_TEMPLATE_TXT( type, txt ) _RED_TEMPLATE_TXT( type, txt )
 
 #endif // _RED_TYPE_TRAITS_H_
