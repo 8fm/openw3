@@ -79,8 +79,8 @@ else()
     endif()
 
     # Verbose output
-    add_compile_options(-v)
-    add_link_options(-v)
+    #add_compile_options(-v)
+    #add_link_options(-v)
 endif()
 
 #Shared.targets
