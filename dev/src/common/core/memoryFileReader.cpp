@@ -26,9 +26,19 @@ void CMemoryFileReader::Serialize( void* buffer, size_t size )
 		size = m_dataSize - m_offset;
 	}
 
-	Red::System::MemoryCopy( buffer, &m_data[ m_offset ], size );
-	m_offset += size;
-
+	if ( IsWideSerialization() )
+	{
+		for ( size_t i=0; i<size; i++ )
+		{
+			Red::System::MemoryCopy( (Uint8*)buffer + i*4, &m_data[ m_offset + i*2 ], 2 ); // Force to sizeof(Char) == 2
+		}
+		m_offset += size * 4; // real sizeof(Char) == 4
+	}
+	else
+	{
+		Red::System::MemoryCopy( buffer, &m_data[ m_offset ], size );
+		m_offset += size;
+	}
 }
 
 // Get position in file stream

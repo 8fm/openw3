@@ -64,7 +64,8 @@ enum EFileFlags
 	FF_FilterScriptProps	= FLAG( 22 ),	//!< Saving will filter out non-editable scripted properties (so we don't save liks to BS)
 	FF_KeepCNameList		= FLAG( 23 ),	//!< CName strings list will be kept with this file, no need to save strings next to hashes
 	FF_NoInlineSkipBlocks	= FLAG( 24 ),	//!< FileSkipableBlock data is not stored inline, instead it is cached
-	FF_ScriptCollector		= FLAG( 25 )	//!< This is not a file but but the script collector.
+	FF_ScriptCollector		= FLAG( 25 ),	//!< This is not a file but but the script collector.
+	FF_WideSerialization	= FLAG( 26 )	//!< Use wide serialization: read 2 bytes and write it to 4 bytes wchar_t in Linux
 };
 
 extern Bool GCNameAsNumberSerialization;
@@ -150,6 +151,9 @@ public:
 	// Is endianess swapping enabled ?
 	RED_INLINE Bool IsByteSwapping() const { return ( m_flags & FF_ByteSwap ) != 0; }
 
+	// Is wide serialization enabled ?
+	RED_INLINE Bool IsWideSerialization() const { return ( m_flags & FF_WideSerialization ) != 0; }
+
 	// Is this a mapper ?
 	RED_INLINE Bool IsMapper() const { return ( m_flags & FF_Mapper ) != 0; }
 
@@ -196,6 +200,19 @@ public:
 		else
 		{
 			m_flags &= ~FF_ByteSwap;
+		}
+	}
+
+	// Enable/Disable wide serialization
+	RED_INLINE void SetWideSerialization( Bool wideSer )
+	{
+		if ( wideSer )
+		{
+			m_flags |= FF_WideSerialization;
+		}
+		else
+		{
+			m_flags &= ~FF_WideSerialization;
 		}
 	}
 

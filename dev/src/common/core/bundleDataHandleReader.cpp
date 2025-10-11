@@ -24,8 +24,19 @@ void CBundleDataHandleReader::Serialize( void* buffer, size_t size )
 	RED_ASSERT( m_localReadOffset + size <= m_localFileSize, TXT( "Reading off the end of the cached file!" ) );
 	MemUint readPtrAddress = reinterpret_cast< MemUint >( m_bundleDataBuffer->GetBuffer() ) + m_localReadOffset;
 	void* readPtr = reinterpret_cast< void* >( readPtrAddress );
-	Red::System::MemoryCopy( buffer, readPtr, size );
-	m_localReadOffset += static_cast< Uint32 >( size );
+	if ( IsWideSerialization() )
+	{
+		for ( size_t i=0; i<size; i++ )
+		{
+			Red::System::MemoryCopy( (Uint8*)buffer + i*4, (Uint8*)readPtr + i*2, 2 ); // Force to sizeof(Char) == 2
+		}
+		m_localReadOffset += static_cast< Uint32 >( size * 4 ); // real sizeof(Char) == 4
+	}
+	else
+	{
+		Red::System::MemoryCopy( buffer, readPtr, size );
+		m_localReadOffset += static_cast< Uint32 >( size );
+	}
 }
 
 Uint64 CBundleDataHandleReader::GetOffset() const

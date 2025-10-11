@@ -79,6 +79,19 @@ void CXMLFileReader::Parse( IFile &file )
 	}
 
 	// allocate xml string memory
+#ifdef RED_PLATFORM_LINUX
+	Uint32 charSize = Red::Math::NumericalUtils::Max<Uint32>( fileSize / 2 - 1, 0 ); // Force to sizeof(Char) == 2
+	m_xmlData = reinterpret_cast< Char* >( RED_MEMORY_ALLOCATE( MemoryPool_Default, MC_Temporary , sizeof( Char ) * (charSize + 1)) );
+	file.SetWideSerialization( true );
+	file.Serialize( m_xmlData, charSize );
+	m_xmlData[charSize] = 0; // Append zero
+
+	// Byteswap
+	if ( signature == 0xFFFE )
+	{
+		rapidxml::parse_error_handler( "TODO add byteswap in Linux for XML files.", nullptr );
+	}
+#else
 	Uint32 charSize = Red::Math::NumericalUtils::Max<Uint32>( fileSize / sizeof(Char) - 1, 0 ); // size in Chars without signature
 	m_xmlData = reinterpret_cast< Char* >( RED_MEMORY_ALLOCATE( MemoryPool_Default, MC_Temporary , sizeof( Char ) * (charSize + 1)) );
 	file.Serialize( m_xmlData, charSize * sizeof(Char) );
@@ -92,6 +105,7 @@ void CXMLFileReader::Parse( IFile &file )
 			ByteSwapChar( &m_xmlData[i] );
 		}
 	}
+#endif
 
 	// read data into buffer
 	m_data = m_xmlData;
