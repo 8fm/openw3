@@ -361,7 +361,11 @@ IMPLEMENT_POOL(Define, define)
 // this is djb's xor hashing function.
 static inline uint32 hash_string_djbxor(const char *sym)
 {
+#if defined(__cplusplus) && (__cplusplus >= 201703L) || defined(__STDC_VERSION__) && (__STDC_VERSION__ >= 201710L)
+    uint32 hash = 5381;
+#else
     register uint32 hash = 5381;
+#endif
     while (*sym)
         hash = ((hash << 5) + hash) ^ *(sym++);
     return hash;

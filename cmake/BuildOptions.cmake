@@ -64,7 +64,7 @@ if (MSVC)
         endif()
     endif()
 else()
-    add_compile_options(-std=c++14)
+    add_compile_options("$<$<COMPILE_LANGUAGE:CXX>:-std=c++17>")
 
     add_compile_options(-ggdb -fPIC -ffast-math -finput-charset=UTF-8)
     add_compile_options(-ffunction-sections -fdata-sections)

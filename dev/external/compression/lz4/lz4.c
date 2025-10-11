@@ -298,7 +298,11 @@ typedef enum { full = 0, partial = 1 } earlyEnd_directive;
 ****************************/
 #if LZ4_ARCH64
 
+#if defined(__cplusplus) && (__cplusplus >= 201703L) || defined(__STDC_VERSION__) && (__STDC_VERSION__ >= 201710L)
+int LZ4_NbCommonBytes (U64 val)
+#else
 int LZ4_NbCommonBytes (register U64 val)
+#endif
 {
 # if defined(LZ4_BIG_ENDIAN)
 #   if defined(_MSC_VER) && !defined(LZ4_FORCE_SW_BITCOUNT)

@@ -228,7 +228,11 @@ int hash_remove(HashTable *table, const void *key)
 // this is djb's xor hashing function.
 static inline uint32 hash_string_djbxor(const char *str, size_t len)
 {
+#if defined(__cplusplus) && (__cplusplus >= 201703L) || defined(__STDC_VERSION__) && (__STDC_VERSION__ >= 201710L)
+	uint32 hash = 5381;
+#else
 	register uint32 hash = 5381;
+#endif
 	while (len--)
 		hash = ((hash << 5) + hash) ^ *(str++);
 	return hash;
