@@ -44,9 +44,8 @@ dev/external/BC6HBC7 DirectCompute Encoder Tool/C++/Win32/
 dev/external/BC6HBC7 DirectCompute Encoder Tool/C++/x64/
 dev/external/BC6HBC7 DirectCompute Encoder Tool/lib/
 dev/external/compression/doboz/bin/
-dev/external/compression/lz4/msvc/bin/
-dev/external/compression/snappy/msvc/bin/
-dev/external/compression/snappy/msvc17/bin/
+dev/external/compression/lz4/msvc*/bin/
+dev/external/compression/snappy/msvc*/bin/
 dev/external/compression/zlib/lib/
 dev/external/cryptopp562/vs2022/
 dev/external/cryptopp562/x64/
