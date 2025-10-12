@@ -7,6 +7,7 @@
 #if defined( RED_PLATFORM_LINUX )
 
 #include "../core/coreInternal.h"
+#include "../core/fileSys.h"
 #include <utility>
 #include <string.h>
 
@@ -73,9 +74,17 @@ Bool CSystemFile::Open( const Char* path, Uint32 openFlags )
 	m_fileDescriptor = ::open( sysPath, descriptorFlags, S_IRUSR | S_IWUSR );
 	if ( m_fileDescriptor == c_invalidDescriptor )
 	{
-		ERROR_MESSAGE( errorBuffer );
-		RED_LOG_ERROR( RED_LOG_CHANNEL( RedIO ), TXT("open failed to open '%hs', openFlags=%d, error=%hs"), sysPath, descriptorFlags, errorBuffer );
-		return false;
+		if ( GFileManager->ResourcePathsScanned() )
+		{
+			std::string realPath = GFileManager->ConvertPathResource(sysPath);
+			m_fileDescriptor = ::open( realPath.c_str(), descriptorFlags, S_IRUSR | S_IWUSR );
+		}
+		if ( m_fileDescriptor == c_invalidDescriptor )
+		{
+			ERROR_MESSAGE( errorBuffer );
+			RED_LOG_ERROR( RED_LOG_CHANNEL( RedIO ), TXT("open failed to open '%hs', openFlags=%d, error=%hs"), sysPath, descriptorFlags, errorBuffer );
+			return false;
+		}
 	}
 
 	return true;

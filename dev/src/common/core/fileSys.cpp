@@ -546,3 +546,145 @@ String CFileManager::GenerateTemporaryFilePath() const
 	return fullPath;
 }
 #endif
+
+#ifdef RED_PLATFORM_LINUX
+// Resource paths
+
+void terminate_with_char(std::string &buffer, const char chr)
+{
+	// Check if already has
+	if (!buffer.empty() && buffer[buffer.length() - 1] != chr)
+	{
+		// Append to end and store
+		buffer += chr;
+	}
+}
+
+std::string get_dir_iterator_path(const std::filesystem::path &path)
+{
+	std::string path_str = path.string();
+	size_t pos = path_str.find(std::string(".") + DIRECTORY_SEPARATOR_LITERAL);
+	if (pos != std::string::npos && pos == 0)
+	{
+		path_str.erase(0, 2);
+	}
+	return path_str;
+}
+
+void string_replace(std::string &input, const char *find, const char *paste)
+{
+	size_t pos = 0;
+	while (true)
+	{
+		pos = input.find(find, pos);
+		if (pos >= input.size())
+			break;
+		input.replace(pos, strlen(find), paste);
+		pos += strlen(paste);
+	}
+}
+
+std::string convert_path(const char *path)
+{
+	std::string conv;
+	size_t size = strlen(path);
+	for (int i = 0; i < size; ++i)
+	{
+		conv.push_back(path[i] == ALTERNATIVE_DIRECTORY_SEPARATOR_LITERAL ? DIRECTORY_SEPARATOR_LITERAL : path[i]);
+	}
+	return conv;
+}
+
+inline char *tolwr(char *str)
+{
+	char *result = str;
+	while (*str != '\0')
+	{
+		*str = tolower(*str);
+		str++;
+	}
+	return result;
+}
+
+inline bool starts_with(const std::string &str, const std::string &prefix)
+{
+	return str.size() >= prefix.size() && 0 == str.compare(0, prefix.size(), prefix);
+}
+
+inline bool ends_with(const std::string &str, const std::string &suffix)
+{
+	return str.size() >= suffix.size() && 0 == str.compare(str.size() - suffix.size(), suffix.size(), suffix);
+}
+
+void CFileManager::AddEntryToResourcePaths(const std::filesystem::directory_entry &entry, std::string &checkingPath)
+{
+	if (entry.is_regular_file() || entry.is_directory())
+	{
+		std::string path = get_dir_iterator_path(entry.path());
+		std::string path_lwr = convert_path(path.c_str());
+		tolwr(path_lwr.data());
+		if (starts_with(path_lwr, checkingPath + "content") || starts_with(path_lwr, checkingPath + "dlc"))
+		{
+			m_resourcePaths[path_lwr] = path;
+		}
+	}
+}
+
+void CFileManager::ScanResourcePaths()
+{
+	if (!m_resourcePathsScanned)
+	{
+		// Seems like if static code calls us we need to do this manually to avoid any bugs
+		m_resourcePaths = std::unordered_map<std::string, std::string>();
+	}
+	m_resourcePaths.clear();
+	std::string rootDir = "";
+	for (const auto &entry : std::filesystem::recursive_directory_iterator("."))
+	{
+		AddEntryToResourcePaths(entry, rootDir);
+	}
+	rootDir = std::string(UNICODE_TO_ANSI(GFileManager->GetRootDirectory().AsChar()));
+	auto it = std::filesystem::recursive_directory_iterator(rootDir);
+	tolwr(rootDir.data());
+	for (const auto &entry : it)
+	{
+		AddEntryToResourcePaths(entry, rootDir);
+	}
+	m_resourcePathsScanned = true;
+}
+
+std::string CFileManager::ConvertPathResource(const char *path)
+{
+	if (!m_resourcePathsScanned)
+	{
+		ScanResourcePaths();
+	}
+	std::string conv = std::string(path); // = convert_path(path); // already converted with UNICODE_TO_ANSIPATH
+	std::string path_lwr = conv; // save original string if we will need to create new file in existing folder
+	tolwr(path_lwr.data());
+	std::filesystem::path tmp_path = std::filesystem::u8path(path_lwr).lexically_normal(); // remove relative paths
+	path_lwr = tmp_path.string();
+	std::string result = m_resourcePaths[path_lwr];
+	if (result.empty())
+	{
+		// if we need to create new file in existing folder, then we need to check ResourcePaths[parent_folder]
+		result = m_resourcePaths[tmp_path.parent_path().string()];
+		if (result.empty())
+		{
+			// no such parent folder
+			return path_lwr;
+		}
+		else
+		{
+			// parent folder found
+			result = result + DIRECTORY_SEPARATOR_LITERAL + std::filesystem::u8path(conv).filename().string();
+			m_resourcePaths[path_lwr] = result;
+			return result;
+		}
+	}
+	else
+	{
+		return result;
+	}
+}
+#endif

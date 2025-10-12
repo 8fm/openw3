@@ -5,6 +5,10 @@
 #define _FILESYS_H
 
 #include "string.h"
+#ifdef RED_PLATFORM_LINUX
+#include <filesystem>
+#include <unordered_map>
+#endif
 
 // File open flags
 enum EFileOpenFlags
@@ -89,6 +93,15 @@ public:
 
 	// Get file system decompression engine
 	RED_FORCE_INLINE CFileDecompression* GetDecompressionEngine() const { return m_decompression; }
+
+#ifdef RED_PLATFORM_LINUX
+// Resource paths
+public:
+	RED_INLINE const Bool ResourcePathsScanned() const { return m_resourcePathsScanned; }
+	void AddEntryToResourcePaths(const std::filesystem::directory_entry &entry, std::string &checkingPath);
+	void ScanResourcePaths();
+	std::string ConvertPathResource(const char *path);
+#endif
 
 public:
 	CFileManager( const Char* rootDirectory, const Char* baseDirectory, const Char* dataDirectory, const Char* bundleDirectory, const Bool isReadOnly );
@@ -186,6 +199,10 @@ private:
 
 	// file system decompression engine
 	CFileDecompression*	m_decompression;
+#ifdef RED_PLATFORM_LINUX
+	Bool m_resourcePathsScanned = false;	//!< Since some code may call this statically, we use a flag to know if paths have already been scanned
+	std::unordered_map<std::string, std::string> m_resourcePaths;
+#endif
 
 };
 

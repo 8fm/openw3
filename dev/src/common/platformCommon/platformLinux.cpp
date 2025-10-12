@@ -578,6 +578,10 @@ void CPlatform::Initialize( const String& commandLine, const Core::CommandLineAr
 	GFileManager = new CFileManager( rootPathWithTrailingBackslash.AsChar(), workingPath.AsChar(), dataPath.AsChar(), bundlePath.AsChar(), isReadOnly );
 	GFileManager->SetUserDirectory( userPath.AsChar() );
 	GFileManager->SetApplicationFilename( partPath.AsChar() );
+	if ( !GFileManager->ResourcePathsScanned() )
+	{
+		GFileManager->ScanResourcePaths();
+	}
 
 	// Initialize async I/O
 	GDeprecatedIO = new CDeprecatedIO;
