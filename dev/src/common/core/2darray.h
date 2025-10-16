@@ -282,7 +282,7 @@ public:
 	Bool Load2dArray( const String& filePath );
 	Bool Unload2dArray( const String& filePath );
 
-	RED_INLINE const C2dArray& Get2dArray() const { return m_2dArray; }
+	RED_INLINE const C2dArray& Get2dArray() const { return *m_2dArray; }
 	const C2dArray& Reload2dArray();
 
 #ifndef NO_EDITOR 
@@ -292,7 +292,7 @@ protected:
 	TDynArray<String>		m_2dArrayFilePaths;
 	TDynArray< THandle<C2dArray> >	m_2dArrays;
 
-	C2dArray				m_2dArray;
+	THandle<C2dArray>				m_2dArray;
 
 	CGatheredResource& m_defaultGatheredResource;
 };

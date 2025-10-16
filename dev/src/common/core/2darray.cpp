@@ -1126,7 +1126,9 @@ void RegisterCSVFunctions()
 	NATIVE_GLOBAL_FUNCTION( "LoadCSV", funcLoadCSV );
 }
 
-C2dArraysResourcesManager::C2dArraysResourcesManager( CGatheredResource& defaultGatheredResource ) : m_defaultGatheredResource( defaultGatheredResource )
+C2dArraysResourcesManager::C2dArraysResourcesManager( CGatheredResource& defaultGatheredResource )
+	: m_2dArray( new C2dArray() ),
+	  m_defaultGatheredResource( defaultGatheredResource )
 {
 #ifndef NO_EDITOR
 	if( GIsEditor )
@@ -1197,19 +1199,19 @@ Bool C2dArraysResourcesManager::Unload2dArray( const String& filePath )
 
 const C2dArray& C2dArraysResourcesManager::Reload2dArray()
 {
-	m_2dArray.Clear();
+	m_2dArray->Clear();
 
-	C2dArray::Copy( m_2dArray, *m_defaultGatheredResource.LoadAndGet< C2dArray >() );
+	C2dArray::Copy( *m_2dArray, *m_defaultGatheredResource.LoadAndGet< C2dArray >() );
 
-	for( const THandle<C2dArray> attitudeGroupsArray : m_2dArrays )
+	for( const THandle<C2dArray> &attitudeGroupsArray : m_2dArrays )
 	{
 		if( attitudeGroupsArray )
 		{
-			C2dArray::Concatenate( m_2dArray, *attitudeGroupsArray );
+			C2dArray::Concatenate( *m_2dArray, *attitudeGroupsArray );
 		}		
 	}
 
-	return m_2dArray;
+	return *m_2dArray;
 }
 
 #ifndef NO_EDITOR 
