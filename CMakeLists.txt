@@ -29,18 +29,20 @@ if (NOT WIN32)
     option(USE_OLD_DXVK "Use old DXVK Native for native D3D11 API" OFF)
     if (USE_OLD_DXVK)
         message("Using DXVK Native for D3D11 API")
+        set(DXVK_TYPE "native")
         set(DXVK_GIT_REPOSITORY "https://github.com/q4a/dxvk-native")
         set(DXVK_GIT_TAG "master")
         set(DXVK_EXTRA_PARAM "")
     else()
-        message("Using DXVK 2.6 for D3D11 API")
+        message("Using upstream DXVK for D3D11 API")
+        set(DXVK_TYPE "upstream")
         set(DXVK_GIT_REPOSITORY "https://github.com/doitsujin/dxvk")
-        set(DXVK_GIT_TAG "ad253b8a7e20b7cf16fce7d1c505928a434eac29") # 2.6
+        set(DXVK_GIT_TAG "v2.7.1")
         set(DXVK_EXTRA_PARAM "-Denable_d3d8=false")
     endif()
     include(ExternalProject)
-    set(DXVK_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/build/dxvk-src")
-    set(DXVK_BINARY_DIR "${CMAKE_CURRENT_SOURCE_DIR}/build/dxvk-bin")
+    set(DXVK_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/build/dxvk-src-${DXVK_TYPE}")
+    set(DXVK_BINARY_DIR "${CMAKE_CURRENT_SOURCE_DIR}/build/dxvk-bin-${DXVK_TYPE}")
     set(DIRECTX_INCLUDE_DIRS
         "${DXVK_SOURCE_DIR}/include/native/directx"
         "${DXVK_SOURCE_DIR}/include/native/windows"
@@ -57,7 +59,7 @@ if (NOT WIN32)
         SOURCE_DIR        ${DXVK_SOURCE_DIR}
         BINARY_DIR        ${DXVK_BINARY_DIR}
         CONFIGURE_HANDLED_BY_BUILD ON
-        CONFIGURE_COMMAND meson setup ../dxvk-src --buildtype=release ${DXVK_EXTRA_PARAM} -Denable_d3d9=false -Denable_d3d10=false -Denable_d3d11=true -Denable_dxgi=true
+        CONFIGURE_COMMAND meson setup ../dxvk-src-${DXVK_TYPE} --buildtype=release ${DXVK_EXTRA_PARAM} -Denable_d3d9=false -Denable_d3d10=false -Denable_d3d11=true -Denable_dxgi=true
         BUILD_COMMAND     ninja
         INSTALL_COMMAND   ""
         BUILD_BYPRODUCTS  ${DIRECTX_LIBS}
