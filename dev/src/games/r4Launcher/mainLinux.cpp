@@ -6,10 +6,14 @@
 
 # include "../../common/core/loadingProfiler.h"
 #include "gameApplicationLinux.h"
+#include <SDL2/SDL.h>
+#include <clocale>
 
 int main( int argc, char** argv )
 {
+	setlocale(LC_ALL, "");
 	GLoadingProfiler.Start();
+	SDL_InitSubSystem(SDL_INIT_EVENTS | SDL_INIT_VIDEO | SDL_INIT_GAMECONTROLLER);
 
 	// Increase this if, for whatever reason, you need a longer one
 	const int c_maxCommandLineLength = 2048;

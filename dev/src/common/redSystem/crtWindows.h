@@ -148,7 +148,7 @@ namespace Red
 		{
 			size_t charsWritten = 0;
 #ifdef RED_PLATFORM_LINUX
-			::wcstombs( dest, source, destSize );
+			charsWritten = ::wcstombs( dest, source, destSize ) + 1;
 #else
 			wcstombs_s( &charsWritten, dest, destSize, source, _TRUNCATE );
 #endif
@@ -161,7 +161,7 @@ namespace Red
 		{
 			size_t charsWritten = 0;
 #ifdef RED_PLATFORM_LINUX
-			::mbstowcs( dest, source, destSize );
+			charsWritten = ::mbstowcs( dest, source, destSize ) + 1;
 #else
 			mbstowcs_s( &charsWritten, dest, destSize, source, _TRUNCATE );
 #endif
@@ -290,7 +290,7 @@ namespace Red
 		{
 #ifdef RED_PLATFORM_LINUX
 			RED_FORCE_INLINE Bool FileOpen( FILE** handle, const AnsiChar* filename, const AnsiChar* mode )	{ *handle = fopen(filename, mode); auto result = !( *handle ); return result == 0; }
-			RED_FORCE_INLINE Bool FileOpen( FILE** handle, const UniChar* filename, const UniChar* mode );
+			                 Bool FileOpen( FILE** handle, const UniChar* filename, const UniChar* mode );
 #else
 			RED_FORCE_INLINE Bool FileOpen( FILE** handle, const AnsiChar* filename, const AnsiChar* mode )	{ *handle = ::_fsopen( filename, mode, _SH_DENYNO ); return *handle != NULL; }
 			RED_FORCE_INLINE Bool FileOpen( FILE** handle, const UniChar* filename, const UniChar* mode )	{ *handle = ::_wfsopen( filename, mode, _SH_DENYNO ); return *handle != NULL; }

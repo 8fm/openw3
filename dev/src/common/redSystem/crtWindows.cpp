@@ -28,7 +28,7 @@ Int32 Red::System::SNPrintF( UniChar* buffer, size_t count, const UniChar* forma
 
 #include "utility.h"
 
-Red::System::Bool Red::System::Internal::FileOpen( FILE** handle, const UniChar* filename, const UniChar* mode )
+Bool Internal::FileOpen( FILE** handle, const UniChar* filename, const UniChar* mode )
 {
 	AnsiChar ansiFilename[ 256 ];
 	AnsiChar ansiMode[ 16 ];
