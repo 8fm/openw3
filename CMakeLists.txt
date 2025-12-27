@@ -72,12 +72,12 @@ if (NOT WIN32)
     list(APPEND VKD3D_CONFIG "CXX=clang++")
     list(APPEND VKD3D_CONFIG  "CC=clang")
     if (${GAME_CONFIG} STREQUAL "Debug")
-        list(APPEND VKD3D_CONFIG "CPPFLAGS=-O0")
-        list(APPEND VKD3D_CONFIG   "CFLAGS=-O0")
+        list(APPEND VKD3D_CONFIG "CPPFLAGS=-fno-lto -O0")
+        list(APPEND VKD3D_CONFIG   "CFLAGS=-fno-lto -O0")
         set(VKD3D_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/build/vkd3d-debug")
     else()
-        list(APPEND VKD3D_CONFIG "CPPFLAGS=-O3 -DNDEBUG -DVKD3D_NO_TRACE_MESSAGES")
-        list(APPEND VKD3D_CONFIG   "CFLAGS=-O3 -DNDEBUG -DVKD3D_NO_TRACE_MESSAGES")
+        list(APPEND VKD3D_CONFIG "CPPFLAGS=-fno-lto -O3 -DNDEBUG -DVKD3D_NO_TRACE_MESSAGES")
+        list(APPEND VKD3D_CONFIG   "CFLAGS=-fno-lto -O3 -DNDEBUG -DVKD3D_NO_TRACE_MESSAGES")
         set(VKD3D_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/build/vkd3d-release")
     endif()
     set(DIRECTX_INCLUDE_DIRS ${DIRECTX_INCLUDE_DIRS}
@@ -86,6 +86,7 @@ if (NOT WIN32)
     set(VKD3D_LIBS
         "${VKD3D_SOURCE_DIR}/.libs/libvkd3d-utils.a"
         "${VKD3D_SOURCE_DIR}/.libs/libvkd3d-shader.a"
+        "${VKD3D_SOURCE_DIR}/.libs/libvkd3d.a"
     )
     ExternalProject_Add(vkd3d
         GIT_REPOSITORY    https://github.com/q4a/vkd3d

@@ -59,7 +59,7 @@ else()
         libgfx
         ${VKD3D_LIBS}
     )
-    target_link_options(${PROJECT_NAME} PRIVATE -flto)
+    #target_link_options(${PROJECT_NAME} PRIVATE -flto)
     set(WWISE_DEPS
         AkTremoloFX
         AkMemoryMgr
