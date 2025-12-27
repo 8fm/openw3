@@ -26,7 +26,7 @@ add_library(${PROJECT_NAME} STATIC ${SRC_FILES})
 if (WIN32)
     target_link_libraries(${PROJECT_NAME})
 else()
-    add_dependencies(${PROJECT_NAME} dxvk)
+    add_dependencies(${PROJECT_NAME} dxvk vkd3d)
     target_include_directories(${PROJECT_NAME} PRIVATE
         ${DIRECTX_INCLUDE_DIRS}
     )

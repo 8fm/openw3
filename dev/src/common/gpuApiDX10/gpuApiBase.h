@@ -86,7 +86,6 @@ RED_DISABLE_WARNING_MSC( 4005 )
 #	pragma comment (lib, "xg_x.lib")
 #else
 #	include "d3d11_1.h"
-#	include "d3dcompiler.h"
 #endif
 
 #pragma comment (lib, "dxguid.lib")

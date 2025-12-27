@@ -91,8 +91,8 @@ jobs:
       run: |
         curl -LJO https://github.com/open-w3/openw3-deps/releases/download/1.60-dev3/openw3-libs3-windows-Final-Debug-x64.7z
         7z x openw3-libs3-windows-Final-Debug-x64.7z
+        sudo apt-get update && sudo apt-get install libsdl2-dev libpulse-dev libvulkan-dev glslang-tools libomp-dev clang meson ninja-build libjson-perl spirv-headers
         vcpkg install directxmath directxtex
-        sudo apt-get update && sudo apt-get install libsdl2-dev libpulse-dev libvulkan-dev glslang-tools libomp-dev clang meson ninja-build
     - name: Build
       run: |
         export VCPKG_ROOT=/usr/local/share/vcpkg

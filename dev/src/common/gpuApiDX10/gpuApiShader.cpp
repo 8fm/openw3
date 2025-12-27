@@ -10,6 +10,13 @@
 	#include <wchar.h>
 #endif
 #include "../redSystem/crt.h"
+#ifdef RED_PLATFORM_LINUX
+#define _INC_WINDOWS
+#define __vkd3d_d3dcommon_h__
+#define __vkd3d_dxgibase_h__
+#include <vkd3d_utils.h>
+#include <vkd3d_d3dcompiler.h>
+#endif
 
 #ifdef _DEBUG
 #define GPU_API_SHADER_DEBUG
@@ -331,15 +338,8 @@ namespace GpuApi
 			return ShaderRef::Null();
 		}
 
-#ifdef RED_PLATFORM_LINUX
-		RED_LOG_ERROR(gpuApiShader, TXT("FIX_LINUX CreateGeometryShaderWithSOFromSource"));
-		HRESULT hRet;
-		GPUAPI_ASSERT( false );
-		return ShaderRef::Null();
-#else
 		HRESULT hRet = D3DCompile(	preprocessedCode, preprocessedLength, fileName, nullptr, nullptr,
 									mainFunction, shaderTarget, flags, 0, &codeBuffer, &errorBuffer );
-#endif
 
 		// Print error message to log
 		if ( errorBuffer )
@@ -381,12 +381,7 @@ namespace GpuApi
 
 		const Uint32 len = static_cast< Uint32 >( Red::System::StringLength(fileName)+1 );
 
-#ifdef RED_PLATFORM_LINUX
-		RED_LOG_ERROR(gpuApiShader, TXT("FIX_LINUX CreateGeometryShaderWithSOFromSource"));
-		return ShaderRef::Null();
-#else
 		hRet = D3DStripShader( codeBuffer->GetBufferPointer(), codeBuffer->GetBufferSize(), stripFlags, &stripBuffer );
-#endif
 		SAFE_RELEASE( codeBuffer );
 		if ( FAILED( hRet ) )
 		{
@@ -404,12 +399,8 @@ namespace GpuApi
 	ShaderRef CreateGeometryShaderWithSOFromBinary( const void* shaderBuffer, Uint32 shaderBufferSize, const VertexLayoutDesc& outputDesc, GpuApi::VertexLayoutDesc* adjustedDesc /*nullptr*/ )
 	{
 		ID3DBlob* codeBufferBlob = nullptr;
-#ifdef RED_PLATFORM_LINUX
-		RED_LOG_ERROR(gpuApiShader, TXT("FIX_LINUX CreateGeometryShaderWithSOFromBinary"));
-#else
 		HRESULT hRet = D3DCreateBlob( shaderBufferSize, &codeBufferBlob );
 		if ( FAILED( hRet ) )
-#endif
 		{
 			GPUAPI_HALT(  "Failed to allocate memory for gpuapi shader" );
 			return ShaderRef::Null();
@@ -553,15 +544,8 @@ namespace GpuApi
 		shaderMacros[numShaderMacros].Definition = nullptr;
 		++numShaderMacros;
 
-#ifdef RED_PLATFORM_LINUX
-		RED_LOG_ERROR(gpuApiShader, TXT("FIX_LINUX CreateShaderFromSource"));
-		HRESULT hRet;
-		GPUAPI_ASSERT( false );
-		return ShaderRef::Null();
-#else
 		HRESULT hRet = D3DCompile(	preprocessedCode, preprocessedLength, fileName, shaderMacros, nullptr,
 									mainFunction, shaderTarget, flags, 0, &codeBuffer, &errorBuffer );
-#endif
 
 		// Print error message to log
 		if ( errorBuffer )
@@ -603,13 +587,7 @@ namespace GpuApi
 
 		const Uint32 len = static_cast< Uint32 >( Red::System::StringLength(fileName)+1 );
 
-#ifdef RED_PLATFORM_LINUX
-		RED_LOG_ERROR(gpuApiShader, TXT("FIX_LINUX CreateShaderFromSource"));
-		GPUAPI_ASSERT( false );
-		return ShaderRef::Null();
-#else
 		hRet = D3DStripShader( codeBuffer->GetBufferPointer(), codeBuffer->GetBufferSize(), stripFlags, &stripBuffer );
-#endif
 		SAFE_RELEASE( codeBuffer );
 
 		if ( FAILED( hRet ) )
@@ -629,12 +607,8 @@ namespace GpuApi
 	{
 		HRESULT hRet;
 		ID3DBlob* codeBufferBlob = nullptr;
-#ifdef RED_PLATFORM_LINUX
-		RED_LOG_ERROR(gpuApiShader, TXT("FIX_LINUX CreateShaderFromBinary"));
-#else
 		hRet = D3DCreateBlob( shaderBufferSize, &codeBufferBlob );
 		if ( FAILED( hRet ) )
-#endif
 		{
 			GPUAPI_HALT( "Failed to allocate memory for gpuapi shader" );
 			return ShaderRef::Null();

@@ -65,6 +65,43 @@ if (NOT WIN32)
         BUILD_BYPRODUCTS  ${DIRECTX_LIBS}
     )
 
+    include(ProcessorCount)
+    ProcessorCount(N)
+    message("ProcessorCount = ${N}")
+    set(VKD3D_CONFIG "./configure")
+    list(APPEND VKD3D_CONFIG "CXX=clang++")
+    list(APPEND VKD3D_CONFIG  "CC=clang")
+    if (${GAME_CONFIG} STREQUAL "Debug")
+        list(APPEND VKD3D_CONFIG "CPPFLAGS=-O0")
+        list(APPEND VKD3D_CONFIG   "CFLAGS=-O0")
+        set(VKD3D_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/build/vkd3d-debug")
+    else()
+        list(APPEND VKD3D_CONFIG "CPPFLAGS=-O3 -DNDEBUG -DVKD3D_NO_TRACE_MESSAGES")
+        list(APPEND VKD3D_CONFIG   "CFLAGS=-O3 -DNDEBUG -DVKD3D_NO_TRACE_MESSAGES")
+        set(VKD3D_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/build/vkd3d-release")
+    endif()
+    set(DIRECTX_INCLUDE_DIRS ${DIRECTX_INCLUDE_DIRS}
+        "${VKD3D_SOURCE_DIR}/include"
+    )
+    set(VKD3D_LIBS
+        "${VKD3D_SOURCE_DIR}/.libs/libvkd3d-utils.a"
+        "${VKD3D_SOURCE_DIR}/.libs/libvkd3d-shader.a"
+    )
+    ExternalProject_Add(vkd3d
+        GIT_REPOSITORY    https://github.com/q4a/vkd3d
+        GIT_TAG           dxvk
+        GIT_SHALLOW       ON
+        BUILD_ALWAYS      OFF
+        SOURCE_DIR        ${VKD3D_SOURCE_DIR}
+        BUILD_IN_SOURCE   ON
+        CONFIGURE_HANDLED_BY_BUILD ON
+        # result comman will be: ./configure "CPPFLAGS=-O3 -DNDEBUG -DVKD3D_NO_TRACE_MESSAGES" "CFLAGS=-O3 -DNDEBUG -DVKD3D_NO_TRACE_MESSAGES"
+        CONFIGURE_COMMAND ${CMAKE_COMMAND} -E env ${VKD3D_CONFIG}
+        BUILD_COMMAND     make -j${N}
+        BUILD_BYPRODUCTS  ${VKD3D_LIBS}
+        INSTALL_COMMAND   ""
+    )
+
     find_package(SDL2 CONFIG REQUIRED)
     find_package(directxtex CONFIG REQUIRED)
     find_package(directxmath CONFIG REQUIRED)
